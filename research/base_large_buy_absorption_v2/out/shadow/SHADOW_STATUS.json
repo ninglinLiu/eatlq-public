@@ -1,0 +1,16 @@
+{
+  "mode": "observer_only",
+  "live_trading": false,
+  "upgrade_from_v1": false,
+  "edge_claim": false,
+  "prospective_t0": "2026-07-21T07:29:29Z",
+  "arm": "LARGE_BUY_ABSORPTION",
+  "primary_timing": {
+    "absorption_window_seconds": 5,
+    "measured_latency_seconds": 0
+  },
+  "status": "ARMED_OBSERVER_NO_EDGE_CLAIM",
+  "note": "Observer-only. No orders. Shadow upgrade requires PROVEN selection + ranking; otherwise recorder stays armed without an edge claim.",
+  "armed_at": "2026-07-21T07:29:29Z",
+  "freeze_status": "PREREGISTERED_BEFORE_RESULTS"
+}

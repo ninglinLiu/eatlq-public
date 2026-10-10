@@ -1,0 +1,23 @@
+{
+  "body_sha256": "44d1b6f2f77faae8e32c52c7d02a8adbb00b02e241bef6feb42241a87a703105",
+  "bytes": 103,
+  "finished": "2026-10-01T07:41:25.156766+00:00",
+  "http_status": 200,
+  "key": "727ba1402fa7c8c6102f018f91819ded5502aef1fff51b4ece3907e3e406fff0",
+  "label": "pilot_active_liquidity",
+  "payload": {
+    "id": 1,
+    "jsonrpc": "2.0",
+    "method": "eth_call",
+    "params": [
+      {
+        "data": "0xfa6793d50281d408c8b18e7c43106f65224cbfa3c73c95dff416e13f1bd81bd69900c898",
+        "to": "0xa3c0c9b65bad0b08107aa264b0f3db444b867a71"
+      },
+      "0x3110e9e"
+    ]
+  },
+  "retry_after": null,
+  "started": "2026-10-01T07:41:24.033989+00:00",
+  "url": "https://mainnet.base.org"
+}

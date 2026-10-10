@@ -1,0 +1,311 @@
+{
+  "generated_at": "2026-08-19T09:10:07.642005+00:00",
+  "universe": {
+    "kind": "all_base_uniswap_v3_weth",
+    "n_minpre": 642,
+    "n_dump": 40,
+    "n_arm_a": 3,
+    "n_arm_a_b20": 1
+  },
+  "arm_a": [
+    {
+      "pool": "0x3053442383b0281ed50a2b42f75772006116ff7f",
+      "token": "0xff2dbaf58b19b7a028dea829e28bbb1c05d8b00e",
+      "sym": "ClawSuite",
+      "fee": 10000,
+      "orient": -1,
+      "is_b20": false,
+      "created_block": 42705516,
+      "t0_block": 42705516,
+      "t0_ts": 1772353467,
+      "ns_pre": 220,
+      "early_ret": -0.7006649673354143,
+      "recover_ret": -0.0025998700086657302,
+      "entry_block": 42707040,
+      "entry_tick": 175295,
+      "exit_block": 42707208,
+      "exit_why": "trail",
+      "exit_tick": 167833
+    },
+    {
+      "pool": "0x0c50f6379b330bda39e1762e36a024c43620db5e",
+      "token": "0x9e36bd7e879d43a6c30fce064113e6d2068ab4ca",
+      "sym": "FNKD",
+      "fee": 3000,
+      "orient": -1,
+      "is_b20": false,
+      "created_block": 49625777,
+      "t0_block": 49625843,
+      "t0_ts": 1786041033,
+      "ns_pre": 5,
+      "early_ret": -0.3574821261915379,
+      "recover_ret": -0.013199340043995247,
+      "entry_block": 49626211,
+      "entry_tick": -201002,
+      "exit_block": 49626283,
+      "exit_why": "hold_end",
+      "exit_tick": -206019
+    },
+    {
+      "pool": "0xf79478d5a6bae4546f7e489e80b2fc690b558944",
+      "token": "0xb2000000000000000000004c27f6523082f41d01",
+      "sym": "Basecat",
+      "fee": 10000,
+      "orient": -1,
+      "is_b20": true,
+      "created_block": 50019381,
+      "t0_block": 50019387,
+      "t0_ts": 1786828121,
+      "ns_pre": 87,
+      "early_ret": -0.4142792863808508,
+      "recover_ret": -0.019099045063659788,
+      "entry_block": 50019975,
+      "entry_tick": 151788,
+      "exit_block": 50021363,
+      "exit_why": "trail",
+      "exit_tick": 150839
+    }
+  ],
+  "dumps": [
+    {
+      "pool": "0xc974fa35bdb3576b91e35e9d77d69e409152b168",
+      "sym": "SYS",
+      "early_ret": -0.4325783714418442,
+      "is_b20": false
+    },
+    {
+      "pool": "0x0e7cba41ca71c22977a1d8cc88612073b0c98e13",
+      "sym": "\u5e01\u5e93",
+      "early_ret": -0.28478576094923075,
+      "is_b20": false
+    },
+    {
+      "pool": "0xecb3c3fdae17472606fd72b49e2acfec8f3a8818",
+      "sym": "CEILING",
+      "early_ret": -0.2836858159455645,
+      "is_b20": false
+    },
+    {
+      "pool": "0x3053442383b0281ed50a2b42f75772006116ff7f",
+      "sym": "ClawSuite",
+      "early_ret": -0.7006649673354143,
+      "is_b20": false
+    },
+    {
+      "pool": "0x7633f8ed991a079b0936ff2ace7a9ecc77277a8e",
+      "sym": "SALMON",
+      "early_ret": -0.545172741817137,
+      "is_b20": false
+    },
+    {
+      "pool": "0xaa201da8b6c4da71f5a0fac5932296306e2dec6c",
+      "sym": "Armstrong",
+      "early_ret": -0.38698065128986064,
+      "is_b20": false
+    },
+    {
+      "pool": "0x28e9bafc9c49070914fcbd9490b04f4656d9e1ee",
+      "sym": "BLUWHALE",
+      "early_ret": -0.7636618175453916,
+      "is_b20": false
+    },
+    {
+      "pool": "0x5c36b2d57b6239539fdb3ef7a751cb60cf740682",
+      "sym": "jesse",
+      "early_ret": -0.44597770148650606,
+      "is_b20": false
+    },
+    {
+      "pool": "0x8ec489564d49562d4be6955adbb463c59bc67641",
+      "sym": "Long Texas",
+      "early_ret": -0.47737613159116143,
+      "is_b20": false
+    },
+    {
+      "pool": "0xc7734f2fef7cb1cf421038f242e7613f242da23d",
+      "sym": "Michael Nguyen",
+      "early_ret": -0.5391730417971392,
+      "is_b20": false
+    },
+    {
+      "pool": "0x4ec36428bdef1687c3b415239694464011a074ca",
+      "sym": "WIFBAND",
+      "early_ret": -5.732813364108269,
+      "is_b20": false
+    },
+    {
+      "pool": "0xf3f9430f0734b6f282eec0eb63bb43650354ea4e",
+      "sym": "MoltRoad",
+      "early_ret": -0.6336683171121051,
+      "is_b20": false
+    },
+    {
+      "pool": "0x73963eaf68620b51890fa4ff0d89f7c38db7364b",
+      "sym": "HOLDFI",
+      "early_ret": -2.1024948770079095,
+      "is_b20": true
+    },
+    {
+      "pool": "0x5057cb2ffded05c05dbe2fc3a1073bbaf9ac1af6",
+      "sym": "MIGGLES",
+      "early_ret": -2.751462429171009,
+      "is_b20": false
+    },
+    {
+      "pool": "0x0c50f6379b330bda39e1762e36a024c43620db5e",
+      "sym": "FNKD",
+      "early_ret": -0.3574821261915379,
+      "is_b20": false
+    },
+    {
+      "pool": "0x0a441399b9c6d101f08ebf21d626702725c3d433",
+      "sym": "SPACE",
+      "early_ret": -79.50322490499536,
+      "is_b20": false
+    },
+    {
+      "pool": "0x003de708fefcecf2db583bf8a5d44cf782b0e4e8",
+      "sym": "Bald cobie",
+      "early_ret": -0.41727913639084974,
+      "is_b20": false
+    },
+    {
+      "pool": "0x0451c93ba9ff3d643c229ce2900a65a168e5743c",
+      "sym": "Coinbase Assistant.",
+      "early_ret": -0.37988100626619653,
+      "is_b20": false
+    },
+    {
+      "pool": "0x922776720ce3a0fd436e2a536891b8c3aa1a8c61",
+      "sym": "OMOF",
+      "early_ret": -0.4595770215318345,
+      "is_b20": false
+    },
+    {
+      "pool": "0x9b3f8613839969eb55ac90a6d11184d61ed73450",
+      "sym": "BASEBULL",
+      "early_ret": -81.22063903571976,
+      "is_b20": false
+    },
+    {
+      "pool": "0xa9e9cdc8baa802195569ba0bb33a816a3ac687c8",
+      "sym": "CRASH",
+      "early_ret": -2.313184342710167,
+      "is_b20": false
+    },
+    {
+      "pool": "0x01149ed95e1a4f717fdf9a7ae253efe3eb26d766",
+      "sym": "Frosty",
+      "early_ret": -2.204789762348873,
+      "is_b20": false
+    },
+    {
+      "pool": "0x65fecfd1c03bac6ed468ca92bd59e3b76c786518",
+      "sym": "UNKNOWN",
+      "early_ret": -0.5261736917538105,
+      "is_b20": false
+    },
+    {
+      "pool": "0xf0a773f6c06128ab931f633e7a60ba5eb092681a",
+      "sym": "ASYM",
+      "early_ret": -0.30538473101789004,
+      "is_b20": false
+    },
+    {
+      "pool": "0xc96527e18f825b13b4ade72894552feef39239e8",
+      "sym": "CLAWDICT",
+      "early_ret": -1.198640068995235,
+      "is_b20": false
+    },
+    {
+      "pool": "0xe0de459652854d9140213ed131d2ea77ba19a74f",
+      "sym": "CbBell",
+      "early_ret": -0.38278086127586214,
+      "is_b20": false
+    },
+    {
+      "pool": "0xde873807149fe4ca6810510b8592e35a0908a99f",
+      "sym": "Beryl",
+      "early_ret": -0.3138843060462203,
+      "is_b20": true
+    },
+    {
+      "pool": "0x27b45f0238bc657ee1791e22ca5b35f0fb3a2f96",
+      "sym": "MIND",
+      "early_ret": -0.24828758582757726,
+      "is_b20": false
+    },
+    {
+      "pool": "0x8159294543e026fd7f5b20d3bf19875603524bea",
+      "sym": "ANGELA",
+      "early_ret": -2.4669766532227784,
+      "is_b20": false
+    },
+    {
+      "pool": "0x0613e5f61add512656c114cad7b33c11ad7ffd77",
+      "sym": "CRASH",
+      "early_ret": -2.597170143656731,
+      "is_b20": false
+    },
+    {
+      "pool": "0x6a5de113513549f4b69e10321ffd6cef6aaebe86",
+      "sym": "UNKNOWN",
+      "early_ret": -0.2499875008332433,
+      "is_b20": false
+    },
+    {
+      "pool": "0xe221102ad49f45c8e4c8d52d84362b244f35a64b",
+      "sym": "Cobra Koin",
+      "early_ret": -0.29418529098056073,
+      "is_b20": false
+    },
+    {
+      "pool": "0xe663a743d9975db6f6ee2ce81e71940215411135",
+      "sym": "cb-america",
+      "early_ret": -0.37928103626419674,
+      "is_b20": false
+    },
+    {
+      "pool": "0x0b7dbffd08f166f0a1b5c16ae66a9758dcdb0e43",
+      "sym": "MIGGLES",
+      "early_ret": -2.5978701086590643,
+      "is_b20": false
+    },
+    {
+      "pool": "0xf79478d5a6bae4546f7e489e80b2fc690b558944",
+      "sym": "Basecat",
+      "early_ret": -0.4142792863808508,
+      "is_b20": true
+    },
+    {
+      "pool": "0x703ad036acdf65e893ccc8a2f5a9d5292c73e937",
+      "sym": "\ud83d\ude33",
+      "early_ret": -0.38338083127786193,
+      "is_b20": false
+    },
+    {
+      "pool": "0xde50a5403a88962581ba4d9a531e4d55e9cfbd69",
+      "sym": "BRIAN",
+      "early_ret": -0.39058047130185936,
+      "is_b20": false
+    },
+    {
+      "pool": "0xef4310260172a1d0dddd5a1c80e1e8ad98982f46",
+      "sym": "ECCO",
+      "early_ret": -0.4185790713951826,
+      "is_b20": false
+    },
+    {
+      "pool": "0x93a1beb214114a6a03b9c9983f6d88759d4f97d3",
+      "sym": "BRIAN",
+      "early_ret": -0.5506724668354683,
+      "is_b20": false
+    },
+    {
+      "pool": "0xe24a3ff2765101d7eaf5f35de0707546c4a4e539",
+      "sym": "CYPHER",
+      "early_ret": -0.24568771581891152,
+      "is_b20": false
+    }
+  ]
+}

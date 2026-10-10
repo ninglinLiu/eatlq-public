@@ -1,0 +1,52 @@
+{
+  "created_utc": "2026-07-20T11:10:30Z",
+  "role": "Base Uniswap New-Pool Narrow-Market Rescue Research Agent",
+  "phase": "V3_NARROW_MARKET_RESCUE",
+  "verdict": "LOTTERY_DEPENDENT_REJECT",
+  "deploy_allowed": false,
+  "venue_rejection": false,
+  "stop_research": false,
+  "stop_research_note": "Phase0 gates diagnostic only; research continues inside fixed venue",
+  "old_line_inputs_used": false,
+  "latchpi_used": false,
+  "latchpi_status": "DATA_LINEAGE_INSUFFICIENT",
+  "panel_meta": {
+    "created_utc": "2026-07-20T11:05:58Z",
+    "n_rows": 2601,
+    "n_formal": 2057,
+    "n_neg_control": 544,
+    "source_panel_sha256": "3831fabe5b0bcf52726803d88456ec6589fb731add4a835143524346a55a01f9",
+    "source_swaps_sha256": "4e1a0f26efedeb2c54bb03d7b0e9775381075a8d5f04486ff11346b87d339ff8",
+    "split_counts": {
+      "DEV": 1560,
+      "LABEL_DESIGN": 520,
+      "UNTOUCHED": 261,
+      "INTERNAL_HOLDOUT": 260
+    },
+    "bucket_counts": {
+      "15-60m_NEGATIVE_CONTROL": 544,
+      "1-6h": 527,
+      "6-24h": 510,
+      "1-3d": 510,
+      "3-7d": 510
+    }
+  },
+  "best_oof_policy": "H_TRADEABLE_RISK_SPLIT",
+  "confirmation": {
+    "holdout_executed": true,
+    "untouched_executed": false,
+    "final_confirmation_verdict": "LOTTERY_DEPENDENT_REJECT",
+    "holdout_verdict": "LOTTERY_DEPENDENT_REJECT",
+    "untouched_verdict": null,
+    "untouched_skip_reason": "holdout_not_eligible_or_insufficient_rows"
+  },
+  "closing_statement": "\u5728\u73b0\u6709\u6570\u636e\u3001\u73b0\u6709\u7279\u5f81\u4e0e\u5df2\u68c0\u9a8c\u5047\u8bbe\u8303\u56f4\u5185\uff0c\u5c1a\u672a\u786e\u8ba4\u53ef\u91cd\u590d\u7684 Base Uniswap \u65b0\u6c60\u5c0f\u5bb9\u91cf\u4f18\u52bf\u3002",
+  "forbidden_claim": "Must not claim the entire Base Uniswap new-pool market has no structure; must not recommend changing venue.",
+  "freeze_sha256": "a8576117a801e7a8b0bd96e9a20955febf8a4d40beaaed0b0b4127a31a20a5cd",
+  "registry_sha256": "8fed28cb72722c2135658dd2b91b60e87589fe5d99b9cdccffdb4aa878a4bb11",
+  "hard_bans_sha256": "b84804b0ee0196717c317d8a3358990756e5904454fc9d15dd2fa5ba11c78295",
+  "hashes": {
+    "OOF_SCORECARD.csv": "72e633b011f2c982ca8a1225c001dae5d3d3f6fbbfea741548fca3e2281194b4",
+    "HYPOTHESIS_LEDGER.csv": "5fee40b8403cbc57b1790d6620af26edb8ace5e34f68db845a1b0d80362b8373"
+  }
+}

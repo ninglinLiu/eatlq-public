@@ -1,0 +1,732 @@
+{
+  "created_utc": "2026-07-20T05:39:30Z",
+  "reports": {
+    "C0_RANDOM": {
+      "decay": {
+        "modes": {
+          "expanding_early_vs_late": {
+            "early_ev": -0.1710071124374605,
+            "late_ev": -0.11326727790694745
+          },
+          "rolling_90d": {
+            "n": 1054,
+            "n_accepted": 237,
+            "acceptance_rate": 0.22485768500948766,
+            "ev_accepted": -0.05825489321104935,
+            "ev_per_opp": -0.013099060427911476,
+            "capital_hour_return": -0.05825489321104935,
+            "rank_ic": null,
+            "tp_first_rate": 0.18143459915611815,
+            "sl_first_rate": 0.5654008438818565,
+            "fatal_first_rate": 0.008438818565400843,
+            "atomic_failure_rate": 0.0,
+            "median_return": -0.11119444037062662,
+            "trimmed_mean": -0.12132991491375539,
+            "expected_shortfall": -0.5143031304647327,
+            "top5_dependency": -1.8188902810872658
+          },
+          "recency_halflife_30d_ev": -0.08266440535043706
+        },
+        "decay_status": "DISABLED"
+      },
+      "lowo": {
+        "by_week": {
+          "2922": -0.07683550255118546,
+          "2926": -0.017909760264613776,
+          "2929": -0.0059997000199978395,
+          "2930": -0.08699024515481549,
+          "2934": -0.0980350983267647,
+          "2935": -0.25322067251068653
+        },
+        "worst_week": -0.25322067251068653,
+        "best_week": -0.0059997000199978395
+      },
+      "regime": {
+        "low": -0.05329123792152958,
+        "mid": -0.04844325688986322,
+        "high": -0.0711440038346939
+      },
+      "cluster": {
+        "n_accepted": 245,
+        "n_tokens": 245,
+        "top_token_share": -0.5558842889802742,
+        "top5_token_share": -1.7775386989234392
+      }
+    },
+    "C1_PRICE_ONLY": {
+      "decay": {
+        "modes": {
+          "expanding_early_vs_late": {
+            "early_ev": -0.1542006234306389,
+            "late_ev": -0.20205620170609026
+          },
+          "rolling_90d": {
+            "n": 1054,
+            "n_accepted": 311,
+            "acceptance_rate": 0.29506641366223907,
+            "ev_accepted": -0.1565214345088461,
+            "ev_per_opp": -0.046184218341794245,
+            "capital_hour_return": -0.1565214345088461,
+            "rank_ic": null,
+            "tp_first_rate": 0.19614147909967847,
+            "sl_first_rate": 0.5594855305466238,
+            "fatal_first_rate": 0.00964630225080386,
+            "atomic_failure_rate": 0.0,
+            "median_return": -0.11119444037062662,
+            "trimmed_mean": -0.18122772447905738,
+            "expected_shortfall": -0.5755115493365397,
+            "top5_dependency": -0.4029120429904316
+          },
+          "recency_halflife_30d_ev": -0.1828729186793493
+        },
+        "decay_status": "DISABLED"
+      },
+      "lowo": {
+        "by_week": {
+          "2922": -0.13383026511998802,
+          "2926": -0.13116889076654561,
+          "2929": -0.0059497025198311905,
+          "2930": -0.17601427635591096,
+          "2934": -0.3970468146567459,
+          "2935": -0.2599432530539272
+        },
+        "worst_week": -0.3970468146567459,
+        "best_week": -0.0059497025198311905
+      },
+      "regime": {
+        "low": -0.08160809357635904,
+        "mid": -0.20062806400205468,
+        "high": -0.1750064879166544
+      },
+      "cluster": {
+        "n_accepted": 325,
+        "n_tokens": 323,
+        "top_token_share": -0.09563374224333898,
+        "top5_token_share": -0.40168752175961003
+      }
+    },
+    "C2_SELLABILITY_ONLY": {
+      "decay": {
+        "modes": {
+          "expanding_early_vs_late": {
+            "early_ev": -0.1542006234306389,
+            "late_ev": -0.15453036884840468
+          },
+          "rolling_90d": {
+            "n": 1054,
+            "n_accepted": 324,
+            "acceptance_rate": 0.30740037950664134,
+            "ev_accepted": -0.14294655649497942,
+            "ev_per_opp": -0.043941825715724206,
+            "capital_hour_return": -0.14294655649497942,
+            "rank_ic": null,
+            "tp_first_rate": 0.20987654320987653,
+            "sl_first_rate": 0.5370370370370371,
+            "fatal_first_rate": 0.009259259259259259,
+            "atomic_failure_rate": 0.0,
+            "median_return": -0.09369531531229959,
+            "trimmed_mean": -0.16579823943579025,
+            "expected_shortfall": -0.5551342846787612,
+            "top5_dependency": -0.42347302286417515
+          },
+          "recency_halflife_30d_ev": -0.1582553358183774
+        },
+        "decay_status": "DISABLED"
+      },
+      "lowo": {
+        "by_week": {
+          "2922": -0.13383026511998802,
+          "2926": -0.13214073035168616,
+          "2929": -0.0059997000199978395,
+          "2930": -0.0916975428588322,
+          "2934": -0.3296653351897298,
+          "2935": -0.2415504226801213
+        },
+        "worst_week": -0.3296653351897298,
+        "best_week": -0.0059997000199978395
+      },
+      "regime": {
+        "low": -0.05633634989611028,
+        "mid": -0.19617847952776413,
+        "high": -0.16754115579208298
+      },
+      "cluster": {
+        "n_accepted": 338,
+        "n_tokens": 335,
+        "top_token_share": -0.10049843539493897,
+        "top5_token_share": -0.4221205456102818
+      }
+    },
+    "C3_SIMPLE_MOMENTUM": {
+      "decay": {
+        "modes": {
+          "expanding_early_vs_late": {
+            "early_ev": -0.10762001591426813,
+            "late_ev": 0.21674769938098695
+          },
+          "rolling_90d": {
+            "n": 1054,
+            "n_accepted": 134,
+            "acceptance_rate": 0.127134724857685,
+            "ev_accepted": 0.09873909297836493,
+            "ev_per_opp": 0.012553167418501803,
+            "capital_hour_return": 0.09873909297836493,
+            "rank_ic": null,
+            "tp_first_rate": 0.31343283582089554,
+            "sl_first_rate": 0.23880597014925373,
+            "fatal_first_rate": 0.022388059701492536,
+            "atomic_failure_rate": 0.0,
+            "median_return": 0.01609919505366087,
+            "trimmed_mean": 0.10843011577463588,
+            "expected_shortfall": -0.4265330377595152,
+            "top5_dependency": 1.2505271431486509
+          },
+          "recency_halflife_30d_ev": 0.12696098807684333
+        },
+        "decay_status": "ACTIVE"
+      },
+      "lowo": {
+        "by_week": {
+          "2922": 0.05519724018398013,
+          "2926": 0.09882892960360418,
+          "2929": -0.0059997000199978395,
+          "2930": 0.18386699727952105,
+          "2934": 0.11501924913337523,
+          "2935": 0.2728530242427906
+        },
+        "worst_week": -0.0059997000199978395,
+        "best_week": 0.2728530242427906
+      },
+      "regime": {
+        "low": 0.20750736674003817,
+        "mid": -0.054683932515602524,
+        "high": 0.0966669616042558
+      },
+      "cluster": {
+        "n_accepted": 146,
+        "n_tokens": 145,
+        "top_token_share": 0.3294228028838691,
+        "top5_token_share": 1.1672757029783987
+      }
+    },
+    "G1_LINEAR_RANK": {
+      "decay": {
+        "modes": {
+          "expanding_early_vs_late": {
+            "early_ev": -0.1542006234306389,
+            "late_ev": -0.20296194509510518
+          },
+          "rolling_90d": {
+            "n": 1054,
+            "n_accepted": 305,
+            "acceptance_rate": 0.2893738140417457,
+            "ev_accepted": -0.1558810585359668,
+            "ev_per_opp": -0.045107896445417336,
+            "capital_hour_return": -0.1558810585359668,
+            "rank_ic": null,
+            "tp_first_rate": 0.2098360655737705,
+            "sl_first_rate": 0.5508196721311476,
+            "fatal_first_rate": 0.009836065573770493,
+            "atomic_failure_rate": 0.0,
+            "median_return": -0.11259437037529278,
+            "trimmed_mean": -0.1810559108589591,
+            "expected_shortfall": -0.5707785091937763,
+            "top5_dependency": -0.41252594850050794
+          },
+          "recency_halflife_30d_ev": -0.17765025262469647
+        },
+        "decay_status": "DISABLED"
+      },
+      "lowo": {
+        "by_week": {
+          "2922": -0.13383026511998802,
+          "2926": -0.1346525489218697,
+          "2929": -0.0059497025198311905,
+          "2930": -0.17944254317386468,
+          "2934": -0.30956452203182183,
+          "2935": -0.2575737881918628
+        },
+        "worst_week": -0.30956452203182183,
+        "best_week": -0.0059497025198311905
+      },
+      "regime": {
+        "low": -0.07058025482984849,
+        "mid": -0.1981929476606048,
+        "high": -0.18492667615036706
+      },
+      "cluster": {
+        "n_accepted": 319,
+        "n_tokens": 317,
+        "top_token_share": -0.09790856388053129,
+        "top5_token_share": -0.4112423864386879
+      }
+    },
+    "G1_HGB_RANK": {
+      "decay": {
+        "modes": {
+          "expanding_early_vs_late": {
+            "early_ev": -0.1542006234306389,
+            "late_ev": -0.1554485383822094
+          },
+          "rolling_90d": {
+            "n": 1054,
+            "n_accepted": 322,
+            "acceptance_rate": 0.3055028462998102,
+            "ev_accepted": -0.1431683075424174,
+            "ev_per_opp": -0.04373832545413509,
+            "capital_hour_return": -0.1431683075424174,
+            "rank_ic": null,
+            "tp_first_rate": 0.2111801242236025,
+            "sl_first_rate": 0.5372670807453416,
+            "fatal_first_rate": 0.009316770186335404,
+            "atomic_failure_rate": 0.0,
+            "median_return": -0.09754512282513153,
+            "trimmed_mean": -0.16620345467162642,
+            "expected_shortfall": -0.5515522404297313,
+            "top5_dependency": -0.42544330567756616
+          },
+          "recency_halflife_30d_ev": -0.15702977410519076
+        },
+        "decay_status": "DISABLED"
+      },
+      "lowo": {
+        "by_week": {
+          "2922": -0.13383026511998802,
+          "2926": -0.13214073035168616,
+          "2929": -0.0059997000199978395,
+          "2930": -0.09894394177423842,
+          "2934": -0.29719423144513535,
+          "2935": -0.2415504226801213
+        },
+        "worst_week": -0.29719423144513535,
+        "best_week": -0.0059997000199978395
+      },
+      "regime": {
+        "low": -0.055767799891764246,
+        "mid": -0.19713923411163808,
+        "high": -0.16754115579208298
+      },
+      "cluster": {
+        "n_accepted": 336,
+        "n_tokens": 333,
+        "top_token_share": -0.10096452177146824,
+        "top5_token_share": -0.42407823415328133
+      }
+    },
+    "G1_TREE_SENS": {
+      "decay": {
+        "modes": {
+          "expanding_early_vs_late": {
+            "early_ev": -0.1542006234306389,
+            "late_ev": -0.15453036884840468
+          },
+          "rolling_90d": {
+            "n": 1054,
+            "n_accepted": 324,
+            "acceptance_rate": 0.30740037950664134,
+            "ev_accepted": -0.14294655649497942,
+            "ev_per_opp": -0.043941825715724206,
+            "capital_hour_return": -0.14294655649497942,
+            "rank_ic": null,
+            "tp_first_rate": 0.20987654320987653,
+            "sl_first_rate": 0.5370370370370371,
+            "fatal_first_rate": 0.009259259259259259,
+            "atomic_failure_rate": 0.0,
+            "median_return": -0.09369531531229959,
+            "trimmed_mean": -0.16579823943579025,
+            "expected_shortfall": -0.5551342846787612,
+            "top5_dependency": -0.42347302286417515
+          },
+          "recency_halflife_30d_ev": -0.1582553358183774
+        },
+        "decay_status": "DISABLED"
+      },
+      "lowo": {
+        "by_week": {
+          "2922": -0.13383026511998802,
+          "2926": -0.13214073035168616,
+          "2929": -0.0059997000199978395,
+          "2930": -0.0916975428588322,
+          "2934": -0.3296653351897298,
+          "2935": -0.2415504226801213
+        },
+        "worst_week": -0.3296653351897298,
+        "best_week": -0.0059997000199978395
+      },
+      "regime": {
+        "low": -0.05633634989611028,
+        "mid": -0.19617847952776413,
+        "high": -0.16754115579208298
+      },
+      "cluster": {
+        "n_accepted": 338,
+        "n_tokens": 335,
+        "top_token_share": -0.10049843539493897,
+        "top5_token_share": -0.4221205456102818
+      }
+    },
+    "G2_HAZARD_BASE": {
+      "decay": {
+        "modes": {
+          "expanding_early_vs_late": {
+            "early_ev": -0.1279981456539085,
+            "late_ev": -0.11141261128044475
+          },
+          "rolling_90d": {
+            "n": 1054,
+            "n_accepted": 133,
+            "acceptance_rate": 0.12618595825426945,
+            "ev_accepted": -0.07827277815563097,
+            "ev_per_opp": -0.009876925516792142,
+            "capital_hour_return": -0.07827277815563097,
+            "rank_ic": null,
+            "tp_first_rate": 0.2556390977443609,
+            "sl_first_rate": 0.42857142857142855,
+            "fatal_first_rate": 0.022556390977443608,
+            "atomic_failure_rate": 0.0,
+            "median_return": -0.007699615025663894,
+            "trimmed_mean": -0.0738713064962234,
+            "expected_shortfall": -0.5152704880512036,
+            "top5_dependency": -1.394936027970953
+          },
+          "recency_halflife_30d_ev": -0.08676563083631113
+        },
+        "decay_status": "DISABLED"
+      },
+      "lowo": {
+        "by_week": {
+          "2922": -0.010206632534020136,
+          "2926": -0.12501838686597916,
+          "2929": -0.0059497025198311905,
+          "2930": 0.1185690716452073,
+          "2934": -0.3920803963068588,
+          "2935": -0.251737413339076
+        },
+        "worst_week": -0.3920803963068588,
+        "best_week": 0.1185690716452073
+      },
+      "regime": {
+        "low": 0.05056093353391127,
+        "mid": -0.09123143850408713,
+        "high": -0.1793862689312529
+      },
+      "cluster": {
+        "n_accepted": 144,
+        "n_tokens": 143,
+        "top_token_share": -0.44443388154767544,
+        "top5_token_share": -1.5339861203536451
+      }
+    },
+    "G2_HGB_COMPETING": {
+      "decay": {
+        "modes": {
+          "expanding_early_vs_late": {
+            "early_ev": -0.13940347770345723,
+            "late_ev": 0.17312467724371544
+          },
+          "rolling_90d": {
+            "n": 1054,
+            "n_accepted": 156,
+            "acceptance_rate": 0.14800759013282733,
+            "ev_accepted": 0.06585439964257886,
+            "ev_per_opp": 0.009746950990742223,
+            "capital_hour_return": 0.06585439964257886,
+            "rank_ic": null,
+            "tp_first_rate": 0.358974358974359,
+            "sl_first_rate": 0.3076923076923077,
+            "fatal_first_rate": 0.019230769230769232,
+            "atomic_failure_rate": 0.0,
+            "median_return": 0.024948752583157683,
+            "trimmed_mean": 0.07718833922891075,
+            "expected_shortfall": -0.36758943098473323,
+            "top5_dependency": 1.6093753041717775
+          },
+          "recency_halflife_30d_ev": 0.09708749396688643
+        },
+        "decay_status": "ACTIVE"
+      },
+      "lowo": {
+        "by_week": {
+          "2922": -0.06150942458001951,
+          "2926": 0.1615446256060184,
+          "2929": -0.0059497025198311905,
+          "2930": 0.05229738517431451,
+          "2934": 0.13735313245781716,
+          "2935": 0.16814159306043946
+        },
+        "worst_week": -0.06150942458001951,
+        "best_week": 0.16814159306043946
+      },
+      "regime": {
+        "low": 0.12669366542228772,
+        "mid": -0.12786087978981456,
+        "high": 0.21494577462948783
+      },
+      "cluster": {
+        "n_accepted": 167,
+        "n_tokens": 166,
+        "top_token_share": 0.4162870514820593,
+        "top5_token_share": 1.473982616447515
+      }
+    },
+    "G2_HGB_SENS": {
+      "decay": {
+        "modes": {
+          "expanding_early_vs_late": {
+            "early_ev": -0.13009662027738023,
+            "late_ev": 0.14439823475402677
+          },
+          "rolling_90d": {
+            "n": 1054,
+            "n_accepted": 182,
+            "acceptance_rate": 0.17267552182163187,
+            "ev_accepted": 0.08850601433346444,
+            "ev_per_opp": 0.015282822209383807,
+            "capital_hour_return": 0.08850601433346444,
+            "rank_ic": null,
+            "tp_first_rate": 0.35714285714285715,
+            "sl_first_rate": 0.44505494505494503,
+            "fatal_first_rate": 0.016483516483516484,
+            "atomic_failure_rate": 0.0,
+            "median_return": 0.008599570028663569,
+            "trimmed_mean": 0.05310593370461687,
+            "expected_shortfall": -0.5365048549712597,
+            "top5_dependency": 1.3641341121988462
+          },
+          "recency_halflife_30d_ev": 0.11167714313058617
+        },
+        "decay_status": "ACTIVE"
+      },
+      "lowo": {
+        "by_week": {
+          "2922": -0.06229471140328916,
+          "2926": 0.15360820756807242,
+          "2929": -0.0059497025198311905,
+          "2930": 0.04026584388421168,
+          "2934": 0.23753812329174778,
+          "2935": 0.22458877074858583
+        },
+        "worst_week": -0.06229471140328916,
+        "best_week": 0.23753812329174778
+      },
+      "regime": {
+        "low": 0.1711155822944901,
+        "mid": -0.08627829485279502,
+        "high": 0.19584893787501412
+      },
+      "cluster": {
+        "n_accepted": 190,
+        "n_tokens": 189,
+        "top_token_share": 0.2923461755401331,
+        "top5_token_share": 1.347248448880497
+      }
+    },
+    "G3_LAGGED_HGB_SENS": {
+      "decay": {
+        "modes": {
+          "expanding_early_vs_late": {
+            "early_ev": 0.03598391511993942,
+            "late_ev": -0.06822417505498692
+          },
+          "rolling_90d": {
+            "n": 170,
+            "n_accepted": 170,
+            "acceptance_rate": 1.0,
+            "ev_accepted": 0.09726984247127282,
+            "ev_per_opp": 0.09726984247127282,
+            "capital_hour_return": 0.09726984247127282,
+            "rank_ic": null,
+            "tp_first_rate": 0.20588235294117646,
+            "sl_first_rate": 0.45294117647058824,
+            "fatal_first_rate": 0.011764705882352941,
+            "atomic_failure_rate": 0.0,
+            "median_return": -0.0223988800746586,
+            "trimmed_mean": 0.011620987587753963,
+            "expected_shortfall": -0.3832634531282236,
+            "top5_dependency": 1.4457418952995462
+          },
+          "recency_halflife_30d_ev": 0.047265197469722006
+        },
+        "decay_status": "DEGRADED"
+      },
+      "lowo": {
+        "by_week": {
+          "2926": 0.18629704893913593,
+          "2929": 0.0,
+          "2930": -0.11417004916842353,
+          "2934": 0.0357182141190538,
+          "2935": -0.03902662013008118
+        },
+        "worst_week": -0.11417004916842353,
+        "best_week": 0.18629704893913593
+      },
+      "regime": {
+        "low": 0.044324099621422634,
+        "mid": 0.15042283612638038,
+        "high": 0.09799510032663136
+      },
+      "cluster": {
+        "n_accepted": 170,
+        "n_tokens": 170,
+        "top_token_share": 0.48113589773050264,
+        "top5_token_share": 1.4457418952995462
+      }
+    },
+    "G3_HMM": {
+      "decay": {
+        "modes": {
+          "expanding_early_vs_late": {
+            "early_ev": -0.19310447537190503,
+            "late_ev": -0.002998738954439651
+          },
+          "rolling_90d": {
+            "n": 730,
+            "n_accepted": 268,
+            "acceptance_rate": 0.36712328767123287,
+            "ev_accepted": -0.039204756212764494,
+            "ev_per_opp": -0.014392978993179286,
+            "capital_hour_return": -0.039204756212764494,
+            "rank_ic": null,
+            "tp_first_rate": 0.25,
+            "sl_first_rate": 0.4962686567164179,
+            "fatal_first_rate": 0.011194029850746268,
+            "atomic_failure_rate": 0.0,
+            "median_return": -0.03689815512298671,
+            "trimmed_mean": -0.09377746888103815,
+            "expected_shortfall": -0.4696228806915497,
+            "top5_dependency": -2.368597369472942
+          },
+          "recency_halflife_30d_ev": -0.019556140073000994
+        },
+        "decay_status": "DISABLED"
+      },
+      "lowo": {
+        "by_week": {
+          "2922": -0.15161666171748076,
+          "2926": -0.006696192973708246,
+          "2929": -0.0065663383552198576,
+          "2930": -0.021662331535618206,
+          "2934": -0.0029362168279686396,
+          "2935": 0.014522350817635797
+        },
+        "worst_week": -0.15161666171748076,
+        "best_week": 0.014522350817635797
+      },
+      "regime": {
+        "low": 0.05083535301154657,
+        "mid": -0.05402121202788635,
+        "high": -0.1272716585011373
+      },
+      "cluster": {
+        "n_accepted": 278,
+        "n_tokens": 277,
+        "top_token_share": -0.6699451500908484,
+        "top5_token_share": -2.1230071057502853
+      }
+    },
+    "STACK_G1G2": {
+      "decay": {
+        "modes": {
+          "expanding_early_vs_late": {
+            "early_ev": -0.15551743434189078,
+            "late_ev": -0.16216689179052493
+          },
+          "rolling_90d": {
+            "n": 1054,
+            "n_accepted": 318,
+            "acceptance_rate": 0.301707779886148,
+            "ev_accepted": -0.14562322210487946,
+            "ev_per_opp": -0.04393565904113061,
+            "capital_hour_return": -0.14562322210487946,
+            "rank_ic": null,
+            "tp_first_rate": 0.2138364779874214,
+            "sl_first_rate": 0.5408805031446541,
+            "fatal_first_rate": 0.009433962264150943,
+            "atomic_failure_rate": 0.0,
+            "median_return": -0.10539473035129537,
+            "trimmed_mean": -0.16854976080570236,
+            "expected_shortfall": -0.5568619036158193,
+            "top5_dependency": -0.42353246024119806
+          },
+          "recency_halflife_30d_ev": -0.16016579345684145
+        },
+        "decay_status": "DISABLED"
+      },
+      "lowo": {
+        "by_week": {
+          "2922": -0.13532839852799158,
+          "2926": -0.13214073035168616,
+          "2929": -0.0060996950203311365,
+          "2930": -0.10613332978557538,
+          "2934": -0.29719423144513535,
+          "2935": -0.2415504226801213
+        },
+        "worst_week": -0.29719423144513535,
+        "best_week": -0.0060996950203311365
+      },
+      "regime": {
+        "low": -0.05951615467663653,
+        "mid": -0.19713923411163808,
+        "high": -0.16754115579208298
+      },
+      "cluster": {
+        "n_accepted": 332,
+        "n_tokens": 329,
+        "top_token_share": -0.10051249599108027,
+        "top5_token_share": -0.4221796039079702
+      }
+    },
+    "STACK_G3G2": {
+      "decay": {
+        "modes": {
+          "expanding_early_vs_late": {
+            "early_ev": -0.4462014998205854,
+            "late_ev": 0.12860468098421293
+          },
+          "rolling_90d": {
+            "n": 730,
+            "n_accepted": 34,
+            "acceptance_rate": 0.04657534246575343,
+            "ev_accepted": -0.23202075209688697,
+            "ev_per_opp": -0.010806445988074192,
+            "capital_hour_return": -0.23202075209688697,
+            "rank_ic": null,
+            "tp_first_rate": 0.4117647058823529,
+            "sl_first_rate": 0.35294117647058826,
+            "fatal_first_rate": 0.029411764705882353,
+            "atomic_failure_rate": 0.0,
+            "median_return": 0.012799360042662055,
+            "trimmed_mean": -0.03903353222687839,
+            "expected_shortfall": -0.5025674362790072,
+            "top5_dependency": -0.768782243855446
+          },
+          "recency_halflife_30d_ev": -0.18654212887942226
+        },
+        "decay_status": "ACTIVE"
+      },
+      "lowo": {
+        "by_week": {
+          "2922": -0.04549772515165027,
+          "2926": -0.693465327311417,
+          "2929": -0.0063996800213310286,
+          "2930": 0.1454802261099059,
+          "2934": null,
+          "2935": null
+        },
+        "worst_week": -0.693465327311417,
+        "best_week": 0.1454802261099059
+      },
+      "regime": {
+        "low": -0.1009137043988595,
+        "mid": -0.4994220881352319,
+        "high": 0.39118044130385915
+      },
+      "cluster": {
+        "n_accepted": 37,
+        "n_tokens": 37,
+        "top_token_share": -0.23109888179848956,
+        "top5_token_share": -0.7101457760084304
+      }
+    }
+  }
+}

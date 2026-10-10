@@ -1,0 +1,2096 @@
+database	table	name	type	position	default_kind	default_expression	is_in_partition_key	is_in_sorting_key	is_in_primary_key	is_in_sampling_key
+eatlq	aerodrome_vamm_swaps_mv	chain_id	UInt64	1			0	0	0	0
+eatlq	aerodrome_vamm_swaps_mv	source	LowCardinality(String)	2			0	0	0	0
+eatlq	aerodrome_vamm_swaps_mv	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	aerodrome_vamm_swaps_mv	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	aerodrome_vamm_swaps_mv	block_number	UInt64	5			0	0	0	0
+eatlq	aerodrome_vamm_swaps_mv	tx_hash	String	6			0	0	0	0
+eatlq	aerodrome_vamm_swaps_mv	log_index	UInt32	7			0	0	0	0
+eatlq	aerodrome_vamm_swaps_mv	pair_address	LowCardinality(String)	8			0	0	0	0
+eatlq	aerodrome_vamm_swaps_mv	sender	String	9			0	0	0	0
+eatlq	aerodrome_vamm_swaps_mv	recipient	String	10			0	0	0	0
+eatlq	aerodrome_vamm_swaps_mv	amount0_in_raw	String	11			0	0	0	0
+eatlq	aerodrome_vamm_swaps_mv	amount1_in_raw	String	12			0	0	0	0
+eatlq	aerodrome_vamm_swaps_mv	amount0_out_raw	String	13			0	0	0	0
+eatlq	aerodrome_vamm_swaps_mv	amount1_out_raw	String	14			0	0	0	0
+eatlq	aerodrome_vamm_swaps_mv	removed	UInt8	15			0	0	0	0
+eatlq	aerodrome_vamm_swaps_mv	payload_json	String	16			0	0	0	0
+eatlq	aerodrome_vamm_swaps_mv	ingested_at	DateTime64(3, \'UTC\')	17			0	0	0	0
+eatlq	base_account_code_b2	chain_id	UInt64	1			0	1	1	0
+eatlq	base_account_code_b2	address	String	2			0	1	1	0
+eatlq	base_account_code_b2	at_block	UInt64	3			0	1	1	0
+eatlq	base_account_code_b2	account_code_class	LowCardinality(String)	4			0	0	0	0
+eatlq	base_account_code_b2	code_hash	String	5			0	0	0	0
+eatlq	base_account_code_b2	fetched_at	DateTime64(3, \'UTC\')	6	DEFAULT	now64(3)	0	0	0	0
+eatlq	base_account_code_b3	chain_id	UInt64	1			0	1	1	0
+eatlq	base_account_code_b3	address	String	2			0	1	1	0
+eatlq	base_account_code_b3	at_block	UInt64	3			0	1	1	0
+eatlq	base_account_code_b3	account_code_class	LowCardinality(String)	4			0	0	0	0
+eatlq	base_account_code_b3	code_hash	String	5			0	0	0	0
+eatlq	base_account_code_b3	fetched_at	DateTime64(3, \'UTC\')	6	DEFAULT	now64(3)	0	0	0	0
+eatlq	base_cha_wallet_swaps	chain_id	UInt64	1			0	1	1	0
+eatlq	base_cha_wallet_swaps	protocol	LowCardinality(String)	2			0	1	1	0
+eatlq	base_cha_wallet_swaps	venue_address	String	3			0	0	0	0
+eatlq	base_cha_wallet_swaps	block_number	UInt64	4			1	1	1	0
+eatlq	base_cha_wallet_swaps	block_time	Nullable(DateTime64(3, \'UTC\'))	5			0	0	0	0
+eatlq	base_cha_wallet_swaps	block_time_source	LowCardinality(String)	6			0	0	0	0
+eatlq	base_cha_wallet_swaps	tx_hash	String	7			0	1	1	0
+eatlq	base_cha_wallet_swaps	log_index	UInt32	8			0	1	1	0
+eatlq	base_cha_wallet_swaps	swap_sender	String	9			0	0	0	0
+eatlq	base_cha_wallet_swaps	swap_recipient	String	10			0	0	0	0
+eatlq	base_cha_wallet_swaps	token0_address	String	11			0	0	0	0
+eatlq	base_cha_wallet_swaps	token1_address	String	12			0	0	0	0
+eatlq	base_cha_wallet_swaps	quote_token_address	String	13			0	0	0	0
+eatlq	base_cha_wallet_swaps	target_token_address	String	14			0	0	0	0
+eatlq	base_cha_wallet_swaps	side	LowCardinality(String)	15			0	0	0	0
+eatlq	base_cha_wallet_swaps	resolved_account	String	16			0	0	0	0
+eatlq	base_cha_wallet_swaps	attribution_source	LowCardinality(String)	17			0	0	0	0
+eatlq	base_cha_wallet_swaps	net_delta_raw	Int256	18			0	0	0	0
+eatlq	base_cha_wallet_swaps	transfer_log_count	UInt16	19			0	0	0	0
+eatlq	base_cha_wallet_swaps	same_direction_candidate_count	UInt16	20			0	0	0	0
+eatlq	base_cha_wallet_swaps	is_infra_only	UInt8	21			0	0	0	0
+eatlq	base_cha_wallet_swaps	account_code_class	LowCardinality(String)	22			0	0	0	0
+eatlq	base_cha_wallet_swaps	residual_bucket	LowCardinality(String)	23			0	0	0	0
+eatlq	base_cha_wallet_swaps	tx_from	String	24			0	0	0	0
+eatlq	base_cha_wallet_swaps	tx_from_match	UInt8	25			0	0	0	0
+eatlq	base_cha_wallet_swaps	built_at	DateTime64(3, \'UTC\')	26	DEFAULT	now64(3)	0	0	0	0
+eatlq	base_pool_2min_snapshot_b3	chain_id	UInt64	1			0	1	1	0
+eatlq	base_pool_2min_snapshot_b3	pool_address	String	2			0	1	1	0
+eatlq	base_pool_2min_snapshot_b3	window	LowCardinality(String)	3			0	0	0	0
+eatlq	base_pool_2min_snapshot_b3	fresh_class	LowCardinality(String)	4			0	0	0	0
+eatlq	base_pool_2min_snapshot_b3	premint_address_count	UInt32	5			0	0	0	0
+eatlq	base_pool_2min_snapshot_b3	premint_amount_raw	UInt256	6			0	0	0	0
+eatlq	base_pool_2min_snapshot_b3	volume_1	Float64	7			0	0	0	0
+eatlq	base_pool_2min_snapshot_b3	volume_2	Float64	8			0	0	0	0
+eatlq	base_pool_2min_snapshot_b3	reserve_60_raw	Int256	9			0	0	0	0
+eatlq	base_pool_2min_snapshot_b3	reserve_120_raw	Int256	10			0	0	0	0
+eatlq	base_pool_2min_snapshot_b3	new_holders_1	UInt32	11			0	0	0	0
+eatlq	base_pool_2min_snapshot_b3	new_holders_2	UInt32	12			0	0	0	0
+eatlq	base_pool_2min_snapshot_b3	new_holders_eoa_1	UInt32	13			0	0	0	0
+eatlq	base_pool_2min_snapshot_b3	new_holders_eoa_2	UInt32	14			0	0	0	0
+eatlq	base_pool_2min_snapshot_b3	proxy_recipients_1	UInt32	15			0	0	0	0
+eatlq	base_pool_2min_snapshot_b3	proxy_recipients_2	UInt32	16			0	0	0	0
+eatlq	base_pool_2min_snapshot_b3	real_signal	UInt8	17			0	0	0	0
+eatlq	base_pool_2min_snapshot_b3	real_signal_eoa	UInt8	18			0	0	0	0
+eatlq	base_pool_2min_snapshot_b3	proxy_signal	UInt8	19			0	0	0	0
+eatlq	base_pool_2min_snapshot_b3	max_feature_block	UInt64	20			0	0	0	0
+eatlq	base_pool_2min_snapshot_b3	snapshot_block	UInt64	21			0	0	0	0
+eatlq	base_pool_2min_snapshot_b3	built_at	DateTime64(3, \'UTC\')	22	DEFAULT	now64(3)	0	0	0	0
+eatlq	base_pool_transfers_b3	chain_id	UInt64	1			0	1	1	0
+eatlq	base_pool_transfers_b3	request_kind	LowCardinality(String)	2			0	1	1	0
+eatlq	base_pool_transfers_b3	request_address	String	3			0	1	1	0
+eatlq	base_pool_transfers_b3	pool_address	String	4			0	1	1	0
+eatlq	base_pool_transfers_b3	block_number	UInt64	5			0	0	0	0
+eatlq	base_pool_transfers_b3	tx_hash	String	6			0	1	1	0
+eatlq	base_pool_transfers_b3	log_index	UInt32	7			0	1	1	0
+eatlq	base_pool_transfers_b3	token_address	String	8			0	0	0	0
+eatlq	base_pool_transfers_b3	sender	String	9			0	0	0	0
+eatlq	base_pool_transfers_b3	recipient	String	10			0	0	0	0
+eatlq	base_pool_transfers_b3	amount	UInt256	11			0	0	0	0
+eatlq	base_pool_transfers_b3	fetched_at	DateTime64(3, \'UTC\')	12	DEFAULT	now64(3)	0	0	0	0
+eatlq	base_pool_universe_b3	chain_id	UInt64	1			0	1	1	0
+eatlq	base_pool_universe_b3	pool_address	String	2			0	1	1	0
+eatlq	base_pool_universe_b3	pool_type	LowCardinality(String)	3			0	0	0	0
+eatlq	base_pool_universe_b3	target_token	String	4			0	0	0	0
+eatlq	base_pool_universe_b3	target_index	UInt8	5			0	0	0	0
+eatlq	base_pool_universe_b3	target_decimals	UInt8	6			0	0	0	0
+eatlq	base_pool_universe_b3	created_block	UInt64	7			0	0	0	0
+eatlq	base_pool_universe_b3	created_time	DateTime64(3, \'UTC\')	8			0	0	0	0
+eatlq	base_pool_universe_b3	snapshot_60	UInt64	9			0	0	0	0
+eatlq	base_pool_universe_b3	snapshot_120	UInt64	10			0	0	0	0
+eatlq	base_pool_universe_b3	snapshot_150	UInt64	11			0	0	0	0
+eatlq	base_pool_universe_b3	snapshot_300	UInt64	12			0	0	0	0
+eatlq	base_pool_universe_b3	window	LowCardinality(String)	13			0	0	0	0
+eatlq	base_pool_universe_b3	built_at	DateTime64(3, \'UTC\')	14	DEFAULT	now64(3)	0	0	0	0
+eatlq	base_target_transfers_b2	chain_id	UInt64	1			0	1	1	0
+eatlq	base_target_transfers_b2	block_number	UInt64	2			0	0	0	0
+eatlq	base_target_transfers_b2	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	base_target_transfers_b2	tx_hash	String	4			0	1	1	0
+eatlq	base_target_transfers_b2	log_index	UInt32	5			0	1	1	0
+eatlq	base_target_transfers_b2	token_address	String	6			0	1	1	0
+eatlq	base_target_transfers_b2	sender	String	7			0	0	0	0
+eatlq	base_target_transfers_b2	recipient	String	8			0	0	0	0
+eatlq	base_target_transfers_b2	amount	UInt256	9			0	0	0	0
+eatlq	base_target_transfers_b2	fetched_at	DateTime64(3, \'UTC\')	10	DEFAULT	now64(3)	0	0	0	0
+eatlq	base_transfer_fetch_status_b3	chain_id	UInt64	1			0	1	1	0
+eatlq	base_transfer_fetch_status_b3	request_kind	LowCardinality(String)	2			0	1	1	0
+eatlq	base_transfer_fetch_status_b3	request_address	String	3			0	1	1	0
+eatlq	base_transfer_fetch_status_b3	pool_address	String	4			0	1	1	0
+eatlq	base_transfer_fetch_status_b3	from_block	UInt64	5			0	0	0	0
+eatlq	base_transfer_fetch_status_b3	to_block	UInt64	6			0	0	0	0
+eatlq	base_transfer_fetch_status_b3	completed	UInt8	7			0	0	0	0
+eatlq	base_transfer_fetch_status_b3	log_count	UInt32	8			0	0	0	0
+eatlq	base_transfer_fetch_status_b3	rpc_attempts	UInt16	9			0	0	0	0
+eatlq	base_transfer_fetch_status_b3	error	String	10			0	0	0	0
+eatlq	base_transfer_fetch_status_b3	fetched_at	DateTime64(3, \'UTC\')	11	DEFAULT	now64(3)	0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	chain_id	UInt64	1			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	source	String	2			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	block_date	Date	5			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	block_number	UInt64	6			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	tx_hash	String	7			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	log_index	UInt32	8			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	pool_address	LowCardinality(String)	9			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	sender	String	10			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	recipient	String	11			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	amount0_raw	String	12			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	amount0	Int256	13			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	amount1_raw	String	14			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	amount1	Int256	15			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	sqrt_price_x96_raw	String	16			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	sqrt_price_x96	UInt256	17			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	liquidity_raw	String	18			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	liquidity	UInt256	19			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	tick_raw	String	20			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	tick	Int32	21			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	removed	UInt8	22			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	payload_json	String	23			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	latest_ingested_at	DateTime64(3, \'UTC\')	24			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	duplicate_rows	UInt64	25			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	tx_from	String	26			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	token0_address	String	27			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	token1_address	String	28			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	token0_decimals	UInt8	29			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	token1_decimals	UInt8	30			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	resolved_block_time	Nullable(DateTime64(3, \'UTC\'))	31			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	block_time_source	String	32			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	valid_tx_from	UInt8	33			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	valid_recipient	UInt8	34			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	valid_sender	UInt8	35			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	resolved_eoa	String	36			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	attribution_source	String	37			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	has_tx_from	UInt8	38			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	old_sender_status	String	39			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	target_token_address	String	40			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	target_token_decimals	UInt8	41			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	resolved_wallet_target_delta_raw	Int256	42			0	0	0	0
+eatlq	base_v3_wallet_swaps_resolved	target_trade_side	String	43			0	0	0	0
+eatlq	base_wallet_attribution_exclusions	chain_id	UInt64	1			0	1	1	0
+eatlq	base_wallet_attribution_exclusions	address	String	2			0	1	1	0
+eatlq	base_wallet_attribution_exclusions	category	LowCardinality(String)	3			0	0	0	0
+eatlq	base_wallet_attribution_exclusions	label	String	4			0	0	0	0
+eatlq	base_wallet_attribution_exclusions	schema_version	UInt16	5			0	0	0	0
+eatlq	base_wallet_attribution_exclusions	synced_at	DateTime64(3, \'UTC\')	6	DEFAULT	now64(3)	0	0	0	0
+eatlq	block_ts_dict	chain_id	UInt64	1			0	0	0	0
+eatlq	block_ts_dict	block_number	UInt64	2			0	0	0	0
+eatlq	block_ts_dict	block_time	DateTime64(3, \'UTC\')	3			0	0	0	0
+eatlq	block_ts_map	chain_id	UInt64	1			0	1	1	0
+eatlq	block_ts_map	block_number	UInt64	2			1	1	1	0
+eatlq	block_ts_map	block_time	DateTime64(3, \'UTC\')	3			0	0	0	0
+eatlq	block_ts_map	fetched_at	DateTime64(3, \'UTC\')	4	DEFAULT	now64(3)	0	0	0	0
+eatlq	discovered_pool_daily_health_v1	health_date	Date	1			0	0	0	0
+eatlq	discovered_pool_daily_health_v1	discovered_pools_new	UInt64	2			0	0	0	0
+eatlq	discovered_pools	chain_id	UInt64	1			0	1	1	0
+eatlq	discovered_pools	pool_address	String	2			0	1	1	0
+eatlq	discovered_pools	factory_address	String	3			0	0	0	0
+eatlq	discovered_pools	pool_type	String	4			0	0	0	0
+eatlq	discovered_pools	token0_address	String	5			0	0	0	0
+eatlq	discovered_pools	token0_symbol	String	6			0	0	0	0
+eatlq	discovered_pools	token0_decimals	UInt8	7			0	0	0	0
+eatlq	discovered_pools	token1_address	String	8			0	0	0	0
+eatlq	discovered_pools	token1_symbol	String	9			0	0	0	0
+eatlq	discovered_pools	token1_decimals	UInt8	10			0	0	0	0
+eatlq	discovered_pools	fee_bps	UInt32	11			0	0	0	0
+eatlq	discovered_pools	has_weth_leg	UInt8	12			0	0	0	0
+eatlq	discovered_pools	created_block	UInt64	13			0	0	0	0
+eatlq	discovered_pools	created_tx_hash	String	14			0	0	0	0
+eatlq	discovered_pools	discovered_at	DateTime	15	DEFAULT	now()	0	0	0	0
+eatlq	discovered_pools_sprint092_backfill	chain_id	UInt64	1			0	1	1	0
+eatlq	discovered_pools_sprint092_backfill	pool_address	String	2			0	1	1	0
+eatlq	discovered_pools_sprint092_backfill	token0_address	String	3			0	0	0	0
+eatlq	discovered_pools_sprint092_backfill	token1_address	String	4			0	0	0	0
+eatlq	discovered_pools_sprint092_backfill	token0_decimals	UInt8	5			0	0	0	0
+eatlq	discovered_pools_sprint092_backfill	token1_decimals	UInt8	6			0	0	0	0
+eatlq	discovered_pools_sprint092_backfill	fee_bps	UInt32	7			0	0	0	0
+eatlq	discovered_pools_sprint092_backfill	fee_raw	UInt32	8			0	0	0	0
+eatlq	discovered_pools_sprint092_backfill	has_weth_leg	UInt8	9			0	0	0	0
+eatlq	discovered_pools_sprint092_backfill	backfilled_at	DateTime	10	DEFAULT	now()	0	0	0	0
+eatlq	erc20_transfers	chain_id	UInt64	1			0	1	1	0
+eatlq	erc20_transfers	source	LowCardinality(String)	2			0	0	0	0
+eatlq	erc20_transfers	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	erc20_transfers	received_at_ms	DateTime64(3, \'UTC\')	4			1	0	0	0
+eatlq	erc20_transfers	block_date	Date	5	DEFAULT	toDate(coalesce(block_time, received_at_ms))	0	0	0	0
+eatlq	erc20_transfers	block_number	UInt64	6			0	1	1	0
+eatlq	erc20_transfers	tx_hash	String	7			0	1	1	0
+eatlq	erc20_transfers	log_index	UInt32	8			0	1	1	0
+eatlq	erc20_transfers	token_address	LowCardinality(String)	9			0	1	1	0
+eatlq	erc20_transfers	sender	LowCardinality(String)	10			0	0	0	0
+eatlq	erc20_transfers	recipient	LowCardinality(String)	11			0	0	0	0
+eatlq	erc20_transfers	amount_raw	String	12			0	0	0	0
+eatlq	erc20_transfers	removed	UInt8	13			0	0	0	0
+eatlq	erc20_transfers	payload_json	String	14			0	0	0	0
+eatlq	erc20_transfers	ingested_at	DateTime64(3, \'UTC\')	15			0	0	0	0
+eatlq	erc20_transfers_decoded	chain_id	UInt64	1			0	0	0	0
+eatlq	erc20_transfers_decoded	source	String	2			0	0	0	0
+eatlq	erc20_transfers_decoded	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	erc20_transfers_decoded	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	erc20_transfers_decoded	block_date	Date	5			0	0	0	0
+eatlq	erc20_transfers_decoded	block_number	UInt64	6			0	0	0	0
+eatlq	erc20_transfers_decoded	tx_hash	String	7			0	0	0	0
+eatlq	erc20_transfers_decoded	log_index	UInt32	8			0	0	0	0
+eatlq	erc20_transfers_decoded	token_address	LowCardinality(String)	9			0	0	0	0
+eatlq	erc20_transfers_decoded	sender	String	10			0	0	0	0
+eatlq	erc20_transfers_decoded	recipient	String	11			0	0	0	0
+eatlq	erc20_transfers_decoded	amount_raw	String	12			0	0	0	0
+eatlq	erc20_transfers_decoded	amount	UInt256	13			0	0	0	0
+eatlq	erc20_transfers_decoded	removed	UInt8	14			0	0	0	0
+eatlq	erc20_transfers_decoded	payload_json	String	15			0	0	0	0
+eatlq	erc20_transfers_decoded	latest_ingested_at	DateTime64(3, \'UTC\')	16			0	0	0	0
+eatlq	erc20_transfers_decoded	duplicate_rows	UInt64	17			0	0	0	0
+eatlq	erc20_transfers_deduped	chain_id	UInt64	1			0	0	0	0
+eatlq	erc20_transfers_deduped	source	String	2			0	0	0	0
+eatlq	erc20_transfers_deduped	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	erc20_transfers_deduped	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	erc20_transfers_deduped	block_date	Date	5			0	0	0	0
+eatlq	erc20_transfers_deduped	block_number	UInt64	6			0	0	0	0
+eatlq	erc20_transfers_deduped	tx_hash	String	7			0	0	0	0
+eatlq	erc20_transfers_deduped	log_index	UInt32	8			0	0	0	0
+eatlq	erc20_transfers_deduped	token_address	LowCardinality(String)	9			0	0	0	0
+eatlq	erc20_transfers_deduped	sender	String	10			0	0	0	0
+eatlq	erc20_transfers_deduped	recipient	String	11			0	0	0	0
+eatlq	erc20_transfers_deduped	amount_raw	String	12			0	0	0	0
+eatlq	erc20_transfers_deduped	removed	UInt8	13			0	0	0	0
+eatlq	erc20_transfers_deduped	payload_json	String	14			0	0	0	0
+eatlq	erc20_transfers_deduped	latest_ingested_at	DateTime64(3, \'UTC\')	15			0	0	0	0
+eatlq	erc20_transfers_deduped	duplicate_rows	UInt64	16			0	0	0	0
+eatlq	erc20_transfers_enriched	chain_id	UInt64	1			0	0	0	0
+eatlq	erc20_transfers_enriched	source	String	2			0	0	0	0
+eatlq	erc20_transfers_enriched	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	erc20_transfers_enriched	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	erc20_transfers_enriched	block_date	Date	5			0	0	0	0
+eatlq	erc20_transfers_enriched	block_number	UInt64	6			0	0	0	0
+eatlq	erc20_transfers_enriched	tx_hash	String	7			0	0	0	0
+eatlq	erc20_transfers_enriched	log_index	UInt32	8			0	0	0	0
+eatlq	erc20_transfers_enriched	token_address	LowCardinality(String)	9			0	0	0	0
+eatlq	erc20_transfers_enriched	token_symbol	String	10			0	0	0	0
+eatlq	erc20_transfers_enriched	token_name	String	11			0	0	0	0
+eatlq	erc20_transfers_enriched	token_decimals	UInt8	12			0	0	0	0
+eatlq	erc20_transfers_enriched	token_is_core	UInt8	13			0	0	0	0
+eatlq	erc20_transfers_enriched	registry_source	String	14			0	0	0	0
+eatlq	erc20_transfers_enriched	has_registry_match	UInt8	15			0	0	0	0
+eatlq	erc20_transfers_enriched	sender	String	16			0	0	0	0
+eatlq	erc20_transfers_enriched	recipient	String	17			0	0	0	0
+eatlq	erc20_transfers_enriched	amount_raw	String	18			0	0	0	0
+eatlq	erc20_transfers_enriched	removed	UInt8	19			0	0	0	0
+eatlq	erc20_transfers_enriched	payload_json	String	20			0	0	0	0
+eatlq	erc20_transfers_enriched	latest_ingested_at	DateTime64(3, \'UTC\')	21			0	0	0	0
+eatlq	erc20_transfers_enriched	duplicate_rows	UInt64	22			0	0	0	0
+eatlq	erc20_transfers_hourly	hour	DateTime(\'UTC\')	1			0	0	0	0
+eatlq	erc20_transfers_hourly	chain_id	UInt64	2			0	0	0	0
+eatlq	erc20_transfers_hourly	token_address	LowCardinality(String)	3			0	0	0	0
+eatlq	erc20_transfers_hourly	transfer_count	UInt64	4			0	0	0	0
+eatlq	erc20_transfers_hourly	unique_tx_count	UInt64	5			0	0	0	0
+eatlq	erc20_transfers_hourly	latest_ingested_at	DateTime64(3, \'UTC\')	6			0	0	0	0
+eatlq	erc20_transfers_mv	chain_id	UInt64	1			0	0	0	0
+eatlq	erc20_transfers_mv	source	LowCardinality(String)	2			0	0	0	0
+eatlq	erc20_transfers_mv	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	erc20_transfers_mv	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	erc20_transfers_mv	block_number	UInt64	5			0	0	0	0
+eatlq	erc20_transfers_mv	tx_hash	String	6			0	0	0	0
+eatlq	erc20_transfers_mv	log_index	UInt32	7			0	0	0	0
+eatlq	erc20_transfers_mv	token_address	LowCardinality(String)	8			0	0	0	0
+eatlq	erc20_transfers_mv	sender	String	9			0	0	0	0
+eatlq	erc20_transfers_mv	recipient	String	10			0	0	0	0
+eatlq	erc20_transfers_mv	amount_raw	String	11			0	0	0	0
+eatlq	erc20_transfers_mv	removed	UInt8	12			0	0	0	0
+eatlq	erc20_transfers_mv	payload_json	String	13			0	0	0	0
+eatlq	erc20_transfers_mv	ingested_at	DateTime64(3, \'UTC\')	14			0	0	0	0
+eatlq	erc20_transfers_semantic	chain_id	UInt64	1			0	0	0	0
+eatlq	erc20_transfers_semantic	source	String	2			0	0	0	0
+eatlq	erc20_transfers_semantic	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	erc20_transfers_semantic	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	erc20_transfers_semantic	block_date	Date	5			0	0	0	0
+eatlq	erc20_transfers_semantic	block_number	UInt64	6			0	0	0	0
+eatlq	erc20_transfers_semantic	tx_hash	String	7			0	0	0	0
+eatlq	erc20_transfers_semantic	log_index	UInt32	8			0	0	0	0
+eatlq	erc20_transfers_semantic	token_address	LowCardinality(String)	9			0	0	0	0
+eatlq	erc20_transfers_semantic	token_symbol	String	10			0	0	0	0
+eatlq	erc20_transfers_semantic	token_name	String	11			0	0	0	0
+eatlq	erc20_transfers_semantic	token_decimals	UInt8	12			0	0	0	0
+eatlq	erc20_transfers_semantic	token_is_core	UInt8	13			0	0	0	0
+eatlq	erc20_transfers_semantic	registry_source	String	14			0	0	0	0
+eatlq	erc20_transfers_semantic	has_registry_match	UInt8	15			0	0	0	0
+eatlq	erc20_transfers_semantic	sender	String	16			0	0	0	0
+eatlq	erc20_transfers_semantic	recipient	String	17			0	0	0	0
+eatlq	erc20_transfers_semantic	amount_raw	String	18			0	0	0	0
+eatlq	erc20_transfers_semantic	amount	UInt256	19			0	0	0	0
+eatlq	erc20_transfers_semantic	amount_normalized	Nullable(Float64)	20			0	0	0	0
+eatlq	erc20_transfers_semantic	removed	UInt8	21			0	0	0	0
+eatlq	erc20_transfers_semantic	payload_json	String	22			0	0	0	0
+eatlq	erc20_transfers_semantic	latest_ingested_at	DateTime64(3, \'UTC\')	23			0	0	0	0
+eatlq	erc20_transfers_semantic	duplicate_rows	UInt64	24			0	0	0	0
+eatlq	normalized_duplicate_events	surface	String	1			0	0	0	0
+eatlq	normalized_duplicate_events	venue_type	String	2			0	0	0	0
+eatlq	normalized_duplicate_events	chain_id	UInt64	3			0	0	0	0
+eatlq	normalized_duplicate_events	venue_address	LowCardinality(String)	4			0	0	0	0
+eatlq	normalized_duplicate_events	tx_hash	String	5			0	0	0	0
+eatlq	normalized_duplicate_events	log_index	UInt32	6			0	0	0	0
+eatlq	normalized_duplicate_events	duplicate_rows	UInt64	7			0	0	0	0
+eatlq	normalized_duplicate_events	duplicate_surplus	Int64	8			0	0	0	0
+eatlq	normalized_duplicate_events	latest_ingested_at	DateTime64(3, \'UTC\')	9			0	0	0	0
+eatlq	normalized_duplicate_summary	surface	String	1			0	0	0	0
+eatlq	normalized_duplicate_summary	venue_type	String	2			0	0	0	0
+eatlq	normalized_duplicate_summary	chain_id	UInt64	3			0	0	0	0
+eatlq	normalized_duplicate_summary	venue_address	LowCardinality(String)	4			0	0	0	0
+eatlq	normalized_duplicate_summary	duplicate_events	UInt64	5			0	0	0	0
+eatlq	normalized_duplicate_summary	duplicate_surplus	Int64	6			0	0	0	0
+eatlq	normalized_duplicate_summary	latest_ingested_at	DateTime64(3, \'UTC\')	7			0	0	0	0
+eatlq	phase2_alert_events	alert_scope	String	1			0	0	0	0
+eatlq	phase2_alert_events	surface	String	2			0	0	0	0
+eatlq	phase2_alert_events	alert_kind	String	3			0	0	0	0
+eatlq	phase2_alert_events	severity	String	4			0	0	0	0
+eatlq	phase2_alert_events	actual_value	Int64	5			0	0	0	0
+eatlq	phase2_alert_events	threshold_value	Int64	6			0	0	0	0
+eatlq	phase2_alert_events	detail	String	7			0	0	0	0
+eatlq	phase2_alert_events	remediation_target	String	8			0	0	0	0
+eatlq	phase2_alert_events	remediation_command	String	9			0	0	0	0
+eatlq	phase2_alert_summary	severity	String	1			0	0	0	0
+eatlq	phase2_alert_summary	alert_kind	String	2			0	0	0	0
+eatlq	phase2_alert_summary	alert_count	UInt64	3			0	0	0	0
+eatlq	phase2_alert_summary	targets	Array(String)	4			0	0	0	0
+eatlq	phase2_raw_status	raw_rows	UInt64	1			0	0	0	0
+eatlq	phase2_raw_status	latest_received_at_ms	DateTime64(3, \'UTC\')	2			0	0	0	0
+eatlq	phase2_raw_status	raw_lag_seconds	Int64	3			0	0	0	0
+eatlq	phase2_surface_status	surface	String	1			0	0	0	0
+eatlq	phase2_surface_status	venue_type	String	2			0	0	0	0
+eatlq	phase2_surface_status	recent_window_minutes	UInt16	3			0	0	0	0
+eatlq	phase2_surface_status	raw_total_rows	UInt64	4			0	0	0	0
+eatlq	phase2_surface_status	raw_projectable_total_rows	UInt64	5			0	0	0	0
+eatlq	phase2_surface_status	raw_projectable_unique_total_rows	UInt64	6			0	0	0	0
+eatlq	phase2_surface_status	raw_unprojectable_total_rows	Int64	7			0	0	0	0
+eatlq	phase2_surface_status	normalized_total_rows	UInt64	8			0	0	0	0
+eatlq	phase2_surface_status	total_gap	Int64	9			0	0	0	0
+eatlq	phase2_surface_status	raw_projectable_duplicate_total_rows	Int64	10			0	0	0	0
+eatlq	phase2_surface_status	projectable_total_gap	Int64	11			0	0	0	0
+eatlq	phase2_surface_status	raw_recent_rows	UInt64	12			0	0	0	0
+eatlq	phase2_surface_status	raw_projectable_recent_rows	UInt64	13			0	0	0	0
+eatlq	phase2_surface_status	raw_projectable_unique_recent_rows	UInt64	14			0	0	0	0
+eatlq	phase2_surface_status	raw_unprojectable_recent_rows	Int64	15			0	0	0	0
+eatlq	phase2_surface_status	normalized_recent_rows	UInt64	16			0	0	0	0
+eatlq	phase2_surface_status	recent_gap	Int64	17			0	0	0	0
+eatlq	phase2_surface_status	raw_projectable_duplicate_recent_rows	Int64	18			0	0	0	0
+eatlq	phase2_surface_status	projectable_recent_gap	Int64	19			0	0	0	0
+eatlq	phase2_surface_status	duplicate_surplus	UInt64	20			0	0	0	0
+eatlq	phase2_surface_status	uncovered_registry_gap	Int64	21			0	0	0	0
+eatlq	phase2_surface_status	latest_block_time	Nullable(DateTime64(3, \'UTC\'))	22			0	0	0	0
+eatlq	phase2_surface_status	latest_ingested_at	DateTime64(3, \'UTC\')	23			0	0	0	0
+eatlq	pool_features_5m	pool_address	LowCardinality(String)	1			0	0	0	0
+eatlq	pool_features_5m	chain_id	UInt64	2			0	0	0	0
+eatlq	pool_features_5m	window_start	DateTime(\'UTC\')	3			0	0	0	0
+eatlq	pool_features_5m	price_velocity_5m	Float64	4			0	0	0	0
+eatlq	pool_features_5m	buy_pressure_ratio	Float64	5			0	0	0	0
+eatlq	pool_features_5m	token_volatility_5m	Float64	6			0	0	0	0
+eatlq	pool_features_5m	activity_heat	UInt64	7			0	0	0	0
+eatlq	pool_features_5m_clean	pool_address	LowCardinality(String)	1			0	0	0	0
+eatlq	pool_features_5m_clean	chain_id	UInt64	2			0	0	0	0
+eatlq	pool_features_5m_clean	window_start	DateTime(\'UTC\')	3			0	0	0	0
+eatlq	pool_features_5m_clean	price_velocity_5m	Float64	4			0	0	0	0
+eatlq	pool_features_5m_clean	buy_pressure_ratio	Float64	5			0	0	0	0
+eatlq	pool_features_5m_clean	token_volatility_5m	Float64	6			0	0	0	0
+eatlq	pool_features_5m_clean	activity_heat	UInt64	7			0	0	0	0
+eatlq	pool_features_5m_clean	unique_buyer_entropy_5m	Float64	8			0	0	0	0
+eatlq	pool_features_5m_sidecar_s083	chain_id	UInt64	1			0	1	1	0
+eatlq	pool_features_5m_sidecar_s083	pool_address	String	2			0	1	1	0
+eatlq	pool_features_5m_sidecar_s083	window_start	DateTime(\'UTC\')	3			1	1	1	0
+eatlq	pool_features_5m_sidecar_s083	price_velocity_5m	Float64	4			0	0	0	0
+eatlq	pool_features_5m_sidecar_s083	buy_pressure_ratio	Float64	5			0	0	0	0
+eatlq	pool_features_5m_sidecar_s083	token_volatility_5m	Float64	6			0	0	0	0
+eatlq	pool_features_5m_sidecar_s083	activity_heat	UInt64	7			0	0	0	0
+eatlq	pool_features_5m_sidecar_s083	updated_at	DateTime(\'UTC\')	8	DEFAULT	now()	0	0	0	0
+eatlq	pool_realtime_training_30m_v1	pool_address	LowCardinality(String)	1			0	0	0	0
+eatlq	pool_realtime_training_30m_v1	chain_id	UInt64	2			0	0	0	0
+eatlq	pool_realtime_training_30m_v1	window_start	DateTime(\'UTC\')	3			0	0	0	0
+eatlq	pool_realtime_training_30m_v1	price_velocity_5m	Float64	4			0	0	0	0
+eatlq	pool_realtime_training_30m_v1	buy_pressure_ratio	Float64	5			0	0	0	0
+eatlq	pool_realtime_training_30m_v1	token_volatility_5m	Float64	6			0	0	0	0
+eatlq	pool_realtime_training_30m_v1	activity_heat	Float64	7			0	0	0	0
+eatlq	pool_realtime_training_30m_v1	label	UInt8	8			0	0	0	0
+eatlq	pool_realtime_training_30m_v1	future_velocity_30m	Float64	9			0	0	0	0
+eatlq	pool_realtime_training_30m_v1	future_pressure_30m	Float64	10			0	0	0	0
+eatlq	pool_realtime_training_30m_v1	future_activity_30m	UInt64	11			0	0	0	0
+eatlq	pool_realtime_training_v1	pool_address	LowCardinality(String)	1			0	0	0	0
+eatlq	pool_realtime_training_v1	chain_id	UInt64	2			0	0	0	0
+eatlq	pool_realtime_training_v1	window_start	DateTime(\'UTC\')	3			0	0	0	0
+eatlq	pool_realtime_training_v1	price_velocity_5m	Float64	4			0	0	0	0
+eatlq	pool_realtime_training_v1	buy_pressure_ratio	Float64	5			0	0	0	0
+eatlq	pool_realtime_training_v1	token_volatility_5m	Float64	6			0	0	0	0
+eatlq	pool_realtime_training_v1	activity_heat	Float64	7			0	0	0	0
+eatlq	pool_realtime_training_v1	label	UInt8	8			0	0	0	0
+eatlq	pool_realtime_training_v1	future_buy_pressure	Float64	9			0	0	0	0
+eatlq	pool_realtime_training_v1	future_activity	UInt64	10			0	0	0	0
+eatlq	pool_realtime_training_v2	pool_address	LowCardinality(String)	1			0	0	0	0
+eatlq	pool_realtime_training_v2	chain_id	UInt64	2			0	0	0	0
+eatlq	pool_realtime_training_v2	window_start	DateTime(\'UTC\')	3			0	0	0	0
+eatlq	pool_realtime_training_v2	price_velocity_5m	Float64	4			0	0	0	0
+eatlq	pool_realtime_training_v2	buy_pressure_ratio	Float64	5			0	0	0	0
+eatlq	pool_realtime_training_v2	token_volatility_5m	Float64	6			0	0	0	0
+eatlq	pool_realtime_training_v2	activity_heat	Float64	7			0	0	0	0
+eatlq	pool_realtime_training_v2	unique_buyer_entropy_5m	Float64	8			0	0	0	0
+eatlq	pool_realtime_training_v2	label	UInt8	9			0	0	0	0
+eatlq	pool_realtime_training_v2	future_buy_pressure	Float64	10			0	0	0	0
+eatlq	pool_realtime_training_v2	future_activity	UInt64	11			0	0	0	0
+eatlq	pool_registry	chain_id	UInt64	1			0	0	0	0
+eatlq	pool_registry	protocol_family	String	2			0	0	0	0
+eatlq	pool_registry	venue_type	String	3			0	0	0	0
+eatlq	pool_registry	venue_address	String	4			0	0	0	0
+eatlq	pool_registry	venue_label	String	5			0	0	0	0
+eatlq	pool_registry	token0_address	String	6			0	0	0	0
+eatlq	pool_registry	token1_address	String	7			0	0	0	0
+eatlq	pool_registry	token0_symbol	String	8			0	0	0	0
+eatlq	pool_registry	token1_symbol	String	9			0	0	0	0
+eatlq	pool_registry	fee_bps	UInt16	10			0	0	0	0
+eatlq	pool_registry	is_curated	UInt8	11			0	0	0	0
+eatlq	pool_registry	registry_source	String	12			0	0	0	0
+eatlq	raw_evm_logs	chain_id	UInt64	1			0	1	1	0
+eatlq	raw_evm_logs	source	LowCardinality(String)	2			0	0	0	0
+eatlq	raw_evm_logs	subscription_id	String	3			0	0	0	0
+eatlq	raw_evm_logs	block_time	Nullable(DateTime64(3, \'UTC\'))	4			0	0	0	0
+eatlq	raw_evm_logs	received_at_ms	DateTime64(3, \'UTC\')	5			1	1	1	0
+eatlq	raw_evm_logs	block_date	Date	6	DEFAULT	toDate(coalesce(block_time, received_at_ms))	0	0	0	0
+eatlq	raw_evm_logs	block_number	UInt64	7			0	0	0	0
+eatlq	raw_evm_logs	tx_hash	String	8			0	1	1	0
+eatlq	raw_evm_logs	log_index	UInt32	9			0	1	1	0
+eatlq	raw_evm_logs	address	LowCardinality(String)	10			0	0	0	0
+eatlq	raw_evm_logs	topic0	String	11			0	0	0	0
+eatlq	raw_evm_logs	topic1	String	12			0	0	0	0
+eatlq	raw_evm_logs	topic2	String	13			0	0	0	0
+eatlq	raw_evm_logs	topic3	String	14			0	0	0	0
+eatlq	raw_evm_logs	data	String	15			0	0	0	0
+eatlq	raw_evm_logs	removed	UInt8	16			0	0	0	0
+eatlq	raw_evm_logs	value_usd	Nullable(Float64)	17			0	0	0	0
+eatlq	raw_evm_logs	payload_json	String	18			0	0	0	0
+eatlq	raw_evm_logs	ingested_at	DateTime64(3, \'UTC\')	19	DEFAULT	now64(3)	0	0	0	0
+eatlq	raw_evm_logs_hourly	hour	DateTime(\'UTC\')	1			1	1	1	0
+eatlq	raw_evm_logs_hourly	chain_id	UInt64	2			0	1	1	0
+eatlq	raw_evm_logs_hourly	address	LowCardinality(String)	3			0	1	1	0
+eatlq	raw_evm_logs_hourly	events_count_state	AggregateFunction(count)	4			0	0	0	0
+eatlq	raw_evm_logs_hourly	unique_tx_state	AggregateFunction(uniqExact, String)	5			0	0	0	0
+eatlq	raw_evm_logs_hourly	value_usd_sum_state	AggregateFunction(sum, Float64)	6			0	0	0	0
+eatlq	raw_evm_logs_hourly_mv	hour	DateTime(\'UTC\')	1			0	0	0	0
+eatlq	raw_evm_logs_hourly_mv	chain_id	UInt64	2			0	0	0	0
+eatlq	raw_evm_logs_hourly_mv	address	LowCardinality(String)	3			0	0	0	0
+eatlq	raw_evm_logs_hourly_mv	events_count_state	AggregateFunction(count)	4			0	0	0	0
+eatlq	raw_evm_logs_hourly_mv	unique_tx_state	AggregateFunction(uniqExact, String)	5			0	0	0	0
+eatlq	raw_evm_logs_hourly_mv	value_usd_sum_state	AggregateFunction(sum, Float64)	6			0	0	0	0
+eatlq	recipient_feature_store_v1	chain_id	UInt64	1			0	0	0	0
+eatlq	recipient_feature_store_v1	recipient_address	String	2			0	0	0	0
+eatlq	recipient_feature_store_v1	trade_count	UInt64	3			0	0	0	0
+eatlq	recipient_feature_store_v1	v2_trade_count	UInt64	4			0	0	0	0
+eatlq	recipient_feature_store_v1	v3_trade_count	UInt64	5			0	0	0	0
+eatlq	recipient_feature_store_v1	v2_trade_share	Float64	6			0	0	0	0
+eatlq	recipient_feature_store_v1	v3_trade_share	Float64	7			0	0	0	0
+eatlq	recipient_feature_store_v1	distinct_venues	UInt64	8			0	0	0	0
+eatlq	recipient_feature_store_v1	distinct_sold_assets	UInt64	9			0	0	0	0
+eatlq	recipient_feature_store_v1	distinct_bought_assets	UInt64	10			0	0	0	0
+eatlq	recipient_feature_store_v1	active_days	UInt64	11			0	0	0	0
+eatlq	recipient_feature_store_v1	active_hours	UInt64	12			0	0	0	0
+eatlq	recipient_feature_store_v1	distinct_senders	UInt64	13			0	0	0	0
+eatlq	recipient_feature_store_v1	avg_trades_per_active_day	Float64	14			0	0	0	0
+eatlq	recipient_feature_store_v1	avg_trades_per_active_hour	Float64	15			0	0	0	0
+eatlq	recipient_feature_store_v1	top_venue_trade_count	UInt64	16			0	0	0	0
+eatlq	recipient_feature_store_v1	top_token_trade_touch_count	UInt64	17			0	0	0	0
+eatlq	recipient_feature_store_v1	total_token_touches	UInt64	18			0	0	0	0
+eatlq	recipient_feature_store_v1	venue_concentration_ratio	Float64	19			0	0	0	0
+eatlq	recipient_feature_store_v1	token_concentration_ratio	Float64	20			0	0	0	0
+eatlq	recipient_feature_store_v1	net_buyer_token_count	UInt64	21			0	0	0	0
+eatlq	recipient_feature_store_v1	net_seller_token_count	UInt64	22			0	0	0	0
+eatlq	recipient_feature_store_v1	net_flat_token_count	UInt64	23			0	0	0	0
+eatlq	recipient_feature_store_v1	cross_protocol_flag	UInt8	24			0	0	0	0
+eatlq	recipient_feature_store_v1	multi_venue_flag	UInt8	25			0	0	0	0
+eatlq	recipient_feature_store_v1	first_trade_at	Nullable(DateTime64(3, \'UTC\'))	26			0	0	0	0
+eatlq	recipient_feature_store_v1	latest_trade_at	Nullable(DateTime64(3, \'UTC\'))	27			0	0	0	0
+eatlq	recipient_feature_store_v1	latest_ingested_at	DateTime64(3, \'UTC\')	28			0	0	0	0
+eatlq	recipient_pnl_summary_v1	chain_id	UInt64	1			0	0	0	0
+eatlq	recipient_pnl_summary_v1	recipient_address	String	2			0	0	0	0
+eatlq	recipient_pnl_summary_v1	tokens_traded	UInt64	3			0	0	0	0
+eatlq	recipient_pnl_summary_v1	round_trips	UInt64	4			0	0	0	0
+eatlq	recipient_pnl_summary_v1	wins	UInt64	5			0	0	0	0
+eatlq	recipient_pnl_summary_v1	win_rate	Float64	6			0	0	0	0
+eatlq	recipient_pnl_summary_v1	avg_hold_seconds	Nullable(Float64)	7			0	0	0	0
+eatlq	recipient_pnl_summary_v1	first_ever_trade	Nullable(DateTime64(3, \'UTC\'))	8			0	0	0	0
+eatlq	recipient_pnl_summary_v1	latest_trade	Nullable(DateTime64(3, \'UTC\'))	9			0	0	0	0
+eatlq	recipient_pnl_summary_v1	active_span_days	Nullable(Int64)	10			0	0	0	0
+eatlq	recipient_swap_profile_v1	chain_id	UInt64	1			0	0	0	0
+eatlq	recipient_swap_profile_v1	recipient_address	String	2			0	0	0	0
+eatlq	recipient_swap_profile_v1	trade_count	UInt64	3			0	0	0	0
+eatlq	recipient_swap_profile_v1	v2_trade_count	UInt64	4			0	0	0	0
+eatlq	recipient_swap_profile_v1	v3_trade_count	UInt64	5			0	0	0	0
+eatlq	recipient_swap_profile_v1	distinct_venues	UInt64	6			0	0	0	0
+eatlq	recipient_swap_profile_v1	distinct_sold_assets	UInt64	7			0	0	0	0
+eatlq	recipient_swap_profile_v1	distinct_bought_assets	UInt64	8			0	0	0	0
+eatlq	recipient_swap_profile_v1	first_trade_at	Nullable(DateTime64(3, \'UTC\'))	9			0	0	0	0
+eatlq	recipient_swap_profile_v1	latest_trade_at	Nullable(DateTime64(3, \'UTC\'))	10			0	0	0	0
+eatlq	recipient_swap_profile_v1	latest_ingested_at	DateTime64(3, \'UTC\')	11			0	0	0	0
+eatlq	recipient_token_pnl_v1	chain_id	UInt64	1			0	0	0	0
+eatlq	recipient_token_pnl_v1	recipient_address	String	2			0	0	0	0
+eatlq	recipient_token_pnl_v1	token_address	Nullable(String)	3			0	0	0	0
+eatlq	recipient_token_pnl_v1	bought_trade_count	UInt64	4			0	0	0	0
+eatlq	recipient_token_pnl_v1	sold_trade_count	UInt64	5			0	0	0	0
+eatlq	recipient_token_pnl_v1	total_bought_amount_normalized	Nullable(Float64)	6			0	0	0	0
+eatlq	recipient_token_pnl_v1	total_sold_amount_normalized	Nullable(Float64)	7			0	0	0	0
+eatlq	recipient_token_pnl_v1	net_amount_normalized	Nullable(Float64)	8			0	0	0	0
+eatlq	recipient_token_pnl_v1	has_round_trip	UInt8	9			0	0	0	0
+eatlq	recipient_token_pnl_v1	is_win	UInt8	10			0	0	0	0
+eatlq	recipient_token_pnl_v1	first_trade_at	Nullable(DateTime64(3, \'UTC\'))	11			0	0	0	0
+eatlq	recipient_token_pnl_v1	latest_trade_at	Nullable(DateTime64(3, \'UTC\'))	12			0	0	0	0
+eatlq	recipient_token_pnl_v1	hold_seconds	Nullable(Int64)	13			0	0	0	0
+eatlq	recipient_token_trade_profile_v1	chain_id	UInt64	1			0	0	0	0
+eatlq	recipient_token_trade_profile_v1	recipient_address	String	2			0	0	0	0
+eatlq	recipient_token_trade_profile_v1	token_address	Nullable(String)	3			0	0	0	0
+eatlq	recipient_token_trade_profile_v1	token_symbol	Nullable(String)	4			0	0	0	0
+eatlq	recipient_token_trade_profile_v1	token_decimals	Nullable(UInt8)	5			0	0	0	0
+eatlq	recipient_token_trade_profile_v1	trade_touch_count	UInt64	6			0	0	0	0
+eatlq	recipient_token_trade_profile_v1	sold_trade_count	UInt64	7			0	0	0	0
+eatlq	recipient_token_trade_profile_v1	bought_trade_count	UInt64	8			0	0	0	0
+eatlq	recipient_token_trade_profile_v1	total_sold_amount_normalized	Nullable(Float64)	9			0	0	0	0
+eatlq	recipient_token_trade_profile_v1	total_bought_amount_normalized	Nullable(Float64)	10			0	0	0	0
+eatlq	recipient_token_trade_profile_v1	net_amount_normalized	Nullable(Float64)	11			0	0	0	0
+eatlq	recipient_token_trade_profile_v1	first_trade_at	Nullable(DateTime64(3, \'UTC\'))	12			0	0	0	0
+eatlq	recipient_token_trade_profile_v1	latest_trade_at	Nullable(DateTime64(3, \'UTC\'))	13			0	0	0	0
+eatlq	recipient_token_trade_profile_v1	latest_ingested_at	DateTime64(3, \'UTC\')	14			0	0	0	0
+eatlq	recipient_venue_trade_profile_v1	chain_id	UInt64	1			0	0	0	0
+eatlq	recipient_venue_trade_profile_v1	recipient_address	String	2			0	0	0	0
+eatlq	recipient_venue_trade_profile_v1	protocol_family	String	3			0	0	0	0
+eatlq	recipient_venue_trade_profile_v1	venue_address	LowCardinality(String)	4			0	0	0	0
+eatlq	recipient_venue_trade_profile_v1	venue_label	String	5			0	0	0	0
+eatlq	recipient_venue_trade_profile_v1	fee_bps	UInt16	6			0	0	0	0
+eatlq	recipient_venue_trade_profile_v1	trade_count	UInt64	7			0	0	0	0
+eatlq	recipient_venue_trade_profile_v1	distinct_txs	UInt64	8			0	0	0	0
+eatlq	recipient_venue_trade_profile_v1	distinct_sold_assets	UInt64	9			0	0	0	0
+eatlq	recipient_venue_trade_profile_v1	distinct_bought_assets	UInt64	10			0	0	0	0
+eatlq	recipient_venue_trade_profile_v1	first_trade_at	Nullable(DateTime64(3, \'UTC\'))	11			0	0	0	0
+eatlq	recipient_venue_trade_profile_v1	latest_trade_at	Nullable(DateTime64(3, \'UTC\'))	12			0	0	0	0
+eatlq	recipient_venue_trade_profile_v1	latest_ingested_at	DateTime64(3, \'UTC\')	13			0	0	0	0
+eatlq	registry_candidate_summary	candidate_type	String	1			0	0	0	0
+eatlq	registry_candidate_summary	candidate_address	LowCardinality(String)	2			0	0	0	0
+eatlq	registry_candidate_summary	surfaces	Array(String)	3			0	0	0	0
+eatlq	registry_candidate_summary	total_rows	UInt64	4			0	0	0	0
+eatlq	registry_candidate_summary	total_unique_txs	UInt64	5			0	0	0	0
+eatlq	registry_candidate_summary	latest_ingested_at	DateTime64(3, \'UTC\')	6			0	0	0	0
+eatlq	registry_gap_summary	candidate_type	String	1			0	0	0	0
+eatlq	registry_gap_summary	surface	String	2			0	0	0	0
+eatlq	registry_gap_summary	candidate_address	LowCardinality(String)	3			0	0	0	0
+eatlq	registry_gap_summary	rows	UInt64	4			0	0	0	0
+eatlq	registry_gap_summary	unique_txs	UInt64	5			0	0	0	0
+eatlq	registry_gap_summary	latest_ingested_at	DateTime64(3, \'UTC\')	6			0	0	0	0
+eatlq	sender_behavior_labels_v1	chain_id	UInt64	1			0	0	0	0
+eatlq	sender_behavior_labels_v1	sender_address	String	2			0	0	0	0
+eatlq	sender_behavior_labels_v1	protocol_preference	String	3			0	0	0	0
+eatlq	sender_behavior_labels_v1	venue_concentration_band	String	4			0	0	0	0
+eatlq	sender_behavior_labels_v1	token_concentration_band	String	5			0	0	0	0
+eatlq	sender_behavior_labels_v1	activity_band	String	6			0	0	0	0
+eatlq	sender_behavior_labels_v1	recipient_diversity_band	String	7			0	0	0	0
+eatlq	sender_behavior_labels_v1	flow_bias	String	8			0	0	0	0
+eatlq	sender_behavior_labels_v1	cross_protocol_flag	UInt8	9			0	0	0	0
+eatlq	sender_behavior_labels_v1	multi_venue_flag	UInt8	10			0	0	0	0
+eatlq	sender_behavior_labels_v1	latest_ingested_at	DateTime64(3, \'UTC\')	11			0	0	0	0
+eatlq	sender_feature_store_v1	chain_id	UInt64	1			0	0	0	0
+eatlq	sender_feature_store_v1	sender_address	String	2			0	0	0	0
+eatlq	sender_feature_store_v1	trade_count	UInt64	3			0	0	0	0
+eatlq	sender_feature_store_v1	v2_trade_count	UInt64	4			0	0	0	0
+eatlq	sender_feature_store_v1	v3_trade_count	UInt64	5			0	0	0	0
+eatlq	sender_feature_store_v1	v2_trade_share	Float64	6			0	0	0	0
+eatlq	sender_feature_store_v1	v3_trade_share	Float64	7			0	0	0	0
+eatlq	sender_feature_store_v1	distinct_venues	UInt64	8			0	0	0	0
+eatlq	sender_feature_store_v1	distinct_sold_assets	UInt64	9			0	0	0	0
+eatlq	sender_feature_store_v1	distinct_bought_assets	UInt64	10			0	0	0	0
+eatlq	sender_feature_store_v1	active_days	UInt64	11			0	0	0	0
+eatlq	sender_feature_store_v1	active_hours	UInt64	12			0	0	0	0
+eatlq	sender_feature_store_v1	distinct_recipients	UInt64	13			0	0	0	0
+eatlq	sender_feature_store_v1	avg_trades_per_active_day	Float64	14			0	0	0	0
+eatlq	sender_feature_store_v1	avg_trades_per_active_hour	Float64	15			0	0	0	0
+eatlq	sender_feature_store_v1	top_venue_trade_count	UInt64	16			0	0	0	0
+eatlq	sender_feature_store_v1	top_token_trade_touch_count	UInt64	17			0	0	0	0
+eatlq	sender_feature_store_v1	total_token_touches	UInt64	18			0	0	0	0
+eatlq	sender_feature_store_v1	venue_concentration_ratio	Float64	19			0	0	0	0
+eatlq	sender_feature_store_v1	token_concentration_ratio	Float64	20			0	0	0	0
+eatlq	sender_feature_store_v1	net_buyer_token_count	UInt64	21			0	0	0	0
+eatlq	sender_feature_store_v1	net_seller_token_count	UInt64	22			0	0	0	0
+eatlq	sender_feature_store_v1	net_flat_token_count	UInt64	23			0	0	0	0
+eatlq	sender_feature_store_v1	cross_protocol_flag	UInt8	24			0	0	0	0
+eatlq	sender_feature_store_v1	multi_venue_flag	UInt8	25			0	0	0	0
+eatlq	sender_feature_store_v1	first_trade_at	Nullable(DateTime64(3, \'UTC\'))	26			0	0	0	0
+eatlq	sender_feature_store_v1	latest_trade_at	Nullable(DateTime64(3, \'UTC\'))	27			0	0	0	0
+eatlq	sender_feature_store_v1	latest_ingested_at	DateTime64(3, \'UTC\')	28			0	0	0	0
+eatlq	sender_forward_outcome_labels_v1	chain_id	UInt64	1			0	0	0	0
+eatlq	sender_forward_outcome_labels_v1	activity_date	Nullable(Date)	2			0	0	0	0
+eatlq	sender_forward_outcome_labels_v1	sender_address	String	3			0	0	0	0
+eatlq	sender_forward_outcome_labels_v1	next_day_trade_count	UInt64	4			0	0	0	0
+eatlq	sender_forward_outcome_labels_v1	next_day_v2_trade_count	UInt64	5			0	0	0	0
+eatlq	sender_forward_outcome_labels_v1	next_day_v3_trade_count	UInt64	6			0	0	0	0
+eatlq	sender_forward_outcome_labels_v1	next_day_v2_trade_share	Float64	7			0	0	0	0
+eatlq	sender_forward_outcome_labels_v1	next_day_v3_trade_share	Float64	8			0	0	0	0
+eatlq	sender_forward_outcome_labels_v1	next_day_distinct_venues	UInt64	9			0	0	0	0
+eatlq	sender_forward_outcome_labels_v1	next_day_distinct_recipients	UInt64	10			0	0	0	0
+eatlq	sender_forward_outcome_labels_v1	next_day_avg_sold_amount_normalized	Float64	11			0	0	0	0
+eatlq	sender_forward_outcome_labels_v1	next_day_avg_bought_amount_normalized	Float64	12			0	0	0	0
+eatlq	sender_forward_outcome_labels_v1	next_day_active_flag	UInt8	13			0	0	0	0
+eatlq	sender_forward_outcome_labels_v1	next_day_higher_trade_count_flag	UInt8	14			0	0	0	0
+eatlq	sender_forward_outcome_labels_v1	next_day_cross_protocol_flag	UInt8	15			0	0	0	0
+eatlq	sender_forward_outcome_labels_v1	next_day_protocol_preference	String	16			0	0	0	0
+eatlq	sender_forward_outcome_labels_v1	latest_ingested_at	DateTime64(3, \'UTC\')	17			0	0	0	0
+eatlq	sender_inference_candidates_v1	chain_id	UInt64	1			0	0	0	0
+eatlq	sender_inference_candidates_v1	activity_date	Nullable(Date)	2			0	0	0	0
+eatlq	sender_inference_candidates_v1	sender_address	String	3			0	0	0	0
+eatlq	sender_inference_candidates_v1	trade_count	UInt64	4			0	0	0	0
+eatlq	sender_inference_candidates_v1	v2_trade_count	UInt64	5			0	0	0	0
+eatlq	sender_inference_candidates_v1	v3_trade_count	UInt64	6			0	0	0	0
+eatlq	sender_inference_candidates_v1	v2_trade_share	Float64	7			0	0	0	0
+eatlq	sender_inference_candidates_v1	v3_trade_share	Float64	8			0	0	0	0
+eatlq	sender_inference_candidates_v1	distinct_venues	UInt64	9			0	0	0	0
+eatlq	sender_inference_candidates_v1	distinct_recipients	UInt64	10			0	0	0	0
+eatlq	sender_inference_candidates_v1	distinct_sold_assets	UInt64	11			0	0	0	0
+eatlq	sender_inference_candidates_v1	distinct_bought_assets	UInt64	12			0	0	0	0
+eatlq	sender_inference_candidates_v1	avg_sold_amount_normalized	Nullable(Float64)	13			0	0	0	0
+eatlq	sender_inference_candidates_v1	avg_bought_amount_normalized	Nullable(Float64)	14			0	0	0	0
+eatlq	sender_inference_candidates_v1	top_venue_trade_count	UInt64	15			0	0	0	0
+eatlq	sender_inference_candidates_v1	venue_concentration_ratio	Float64	16			0	0	0	0
+eatlq	sender_inference_candidates_v1	top_token_trade_touch_count	UInt64	17			0	0	0	0
+eatlq	sender_inference_candidates_v1	total_token_touches	UInt64	18			0	0	0	0
+eatlq	sender_inference_candidates_v1	token_concentration_ratio	Float64	19			0	0	0	0
+eatlq	sender_inference_candidates_v1	protocol_preference	String	20			0	0	0	0
+eatlq	sender_inference_candidates_v1	venue_concentration_band	String	21			0	0	0	0
+eatlq	sender_inference_candidates_v1	token_concentration_band	String	22			0	0	0	0
+eatlq	sender_inference_candidates_v1	activity_band	String	23			0	0	0	0
+eatlq	sender_inference_candidates_v1	recipient_diversity_band	String	24			0	0	0	0
+eatlq	sender_inference_candidates_v1	cross_protocol_flag	UInt8	25			0	0	0	0
+eatlq	sender_inference_candidates_v1	multi_venue_flag	UInt8	26			0	0	0	0
+eatlq	sender_inference_candidates_v1	inference_priority_band	String	27			0	0	0	0
+eatlq	sender_inference_candidates_v1	inference_venue_shape	String	28			0	0	0	0
+eatlq	sender_inference_candidates_v1	inference_token_shape	String	29			0	0	0	0
+eatlq	sender_inference_candidates_v1	min_activity_gate	UInt8	30			0	0	0	0
+eatlq	sender_inference_candidates_v1	v3_bias_gate	UInt8	31			0	0	0	0
+eatlq	sender_inference_candidates_v1	venue_diversity_gate	UInt8	32			0	0	0	0
+eatlq	sender_inference_candidates_v1	first_trade_at	Nullable(DateTime64(3, \'UTC\'))	33			0	0	0	0
+eatlq	sender_inference_candidates_v1	latest_trade_at	Nullable(DateTime64(3, \'UTC\'))	34			0	0	0	0
+eatlq	sender_inference_candidates_v1	latest_ingested_at	DateTime64(3, \'UTC\')	35			0	0	0	0
+eatlq	sender_inference_cohort_summary_v1	chain_id	UInt64	1			0	0	0	0
+eatlq	sender_inference_cohort_summary_v1	activity_date	Nullable(Date)	2			0	0	0	0
+eatlq	sender_inference_cohort_summary_v1	inference_priority_band	String	3			0	0	0	0
+eatlq	sender_inference_cohort_summary_v1	protocol_preference	String	4			0	0	0	0
+eatlq	sender_inference_cohort_summary_v1	activity_band	String	5			0	0	0	0
+eatlq	sender_inference_cohort_summary_v1	candidate_count	UInt64	6			0	0	0	0
+eatlq	sender_inference_cohort_summary_v1	min_activity_gate_count	UInt64	7			0	0	0	0
+eatlq	sender_inference_cohort_summary_v1	v3_bias_gate_count	UInt64	8			0	0	0	0
+eatlq	sender_inference_cohort_summary_v1	venue_diversity_gate_count	UInt64	9			0	0	0	0
+eatlq	sender_inference_cohort_summary_v1	avg_trade_count	Float64	10			0	0	0	0
+eatlq	sender_inference_cohort_summary_v1	avg_venue_concentration_ratio	Float64	11			0	0	0	0
+eatlq	sender_inference_cohort_summary_v1	avg_token_concentration_ratio	Float64	12			0	0	0	0
+eatlq	sender_inference_cohort_summary_v1	latest_ingested_at	DateTime64(3, \'UTC\')	13			0	0	0	0
+eatlq	sender_pnl_summary_mat	chain_id	UInt64	1			0	1	1	0
+eatlq	sender_pnl_summary_mat	sender_address	String	2			0	1	1	0
+eatlq	sender_pnl_summary_mat	tokens_traded	UInt64	3			0	0	0	0
+eatlq	sender_pnl_summary_mat	round_trips	UInt64	4			0	0	0	0
+eatlq	sender_pnl_summary_mat	wins	UInt64	5			0	0	0	0
+eatlq	sender_pnl_summary_mat	win_rate	Float64	6			0	0	0	0
+eatlq	sender_pnl_summary_mat	avg_hold_seconds	Float64	7			0	0	0	0
+eatlq	sender_pnl_summary_mat	first_ever_trade	DateTime	8			0	0	0	0
+eatlq	sender_pnl_summary_mat	latest_trade	DateTime	9			0	0	0	0
+eatlq	sender_pnl_summary_mat	active_span_days	Int32	10			0	0	0	0
+eatlq	sender_pnl_summary_mat	refreshed_at	DateTime	11	DEFAULT	now()	0	0	0	0
+eatlq	sender_pnl_summary_v1	chain_id	UInt64	1			0	0	0	0
+eatlq	sender_pnl_summary_v1	sender_address	String	2			0	0	0	0
+eatlq	sender_pnl_summary_v1	tokens_traded	UInt64	3			0	0	0	0
+eatlq	sender_pnl_summary_v1	round_trips	UInt64	4			0	0	0	0
+eatlq	sender_pnl_summary_v1	wins	UInt64	5			0	0	0	0
+eatlq	sender_pnl_summary_v1	win_rate	Float64	6			0	0	0	0
+eatlq	sender_pnl_summary_v1	avg_hold_seconds	Nullable(Float64)	7			0	0	0	0
+eatlq	sender_pnl_summary_v1	first_ever_trade	Nullable(DateTime64(3, \'UTC\'))	8			0	0	0	0
+eatlq	sender_pnl_summary_v1	latest_trade	Nullable(DateTime64(3, \'UTC\'))	9			0	0	0	0
+eatlq	sender_pnl_summary_v1	active_span_days	Nullable(Int64)	10			0	0	0	0
+eatlq	sender_preference_profile_v1	chain_id	UInt64	1			0	0	0	0
+eatlq	sender_preference_profile_v1	sender_address	String	2			0	0	0	0
+eatlq	sender_preference_profile_v1	top_protocol_family	String	3			0	0	0	0
+eatlq	sender_preference_profile_v1	top_venue_address	String	4			0	0	0	0
+eatlq	sender_preference_profile_v1	top_venue_label	String	5			0	0	0	0
+eatlq	sender_preference_profile_v1	top_venue_fee_bps	UInt16	6			0	0	0	0
+eatlq	sender_preference_profile_v1	top_venue_trade_count	UInt64	7			0	0	0	0
+eatlq	sender_preference_profile_v1	top_venue_trade_share	Float64	8			0	0	0	0
+eatlq	sender_preference_profile_v1	top_token_address	Nullable(String)	9			0	0	0	0
+eatlq	sender_preference_profile_v1	top_token_symbol	Nullable(String)	10			0	0	0	0
+eatlq	sender_preference_profile_v1	top_token_decimals	Nullable(UInt8)	11			0	0	0	0
+eatlq	sender_preference_profile_v1	top_token_trade_touch_count	UInt64	12			0	0	0	0
+eatlq	sender_preference_profile_v1	top_token_trade_share	Float64	13			0	0	0	0
+eatlq	sender_preference_profile_v1	cross_protocol_flag	UInt8	14			0	0	0	0
+eatlq	sender_preference_profile_v1	multi_venue_flag	UInt8	15			0	0	0	0
+eatlq	sender_preference_profile_v1	first_trade_at	Nullable(DateTime64(3, \'UTC\'))	16			0	0	0	0
+eatlq	sender_preference_profile_v1	latest_trade_at	Nullable(DateTime64(3, \'UTC\'))	17			0	0	0	0
+eatlq	sender_preference_profile_v1	latest_ingested_at	DateTime64(3, \'UTC\')	18			0	0	0	0
+eatlq	sender_swap_profile	chain_id	UInt64	1			0	0	0	0
+eatlq	sender_swap_profile	sender_address	String	2			0	0	0	0
+eatlq	sender_swap_profile	trade_count	UInt64	3			0	0	0	0
+eatlq	sender_swap_profile	v2_trade_count	UInt64	4			0	0	0	0
+eatlq	sender_swap_profile	v3_trade_count	UInt64	5			0	0	0	0
+eatlq	sender_swap_profile	distinct_venues	UInt64	6			0	0	0	0
+eatlq	sender_swap_profile	distinct_sold_assets	UInt64	7			0	0	0	0
+eatlq	sender_swap_profile	distinct_bought_assets	UInt64	8			0	0	0	0
+eatlq	sender_swap_profile	first_trade_at	Nullable(DateTime64(3, \'UTC\'))	9			0	0	0	0
+eatlq	sender_swap_profile	latest_trade_at	Nullable(DateTime64(3, \'UTC\'))	10			0	0	0	0
+eatlq	sender_swap_profile	latest_ingested_at	DateTime64(3, \'UTC\')	11			0	0	0	0
+eatlq	sender_token_pnl_mat	chain_id	UInt64	1			0	1	1	0
+eatlq	sender_token_pnl_mat	sender_address	String	2			0	1	1	0
+eatlq	sender_token_pnl_mat	token_address	String	3			0	1	1	0
+eatlq	sender_token_pnl_mat	bought_trade_count	UInt64	4			0	0	0	0
+eatlq	sender_token_pnl_mat	sold_trade_count	UInt64	5			0	0	0	0
+eatlq	sender_token_pnl_mat	total_bought_amount_normalized	Float64	6			0	0	0	0
+eatlq	sender_token_pnl_mat	total_sold_amount_normalized	Float64	7			0	0	0	0
+eatlq	sender_token_pnl_mat	net_amount_normalized	Float64	8			0	0	0	0
+eatlq	sender_token_pnl_mat	has_round_trip	UInt8	9			0	0	0	0
+eatlq	sender_token_pnl_mat	is_win	UInt8	10			0	0	0	0
+eatlq	sender_token_pnl_mat	first_trade_at	DateTime	11			0	0	0	0
+eatlq	sender_token_pnl_mat	latest_trade_at	DateTime	12			0	0	0	0
+eatlq	sender_token_pnl_mat	hold_seconds	Int64	13			0	0	0	0
+eatlq	sender_token_pnl_mat	refreshed_at	DateTime	14	DEFAULT	now()	0	0	0	0
+eatlq	sender_token_pnl_v1	chain_id	UInt64	1			0	0	0	0
+eatlq	sender_token_pnl_v1	sender_address	String	2			0	0	0	0
+eatlq	sender_token_pnl_v1	token_address	Nullable(String)	3			0	0	0	0
+eatlq	sender_token_pnl_v1	bought_trade_count	UInt64	4			0	0	0	0
+eatlq	sender_token_pnl_v1	sold_trade_count	UInt64	5			0	0	0	0
+eatlq	sender_token_pnl_v1	total_bought_amount_normalized	Nullable(Float64)	6			0	0	0	0
+eatlq	sender_token_pnl_v1	total_sold_amount_normalized	Nullable(Float64)	7			0	0	0	0
+eatlq	sender_token_pnl_v1	net_amount_normalized	Nullable(Float64)	8			0	0	0	0
+eatlq	sender_token_pnl_v1	has_round_trip	UInt8	9			0	0	0	0
+eatlq	sender_token_pnl_v1	is_win	UInt8	10			0	0	0	0
+eatlq	sender_token_pnl_v1	first_trade_at	Nullable(DateTime64(3, \'UTC\'))	11			0	0	0	0
+eatlq	sender_token_pnl_v1	latest_trade_at	Nullable(DateTime64(3, \'UTC\'))	12			0	0	0	0
+eatlq	sender_token_pnl_v1	hold_seconds	Nullable(Int64)	13			0	0	0	0
+eatlq	sender_token_ticks_light	day	Date	1			1	1	1	0
+eatlq	sender_token_ticks_light	chain_id	UInt64	2			0	1	1	0
+eatlq	sender_token_ticks_light	sender_address	String	3			0	1	1	0
+eatlq	sender_token_ticks_light	token_address	String	4			0	1	1	0
+eatlq	sender_token_ticks_light	side	Enum8(\'buy\' = 1, \'sell\' = 2)	5			0	0	0	0
+eatlq	sender_token_ticks_light	tick	Int64	6			0	0	0	0
+eatlq	sender_token_ticks_light	block_time	DateTime	7			0	1	1	0
+eatlq	sender_token_ticks_light_mv	day	Nullable(Date)	1			0	0	0	0
+eatlq	sender_token_ticks_light_mv	chain_id	UInt64	2			0	0	0	0
+eatlq	sender_token_ticks_light_mv	sender_address	String	3			0	0	0	0
+eatlq	sender_token_ticks_light_mv	token_address	String	4			0	0	0	0
+eatlq	sender_token_ticks_light_mv	side	String	5			0	0	0	0
+eatlq	sender_token_ticks_light_mv	tick	Int32	6			0	0	0	0
+eatlq	sender_token_ticks_light_mv	block_time	Nullable(DateTime64(3, \'UTC\'))	7			0	0	0	0
+eatlq	sender_token_trade_profile	chain_id	UInt64	1			0	0	0	0
+eatlq	sender_token_trade_profile	sender_address	String	2			0	0	0	0
+eatlq	sender_token_trade_profile	token_address	Nullable(String)	3			0	0	0	0
+eatlq	sender_token_trade_profile	token_symbol	Nullable(String)	4			0	0	0	0
+eatlq	sender_token_trade_profile	token_decimals	Nullable(UInt8)	5			0	0	0	0
+eatlq	sender_token_trade_profile	trade_touch_count	UInt64	6			0	0	0	0
+eatlq	sender_token_trade_profile	sold_trade_count	UInt64	7			0	0	0	0
+eatlq	sender_token_trade_profile	bought_trade_count	UInt64	8			0	0	0	0
+eatlq	sender_token_trade_profile	total_sold_amount_normalized	Nullable(Float64)	9			0	0	0	0
+eatlq	sender_token_trade_profile	total_bought_amount_normalized	Nullable(Float64)	10			0	0	0	0
+eatlq	sender_token_trade_profile	net_amount_normalized	Nullable(Float64)	11			0	0	0	0
+eatlq	sender_token_trade_profile	first_trade_at	Nullable(DateTime64(3, \'UTC\'))	12			0	0	0	0
+eatlq	sender_token_trade_profile	latest_trade_at	Nullable(DateTime64(3, \'UTC\'))	13			0	0	0	0
+eatlq	sender_token_trade_profile	latest_ingested_at	DateTime64(3, \'UTC\')	14			0	0	0	0
+eatlq	sender_trade_day_rollup_v1	chain_id	UInt64	1			0	0	0	0
+eatlq	sender_trade_day_rollup_v1	activity_date	Nullable(Date)	2			0	0	0	0
+eatlq	sender_trade_day_rollup_v1	sender_address	String	3			0	0	0	0
+eatlq	sender_trade_day_rollup_v1	trade_count	UInt64	4			0	0	0	0
+eatlq	sender_trade_day_rollup_v1	v2_trade_count	UInt64	5			0	0	0	0
+eatlq	sender_trade_day_rollup_v1	v3_trade_count	UInt64	6			0	0	0	0
+eatlq	sender_trade_day_rollup_v1	distinct_venues	UInt64	7			0	0	0	0
+eatlq	sender_trade_day_rollup_v1	distinct_recipients	UInt64	8			0	0	0	0
+eatlq	sender_trade_day_rollup_v1	distinct_sold_assets	UInt64	9			0	0	0	0
+eatlq	sender_trade_day_rollup_v1	distinct_bought_assets	UInt64	10			0	0	0	0
+eatlq	sender_trade_day_rollup_v1	avg_sold_amount_normalized	Nullable(Float64)	11			0	0	0	0
+eatlq	sender_trade_day_rollup_v1	avg_bought_amount_normalized	Nullable(Float64)	12			0	0	0	0
+eatlq	sender_trade_day_rollup_v1	first_trade_at	Nullable(DateTime64(3, \'UTC\'))	13			0	0	0	0
+eatlq	sender_trade_day_rollup_v1	latest_trade_at	Nullable(DateTime64(3, \'UTC\'))	14			0	0	0	0
+eatlq	sender_trade_day_rollup_v1	latest_ingested_at	DateTime64(3, \'UTC\')	15			0	0	0	0
+eatlq	sender_training_daily_dataset_summary_v1	chain_id	UInt64	1			0	0	0	0
+eatlq	sender_training_daily_dataset_summary_v1	activity_date	Nullable(Date)	2			0	0	0	0
+eatlq	sender_training_daily_dataset_summary_v1	example_count	UInt64	3			0	0	0	0
+eatlq	sender_training_daily_dataset_summary_v1	train_examples	UInt64	4			0	0	0	0
+eatlq	sender_training_daily_dataset_summary_v1	validation_examples	UInt64	5			0	0	0	0
+eatlq	sender_training_daily_dataset_summary_v1	test_examples	UInt64	6			0	0	0	0
+eatlq	sender_training_daily_dataset_summary_v1	next_day_active_examples	UInt64	7			0	0	0	0
+eatlq	sender_training_daily_dataset_summary_v1	next_day_higher_trade_examples	UInt64	8			0	0	0	0
+eatlq	sender_training_daily_dataset_summary_v1	next_day_cross_protocol_examples	UInt64	9			0	0	0	0
+eatlq	sender_training_daily_dataset_summary_v1	avg_trade_count	Float64	10			0	0	0	0
+eatlq	sender_training_daily_dataset_summary_v1	avg_next_day_trade_count	Float64	11			0	0	0	0
+eatlq	sender_training_daily_dataset_summary_v1	latest_ingested_at	DateTime64(3, \'UTC\')	12			0	0	0	0
+eatlq	sender_training_dataset_v1	chain_id	UInt64	1			0	0	0	0
+eatlq	sender_training_dataset_v1	activity_date	Nullable(Date)	2			0	0	0	0
+eatlq	sender_training_dataset_v1	sender_address	String	3			0	0	0	0
+eatlq	sender_training_dataset_v1	trade_count	UInt64	4			0	0	0	0
+eatlq	sender_training_dataset_v1	v2_trade_count	UInt64	5			0	0	0	0
+eatlq	sender_training_dataset_v1	v3_trade_count	UInt64	6			0	0	0	0
+eatlq	sender_training_dataset_v1	v2_trade_share	Float64	7			0	0	0	0
+eatlq	sender_training_dataset_v1	v3_trade_share	Float64	8			0	0	0	0
+eatlq	sender_training_dataset_v1	distinct_venues	UInt64	9			0	0	0	0
+eatlq	sender_training_dataset_v1	distinct_recipients	UInt64	10			0	0	0	0
+eatlq	sender_training_dataset_v1	distinct_sold_assets	UInt64	11			0	0	0	0
+eatlq	sender_training_dataset_v1	distinct_bought_assets	UInt64	12			0	0	0	0
+eatlq	sender_training_dataset_v1	avg_sold_amount_normalized	Nullable(Float64)	13			0	0	0	0
+eatlq	sender_training_dataset_v1	avg_bought_amount_normalized	Nullable(Float64)	14			0	0	0	0
+eatlq	sender_training_dataset_v1	top_venue_trade_count	UInt64	15			0	0	0	0
+eatlq	sender_training_dataset_v1	venue_concentration_ratio	Float64	16			0	0	0	0
+eatlq	sender_training_dataset_v1	top_token_trade_touch_count	UInt64	17			0	0	0	0
+eatlq	sender_training_dataset_v1	total_token_touches	UInt64	18			0	0	0	0
+eatlq	sender_training_dataset_v1	token_concentration_ratio	Float64	19			0	0	0	0
+eatlq	sender_training_dataset_v1	protocol_preference	String	20			0	0	0	0
+eatlq	sender_training_dataset_v1	venue_concentration_band	String	21			0	0	0	0
+eatlq	sender_training_dataset_v1	token_concentration_band	String	22			0	0	0	0
+eatlq	sender_training_dataset_v1	activity_band	String	23			0	0	0	0
+eatlq	sender_training_dataset_v1	recipient_diversity_band	String	24			0	0	0	0
+eatlq	sender_training_dataset_v1	cross_protocol_flag	UInt8	25			0	0	0	0
+eatlq	sender_training_dataset_v1	multi_venue_flag	UInt8	26			0	0	0	0
+eatlq	sender_training_dataset_v1	first_trade_at	Nullable(DateTime64(3, \'UTC\'))	27			0	0	0	0
+eatlq	sender_training_dataset_v1	latest_trade_at	Nullable(DateTime64(3, \'UTC\'))	28			0	0	0	0
+eatlq	sender_training_dataset_v1	latest_ingested_at	DateTime64(3, \'UTC\')	29			0	0	0	0
+eatlq	sender_training_examples_matured_v1	chain_id	UInt64	1			0	0	0	0
+eatlq	sender_training_examples_matured_v1	activity_date	Nullable(Date)	2			0	0	0	0
+eatlq	sender_training_examples_matured_v1	sender_address	String	3			0	0	0	0
+eatlq	sender_training_examples_matured_v1	trade_count	UInt64	4			0	0	0	0
+eatlq	sender_training_examples_matured_v1	v2_trade_count	UInt64	5			0	0	0	0
+eatlq	sender_training_examples_matured_v1	v3_trade_count	UInt64	6			0	0	0	0
+eatlq	sender_training_examples_matured_v1	v2_trade_share	Float64	7			0	0	0	0
+eatlq	sender_training_examples_matured_v1	v3_trade_share	Float64	8			0	0	0	0
+eatlq	sender_training_examples_matured_v1	distinct_venues	UInt64	9			0	0	0	0
+eatlq	sender_training_examples_matured_v1	distinct_recipients	UInt64	10			0	0	0	0
+eatlq	sender_training_examples_matured_v1	distinct_sold_assets	UInt64	11			0	0	0	0
+eatlq	sender_training_examples_matured_v1	distinct_bought_assets	UInt64	12			0	0	0	0
+eatlq	sender_training_examples_matured_v1	avg_sold_amount_normalized	Nullable(Float64)	13			0	0	0	0
+eatlq	sender_training_examples_matured_v1	avg_bought_amount_normalized	Nullable(Float64)	14			0	0	0	0
+eatlq	sender_training_examples_matured_v1	top_venue_trade_count	UInt64	15			0	0	0	0
+eatlq	sender_training_examples_matured_v1	venue_concentration_ratio	Float64	16			0	0	0	0
+eatlq	sender_training_examples_matured_v1	top_token_trade_touch_count	UInt64	17			0	0	0	0
+eatlq	sender_training_examples_matured_v1	total_token_touches	UInt64	18			0	0	0	0
+eatlq	sender_training_examples_matured_v1	token_concentration_ratio	Float64	19			0	0	0	0
+eatlq	sender_training_examples_matured_v1	protocol_preference	String	20			0	0	0	0
+eatlq	sender_training_examples_matured_v1	venue_concentration_band	String	21			0	0	0	0
+eatlq	sender_training_examples_matured_v1	token_concentration_band	String	22			0	0	0	0
+eatlq	sender_training_examples_matured_v1	activity_band	String	23			0	0	0	0
+eatlq	sender_training_examples_matured_v1	recipient_diversity_band	String	24			0	0	0	0
+eatlq	sender_training_examples_matured_v1	cross_protocol_flag	UInt8	25			0	0	0	0
+eatlq	sender_training_examples_matured_v1	multi_venue_flag	UInt8	26			0	0	0	0
+eatlq	sender_training_examples_matured_v1	next_day_trade_count	UInt64	27			0	0	0	0
+eatlq	sender_training_examples_matured_v1	next_day_v2_trade_count	UInt64	28			0	0	0	0
+eatlq	sender_training_examples_matured_v1	next_day_v3_trade_count	UInt64	29			0	0	0	0
+eatlq	sender_training_examples_matured_v1	next_day_v2_trade_share	Float64	30			0	0	0	0
+eatlq	sender_training_examples_matured_v1	next_day_v3_trade_share	Float64	31			0	0	0	0
+eatlq	sender_training_examples_matured_v1	next_day_distinct_venues	UInt64	32			0	0	0	0
+eatlq	sender_training_examples_matured_v1	next_day_distinct_recipients	UInt64	33			0	0	0	0
+eatlq	sender_training_examples_matured_v1	next_day_avg_sold_amount_normalized	Float64	34			0	0	0	0
+eatlq	sender_training_examples_matured_v1	next_day_avg_bought_amount_normalized	Float64	35			0	0	0	0
+eatlq	sender_training_examples_matured_v1	next_day_active_flag	UInt8	36			0	0	0	0
+eatlq	sender_training_examples_matured_v1	next_day_higher_trade_count_flag	UInt8	37			0	0	0	0
+eatlq	sender_training_examples_matured_v1	next_day_cross_protocol_flag	UInt8	38			0	0	0	0
+eatlq	sender_training_examples_matured_v1	next_day_protocol_preference	String	39			0	0	0	0
+eatlq	sender_training_examples_matured_v1	first_trade_at	Nullable(DateTime64(3, \'UTC\'))	40			0	0	0	0
+eatlq	sender_training_examples_matured_v1	latest_trade_at	Nullable(DateTime64(3, \'UTC\'))	41			0	0	0	0
+eatlq	sender_training_examples_matured_v1	latest_ingested_at	DateTime64(3, \'UTC\')	42			0	0	0	0
+eatlq	sender_training_examples_ready_v1	chain_id	UInt64	1			0	0	0	0
+eatlq	sender_training_examples_ready_v1	activity_date	Nullable(Date)	2			0	0	0	0
+eatlq	sender_training_examples_ready_v1	sender_address	String	3			0	0	0	0
+eatlq	sender_training_examples_ready_v1	dataset_split	String	4			0	0	0	0
+eatlq	sender_training_examples_ready_v1	split_bucket	Nullable(UInt8)	5			0	0	0	0
+eatlq	sender_training_examples_ready_v1	trade_count	UInt64	6			0	0	0	0
+eatlq	sender_training_examples_ready_v1	v2_trade_count	UInt64	7			0	0	0	0
+eatlq	sender_training_examples_ready_v1	v3_trade_count	UInt64	8			0	0	0	0
+eatlq	sender_training_examples_ready_v1	v2_trade_share	Float64	9			0	0	0	0
+eatlq	sender_training_examples_ready_v1	v3_trade_share	Float64	10			0	0	0	0
+eatlq	sender_training_examples_ready_v1	distinct_venues	UInt64	11			0	0	0	0
+eatlq	sender_training_examples_ready_v1	distinct_recipients	UInt64	12			0	0	0	0
+eatlq	sender_training_examples_ready_v1	distinct_sold_assets	UInt64	13			0	0	0	0
+eatlq	sender_training_examples_ready_v1	distinct_bought_assets	UInt64	14			0	0	0	0
+eatlq	sender_training_examples_ready_v1	avg_sold_amount_normalized	Nullable(Float64)	15			0	0	0	0
+eatlq	sender_training_examples_ready_v1	avg_bought_amount_normalized	Nullable(Float64)	16			0	0	0	0
+eatlq	sender_training_examples_ready_v1	protocol_preference	String	17			0	0	0	0
+eatlq	sender_training_examples_ready_v1	venue_concentration_band	String	18			0	0	0	0
+eatlq	sender_training_examples_ready_v1	token_concentration_band	String	19			0	0	0	0
+eatlq	sender_training_examples_ready_v1	activity_band	String	20			0	0	0	0
+eatlq	sender_training_examples_ready_v1	recipient_diversity_band	String	21			0	0	0	0
+eatlq	sender_training_examples_ready_v1	cross_protocol_flag	UInt8	22			0	0	0	0
+eatlq	sender_training_examples_ready_v1	multi_venue_flag	UInt8	23			0	0	0	0
+eatlq	sender_training_examples_ready_v1	next_day_trade_count	UInt64	24			0	0	0	0
+eatlq	sender_training_examples_ready_v1	next_day_v2_trade_count	UInt64	25			0	0	0	0
+eatlq	sender_training_examples_ready_v1	next_day_v3_trade_count	UInt64	26			0	0	0	0
+eatlq	sender_training_examples_ready_v1	next_day_v2_trade_share	Float64	27			0	0	0	0
+eatlq	sender_training_examples_ready_v1	next_day_v3_trade_share	Float64	28			0	0	0	0
+eatlq	sender_training_examples_ready_v1	next_day_active_flag	UInt8	29			0	0	0	0
+eatlq	sender_training_examples_ready_v1	next_day_higher_trade_count_flag	UInt8	30			0	0	0	0
+eatlq	sender_training_examples_ready_v1	next_day_cross_protocol_flag	UInt8	31			0	0	0	0
+eatlq	sender_training_examples_ready_v1	next_day_protocol_preference	String	32			0	0	0	0
+eatlq	sender_training_examples_ready_v1	next_day_activity_bucket	String	33			0	0	0	0
+eatlq	sender_training_examples_ready_v1	next_day_growth_bucket	String	34			0	0	0	0
+eatlq	sender_training_examples_ready_v1	supervised_target_class	String	35			0	0	0	0
+eatlq	sender_training_examples_ready_v1	first_trade_at	Nullable(DateTime64(3, \'UTC\'))	36			0	0	0	0
+eatlq	sender_training_examples_ready_v1	latest_trade_at	Nullable(DateTime64(3, \'UTC\'))	37			0	0	0	0
+eatlq	sender_training_examples_ready_v1	latest_ingested_at	DateTime64(3, \'UTC\')	38			0	0	0	0
+eatlq	sender_training_examples_split_v1	chain_id	UInt64	1			0	0	0	0
+eatlq	sender_training_examples_split_v1	activity_date	Nullable(Date)	2			0	0	0	0
+eatlq	sender_training_examples_split_v1	sender_address	String	3			0	0	0	0
+eatlq	sender_training_examples_split_v1	trade_count	UInt64	4			0	0	0	0
+eatlq	sender_training_examples_split_v1	v2_trade_count	UInt64	5			0	0	0	0
+eatlq	sender_training_examples_split_v1	v3_trade_count	UInt64	6			0	0	0	0
+eatlq	sender_training_examples_split_v1	v2_trade_share	Float64	7			0	0	0	0
+eatlq	sender_training_examples_split_v1	v3_trade_share	Float64	8			0	0	0	0
+eatlq	sender_training_examples_split_v1	distinct_venues	UInt64	9			0	0	0	0
+eatlq	sender_training_examples_split_v1	distinct_recipients	UInt64	10			0	0	0	0
+eatlq	sender_training_examples_split_v1	distinct_sold_assets	UInt64	11			0	0	0	0
+eatlq	sender_training_examples_split_v1	distinct_bought_assets	UInt64	12			0	0	0	0
+eatlq	sender_training_examples_split_v1	avg_sold_amount_normalized	Nullable(Float64)	13			0	0	0	0
+eatlq	sender_training_examples_split_v1	avg_bought_amount_normalized	Nullable(Float64)	14			0	0	0	0
+eatlq	sender_training_examples_split_v1	top_venue_trade_count	UInt64	15			0	0	0	0
+eatlq	sender_training_examples_split_v1	venue_concentration_ratio	Float64	16			0	0	0	0
+eatlq	sender_training_examples_split_v1	top_token_trade_touch_count	UInt64	17			0	0	0	0
+eatlq	sender_training_examples_split_v1	total_token_touches	UInt64	18			0	0	0	0
+eatlq	sender_training_examples_split_v1	token_concentration_ratio	Float64	19			0	0	0	0
+eatlq	sender_training_examples_split_v1	protocol_preference	String	20			0	0	0	0
+eatlq	sender_training_examples_split_v1	venue_concentration_band	String	21			0	0	0	0
+eatlq	sender_training_examples_split_v1	token_concentration_band	String	22			0	0	0	0
+eatlq	sender_training_examples_split_v1	activity_band	String	23			0	0	0	0
+eatlq	sender_training_examples_split_v1	recipient_diversity_band	String	24			0	0	0	0
+eatlq	sender_training_examples_split_v1	cross_protocol_flag	UInt8	25			0	0	0	0
+eatlq	sender_training_examples_split_v1	multi_venue_flag	UInt8	26			0	0	0	0
+eatlq	sender_training_examples_split_v1	next_day_trade_count	UInt64	27			0	0	0	0
+eatlq	sender_training_examples_split_v1	next_day_v2_trade_count	UInt64	28			0	0	0	0
+eatlq	sender_training_examples_split_v1	next_day_v3_trade_count	UInt64	29			0	0	0	0
+eatlq	sender_training_examples_split_v1	next_day_v2_trade_share	Float64	30			0	0	0	0
+eatlq	sender_training_examples_split_v1	next_day_v3_trade_share	Float64	31			0	0	0	0
+eatlq	sender_training_examples_split_v1	next_day_distinct_venues	UInt64	32			0	0	0	0
+eatlq	sender_training_examples_split_v1	next_day_distinct_recipients	UInt64	33			0	0	0	0
+eatlq	sender_training_examples_split_v1	next_day_avg_sold_amount_normalized	Float64	34			0	0	0	0
+eatlq	sender_training_examples_split_v1	next_day_avg_bought_amount_normalized	Float64	35			0	0	0	0
+eatlq	sender_training_examples_split_v1	next_day_active_flag	UInt8	36			0	0	0	0
+eatlq	sender_training_examples_split_v1	next_day_higher_trade_count_flag	UInt8	37			0	0	0	0
+eatlq	sender_training_examples_split_v1	next_day_cross_protocol_flag	UInt8	38			0	0	0	0
+eatlq	sender_training_examples_split_v1	next_day_protocol_preference	String	39			0	0	0	0
+eatlq	sender_training_examples_split_v1	split_bucket	Nullable(UInt8)	40			0	0	0	0
+eatlq	sender_training_examples_split_v1	dataset_split	String	41			0	0	0	0
+eatlq	sender_training_examples_split_v1	first_trade_at	Nullable(DateTime64(3, \'UTC\'))	42			0	0	0	0
+eatlq	sender_training_examples_split_v1	latest_trade_at	Nullable(DateTime64(3, \'UTC\'))	43			0	0	0	0
+eatlq	sender_training_examples_split_v1	latest_ingested_at	DateTime64(3, \'UTC\')	44			0	0	0	0
+eatlq	sender_training_examples_v1	chain_id	UInt64	1			0	0	0	0
+eatlq	sender_training_examples_v1	activity_date	Nullable(Date)	2			0	0	0	0
+eatlq	sender_training_examples_v1	sender_address	String	3			0	0	0	0
+eatlq	sender_training_examples_v1	trade_count	UInt64	4			0	0	0	0
+eatlq	sender_training_examples_v1	v2_trade_count	UInt64	5			0	0	0	0
+eatlq	sender_training_examples_v1	v3_trade_count	UInt64	6			0	0	0	0
+eatlq	sender_training_examples_v1	v2_trade_share	Float64	7			0	0	0	0
+eatlq	sender_training_examples_v1	v3_trade_share	Float64	8			0	0	0	0
+eatlq	sender_training_examples_v1	distinct_venues	UInt64	9			0	0	0	0
+eatlq	sender_training_examples_v1	distinct_recipients	UInt64	10			0	0	0	0
+eatlq	sender_training_examples_v1	distinct_sold_assets	UInt64	11			0	0	0	0
+eatlq	sender_training_examples_v1	distinct_bought_assets	UInt64	12			0	0	0	0
+eatlq	sender_training_examples_v1	avg_sold_amount_normalized	Nullable(Float64)	13			0	0	0	0
+eatlq	sender_training_examples_v1	avg_bought_amount_normalized	Nullable(Float64)	14			0	0	0	0
+eatlq	sender_training_examples_v1	top_venue_trade_count	UInt64	15			0	0	0	0
+eatlq	sender_training_examples_v1	venue_concentration_ratio	Float64	16			0	0	0	0
+eatlq	sender_training_examples_v1	top_token_trade_touch_count	UInt64	17			0	0	0	0
+eatlq	sender_training_examples_v1	total_token_touches	UInt64	18			0	0	0	0
+eatlq	sender_training_examples_v1	token_concentration_ratio	Float64	19			0	0	0	0
+eatlq	sender_training_examples_v1	protocol_preference	String	20			0	0	0	0
+eatlq	sender_training_examples_v1	venue_concentration_band	String	21			0	0	0	0
+eatlq	sender_training_examples_v1	token_concentration_band	String	22			0	0	0	0
+eatlq	sender_training_examples_v1	activity_band	String	23			0	0	0	0
+eatlq	sender_training_examples_v1	recipient_diversity_band	String	24			0	0	0	0
+eatlq	sender_training_examples_v1	cross_protocol_flag	UInt8	25			0	0	0	0
+eatlq	sender_training_examples_v1	multi_venue_flag	UInt8	26			0	0	0	0
+eatlq	sender_training_examples_v1	next_day_trade_count	UInt64	27			0	0	0	0
+eatlq	sender_training_examples_v1	next_day_v2_trade_count	UInt64	28			0	0	0	0
+eatlq	sender_training_examples_v1	next_day_v3_trade_count	UInt64	29			0	0	0	0
+eatlq	sender_training_examples_v1	next_day_v2_trade_share	Float64	30			0	0	0	0
+eatlq	sender_training_examples_v1	next_day_v3_trade_share	Float64	31			0	0	0	0
+eatlq	sender_training_examples_v1	next_day_distinct_venues	UInt64	32			0	0	0	0
+eatlq	sender_training_examples_v1	next_day_distinct_recipients	UInt64	33			0	0	0	0
+eatlq	sender_training_examples_v1	next_day_avg_sold_amount_normalized	Float64	34			0	0	0	0
+eatlq	sender_training_examples_v1	next_day_avg_bought_amount_normalized	Float64	35			0	0	0	0
+eatlq	sender_training_examples_v1	next_day_active_flag	UInt8	36			0	0	0	0
+eatlq	sender_training_examples_v1	next_day_higher_trade_count_flag	UInt8	37			0	0	0	0
+eatlq	sender_training_examples_v1	next_day_cross_protocol_flag	UInt8	38			0	0	0	0
+eatlq	sender_training_examples_v1	next_day_protocol_preference	String	39			0	0	0	0
+eatlq	sender_training_examples_v1	first_trade_at	Nullable(DateTime64(3, \'UTC\'))	40			0	0	0	0
+eatlq	sender_training_examples_v1	latest_trade_at	Nullable(DateTime64(3, \'UTC\'))	41			0	0	0	0
+eatlq	sender_training_examples_v1	latest_ingested_at	DateTime64(3, \'UTC\')	42			0	0	0	0
+eatlq	sender_training_label_balance_v1	chain_id	UInt64	1			0	0	0	0
+eatlq	sender_training_label_balance_v1	dataset_split	String	2			0	0	0	0
+eatlq	sender_training_label_balance_v1	supervised_target_class	String	3			0	0	0	0
+eatlq	sender_training_label_balance_v1	next_day_activity_bucket	String	4			0	0	0	0
+eatlq	sender_training_label_balance_v1	example_count	UInt64	5			0	0	0	0
+eatlq	sender_training_label_balance_v1	higher_trade_positive_examples	UInt64	6			0	0	0	0
+eatlq	sender_training_label_balance_v1	cross_protocol_positive_examples	UInt64	7			0	0	0	0
+eatlq	sender_training_label_balance_v1	avg_current_trade_count	Float64	8			0	0	0	0
+eatlq	sender_training_label_balance_v1	avg_next_day_trade_count	Float64	9			0	0	0	0
+eatlq	sender_training_label_balance_v1	latest_ingested_at	DateTime64(3, \'UTC\')	10			0	0	0	0
+eatlq	sender_training_split_summary_v1	chain_id	UInt64	1			0	0	0	0
+eatlq	sender_training_split_summary_v1	dataset_split	String	2			0	0	0	0
+eatlq	sender_training_split_summary_v1	example_count	UInt64	3			0	0	0	0
+eatlq	sender_training_split_summary_v1	next_day_active_examples	UInt64	4			0	0	0	0
+eatlq	sender_training_split_summary_v1	next_day_higher_trade_examples	UInt64	5			0	0	0	0
+eatlq	sender_training_split_summary_v1	next_day_cross_protocol_examples	UInt64	6			0	0	0	0
+eatlq	sender_training_split_summary_v1	avg_trade_count	Float64	7			0	0	0	0
+eatlq	sender_training_split_summary_v1	avg_next_day_trade_count	Float64	8			0	0	0	0
+eatlq	sender_training_split_summary_v1	avg_venue_concentration_ratio	Float64	9			0	0	0	0
+eatlq	sender_training_split_summary_v1	avg_token_concentration_ratio	Float64	10			0	0	0	0
+eatlq	sender_training_split_summary_v1	first_activity_date	Nullable(Date)	11			0	0	0	0
+eatlq	sender_training_split_summary_v1	latest_activity_date	Nullable(Date)	12			0	0	0	0
+eatlq	sender_training_split_summary_v1	latest_ingested_at	DateTime64(3, \'UTC\')	13			0	0	0	0
+eatlq	sender_venue_trade_profile	chain_id	UInt64	1			0	0	0	0
+eatlq	sender_venue_trade_profile	sender_address	String	2			0	0	0	0
+eatlq	sender_venue_trade_profile	protocol_family	String	3			0	0	0	0
+eatlq	sender_venue_trade_profile	venue_address	LowCardinality(String)	4			0	0	0	0
+eatlq	sender_venue_trade_profile	venue_label	String	5			0	0	0	0
+eatlq	sender_venue_trade_profile	fee_bps	UInt16	6			0	0	0	0
+eatlq	sender_venue_trade_profile	trade_count	UInt64	7			0	0	0	0
+eatlq	sender_venue_trade_profile	distinct_txs	UInt64	8			0	0	0	0
+eatlq	sender_venue_trade_profile	distinct_sold_assets	UInt64	9			0	0	0	0
+eatlq	sender_venue_trade_profile	distinct_bought_assets	UInt64	10			0	0	0	0
+eatlq	sender_venue_trade_profile	first_trade_at	Nullable(DateTime64(3, \'UTC\'))	11			0	0	0	0
+eatlq	sender_venue_trade_profile	latest_trade_at	Nullable(DateTime64(3, \'UTC\'))	12			0	0	0	0
+eatlq	sender_venue_trade_profile	latest_ingested_at	DateTime64(3, \'UTC\')	13			0	0	0	0
+eatlq	swap_trade_events_all	protocol_family	String	1			0	0	0	0
+eatlq	swap_trade_events_all	chain_id	UInt64	2			0	0	0	0
+eatlq	swap_trade_events_all	venue_address	LowCardinality(String)	3			0	0	0	0
+eatlq	swap_trade_events_all	venue_label	String	4			0	0	0	0
+eatlq	swap_trade_events_all	fee_bps	UInt16	5			0	0	0	0
+eatlq	swap_trade_events_all	sender_address	String	6			0	0	0	0
+eatlq	swap_trade_events_all	recipient_address	String	7			0	0	0	0
+eatlq	swap_trade_events_all	tx_hash	String	8			0	0	0	0
+eatlq	swap_trade_events_all	log_index	UInt32	9			0	0	0	0
+eatlq	swap_trade_events_all	swap_direction	String	10			0	0	0	0
+eatlq	swap_trade_events_all	sold_token_address	Nullable(String)	11			0	0	0	0
+eatlq	swap_trade_events_all	sold_token_symbol	Nullable(String)	12			0	0	0	0
+eatlq	swap_trade_events_all	sold_token_decimals	Nullable(UInt8)	13			0	0	0	0
+eatlq	swap_trade_events_all	sold_amount_normalized	Nullable(Float64)	14			0	0	0	0
+eatlq	swap_trade_events_all	bought_token_address	Nullable(String)	15			0	0	0	0
+eatlq	swap_trade_events_all	bought_token_symbol	Nullable(String)	16			0	0	0	0
+eatlq	swap_trade_events_all	bought_token_decimals	Nullable(UInt8)	17			0	0	0	0
+eatlq	swap_trade_events_all	bought_amount_normalized	Nullable(Float64)	18			0	0	0	0
+eatlq	swap_trade_events_all	block_time	Nullable(DateTime64(3, \'UTC\'))	19			0	0	0	0
+eatlq	swap_trade_events_all	received_at_ms	DateTime64(3, \'UTC\')	20			0	0	0	0
+eatlq	swap_trade_events_all	latest_ingested_at	DateTime64(3, \'UTC\')	21			0	0	0	0
+eatlq	swap_trade_events_all	duplicate_rows	UInt64	22			0	0	0	0
+eatlq	token_registry	chain_id	UInt64	1			0	0	0	0
+eatlq	token_registry	token_address	String	2			0	0	0	0
+eatlq	token_registry	symbol	String	3			0	0	0	0
+eatlq	token_registry	name	String	4			0	0	0	0
+eatlq	token_registry	decimals	UInt8	5			0	0	0	0
+eatlq	token_registry	is_core	UInt8	6			0	0	0	0
+eatlq	token_registry	registry_source	String	7			0	0	0	0
+eatlq	tx_from_by_hash	chain_id	UInt64	1			0	1	1	0
+eatlq	tx_from_by_hash	tx_hash	String	2			0	1	1	0
+eatlq	tx_from_by_hash	tx_from	String	3			0	0	0	0
+eatlq	tx_from_by_hash	block_time	Nullable(DateTime64(3, \'UTC\'))	4			1	0	0	0
+eatlq	tx_from_by_hash	fetched_at	DateTime64(3, \'UTC\')	5	DEFAULT	now64(3)	1	0	0	0
+eatlq	uniswap_swaps_clean_mat	chain_id	UInt64	1			0	1	1	0
+eatlq	uniswap_swaps_clean_mat	pool_address	LowCardinality(String)	2			0	1	1	0
+eatlq	uniswap_swaps_clean_mat	block_time	DateTime64(3, \'UTC\')	3			0	0	0	0
+eatlq	uniswap_swaps_clean_mat	ts_sec	UInt32	4			0	1	1	0
+eatlq	uniswap_swaps_clean_mat	wallet	String	5			0	0	0	0
+eatlq	uniswap_swaps_clean_mat	is_buy	UInt8	6			0	0	0	0
+eatlq	uniswap_swaps_clean_mat	a0_in	Float64	7			0	0	0	0
+eatlq	uniswap_swaps_clean_mat	a1_in	Float64	8			0	0	0	0
+eatlq	uniswap_swaps_clean_mat	a0_out	Float64	9			0	0	0	0
+eatlq	uniswap_swaps_clean_mat	a1_out	Float64	10			0	0	0	0
+eatlq	uniswap_swaps_clean_mat	is_toxic_sell	UInt8	11			0	0	0	0
+eatlq	uniswap_swaps_clean_v1	chain_id	UInt64	1			0	0	0	0
+eatlq	uniswap_swaps_clean_v1	pool_address	LowCardinality(String)	2			0	0	0	0
+eatlq	uniswap_swaps_clean_v1	block_time	DateTime64(3, \'UTC\')	3			0	0	0	0
+eatlq	uniswap_swaps_clean_v1	ts_sec	UInt32	4			0	0	0	0
+eatlq	uniswap_swaps_clean_v1	wallet	String	5			0	0	0	0
+eatlq	uniswap_swaps_clean_v1	is_buy	UInt8	6			0	0	0	0
+eatlq	uniswap_swaps_clean_v1	a0_in	Float64	7			0	0	0	0
+eatlq	uniswap_swaps_clean_v1	a1_in	Float64	8			0	0	0	0
+eatlq	uniswap_swaps_clean_v1	a0_out	Float64	9			0	0	0	0
+eatlq	uniswap_swaps_clean_v1	a1_out	Float64	10			0	0	0	0
+eatlq	uniswap_swaps_clean_v1	last_buy_ts_60s	UInt32	11			0	0	0	0
+eatlq	uniswap_swaps_clean_v1	is_toxic_sell	UInt8	12			0	0	0	0
+eatlq	uniswap_v2_burns	chain_id	UInt64	1			0	1	1	0
+eatlq	uniswap_v2_burns	source	LowCardinality(String)	2			0	0	0	0
+eatlq	uniswap_v2_burns	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v2_burns	received_at_ms	DateTime64(3, \'UTC\')	4			1	0	0	0
+eatlq	uniswap_v2_burns	block_date	Date	5	DEFAULT	toDate(coalesce(block_time, received_at_ms))	0	0	0	0
+eatlq	uniswap_v2_burns	block_number	UInt64	6			0	1	1	0
+eatlq	uniswap_v2_burns	tx_hash	String	7			0	1	1	0
+eatlq	uniswap_v2_burns	log_index	UInt32	8			0	1	1	0
+eatlq	uniswap_v2_burns	pair_address	LowCardinality(String)	9			0	1	1	0
+eatlq	uniswap_v2_burns	sender	LowCardinality(String)	10			0	0	0	0
+eatlq	uniswap_v2_burns	recipient	LowCardinality(String)	11			0	0	0	0
+eatlq	uniswap_v2_burns	amount0_raw	String	12			0	0	0	0
+eatlq	uniswap_v2_burns	amount1_raw	String	13			0	0	0	0
+eatlq	uniswap_v2_burns	removed	UInt8	14			0	0	0	0
+eatlq	uniswap_v2_burns	payload_json	String	15			0	0	0	0
+eatlq	uniswap_v2_burns	ingested_at	DateTime64(3, \'UTC\')	16			0	0	0	0
+eatlq	uniswap_v2_burns_decoded	chain_id	UInt64	1			0	0	0	0
+eatlq	uniswap_v2_burns_decoded	source	String	2			0	0	0	0
+eatlq	uniswap_v2_burns_decoded	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v2_burns_decoded	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	uniswap_v2_burns_decoded	block_date	Date	5			0	0	0	0
+eatlq	uniswap_v2_burns_decoded	block_number	UInt64	6			0	0	0	0
+eatlq	uniswap_v2_burns_decoded	tx_hash	String	7			0	0	0	0
+eatlq	uniswap_v2_burns_decoded	log_index	UInt32	8			0	0	0	0
+eatlq	uniswap_v2_burns_decoded	pair_address	LowCardinality(String)	9			0	0	0	0
+eatlq	uniswap_v2_burns_decoded	sender	String	10			0	0	0	0
+eatlq	uniswap_v2_burns_decoded	recipient	String	11			0	0	0	0
+eatlq	uniswap_v2_burns_decoded	amount0_raw	String	12			0	0	0	0
+eatlq	uniswap_v2_burns_decoded	amount0	UInt256	13			0	0	0	0
+eatlq	uniswap_v2_burns_decoded	amount1_raw	String	14			0	0	0	0
+eatlq	uniswap_v2_burns_decoded	amount1	UInt256	15			0	0	0	0
+eatlq	uniswap_v2_burns_decoded	removed	UInt8	16			0	0	0	0
+eatlq	uniswap_v2_burns_decoded	payload_json	String	17			0	0	0	0
+eatlq	uniswap_v2_burns_decoded	latest_ingested_at	DateTime64(3, \'UTC\')	18			0	0	0	0
+eatlq	uniswap_v2_burns_decoded	duplicate_rows	UInt64	19			0	0	0	0
+eatlq	uniswap_v2_burns_deduped	chain_id	UInt64	1			0	0	0	0
+eatlq	uniswap_v2_burns_deduped	source	String	2			0	0	0	0
+eatlq	uniswap_v2_burns_deduped	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v2_burns_deduped	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	uniswap_v2_burns_deduped	block_date	Date	5			0	0	0	0
+eatlq	uniswap_v2_burns_deduped	block_number	UInt64	6			0	0	0	0
+eatlq	uniswap_v2_burns_deduped	tx_hash	String	7			0	0	0	0
+eatlq	uniswap_v2_burns_deduped	log_index	UInt32	8			0	0	0	0
+eatlq	uniswap_v2_burns_deduped	pair_address	LowCardinality(String)	9			0	0	0	0
+eatlq	uniswap_v2_burns_deduped	sender	String	10			0	0	0	0
+eatlq	uniswap_v2_burns_deduped	recipient	String	11			0	0	0	0
+eatlq	uniswap_v2_burns_deduped	amount0_raw	String	12			0	0	0	0
+eatlq	uniswap_v2_burns_deduped	amount1_raw	String	13			0	0	0	0
+eatlq	uniswap_v2_burns_deduped	removed	UInt8	14			0	0	0	0
+eatlq	uniswap_v2_burns_deduped	payload_json	String	15			0	0	0	0
+eatlq	uniswap_v2_burns_deduped	latest_ingested_at	DateTime64(3, \'UTC\')	16			0	0	0	0
+eatlq	uniswap_v2_burns_deduped	duplicate_rows	UInt64	17			0	0	0	0
+eatlq	uniswap_v2_burns_enriched	chain_id	UInt64	1			0	0	0	0
+eatlq	uniswap_v2_burns_enriched	source	String	2			0	0	0	0
+eatlq	uniswap_v2_burns_enriched	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v2_burns_enriched	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	uniswap_v2_burns_enriched	block_date	Date	5			0	0	0	0
+eatlq	uniswap_v2_burns_enriched	block_number	UInt64	6			0	0	0	0
+eatlq	uniswap_v2_burns_enriched	tx_hash	String	7			0	0	0	0
+eatlq	uniswap_v2_burns_enriched	log_index	UInt32	8			0	0	0	0
+eatlq	uniswap_v2_burns_enriched	pair_address	LowCardinality(String)	9			0	0	0	0
+eatlq	uniswap_v2_burns_enriched	pair_label	String	10			0	0	0	0
+eatlq	uniswap_v2_burns_enriched	token0_address	String	11			0	0	0	0
+eatlq	uniswap_v2_burns_enriched	token1_address	String	12			0	0	0	0
+eatlq	uniswap_v2_burns_enriched	token0_symbol	String	13			0	0	0	0
+eatlq	uniswap_v2_burns_enriched	token1_symbol	String	14			0	0	0	0
+eatlq	uniswap_v2_burns_enriched	fee_bps	UInt16	15			0	0	0	0
+eatlq	uniswap_v2_burns_enriched	is_curated	UInt8	16			0	0	0	0
+eatlq	uniswap_v2_burns_enriched	registry_source	String	17			0	0	0	0
+eatlq	uniswap_v2_burns_enriched	has_registry_match	UInt8	18			0	0	0	0
+eatlq	uniswap_v2_burns_enriched	sender	String	19			0	0	0	0
+eatlq	uniswap_v2_burns_enriched	recipient	String	20			0	0	0	0
+eatlq	uniswap_v2_burns_enriched	amount0_raw	String	21			0	0	0	0
+eatlq	uniswap_v2_burns_enriched	amount1_raw	String	22			0	0	0	0
+eatlq	uniswap_v2_burns_enriched	removed	UInt8	23			0	0	0	0
+eatlq	uniswap_v2_burns_enriched	payload_json	String	24			0	0	0	0
+eatlq	uniswap_v2_burns_enriched	latest_ingested_at	DateTime64(3, \'UTC\')	25			0	0	0	0
+eatlq	uniswap_v2_burns_enriched	duplicate_rows	UInt64	26			0	0	0	0
+eatlq	uniswap_v2_burns_hourly	hour	DateTime(\'UTC\')	1			0	0	0	0
+eatlq	uniswap_v2_burns_hourly	chain_id	UInt64	2			0	0	0	0
+eatlq	uniswap_v2_burns_hourly	pair_address	LowCardinality(String)	3			0	0	0	0
+eatlq	uniswap_v2_burns_hourly	burn_count	UInt64	4			0	0	0	0
+eatlq	uniswap_v2_burns_hourly	unique_tx_count	UInt64	5			0	0	0	0
+eatlq	uniswap_v2_burns_hourly	latest_ingested_at	DateTime64(3, \'UTC\')	6			0	0	0	0
+eatlq	uniswap_v2_burns_mv	chain_id	UInt64	1			0	0	0	0
+eatlq	uniswap_v2_burns_mv	source	LowCardinality(String)	2			0	0	0	0
+eatlq	uniswap_v2_burns_mv	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v2_burns_mv	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	uniswap_v2_burns_mv	block_number	UInt64	5			0	0	0	0
+eatlq	uniswap_v2_burns_mv	tx_hash	String	6			0	0	0	0
+eatlq	uniswap_v2_burns_mv	log_index	UInt32	7			0	0	0	0
+eatlq	uniswap_v2_burns_mv	pair_address	LowCardinality(String)	8			0	0	0	0
+eatlq	uniswap_v2_burns_mv	sender	String	9			0	0	0	0
+eatlq	uniswap_v2_burns_mv	recipient	String	10			0	0	0	0
+eatlq	uniswap_v2_burns_mv	amount0_raw	String	11			0	0	0	0
+eatlq	uniswap_v2_burns_mv	amount1_raw	String	12			0	0	0	0
+eatlq	uniswap_v2_burns_mv	removed	UInt8	13			0	0	0	0
+eatlq	uniswap_v2_burns_mv	payload_json	String	14			0	0	0	0
+eatlq	uniswap_v2_burns_mv	ingested_at	DateTime64(3, \'UTC\')	15			0	0	0	0
+eatlq	uniswap_v2_burns_semantic	b.chain_id	UInt64	1			0	0	0	0
+eatlq	uniswap_v2_burns_semantic	source	String	2			0	0	0	0
+eatlq	uniswap_v2_burns_semantic	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v2_burns_semantic	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	uniswap_v2_burns_semantic	block_date	Date	5			0	0	0	0
+eatlq	uniswap_v2_burns_semantic	block_number	UInt64	6			0	0	0	0
+eatlq	uniswap_v2_burns_semantic	tx_hash	String	7			0	0	0	0
+eatlq	uniswap_v2_burns_semantic	log_index	UInt32	8			0	0	0	0
+eatlq	uniswap_v2_burns_semantic	b.pair_address	LowCardinality(String)	9			0	0	0	0
+eatlq	uniswap_v2_burns_semantic	pair_label	String	10			0	0	0	0
+eatlq	uniswap_v2_burns_semantic	token0_address	String	11			0	0	0	0
+eatlq	uniswap_v2_burns_semantic	token1_address	String	12			0	0	0	0
+eatlq	uniswap_v2_burns_semantic	token0_symbol	String	13			0	0	0	0
+eatlq	uniswap_v2_burns_semantic	token1_symbol	String	14			0	0	0	0
+eatlq	uniswap_v2_burns_semantic	token0_decimals	UInt8	15			0	0	0	0
+eatlq	uniswap_v2_burns_semantic	token1_decimals	UInt8	16			0	0	0	0
+eatlq	uniswap_v2_burns_semantic	fee_bps	UInt16	17			0	0	0	0
+eatlq	uniswap_v2_burns_semantic	is_curated	UInt8	18			0	0	0	0
+eatlq	uniswap_v2_burns_semantic	p.registry_source	String	19			0	0	0	0
+eatlq	uniswap_v2_burns_semantic	has_registry_match	UInt8	20			0	0	0	0
+eatlq	uniswap_v2_burns_semantic	sender	String	21			0	0	0	0
+eatlq	uniswap_v2_burns_semantic	recipient	String	22			0	0	0	0
+eatlq	uniswap_v2_burns_semantic	amount0_raw	String	23			0	0	0	0
+eatlq	uniswap_v2_burns_semantic	amount0	UInt256	24			0	0	0	0
+eatlq	uniswap_v2_burns_semantic	amount0_normalized	Nullable(Float64)	25			0	0	0	0
+eatlq	uniswap_v2_burns_semantic	amount1_raw	String	26			0	0	0	0
+eatlq	uniswap_v2_burns_semantic	amount1	UInt256	27			0	0	0	0
+eatlq	uniswap_v2_burns_semantic	amount1_normalized	Nullable(Float64)	28			0	0	0	0
+eatlq	uniswap_v2_burns_semantic	removed	UInt8	29			0	0	0	0
+eatlq	uniswap_v2_burns_semantic	payload_json	String	30			0	0	0	0
+eatlq	uniswap_v2_burns_semantic	latest_ingested_at	DateTime64(3, \'UTC\')	31			0	0	0	0
+eatlq	uniswap_v2_burns_semantic	duplicate_rows	UInt64	32			0	0	0	0
+eatlq	uniswap_v2_mints	chain_id	UInt64	1			0	1	1	0
+eatlq	uniswap_v2_mints	source	LowCardinality(String)	2			0	0	0	0
+eatlq	uniswap_v2_mints	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v2_mints	received_at_ms	DateTime64(3, \'UTC\')	4			1	0	0	0
+eatlq	uniswap_v2_mints	block_date	Date	5	DEFAULT	toDate(coalesce(block_time, received_at_ms))	0	0	0	0
+eatlq	uniswap_v2_mints	block_number	UInt64	6			0	1	1	0
+eatlq	uniswap_v2_mints	tx_hash	String	7			0	1	1	0
+eatlq	uniswap_v2_mints	log_index	UInt32	8			0	1	1	0
+eatlq	uniswap_v2_mints	pair_address	LowCardinality(String)	9			0	1	1	0
+eatlq	uniswap_v2_mints	sender	LowCardinality(String)	10			0	0	0	0
+eatlq	uniswap_v2_mints	amount0_raw	String	11			0	0	0	0
+eatlq	uniswap_v2_mints	amount1_raw	String	12			0	0	0	0
+eatlq	uniswap_v2_mints	removed	UInt8	13			0	0	0	0
+eatlq	uniswap_v2_mints	payload_json	String	14			0	0	0	0
+eatlq	uniswap_v2_mints	ingested_at	DateTime64(3, \'UTC\')	15			0	0	0	0
+eatlq	uniswap_v2_mints_decoded	chain_id	UInt64	1			0	0	0	0
+eatlq	uniswap_v2_mints_decoded	source	String	2			0	0	0	0
+eatlq	uniswap_v2_mints_decoded	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v2_mints_decoded	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	uniswap_v2_mints_decoded	block_date	Date	5			0	0	0	0
+eatlq	uniswap_v2_mints_decoded	block_number	UInt64	6			0	0	0	0
+eatlq	uniswap_v2_mints_decoded	tx_hash	String	7			0	0	0	0
+eatlq	uniswap_v2_mints_decoded	log_index	UInt32	8			0	0	0	0
+eatlq	uniswap_v2_mints_decoded	pair_address	LowCardinality(String)	9			0	0	0	0
+eatlq	uniswap_v2_mints_decoded	sender	String	10			0	0	0	0
+eatlq	uniswap_v2_mints_decoded	amount0_raw	String	11			0	0	0	0
+eatlq	uniswap_v2_mints_decoded	amount0	UInt256	12			0	0	0	0
+eatlq	uniswap_v2_mints_decoded	amount1_raw	String	13			0	0	0	0
+eatlq	uniswap_v2_mints_decoded	amount1	UInt256	14			0	0	0	0
+eatlq	uniswap_v2_mints_decoded	removed	UInt8	15			0	0	0	0
+eatlq	uniswap_v2_mints_decoded	payload_json	String	16			0	0	0	0
+eatlq	uniswap_v2_mints_decoded	latest_ingested_at	DateTime64(3, \'UTC\')	17			0	0	0	0
+eatlq	uniswap_v2_mints_decoded	duplicate_rows	UInt64	18			0	0	0	0
+eatlq	uniswap_v2_mints_deduped	chain_id	UInt64	1			0	0	0	0
+eatlq	uniswap_v2_mints_deduped	source	String	2			0	0	0	0
+eatlq	uniswap_v2_mints_deduped	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v2_mints_deduped	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	uniswap_v2_mints_deduped	block_date	Date	5			0	0	0	0
+eatlq	uniswap_v2_mints_deduped	block_number	UInt64	6			0	0	0	0
+eatlq	uniswap_v2_mints_deduped	tx_hash	String	7			0	0	0	0
+eatlq	uniswap_v2_mints_deduped	log_index	UInt32	8			0	0	0	0
+eatlq	uniswap_v2_mints_deduped	pair_address	LowCardinality(String)	9			0	0	0	0
+eatlq	uniswap_v2_mints_deduped	sender	String	10			0	0	0	0
+eatlq	uniswap_v2_mints_deduped	amount0_raw	String	11			0	0	0	0
+eatlq	uniswap_v2_mints_deduped	amount1_raw	String	12			0	0	0	0
+eatlq	uniswap_v2_mints_deduped	removed	UInt8	13			0	0	0	0
+eatlq	uniswap_v2_mints_deduped	payload_json	String	14			0	0	0	0
+eatlq	uniswap_v2_mints_deduped	latest_ingested_at	DateTime64(3, \'UTC\')	15			0	0	0	0
+eatlq	uniswap_v2_mints_deduped	duplicate_rows	UInt64	16			0	0	0	0
+eatlq	uniswap_v2_mints_enriched	chain_id	UInt64	1			0	0	0	0
+eatlq	uniswap_v2_mints_enriched	source	String	2			0	0	0	0
+eatlq	uniswap_v2_mints_enriched	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v2_mints_enriched	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	uniswap_v2_mints_enriched	block_date	Date	5			0	0	0	0
+eatlq	uniswap_v2_mints_enriched	block_number	UInt64	6			0	0	0	0
+eatlq	uniswap_v2_mints_enriched	tx_hash	String	7			0	0	0	0
+eatlq	uniswap_v2_mints_enriched	log_index	UInt32	8			0	0	0	0
+eatlq	uniswap_v2_mints_enriched	pair_address	LowCardinality(String)	9			0	0	0	0
+eatlq	uniswap_v2_mints_enriched	pair_label	String	10			0	0	0	0
+eatlq	uniswap_v2_mints_enriched	token0_address	String	11			0	0	0	0
+eatlq	uniswap_v2_mints_enriched	token1_address	String	12			0	0	0	0
+eatlq	uniswap_v2_mints_enriched	token0_symbol	String	13			0	0	0	0
+eatlq	uniswap_v2_mints_enriched	token1_symbol	String	14			0	0	0	0
+eatlq	uniswap_v2_mints_enriched	fee_bps	UInt16	15			0	0	0	0
+eatlq	uniswap_v2_mints_enriched	is_curated	UInt8	16			0	0	0	0
+eatlq	uniswap_v2_mints_enriched	registry_source	String	17			0	0	0	0
+eatlq	uniswap_v2_mints_enriched	has_registry_match	UInt8	18			0	0	0	0
+eatlq	uniswap_v2_mints_enriched	sender	String	19			0	0	0	0
+eatlq	uniswap_v2_mints_enriched	amount0_raw	String	20			0	0	0	0
+eatlq	uniswap_v2_mints_enriched	amount1_raw	String	21			0	0	0	0
+eatlq	uniswap_v2_mints_enriched	removed	UInt8	22			0	0	0	0
+eatlq	uniswap_v2_mints_enriched	payload_json	String	23			0	0	0	0
+eatlq	uniswap_v2_mints_enriched	latest_ingested_at	DateTime64(3, \'UTC\')	24			0	0	0	0
+eatlq	uniswap_v2_mints_enriched	duplicate_rows	UInt64	25			0	0	0	0
+eatlq	uniswap_v2_mints_hourly	hour	DateTime(\'UTC\')	1			0	0	0	0
+eatlq	uniswap_v2_mints_hourly	chain_id	UInt64	2			0	0	0	0
+eatlq	uniswap_v2_mints_hourly	pair_address	LowCardinality(String)	3			0	0	0	0
+eatlq	uniswap_v2_mints_hourly	mint_count	UInt64	4			0	0	0	0
+eatlq	uniswap_v2_mints_hourly	unique_tx_count	UInt64	5			0	0	0	0
+eatlq	uniswap_v2_mints_hourly	latest_ingested_at	DateTime64(3, \'UTC\')	6			0	0	0	0
+eatlq	uniswap_v2_mints_mv	chain_id	UInt64	1			0	0	0	0
+eatlq	uniswap_v2_mints_mv	source	LowCardinality(String)	2			0	0	0	0
+eatlq	uniswap_v2_mints_mv	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v2_mints_mv	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	uniswap_v2_mints_mv	block_number	UInt64	5			0	0	0	0
+eatlq	uniswap_v2_mints_mv	tx_hash	String	6			0	0	0	0
+eatlq	uniswap_v2_mints_mv	log_index	UInt32	7			0	0	0	0
+eatlq	uniswap_v2_mints_mv	pair_address	LowCardinality(String)	8			0	0	0	0
+eatlq	uniswap_v2_mints_mv	sender	String	9			0	0	0	0
+eatlq	uniswap_v2_mints_mv	amount0_raw	String	10			0	0	0	0
+eatlq	uniswap_v2_mints_mv	amount1_raw	String	11			0	0	0	0
+eatlq	uniswap_v2_mints_mv	removed	UInt8	12			0	0	0	0
+eatlq	uniswap_v2_mints_mv	payload_json	String	13			0	0	0	0
+eatlq	uniswap_v2_mints_mv	ingested_at	DateTime64(3, \'UTC\')	14			0	0	0	0
+eatlq	uniswap_v2_mints_semantic	m.chain_id	UInt64	1			0	0	0	0
+eatlq	uniswap_v2_mints_semantic	source	String	2			0	0	0	0
+eatlq	uniswap_v2_mints_semantic	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v2_mints_semantic	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	uniswap_v2_mints_semantic	block_date	Date	5			0	0	0	0
+eatlq	uniswap_v2_mints_semantic	block_number	UInt64	6			0	0	0	0
+eatlq	uniswap_v2_mints_semantic	tx_hash	String	7			0	0	0	0
+eatlq	uniswap_v2_mints_semantic	log_index	UInt32	8			0	0	0	0
+eatlq	uniswap_v2_mints_semantic	m.pair_address	LowCardinality(String)	9			0	0	0	0
+eatlq	uniswap_v2_mints_semantic	pair_label	String	10			0	0	0	0
+eatlq	uniswap_v2_mints_semantic	token0_address	String	11			0	0	0	0
+eatlq	uniswap_v2_mints_semantic	token1_address	String	12			0	0	0	0
+eatlq	uniswap_v2_mints_semantic	token0_symbol	String	13			0	0	0	0
+eatlq	uniswap_v2_mints_semantic	token1_symbol	String	14			0	0	0	0
+eatlq	uniswap_v2_mints_semantic	token0_decimals	UInt8	15			0	0	0	0
+eatlq	uniswap_v2_mints_semantic	token1_decimals	UInt8	16			0	0	0	0
+eatlq	uniswap_v2_mints_semantic	fee_bps	UInt16	17			0	0	0	0
+eatlq	uniswap_v2_mints_semantic	is_curated	UInt8	18			0	0	0	0
+eatlq	uniswap_v2_mints_semantic	p.registry_source	String	19			0	0	0	0
+eatlq	uniswap_v2_mints_semantic	has_registry_match	UInt8	20			0	0	0	0
+eatlq	uniswap_v2_mints_semantic	sender	String	21			0	0	0	0
+eatlq	uniswap_v2_mints_semantic	amount0_raw	String	22			0	0	0	0
+eatlq	uniswap_v2_mints_semantic	amount0	UInt256	23			0	0	0	0
+eatlq	uniswap_v2_mints_semantic	amount0_normalized	Nullable(Float64)	24			0	0	0	0
+eatlq	uniswap_v2_mints_semantic	amount1_raw	String	25			0	0	0	0
+eatlq	uniswap_v2_mints_semantic	amount1	UInt256	26			0	0	0	0
+eatlq	uniswap_v2_mints_semantic	amount1_normalized	Nullable(Float64)	27			0	0	0	0
+eatlq	uniswap_v2_mints_semantic	removed	UInt8	28			0	0	0	0
+eatlq	uniswap_v2_mints_semantic	payload_json	String	29			0	0	0	0
+eatlq	uniswap_v2_mints_semantic	latest_ingested_at	DateTime64(3, \'UTC\')	30			0	0	0	0
+eatlq	uniswap_v2_mints_semantic	duplicate_rows	UInt64	31			0	0	0	0
+eatlq	uniswap_v2_pair_registry	chain_id	UInt64	1			0	0	0	0
+eatlq	uniswap_v2_pair_registry	pair_address	String	2			0	0	0	0
+eatlq	uniswap_v2_pair_registry	pair_label	String	3			0	0	0	0
+eatlq	uniswap_v2_pair_registry	token0_address	String	4			0	0	0	0
+eatlq	uniswap_v2_pair_registry	token1_address	String	5			0	0	0	0
+eatlq	uniswap_v2_pair_registry	token0_symbol	String	6			0	0	0	0
+eatlq	uniswap_v2_pair_registry	token1_symbol	String	7			0	0	0	0
+eatlq	uniswap_v2_pair_registry	fee_bps	UInt16	8			0	0	0	0
+eatlq	uniswap_v2_pair_registry	is_curated	UInt8	9			0	0	0	0
+eatlq	uniswap_v2_pair_registry	registry_source	String	10			0	0	0	0
+eatlq	uniswap_v2_swaps	chain_id	UInt64	1			0	1	1	0
+eatlq	uniswap_v2_swaps	source	LowCardinality(String)	2			0	0	0	0
+eatlq	uniswap_v2_swaps	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v2_swaps	received_at_ms	DateTime64(3, \'UTC\')	4			1	0	0	0
+eatlq	uniswap_v2_swaps	block_date	Date	5	DEFAULT	toDate(coalesce(block_time, received_at_ms))	0	0	0	0
+eatlq	uniswap_v2_swaps	block_number	UInt64	6			0	1	1	0
+eatlq	uniswap_v2_swaps	tx_hash	String	7			0	1	1	0
+eatlq	uniswap_v2_swaps	log_index	UInt32	8			0	1	1	0
+eatlq	uniswap_v2_swaps	pair_address	LowCardinality(String)	9			0	1	1	0
+eatlq	uniswap_v2_swaps	sender	LowCardinality(String)	10			0	0	0	0
+eatlq	uniswap_v2_swaps	recipient	LowCardinality(String)	11			0	0	0	0
+eatlq	uniswap_v2_swaps	amount0_in_raw	String	12			0	0	0	0
+eatlq	uniswap_v2_swaps	amount1_in_raw	String	13			0	0	0	0
+eatlq	uniswap_v2_swaps	amount0_out_raw	String	14			0	0	0	0
+eatlq	uniswap_v2_swaps	amount1_out_raw	String	15			0	0	0	0
+eatlq	uniswap_v2_swaps	removed	UInt8	16			0	0	0	0
+eatlq	uniswap_v2_swaps	payload_json	String	17			0	0	0	0
+eatlq	uniswap_v2_swaps	ingested_at	DateTime64(3, \'UTC\')	18			0	0	0	0
+eatlq	uniswap_v2_swaps_decoded	chain_id	UInt64	1			0	0	0	0
+eatlq	uniswap_v2_swaps_decoded	source	String	2			0	0	0	0
+eatlq	uniswap_v2_swaps_decoded	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v2_swaps_decoded	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	uniswap_v2_swaps_decoded	block_date	Date	5			0	0	0	0
+eatlq	uniswap_v2_swaps_decoded	block_number	UInt64	6			0	0	0	0
+eatlq	uniswap_v2_swaps_decoded	tx_hash	String	7			0	0	0	0
+eatlq	uniswap_v2_swaps_decoded	log_index	UInt32	8			0	0	0	0
+eatlq	uniswap_v2_swaps_decoded	pair_address	LowCardinality(String)	9			0	0	0	0
+eatlq	uniswap_v2_swaps_decoded	sender	String	10			0	0	0	0
+eatlq	uniswap_v2_swaps_decoded	recipient	String	11			0	0	0	0
+eatlq	uniswap_v2_swaps_decoded	amount0_in_raw	String	12			0	0	0	0
+eatlq	uniswap_v2_swaps_decoded	amount0_in	UInt256	13			0	0	0	0
+eatlq	uniswap_v2_swaps_decoded	amount1_in_raw	String	14			0	0	0	0
+eatlq	uniswap_v2_swaps_decoded	amount1_in	UInt256	15			0	0	0	0
+eatlq	uniswap_v2_swaps_decoded	amount0_out_raw	String	16			0	0	0	0
+eatlq	uniswap_v2_swaps_decoded	amount0_out	UInt256	17			0	0	0	0
+eatlq	uniswap_v2_swaps_decoded	amount1_out_raw	String	18			0	0	0	0
+eatlq	uniswap_v2_swaps_decoded	amount1_out	UInt256	19			0	0	0	0
+eatlq	uniswap_v2_swaps_decoded	removed	UInt8	20			0	0	0	0
+eatlq	uniswap_v2_swaps_decoded	payload_json	String	21			0	0	0	0
+eatlq	uniswap_v2_swaps_decoded	latest_ingested_at	DateTime64(3, \'UTC\')	22			0	0	0	0
+eatlq	uniswap_v2_swaps_decoded	duplicate_rows	UInt64	23			0	0	0	0
+eatlq	uniswap_v2_swaps_deduped	chain_id	UInt64	1			0	0	0	0
+eatlq	uniswap_v2_swaps_deduped	source	String	2			0	0	0	0
+eatlq	uniswap_v2_swaps_deduped	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v2_swaps_deduped	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	uniswap_v2_swaps_deduped	block_date	Date	5			0	0	0	0
+eatlq	uniswap_v2_swaps_deduped	block_number	UInt64	6			0	0	0	0
+eatlq	uniswap_v2_swaps_deduped	tx_hash	String	7			0	0	0	0
+eatlq	uniswap_v2_swaps_deduped	log_index	UInt32	8			0	0	0	0
+eatlq	uniswap_v2_swaps_deduped	pair_address	LowCardinality(String)	9			0	0	0	0
+eatlq	uniswap_v2_swaps_deduped	sender	String	10			0	0	0	0
+eatlq	uniswap_v2_swaps_deduped	recipient	String	11			0	0	0	0
+eatlq	uniswap_v2_swaps_deduped	amount0_in_raw	String	12			0	0	0	0
+eatlq	uniswap_v2_swaps_deduped	amount1_in_raw	String	13			0	0	0	0
+eatlq	uniswap_v2_swaps_deduped	amount0_out_raw	String	14			0	0	0	0
+eatlq	uniswap_v2_swaps_deduped	amount1_out_raw	String	15			0	0	0	0
+eatlq	uniswap_v2_swaps_deduped	removed	UInt8	16			0	0	0	0
+eatlq	uniswap_v2_swaps_deduped	payload_json	String	17			0	0	0	0
+eatlq	uniswap_v2_swaps_deduped	latest_ingested_at	DateTime64(3, \'UTC\')	18			0	0	0	0
+eatlq	uniswap_v2_swaps_deduped	duplicate_rows	UInt64	19			0	0	0	0
+eatlq	uniswap_v2_swaps_enriched	chain_id	UInt64	1			0	0	0	0
+eatlq	uniswap_v2_swaps_enriched	source	String	2			0	0	0	0
+eatlq	uniswap_v2_swaps_enriched	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v2_swaps_enriched	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	uniswap_v2_swaps_enriched	block_date	Date	5			0	0	0	0
+eatlq	uniswap_v2_swaps_enriched	block_number	UInt64	6			0	0	0	0
+eatlq	uniswap_v2_swaps_enriched	tx_hash	String	7			0	0	0	0
+eatlq	uniswap_v2_swaps_enriched	log_index	UInt32	8			0	0	0	0
+eatlq	uniswap_v2_swaps_enriched	pair_address	LowCardinality(String)	9			0	0	0	0
+eatlq	uniswap_v2_swaps_enriched	pair_label	String	10			0	0	0	0
+eatlq	uniswap_v2_swaps_enriched	token0_address	String	11			0	0	0	0
+eatlq	uniswap_v2_swaps_enriched	token1_address	String	12			0	0	0	0
+eatlq	uniswap_v2_swaps_enriched	token0_symbol	String	13			0	0	0	0
+eatlq	uniswap_v2_swaps_enriched	token1_symbol	String	14			0	0	0	0
+eatlq	uniswap_v2_swaps_enriched	fee_bps	UInt16	15			0	0	0	0
+eatlq	uniswap_v2_swaps_enriched	is_curated	UInt8	16			0	0	0	0
+eatlq	uniswap_v2_swaps_enriched	registry_source	String	17			0	0	0	0
+eatlq	uniswap_v2_swaps_enriched	has_registry_match	UInt8	18			0	0	0	0
+eatlq	uniswap_v2_swaps_enriched	sender	String	19			0	0	0	0
+eatlq	uniswap_v2_swaps_enriched	recipient	String	20			0	0	0	0
+eatlq	uniswap_v2_swaps_enriched	amount0_in_raw	String	21			0	0	0	0
+eatlq	uniswap_v2_swaps_enriched	amount1_in_raw	String	22			0	0	0	0
+eatlq	uniswap_v2_swaps_enriched	amount0_out_raw	String	23			0	0	0	0
+eatlq	uniswap_v2_swaps_enriched	amount1_out_raw	String	24			0	0	0	0
+eatlq	uniswap_v2_swaps_enriched	removed	UInt8	25			0	0	0	0
+eatlq	uniswap_v2_swaps_enriched	payload_json	String	26			0	0	0	0
+eatlq	uniswap_v2_swaps_enriched	latest_ingested_at	DateTime64(3, \'UTC\')	27			0	0	0	0
+eatlq	uniswap_v2_swaps_enriched	duplicate_rows	UInt64	28			0	0	0	0
+eatlq	uniswap_v2_swaps_hourly	hour	DateTime(\'UTC\')	1			0	0	0	0
+eatlq	uniswap_v2_swaps_hourly	chain_id	UInt64	2			0	0	0	0
+eatlq	uniswap_v2_swaps_hourly	pair_address	LowCardinality(String)	3			0	0	0	0
+eatlq	uniswap_v2_swaps_hourly	swap_count	UInt64	4			0	0	0	0
+eatlq	uniswap_v2_swaps_hourly	unique_tx_count	UInt64	5			0	0	0	0
+eatlq	uniswap_v2_swaps_hourly	latest_ingested_at	DateTime64(3, \'UTC\')	6			0	0	0	0
+eatlq	uniswap_v2_swaps_mv	chain_id	UInt64	1			0	0	0	0
+eatlq	uniswap_v2_swaps_mv	source	LowCardinality(String)	2			0	0	0	0
+eatlq	uniswap_v2_swaps_mv	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v2_swaps_mv	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	uniswap_v2_swaps_mv	block_number	UInt64	5			0	0	0	0
+eatlq	uniswap_v2_swaps_mv	tx_hash	String	6			0	0	0	0
+eatlq	uniswap_v2_swaps_mv	log_index	UInt32	7			0	0	0	0
+eatlq	uniswap_v2_swaps_mv	pair_address	LowCardinality(String)	8			0	0	0	0
+eatlq	uniswap_v2_swaps_mv	sender	String	9			0	0	0	0
+eatlq	uniswap_v2_swaps_mv	recipient	String	10			0	0	0	0
+eatlq	uniswap_v2_swaps_mv	amount0_in_raw	String	11			0	0	0	0
+eatlq	uniswap_v2_swaps_mv	amount1_in_raw	String	12			0	0	0	0
+eatlq	uniswap_v2_swaps_mv	amount0_out_raw	String	13			0	0	0	0
+eatlq	uniswap_v2_swaps_mv	amount1_out_raw	String	14			0	0	0	0
+eatlq	uniswap_v2_swaps_mv	removed	UInt8	15			0	0	0	0
+eatlq	uniswap_v2_swaps_mv	payload_json	String	16			0	0	0	0
+eatlq	uniswap_v2_swaps_mv	ingested_at	DateTime64(3, \'UTC\')	17			0	0	0	0
+eatlq	uniswap_v2_swaps_semantic	s.chain_id	UInt64	1			0	0	0	0
+eatlq	uniswap_v2_swaps_semantic	source	String	2			0	0	0	0
+eatlq	uniswap_v2_swaps_semantic	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v2_swaps_semantic	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	uniswap_v2_swaps_semantic	block_date	Date	5			0	0	0	0
+eatlq	uniswap_v2_swaps_semantic	block_number	UInt64	6			0	0	0	0
+eatlq	uniswap_v2_swaps_semantic	tx_hash	String	7			0	0	0	0
+eatlq	uniswap_v2_swaps_semantic	log_index	UInt32	8			0	0	0	0
+eatlq	uniswap_v2_swaps_semantic	s.pair_address	LowCardinality(String)	9			0	0	0	0
+eatlq	uniswap_v2_swaps_semantic	pair_label	String	10			0	0	0	0
+eatlq	uniswap_v2_swaps_semantic	token0_address	String	11			0	0	0	0
+eatlq	uniswap_v2_swaps_semantic	token1_address	String	12			0	0	0	0
+eatlq	uniswap_v2_swaps_semantic	token0_symbol	String	13			0	0	0	0
+eatlq	uniswap_v2_swaps_semantic	token1_symbol	String	14			0	0	0	0
+eatlq	uniswap_v2_swaps_semantic	token0_decimals	UInt8	15			0	0	0	0
+eatlq	uniswap_v2_swaps_semantic	token1_decimals	UInt8	16			0	0	0	0
+eatlq	uniswap_v2_swaps_semantic	fee_bps	UInt16	17			0	0	0	0
+eatlq	uniswap_v2_swaps_semantic	is_curated	UInt8	18			0	0	0	0
+eatlq	uniswap_v2_swaps_semantic	p.registry_source	String	19			0	0	0	0
+eatlq	uniswap_v2_swaps_semantic	has_registry_match	UInt8	20			0	0	0	0
+eatlq	uniswap_v2_swaps_semantic	sender	String	21			0	0	0	0
+eatlq	uniswap_v2_swaps_semantic	recipient	String	22			0	0	0	0
+eatlq	uniswap_v2_swaps_semantic	amount0_in_raw	String	23			0	0	0	0
+eatlq	uniswap_v2_swaps_semantic	amount0_in	UInt256	24			0	0	0	0
+eatlq	uniswap_v2_swaps_semantic	amount0_in_normalized	Nullable(Float64)	25			0	0	0	0
+eatlq	uniswap_v2_swaps_semantic	amount1_in_raw	String	26			0	0	0	0
+eatlq	uniswap_v2_swaps_semantic	amount1_in	UInt256	27			0	0	0	0
+eatlq	uniswap_v2_swaps_semantic	amount1_in_normalized	Nullable(Float64)	28			0	0	0	0
+eatlq	uniswap_v2_swaps_semantic	amount0_out_raw	String	29			0	0	0	0
+eatlq	uniswap_v2_swaps_semantic	amount0_out	UInt256	30			0	0	0	0
+eatlq	uniswap_v2_swaps_semantic	amount0_out_normalized	Nullable(Float64)	31			0	0	0	0
+eatlq	uniswap_v2_swaps_semantic	amount1_out_raw	String	32			0	0	0	0
+eatlq	uniswap_v2_swaps_semantic	amount1_out	UInt256	33			0	0	0	0
+eatlq	uniswap_v2_swaps_semantic	amount1_out_normalized	Nullable(Float64)	34			0	0	0	0
+eatlq	uniswap_v2_swaps_semantic	removed	UInt8	35			0	0	0	0
+eatlq	uniswap_v2_swaps_semantic	payload_json	String	36			0	0	0	0
+eatlq	uniswap_v2_swaps_semantic	latest_ingested_at	DateTime64(3, \'UTC\')	37			0	0	0	0
+eatlq	uniswap_v2_swaps_semantic	duplicate_rows	UInt64	38			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	chain_id	UInt64	1			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	source	String	2			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	block_date	Date	5			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	block_number	UInt64	6			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	tx_hash	String	7			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	log_index	UInt32	8			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	pair_address	LowCardinality(String)	9			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	pair_label	String	10			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	token0_address	String	11			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	token1_address	String	12			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	token0_symbol	String	13			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	token1_symbol	String	14			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	token0_decimals	UInt8	15			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	token1_decimals	UInt8	16			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	fee_bps	UInt16	17			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	is_curated	UInt8	18			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	has_registry_match	UInt8	19			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	sender	String	20			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	recipient	String	21			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	swap_direction	String	22			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	has_clear_direction	UInt8	23			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	sold_token_address	Nullable(String)	24			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	sold_token_symbol	Nullable(String)	25			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	sold_token_decimals	Nullable(UInt8)	26			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	bought_token_address	Nullable(String)	27			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	bought_token_symbol	Nullable(String)	28			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	bought_token_decimals	Nullable(UInt8)	29			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	amount0_in	UInt256	30			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	amount0_in_normalized	Nullable(Float64)	31			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	amount1_in	UInt256	32			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	amount1_in_normalized	Nullable(Float64)	33			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	amount0_out	UInt256	34			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	amount0_out_normalized	Nullable(Float64)	35			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	amount1_out	UInt256	36			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	amount1_out_normalized	Nullable(Float64)	37			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	sold_amount_normalized	Nullable(Float64)	38			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	bought_amount_normalized	Nullable(Float64)	39			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	removed	UInt8	40			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	payload_json	String	41			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	latest_ingested_at	DateTime64(3, \'UTC\')	42			0	0	0	0
+eatlq	uniswap_v2_swaps_trade_semantic	duplicate_rows	UInt64	43			0	0	0	0
+eatlq	uniswap_v3_burns	chain_id	UInt64	1			0	1	1	0
+eatlq	uniswap_v3_burns	source	LowCardinality(String)	2			0	0	0	0
+eatlq	uniswap_v3_burns	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v3_burns	received_at_ms	DateTime64(3, \'UTC\')	4			1	0	0	0
+eatlq	uniswap_v3_burns	block_date	Date	5	DEFAULT	toDate(coalesce(block_time, received_at_ms))	0	0	0	0
+eatlq	uniswap_v3_burns	block_number	UInt64	6			0	1	1	0
+eatlq	uniswap_v3_burns	tx_hash	String	7			0	1	1	0
+eatlq	uniswap_v3_burns	log_index	UInt32	8			0	1	1	0
+eatlq	uniswap_v3_burns	pool_address	LowCardinality(String)	9			0	1	1	0
+eatlq	uniswap_v3_burns	owner	LowCardinality(String)	10			0	0	0	0
+eatlq	uniswap_v3_burns	tick_lower_raw	String	11			0	0	0	0
+eatlq	uniswap_v3_burns	tick_upper_raw	String	12			0	0	0	0
+eatlq	uniswap_v3_burns	liquidity_raw	String	13			0	0	0	0
+eatlq	uniswap_v3_burns	amount0_raw	String	14			0	0	0	0
+eatlq	uniswap_v3_burns	amount1_raw	String	15			0	0	0	0
+eatlq	uniswap_v3_burns	removed	UInt8	16			0	0	0	0
+eatlq	uniswap_v3_burns	payload_json	String	17			0	0	0	0
+eatlq	uniswap_v3_burns	ingested_at	DateTime64(3, \'UTC\')	18			0	0	0	0
+eatlq	uniswap_v3_burns_decoded	chain_id	UInt64	1			0	0	0	0
+eatlq	uniswap_v3_burns_decoded	source	String	2			0	0	0	0
+eatlq	uniswap_v3_burns_decoded	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v3_burns_decoded	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	uniswap_v3_burns_decoded	block_date	Date	5			0	0	0	0
+eatlq	uniswap_v3_burns_decoded	block_number	UInt64	6			0	0	0	0
+eatlq	uniswap_v3_burns_decoded	tx_hash	String	7			0	0	0	0
+eatlq	uniswap_v3_burns_decoded	log_index	UInt32	8			0	0	0	0
+eatlq	uniswap_v3_burns_decoded	pool_address	LowCardinality(String)	9			0	0	0	0
+eatlq	uniswap_v3_burns_decoded	owner	String	10			0	0	0	0
+eatlq	uniswap_v3_burns_decoded	tick_lower_raw	String	11			0	0	0	0
+eatlq	uniswap_v3_burns_decoded	tick_lower	Int32	12			0	0	0	0
+eatlq	uniswap_v3_burns_decoded	tick_upper_raw	String	13			0	0	0	0
+eatlq	uniswap_v3_burns_decoded	tick_upper	Int32	14			0	0	0	0
+eatlq	uniswap_v3_burns_decoded	liquidity_raw	String	15			0	0	0	0
+eatlq	uniswap_v3_burns_decoded	liquidity	UInt256	16			0	0	0	0
+eatlq	uniswap_v3_burns_decoded	amount0_raw	String	17			0	0	0	0
+eatlq	uniswap_v3_burns_decoded	amount0	UInt256	18			0	0	0	0
+eatlq	uniswap_v3_burns_decoded	amount1_raw	String	19			0	0	0	0
+eatlq	uniswap_v3_burns_decoded	amount1	UInt256	20			0	0	0	0
+eatlq	uniswap_v3_burns_decoded	removed	UInt8	21			0	0	0	0
+eatlq	uniswap_v3_burns_decoded	payload_json	String	22			0	0	0	0
+eatlq	uniswap_v3_burns_decoded	latest_ingested_at	DateTime64(3, \'UTC\')	23			0	0	0	0
+eatlq	uniswap_v3_burns_decoded	duplicate_rows	UInt64	24			0	0	0	0
+eatlq	uniswap_v3_burns_deduped	chain_id	UInt64	1			0	0	0	0
+eatlq	uniswap_v3_burns_deduped	source	String	2			0	0	0	0
+eatlq	uniswap_v3_burns_deduped	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v3_burns_deduped	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	uniswap_v3_burns_deduped	block_date	Date	5			0	0	0	0
+eatlq	uniswap_v3_burns_deduped	block_number	UInt64	6			0	0	0	0
+eatlq	uniswap_v3_burns_deduped	tx_hash	String	7			0	0	0	0
+eatlq	uniswap_v3_burns_deduped	log_index	UInt32	8			0	0	0	0
+eatlq	uniswap_v3_burns_deduped	pool_address	LowCardinality(String)	9			0	0	0	0
+eatlq	uniswap_v3_burns_deduped	owner	String	10			0	0	0	0
+eatlq	uniswap_v3_burns_deduped	tick_lower_raw	String	11			0	0	0	0
+eatlq	uniswap_v3_burns_deduped	tick_upper_raw	String	12			0	0	0	0
+eatlq	uniswap_v3_burns_deduped	liquidity_raw	String	13			0	0	0	0
+eatlq	uniswap_v3_burns_deduped	amount0_raw	String	14			0	0	0	0
+eatlq	uniswap_v3_burns_deduped	amount1_raw	String	15			0	0	0	0
+eatlq	uniswap_v3_burns_deduped	removed	UInt8	16			0	0	0	0
+eatlq	uniswap_v3_burns_deduped	payload_json	String	17			0	0	0	0
+eatlq	uniswap_v3_burns_deduped	latest_ingested_at	DateTime64(3, \'UTC\')	18			0	0	0	0
+eatlq	uniswap_v3_burns_deduped	duplicate_rows	UInt64	19			0	0	0	0
+eatlq	uniswap_v3_burns_enriched	chain_id	UInt64	1			0	0	0	0
+eatlq	uniswap_v3_burns_enriched	source	String	2			0	0	0	0
+eatlq	uniswap_v3_burns_enriched	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v3_burns_enriched	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	uniswap_v3_burns_enriched	block_date	Date	5			0	0	0	0
+eatlq	uniswap_v3_burns_enriched	block_number	UInt64	6			0	0	0	0
+eatlq	uniswap_v3_burns_enriched	tx_hash	String	7			0	0	0	0
+eatlq	uniswap_v3_burns_enriched	log_index	UInt32	8			0	0	0	0
+eatlq	uniswap_v3_burns_enriched	pool_address	LowCardinality(String)	9			0	0	0	0
+eatlq	uniswap_v3_burns_enriched	pool_label	String	10			0	0	0	0
+eatlq	uniswap_v3_burns_enriched	token0_address	String	11			0	0	0	0
+eatlq	uniswap_v3_burns_enriched	token1_address	String	12			0	0	0	0
+eatlq	uniswap_v3_burns_enriched	token0_symbol	String	13			0	0	0	0
+eatlq	uniswap_v3_burns_enriched	token1_symbol	String	14			0	0	0	0
+eatlq	uniswap_v3_burns_enriched	fee_bps	UInt16	15			0	0	0	0
+eatlq	uniswap_v3_burns_enriched	is_curated	UInt8	16			0	0	0	0
+eatlq	uniswap_v3_burns_enriched	registry_source	String	17			0	0	0	0
+eatlq	uniswap_v3_burns_enriched	has_registry_match	UInt8	18			0	0	0	0
+eatlq	uniswap_v3_burns_enriched	owner	String	19			0	0	0	0
+eatlq	uniswap_v3_burns_enriched	tick_lower_raw	String	20			0	0	0	0
+eatlq	uniswap_v3_burns_enriched	tick_upper_raw	String	21			0	0	0	0
+eatlq	uniswap_v3_burns_enriched	liquidity_raw	String	22			0	0	0	0
+eatlq	uniswap_v3_burns_enriched	amount0_raw	String	23			0	0	0	0
+eatlq	uniswap_v3_burns_enriched	amount1_raw	String	24			0	0	0	0
+eatlq	uniswap_v3_burns_enriched	removed	UInt8	25			0	0	0	0
+eatlq	uniswap_v3_burns_enriched	payload_json	String	26			0	0	0	0
+eatlq	uniswap_v3_burns_enriched	latest_ingested_at	DateTime64(3, \'UTC\')	27			0	0	0	0
+eatlq	uniswap_v3_burns_enriched	duplicate_rows	UInt64	28			0	0	0	0
+eatlq	uniswap_v3_burns_hourly	hour	DateTime(\'UTC\')	1			0	0	0	0
+eatlq	uniswap_v3_burns_hourly	chain_id	UInt64	2			0	0	0	0
+eatlq	uniswap_v3_burns_hourly	pool_address	LowCardinality(String)	3			0	0	0	0
+eatlq	uniswap_v3_burns_hourly	burn_count	UInt64	4			0	0	0	0
+eatlq	uniswap_v3_burns_hourly	unique_tx_count	UInt64	5			0	0	0	0
+eatlq	uniswap_v3_burns_hourly	latest_ingested_at	DateTime64(3, \'UTC\')	6			0	0	0	0
+eatlq	uniswap_v3_burns_mv	chain_id	UInt64	1			0	0	0	0
+eatlq	uniswap_v3_burns_mv	source	LowCardinality(String)	2			0	0	0	0
+eatlq	uniswap_v3_burns_mv	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v3_burns_mv	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	uniswap_v3_burns_mv	block_number	UInt64	5			0	0	0	0
+eatlq	uniswap_v3_burns_mv	tx_hash	String	6			0	0	0	0
+eatlq	uniswap_v3_burns_mv	log_index	UInt32	7			0	0	0	0
+eatlq	uniswap_v3_burns_mv	pool_address	LowCardinality(String)	8			0	0	0	0
+eatlq	uniswap_v3_burns_mv	owner	String	9			0	0	0	0
+eatlq	uniswap_v3_burns_mv	tick_lower_raw	String	10			0	0	0	0
+eatlq	uniswap_v3_burns_mv	tick_upper_raw	String	11			0	0	0	0
+eatlq	uniswap_v3_burns_mv	liquidity_raw	String	12			0	0	0	0
+eatlq	uniswap_v3_burns_mv	amount0_raw	String	13			0	0	0	0
+eatlq	uniswap_v3_burns_mv	amount1_raw	String	14			0	0	0	0
+eatlq	uniswap_v3_burns_mv	removed	UInt8	15			0	0	0	0
+eatlq	uniswap_v3_burns_mv	payload_json	String	16			0	0	0	0
+eatlq	uniswap_v3_burns_mv	ingested_at	DateTime64(3, \'UTC\')	17			0	0	0	0
+eatlq	uniswap_v3_burns_semantic	b.chain_id	UInt64	1			0	0	0	0
+eatlq	uniswap_v3_burns_semantic	source	String	2			0	0	0	0
+eatlq	uniswap_v3_burns_semantic	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v3_burns_semantic	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	uniswap_v3_burns_semantic	block_date	Date	5			0	0	0	0
+eatlq	uniswap_v3_burns_semantic	block_number	UInt64	6			0	0	0	0
+eatlq	uniswap_v3_burns_semantic	tx_hash	String	7			0	0	0	0
+eatlq	uniswap_v3_burns_semantic	log_index	UInt32	8			0	0	0	0
+eatlq	uniswap_v3_burns_semantic	b.pool_address	LowCardinality(String)	9			0	0	0	0
+eatlq	uniswap_v3_burns_semantic	pool_label	String	10			0	0	0	0
+eatlq	uniswap_v3_burns_semantic	token0_address	String	11			0	0	0	0
+eatlq	uniswap_v3_burns_semantic	token1_address	String	12			0	0	0	0
+eatlq	uniswap_v3_burns_semantic	token0_symbol	String	13			0	0	0	0
+eatlq	uniswap_v3_burns_semantic	token1_symbol	String	14			0	0	0	0
+eatlq	uniswap_v3_burns_semantic	token0_decimals	UInt8	15			0	0	0	0
+eatlq	uniswap_v3_burns_semantic	token1_decimals	UInt8	16			0	0	0	0
+eatlq	uniswap_v3_burns_semantic	fee_bps	UInt16	17			0	0	0	0
+eatlq	uniswap_v3_burns_semantic	is_curated	UInt8	18			0	0	0	0
+eatlq	uniswap_v3_burns_semantic	p.registry_source	String	19			0	0	0	0
+eatlq	uniswap_v3_burns_semantic	has_registry_match	UInt8	20			0	0	0	0
+eatlq	uniswap_v3_burns_semantic	owner	String	21			0	0	0	0
+eatlq	uniswap_v3_burns_semantic	tick_lower_raw	String	22			0	0	0	0
+eatlq	uniswap_v3_burns_semantic	tick_lower	Int32	23			0	0	0	0
+eatlq	uniswap_v3_burns_semantic	tick_upper_raw	String	24			0	0	0	0
+eatlq	uniswap_v3_burns_semantic	tick_upper	Int32	25			0	0	0	0
+eatlq	uniswap_v3_burns_semantic	liquidity_raw	String	26			0	0	0	0
+eatlq	uniswap_v3_burns_semantic	liquidity	UInt256	27			0	0	0	0
+eatlq	uniswap_v3_burns_semantic	amount0_raw	String	28			0	0	0	0
+eatlq	uniswap_v3_burns_semantic	amount0	UInt256	29			0	0	0	0
+eatlq	uniswap_v3_burns_semantic	amount0_normalized	Nullable(Float64)	30			0	0	0	0
+eatlq	uniswap_v3_burns_semantic	amount1_raw	String	31			0	0	0	0
+eatlq	uniswap_v3_burns_semantic	amount1	UInt256	32			0	0	0	0
+eatlq	uniswap_v3_burns_semantic	amount1_normalized	Nullable(Float64)	33			0	0	0	0
+eatlq	uniswap_v3_burns_semantic	removed	UInt8	34			0	0	0	0
+eatlq	uniswap_v3_burns_semantic	payload_json	String	35			0	0	0	0
+eatlq	uniswap_v3_burns_semantic	latest_ingested_at	DateTime64(3, \'UTC\')	36			0	0	0	0
+eatlq	uniswap_v3_burns_semantic	duplicate_rows	UInt64	37			0	0	0	0
+eatlq	uniswap_v3_mints	chain_id	UInt64	1			0	1	1	0
+eatlq	uniswap_v3_mints	source	LowCardinality(String)	2			0	0	0	0
+eatlq	uniswap_v3_mints	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v3_mints	received_at_ms	DateTime64(3, \'UTC\')	4			1	0	0	0
+eatlq	uniswap_v3_mints	block_date	Date	5	DEFAULT	toDate(coalesce(block_time, received_at_ms))	0	0	0	0
+eatlq	uniswap_v3_mints	block_number	UInt64	6			0	1	1	0
+eatlq	uniswap_v3_mints	tx_hash	String	7			0	1	1	0
+eatlq	uniswap_v3_mints	log_index	UInt32	8			0	1	1	0
+eatlq	uniswap_v3_mints	pool_address	LowCardinality(String)	9			0	1	1	0
+eatlq	uniswap_v3_mints	sender	LowCardinality(String)	10			0	0	0	0
+eatlq	uniswap_v3_mints	owner	LowCardinality(String)	11			0	0	0	0
+eatlq	uniswap_v3_mints	tick_lower_raw	String	12			0	0	0	0
+eatlq	uniswap_v3_mints	tick_upper_raw	String	13			0	0	0	0
+eatlq	uniswap_v3_mints	liquidity_raw	String	14			0	0	0	0
+eatlq	uniswap_v3_mints	amount0_raw	String	15			0	0	0	0
+eatlq	uniswap_v3_mints	amount1_raw	String	16			0	0	0	0
+eatlq	uniswap_v3_mints	removed	UInt8	17			0	0	0	0
+eatlq	uniswap_v3_mints	payload_json	String	18			0	0	0	0
+eatlq	uniswap_v3_mints	ingested_at	DateTime64(3, \'UTC\')	19			0	0	0	0
+eatlq	uniswap_v3_mints_decoded	chain_id	UInt64	1			0	0	0	0
+eatlq	uniswap_v3_mints_decoded	source	String	2			0	0	0	0
+eatlq	uniswap_v3_mints_decoded	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v3_mints_decoded	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	uniswap_v3_mints_decoded	block_date	Date	5			0	0	0	0
+eatlq	uniswap_v3_mints_decoded	block_number	UInt64	6			0	0	0	0
+eatlq	uniswap_v3_mints_decoded	tx_hash	String	7			0	0	0	0
+eatlq	uniswap_v3_mints_decoded	log_index	UInt32	8			0	0	0	0
+eatlq	uniswap_v3_mints_decoded	pool_address	LowCardinality(String)	9			0	0	0	0
+eatlq	uniswap_v3_mints_decoded	sender	String	10			0	0	0	0
+eatlq	uniswap_v3_mints_decoded	owner	String	11			0	0	0	0
+eatlq	uniswap_v3_mints_decoded	tick_lower_raw	String	12			0	0	0	0
+eatlq	uniswap_v3_mints_decoded	tick_lower	Int32	13			0	0	0	0
+eatlq	uniswap_v3_mints_decoded	tick_upper_raw	String	14			0	0	0	0
+eatlq	uniswap_v3_mints_decoded	tick_upper	Int32	15			0	0	0	0
+eatlq	uniswap_v3_mints_decoded	liquidity_raw	String	16			0	0	0	0
+eatlq	uniswap_v3_mints_decoded	liquidity	UInt256	17			0	0	0	0
+eatlq	uniswap_v3_mints_decoded	amount0_raw	String	18			0	0	0	0
+eatlq	uniswap_v3_mints_decoded	amount0	UInt256	19			0	0	0	0
+eatlq	uniswap_v3_mints_decoded	amount1_raw	String	20			0	0	0	0
+eatlq	uniswap_v3_mints_decoded	amount1	UInt256	21			0	0	0	0
+eatlq	uniswap_v3_mints_decoded	removed	UInt8	22			0	0	0	0
+eatlq	uniswap_v3_mints_decoded	payload_json	String	23			0	0	0	0
+eatlq	uniswap_v3_mints_decoded	latest_ingested_at	DateTime64(3, \'UTC\')	24			0	0	0	0
+eatlq	uniswap_v3_mints_decoded	duplicate_rows	UInt64	25			0	0	0	0
+eatlq	uniswap_v3_mints_deduped	chain_id	UInt64	1			0	0	0	0
+eatlq	uniswap_v3_mints_deduped	source	String	2			0	0	0	0
+eatlq	uniswap_v3_mints_deduped	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v3_mints_deduped	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	uniswap_v3_mints_deduped	block_date	Date	5			0	0	0	0
+eatlq	uniswap_v3_mints_deduped	block_number	UInt64	6			0	0	0	0
+eatlq	uniswap_v3_mints_deduped	tx_hash	String	7			0	0	0	0
+eatlq	uniswap_v3_mints_deduped	log_index	UInt32	8			0	0	0	0
+eatlq	uniswap_v3_mints_deduped	pool_address	LowCardinality(String)	9			0	0	0	0
+eatlq	uniswap_v3_mints_deduped	sender	String	10			0	0	0	0
+eatlq	uniswap_v3_mints_deduped	owner	String	11			0	0	0	0
+eatlq	uniswap_v3_mints_deduped	tick_lower_raw	String	12			0	0	0	0
+eatlq	uniswap_v3_mints_deduped	tick_upper_raw	String	13			0	0	0	0
+eatlq	uniswap_v3_mints_deduped	liquidity_raw	String	14			0	0	0	0
+eatlq	uniswap_v3_mints_deduped	amount0_raw	String	15			0	0	0	0
+eatlq	uniswap_v3_mints_deduped	amount1_raw	String	16			0	0	0	0
+eatlq	uniswap_v3_mints_deduped	removed	UInt8	17			0	0	0	0
+eatlq	uniswap_v3_mints_deduped	payload_json	String	18			0	0	0	0
+eatlq	uniswap_v3_mints_deduped	latest_ingested_at	DateTime64(3, \'UTC\')	19			0	0	0	0
+eatlq	uniswap_v3_mints_deduped	duplicate_rows	UInt64	20			0	0	0	0
+eatlq	uniswap_v3_mints_enriched	chain_id	UInt64	1			0	0	0	0
+eatlq	uniswap_v3_mints_enriched	source	String	2			0	0	0	0
+eatlq	uniswap_v3_mints_enriched	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v3_mints_enriched	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	uniswap_v3_mints_enriched	block_date	Date	5			0	0	0	0
+eatlq	uniswap_v3_mints_enriched	block_number	UInt64	6			0	0	0	0
+eatlq	uniswap_v3_mints_enriched	tx_hash	String	7			0	0	0	0
+eatlq	uniswap_v3_mints_enriched	log_index	UInt32	8			0	0	0	0
+eatlq	uniswap_v3_mints_enriched	pool_address	LowCardinality(String)	9			0	0	0	0
+eatlq	uniswap_v3_mints_enriched	pool_label	String	10			0	0	0	0
+eatlq	uniswap_v3_mints_enriched	token0_address	String	11			0	0	0	0
+eatlq	uniswap_v3_mints_enriched	token1_address	String	12			0	0	0	0
+eatlq	uniswap_v3_mints_enriched	token0_symbol	String	13			0	0	0	0
+eatlq	uniswap_v3_mints_enriched	token1_symbol	String	14			0	0	0	0
+eatlq	uniswap_v3_mints_enriched	fee_bps	UInt16	15			0	0	0	0
+eatlq	uniswap_v3_mints_enriched	is_curated	UInt8	16			0	0	0	0
+eatlq	uniswap_v3_mints_enriched	registry_source	String	17			0	0	0	0
+eatlq	uniswap_v3_mints_enriched	has_registry_match	UInt8	18			0	0	0	0
+eatlq	uniswap_v3_mints_enriched	sender	String	19			0	0	0	0
+eatlq	uniswap_v3_mints_enriched	owner	String	20			0	0	0	0
+eatlq	uniswap_v3_mints_enriched	tick_lower_raw	String	21			0	0	0	0
+eatlq	uniswap_v3_mints_enriched	tick_upper_raw	String	22			0	0	0	0
+eatlq	uniswap_v3_mints_enriched	liquidity_raw	String	23			0	0	0	0
+eatlq	uniswap_v3_mints_enriched	amount0_raw	String	24			0	0	0	0
+eatlq	uniswap_v3_mints_enriched	amount1_raw	String	25			0	0	0	0
+eatlq	uniswap_v3_mints_enriched	removed	UInt8	26			0	0	0	0
+eatlq	uniswap_v3_mints_enriched	payload_json	String	27			0	0	0	0
+eatlq	uniswap_v3_mints_enriched	latest_ingested_at	DateTime64(3, \'UTC\')	28			0	0	0	0
+eatlq	uniswap_v3_mints_enriched	duplicate_rows	UInt64	29			0	0	0	0
+eatlq	uniswap_v3_mints_hourly	hour	DateTime(\'UTC\')	1			0	0	0	0
+eatlq	uniswap_v3_mints_hourly	chain_id	UInt64	2			0	0	0	0
+eatlq	uniswap_v3_mints_hourly	pool_address	LowCardinality(String)	3			0	0	0	0
+eatlq	uniswap_v3_mints_hourly	mint_count	UInt64	4			0	0	0	0
+eatlq	uniswap_v3_mints_hourly	unique_tx_count	UInt64	5			0	0	0	0
+eatlq	uniswap_v3_mints_hourly	latest_ingested_at	DateTime64(3, \'UTC\')	6			0	0	0	0
+eatlq	uniswap_v3_mints_mv	chain_id	UInt64	1			0	0	0	0
+eatlq	uniswap_v3_mints_mv	source	LowCardinality(String)	2			0	0	0	0
+eatlq	uniswap_v3_mints_mv	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v3_mints_mv	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	uniswap_v3_mints_mv	block_number	UInt64	5			0	0	0	0
+eatlq	uniswap_v3_mints_mv	tx_hash	String	6			0	0	0	0
+eatlq	uniswap_v3_mints_mv	log_index	UInt32	7			0	0	0	0
+eatlq	uniswap_v3_mints_mv	pool_address	LowCardinality(String)	8			0	0	0	0
+eatlq	uniswap_v3_mints_mv	sender	String	9			0	0	0	0
+eatlq	uniswap_v3_mints_mv	owner	String	10			0	0	0	0
+eatlq	uniswap_v3_mints_mv	tick_lower_raw	String	11			0	0	0	0
+eatlq	uniswap_v3_mints_mv	tick_upper_raw	String	12			0	0	0	0
+eatlq	uniswap_v3_mints_mv	liquidity_raw	String	13			0	0	0	0
+eatlq	uniswap_v3_mints_mv	amount0_raw	String	14			0	0	0	0
+eatlq	uniswap_v3_mints_mv	amount1_raw	String	15			0	0	0	0
+eatlq	uniswap_v3_mints_mv	removed	UInt8	16			0	0	0	0
+eatlq	uniswap_v3_mints_mv	payload_json	String	17			0	0	0	0
+eatlq	uniswap_v3_mints_mv	ingested_at	DateTime64(3, \'UTC\')	18			0	0	0	0
+eatlq	uniswap_v3_mints_semantic	m.chain_id	UInt64	1			0	0	0	0
+eatlq	uniswap_v3_mints_semantic	source	String	2			0	0	0	0
+eatlq	uniswap_v3_mints_semantic	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v3_mints_semantic	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	uniswap_v3_mints_semantic	block_date	Date	5			0	0	0	0
+eatlq	uniswap_v3_mints_semantic	block_number	UInt64	6			0	0	0	0
+eatlq	uniswap_v3_mints_semantic	tx_hash	String	7			0	0	0	0
+eatlq	uniswap_v3_mints_semantic	log_index	UInt32	8			0	0	0	0
+eatlq	uniswap_v3_mints_semantic	m.pool_address	LowCardinality(String)	9			0	0	0	0
+eatlq	uniswap_v3_mints_semantic	pool_label	String	10			0	0	0	0
+eatlq	uniswap_v3_mints_semantic	token0_address	String	11			0	0	0	0
+eatlq	uniswap_v3_mints_semantic	token1_address	String	12			0	0	0	0
+eatlq	uniswap_v3_mints_semantic	token0_symbol	String	13			0	0	0	0
+eatlq	uniswap_v3_mints_semantic	token1_symbol	String	14			0	0	0	0
+eatlq	uniswap_v3_mints_semantic	token0_decimals	UInt8	15			0	0	0	0
+eatlq	uniswap_v3_mints_semantic	token1_decimals	UInt8	16			0	0	0	0
+eatlq	uniswap_v3_mints_semantic	fee_bps	UInt16	17			0	0	0	0
+eatlq	uniswap_v3_mints_semantic	is_curated	UInt8	18			0	0	0	0
+eatlq	uniswap_v3_mints_semantic	p.registry_source	String	19			0	0	0	0
+eatlq	uniswap_v3_mints_semantic	has_registry_match	UInt8	20			0	0	0	0
+eatlq	uniswap_v3_mints_semantic	sender	String	21			0	0	0	0
+eatlq	uniswap_v3_mints_semantic	owner	String	22			0	0	0	0
+eatlq	uniswap_v3_mints_semantic	tick_lower_raw	String	23			0	0	0	0
+eatlq	uniswap_v3_mints_semantic	tick_lower	Int32	24			0	0	0	0
+eatlq	uniswap_v3_mints_semantic	tick_upper_raw	String	25			0	0	0	0
+eatlq	uniswap_v3_mints_semantic	tick_upper	Int32	26			0	0	0	0
+eatlq	uniswap_v3_mints_semantic	liquidity_raw	String	27			0	0	0	0
+eatlq	uniswap_v3_mints_semantic	liquidity	UInt256	28			0	0	0	0
+eatlq	uniswap_v3_mints_semantic	amount0_raw	String	29			0	0	0	0
+eatlq	uniswap_v3_mints_semantic	amount0	UInt256	30			0	0	0	0
+eatlq	uniswap_v3_mints_semantic	amount0_normalized	Nullable(Float64)	31			0	0	0	0
+eatlq	uniswap_v3_mints_semantic	amount1_raw	String	32			0	0	0	0
+eatlq	uniswap_v3_mints_semantic	amount1	UInt256	33			0	0	0	0
+eatlq	uniswap_v3_mints_semantic	amount1_normalized	Nullable(Float64)	34			0	0	0	0
+eatlq	uniswap_v3_mints_semantic	removed	UInt8	35			0	0	0	0
+eatlq	uniswap_v3_mints_semantic	payload_json	String	36			0	0	0	0
+eatlq	uniswap_v3_mints_semantic	latest_ingested_at	DateTime64(3, \'UTC\')	37			0	0	0	0
+eatlq	uniswap_v3_mints_semantic	duplicate_rows	UInt64	38			0	0	0	0
+eatlq	uniswap_v3_pool_registry	chain_id	UInt64	1			0	0	0	0
+eatlq	uniswap_v3_pool_registry	pool_address	String	2			0	0	0	0
+eatlq	uniswap_v3_pool_registry	pool_label	String	3			0	0	0	0
+eatlq	uniswap_v3_pool_registry	token0_address	String	4			0	0	0	0
+eatlq	uniswap_v3_pool_registry	token1_address	String	5			0	0	0	0
+eatlq	uniswap_v3_pool_registry	token0_symbol	String	6			0	0	0	0
+eatlq	uniswap_v3_pool_registry	token1_symbol	String	7			0	0	0	0
+eatlq	uniswap_v3_pool_registry	fee_bps	UInt16	8			0	0	0	0
+eatlq	uniswap_v3_pool_registry	is_curated	UInt8	9			0	0	0	0
+eatlq	uniswap_v3_pool_registry	registry_source	String	10			0	0	0	0
+eatlq	uniswap_v3_swaps	chain_id	UInt64	1			0	1	1	0
+eatlq	uniswap_v3_swaps	source	LowCardinality(String)	2			0	0	0	0
+eatlq	uniswap_v3_swaps	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v3_swaps	received_at_ms	DateTime64(3, \'UTC\')	4			1	0	0	0
+eatlq	uniswap_v3_swaps	block_date	Date	5	DEFAULT	toDate(coalesce(block_time, received_at_ms))	0	0	0	0
+eatlq	uniswap_v3_swaps	block_number	UInt64	6			0	1	1	0
+eatlq	uniswap_v3_swaps	tx_hash	String	7			0	1	1	0
+eatlq	uniswap_v3_swaps	log_index	UInt32	8			0	1	1	0
+eatlq	uniswap_v3_swaps	pool_address	LowCardinality(String)	9			0	1	1	0
+eatlq	uniswap_v3_swaps	sender	LowCardinality(String)	10			0	0	0	0
+eatlq	uniswap_v3_swaps	recipient	LowCardinality(String)	11			0	0	0	0
+eatlq	uniswap_v3_swaps	amount0_raw	String	12			0	0	0	0
+eatlq	uniswap_v3_swaps	amount1_raw	String	13			0	0	0	0
+eatlq	uniswap_v3_swaps	sqrt_price_x96_raw	String	14			0	0	0	0
+eatlq	uniswap_v3_swaps	liquidity_raw	String	15			0	0	0	0
+eatlq	uniswap_v3_swaps	tick_raw	String	16			0	0	0	0
+eatlq	uniswap_v3_swaps	removed	UInt8	17			0	0	0	0
+eatlq	uniswap_v3_swaps	payload_json	String	18			0	0	0	0
+eatlq	uniswap_v3_swaps	ingested_at	DateTime64(3, \'UTC\')	19			0	0	0	0
+eatlq	uniswap_v3_swaps_decoded	chain_id	UInt64	1			0	0	0	0
+eatlq	uniswap_v3_swaps_decoded	source	String	2			0	0	0	0
+eatlq	uniswap_v3_swaps_decoded	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v3_swaps_decoded	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	uniswap_v3_swaps_decoded	block_date	Date	5			0	0	0	0
+eatlq	uniswap_v3_swaps_decoded	block_number	UInt64	6			0	0	0	0
+eatlq	uniswap_v3_swaps_decoded	tx_hash	String	7			0	0	0	0
+eatlq	uniswap_v3_swaps_decoded	log_index	UInt32	8			0	0	0	0
+eatlq	uniswap_v3_swaps_decoded	pool_address	LowCardinality(String)	9			0	0	0	0
+eatlq	uniswap_v3_swaps_decoded	sender	String	10			0	0	0	0
+eatlq	uniswap_v3_swaps_decoded	recipient	String	11			0	0	0	0
+eatlq	uniswap_v3_swaps_decoded	amount0_raw	String	12			0	0	0	0
+eatlq	uniswap_v3_swaps_decoded	amount0	Int256	13			0	0	0	0
+eatlq	uniswap_v3_swaps_decoded	amount1_raw	String	14			0	0	0	0
+eatlq	uniswap_v3_swaps_decoded	amount1	Int256	15			0	0	0	0
+eatlq	uniswap_v3_swaps_decoded	sqrt_price_x96_raw	String	16			0	0	0	0
+eatlq	uniswap_v3_swaps_decoded	sqrt_price_x96	UInt256	17			0	0	0	0
+eatlq	uniswap_v3_swaps_decoded	liquidity_raw	String	18			0	0	0	0
+eatlq	uniswap_v3_swaps_decoded	liquidity	UInt256	19			0	0	0	0
+eatlq	uniswap_v3_swaps_decoded	tick_raw	String	20			0	0	0	0
+eatlq	uniswap_v3_swaps_decoded	tick	Int32	21			0	0	0	0
+eatlq	uniswap_v3_swaps_decoded	removed	UInt8	22			0	0	0	0
+eatlq	uniswap_v3_swaps_decoded	payload_json	String	23			0	0	0	0
+eatlq	uniswap_v3_swaps_decoded	latest_ingested_at	DateTime64(3, \'UTC\')	24			0	0	0	0
+eatlq	uniswap_v3_swaps_decoded	duplicate_rows	UInt64	25			0	0	0	0
+eatlq	uniswap_v3_swaps_deduped	chain_id	UInt64	1			0	0	0	0
+eatlq	uniswap_v3_swaps_deduped	source	String	2			0	0	0	0
+eatlq	uniswap_v3_swaps_deduped	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v3_swaps_deduped	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	uniswap_v3_swaps_deduped	block_date	Date	5			0	0	0	0
+eatlq	uniswap_v3_swaps_deduped	block_number	UInt64	6			0	0	0	0
+eatlq	uniswap_v3_swaps_deduped	tx_hash	String	7			0	0	0	0
+eatlq	uniswap_v3_swaps_deduped	log_index	UInt32	8			0	0	0	0
+eatlq	uniswap_v3_swaps_deduped	pool_address	LowCardinality(String)	9			0	0	0	0
+eatlq	uniswap_v3_swaps_deduped	sender	String	10			0	0	0	0
+eatlq	uniswap_v3_swaps_deduped	recipient	String	11			0	0	0	0
+eatlq	uniswap_v3_swaps_deduped	amount0_raw	String	12			0	0	0	0
+eatlq	uniswap_v3_swaps_deduped	amount1_raw	String	13			0	0	0	0
+eatlq	uniswap_v3_swaps_deduped	sqrt_price_x96_raw	String	14			0	0	0	0
+eatlq	uniswap_v3_swaps_deduped	liquidity_raw	String	15			0	0	0	0
+eatlq	uniswap_v3_swaps_deduped	tick_raw	String	16			0	0	0	0
+eatlq	uniswap_v3_swaps_deduped	removed	UInt8	17			0	0	0	0
+eatlq	uniswap_v3_swaps_deduped	payload_json	String	18			0	0	0	0
+eatlq	uniswap_v3_swaps_deduped	latest_ingested_at	DateTime64(3, \'UTC\')	19			0	0	0	0
+eatlq	uniswap_v3_swaps_deduped	duplicate_rows	UInt64	20			0	0	0	0
+eatlq	uniswap_v3_swaps_enriched	chain_id	UInt64	1			0	0	0	0
+eatlq	uniswap_v3_swaps_enriched	source	String	2			0	0	0	0
+eatlq	uniswap_v3_swaps_enriched	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v3_swaps_enriched	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	uniswap_v3_swaps_enriched	block_date	Date	5			0	0	0	0
+eatlq	uniswap_v3_swaps_enriched	block_number	UInt64	6			0	0	0	0
+eatlq	uniswap_v3_swaps_enriched	tx_hash	String	7			0	0	0	0
+eatlq	uniswap_v3_swaps_enriched	log_index	UInt32	8			0	0	0	0
+eatlq	uniswap_v3_swaps_enriched	pool_address	LowCardinality(String)	9			0	0	0	0
+eatlq	uniswap_v3_swaps_enriched	pool_label	String	10			0	0	0	0
+eatlq	uniswap_v3_swaps_enriched	token0_address	String	11			0	0	0	0
+eatlq	uniswap_v3_swaps_enriched	token1_address	String	12			0	0	0	0
+eatlq	uniswap_v3_swaps_enriched	token0_symbol	String	13			0	0	0	0
+eatlq	uniswap_v3_swaps_enriched	token1_symbol	String	14			0	0	0	0
+eatlq	uniswap_v3_swaps_enriched	fee_bps	UInt16	15			0	0	0	0
+eatlq	uniswap_v3_swaps_enriched	is_curated	UInt8	16			0	0	0	0
+eatlq	uniswap_v3_swaps_enriched	registry_source	String	17			0	0	0	0
+eatlq	uniswap_v3_swaps_enriched	has_registry_match	UInt8	18			0	0	0	0
+eatlq	uniswap_v3_swaps_enriched	sender	String	19			0	0	0	0
+eatlq	uniswap_v3_swaps_enriched	recipient	String	20			0	0	0	0
+eatlq	uniswap_v3_swaps_enriched	amount0_raw	String	21			0	0	0	0
+eatlq	uniswap_v3_swaps_enriched	amount1_raw	String	22			0	0	0	0
+eatlq	uniswap_v3_swaps_enriched	sqrt_price_x96_raw	String	23			0	0	0	0
+eatlq	uniswap_v3_swaps_enriched	liquidity_raw	String	24			0	0	0	0
+eatlq	uniswap_v3_swaps_enriched	tick_raw	String	25			0	0	0	0
+eatlq	uniswap_v3_swaps_enriched	removed	UInt8	26			0	0	0	0
+eatlq	uniswap_v3_swaps_enriched	payload_json	String	27			0	0	0	0
+eatlq	uniswap_v3_swaps_enriched	latest_ingested_at	DateTime64(3, \'UTC\')	28			0	0	0	0
+eatlq	uniswap_v3_swaps_enriched	duplicate_rows	UInt64	29			0	0	0	0
+eatlq	uniswap_v3_swaps_hourly	hour	DateTime(\'UTC\')	1			0	0	0	0
+eatlq	uniswap_v3_swaps_hourly	chain_id	UInt64	2			0	0	0	0
+eatlq	uniswap_v3_swaps_hourly	pool_address	LowCardinality(String)	3			0	0	0	0
+eatlq	uniswap_v3_swaps_hourly	swap_count	UInt64	4			0	0	0	0
+eatlq	uniswap_v3_swaps_hourly	unique_tx_count	UInt64	5			0	0	0	0
+eatlq	uniswap_v3_swaps_hourly	latest_ingested_at	DateTime64(3, \'UTC\')	6			0	0	0	0
+eatlq	uniswap_v3_swaps_mv	chain_id	UInt64	1			0	0	0	0
+eatlq	uniswap_v3_swaps_mv	source	LowCardinality(String)	2			0	0	0	0
+eatlq	uniswap_v3_swaps_mv	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v3_swaps_mv	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	uniswap_v3_swaps_mv	block_number	UInt64	5			0	0	0	0
+eatlq	uniswap_v3_swaps_mv	tx_hash	String	6			0	0	0	0
+eatlq	uniswap_v3_swaps_mv	log_index	UInt32	7			0	0	0	0
+eatlq	uniswap_v3_swaps_mv	pool_address	LowCardinality(String)	8			0	0	0	0
+eatlq	uniswap_v3_swaps_mv	sender	String	9			0	0	0	0
+eatlq	uniswap_v3_swaps_mv	recipient	String	10			0	0	0	0
+eatlq	uniswap_v3_swaps_mv	amount0_raw	String	11			0	0	0	0
+eatlq	uniswap_v3_swaps_mv	amount1_raw	String	12			0	0	0	0
+eatlq	uniswap_v3_swaps_mv	sqrt_price_x96_raw	String	13			0	0	0	0
+eatlq	uniswap_v3_swaps_mv	liquidity_raw	String	14			0	0	0	0
+eatlq	uniswap_v3_swaps_mv	tick_raw	String	15			0	0	0	0
+eatlq	uniswap_v3_swaps_mv	removed	UInt8	16			0	0	0	0
+eatlq	uniswap_v3_swaps_mv	payload_json	String	17			0	0	0	0
+eatlq	uniswap_v3_swaps_mv	ingested_at	DateTime64(3, \'UTC\')	18			0	0	0	0
+eatlq	uniswap_v3_swaps_semantic	s.chain_id	UInt64	1			0	0	0	0
+eatlq	uniswap_v3_swaps_semantic	source	String	2			0	0	0	0
+eatlq	uniswap_v3_swaps_semantic	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v3_swaps_semantic	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	uniswap_v3_swaps_semantic	block_date	Date	5			0	0	0	0
+eatlq	uniswap_v3_swaps_semantic	block_number	UInt64	6			0	0	0	0
+eatlq	uniswap_v3_swaps_semantic	tx_hash	String	7			0	0	0	0
+eatlq	uniswap_v3_swaps_semantic	log_index	UInt32	8			0	0	0	0
+eatlq	uniswap_v3_swaps_semantic	s.pool_address	LowCardinality(String)	9			0	0	0	0
+eatlq	uniswap_v3_swaps_semantic	pool_label	String	10			0	0	0	0
+eatlq	uniswap_v3_swaps_semantic	token0_address	String	11			0	0	0	0
+eatlq	uniswap_v3_swaps_semantic	token1_address	String	12			0	0	0	0
+eatlq	uniswap_v3_swaps_semantic	token0_symbol	String	13			0	0	0	0
+eatlq	uniswap_v3_swaps_semantic	token1_symbol	String	14			0	0	0	0
+eatlq	uniswap_v3_swaps_semantic	token0_decimals	UInt8	15			0	0	0	0
+eatlq	uniswap_v3_swaps_semantic	token1_decimals	UInt8	16			0	0	0	0
+eatlq	uniswap_v3_swaps_semantic	fee_bps	UInt16	17			0	0	0	0
+eatlq	uniswap_v3_swaps_semantic	is_curated	UInt8	18			0	0	0	0
+eatlq	uniswap_v3_swaps_semantic	p.registry_source	String	19			0	0	0	0
+eatlq	uniswap_v3_swaps_semantic	has_registry_match	UInt8	20			0	0	0	0
+eatlq	uniswap_v3_swaps_semantic	sender	String	21			0	0	0	0
+eatlq	uniswap_v3_swaps_semantic	recipient	String	22			0	0	0	0
+eatlq	uniswap_v3_swaps_semantic	amount0_raw	String	23			0	0	0	0
+eatlq	uniswap_v3_swaps_semantic	amount0	Int256	24			0	0	0	0
+eatlq	uniswap_v3_swaps_semantic	amount0_normalized	Nullable(Float64)	25			0	0	0	0
+eatlq	uniswap_v3_swaps_semantic	amount1_raw	String	26			0	0	0	0
+eatlq	uniswap_v3_swaps_semantic	amount1	Int256	27			0	0	0	0
+eatlq	uniswap_v3_swaps_semantic	amount1_normalized	Nullable(Float64)	28			0	0	0	0
+eatlq	uniswap_v3_swaps_semantic	sqrt_price_x96_raw	String	29			0	0	0	0
+eatlq	uniswap_v3_swaps_semantic	sqrt_price_x96	UInt256	30			0	0	0	0
+eatlq	uniswap_v3_swaps_semantic	liquidity_raw	String	31			0	0	0	0
+eatlq	uniswap_v3_swaps_semantic	liquidity	UInt256	32			0	0	0	0
+eatlq	uniswap_v3_swaps_semantic	tick_raw	String	33			0	0	0	0
+eatlq	uniswap_v3_swaps_semantic	tick	Int32	34			0	0	0	0
+eatlq	uniswap_v3_swaps_semantic	removed	UInt8	35			0	0	0	0
+eatlq	uniswap_v3_swaps_semantic	payload_json	String	36			0	0	0	0
+eatlq	uniswap_v3_swaps_semantic	latest_ingested_at	DateTime64(3, \'UTC\')	37			0	0	0	0
+eatlq	uniswap_v3_swaps_semantic	duplicate_rows	UInt64	38			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	chain_id	UInt64	1			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	source	String	2			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	block_date	Date	5			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	block_number	UInt64	6			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	tx_hash	String	7			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	log_index	UInt32	8			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	pool_address	LowCardinality(String)	9			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	pool_label	String	10			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	token0_address	String	11			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	token1_address	String	12			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	token0_symbol	String	13			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	token1_symbol	String	14			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	token0_decimals	UInt8	15			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	token1_decimals	UInt8	16			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	fee_bps	UInt16	17			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	is_curated	UInt8	18			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	has_registry_match	UInt8	19			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	sender	String	20			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	recipient	String	21			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	swap_direction	String	22			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	has_clear_direction	UInt8	23			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	sold_token_address	Nullable(String)	24			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	sold_token_symbol	Nullable(String)	25			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	sold_token_decimals	Nullable(UInt8)	26			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	bought_token_address	Nullable(String)	27			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	bought_token_symbol	Nullable(String)	28			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	bought_token_decimals	Nullable(UInt8)	29			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	amount0	Int256	30			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	amount0_normalized	Nullable(Float64)	31			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	amount1	Int256	32			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	amount1_normalized	Nullable(Float64)	33			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	sqrt_price_x96	UInt256	34			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	liquidity	UInt256	35			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	tick	Int32	36			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	sold_amount_normalized	Nullable(Float64)	37			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	bought_amount_normalized	Nullable(Float64)	38			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	removed	UInt8	39			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	payload_json	String	40			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	latest_ingested_at	DateTime64(3, \'UTC\')	41			0	0	0	0
+eatlq	uniswap_v3_swaps_trade_semantic	duplicate_rows	UInt64	42			0	0	0	0
+eatlq	uniswap_v3_swaps_with_buyer	chain_id	UInt64	1			0	0	0	0
+eatlq	uniswap_v3_swaps_with_buyer	source	String	2			0	0	0	0
+eatlq	uniswap_v3_swaps_with_buyer	block_time	Nullable(DateTime64(3, \'UTC\'))	3			0	0	0	0
+eatlq	uniswap_v3_swaps_with_buyer	received_at_ms	DateTime64(3, \'UTC\')	4			0	0	0	0
+eatlq	uniswap_v3_swaps_with_buyer	block_date	Date	5			0	0	0	0
+eatlq	uniswap_v3_swaps_with_buyer	block_number	UInt64	6			0	0	0	0
+eatlq	uniswap_v3_swaps_with_buyer	tx_hash	String	7			0	0	0	0
+eatlq	uniswap_v3_swaps_with_buyer	log_index	UInt32	8			0	0	0	0
+eatlq	uniswap_v3_swaps_with_buyer	pool_address	LowCardinality(String)	9			0	0	0	0
+eatlq	uniswap_v3_swaps_with_buyer	sender	String	10			0	0	0	0
+eatlq	uniswap_v3_swaps_with_buyer	recipient	String	11			0	0	0	0
+eatlq	uniswap_v3_swaps_with_buyer	amount0_raw	String	12			0	0	0	0
+eatlq	uniswap_v3_swaps_with_buyer	amount0	Int256	13			0	0	0	0
+eatlq	uniswap_v3_swaps_with_buyer	amount1_raw	String	14			0	0	0	0
+eatlq	uniswap_v3_swaps_with_buyer	amount1	Int256	15			0	0	0	0
+eatlq	uniswap_v3_swaps_with_buyer	sqrt_price_x96_raw	String	16			0	0	0	0
+eatlq	uniswap_v3_swaps_with_buyer	sqrt_price_x96	UInt256	17			0	0	0	0
+eatlq	uniswap_v3_swaps_with_buyer	liquidity_raw	String	18			0	0	0	0
+eatlq	uniswap_v3_swaps_with_buyer	liquidity	UInt256	19			0	0	0	0
+eatlq	uniswap_v3_swaps_with_buyer	tick_raw	String	20			0	0	0	0
+eatlq	uniswap_v3_swaps_with_buyer	tick	Int32	21			0	0	0	0
+eatlq	uniswap_v3_swaps_with_buyer	removed	UInt8	22			0	0	0	0
+eatlq	uniswap_v3_swaps_with_buyer	payload_json	String	23			0	0	0	0
+eatlq	uniswap_v3_swaps_with_buyer	latest_ingested_at	DateTime64(3, \'UTC\')	24			0	0	0	0
+eatlq	uniswap_v3_swaps_with_buyer	duplicate_rows	UInt64	25			0	0	0	0
+eatlq	uniswap_v3_swaps_with_buyer	buyer_address	String	26			0	0	0	0
+eatlq	uniswap_v3_swaps_with_buyer	has_tx_from	UInt8	27			0	0	0	0

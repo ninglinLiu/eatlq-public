@@ -1,0 +1,19 @@
+{
+  "body_sha256": "9a9c4cad7278f824736e3f2579d619b818ecf0c17cab024fb739e1cb63fe82e8",
+  "bytes": 152,
+  "finished": "2026-10-01T11:46:32.699762+00:00",
+  "http_status": 403,
+  "key": "cc2d9a1334e9bda61cfc5be008ffe02bded4869efe4a3532cfc1ca5a4b06390f",
+  "label": "smartmoney_receipt_provider_probe",
+  "payload": {
+    "id": 1,
+    "jsonrpc": "2.0",
+    "method": "eth_getTransactionReceipt",
+    "params": [
+      "0x535a33f3915d1df2e279768b356bbeebe2b5786dadd0295406cdf1756dd66c10"
+    ]
+  },
+  "retry_after": null,
+  "started": "2026-10-01T11:46:32.592916+00:00",
+  "url": "https://base-rpc.publicnode.com"
+}

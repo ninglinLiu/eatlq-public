@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" fill="none">
+  <defs>
+    <style>
+      .bg { fill: #0B0E14; }
+      .title { fill: #9E9E9E; font: 600 11px Inter, sans-serif; letter-spacing: 0.14em; }
+      .h { fill: #FFF; font: 700 13px Inter, sans-serif; }
+      .v1 { fill: #6B7280; font: 500 12px Inter, sans-serif; }
+      .v2 { fill: #F5A623; font: 600 12px Inter, sans-serif; }
+      .row { fill: #11151C; stroke: #1C2129; stroke-width: 1; }
+      .colH { fill: #151922; }
+      .dim { fill: #4B5563; font: 500 10px Inter, sans-serif; letter-spacing: 0.08em; }
+    </style>
+  </defs>
+  <rect width="960" height="520" class="bg" rx="10"/>
+  <text x="32" y="36" class="title">V1 BLUEPRINT → V2 BATTLE-TESTED</text>
+
+  <rect x="32" y="52" width="896" height="36" rx="6" class="colH"/>
+  <text x="200" y="75" class="dim">DIMENSION</text>
+  <text x="520" y="75" class="dim">V1.0</text>
+  <text x="760" y="75" class="dim">V2.0</text>
+
+  <g font-family="Inter, sans-serif">
+    <rect x="32" y="96" width="896" height="44" rx="4" class="row"/>
+    <text x="48" y="123" class="h">Chain</text>
+    <text x="520" y="123" class="v1">Ethereum Mainnet</text>
+    <text x="760" y="123" class="v2">Base L2 (OP Stack)</text>
+
+    <rect x="32" y="148" width="896" height="44" rx="4" class="row"/>
+    <text x="48" y="175" class="h">MEV</text>
+    <text x="520" y="175" class="v1">Flashbots Bundle</text>
+    <text x="760" y="175" class="v2">EIP-1559 Gas + 3% slippage cap</text>
+
+    <rect x="32" y="200" width="896" height="44" rx="4" class="row"/>
+    <text x="48" y="227" class="h">Honeypot</text>
+    <text x="520" y="227" class="v1">Concept only</text>
+    <text x="760" y="227" class="v2">Quoter V2 eth_call simulate</text>
+
+    <rect x="32" y="252" width="896" height="44" rx="4" class="row"/>
+    <text x="48" y="279" class="h">Stops</text>
+    <text x="520" y="279" class="v1">Concept only</text>
+    <text x="760" y="279" class="v2">slot0() every 2s · triple stop</text>
+
+    <rect x="32" y="304" width="896" height="44" rx="4" class="row"/>
+    <text x="48" y="331" class="h">ML</text>
+    <text x="520" y="331" class="v1">Synthetic XGBoost</text>
+    <text x="760" y="331" class="v2">v1 synth → v2 labeled auto-switch</text>
+
+    <rect x="32" y="356" width="896" height="44" rx="4" class="row"/>
+    <text x="48" y="383" class="h">Ingest</text>
+    <text x="520" y="383" class="v1">pendingTransactions</text>
+    <text x="760" y="383" class="v2">eth_subscribe logs · V3 Swap ABI</text>
+
+    <rect x="32" y="408" width="896" height="44" rx="4" class="row"/>
+    <text x="48" y="435" class="h">Features</text>
+    <text x="520" y="435" class="v1">ClickHouse / Redis ZSET</text>
+    <text x="760" y="435" class="v2">feat2:{symbol} Redis Hash buckets</text>
+
+    <rect x="32" y="460" width="896" height="44" rx="4" class="row"/>
+    <text x="48" y="487" class="h">Drawdown</text>
+    <text x="520" y="487" class="v1">Manual kill switch</text>
+    <text x="760" y="487" class="v2">Auto 10% daily halt (UTC reset)</text>
+  </g>
+</svg>

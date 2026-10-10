@@ -1,0 +1,49 @@
+input_executable_dataset: mvp/diagnostics/run004_h8_executable_dataset.csv
+active_model_path: models/signal_model_realtime_v2.json
+
+clickhouse:
+  url: http://clickhouse:8123
+  database: default
+  read_only: true
+  query_timeout_sec: 30
+  max_rows_per_query: 50000
+  docker_container: eatlq-clickhouse-1
+
+outputs:
+  patch_json: mvp/diagnostics/run004_patch_h106_clickhouse_backfill_source_recovery.json
+  backfilled_dataset_csv: mvp/diagnostics/run004_h106_backfilled_executable_dataset.csv
+  schema_report_json: mvp/diagnostics/run004_h106_clickhouse_schema_report.json
+  coverage_json: mvp/diagnostics/run004_h106_backfill_coverage.json
+  quality_json: mvp/diagnostics/run004_h106_backfill_quality_report.json
+  query_examples_json: mvp/diagnostics/run004_h106_query_examples.json
+  markdown: mvp/runs/run-004-patch-h106-clickhouse-backfill-source-recovery.md
+
+windows_sec:
+  - 60
+  - 180
+  - 300
+  - 900
+  - 1800
+
+backfill:
+  batch_size: 100
+  max_input_rows: 752
+  use_pool_address_timestamp_join: true
+  only_pre_entry_events: true
+  no_future_data: true
+  allow_partial_features: true
+  missing_source_behavior: mark_unavailable_not_zero
+
+feature_families:
+  buyer_concentration: true
+  flow_quality: true
+  temporal_regime: true
+  pool_quality_metadata: partial
+
+safety:
+  no_training: true
+  no_promote: true
+  no_production_model_write: true
+  no_redis_signals: true
+  no_live: true
+  sanity_only_not_deploy_evidence: true

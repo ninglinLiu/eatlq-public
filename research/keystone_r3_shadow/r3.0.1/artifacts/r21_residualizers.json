@@ -1,0 +1,48 @@
+{
+  "impact_residualizer": {
+    "xcols": [
+      "liq_log",
+      "pre_vol",
+      "ns_pre",
+      "active_pools_l1"
+    ],
+    "coef": [
+      0.31815777207916157,
+      -0.05941511935147782,
+      0.00033983096094033355,
+      -0.000793058646218407
+    ],
+    "intercept": -15.842841953840928,
+    "ycol": "early_ret"
+  },
+  "flow_residualizer": {
+    "xcols": [
+      "liq_log",
+      "pre_vol",
+      "active_pools_l1"
+    ],
+    "coef": [
+      28.385691276153427,
+      8.920047810078957,
+      0.18717841018166936
+    ],
+    "intercept": -1235.325778808942,
+    "ycol": "ns_pre"
+  },
+  "fitted_on_n": 1006,
+  "training_cutoff_utc": "2026-03-03 17:21:31+00:00",
+  "training_start_utc": "2025-10-01 00:54:35+00:00",
+  "n_rows": 1006,
+  "formula": {
+    "impact_residual": "early_ret - LinearRegression(liq_log,pre_vol,ns_pre,active_pools_l1)",
+    "flow_surprise": "ns_pre - LinearRegression(liq_log,pre_vol,active_pools_l1)",
+    "ineffective_buying": "flow_surprise - impact_residual",
+    "accel": "mom_h2 - mom_h1",
+    "part_exhaust_score": "seq_part_exhaust * max(early_ret,0)",
+    "liq_fragility_score": "liq_fragility_proxy * max(early_ret,0) [proxy uses early_ret>0 path]",
+    "sequence": "N=6 equal bars in [t0,t0+600]; seq_part_exhaust from preentry_bars constructor",
+    "market_controls": "active_pools_l1, chain_swaps_l1 = previous UTC day aggregates",
+    "day_boundary": "UTC floor('D')",
+    "missing_value_policy": "fillna(0.0) after residualization"
+  }
+}

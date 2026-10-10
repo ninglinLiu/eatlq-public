@@ -1,0 +1,9 @@
+{
+  "chains": [
+    {"id": "robinhood", "kind": "EVM", "status": "UNVERIFIED", "rpc": null},
+    {"id": "base", "kind": "EVM", "status": "KNOWN", "rpc": null},
+    {"id": "bnb", "kind": "EVM", "status": "KNOWN", "rpc": null},
+    {"id": "solana", "kind": "SOLANA", "status": "KNOWN", "rpc": null}
+  ]
+}
+

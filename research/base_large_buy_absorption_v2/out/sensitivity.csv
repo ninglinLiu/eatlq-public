@@ -1,0 +1,8 @@
+absorption_window_s,latency_s,lookahead,n_test,n_selected,n_fills,skip_rate,scheduled_trading_pnl_weth,cum_withdrawn_usd,unconstrained_diag_weth,method,sweep,is_primary_preregistered,subsample_frac_pools
+5,0,LOOKAHEAD_FREE_PASS,29814,11814,142,0.9879803622820382,-0.012010214369561928,52.84631003367968,3.2312103395868625,diagnostic_chrono_split_not_primary_wf,absorb_at_primary_latency,True,0.2
+30,0,LOOKAHEAD_FREE_PASS,29814,10579,141,0.9866717081009547,-0.010452252219085386,4.8743421526368795,2.5984857680077327,diagnostic_chrono_split_not_primary_wf,absorb_at_primary_latency,False,0.2
+60,0,LOOKAHEAD_FREE_PASS,29814,10143,140,0.9861973775017253,0.0031190913814863426,34.38177539766129,2.392853714044409,diagnostic_chrono_split_not_primary_wf,absorb_at_primary_latency,False,0.2
+300,0,LOOKAHEAD_FREE_PASS,29814,9337,139,0.9851129913248367,-0.0044814874468375515,41.71615165594428,2.345625908536794,diagnostic_chrono_split_not_primary_wf,absorb_at_primary_latency,False,0.2
+5,5,LOOKAHEAD_FREE_PASS,29814,11807,141,0.9880579317354112,-0.0009181989659998169,45.324639280194475,2.872204413206699,diagnostic_chrono_split_not_primary_wf,latency_at_primary_absorb,False,0.2
+5,15,LOOKAHEAD_FREE_PASS,29814,11802,141,0.9880528723945095,-0.010391602229692268,43.78332581458027,2.677323639956983,diagnostic_chrono_split_not_primary_wf,latency_at_primary_absorb,False,0.2
+5,30,LOOKAHEAD_FREE_PASS,29814,11795,141,0.988045782111064,-0.006315751904438339,12.632514602474554,2.537831618188544,diagnostic_chrono_split_not_primary_wf,latency_at_primary_absorb,False,0.2

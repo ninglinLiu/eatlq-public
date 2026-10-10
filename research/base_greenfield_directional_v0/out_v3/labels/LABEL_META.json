@@ -1,0 +1,17 @@
+{
+  "created_utc": "2026-07-20T11:05:59Z",
+  "n": 2601,
+  "right_tail_25_rate": 0.04421376393694733,
+  "future_unsellable_rate": 0.1518646674356017,
+  "buy_fail_rate": 0.13456362937331795,
+  "mean_wallet_pnl_weth": -0.0030298219539157847,
+  "pnl_bucket_counts": {
+    "PROXY_PATH": 1455,
+    "ROUNDTRIP": 467,
+    "BUY_FAIL": 350,
+    "INFRA_UNKNOWN": 164,
+    "FATAL_UNSELLABLE": 138,
+    "PROXY_FATAL": 27
+  },
+  "note": "Entry sample not filtered by future sellability"
+}

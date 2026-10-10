@@ -1,0 +1,23 @@
+{
+  "type": "USD_CAP_POINT_IN_TIME",
+  "usd_cap": 50.0,
+  "eth_cap": 0.02,
+  "amount_in_wei": "min(50_USD/ETHUSD_decision, 0.02 ETH, available_WETH) in wei",
+  "eth_usd_source": "executor env ETH price at decision_block (point-in-time); document exact feed in recorder",
+  "compounding": false,
+  "starting_weth_balance_for_counterfactual": 0.1,
+  "max_concurrent_positions": 3,
+  "same_block_signal_order": "ascending signal_id",
+  "f10_pass_priority_when_capital_short": "higher f10_score first, tie signal_id",
+  "allow_repeat_same_pool": false,
+  "buy_failure_frees_capital": true,
+  "unsellable_writeoff": "at first DETERMINISTIC_REVERT/ECONOMICALLY_UNSELLABLE after retry schedule",
+  "open_positions_at_eval_end": "mark with counterfactual atomic sell at hard_end or max_hold",
+  "gas_price_model": "actual block baseFee+priority if available else frozen research gas_weth debit table",
+  "research_size_grid_eth_comparison_only": [
+    0.005,
+    0.01,
+    0.0166666667,
+    0.0333333333
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "round": "base_dex_search_r0",
+  "date": "2026-08-20",
+  "sleeve_usd": 1000,
+  "sizes_usd": [25, 50],
+  "monthly_target_usd": 5000,
+  "n_recipes": 76500,
+  "n_families": 71,
+  "n_survive_t1": 0,
+  "n_lead": 0,
+  "verdict": "NO_LEAD",
+  "recipe_counts": {
+    "FAMILY_DEAD": 15980,
+    "KS_INAPPLICABLE": 32640,
+    "DATA_GAP": 27880,
+    "LEAD": 0
+  },
+  "best_cl_paper": {
+    "venue": "aero_cl",
+    "size_usd": 50,
+    "horizon": "4h",
+    "rule": "liq_only",
+    "mean": -0.0005,
+    "hi": -0.0004,
+    "need_ev_linear": 0.0274,
+    "need_ev_compound": 0.0099,
+    "mix_ev_after_35pct_unsellable": -0.351
+  },
+  "v2_note": "univ2 $25 random paper already +2.2% (1h) / +16.0% (4h); selection identical to random; mix after 35.1% unsellable is negative",
+  "live_trading": "FORBIDDEN"
+}

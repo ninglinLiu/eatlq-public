@@ -1,0 +1,23 @@
+{
+  "alpha_id": "B01",
+  "family": "block_time",
+  "hypothesis": "same-block swap crowding predicts continuation",
+  "mechanism": "a burst reveals urgent information diffusion",
+  "venue": "Base V3",
+  "universe": "active observed pools",
+  "horizon": "1h",
+  "data_source": "V3 event timestamps and ordering",
+  "experiment": "top-vs-bottom quintile",
+  "feature": "swaps_per_block",
+  "direction": 1,
+  "prediction_object": "next return",
+  "falsifier": "effect vanishes with block clustering",
+  "status": "NOT_YET_TESTED",
+  "sample_size": 0,
+  "gross_result": "pending",
+  "cost_adjusted_result": "pending",
+  "capacity": "pending",
+  "concentration": "pending",
+  "tail_risk": "pending",
+  "next_action": "run rapid screen"
+}

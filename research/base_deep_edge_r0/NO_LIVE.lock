@@ -1,0 +1,3 @@
+NO LIVE TRADING. Research only.
+No private keys, no signing, no broadcast, no approvals.
+All on-chain interaction is eth_call / eth_getLogs / state-override simulation.

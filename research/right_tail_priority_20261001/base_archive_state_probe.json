@@ -1,0 +1,33 @@
+{
+  "data": {
+    "error": {
+      "code": -32602,
+      "message": "Archive requests require a personal token. Get one at: https://www.allnodes.com/publicnode"
+    },
+    "id": 1,
+    "jsonrpc": "2.0"
+  },
+  "meta": {
+    "body_sha256": "9a9c4cad7278f824736e3f2579d619b818ecf0c17cab024fb739e1cb63fe82e8",
+    "bytes": 152,
+    "finished": "2026-10-01T07:38:37.424923+00:00",
+    "http_status": 403,
+    "key": "c79ebcadfd3d3f6afc428725e691f8819e34b1d6fb75e5a8ce7b9cd8a692a8b8",
+    "label": "base_archive_state_probe",
+    "payload": {
+      "id": 1,
+      "jsonrpc": "2.0",
+      "method": "eth_call",
+      "params": [
+        {
+          "data": "0xc815641c0281d408c8b18e7c43106f65224cbfa3c73c95dff416e13f1bd81bd69900c898",
+          "to": "0xa3c0c9b65bad0b08107aa264b0f3db444b867a71"
+        },
+        "0x310c23f"
+      ]
+    },
+    "retry_after": null,
+    "started": "2026-10-01T07:38:37.307526+00:00",
+    "url": "https://base-rpc.publicnode.com"
+  }
+}

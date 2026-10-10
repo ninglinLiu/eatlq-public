@@ -1,0 +1,197 @@
+{
+  "created_utc": "2026-07-20T08:53:27Z",
+  "role": "Base Greenfield V1.2 Canonical Metadata Repair Replay Agent",
+  "verdict": "SELL_TRUTH_INCOMPLETE",
+  "lineage_verdict": "EXECUTION_ONLY_CONTAMINATION",
+  "execution_truth_status": "EXECUTION_TRUTH_INCOMPLETE",
+  "result_label": "HOLDOUT_CANONICAL_REPAIR_DIAGNOSTIC",
+  "sealed_confirmation": false,
+  "kill_g2": true,
+  "start_prospective_shadow": false,
+  "rebuild_greenfield_v2": false,
+  "deploy_allowed": false,
+  "frozen": {
+    "policies": [
+      "P0_C3_MOMENTUM",
+      "P1_G2_COMPETING",
+      "P2_C3_G2_VETO"
+    ],
+    "scores_unchanged": true,
+    "selected_decisions_unchanged": true,
+    "H_seconds": 3600,
+    "TB_A": {
+      "tp": 0.5,
+      "sl": 0.35
+    },
+    "amountIn_wei": "16666666666666666",
+    "wallet_weth": 0.5,
+    "max_concurrent": 3,
+    "executor": "0x4b7cd953871663474a0a25b81bdddf5c1f1195a7",
+    "router": "0x2626664c2603336e57b271c5c0b26f421741e481",
+    "gas_policy_weth": {
+      "buy": 0.0001,
+      "sell": 0.0001
+    },
+    "retry_blocks_on_infrastructure_unknown": [
+      0,
+      5,
+      30,
+      150
+    ]
+  },
+  "canonical_metadata": {
+    "historical_panel_rows": 2399,
+    "holdout_rows_in_panel": 480,
+    "repair_class_counts_all": {
+      "METADATA_MATCH": 2007,
+      "REPAIRABLE_FEE_UNIT_MISMATCH": 392
+    },
+    "repair_class_counts_holdout": {
+      "REPAIRABLE_FEE_UNIT_MISMATCH": 380,
+      "METADATA_MATCH": 100
+    },
+    "factory_validated_all": 2399
+  },
+  "replay": {
+    "rows": 480,
+    "buy_status_counts": {
+      "BUY_SUCCESS": 477,
+      "ENTRY_TX_REVERT": 2,
+      "ENTRY_PREFLIGHT_REJECT": 1
+    },
+    "exit_status_counts": {
+      "EXIT_SUCCESS": 384,
+      "EXIT_INFRASTRUCTURE_UNKNOWN": 61,
+      "PERMANENT_UNSELLABLE": 32,
+      "nan": 3
+    },
+    "g2_filled_n": 90,
+    "g2_repaired_filled_n": 82,
+    "g2_filled_pnl_weth": -0.21555778205875875,
+    "g2_non_top5_dominated": false,
+    "g2_buy_filled_n": 120,
+    "pnl_scope_note": "Policy PnL/wallet curves include resolved sell truth only; unresolved filled exits remain explicit and make total_pnl_complete=false."
+  },
+  "double_execution": {
+    "selected_union_rows": 148,
+    "archive_rpc_a": "EXECUTED",
+    "archive_rpc_b": "UNAVAILABLE",
+    "debug_trace_rows": 148,
+    "local_fork_buy_rows": 146,
+    "local_fork_sell_rows": 106
+  },
+  "policies": [
+    {
+      "policy": "P0_C3_MOMENTUM",
+      "label": "HOLDOUT_CANONICAL_REPAIR_DIAGNOSTIC",
+      "model_selected": 131,
+      "repairable_selected": 122,
+      "true_invalid_selected": 0,
+      "buy_filled": 128,
+      "resolved_filled": 99,
+      "atomic_exit_success": 85,
+      "exit_success": 85,
+      "atomic_fatal_position": 14,
+      "fatal_position": 14,
+      "fill_rate": 0.9770992366412213,
+      "pnl_per_selected": -0.0021549888851623445,
+      "pnl_per_filled": -0.0028515509490532032,
+      "pnl_per_resolved_filled": -0.0028515509490532032,
+      "total_pnl_weth": -0.2823035439562671,
+      "known_sell_wallet_delta_weth": -0.2823035439562671,
+      "total_pnl_complete": false,
+      "pnl_scope": "RESOLVED_SELL_TRUTH_ONLY",
+      "wallet_return": -0.5646070879125342,
+      "max_drawdown": -0.29952448625408945,
+      "capital_hours": 102.04222222222222,
+      "top1_share": -0.03788151371848368,
+      "top5_share": -0.1804931618847022,
+      "pnl_ex_top5": -0.3332574032161908,
+      "repaired_atomic_filled": 119,
+      "unknown_selected": 29,
+      "fatal_overlap_between_policies": "{\"P1_G2_COMPETING\": 11, \"P2_C3_G2_VETO\": 5}"
+    },
+    {
+      "policy": "P1_G2_COMPETING",
+      "label": "HOLDOUT_CANONICAL_REPAIR_DIAGNOSTIC",
+      "model_selected": 122,
+      "repairable_selected": 114,
+      "true_invalid_selected": 0,
+      "buy_filled": 120,
+      "resolved_filled": 90,
+      "atomic_exit_success": 79,
+      "exit_success": 79,
+      "atomic_fatal_position": 11,
+      "fatal_position": 11,
+      "fill_rate": 0.9836065573770492,
+      "pnl_per_selected": -0.0017685064103176822,
+      "pnl_per_filled": -0.002397308689541747,
+      "pnl_per_resolved_filled": -0.002397308689541747,
+      "total_pnl_weth": -0.21575778205875723,
+      "known_sell_wallet_delta_weth": -0.21575778205875723,
+      "total_pnl_complete": false,
+      "pnl_scope": "RESOLVED_SELL_TRUTH_ONLY",
+      "wallet_return": -0.43151556411751446,
+      "max_drawdown": -0.23494673926640464,
+      "capital_hours": 95.76722222222222,
+      "top1_share": -0.04956523686475224,
+      "top5_share": -0.2361623241290431,
+      "pnl_ex_top5": -0.2667116413186809,
+      "repaired_atomic_filled": 112,
+      "unknown_selected": 30,
+      "fatal_overlap_between_policies": "{\"P0_C3_MOMENTUM\": 11, \"P2_C3_G2_VETO\": 5}"
+    },
+    {
+      "policy": "P2_C3_G2_VETO",
+      "label": "HOLDOUT_CANONICAL_REPAIR_DIAGNOSTIC",
+      "model_selected": 41,
+      "repairable_selected": 34,
+      "true_invalid_selected": 0,
+      "buy_filled": 41,
+      "resolved_filled": 33,
+      "atomic_exit_success": 28,
+      "exit_success": 28,
+      "atomic_fatal_position": 5,
+      "fatal_position": 5,
+      "fill_rate": 1.0,
+      "pnl_per_selected": -0.0005981282019932649,
+      "pnl_per_filled": -0.0007431289782340564,
+      "pnl_per_resolved_filled": -0.0007431289782340564,
+      "total_pnl_weth": -0.02452325628172386,
+      "known_sell_wallet_delta_weth": -0.02452325628172386,
+      "total_pnl_complete": false,
+      "pnl_scope": "RESOLVED_SELL_TRUTH_ONLY",
+      "wallet_return": -0.04904651256344772,
+      "max_drawdown": -0.054404567043498886,
+      "capital_hours": 27.04333333333333,
+      "top1_share": -0.43607934649061025,
+      "top5_share": -2.0777770567890452,
+      "pnl_ex_top5": -0.07547711554164752,
+      "repaired_atomic_filled": 34,
+      "unknown_selected": 8,
+      "fatal_overlap_between_policies": "{\"P0_C3_MOMENTUM\": 5, \"P1_G2_COMPETING\": 5}"
+    }
+  ],
+  "input_sha256": {
+    "panel": "32fc2d81d7d9b5d114b94d88d5a797c1b3e7c93ce6f6c24466e8dedeb4b89f44",
+    "holdout_scores": "184e0cbe893ea28f752c314a2c7659dd9b531295a33d143878b5f16720db51e2",
+    "v11_pool_audit": "fb4d4a6cf8e16510741d29fa0f1fcb5b3c5052ae308e1a0fd6291a4066de8a1b",
+    "v11_final": "086cbe8237f1252027bbd17e9f59588132224ef9c4fde5bf443b1c4078e050eb"
+  },
+  "rpc": {
+    "A_url_sha256": "0b98445d8abca769ef04d3df92f47c07b9b84b6bbffcd882f32696f3349644d2",
+    "B_url_sha256": null,
+    "A_calls": 148,
+    "B_calls": 0
+  },
+  "outputs": [
+    "CANONICAL_METADATA_ALL.parquet",
+    "FIELD_LINEAGE_IMPACT.csv",
+    "REPAIRED_HOLDOUT_OUTCOMES.parquet",
+    "RPC_FORK_CROSSCHECK.csv",
+    "REPAIRED_POLICY_COMPARISON.csv",
+    "WALLET_EQUITY_CURVES.parquet",
+    "FINAL_CANONICAL_REPLAY.json",
+    "REPRODUCE.md"
+  ]
+}

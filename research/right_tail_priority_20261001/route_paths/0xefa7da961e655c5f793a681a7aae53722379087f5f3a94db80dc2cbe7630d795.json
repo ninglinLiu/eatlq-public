@@ -1,0 +1,210 @@
+{
+  "block_time_evidence": [
+    {
+      "http_status": 200,
+      "key": "bb5f2ebb3b926c05776be715fc5f579d32a0f676c1b42d5cbf12ba0681b09c4c",
+      "rpc_error": null
+    },
+    {
+      "http_status": 200,
+      "key": "890569a0971f47c27c47d2e9651001bcb433c911f700b66e6d9dafad68f792e1",
+      "rpc_error": null
+    }
+  ],
+  "index_complete": true,
+  "price_kind": "MULTIHOP_HISTORICAL_POOL_MID_NOT_OWN_FILL",
+  "quote": "ETH",
+  "route": [
+    {
+      "fee": 8388608,
+      "from_token": "0x9e00fc92493451eba1c63dd3880d68b622037ba3",
+      "hooks": "0xbdf938149ac6a781f94faa0ed45e6a0e984c6544",
+      "id": "0x24ecedb296899f0110dce5cfdd9c9dd74b2b11a21dee752e085f93c700c7fccb",
+      "kind": "V4",
+      "to_token": "0x4200000000000000000000000000000000000006",
+      "token0": "0x4200000000000000000000000000000000000006",
+      "token0_is_from": false,
+      "token1": "0x9e00fc92493451eba1c63dd3880d68b622037ba3"
+    }
+  ],
+  "source_block": 51592959,
+  "source_sell_observed": true,
+  "source_ts": 1789975265.0,
+  "source_tx": "0xefa7da961e655c5f793a681a7aae53722379087f5f3a94db80dc2cbe7630d795",
+  "states": [
+    {
+      "block": 51592960,
+      "legs": [
+        {
+          "edge": "0x24ecedb296899f0110dce5cfdd9c9dd74b2b11a21dee752e085f93c700c7fccb",
+          "evidence": {
+            "http_status": 200,
+            "key": "78d5fecaf94ecfd419a360f94978010f8a239e9caf3a0e16c467d70bd7b3419a",
+            "rpc_error": null
+          },
+          "price": 6.119346422633634e-09
+        }
+      ],
+      "name": "entry_1s",
+      "price_raw_quote_per_target": 6.119346422633634e-09,
+      "prior_legs": [
+        {
+          "edge": "0x24ecedb296899f0110dce5cfdd9c9dd74b2b11a21dee752e085f93c700c7fccb",
+          "evidence": {
+            "http_status": 429,
+            "key": "78d5fecaf94ecfd419a360f94978010f8a239e9caf3a0e16c467d70bd7b3419a",
+            "rpc_error": {
+              "code": -32016,
+              "message": "over rate limit"
+            }
+          },
+          "price": null
+        }
+      ]
+    },
+    {
+      "block": 51592964,
+      "legs": [
+        {
+          "edge": "0x24ecedb296899f0110dce5cfdd9c9dd74b2b11a21dee752e085f93c700c7fccb",
+          "evidence": {
+            "http_status": 200,
+            "key": "86569e828b482ce729249c5991020a8fdf52d7b892b2ebe7d2e10765f6437d87",
+            "rpc_error": null
+          },
+          "price": 6.361955289837813e-09
+        }
+      ],
+      "name": "entry_10s",
+      "price_raw_quote_per_target": 6.361955289837813e-09
+    },
+    {
+      "block": 51592974,
+      "legs": [
+        {
+          "edge": "0x24ecedb296899f0110dce5cfdd9c9dd74b2b11a21dee752e085f93c700c7fccb",
+          "evidence": {
+            "http_status": 200,
+            "key": "cab857e6197942dde8015b96911da4d9a311e36325e34408851f85feb7182e0e",
+            "rpc_error": null
+          },
+          "price": 6.357543640966468e-09
+        }
+      ],
+      "name": "entry_30s",
+      "price_raw_quote_per_target": 6.357543640966468e-09
+    },
+    {
+      "block": 51592989,
+      "legs": [
+        {
+          "edge": "0x24ecedb296899f0110dce5cfdd9c9dd74b2b11a21dee752e085f93c700c7fccb",
+          "evidence": {
+            "http_status": 200,
+            "key": "1348f0012ec483ba3ef05642ed029bb3b35d5aff5baa863ac507487acb8844bb",
+            "rpc_error": null
+          },
+          "price": 6.544857437755921e-09
+        }
+      ],
+      "name": "entry_60s",
+      "price_raw_quote_per_target": 6.544857437755921e-09
+    },
+    {
+      "block": 51593864,
+      "legs": [
+        {
+          "edge": "0x24ecedb296899f0110dce5cfdd9c9dd74b2b11a21dee752e085f93c700c7fccb",
+          "evidence": {
+            "http_status": 200,
+            "key": "5d900743c3d320572eaf39784277a493cf0e73dd9342cfcd9729a3f654a98418",
+            "rpc_error": null
+          },
+          "price": 6.9440837318100736e-09
+        }
+      ],
+      "name": "exit_30m",
+      "price_raw_quote_per_target": 6.9440837318100736e-09
+    },
+    {
+      "block": 51596564,
+      "legs": [
+        {
+          "edge": "0x24ecedb296899f0110dce5cfdd9c9dd74b2b11a21dee752e085f93c700c7fccb",
+          "evidence": {
+            "http_status": 200,
+            "key": "8d7f28b7088dbe5fd1878bda9eff04ce5d7cc0760ded00ab11f9b03ee02a1876",
+            "rpc_error": null
+          },
+          "price": 6.9633711510994555e-09
+        }
+      ],
+      "name": "exit_2h",
+      "price_raw_quote_per_target": 6.9633711510994555e-09
+    },
+    {
+      "block": 51636164,
+      "legs": [
+        {
+          "edge": "0x24ecedb296899f0110dce5cfdd9c9dd74b2b11a21dee752e085f93c700c7fccb",
+          "evidence": {
+            "http_status": 200,
+            "key": "2beedeeddc7a7ac18dab21176b92459cc09e834be999a76627fc07184c70d68b",
+            "rpc_error": null
+          },
+          "price": 4.640992209560188e-09
+        }
+      ],
+      "name": "exit_24h",
+      "price_raw_quote_per_target": 4.640992209560188e-09,
+      "prior_legs": [
+        {
+          "edge": "0x24ecedb296899f0110dce5cfdd9c9dd74b2b11a21dee752e085f93c700c7fccb",
+          "evidence": {
+            "http_status": 429,
+            "key": "2beedeeddc7a7ac18dab21176b92459cc09e834be999a76627fc07184c70d68b",
+            "rpc_error": {
+              "code": -32016,
+              "message": "over rate limit"
+            }
+          },
+          "price": null
+        }
+      ]
+    },
+    {
+      "block": 51679640,
+      "legs": [
+        {
+          "edge": "0x24ecedb296899f0110dce5cfdd9c9dd74b2b11a21dee752e085f93c700c7fccb",
+          "evidence": {
+            "http_status": 200,
+            "key": "092b1fd801dd65d9d47a9e6e52ad35fc38e9d951ffb933689b06e07f43624e15",
+            "rpc_error": null
+          },
+          "price": 5.71672970523694e-09
+        }
+      ],
+      "name": "exit_source_first_sell",
+      "price_raw_quote_per_target": 5.71672970523694e-09,
+      "prior_legs": [
+        {
+          "edge": "0x24ecedb296899f0110dce5cfdd9c9dd74b2b11a21dee752e085f93c700c7fccb",
+          "evidence": {
+            "http_status": 429,
+            "key": "092b1fd801dd65d9d47a9e6e52ad35fc38e9d951ffb933689b06e07f43624e15",
+            "rpc_error": {
+              "code": -32016,
+              "message": "over rate limit"
+            }
+          },
+          "price": null
+        }
+      ]
+    }
+  ],
+  "status": "PRICE_PROXY_PATH",
+  "threshold_half_exit": "UNRESOLVED_NO_COMPLETE_THRESHOLD_PATH",
+  "token": "0x9e00fc92493451eba1c63dd3880d68b622037ba3",
+  "wallet": "0x9631335762e3603d2a7507d84838aa3236d52745"
+}

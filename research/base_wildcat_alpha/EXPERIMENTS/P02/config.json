@@ -1,0 +1,23 @@
+{
+  "alpha_id": "P02",
+  "family": "participation",
+  "hypothesis": "sender repetition predicts reversal",
+  "mechanism": "repeated flow may be one actor slicing",
+  "venue": "Base V3",
+  "universe": "active observed pools",
+  "horizon": "4h",
+  "data_source": "swap sender/recipient facts",
+  "experiment": "signed quintile spread",
+  "feature": "repeat_sender_share",
+  "direction": -1,
+  "prediction_object": "next return",
+  "falsifier": "unique transaction clustering erases effect",
+  "status": "NOT_YET_TESTED",
+  "sample_size": 0,
+  "gross_result": "pending",
+  "cost_adjusted_result": "pending",
+  "capacity": "pending",
+  "concentration": "pending",
+  "tail_risk": "pending",
+  "next_action": "run rapid screen"
+}

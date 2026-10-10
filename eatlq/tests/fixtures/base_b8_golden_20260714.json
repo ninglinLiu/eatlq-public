@@ -1,0 +1,21 @@
+{
+  "preregistration_sha256": "27b08babc8ba5ad15c104fec6830d469f91ad166592fbe1d82b7a37203e6ec05",
+  "primary_30m": {
+    "n": 116,
+    "mean": 0.20677955625329383,
+    "top1_removed_mean": 0.12094590853189056,
+    "fatal_rate": 0.31896551724137934
+  },
+  "evidence_counts": {
+    "0": {"atomic_haircut": 27, "no_entry_flat": 3, "real_trade": 84, "true_rug": 2},
+    "30": {"atomic_haircut": 31, "no_entry_flat": 3, "real_trade": 45, "true_rug": 37},
+    "60": {"atomic_haircut": 27, "no_entry_flat": 3, "real_trade": 33, "true_rug": 53}
+  },
+  "chain_integer_golden": [
+    {"pool":"0x0aa7f29f410b7bba7869bb08223cd855fd18c5bf","entry_block":42733636,"entry_tx":"0xca2683608e96c6bcb5c10a8ad51f5596ce9afd46d7440cde7869f2362e122698","entry_weth_raw":"173202983941514295","entry_token_raw":"41548110459768681784622","position_qty":"239881031575058158538","scheduled_block":42734606,"scheduled_block_hash":"0x60676014ca4de64ce2ff6d143a7c72977fbbffe154fc032e37db9bb6b4b48f0f","exit_evidence":"true_rug","exit_block":null,"atomic_received_target":"0","atomic_recovered_weth":"0"},
+    {"pool":"0xccef393341b820bc9b3d3a11598ecb3619b90629","entry_block":44144531,"entry_tx":"0xe2410c9eafda9e921eac567d5ec0ec7270efa3b09bf0e85f0d08c59806019c1b","entry_weth_raw":"46000000000000000","entry_token_raw":"1859929735433807673715608","position_qty":"40433255118126253776426","scheduled_block":44147395,"scheduled_block_hash":"0xf2b5202ab6748b93f201fd5ed6c901a537d3716ef7237c86db12d688535dd1ab","exit_evidence":"atomic_haircut","exit_block":null,"atomic_received_target":"25370798163477428393843","atomic_recovered_weth":"980100587074591"},
+    {"pool":"0x87d670c3a284c18f18ef9e661520f042dd733ece","entry_block":45214068,"entry_tx":"0xedd24aa1c71ad2a7445dc9bca94944e9b0d4285a2ff30fb8dff15cd3e8858634","entry_weth_raw":"64800000000000000","entry_token_raw":"2727892490841705078191208","position_qty":"42097106340149769725172","scheduled_block":45222149,"scheduled_block_hash":"0x09943635ca2b0d8a9d913ad8cd01067edf87962e590e9e0e96aa7858f4182734","exit_evidence":"real_trade","exit_block":45222180,"atomic_received_target":"45781559882598419187884","atomic_recovered_weth":"999800022349496"},
+    {"pool":"0xc3014bf99cdbd5ec85bcbe5188017d7ef1f51b67","entry_block":44200019,"entry_tx":"0x2a9ee460f789a7cb2be38d3475306edc86c2722dd251951c77f6f387af890fa9","entry_weth_raw":"200000000000000000","entry_token_raw":"9972460161763397569944975","position_qty":"49862300808816987849724","scheduled_block":44202897,"scheduled_block_hash":"0x68b118c0c6929931a6c02e2d6d0749791c07199df6e0c757775a3ebab1ed0a92","exit_evidence":"atomic_haircut","exit_block":null,"atomic_received_target":"25944474870407993195359","atomic_recovered_weth":"980100593674668"},
+    {"pool":"0x3c38289bfe2b9718daed9f6d16b1a633160b418d","entry_block":42749935,"entry_tx":"0x4ab8c9beb41d5f65f9da42d689107d3b005b1a743e593346756ccce4d9347c4f","entry_weth_raw":"259500000000000000","entry_token_raw":"461269639225624246231947186","position_qty":"1777532328422444108793630","scheduled_block":42755329,"scheduled_block_hash":"0xb043ec61f3b53a25c5f826c412047d5c4ec106c471e8382ff26b775b7578e686","exit_evidence":"atomic_haircut","exit_block":null,"atomic_received_target":"367556423545029869035604","atomic_recovered_weth":"994009057112830"}
+  ]
+}

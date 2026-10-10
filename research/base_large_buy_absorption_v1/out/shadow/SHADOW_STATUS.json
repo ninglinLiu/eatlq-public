@@ -1,0 +1,12 @@
+{
+  "mode": "observer_only",
+  "live_trading": false,
+  "prospective_t0": "2026-07-21T06:24:51Z",
+  "arm": "LARGE_BUY_ABSORPTION",
+  "code_hash": "0822f5e82542cf1b8cdc079735458be528968241439ede0e7c8f36a5242c971f",
+  "config_hash": "25cde3abc215cdb12645e9d8db80fd7689f287b529080e2059e180bb734c47b0",
+  "status": "ARMED_WAITING_FOR_LIVE_INGESTION",
+  "note": "Historical resolved_swaps ends ~2026-07-02. Shadow accumulation starts when a live ingestion feeder appends new Base V3 WETH-pool swaps. This process does not place orders.",
+  "armed_at": "2026-07-21T06:37:24Z",
+  "freeze_status": "FROZEN_FOR_PROSPECTIVE_SHADOW"
+}

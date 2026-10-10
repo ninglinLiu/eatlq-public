@@ -1,0 +1,2678 @@
+{
+  "effective_gas_price_wei": {
+    "max": 85006394618,
+    "min": 6000000,
+    "p25": 15000000,
+    "p50": 15000000,
+    "p90": 20000000000,
+    "p99": 50000000000
+  },
+  "gas_used": {
+    "max": 8110806,
+    "min": 153448,
+    "p25": 272094,
+    "p50": 456175,
+    "p90": 886092,
+    "p99": 2225278
+  },
+  "generated_at": "2026-10-01T12:34:14.135841+00:00",
+  "n": 441,
+  "qualification": "source transactions only; not the copier cost or evidence of 10-second inclusion",
+  "rows": [
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 842424,
+      "source_fee_raw": "12642892814458",
+      "source_tx": "0xc1272de959e567564ef4901708bdb2c13b24c3d7fa75a6b3ae586af42fa6f67e"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 825772,
+      "source_fee_raw": "12392901270691",
+      "source_tx": "0x9790184161c0e50b16518470e5295fb5afab232488b0b24eb050cd5ae83129e5"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 272130,
+      "source_fee_raw": "4090862383411",
+      "source_tx": "0x497107c1d2f5da1167cc6fa49dbfa31259791f5e4fcb0bcda78f92e6f4e5a89d"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 554224,
+      "source_fee_raw": "8324040768189",
+      "source_tx": "0xd0b744f64a7d90eb83591cddb77281051efe5a821e881ca144b9dc8d17eb8165"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 555641,
+      "source_fee_raw": "8345748308681",
+      "source_tx": "0x000350adedd0ac091746729069a119b2cb95084d573cdd289a3c394546967927"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 520626,
+      "source_fee_raw": "7819229379720",
+      "source_tx": "0x069e659c69b08ab8e41eac32a65842efa31d1b34679b5ffd133695c9f67a6910"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 526767,
+      "source_fee_raw": "7911440427861",
+      "source_tx": "0xf1797a407a5a4f6645e415ccc8f11bc752b1d990cd68907400ad59fc66c5f522"
+    },
+    {
+      "effective_gas_price_wei": 6010000,
+      "gas_used": 1404018,
+      "source_fee_raw": "8454327202239",
+      "source_tx": "0x7307c9ffe192707903ed977f5dccb9516c864d6130d75793eff8f63d6477ee73"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 840696,
+      "source_fee_raw": "12615026059592",
+      "source_tx": "0xd166e542e26efeb52ad79b60445a57e18561f131ed4bb8009217eebfb7095f3b"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 808093,
+      "source_fee_raw": "12125688112694",
+      "source_tx": "0x0d222c356ff66ce02757ea0cbd36a5330557c167e11d138c37988ffb7b0108d4"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 825220,
+      "source_fee_raw": "12382615761130",
+      "source_tx": "0x535a33f3915d1df2e279768b356bbeebe2b5786dadd0295406cdf1756dd66c10"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 825304,
+      "source_fee_raw": "12383875761130",
+      "source_tx": "0xaba3e1e3b5bdda13a610857993b41ef635356c02aebee503a31df7327e6ffffd"
+    },
+    {
+      "effective_gas_price_wei": 105000000,
+      "gas_used": 271243,
+      "source_fee_raw": "28483760386326",
+      "source_tx": "0x7ebfb3e2daed61b747b7bc81529d370080effd92ba13247234d1211a88b0d660"
+    },
+    {
+      "effective_gas_price_wei": 6000000,
+      "gas_used": 1404098,
+      "source_fee_raw": "8428622753510",
+      "source_tx": "0xea0948ac88aa17b2cd63fef5be5d4736a6e07b01f74de44741182b3dffaf53dc"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 254101,
+      "source_fee_raw": "3813974643201",
+      "source_tx": "0x3fffd3a4170fcb63eb19a86f9854120527f998fb9d1a26b7e0563222757d7737"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 254950,
+      "source_fee_raw": "3826709643201",
+      "source_tx": "0x15500c187440b47ceca16c3835a1b8e6d90c87ba0551320f0c672bbedaccd3e8"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 254950,
+      "source_fee_raw": "3826698467614",
+      "source_tx": "0x509a1acbf6d567d9a84798f3623916918233d3bb36430bac88f87572aaa9f353"
+    },
+    {
+      "effective_gas_price_wei": 26315708708,
+      "gas_used": 844768,
+      "source_fee_raw": "22230669674128935",
+      "source_tx": "0xfc443a645511d2f0a40322f6d4b701cad9d225ea6663359a4a914db0fd70e757"
+    },
+    {
+      "effective_gas_price_wei": 4390920439,
+      "gas_used": 843016,
+      "source_fee_raw": "3701617276972302",
+      "source_tx": "0x4b59a1bab1f277d95c1ac0fd773e8797becad855cdabedfb2106278d2caf581a"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 272094,
+      "source_fee_raw": "4082285906621",
+      "source_tx": "0xce82dcba4207c7a7bc2c54ec0c98afab4d5ddc6d4ddd4a584c06123a397c9670"
+    },
+    {
+      "effective_gas_price_wei": 105000000,
+      "gas_used": 271147,
+      "source_fee_raw": "28488074062897",
+      "source_tx": "0x2c3fc97bc08f2ac9fc1733b04699c779229db69941502abf2c352bfc1160a0c0"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 473474,
+      "source_fee_raw": "7126378180674",
+      "source_tx": "0x014d621353ab71bd2517026e6dff601de49bf2652f2697651db5691a29f3e3b9"
+    },
+    {
+      "effective_gas_price_wei": 3238598684,
+      "gas_used": 1351315,
+      "source_fee_raw": "4376386980144218",
+      "source_tx": "0xf1e047b9a9feefaa6463ea636379fc45d75385dff84f6eb9a9fd1bdfd695c803"
+    },
+    {
+      "effective_gas_price_wei": 6030000,
+      "gas_used": 1386410,
+      "source_fee_raw": "8386915360965",
+      "source_tx": "0xabd96302ffa04429abe227c4b058fffefe0d87ffc9e28075a7368a6bc36cc906"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 271998,
+      "source_fee_raw": "4093202520808",
+      "source_tx": "0x7dee4a005248c007409784733419f0498f38d285657cfe2082047630e638629e"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 255058,
+      "source_fee_raw": "3839102520808",
+      "source_tx": "0x314964bf1bf352bbd80e21bea34af62bc1b55d82cabcb3d878e70a148ef34ffa"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 254954,
+      "source_fee_raw": "3837562867609",
+      "source_tx": "0x570bab639fb430d4ffb451a40970679bbd25934a0ea85208022b37015bd29a08"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 255014,
+      "source_fee_raw": "3838462867609",
+      "source_tx": "0xeb5cf60a3972ec4a3f8318516a57684cf09e4d530ef27101bdc3340dc98423f3"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 932150,
+      "source_fee_raw": "13993349077210",
+      "source_tx": "0x3d2f656f24bd177948a15658482aa41f741bada16411179e0e458220a60208fd"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 919627,
+      "source_fee_raw": "13805236312455",
+      "source_tx": "0x4e1a898ac1c216aeb8362f99e1a643ded7579a1ecbc2b455ffced2409d066576"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 919219,
+      "source_fee_raw": "13799116312455",
+      "source_tx": "0xe677f538655563454fcd7b7f16a3d8513962f6bdc51731aa5535ba3078abe2ec"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 919575,
+      "source_fee_raw": "13803926367949",
+      "source_tx": "0x91c0ba51839ac68099136769c9b7a12d19eae69168b11bf46d88625261f660b6"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 246407,
+      "source_fee_raw": "3702379043778",
+      "source_tx": "0xf83530f76fd8e99631736e1eb6ada1da5f046ed798d5e700e3f38f58b51673d9"
+    },
+    {
+      "effective_gas_price_wei": 45000000000,
+      "gas_used": 271998,
+      "source_fee_raw": "12239911976077147",
+      "source_tx": "0x3e43a15bada54a0b8f9d0e438890a38999e0cc42ed7c080fe551a461faea18ef"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 823044,
+      "source_fee_raw": "12362857943938",
+      "source_tx": "0x975c78ad8f9213f304eb088e1603ce7c22bd29cd0ee380d13080bd540dbe662c"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 822126,
+      "source_fee_raw": "12334395157923",
+      "source_tx": "0xcd90ceaf5e30330865b900df12e6cbbb45e2c9789b4775ca32714d690d1246cd"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 823292,
+      "source_fee_raw": "12351731860419",
+      "source_tx": "0xc0a1a2c9b987d070c1d2d980d788ac1adcb4a737dc25e0ea60698b982fd133ed"
+    },
+    {
+      "effective_gas_price_wei": 35000000,
+      "gas_used": 729256,
+      "source_fee_raw": "25528008868470",
+      "source_tx": "0xe0d8089ef9f0e5e276833f338e5c9cd8639cc8de675e2deeaa758adbb6c1b8fb"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 288486,
+      "source_fee_raw": "4328658693276",
+      "source_tx": "0xbd21bbf6d51300a162d27b5fe52fff3e0000d18ffa1ca4aa1fbe6c5e277381d6"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 271493,
+      "source_fee_raw": "4073738005606",
+      "source_tx": "0x836076854c7a81bb9e47eed324de18b6f4cc8ab43af333f371e99925b6f4eea9"
+    },
+    {
+      "effective_gas_price_wei": 20000000000,
+      "gas_used": 298327,
+      "source_fee_raw": "5966541514267869",
+      "source_tx": "0x3c5b3a87c407ba1fb3cf857c0b2164a5b92c0b2d953bbf3b7a396aee01c04ecb"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 815571,
+      "source_fee_raw": "12237863588215",
+      "source_tx": "0xb6500490d7c0aa81f6151cca66c2890f789b23eb21000465d2ea00ad1202b2cf"
+    },
+    {
+      "effective_gas_price_wei": 15000000000,
+      "gas_used": 315391,
+      "source_fee_raw": "4730868392393801",
+      "source_tx": "0x9fe9aacef500c34dc188449e76fd725783fbef317ba438d20104b486ef63953f"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 275724,
+      "source_fee_raw": "4137558864526",
+      "source_tx": "0x376aabba7f55aee93b84277664d2d806b90f1a785c037bf5d7c99516752caa84"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 276665,
+      "source_fee_raw": "4151657213929",
+      "source_tx": "0x13835d235a21273fdfcdda2f36c4d2f51c2be0809361bd8f0085a5666eca4bab"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 811104,
+      "source_fee_raw": "12168016898531",
+      "source_tx": "0xc704147d839c37ffd2ac97fc6afebee7f1442ac8e2436242b94a0eed495440a5"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 247344,
+      "source_fee_raw": "3711155784397",
+      "source_tx": "0x3edbb232f9646ff2b0319a2352b180417dbcc516f3f5b45211d7af63dc75f112"
+    },
+    {
+      "effective_gas_price_wei": 15000000000,
+      "gas_used": 272086,
+      "source_fee_raw": "4081291132332909",
+      "source_tx": "0x553794de99a2b6549c52f2bc1920b79e1970adfa83691e6e7371206b201852ae"
+    },
+    {
+      "effective_gas_price_wei": 15000000000,
+      "gas_used": 255046,
+      "source_fee_raw": "3825691132332909",
+      "source_tx": "0x6de85c892b419294d8c107597220f7a96c36cda0b3a3ba6ef3c81ba558ca1277"
+    },
+    {
+      "effective_gas_price_wei": 105000000,
+      "gas_used": 271247,
+      "source_fee_raw": "28481992885384",
+      "source_tx": "0x328bc989a438d421ae68f2fc2cec0ea19429cfc5a9d7076bb55d627ac2f01958"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 255050,
+      "source_fee_raw": "3826791754045",
+      "source_tx": "0x0b92839ac6eb722a8955490896ea3ecffa6ffe86456f61879ff4c4b866691c4a"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 255050,
+      "source_fee_raw": "3826734204121",
+      "source_tx": "0x6c26a80c33991355cd3efbf42ba13479501d416d42aac6d442eb63de7d6abc9c"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 254986,
+      "source_fee_raw": "3825774204121",
+      "source_tx": "0x03a589db07bba238b39269486c5456871e06c0564beeedd364f0d7b62cd4498b"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 290067,
+      "source_fee_raw": "4352288119590",
+      "source_tx": "0xb4c6a60675c208472db22dd0b2eebf27e0191daec2967ee4d9e1facfb3211f8b"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 294828,
+      "source_fee_raw": "4423707683214",
+      "source_tx": "0xc0d6a12106a181e404a5eedd287839e704856f027357b306c133e370410a0265"
+    },
+    {
+      "effective_gas_price_wei": 1815496212,
+      "gas_used": 1443786,
+      "source_fee_raw": "2621189234506929",
+      "source_tx": "0xf2202819e8e11dbb608e190df5eb2561e110469f701773da15b35c47a942508b"
+    },
+    {
+      "effective_gas_price_wei": 35000000,
+      "gas_used": 715985,
+      "source_fee_raw": "25061707459114",
+      "source_tx": "0x157fad8d7cd5208004ebbebd0cb98114d34313e81a28c583282ce625243d2201"
+    },
+    {
+      "effective_gas_price_wei": 35000000,
+      "gas_used": 697172,
+      "source_fee_raw": "24403070441215",
+      "source_tx": "0xdd2e304f557d9a4acaeea0328e303736c1da15a079bfda2695c2a8a04e543369"
+    },
+    {
+      "effective_gas_price_wei": 35000000,
+      "gas_used": 518018,
+      "source_fee_raw": "18132682645940",
+      "source_tx": "0x5d7e39b79f8e7bd0f3e54f800bfc8cd4ee416f8ac0c69fc3008716e0403323ee"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 831017,
+      "source_fee_raw": "12466470675204",
+      "source_tx": "0xefa7da961e655c5f793a681a7aae53722379087f5f3a94db80dc2cbe7630d795"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 812245,
+      "source_fee_raw": "12184890675204",
+      "source_tx": "0x726e500609fa848335ab747bd6878145d5d25d14ce339c43e3258c8f01cc584c"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 812113,
+      "source_fee_raw": "12182910675204",
+      "source_tx": "0x6e7b9f90aa4ed0ae58d37aa08346b4893c4abaa603301ec3159d8c33389a02a5"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 795831,
+      "source_fee_raw": "11938595919725",
+      "source_tx": "0xf974e004badf7f0858922ceac3661fd7be58b1504324ed6d28f6dade7fabcc9a"
+    },
+    {
+      "effective_gas_price_wei": 15000000000,
+      "gas_used": 272070,
+      "source_fee_raw": "4081067500903544",
+      "source_tx": "0xdf392b168557dce868ec1dcd6fdbe3f4a8ff41858c2dd863c1bf680642bae712"
+    },
+    {
+      "effective_gas_price_wei": 15000000000,
+      "gas_used": 254117,
+      "source_fee_raw": "3811772500903544",
+      "source_tx": "0x0c2683d520e9a220dffe55ca24824fdb8f18b5c930e290c46a65dbe9b5df28a8"
+    },
+    {
+      "effective_gas_price_wei": 3000000000,
+      "gas_used": 490350,
+      "source_fee_raw": "1471087813391225",
+      "source_tx": "0x504ebd0ccecf169a91c50d90eff297ed583b4b281a5a6851bbf0e7305e7f375e"
+    },
+    {
+      "effective_gas_price_wei": 2005000000,
+      "gas_used": 3924110,
+      "source_fee_raw": "7867906671098915",
+      "source_tx": "0xa553df5c08bff8c79d0d1964b7ec021403e0824b44197333eea7dd3e5d3fc802"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 597307,
+      "source_fee_raw": "9018867324338",
+      "source_tx": "0xe7e47e7a53e27e34a6162a9b2f0f2edeb03b8d8fdd8b9951f5095f176057f0b9"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 422626,
+      "source_fee_raw": "6374712472453",
+      "source_tx": "0x84ba76eeb724ee0a8fdfce710b4980623954e550e893e86c8346d9fd0456dd9e"
+    },
+    {
+      "effective_gas_price_wei": 3000000000,
+      "gas_used": 422858,
+      "source_fee_raw": "1268603719194006",
+      "source_tx": "0x9c2e2a008b354766093cda046af8f10eb68374ae507f671856c5a31c920ae95d"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 696321,
+      "source_fee_raw": "10485853519679",
+      "source_tx": "0x116acd3083d796eed52ca49cf3059ee827d42e14a1ddc8e7405427c58bf1ab01"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 697583,
+      "source_fee_raw": "10491830610775",
+      "source_tx": "0x2d694805646264aa60cd92e428f7813c00c922e79d7d53003b19686bf1fa29ac"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 587221,
+      "source_fee_raw": "8834242179495",
+      "source_tx": "0xab308fe6c4465350644e58d649c88b37da66b5cfdff82bc9c1483fa96d0789bb"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 1994195,
+      "source_fee_raw": "29921471489336",
+      "source_tx": "0x6551d8cdec6e0ab147d10199c8e1c675a5dab5396cccaf07a2dba15722165bb0"
+    },
+    {
+      "effective_gas_price_wei": 6020000,
+      "gas_used": 8106480,
+      "source_fee_raw": "48823927623281",
+      "source_tx": "0xeb5cd2c80b16c2989caeec1203b60fabf93fea1cb6dc30fe476a5bec522d5b5c"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 377078,
+      "source_fee_raw": "5667228118105",
+      "source_tx": "0x3e74d7f04926999545797c9e214467c4a2233ae42b62c617d1312428c3c99780"
+    },
+    {
+      "effective_gas_price_wei": 6020000,
+      "gas_used": 8110806,
+      "source_fee_raw": "48847617963205",
+      "source_tx": "0xad5cd3b9e1e0c523bed4b952bb2764a95a590a4143c7abe9258f40055ee34fa1"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 381706,
+      "source_fee_raw": "5733460623678",
+      "source_tx": "0x387eae532704d73366bd32721ecca222792cd61068c18af8d0a21bc439f6e5f0"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 378553,
+      "source_fee_raw": "5686327631898",
+      "source_tx": "0x56e4a0df6babc079c68f855a17d1e1fad69ec411d9f6c7c3bf53c2c08ca39e4a"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 359398,
+      "source_fee_raw": "5399291943561",
+      "source_tx": "0x840171d2daf1da8527f143c9e0323e55a69670fa290cea2f7015a9df11b899e9"
+    },
+    {
+      "effective_gas_price_wei": 2005000000,
+      "gas_used": 1210152,
+      "source_fee_raw": "2426368472069229",
+      "source_tx": "0x165f29aaaf4f5a0b5928b12cd570edd35f70a98105e6ab1ad76191267706c182"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 272162,
+      "source_fee_raw": "4086732586033",
+      "source_tx": "0x98e84da5926dafd426b9e8389fe5ecb79802e85cd6645cb81222880ab5d7a480"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 573590,
+      "source_fee_raw": "8609297832753",
+      "source_tx": "0x1a839128c16afd2e8b12fc5691041b510102f06848f5ba0f28bd0d8cbfd832ca"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 557478,
+      "source_fee_raw": "8367424307244",
+      "source_tx": "0xf1881b8ab52ce83531877d4f3c1198f38deb2562b4bfb4afaa7d15a62f4da0ad"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 255062,
+      "source_fee_raw": "3827889946949",
+      "source_tx": "0xc0680a8c60dd28e641656a4be82a995f56fb3b14fe16440b98b85439e846b37f"
+    },
+    {
+      "effective_gas_price_wei": 6150000,
+      "gas_used": 1431632,
+      "source_fee_raw": "8809319974199",
+      "source_tx": "0x7dcd210a7f0351efe1cdd91354f035df810d4de2de18ed99c4fe41abc1e8d6ac"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 254970,
+      "source_fee_raw": "3827022695180",
+      "source_tx": "0x64f5f696d46dcf405121eeaa19c0c87bcc9aec56c72aecd50407f8b9ff9f3e03"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 272098,
+      "source_fee_raw": "4083913474910",
+      "source_tx": "0xff6e93adc3927abf4ea90f86fff82bdfdb3ad516c0e10c41225d9f5e70e6d2d9"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 305965,
+      "source_fee_raw": "4591850515373",
+      "source_tx": "0xc4c1537d0ec67f9503db28aa00ff967610260a24bbc22ef1f1e5de19eb70bbe1"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 685814,
+      "source_fee_raw": "10289313995948",
+      "source_tx": "0xdcf58c39ca5904080cd5682c1678fc7a72fa9a6d74c11ca1cb20e1f1c5016c3b"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 678836,
+      "source_fee_raw": "10184509409417",
+      "source_tx": "0x316e20d44141308698daaf46bbbafb6d359c3fa754ed4ecf2751366732b70d02"
+    },
+    {
+      "effective_gas_price_wei": 6000000,
+      "gas_used": 1650882,
+      "source_fee_raw": "9908364317283",
+      "source_tx": "0x6a0189bf305039bc02a8c68fd1c4b861e3cf0431e297cab3771fbcf2c7aba75a"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 453867,
+      "source_fee_raw": "6809883981885",
+      "source_tx": "0xcbf9110d8974139972f32c074b5ced1346a1e35102a03cb2f486caa08b72054d"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 458331,
+      "source_fee_raw": "6876877072568",
+      "source_tx": "0x49de86dbf35cca03bbbae08fd40c34a944964ffccf5e0e87f8b2689334fc68ad"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 625955,
+      "source_fee_raw": "9391250743923",
+      "source_tx": "0x1a61153060d243bbc5aae72510ecabf9788b28287cdf7dc2d2963da7b6653d61"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 677459,
+      "source_fee_raw": "10164234165601",
+      "source_tx": "0x33fa06108da1b96b7660fcc926b906a2bd450415ff4e6c9b2cf6063572dc270d"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 2740319,
+      "source_fee_raw": "41116307289916",
+      "source_tx": "0x2faeadd305a3ee7688bd7e2e8d93a30f4e60ab37550fdeb3ceabf2d83f8b903e"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 450840,
+      "source_fee_raw": "6764830462231",
+      "source_tx": "0x0275d05f4acbea125229243dfb247110963326310f78441438c6e660ac5d5637"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 408568,
+      "source_fee_raw": "6130750462231",
+      "source_tx": "0xa08a254ccdbb7491fd19096eabf3d9a433d4b0574ffaaaf479d209af1a394089"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 689429,
+      "source_fee_raw": "10343278278259",
+      "source_tx": "0xf9ce61ca3dd3b70aa6f6b17f61f2bdc244625dc705117c848613f7c0647e771b"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 712969,
+      "source_fee_raw": "10696499003064",
+      "source_tx": "0x1d1ae531946e492182e2b17e796685e2922b120e3250a3f5c81654fa82fb3f58"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 415018,
+      "source_fee_raw": "6227374739020",
+      "source_tx": "0xaf78038242de794bdd4b91b7f4bead8275c40bb55570b79b9847fbd8ed7be92c"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 812781,
+      "source_fee_raw": "12194319238737",
+      "source_tx": "0xca6617f0bdc6562f7595e770e5c9e1e7ad8c0ad502b614704019f9f0a170c620"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 833123,
+      "source_fee_raw": "12498380976817",
+      "source_tx": "0x5575960be292e21962145e951ab577e01dc9d2fef203260aa998969c6a4c09b1"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 832427,
+      "source_fee_raw": "12487980984186",
+      "source_tx": "0x2608d62a37b906b11de1ef858c0d9c7d26c1df02e2aa49ef0940682d03a111b2"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 815943,
+      "source_fee_raw": "12240702636946",
+      "source_tx": "0x75804d4ed0db5659a22256d5e17867b23c94d25c94dd2845836d27902fd0812c"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 813615,
+      "source_fee_raw": "12205812708234",
+      "source_tx": "0x69a1f10362b1c9086b826e5c507e7d2ba946aa6a9d5b5773d42f4e26356e5768"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 816623,
+      "source_fee_raw": "12250932708234",
+      "source_tx": "0xe80145729a6f6191a360d78b6d57b84c63dccbc2d8f3ff9ba50eb3a6cf5ceeb9"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 696952,
+      "source_fee_raw": "10468030048054",
+      "source_tx": "0xd537bd7cdb5155ec783171c9a6f80882b719f5a54a1694b8e3ad502de9500004"
+    },
+    {
+      "effective_gas_price_wei": 5000000000,
+      "gas_used": 587652,
+      "source_fee_raw": "2938273337115942",
+      "source_tx": "0xcfb96e00235ef09e784558b01e4ddecc08400333ca15fef35b063625832e77b8"
+    },
+    {
+      "effective_gas_price_wei": 4697839361,
+      "gas_used": 780041,
+      "source_fee_raw": "3664516381285958",
+      "source_tx": "0xd6cb9df94cb709ebb65325062aadbae687219a936166b83b39f4c69feeaf680a"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 272838,
+      "source_fee_raw": "4097844572405",
+      "source_tx": "0x64d04e6b00ae500b1d170c4adc8249bb3d3725b9cae0f0cccca9a3614cf86c92"
+    },
+    {
+      "effective_gas_price_wei": 5000000000,
+      "gas_used": 272218,
+      "source_fee_raw": "1361095292662053",
+      "source_tx": "0x0d8fe06abcd8ed1d1951ae3062c60b65499a7e72d8c9a79975059374ca74340d"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 698919,
+      "source_fee_raw": "10493085333247",
+      "source_tx": "0x52698b532327a0b941a84570d26abb1bef65ed490cdaab90dc30fe5592361901"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 247464,
+      "source_fee_raw": "3716885005093",
+      "source_tx": "0xcd43dac27d281e1598e6a83ded7f519f27630734087a103e7bf90dc89927324d"
+    },
+    {
+      "effective_gas_price_wei": 5000000000,
+      "gas_used": 247404,
+      "source_fee_raw": "1237024946982820",
+      "source_tx": "0x6949f97e54694e7a8ada87741a2718ec81234ef5996decb8f9f28229efb5699d"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 247432,
+      "source_fee_raw": "3715934489405",
+      "source_tx": "0xb5d26c568ed4c1016f05461b8b0ae013aaabfcecf08711a122174150095b50ff"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 247388,
+      "source_fee_raw": "3714883492811",
+      "source_tx": "0x1283b4c2dd56b8a9f56e5a6d2ee97f9169301ba346774c82a6da824dda4278e2"
+    },
+    {
+      "effective_gas_price_wei": 35000000,
+      "gas_used": 419245,
+      "source_fee_raw": "14683397645176",
+      "source_tx": "0x72ecddba7a26c0da63ce11e9ea5ce347e4a1313b1771824897dd078885087aba"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 378786,
+      "source_fee_raw": "5687530947550",
+      "source_tx": "0x11c920e64cb24de4aa58b45a0a9f3de018e1b49d2db17fe99b05c5386056e868"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 272038,
+      "source_fee_raw": "4084456246135",
+      "source_tx": "0x5310da519f9e57692568e69c42ee3fcbfe374ee51dba080eda82ba41fc13ae8a"
+    },
+    {
+      "effective_gas_price_wei": 105012430,
+      "gas_used": 259266,
+      "source_fee_raw": "27230444218445",
+      "source_tx": "0xfe64d3e1051129c8ba9c04ae5833c91d134e9617562c0415dbcfa36b5680a969"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 187042,
+      "source_fee_raw": "2809700179791",
+      "source_tx": "0x64ab20572173913a6e427275a6b9239209635e5bba20a5085c26f3851df942fa"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 187959,
+      "source_fee_raw": "2823162437389",
+      "source_tx": "0xee366d9ef2a5054d4ffdc3a6d6de0ae2f12e3f8bfff1cfdded44443889092406"
+    },
+    {
+      "effective_gas_price_wei": 20000000000,
+      "gas_used": 382508,
+      "source_fee_raw": "7650168508452135",
+      "source_tx": "0x02d5e6a8ffdf9b4308e82c3483d4a5fc4597a29501179c645b7d82c53716e8a5"
+    },
+    {
+      "effective_gas_price_wei": 20000000000,
+      "gas_used": 272182,
+      "source_fee_raw": "5443643688316609",
+      "source_tx": "0x6f0e1cf402d772d18377f36344696328b98cc6288eb94ed9b1da62a8f0308631"
+    },
+    {
+      "effective_gas_price_wei": 15049940,
+      "gas_used": 272066,
+      "source_fee_raw": "4098384724665",
+      "source_tx": "0xffa53f6fa8c1da0f0368268960416112a8fd8dfe4598f059bbb6e4366e162b4d"
+    },
+    {
+      "effective_gas_price_wei": 15165457,
+      "gas_used": 254998,
+      "source_fee_raw": "3871272644331",
+      "source_tx": "0x4051d48b2e467280ba40f2b4a92c22b3416110190f36db73fb872b8fe0fa1b59"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 834890,
+      "source_fee_raw": "12532114865809",
+      "source_tx": "0x5fb544d4815c54bca94af7124bd64e07cd8c169cde8979cc23c86f948ab58939"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 829436,
+      "source_fee_raw": "12450304865809",
+      "source_tx": "0xc2c6a7da4262b996902a397a59756502024fd80348ccb3ebfccda14f1969d2e4"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 828144,
+      "source_fee_raw": "12431239732428",
+      "source_tx": "0x99a835cd16829d2ca79bd4c876239df49191eda38082585722e3c4031383e5b2"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 832161,
+      "source_fee_raw": "12491693835823",
+      "source_tx": "0x808233c76c2dbfac610214074c7eebd28c3d3d23ac80c8d7205372575aaf1743"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 818618,
+      "source_fee_raw": "12292893518001",
+      "source_tx": "0x23e79ae4b1dccc69656ef7561b21493fdf188ca13c52ba60721e74b60b632645"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 814494,
+      "source_fee_raw": "12232305641157",
+      "source_tx": "0xf9fb5dd62dbf0a96940c19740cbda117ce8c9f7d654434203983111fa8c7bd1a"
+    },
+    {
+      "effective_gas_price_wei": 6000000,
+      "gas_used": 1843607,
+      "source_fee_raw": "11096652208006",
+      "source_tx": "0x978e3d1fa432e17c19c35a530bb9b6d553b09aafe14acdb1fd0f6a8eedef19a4"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 1738981,
+      "source_fee_raw": "26143296721944",
+      "source_tx": "0x9dcf0a5c7b7af3ff1db18e27a6c2a0fbbbc7f6328af480d0e2e5bc494ea144eb"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 576206,
+      "source_fee_raw": "8661389172477",
+      "source_tx": "0x7af836b6b3a3f7234f2e69570dbf7bb588ae388d82751d88e4611cbcf827fd5d"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 565144,
+      "source_fee_raw": "8497413362560",
+      "source_tx": "0x6f8a8716445bd506b410fb91fc611456d47020d73437d38a3af85d43913f277f"
+    },
+    {
+      "effective_gas_price_wei": 5000000000,
+      "gas_used": 565680,
+      "source_fee_raw": "2828416504760547",
+      "source_tx": "0x69f621f5b73ce3a31bc0d849bb75b42581e699e4df9684f738d60e1b605aab1a"
+    },
+    {
+      "effective_gas_price_wei": 2005000000,
+      "gas_used": 625185,
+      "source_fee_raw": "1253508028057250",
+      "source_tx": "0x5b52376a7d7fc0f20d37b0ee216beb88b3f7f908a2ec9a740657ab997ca4c5c4"
+    },
+    {
+      "effective_gas_price_wei": 4172773187,
+      "gas_used": 882606,
+      "source_fee_raw": "3682919399072550",
+      "source_tx": "0xc9233b8ed448c57f758a3d0ac5d2e598a46e7d6c80617de9fa840c6acaf28de7"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 247304,
+      "source_fee_raw": "3712085392638",
+      "source_tx": "0x1aa3dc509d839fbb80eb5c1430e27dd908dd3c6d7aad4e1c67b5330feb276761"
+    },
+    {
+      "effective_gas_price_wei": 5000000000,
+      "gas_used": 370624,
+      "source_fee_raw": "1853124352519958",
+      "source_tx": "0x918cd1f8ee0be80b81f6359f8e5da5ddcb66655c9931ee5cde2f45b5d9443d57"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 370520,
+      "source_fee_raw": "5562166117727",
+      "source_tx": "0x00e5bb70f75f6b13e90780fa853cde39d1d38cdf43334708d36e1d5bad63d151"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 247384,
+      "source_fee_raw": "3713881282955",
+      "source_tx": "0x63fed4aea9d13196b0b7b40e0ae066775140fb6eaeafb3567ccb026dc4e68645"
+    },
+    {
+      "effective_gas_price_wei": 5000000000,
+      "gas_used": 247356,
+      "source_fee_raw": "1236782999557298",
+      "source_tx": "0x7f2b49103b5501a8c158d8a6e7b9ffea01d2b9f5eb3f714d051b235b8a53f14d"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 194397,
+      "source_fee_raw": "2919480344675",
+      "source_tx": "0xd0c25d1eb2f63cb833e7d8ec879d7742815ea7db72ad654a16cf826827c0f743"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 272146,
+      "source_fee_raw": "4085678268057",
+      "source_tx": "0x929578570b5b1b8948cab8721625e70aa3278f2faeda35d0533bded9041b2b2c"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 272218,
+      "source_fee_raw": "4086239154766",
+      "source_tx": "0x6f88bf7f40d591ca97efe1ace662e9dff0b2f5ea27cca43c97102e144e99e1d9"
+    },
+    {
+      "effective_gas_price_wei": 5000000000,
+      "gas_used": 272190,
+      "source_fee_raw": "1360953036470729",
+      "source_tx": "0x2d2ed19dcc0f9410ec52feb6cdb866f3fd04c589a3eb028d6bdeaee27285f1db"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 272218,
+      "source_fee_raw": "4086292798521",
+      "source_tx": "0x4aff55d946a7e1461faafa031827a33c80df320a0e2fc97ba4791ce065899c72"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 255106,
+      "source_fee_raw": "3829626470729",
+      "source_tx": "0x1b52eebb4395fffc1f8d00f6a750941134d94a1f5f99163b9fcc5546c5aaaeed"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 548250,
+      "source_fee_raw": "8229499756012",
+      "source_tx": "0x484de953adef4dd5a05a9a237c25960b81469addbe29a7a72ed441a795db0125"
+    },
+    {
+      "effective_gas_price_wei": 15000000000,
+      "gas_used": 370610,
+      "source_fee_raw": "5559154059976958",
+      "source_tx": "0x5803c243e2dd623d1e8b848d1bfbf5e82d07c2895f62cb891b8a1a9b59ee7245"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 370743,
+      "source_fee_raw": "5565044778224",
+      "source_tx": "0x657a19691159e36d42def726ab88ab9804b376d364505ac900981304169629bd"
+    },
+    {
+      "effective_gas_price_wei": 15000000000,
+      "gas_used": 468184,
+      "source_fee_raw": "7022763628919997",
+      "source_tx": "0xb64da744e37b8fff43c9ecc0b54977fdbde9b5618698b0ad95487957bd1961d2"
+    },
+    {
+      "effective_gas_price_wei": 2005000000,
+      "gas_used": 196838,
+      "source_fee_raw": "394666344604553",
+      "source_tx": "0x80f0b96f574511225a08ec9317c113b8127540ed4b2152eee457713b43cb7b4d"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 784591,
+      "source_fee_raw": "11779322696412",
+      "source_tx": "0xbb61a13f21560233c170cf53f9e37acae3baf7aeb7ff9b5e0c832b1138a636b4"
+    },
+    {
+      "effective_gas_price_wei": 2005000000,
+      "gas_used": 858319,
+      "source_fee_raw": "1720937857201251",
+      "source_tx": "0x69cce27bb83f944940055f6a222c61a4c375da41e3de6de1d9c5a5c461fb7afa"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 816349,
+      "source_fee_raw": "12255231082201",
+      "source_tx": "0xd64535b5d0fe097d451c11f01b7bd8ded80763d65ac9bef5788d612be651167b"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 160144,
+      "source_fee_raw": "2408566625341",
+      "source_tx": "0xcdac38238eaa631bad2beaa2b4a93cfbbd0839d575f0739d23a3b6caa1eca845"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 418129,
+      "source_fee_raw": "6280233564186",
+      "source_tx": "0x070085425e864cbffdb1a0f6042866ddd1e4b00d1bdfc2124c232dc9eb0b404d"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 170560,
+      "source_fee_raw": "2564727009883",
+      "source_tx": "0xf094a961a75c246030fe80196c070d9fc7933623bde7d6a431b72a66c2215e26"
+    },
+    {
+      "effective_gas_price_wei": 6000000,
+      "gas_used": 1386866,
+      "source_fee_raw": "8331748644342",
+      "source_tx": "0x5d590e021f453a8515c77a4c7ce9254d5c7f7fb17a4471b0a409732b678a1952"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 272086,
+      "source_fee_raw": "4087339785389",
+      "source_tx": "0x4dcccf9aa39f47bb0abe37f536b127ee7a0b5030529fd496b16843a2453f6a4d"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 272090,
+      "source_fee_raw": "4086610134343",
+      "source_tx": "0xdc4cd472eccbf11c20ba025159d5687c7a74b779c38327e3e6dcc6c0ab6b93c7"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 255082,
+      "source_fee_raw": "3832501661294",
+      "source_tx": "0x1cc82a3de508a516a795d0e044acca5f4e0733e8aef3b011aba52c9586c0b3d0"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 255022,
+      "source_fee_raw": "3831601661294",
+      "source_tx": "0xb4409ed2cbe9e71ec3337480fa10adc18d2e9da440244e0ce340758a5d66f197"
+    },
+    {
+      "effective_gas_price_wei": 6000000,
+      "gas_used": 1386614,
+      "source_fee_raw": "8330930387804",
+      "source_tx": "0xa5ad126697de2daa7c791e665700e1d93a5a474683ecefeb667063e421fbf4a7"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 389099,
+      "source_fee_raw": "5850717404170",
+      "source_tx": "0xb0df681ec0cb6c4a1cd1850005a1fd45ec1b88695a8e7fd305c606ec48918dd1"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 187429,
+      "source_fee_raw": "2817481352821",
+      "source_tx": "0xca76fa01ad424a8e521518cc8c7fabb94df93ed1dc3a8f5ffbc7feb269aac630"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 170327,
+      "source_fee_raw": "2561046163255",
+      "source_tx": "0xb79e1f8fe91a33a334b96eca6b6183d9eaa31cd8709b6ac690bed1e7940ab65d"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 174187,
+      "source_fee_raw": "2618889569558",
+      "source_tx": "0x355262397eadb6c02259d6af0ba51d4f3a24f9d810d7a94e006a26eb4db8bd97"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 170293,
+      "source_fee_raw": "2560384751532",
+      "source_tx": "0x878e918c0edef05042b0f2a5c4b367d639af280a5bbe4c20549fe5e20a03f7e2"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 174145,
+      "source_fee_raw": "2618164751532",
+      "source_tx": "0xdf5d7c61eb0e7e15b0a5778bc6525fc3f5c201404b0e22935b088dce3ccaf4e1"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 170297,
+      "source_fee_raw": "2560521717882",
+      "source_tx": "0xd55f4098d7cc1be3667ea31b9d0fbfaccf719aba157dedf1f78afc4b76c2fe51"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 169367,
+      "source_fee_raw": "2546797269699",
+      "source_tx": "0x0ce8dd6f5ff3a2d3f612ca497f2a2b91c9db91eb4fcfd5f580ca0493165bd6a1"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 170335,
+      "source_fee_raw": "2561405332226",
+      "source_tx": "0x9909761dc9e6f204e50ae1241b5c33c33e74406a82ad538b6b91a4c8f904bbe7"
+    },
+    {
+      "effective_gas_price_wei": 105000000,
+      "gas_used": 271243,
+      "source_fee_raw": "28486259461098",
+      "source_tx": "0x548a2897d044a631d8ee885c25a7ef34d0e19d224b10e671a125c42f6991887b"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 254105,
+      "source_fee_raw": "3817002078400",
+      "source_tx": "0x94bb3fb8ffda1b08885502b47807c44d04dccd71adffb7bbfba64bbd8e57c10c"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 944139,
+      "source_fee_raw": "14173266867938",
+      "source_tx": "0xab1c35f14290b08b1b727d6a95f47809d4ae26ab8be60538e14ad83f5826155b"
+    },
+    {
+      "effective_gas_price_wei": 6030000,
+      "gas_used": 1386674,
+      "source_fee_raw": "8371925951855",
+      "source_tx": "0x2dbda6d6a075cdc6a9ef85bc7092058fad1e8b9926375df1a7308092e35cc2d1"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 255022,
+      "source_fee_raw": "3831251256952",
+      "source_tx": "0xdb21f6303466c2b9328381ccaf98fef0f886433d96e5044fa38917d65ece99d0"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 255050,
+      "source_fee_raw": "3831859481375",
+      "source_tx": "0x39238af6667872b3304daf76e61dac18beaaf539ac8c046792917faf285ced0f"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 370659,
+      "source_fee_raw": "5568655084271",
+      "source_tx": "0x6915658a983c67b60868d70ba9948f22ac4fef753668b069de1d707103c37410"
+    },
+    {
+      "effective_gas_price_wei": 15003260,
+      "gas_used": 352622,
+      "source_fee_raw": "5299077797311",
+      "source_tx": "0x2a19fffc1cc16edf96151eeb0fab9fc7d1ace47374bf4b48c62346ddc84c3fe9"
+    },
+    {
+      "effective_gas_price_wei": 15047304,
+      "gas_used": 826356,
+      "source_fee_raw": "12459404014088",
+      "source_tx": "0x7a097ac316e16a3923bd4ae1696fe875b4620defc0ff50a7c822a2a27615fd18"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 305629,
+      "source_fee_raw": "4592646490836",
+      "source_tx": "0xfd63baf8c2d77d3d711f70844e35c764e18dd2e465ee1dd2f862c7cb35ca1069"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 294284,
+      "source_fee_raw": "4422805819701",
+      "source_tx": "0xee81da70f503162763e31855e887b38e059ac1f91eb392a177b7072011063a07"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 874090,
+      "source_fee_raw": "13122911208320",
+      "source_tx": "0xe08abef8ca413fb93c25290f6bec8576e857627054723c25b8849f9f937b871a"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 698057,
+      "source_fee_raw": "10481160541312",
+      "source_tx": "0x6c5b5801218b8048a2165656a7b233f2b60f098462ee9e736e265a3cfa72df3e"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 588691,
+      "source_fee_raw": "8839641898727",
+      "source_tx": "0x42bf2fb52e22f09780c343dc74ce308cccb372da0a4112edf7169340416e648f"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 579276,
+      "source_fee_raw": "8700145209211",
+      "source_tx": "0x63f5ccae82d33302fcc7c031d68395ebdc9e4508805581895e9ee7382dd82893"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 449967,
+      "source_fee_raw": "6779900162119",
+      "source_tx": "0xd1e2c087f36bd05e116d9dda2816f3d3f9923e5a4d8682b5b872d9fbe0d8a539"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 272166,
+      "source_fee_raw": "4113749700276",
+      "source_tx": "0x86fdc0e3069b9859e576d14cae8d426a2420ea79c1c97ce57cbdbcb083f88833"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 160120,
+      "source_fee_raw": "2426653125967",
+      "source_tx": "0x513cdad201622476d9f2fe28c2c713b025375a9938e19d2a614421704a890adf"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 187473,
+      "source_fee_raw": "2837187075371",
+      "source_tx": "0xa1ee71e9cccee4eb54b5083935a37cd88a5824da9ae3727eac525841f22b8026"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 153448,
+      "source_fee_raw": "2326028699458",
+      "source_tx": "0xe3162bd7f37ba0657dbce66d52f9c76c65a53f2f8d5fce76ea15dc9dc18664a7"
+    },
+    {
+      "effective_gas_price_wei": 50000000000,
+      "gas_used": 215377,
+      "source_fee_raw": "10768871606904834",
+      "source_tx": "0xc522bea13c26771ce754ccfc7930dd997e2923d6b518a4557b65669c473681fb"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 153448,
+      "source_fee_raw": "2324840628843",
+      "source_tx": "0xec0afc4b464aec8b05bd1106d327e16d34f3b9668b70c533ef15222c0d32db99"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 170548,
+      "source_fee_raw": "2590961359872",
+      "source_tx": "0xb5ff3b1616f11847cdc60979bbad6286c2a6ad1e9f1a2a64d728b0f0005c72c3"
+    },
+    {
+      "effective_gas_price_wei": 7421440,
+      "gas_used": 655229,
+      "source_fee_raw": "4893965079587",
+      "source_tx": "0xbcc3af9ddbcdb8a00e7e1f70e05d21f833de3fecc9d04876828c588876f8ebc0"
+    },
+    {
+      "effective_gas_price_wei": 16553577,
+      "gas_used": 272090,
+      "source_fee_raw": "4520398635709",
+      "source_tx": "0x89b474d7971688d90f16fcbff8b3af9b57848b538ab1a9348b76071d3057e1ab"
+    },
+    {
+      "effective_gas_price_wei": 7664740,
+      "gas_used": 532749,
+      "source_fee_raw": "4117280249314",
+      "source_tx": "0xc6b08b267f5df8bc6df0009f09c339c6bbaa491af98b834f17aeefad1d47b3f5"
+    },
+    {
+      "effective_gas_price_wei": 26652779,
+      "gas_used": 606454,
+      "source_fee_raw": "16196937094791",
+      "source_tx": "0xa08953e1ac5ccfd8faa5dc21ec7f5bec4d2909f16cae44289d7f4fc452ceecc2"
+    },
+    {
+      "effective_gas_price_wei": 16433094,
+      "gas_used": 271217,
+      "source_fee_raw": "4476374095083",
+      "source_tx": "0xa04cec0f4f51370086a207deeb3d80dff7b8d621e504ffa020af8ee88c4b9efd"
+    },
+    {
+      "effective_gas_price_wei": 7373838,
+      "gas_used": 551937,
+      "source_fee_raw": "4103225983113",
+      "source_tx": "0xa4dbeedf8c645274dc37ca8d1f8051dd8def4b6f1099ea87f2fc83312b31f371"
+    },
+    {
+      "effective_gas_price_wei": 85006394618,
+      "gas_used": 517481,
+      "source_fee_raw": "43989214783628686",
+      "source_tx": "0x5c0d93678c9b8f9016991833f77129909804640878c87732ca332e32f437dc1a"
+    },
+    {
+      "effective_gas_price_wei": 16585214,
+      "gas_used": 584171,
+      "source_fee_raw": "9712532757238",
+      "source_tx": "0xe9544046415eeee56287fa2911fbe03add9a96ac318f7aaf8ec534044d30b5ae"
+    },
+    {
+      "effective_gas_price_wei": 105000000,
+      "gas_used": 302258,
+      "source_fee_raw": "31756230507497",
+      "source_tx": "0x33a1eea339c54dbc7374717b491ea6b0dfd16b0ea06328304f9b65434c18d649"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 182254,
+      "source_fee_raw": "2752468215955",
+      "source_tx": "0x953ca1c713de374d1b735c835168e90024a687e7efb51896d1001db32569dd6f"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 182258,
+      "source_fee_raw": "2752528215955",
+      "source_tx": "0x25479d6ab87439d614b1e15c6390394152c779766a5a6c4acad0a588401fd199"
+    },
+    {
+      "effective_gas_price_wei": 37665285592,
+      "gas_used": 1051075,
+      "source_fee_raw": "39589049806375681",
+      "source_tx": "0x2b97285b6449e91bdea6e2950e40db8e134e70700e10113f4281f6a7a39c6e52"
+    },
+    {
+      "effective_gas_price_wei": 42685450554,
+      "gas_used": 809554,
+      "source_fee_raw": "34556187068293178",
+      "source_tx": "0x32ca492db97922db340f235599bd821309ef2c3f21fedc354f0b05ef464d4c4d"
+    },
+    {
+      "effective_gas_price_wei": 5000000000,
+      "gas_used": 334560,
+      "source_fee_raw": "1672806444334494",
+      "source_tx": "0xb6d5b366069ea51eb3bbbff861fdef861e153107317b87b0cf561b7c88b11667"
+    },
+    {
+      "effective_gas_price_wei": 50000000000,
+      "gas_used": 331760,
+      "source_fee_raw": "16588006623588170",
+      "source_tx": "0x338ddb88e67d3682fbfceb6f547ce25d415742d45b5cbcb3d1ce62fbffe6bf49"
+    },
+    {
+      "effective_gas_price_wei": 50000000000,
+      "gas_used": 314628,
+      "source_fee_raw": "15731406643962753",
+      "source_tx": "0x591ea00cf42dfa5cc21a4e065375ecdf032707bf9909f3c83bf15be85ae2fdbf"
+    },
+    {
+      "effective_gas_price_wei": 5000000000,
+      "gas_used": 314684,
+      "source_fee_raw": "1573426643962753",
+      "source_tx": "0xcb24ea0a3a235b59bc897d55a0e448d447862118beb73f05970befe06517dce7"
+    },
+    {
+      "effective_gas_price_wei": 5000000000,
+      "gas_used": 340576,
+      "source_fee_raw": "1702886621646461",
+      "source_tx": "0x24b22ac5c11d9b718d09f662cdf6d587e37eff57b256bb15356746290dc40f9b"
+    },
+    {
+      "effective_gas_price_wei": 50000000000,
+      "gas_used": 331932,
+      "source_fee_raw": "16596606621646461",
+      "source_tx": "0x8e545a334c39a59367b9753e5fd4a3f319a7f27eaf89d462c8e8cc1e6044de95"
+    },
+    {
+      "effective_gas_price_wei": 5000000000,
+      "gas_used": 314556,
+      "source_fee_raw": "1572787202847708",
+      "source_tx": "0x91feb5215459f59a5a62378db7888d8cb5efddb6f5f0a197639dbff4d180e846"
+    },
+    {
+      "effective_gas_price_wei": 50000000000,
+      "gas_used": 331820,
+      "source_fee_raw": "16591006715677007",
+      "source_tx": "0xe9eda1f92f75570382e13b0d466d85ed98d4b8f71b795c5238efde9004855b10"
+    },
+    {
+      "effective_gas_price_wei": 50000000000,
+      "gas_used": 312815,
+      "source_fee_raw": "15640756705326202",
+      "source_tx": "0xa9edd4614ba2ef23528c07cda008de6bf147a34a1e8a8a7b662a4581a6c32c87"
+    },
+    {
+      "effective_gas_price_wei": 5000000000,
+      "gas_used": 429816,
+      "source_fee_raw": "2149086594603624",
+      "source_tx": "0x6c63a484a56734e1dd669cbc1e0febf1ffd0fd613a7a397c1e451e00a638bfd6"
+    },
+    {
+      "effective_gas_price_wei": 50000000000,
+      "gas_used": 362141,
+      "source_fee_raw": "18107056696975454",
+      "source_tx": "0x1d1d4ad4bc4ea52b191fa504eaf67c4aea7a4e1c0f54abe5c196991a231653eb"
+    },
+    {
+      "effective_gas_price_wei": 5000000000,
+      "gas_used": 429772,
+      "source_fee_raw": "2148866348958574",
+      "source_tx": "0xff21c2e4c1adcde586f7b3977ad7c0e7dd610226f9b87d08ba12a9b8370cb7d2"
+    },
+    {
+      "effective_gas_price_wei": 50000000000,
+      "gas_used": 429718,
+      "source_fee_raw": "21485906487802674",
+      "source_tx": "0xe0fbb0a1d92597a5971fc7f97a9fba9a89b9853fdf04e5a69a9f9dfd20128ff1"
+    },
+    {
+      "effective_gas_price_wei": 50000000000,
+      "gas_used": 362121,
+      "source_fee_raw": "18106056031284148",
+      "source_tx": "0x22562a91c2852bc642073b5451fb490b15eddb12ba8f75dff4f438736bf7b010"
+    },
+    {
+      "effective_gas_price_wei": 50000000000,
+      "gas_used": 314736,
+      "source_fee_raw": "15736806027640979",
+      "source_tx": "0xb1363b96a7307c7a3b5ff130e4f58994f5fc6564ff307d0cf5bf687b5b4adfd3"
+    },
+    {
+      "effective_gas_price_wei": 5000000000,
+      "gas_used": 314772,
+      "source_fee_raw": "1573866027640979",
+      "source_tx": "0x06f5c812f2c4736c9d58b5c13103211af2b6c925e901be3ed663bff8b1333d29"
+    },
+    {
+      "effective_gas_price_wei": 50000000000,
+      "gas_used": 312867,
+      "source_fee_raw": "15643355186269060",
+      "source_tx": "0x9f8c394f6181287039ddef659e32bb9da0164b6a2522b314e6214d87611f2239"
+    },
+    {
+      "effective_gas_price_wei": 50000000000,
+      "gas_used": 313783,
+      "source_fee_raw": "15689155679856179",
+      "source_tx": "0x076839ac8e39e28c4377dfa44fa25c7bbf1a8875fbe44b7ae206e20509809e06"
+    },
+    {
+      "effective_gas_price_wei": 5000000000,
+      "gas_used": 361315,
+      "source_fee_raw": "1806580209671811",
+      "source_tx": "0x4daf81d62c5245427cd801b1512a6e51dd20b8384fbdd31e3da99480c9fdcea4"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 272090,
+      "source_fee_raw": "4083821647396",
+      "source_tx": "0x35efbdb153a6de293fa286003846fe6403c3b096043bb6e93ee68759afa9e6a5"
+    },
+    {
+      "effective_gas_price_wei": 50000000000,
+      "gas_used": 205051,
+      "source_fee_raw": "10252554565422134",
+      "source_tx": "0x6e93f83bda5fe39fbe1ff9e501636a7c52d53a632e9877beab3417e4608cc3ee"
+    },
+    {
+      "effective_gas_price_wei": 50000000000,
+      "gas_used": 205115,
+      "source_fee_raw": "10255753587037824",
+      "source_tx": "0x87e6f87cabc46de3f6566c39548e12d14f3343c8ae19d6089c20b9c9b4945421"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 205079,
+      "source_fee_raw": "3078493762284",
+      "source_tx": "0x53e9a570a317c8bd99f941542992195c899ef71e1bcfaed49c495aedd8b4d82e"
+    },
+    {
+      "effective_gas_price_wei": 50000000000,
+      "gas_used": 599893,
+      "source_fee_raw": "29994652231832626",
+      "source_tx": "0xba587e8a28817d79c784e5acc13c3d7eed02a86423afab628718448ad4cf084c"
+    },
+    {
+      "effective_gas_price_wei": 5000000000,
+      "gas_used": 205135,
+      "source_fee_raw": "1025677084493235",
+      "source_tx": "0xc1eaa4ec45cb41f8b4d13992f161940e8bd1d467431e923b7479173a6da48e65"
+    },
+    {
+      "effective_gas_price_wei": 50000000000,
+      "gas_used": 205047,
+      "source_fee_raw": "10252352101857447",
+      "source_tx": "0x366d026181e090c9df03b03a566131469779ebb12b40d1e9441472fde3f57523"
+    },
+    {
+      "effective_gas_price_wei": 50000000000,
+      "gas_used": 272034,
+      "source_fee_raw": "13601701355736372",
+      "source_tx": "0xcce494cd41073c9cbf02fdfc08b4a119003df4ea3c43948b29c867856a0c4adc"
+    },
+    {
+      "effective_gas_price_wei": 6000000000,
+      "gas_used": 568601,
+      "source_fee_raw": "3411608837565004",
+      "source_tx": "0x6a09074547ecd02a85d0c3733d0f082de0bfd4d3216bcadd8d8c421ca0243fc4"
+    },
+    {
+      "effective_gas_price_wei": 105000000,
+      "gas_used": 221320,
+      "source_fee_raw": "23240132978955",
+      "source_tx": "0x20ef816ceeda64f13a6d25424ba928b9058264e830a37d946192632cfa242e92"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 588283,
+      "source_fee_raw": "8826394127546",
+      "source_tx": "0x60a923484b452e696cf8ce141b0a862cd81d397fc5c27dc79f4450bc11d6cd95"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 796007,
+      "source_fee_raw": "11942152288198",
+      "source_tx": "0xc5bc7a9631ee123574ef695dac19e21c46449afa18af59d30ceaf1149b0ed03d"
+    },
+    {
+      "effective_gas_price_wei": 20000000000,
+      "gas_used": 586915,
+      "source_fee_raw": "11738310091648780",
+      "source_tx": "0xc611be077bc49e46240384e67cb383f29b1bb6e687be7f048cb705005530c5e2"
+    },
+    {
+      "effective_gas_price_wei": 6000000,
+      "gas_used": 1386470,
+      "source_fee_raw": "8358236885443",
+      "source_tx": "0x3d1a328a158c1535d9b70fcf2854d928980201f1ea210a616151c2035e703d76"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 825373,
+      "source_fee_raw": "12410256070828",
+      "source_tx": "0x06876466e942dfd850b4e47d5d74ee649e8f98a568a6724da1ee6c02248078f8"
+    },
+    {
+      "effective_gas_price_wei": 20000000000,
+      "gas_used": 459779,
+      "source_fee_raw": "9195587816679242",
+      "source_tx": "0x78e7262fe5d680a13670c54a5828bf4b4cdb318226ad2cabf3111c4e026cc96b"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 272122,
+      "source_fee_raw": "4086136235951",
+      "source_tx": "0xa0c53b3a6672075702ad04e3c509d40d17ab40ed2237b59c8af165e0234c3a54"
+    },
+    {
+      "effective_gas_price_wei": 6000000000,
+      "gas_used": 570095,
+      "source_fee_raw": "3420577954360216",
+      "source_tx": "0x4722a6203f6acb0aa959fb1d7b2798494a1e763502dd38d2dbccf40ab569621f"
+    },
+    {
+      "effective_gas_price_wei": 3391434208,
+      "gas_used": 1590355,
+      "source_fee_raw": "5393607368332242",
+      "source_tx": "0x97b082ffa59e30b22bba7e16d3b65116cd7d4a202592fb95cc0f55bc003da1e9"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 271217,
+      "source_fee_raw": "4073056701640",
+      "source_tx": "0xc8a008aa98fb7cff684d283fd60e6cd75eb19ff49a7413ca605c79b4799ff1ab"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 571333,
+      "source_fee_raw": "8603325910866",
+      "source_tx": "0x4ff15addadff77c069480a6c9ad2ce1d298e4e6b3276bb6c68919e576c8185dd"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 272090,
+      "source_fee_raw": "4101338824684",
+      "source_tx": "0x11186ca38be2c24ece9f7c6f99830c789949f651406c5697e8cc97c60369e0c2"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 255054,
+      "source_fee_raw": "3848507871001",
+      "source_tx": "0x02658d96acc4682f21c090ac14f5ec0332cda75074768e211e3880256af34752"
+    },
+    {
+      "effective_gas_price_wei": 35000000,
+      "gas_used": 809695,
+      "source_fee_raw": "28377237308133",
+      "source_tx": "0x4071fb9aba9e603e6df2b2c8bbeabbdc11ed3dbbb756b514dcc5a5fb122ccc0a"
+    },
+    {
+      "effective_gas_price_wei": 35000000,
+      "gas_used": 760160,
+      "source_fee_raw": "26645406719963",
+      "source_tx": "0x4e3a81922a4361868da673a0228ee3f82a8f499752d9401a7f6a2e5e921f44f1"
+    },
+    {
+      "effective_gas_price_wei": 35000000,
+      "gas_used": 736000,
+      "source_fee_raw": "25799806719963",
+      "source_tx": "0x614023763b6e9fb4f602a99257e64241b542e644d2c25273d7720f8987153807"
+    },
+    {
+      "effective_gas_price_wei": 35000000,
+      "gas_used": 764680,
+      "source_fee_raw": "26803606719963",
+      "source_tx": "0x7d1bb98395f0fed3ccd531311bda9908666b2918cbbe8dbb3d3eaec7206df643"
+    },
+    {
+      "effective_gas_price_wei": 35000000,
+      "gas_used": 735080,
+      "source_fee_raw": "25767606719963",
+      "source_tx": "0xa2f181e00f00f2a26450cbc132f83bbb9020eedb6e46da9ab9ef293958dcedd9"
+    },
+    {
+      "effective_gas_price_wei": 35000000,
+      "gas_used": 705302,
+      "source_fee_raw": "24725376719963",
+      "source_tx": "0xe9f927aafb4cfdf387880c903718e8a5fc39d5d7b138ff88fd0ea3576fca0949"
+    },
+    {
+      "effective_gas_price_wei": 35000000,
+      "gas_used": 769345,
+      "source_fee_raw": "26966881719963",
+      "source_tx": "0xf3a349174a218192605706a1a2c0587104b0724a10f133e6755354774ed814cb"
+    },
+    {
+      "effective_gas_price_wei": 35000000,
+      "gas_used": 691195,
+      "source_fee_raw": "24231631719963",
+      "source_tx": "0x5c5364d9bd5ed93716bb217f3772639c566f1adc5f1563ee9fbd1bdf26565ab2"
+    },
+    {
+      "effective_gas_price_wei": 35000000,
+      "gas_used": 725519,
+      "source_fee_raw": "25432971719963",
+      "source_tx": "0xa75286f883154e84e12def0f965379e040ec0322fd2be3886fec3b8148c78ca4"
+    },
+    {
+      "effective_gas_price_wei": 35000000,
+      "gas_used": 726454,
+      "source_fee_raw": "25465696719963",
+      "source_tx": "0xbf384ccd5408fcd96cd10089c0218bcefc33ad0d318160b41765d15aca545e4b"
+    },
+    {
+      "effective_gas_price_wei": 35000000,
+      "gas_used": 749582,
+      "source_fee_raw": "26275176719963",
+      "source_tx": "0xc1aa44c1f4f05ec8a95383540f4365168473759b5e4d7652cf6497704446bde8"
+    },
+    {
+      "effective_gas_price_wei": 35000000,
+      "gas_used": 435001,
+      "source_fee_raw": "15274906993657",
+      "source_tx": "0x1310b9febc41132181aa982a8ebd5cfc41b91d15be5ba318ee966c8fa07af895"
+    },
+    {
+      "effective_gas_price_wei": 3000000000,
+      "gas_used": 456175,
+      "source_fee_raw": "1368552485795084",
+      "source_tx": "0x857509aa1238a4e76b8703f57ff7e05ce693c18c9afc654ab742a8aad5d6aa7f"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 272098,
+      "source_fee_raw": "4093847775801",
+      "source_tx": "0x20b82f5d1e830fb2c16ca66aaeaa6cd1194d8ae3c2921b6146e523ebe8758da9"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 255022,
+      "source_fee_raw": "3837023596903",
+      "source_tx": "0x5ad59ba7840a9e13941893577b94e7227e9bcc28ec5509342bacbdfb288733ac"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 254958,
+      "source_fee_raw": "3835227952484",
+      "source_tx": "0x8bc34da842df37168a395018698498d1a6390e3b69e4b0cdd0528c97fe83eca4"
+    },
+    {
+      "effective_gas_price_wei": 3000000000,
+      "gas_used": 575743,
+      "source_fee_raw": "1727245773140176",
+      "source_tx": "0x3c580534ffac9aef0a5b6451051da8bc01d4c2903b780fff7328b61eba183dcb"
+    },
+    {
+      "effective_gas_price_wei": 3000000000,
+      "gas_used": 606565,
+      "source_fee_raw": "1819711773140176",
+      "source_tx": "0xc4fca02e65e91f2ee763ed7572aea4543245a02e4f4185c2a7f0a9a44ad24ce4"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 532295,
+      "source_fee_raw": "7999830132297",
+      "source_tx": "0xe77ffcef257d1faefc7c27509417e781e88ffdf89649e4dc033e2d5c7741fd31"
+    },
+    {
+      "effective_gas_price_wei": 3000000000,
+      "gas_used": 428792,
+      "source_fee_raw": "1286388624657147",
+      "source_tx": "0x000fb70f9f79499e26b25dcbc0760a0db518435b0e0a34f300c18ddfabc07686"
+    },
+    {
+      "effective_gas_price_wei": 3000000000,
+      "gas_used": 378284,
+      "source_fee_raw": "1134864624657147",
+      "source_tx": "0x0edded60cdaf8d5dc8bc4000ae776766227cc936ac44bce173d9ac5a02b13819"
+    },
+    {
+      "effective_gas_price_wei": 105000000,
+      "gas_used": 611684,
+      "source_fee_raw": "64239373538151",
+      "source_tx": "0xb06a277340b225cbd2f463b243471d2de8ac99ad643924daccd24a98ed9cb3a2"
+    },
+    {
+      "effective_gas_price_wei": 3000000000,
+      "gas_used": 314623,
+      "source_fee_raw": "943880690481973",
+      "source_tx": "0x925c8c553b929a4c2f13a2c08a67650b2a4875f9813759e527591356535a14e1"
+    },
+    {
+      "effective_gas_price_wei": 3000000000,
+      "gas_used": 314651,
+      "source_fee_raw": "943964654521299",
+      "source_tx": "0xf5b9bc98381c61321f5f7f5b5375b60b1784b25e00256e354f12a40394b52a99"
+    },
+    {
+      "effective_gas_price_wei": 3000000000,
+      "gas_used": 432885,
+      "source_fee_raw": "1298665695020150",
+      "source_tx": "0xfa7a06d058a30957e02d6f055220a35a8365ec7ecfc98b3b6472c9606818be65"
+    },
+    {
+      "effective_gas_price_wei": 3000000000,
+      "gas_used": 310805,
+      "source_fee_raw": "932434837792910",
+      "source_tx": "0x3fa30bffe3e1215095138aeaf81a11ad55c7f2d28580c9ec4a07f570d1849338"
+    },
+    {
+      "effective_gas_price_wei": 6000000000,
+      "gas_used": 272162,
+      "source_fee_raw": "1632984070272866",
+      "source_tx": "0xfb3dcfd6b37fce391443f87fa7e206028006bf363d3548f8c04f2a61d2e4aeb8"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 272090,
+      "source_fee_raw": "4093510541139",
+      "source_tx": "0xe02c1dc23943ff5acf5cbf66d341f05f521fcb4ff6699996d97db517417badff"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 254958,
+      "source_fee_raw": "3836530541139",
+      "source_tx": "0x660ded53f809558e9ab947daffca07456979143349708821601e53a67df3cab4"
+    },
+    {
+      "effective_gas_price_wei": 3000000000,
+      "gas_used": 557284,
+      "source_fee_raw": "1671878480176710",
+      "source_tx": "0x23f6fbd1b2157570996e916fb1edd6212e1bdd30c17a0491856dd49f7d763e30"
+    },
+    {
+      "effective_gas_price_wei": 2874937252,
+      "gas_used": 697632,
+      "source_fee_raw": "2005664251734479",
+      "source_tx": "0x736762379ccbcb70281039b3d601f2a3bc5f1b174cc29c237a273381d1ad09a1"
+    },
+    {
+      "effective_gas_price_wei": 2866046625,
+      "gas_used": 701038,
+      "source_fee_raw": "2009223620643965",
+      "source_tx": "0xe013cf24db7aad5b4da7331093772efac01becdc94c09c856085ece6ba2c41a0"
+    },
+    {
+      "effective_gas_price_wei": 105000000,
+      "gas_used": 217497,
+      "source_fee_raw": "22848029792893",
+      "source_tx": "0xfcfe5fdfc0829f940a2390b4e7952854372feae587cfec37280d6eade98f75d0"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 255018,
+      "source_fee_raw": "3830851239914",
+      "source_tx": "0x908fa4e179c2ef9adc2d9c56c4fd6bff81b961071f4469cc03d0fddc27e732d8"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 919725,
+      "source_fee_raw": "13802110820240",
+      "source_tx": "0x2997cc191ef5983aa45e98a8544f116fd83527027269b5500e38afd909c443e1"
+    },
+    {
+      "effective_gas_price_wei": 1751840136,
+      "gas_used": 2080135,
+      "source_fee_raw": "3644067848515731",
+      "source_tx": "0xdf4b5adec3a9e9b9dd69f1a04da963e4c9dd745b1c9b6babff9b5c8e832b4488"
+    },
+    {
+      "effective_gas_price_wei": 3000000000,
+      "gas_used": 348319,
+      "source_fee_raw": "1044960544426942",
+      "source_tx": "0x15bac7dae22dbcca04e38f8bee461f8909f78ab48a1bfd78778e5b46d8a70e5b"
+    },
+    {
+      "effective_gas_price_wei": 3000000000,
+      "gas_used": 222894,
+      "source_fee_raw": "668684857446284",
+      "source_tx": "0x3155370bcdcb19e5d12930908d4ea0c05f2b1492034f11f1e4aab4406cee20c5"
+    },
+    {
+      "effective_gas_price_wei": 15000000000,
+      "gas_used": 408933,
+      "source_fee_raw": "6133996820100374",
+      "source_tx": "0x47aeebdc0d4adefe42d0bca79da773f4a456ce679563df7989549005cb5ea01c"
+    },
+    {
+      "effective_gas_price_wei": 15000000000,
+      "gas_used": 391861,
+      "source_fee_raw": "5877916843529492",
+      "source_tx": "0xc722c95935fc313d9af33e2725a42cf17dbb4457c9a138a8cc139a8ab980d9fc"
+    },
+    {
+      "effective_gas_price_wei": 35000000,
+      "gas_used": 1403983,
+      "source_fee_raw": "49146660957758",
+      "source_tx": "0x08eb97386717bd515e0f37054c2c36c0c75012c71951ad27eb1978f7025243dd"
+    },
+    {
+      "effective_gas_price_wei": 6000000000,
+      "gas_used": 418442,
+      "source_fee_raw": "2510653197721651",
+      "source_tx": "0x733729397ae07a912b491f9ddf2d1a7daf1b1fd38e58e466367298fbc1763420"
+    },
+    {
+      "effective_gas_price_wei": 2632215366,
+      "gas_used": 845356,
+      "source_fee_raw": "2225160046944130",
+      "source_tx": "0x05c13a32a9df2b0b043ba5d7670d9fb4d12ef191c3395149101d7a3b290ef81d"
+    },
+    {
+      "effective_gas_price_wei": 2662587295,
+      "gas_used": 831578,
+      "source_fee_raw": "2214150520142635",
+      "source_tx": "0x575c379109867edf288af848cb093c3c74921bb255bf484b42d5cbcaeecb2594"
+    },
+    {
+      "effective_gas_price_wei": 2696123008,
+      "gas_used": 831026,
+      "source_fee_raw": "2240549609069105",
+      "source_tx": "0xda9923c38f45cc125f1d54f5d330a74f2f62f276a62a3cb1948393425d6cf44b"
+    },
+    {
+      "effective_gas_price_wei": 2663881729,
+      "gas_used": 815641,
+      "source_fee_raw": "2172772452789061",
+      "source_tx": "0x19621d9b13e71c4a8b5f0b83300157323ee18f40dcd55ed8efef87010b7244b5"
+    },
+    {
+      "effective_gas_price_wei": 2741118198,
+      "gas_used": 816691,
+      "source_fee_raw": "2238647854474209",
+      "source_tx": "0xc138caa59da9419c2bfdd607d041823682f800ddf52d4f99fcbd5d18a6f244c7"
+    },
+    {
+      "effective_gas_price_wei": 2661711535,
+      "gas_used": 831979,
+      "source_fee_raw": "2214489359724117",
+      "source_tx": "0x97785dd1275dec115c6d2a34ad3a1f79f27e13fcf011e0050d9af27fcc128177"
+    },
+    {
+      "effective_gas_price_wei": 2699427252,
+      "gas_used": 815471,
+      "source_fee_raw": "2201305894047888",
+      "source_tx": "0x27d5607e5806b662395ce0e8cb349718c7cbf13270f206e7ff21d83234a0696a"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 832179,
+      "source_fee_raw": "12483961727572",
+      "source_tx": "0x8608d14ac8509b5e535e821e36b59816f6429b017a1d7684580151d5f72e55fb"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 814003,
+      "source_fee_raw": "12211348319320",
+      "source_tx": "0x7e0348424016e311fd0519b33afcd2a1a93b9ee59c3941200de205373b961eeb"
+    },
+    {
+      "effective_gas_price_wei": 2738827749,
+      "gas_used": 816027,
+      "source_fee_raw": "2234958687512279",
+      "source_tx": "0x8dd1e7b9963347f65cdaa5d2c694be80e61f4b5f62680e89b89fa1f6273c4a95"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 830625,
+      "source_fee_raw": "12460494905087",
+      "source_tx": "0x159a19229adf3b06ce5f06e420a7d4a11895e76b71a24e5167abe0752be86679"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 814183,
+      "source_fee_raw": "12213827380490",
+      "source_tx": "0x80dfcea2f77cf3810a1b173c8e10758fe818893481e792b52d5c82c92cf12d72"
+    },
+    {
+      "effective_gas_price_wei": 20000000000,
+      "gas_used": 547808,
+      "source_fee_raw": "10956161318124143",
+      "source_tx": "0x90719076c908d6b9d84f855fc4699e04ba21ec7d6314c801b666320e8f26019e"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 928742,
+      "source_fee_raw": "13932739692457",
+      "source_tx": "0x63ca10e5efc57213a1cdfb345381b1a20f5e5a544af9bee831e01d1820c5c6db"
+    },
+    {
+      "effective_gas_price_wei": 3000000000,
+      "gas_used": 230324,
+      "source_fee_raw": "690993390305382",
+      "source_tx": "0x175be9f767b4e211c57cf1528818f938f22587be77a866c21e8c73adf57dbafb"
+    },
+    {
+      "effective_gas_price_wei": 2428623215,
+      "gas_used": 921311,
+      "source_fee_raw": "2237526583436354",
+      "source_tx": "0x484ee5b03b76bafbe6bc2c1afbfce0a73408b83a073892ff93c87f51c44cde04"
+    },
+    {
+      "effective_gas_price_wei": 2474884113,
+      "gas_used": 886092,
+      "source_fee_raw": "2192984791798233",
+      "source_tx": "0xac1d5ce332c6b15340ae5c5b7ff793b15f14fda010f98e7fe3019e618ca3737c"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 295653,
+      "source_fee_raw": "4440973459017",
+      "source_tx": "0xda37fe9504401e063e52199924b7cf753bf36080e5e42fb487a4c514990f4009"
+    },
+    {
+      "effective_gas_price_wei": 20000000000,
+      "gas_used": 545514,
+      "source_fee_raw": "10910285675445999",
+      "source_tx": "0x92c320e2d11eb305994c28a124c71355b44b38b03882289430eb2ea17193f708"
+    },
+    {
+      "effective_gas_price_wei": 15020726,
+      "gas_used": 360642,
+      "source_fee_raw": "5426083056316",
+      "source_tx": "0xeec05d33f2a23d7495d195a316c52d71d538952e109f72ca9a6694f6e35687aa"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 262616,
+      "source_fee_raw": "3953457279355",
+      "source_tx": "0x439eb952294e770b268ee71b1dfebc0b9f2b2e128082caab071e3222929d8f10"
+    },
+    {
+      "effective_gas_price_wei": 20000000000,
+      "gas_used": 597641,
+      "source_fee_raw": "11952885563992331",
+      "source_tx": "0x6cb84224d551ec64a45c092a43c2a6dd550c94ad4c8cfca97d9f14a433f3a53c"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 247264,
+      "source_fee_raw": "3745057781577",
+      "source_tx": "0x21d9ecf5942fd591c300a640044910261e784cf6ca4f4895fb203ebbd8ceb101"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 230128,
+      "source_fee_raw": "3488718089755",
+      "source_tx": "0xd11034891d941bd94d239ded044395bc4f312ec01d37d595fb62412d60a77d8b"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 230192,
+      "source_fee_raw": "3494657650962",
+      "source_tx": "0x4c37f66dd20802eea959dc4780c2e01b78abcf02bce88dba0e3c2e89ad90fc4b"
+    },
+    {
+      "effective_gas_price_wei": 15010918,
+      "gas_used": 230120,
+      "source_fee_raw": "3498520079245",
+      "source_tx": "0x05ed2db8e5813432fc6f9cb351fe3ca1fd8c3972c8d5be1c19fa0e6d9599fdf9"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 844775,
+      "source_fee_raw": "12751255200449",
+      "source_tx": "0xe24eab25580d68e0565bd8d9dd8bc885c3ada6ac6c721abe9910ec9b2f81103f"
+    },
+    {
+      "effective_gas_price_wei": 43752376141,
+      "gas_used": 845344,
+      "source_fee_raw": "36985850844157154",
+      "source_tx": "0x25c232b55c6bfff454c4dc12f76f6d0ca2c47cc63d9362bfc8857e2e879ec7c6"
+    },
+    {
+      "effective_gas_price_wei": 44491108133,
+      "gas_used": 809610,
+      "source_fee_raw": "36020487737110017",
+      "source_tx": "0x049583acecedd12928649a19bf2e13bc902c8e3986790ca76b5fb4ad317c18a3"
+    },
+    {
+      "effective_gas_price_wei": 44491108133,
+      "gas_used": 827024,
+      "source_fee_raw": "36795255894138079",
+      "source_tx": "0x5c357cbe1859687debcc5c5a3b09f36171a73bac6d900f1854da094addafa1eb"
+    },
+    {
+      "effective_gas_price_wei": 17046286394,
+      "gas_used": 879028,
+      "source_fee_raw": "14984186435131291",
+      "source_tx": "0xdd54ac77dd75e5d990ea0323e671db070999e7afb6eb6053c3cb8625bd22304c"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 1978756,
+      "source_fee_raw": "29724313444614",
+      "source_tx": "0x3e4f33d736b91c34b1a9252b1e545376dfa9bbbd4cf111f6c57bf78f183dd7b0"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 2045186,
+      "source_fee_raw": "30721371811356",
+      "source_tx": "0x289407b74ceb8e19031f5e56178595f8707ebcde7698979575f6effa9918dd79"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 2095418,
+      "source_fee_raw": "31483380722582",
+      "source_tx": "0x403928d458c678a1c755ead003b24719586e859f9cb0c20da5b196c6b6944e9b"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 2120886,
+      "source_fee_raw": "31864817764825",
+      "source_tx": "0x2ec7a210c04778f99612ecd9befe32d07a7c4412c0e69a419e54a26b5dd8a3a1"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 1974468,
+      "source_fee_raw": "29668032604034",
+      "source_tx": "0x3a5f0a342b3e6173d7d4944e2783497bfcaf033010fe2d80d49d3ae9cafbd435"
+    },
+    {
+      "effective_gas_price_wei": 23565155562,
+      "gas_used": 2225278,
+      "source_fee_raw": "52439073941169510",
+      "source_tx": "0x2a2a7a7f1c51a9269d80bf0a955684d868edf4747c5216b9e8bcbd0adbcc9edd"
+    },
+    {
+      "effective_gas_price_wei": 2418664145,
+      "gas_used": 919668,
+      "source_fee_raw": "2224407054145034",
+      "source_tx": "0x3593d57e88c8c6147376481c4836a0d73eaa4e2b3099fc018db1d86e4c10f482"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 271205,
+      "source_fee_raw": "4093537020421",
+      "source_tx": "0xdeca96bdb7346453bd004b4bfd912cca8986790f5bed4e90c44d067ef16bb93e"
+    },
+    {
+      "effective_gas_price_wei": 50000000000,
+      "gas_used": 272238,
+      "source_fee_raw": "13611927333859232",
+      "source_tx": "0x60e7bb1a5cf0d6ad597e863db82cac95442bacede295359ff0d5c56b8c449101"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 255054,
+      "source_fee_raw": "3852372112721",
+      "source_tx": "0x1c01b40ae974c470465487b3cd4696ba6052f37e2737923cc1eb767873ffa07d"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 255118,
+      "source_fee_raw": "3855282948365",
+      "source_tx": "0x778f8660c9ad912f1799ed5bf23d96acd3da07c757903710ddf2f5739029681f"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 255082,
+      "source_fee_raw": "3854742948365",
+      "source_tx": "0xf94d80fe46075e98c0ba59c05e63ded5d93a281e4ed257f51c5c96fb139610c5"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 255150,
+      "source_fee_raw": "3853044237637",
+      "source_tx": "0x9184b682c7a2f81af7e4a6cdb2d03293658f22462bfc011fba7eb1982f010a12"
+    },
+    {
+      "effective_gas_price_wei": 105000000,
+      "gas_used": 230053,
+      "source_fee_raw": "24194726815672",
+      "source_tx": "0x4ba43ca5712bad2df0916f1c407d3a1a811dd1e120fab3f9482b27245b537407"
+    },
+    {
+      "effective_gas_price_wei": 3000000000,
+      "gas_used": 277632,
+      "source_fee_raw": "832932088280052",
+      "source_tx": "0x16a834864c625c521dcbfe647a375db86f0fe4055471e5bcb5ca2de8067e4ff6"
+    },
+    {
+      "effective_gas_price_wei": 3000000000,
+      "gas_used": 261493,
+      "source_fee_raw": "784514416188093",
+      "source_tx": "0x04ffefbed93e3faa4cb4d16631e414606b6c50ceb156e5dc770c3088dc16c8d4"
+    },
+    {
+      "effective_gas_price_wei": 3000000000,
+      "gas_used": 261477,
+      "source_fee_raw": "784461335071687",
+      "source_tx": "0x4adcd7bc7137e1a11ed04858ae9497479097bb06c791f525c0eddb906aef7e0c"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 278441,
+      "source_fee_raw": "4206090496627",
+      "source_tx": "0x01feef9190f92739237acffa8d708af7b1888c936fb498c042813ca196b23f82"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 261353,
+      "source_fee_raw": "3947938288676",
+      "source_tx": "0xf1c68198b93ebfefd38c3e85ee0d7fde813e92d75159cf2bacb85bf7236c43a8"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 261417,
+      "source_fee_raw": "3950318578426",
+      "source_tx": "0x60bd1a8160548e460a0747c35fa1fb53c93453e2acf8d49b55a07aea5755fcb3"
+    },
+    {
+      "effective_gas_price_wei": 2419152201,
+      "gas_used": 829125,
+      "source_fee_raw": "2005828514325510",
+      "source_tx": "0xc7a2e7f39f182091b5464ca466ee6f354f126b3e4812a9c648e8e03d31918df3"
+    },
+    {
+      "effective_gas_price_wei": 3000000000,
+      "gas_used": 437547,
+      "source_fee_raw": "1312725997909554",
+      "source_tx": "0x4cf8c4d1f98efaabac0fc32078105472a582eda3d7ef39c168ac6270fb2afee5"
+    },
+    {
+      "effective_gas_price_wei": 50000000000,
+      "gas_used": 272178,
+      "source_fee_raw": "13609006680433926",
+      "source_tx": "0x1b6f942e5f6a97d4475c4f9dd6567286d1f8636476412dd7dd03b1d4dd7ace87"
+    },
+    {
+      "effective_gas_price_wei": 50000000000,
+      "gas_used": 272238,
+      "source_fee_raw": "13611997623747389",
+      "source_tx": "0x3b34886ee2b01edbae7a11bea59fa94bbb219e7a9025612ff1991c1a9f225566"
+    },
+    {
+      "effective_gas_price_wei": 50000000000,
+      "gas_used": 271954,
+      "source_fee_raw": "13597791249988807",
+      "source_tx": "0xd9d937086a12ede75759ac421b2d93180026fafa857a5da53efa9b7cc16f6d5c"
+    },
+    {
+      "effective_gas_price_wei": 50000000000,
+      "gas_used": 272046,
+      "source_fee_raw": "13602382012625237",
+      "source_tx": "0x80eb76f24374c0e1b73eec7d8f7811a2ec04439ef468a7bdf0fb2aa7b5133933"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 272102,
+      "source_fee_raw": "4164117243839",
+      "source_tx": "0x0aaad1ec2897fc2c6499a817a1c3ba4b9633dfd951865f944aed9e43123c2e8d"
+    },
+    {
+      "effective_gas_price_wei": 3000000000,
+      "gas_used": 205905,
+      "source_fee_raw": "617750454286207",
+      "source_tx": "0xe69dbbabd1dda7f0a7114018e97930f683abcca66e80aded537576dcf3d990fa"
+    },
+    {
+      "effective_gas_price_wei": 3000000000,
+      "gas_used": 272186,
+      "source_fee_raw": "816574024630252",
+      "source_tx": "0xd25b9174d975e9ce263c19df4be2e6cba0f658a63806240b1ba5b3c076830c9f"
+    },
+    {
+      "effective_gas_price_wei": 5000000000,
+      "gas_used": 271977,
+      "source_fee_raw": "1359894646869925",
+      "source_tx": "0x4d1ff022e6df880aa0b2fb4bfe48f506c74e0423229c1f531fd55e14f348d725"
+    },
+    {
+      "effective_gas_price_wei": 50000000000,
+      "gas_used": 272166,
+      "source_fee_raw": "13608309068336925",
+      "source_tx": "0x6acdb87befdeb3e3c6aa5801e6d5dd05c577e9f7580e1cdc44d23af13dee44a5"
+    },
+    {
+      "effective_gas_price_wei": 50000000000,
+      "gas_used": 271229,
+      "source_fee_raw": "13561460182817326",
+      "source_tx": "0x52d3826b7b3d16c42865cfd390dc31bfd2e59199f6636763147e2fc599cff2ff"
+    },
+    {
+      "effective_gas_price_wei": 5000000000,
+      "gas_used": 272178,
+      "source_fee_raw": "1360901588959774",
+      "source_tx": "0x7bae0eddc6b46cb813b239395bc4ca36436fad5324b6e63e34cd7712916bd0e1"
+    },
+    {
+      "effective_gas_price_wei": 50000000000,
+      "gas_used": 272230,
+      "source_fee_raw": "13611511692017674",
+      "source_tx": "0x1f350632e15daa2d6e36b40d69915490d0049e7775646bc39c0e94cefdef162c"
+    },
+    {
+      "effective_gas_price_wei": 5000000000,
+      "gas_used": 571548,
+      "source_fee_raw": "2857760612346624",
+      "source_tx": "0x99032c2e7b2d0508ac0cf39337bc095488cf85dfa074d111375eb418c7119648"
+    },
+    {
+      "effective_gas_price_wei": 3000000000,
+      "gas_used": 272214,
+      "source_fee_raw": "816653779293316",
+      "source_tx": "0xa17153919327f505f24fcda7dfdff113b557c498a2695961a34a26d76adebfec"
+    },
+    {
+      "effective_gas_price_wei": 5000000000,
+      "gas_used": 586182,
+      "source_fee_raw": "2930931488374221",
+      "source_tx": "0x736ec30837f18b6fbd5b001cab9ce02d2ba2627aa0e2a095e439dca59367322e"
+    },
+    {
+      "effective_gas_price_wei": 3000000000,
+      "gas_used": 586186,
+      "source_fee_raw": "1758579320097840",
+      "source_tx": "0x4101e4590072f370493473d0de585088b3134c96ae9054689e9ed2d44c9be107"
+    },
+    {
+      "effective_gas_price_wei": 3000000000,
+      "gas_used": 570374,
+      "source_fee_raw": "1711142965450128",
+      "source_tx": "0xe1fed08c3c6666a659a7f8992eb5cfb8f6a9ac84447b9b47e437a767c7204c43"
+    },
+    {
+      "effective_gas_price_wei": 41531348510,
+      "gas_used": 846593,
+      "source_fee_raw": "35160172918026636",
+      "source_tx": "0x69d184fec48a5443f05e198c28924b818ac7c982719525533f9abf48e68315cb"
+    },
+    {
+      "effective_gas_price_wei": 2488941234,
+      "gas_used": 757144,
+      "source_fee_raw": "1884510910575902",
+      "source_tx": "0x5fd7598a8c56fa39f4896e91d148c406b98708277ed18460126d720762f9f8d4"
+    },
+    {
+      "effective_gas_price_wei": 2551335212,
+      "gas_used": 740417,
+      "source_fee_raw": "1889077202483507",
+      "source_tx": "0xaf36f8dd3faf958ba93752e04ebeb77fdb8155a0b3527bccafe91e628b9b6160"
+    },
+    {
+      "effective_gas_price_wei": 3000000000,
+      "gas_used": 517115,
+      "source_fee_raw": "1551358516603106",
+      "source_tx": "0x7915b4343c6d249bcad9e10132d36976c627e614fe3b8e6050b844a2e32cd7c4"
+    },
+    {
+      "effective_gas_price_wei": 3000000000,
+      "gas_used": 569276,
+      "source_fee_raw": "1707851870334678",
+      "source_tx": "0xe20b1e7f4b12cc787dc0c46311337d4224775692179d0a40eeab7ea2cb99ef2b"
+    },
+    {
+      "effective_gas_price_wei": 38713381220,
+      "gas_used": 787367,
+      "source_fee_raw": "30481665413593985",
+      "source_tx": "0xc6dee2e93cc5de7cc492cedc5847812b0e70a3f331568e97634036073ff4afeb"
+    },
+    {
+      "effective_gas_price_wei": 2689563805,
+      "gas_used": 676205,
+      "source_fee_raw": "1818712266641962",
+      "source_tx": "0x60cea371d0d0b52716e174e98f68d97259f45a7cd9860ece0ab0621c28a2e772"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 906516,
+      "source_fee_raw": "13616391584333",
+      "source_tx": "0xa275552ab003c0d623816538edb502513b59dbd031a6b6ac1692fed47f435d3a"
+    },
+    {
+      "effective_gas_price_wei": 1380959732,
+      "gas_used": 2190022,
+      "source_fee_raw": "3024350839879860",
+      "source_tx": "0x53daf5da658b07d4eefbfef04675c895ea471250d59d509cbcb7ded058644d34"
+    },
+    {
+      "effective_gas_price_wei": 5000000000,
+      "gas_used": 596956,
+      "source_fee_raw": "2984797090555163",
+      "source_tx": "0xa1fb4ec42b24c79ddac9f6ca1ca1baba353e125a8b987e94ed29a5187a4d104f"
+    },
+    {
+      "effective_gas_price_wei": 3000000000,
+      "gas_used": 459191,
+      "source_fee_raw": "1377602496916606",
+      "source_tx": "0x89fa3d92de930ae7365253fff05254b968204096deea7b9bcf934367d7b5e07d"
+    },
+    {
+      "effective_gas_price_wei": 3000000000,
+      "gas_used": 438531,
+      "source_fee_raw": "1315621908774390",
+      "source_tx": "0xf582dcdb23d11628714590e3f010a5c6ab53d1189877514dd8203d45d1c81877"
+    },
+    {
+      "effective_gas_price_wei": 16355621802,
+      "gas_used": 831199,
+      "source_fee_raw": "13594781158619909",
+      "source_tx": "0x89ae779efff984f7e5f1b488aa0f4d5aff2a56252222bfbccdd5505b5385052b"
+    },
+    {
+      "effective_gas_price_wei": 20000000000,
+      "gas_used": 422698,
+      "source_fee_raw": "8453969048449260",
+      "source_tx": "0x4f403560ccfeed1a1169509659edabc53f10d87e6094fd93b059dca9959666c7"
+    },
+    {
+      "effective_gas_price_wei": 6304172,
+      "gas_used": 3461451,
+      "source_fee_raw": "21891146272221",
+      "source_tx": "0x3024e40da378ec69d634bef56bed347787692b5cf06ad4700a6746fc3f24fa33"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 366720,
+      "source_fee_raw": "5530189259613",
+      "source_tx": "0xbac51e0f383854ba1576193c48493bbacf7358224382a061d80e5b69ac608675"
+    },
+    {
+      "effective_gas_price_wei": 15004517,
+      "gas_used": 332424,
+      "source_fee_raw": "5017462222739",
+      "source_tx": "0x28a7011e65db86d8e495768bcad0f2c5e0fa0f2246346c28d581373f0d118120"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 332456,
+      "source_fee_raw": "5017759315875",
+      "source_tx": "0x495db72c3756322ecdb4e00b4d800bf313ef429afe022b7b322572c69ffcd079"
+    },
+    {
+      "effective_gas_price_wei": 6300000,
+      "gas_used": 1386820,
+      "source_fee_raw": "8792787813138",
+      "source_tx": "0x5b2f775ed187dfffcc8bc01b82c387f035362cf07b6001a200eb094e79961af9"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 420785,
+      "source_fee_raw": "6353204510641",
+      "source_tx": "0xd249a940e33dca8637a502c5aca447732f31cce7c0da199c150a059ad8b2d14e"
+    },
+    {
+      "effective_gas_price_wei": 15087161,
+      "gas_used": 422899,
+      "source_fee_raw": "6452472171515",
+      "source_tx": "0xd813b4c6f3cda858ac930cf2e70245e8f4cc22f0c991b463a76ee067471ea73c"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 405799,
+      "source_fee_raw": "6167049635218",
+      "source_tx": "0x3cfc8957422dcc2f07531479b2cb11b62afa9680393083b832a6e46403ede484"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 405895,
+      "source_fee_raw": "6168489635218",
+      "source_tx": "0xd571df5cd58ff8a4e550533ee8289ecf0cc858769c83b01c51b5cf27acfe1c6a"
+    },
+    {
+      "effective_gas_price_wei": 50000000000,
+      "gas_used": 251848,
+      "source_fee_raw": "12592469336002305",
+      "source_tx": "0x9fcb77ce26880695bffc37b23c2dd73e21b37f8fc1db46b089d4ba3372491191"
+    },
+    {
+      "effective_gas_price_wei": 5000000000,
+      "gas_used": 251836,
+      "source_fee_raw": "1259248166222267",
+      "source_tx": "0xa8137316562911f4aee7d12ccfc66a4f7824ce4cb0df77361d70ea1ede7eaddf"
+    },
+    {
+      "effective_gas_price_wei": 15002347,
+      "gas_used": 421805,
+      "source_fee_raw": "6368308229318",
+      "source_tx": "0xab00673c922549ef8796d111fe4288bd7e480f2395690f66042160d6e0ef8e1e"
+    },
+    {
+      "effective_gas_price_wei": 15009137,
+      "gas_used": 403655,
+      "source_fee_raw": "6098592918576",
+      "source_tx": "0xc00b2c947ad28574e3a384c31747f1564d6d57fbf88c009cb43cab69c4ecf56d"
+    },
+    {
+      "effective_gas_price_wei": 5000000000,
+      "gas_used": 272122,
+      "source_fee_raw": "1360679101393528",
+      "source_tx": "0x4f8f84350a7b3fad9f1e540af5f00e225e608772e0b7b072fa56db6c1ed88724"
+    },
+    {
+      "effective_gas_price_wei": 50000000000,
+      "gas_used": 272206,
+      "source_fee_raw": "13610365629312717",
+      "source_tx": "0x349f80a1de5b40faec995145928b23f386eedba3daf18f9407c05759c4656545"
+    },
+    {
+      "effective_gas_price_wei": 3000000000,
+      "gas_used": 272166,
+      "source_fee_raw": "816562742792449",
+      "source_tx": "0xf766ff200e70741a3f1f8281685d6bb2c92b1252ed2866f414b5a17d249ad4ad"
+    },
+    {
+      "effective_gas_price_wei": 2582024775,
+      "gas_used": 757905,
+      "source_fee_raw": "1957068095037038",
+      "source_tx": "0x0a0cbbc8560a5ff7db4bb82b716cf1193020bc80ac8a38b68e4438fffaa1eba9"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 995727,
+      "source_fee_raw": "15019970794329",
+      "source_tx": "0x48c92d5669c2d7d6ea40098118532ec17ba55346606df252eb5ba17bb93741ef"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 828463,
+      "source_fee_raw": "12467502794419",
+      "source_tx": "0x373e039fe877fa32060d03a597002492dfb9109b09794ea38efcf850f442ebeb"
+    },
+    {
+      "effective_gas_price_wei": 15022990,
+      "gas_used": 828244,
+      "source_fee_raw": "12480648276848",
+      "source_tx": "0x5a8ce911be3b0768ca5df81183409da5c701d99d07112b4974e3a9d5aaaeb7e7"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 828244,
+      "source_fee_raw": "12460063723859",
+      "source_tx": "0x530bb7d68c4a3237dbe88321b6d4005160a493323ab356c99f94ee436ca9dff6"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 826496,
+      "source_fee_raw": "12433843723859",
+      "source_tx": "0xe24fe1f4c55744365829911817181a46814a71fa271b111d48e24b95211ed16e"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 271205,
+      "source_fee_raw": "4095795205720",
+      "source_tx": "0x160645524412ae61a3c4446157780d29967c54c88c6b606f51ca7b7f873f274e"
+    },
+    {
+      "effective_gas_price_wei": 105000000,
+      "gas_used": 613815,
+      "source_fee_raw": "64494610675036",
+      "source_tx": "0x347cc30bd2b27bdc1e8d0fddb8892ec48e32154fbacffa9207285a37cba847f5"
+    },
+    {
+      "effective_gas_price_wei": 50000000000,
+      "gas_used": 247164,
+      "source_fee_raw": "12358225629668756",
+      "source_tx": "0xaa76b43887e17e41bc0970fa0ba6966b9fc5bd87204975bed50a29f7205d9994"
+    },
+    {
+      "effective_gas_price_wei": 5000000000,
+      "gas_used": 566287,
+      "source_fee_raw": "2831443865164408",
+      "source_tx": "0xd20603d4f2869494365f6668c4495fbe5c65817a505446540ccd08949cc7825e"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 495108,
+      "source_fee_raw": "7429456045371",
+      "source_tx": "0xc26d2e566724afb4f18957130f055ec8092cf83cb270b267f715f9e4a8ac73ab"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 524727,
+      "source_fee_raw": "7874561786911",
+      "source_tx": "0xea12fcf0b914039383d07efd40b8a3ba04c27ea196c2491b69c72ad8557dcfea"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 511439,
+      "source_fee_raw": "7675241021640",
+      "source_tx": "0x970e5f4db51303acd563f9777cc2fce590107a2c1b61a411063b5564da4f5961"
+    },
+    {
+      "effective_gas_price_wei": 5931450133,
+      "gas_used": 601186,
+      "source_fee_raw": "3565908194817847",
+      "source_tx": "0xc4c9aa3d4bb3953ad6ea825e81be2cdbeca3e5373680373db162205efe70a1ab"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 522173,
+      "source_fee_raw": "7835784553582",
+      "source_tx": "0x9186eead26c3158f6edcf8f96c394f8a20cffe57d2c317030302b0124925faed"
+    },
+    {
+      "effective_gas_price_wei": 36006855,
+      "gas_used": 495381,
+      "source_fee_raw": "17848695725810",
+      "source_tx": "0x40321bc20741ca0ad2856bea020bd890b03934007d0479104088484011f178c5"
+    },
+    {
+      "effective_gas_price_wei": 37720577,
+      "gas_used": 495325,
+      "source_fee_raw": "18694357378010",
+      "source_tx": "0xa4b9f6814cd67e67ccdd482ec8eb50c809e62ac56cf489003800b2097cc5ffb1"
+    },
+    {
+      "effective_gas_price_wei": 66410111,
+      "gas_used": 2193942,
+      "source_fee_raw": "145757782060820",
+      "source_tx": "0x95bbd56d9faeb6686a7ae1955b8750b89cd66aab7de8004ccac86dc61feaf406"
+    },
+    {
+      "effective_gas_price_wei": 20000000000,
+      "gas_used": 593290,
+      "source_fee_raw": "11865845739602652",
+      "source_tx": "0x0519159da03a4d02baca2ba7fd4fbe4c9172775d52dd64cf8537c01c95192cb6"
+    },
+    {
+      "effective_gas_price_wei": 15030166,
+      "gas_used": 584917,
+      "source_fee_raw": "8836184038760",
+      "source_tx": "0x51a5d593c5c8315babe757bc8e7c0d4e03a9c4d2a21a817768c8922f5120eee4"
+    },
+    {
+      "effective_gas_price_wei": 5000000000,
+      "gas_used": 590355,
+      "source_fee_raw": "2951820500810123",
+      "source_tx": "0x3746b9938f5a4b97537de7e7f0975972097042ea42a3512cb3436b133123fd19"
+    },
+    {
+      "effective_gas_price_wei": 50000000000,
+      "gas_used": 579780,
+      "source_fee_raw": "28989046263019548",
+      "source_tx": "0xe2d470a006a4813cdf456846aa4b63161bc6da0b2dae75105650327c8e088139"
+    },
+    {
+      "effective_gas_price_wei": 15023893,
+      "gas_used": 598831,
+      "source_fee_raw": "9041509795271",
+      "source_tx": "0x609598216c489fa4affc1690256200b4f286bc6ca02e7b81350eb6485f09660b"
+    },
+    {
+      "effective_gas_price_wei": 4031757148,
+      "gas_used": 841454,
+      "source_fee_raw": "3392589349909742",
+      "source_tx": "0xac19871d2dc16e69d14ca2ca657f2122ed9d53e468fe4903392004e777064638"
+    },
+    {
+      "effective_gas_price_wei": 5000000000,
+      "gas_used": 589727,
+      "source_fee_raw": "2948682668071660",
+      "source_tx": "0x956128165802df32322fe836ac1a36defdaece6c665b6a4a4f55298b044993dc"
+    },
+    {
+      "effective_gas_price_wei": 50000000000,
+      "gas_used": 556886,
+      "source_fee_raw": "27844345453251929",
+      "source_tx": "0xa21511e802067796ea072788114a2040467dd398d09c60eded11ed0e398319dd"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 689545,
+      "source_fee_raw": "10388743588952",
+      "source_tx": "0xec62370e32a4fa2144ab3f23448cbc8ee887b9bd4785da815eead6f953478fce"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 834250,
+      "source_fee_raw": "12539562563985",
+      "source_tx": "0xb383cb92014c87a963c29c736984e2457046a68450091ca2f87bdbda32a85514"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 593522,
+      "source_fee_raw": "8945995645606",
+      "source_tx": "0x04633b44ca0c5858896cf1e49bddfe0a931f227b79dfe4da08009d76e2f4b34c"
+    },
+    {
+      "effective_gas_price_wei": 15066844,
+      "gas_used": 848021,
+      "source_fee_raw": "12803351126453",
+      "source_tx": "0xb2bb1ffc4ef8f66440be9741b8a649dc6dda4eb460c23eacf466244ff7e043f5"
+    },
+    {
+      "effective_gas_price_wei": 47659666542,
+      "gas_used": 678124,
+      "source_fee_raw": "32319202653803767",
+      "source_tx": "0x8eca7ea0926327c5bb867591c15fcfe2be54440246b620c2125265739fd3a1e5"
+    },
+    {
+      "effective_gas_price_wei": 4727476936,
+      "gas_used": 688655,
+      "source_fee_raw": "3255633921462174",
+      "source_tx": "0x1437199beea67158dd3e688d74e9c4ba881c01a116ce3486763e2c2934834f1a"
+    },
+    {
+      "effective_gas_price_wei": 5000000000,
+      "gas_used": 589886,
+      "source_fee_raw": "2949462220730688",
+      "source_tx": "0xdb253807e1439662b279ec4d63a9dd92dd04cec0d0d7dca91e5c623f438e3b85"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 754395,
+      "source_fee_raw": "11342758174650",
+      "source_tx": "0x777b53dd2c763af0ed9c671762cb66752d4394318522e1f408c4d7d54dfd2126"
+    },
+    {
+      "effective_gas_price_wei": 4974472113,
+      "gas_used": 619885,
+      "source_fee_raw": "3083625107816676",
+      "source_tx": "0x01311e8c8ef867f40496705e4741d4b8ca101f3c7dd7a7df28c887a1c9682899"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 705855,
+      "source_fee_raw": "10613384699108",
+      "source_tx": "0xd490ee9cf365bcbe72d728c62a2fc071141ac07b31b5f81b8b65586285f76b21"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 742471,
+      "source_fee_raw": "11162801386480",
+      "source_tx": "0x6669cf9f8b6bd0a002ede2207624d9f04cfd64a452bbb3a69950a8081f302e18"
+    },
+    {
+      "effective_gas_price_wei": 16542809331,
+      "gas_used": 834632,
+      "source_fee_raw": "13807170649001869",
+      "source_tx": "0xa8fc2feee4e94139fd0d9ab2a1a1a14ce2e4db117e530e7fe2c0b75528fd8139"
+    },
+    {
+      "effective_gas_price_wei": 5000000000,
+      "gas_used": 345216,
+      "source_fee_raw": "1726089133788616",
+      "source_tx": "0xd9fcb8b1d862ab0d90902c3c03342975593d77e489da70c70b53ad07412b1318"
+    },
+    {
+      "effective_gas_price_wei": 5000000000,
+      "gas_used": 328084,
+      "source_fee_raw": "1640429129466944",
+      "source_tx": "0xdffb40acdc7bc1edcb4aee247d09c315fa0af15bf1d2cca3069c3be9fba617aa"
+    },
+    {
+      "effective_gas_price_wei": 5000000000,
+      "gas_used": 345252,
+      "source_fee_raw": "1726268853713381",
+      "source_tx": "0x48c16d709f8eb1966cf38236ce8706215b95a2450e5b2732a965b049d993c2f6"
+    },
+    {
+      "effective_gas_price_wei": 35000000,
+      "gas_used": 446687,
+      "source_fee_raw": "15641100161631",
+      "source_tx": "0x1aa6232808c5c21a036fcd604d543003773ffb75add364fb6b062c2221b34d76"
+    },
+    {
+      "effective_gas_price_wei": 15000000,
+      "gas_used": 595864,
+      "source_fee_raw": "8941404559930",
+      "source_tx": "0x873dd6cb34f20f26618bc96ae0c2a3dd65d3ef493c5a34cb714c2b13cda64284"
+    }
+  ],
+  "source_fee_raw": {
+    "max": "52439073941169510",
+    "min": "2324840628843",
+    "p25": "5667228118105",
+    "p50": "12615026059592",
+    "p90": "10956161318124143",
+    "p99": "36020487737110017"
+  },
+  "sum_source_fee_raw": "1272221139259983738"
+}

@@ -1,0 +1,9 @@
+{
+  "v3_swaps": "count()\tuniqExact((pool_address, tx_hash, log_index))\tuniqExact(pool_address)\tmin(block_time)\tmax(block_time)\tcountIf(isNull(block_time))\tcountIf(equals(removed, 1))\n13098470\t10256628\t9279\t2025-10-01 00:16:01.000\t2026-08-14 14:59:53.000\t0\t0\n",
+  "v2_swaps": "count()\tuniqExact((pair_address, tx_hash, log_index))\tuniqExact(pair_address)\tmin(block_time)\tmax(block_time)\tcountIf(isNull(block_time))\tcountIf(equals(removed, 1))\n1728962\t1715843\t24750\t2026-02-23 09:59:39.000\t2026-08-14 14:59:49.000\t224346\t0\n",
+  "v3_mints": "count()\tuniqExact(pool_address)\tmin(block_time)\tmax(block_time)\tcountIf(isNull(block_time))\tcountIf(equals(removed, 1))\n1133303\t7\t2026-02-19 09:06:39.000\t2026-05-20 11:35:23.000\t53525\t0\n",
+  "v3_burns": "count()\tuniqExact(pool_address)\tmin(block_time)\tmax(block_time)\tcountIf(isNull(block_time))\tcountIf(equals(removed, 1))\n2909485\t7\t2026-02-19 09:06:07.000\t2026-05-20 11:35:25.000\t85016\t0\n",
+  "v3_collects": "count()\tuniqExact(pool_address)\tmin(block_time)\tmax(block_time)\tcountIf(equals(removed, 1))\n7719230\t3\t2026-02-19 00:00:03.000\t2026-05-20 23:59:19.000\t0\n",
+  "discovered_pools": "count()\tuniqExact(pool_address)\tcountIf(equals(pool_type, \\'v2\\'))\tcountIf(equals(pool_type, \\'v3\\'))\tcountIf(equals(has_weth_leg, 1))\tmin(created_block)\tmax(created_block)\n80007\t80002\t59295\t20702\t61423\t0\t49964958\n",
+  "raw_logs": "count()\tuniqExact(address)\tuniqExact(topic0)\tmin(block_time)\tmax(block_time)\tcountIf(isNull(block_time))\tcountIf(equals(removed, 1))\n18956417\t34063\t12\t2025-10-01 00:16:01.000\t2026-08-14 14:59:53.000\t289215\t0\n"
+}

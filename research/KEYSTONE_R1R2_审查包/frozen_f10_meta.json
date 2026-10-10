@@ -1,0 +1,44 @@
+{
+  "features": [
+    "impact_residual",
+    "ineffective_buying",
+    "liq_fragility_score",
+    "part_exhaust_score",
+    "accel"
+  ],
+  "hgb_params": {
+    "max_depth": 3,
+    "max_iter": 80,
+    "learning_rate": 0.05,
+    "random_state": 0
+  },
+  "thresholds": {
+    "train_q40": 0.8284417809694159,
+    "train_q50": 0.8624456161522396,
+    "train_q60": 0.8886893755257821
+  },
+  "primary_gate": "train_q50",
+  "train_n_ks_live_pass": 308,
+  "model_sha256": "e1c68ae160004cd80711a7ae5461ee1d3d8e1f4359aebf1f890c25b74c277c5c",
+  "feature_schema_sha256": "3169ef58a34ebd33990a172404a9f70b5193d13af6cbb8c8f981b758dfe624a1",
+  "folds": [
+    {
+      "fold": 2,
+      "train_n": 150,
+      "thr_q50": 0.7949251922847386
+    },
+    {
+      "fold": 3,
+      "train_n": 232,
+      "thr_q50": 0.839225668550745
+    }
+  ],
+  "recipe": "R1_F10 identical; regenerated because R1 did not persist pickle",
+  "v1_match_accept_rate": 0.5,
+  "v1_early_ret_threshold": 1.1178941062260979,
+  "v3_thresholds": {
+    "q60": -1.151769621079575,
+    "q70": 49.92726635060728,
+    "q80": 263.6701904259472
+  }
+}

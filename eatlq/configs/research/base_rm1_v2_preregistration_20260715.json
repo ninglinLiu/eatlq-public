@@ -1,0 +1,143 @@
+{
+  "schema_version": 2,
+  "experiment": "RM1_KEYSTONE_REALMONEY_CALIBRATION_V2",
+  "frozen_before_dryrun": true,
+  "research_only": true,
+  "posture": {
+    "live_broadcast": "DISABLED",
+    "live_allowed": false,
+    "self_go_allowed": false,
+    "signing_allowed": false,
+    "send_rpc_allowed": false,
+    "executor_must_remain_stopped": true,
+    "strategy_must_remain_stopped": true,
+    "per_arm_roundtrips": 1,
+    "second_position_without_new_human_arm": "REJECT_AND_KILL"
+  },
+  "source_anchors": {
+    "reaudit10_preregistration": {
+      "path": "configs/research/base_reaudit10_seconds_preregistration_20260715.json",
+      "sha256": "c942e7f286f9dda5cc384f0c91f4e98172d2e6307fd80e66869817580ca2534b",
+      "notional_weth_wei": "1000000000000000"
+    },
+    "keystone_exit_source": {
+      "path": "scripts/research/base_lefttail/keystone_live.py",
+      "sha256": "626eaca39d43bf52049bb989e4579777a4bf60d1ea7d0e40730944178177a745",
+      "lines": "27-30,86-98",
+      "hard_stop_expression": "log(0.5)",
+      "trailing_drawdown_fraction": 0.35,
+      "maximum_hold_blocks": 7200
+    },
+    "atomic_roundtrip_source": {
+      "path": "scripts/research/base_b4/AtomicRoundTrip.sol",
+      "sha256": "48d5a6633c86c0075ec1ff163d4f0914b568691c74407d17d56c4c83a89c575a"
+    },
+    "rm1_v2_spec": {
+      "path": "reports/RM1_task_spec_keystone_realmoney_calibration_20260715.md",
+      "sha256": "fb46f8c7c3bd6df5513bc5d66304e35df5089c56c2af940f480a24974a8493df"
+    }
+  },
+  "chain": {
+    "chain_id": 8453,
+    "native_accounting_asset": "WETH",
+    "weth_address": "0x4200000000000000000000000000000000000006",
+    "notional_weth_wei": "1000000000000000",
+    "usd_conversion_in_core_estimands": false,
+    "chainlink_dashboard_only": {
+      "feed": "0x71041dDdad3595F9CEd3DcCFBe3D1F4b0a16Bb70",
+      "feed_name": "ETH / USD",
+      "network": "Base Mainnet",
+      "read_at_corresponding_block": true,
+      "human_confirmation_required_before_arm": true,
+      "official_source": "https://data.chain.link/feeds/base/mainnet/eth-usd"
+    }
+  },
+  "execution": {
+    "dex": "Uniswap V3",
+    "router_whitelist": [
+      "0x2626664c2603336E57B271c5C0b26F421741e481"
+    ],
+    "quoter_v2": "0x3d4e44Eb1374240CE5F1B871ab261CD16335B76a",
+    "weth_quoted_only": true,
+    "leverage_allowed": false,
+    "pre_broadcast_exact_eth_call_required": true,
+    "pre_broadcast_revert_action": "REJECT_AND_KILL",
+    "d5": {
+      "atomic_buy_sell_eth_call_required": true,
+      "buy_ok_required": true,
+      "sell_ok_required": true,
+      "router_integer_equality_required": true,
+      "minimum_recovery_ratio_exclusive": 0.1,
+      "failure_action": "SKIP_UNSELLABLE_AND_KILL"
+    },
+    "quote_is_fill_evidence": false,
+    "missing_evidence_policy": "UNRESOLVED_NEVER_MINUS_ONE"
+  },
+  "exit_modes": {
+    "KEYSTONE": {
+      "hard_stop_return_fraction": -0.5,
+      "trailing_drawdown_from_peak_fraction": 0.35,
+      "maximum_hold_blocks": 7200,
+      "e_window_1800s": "EXCLUDED_NOT_REPLAYED"
+    },
+    "SHAKEDOWN": {
+      "rule": "fixed positive hold in blocks",
+      "human_arm_must_supply_exact_N": true,
+      "minimum_N_blocks": 1,
+      "maximum_N_blocks": 7200,
+      "dryrun_only_N_blocks": 1,
+      "live_default_N_blocks": null
+    }
+  },
+  "runtime_kill_switches": {
+    "d5_failed": true,
+    "prebroadcast_simulation_failed": true,
+    "broadcast_to_inclusion_timeout_seconds": 30,
+    "remaining_position_after_exit_must_equal_wei": "0",
+    "reject_entry_when_open_position_exists": true,
+    "reject_second_roundtrip_per_arm": true,
+    "each_trigger_stops_new_entries": true,
+    "flatten_intent_on_trigger_when_position_open": true
+  },
+  "pipeline_binary_gates": {
+    "prebroadcast_eth_call_green": true,
+    "d5_green": true,
+    "actual_inclusion_block_and_latency_required_for_real_run": true,
+    "exit_balance_must_equal_zero": true,
+    "all_kill_switches_dryrun_proven": true,
+    "existing_position_reject_proven": true
+  },
+  "per_trade_observation_flags": {
+    "absolute_entry_or_exit_slippage_gt_percent": 3.0,
+    "broadcast_to_inclusion_latency_gt_seconds": 30,
+    "broadcast_to_inclusion_latency_approx_blocks": 15,
+    "gap_lt_percentage_points": -5.0,
+    "shallow_pool_unresolved": "PIPELINE_BUG",
+    "batch_pass_fail_statistics": false
+  },
+  "dryrun_fixture": {
+    "selection_override": "latest human instruction requires a shallow-pool dry-run instead of the v2 spec's deep-pool example",
+    "classification": "historical shallow B3 WETH pool stress fixture; not a mature deep-pool fill claim",
+    "pool": "0x0019ed71f9eab03ce728738ff2381b92f6143092",
+    "target_token": "0x2bdcd40bab1ac0b8e124fbf9913032acc5e2584d",
+    "fee": 3000,
+    "entry_block": 42702284,
+    "entry_block_hash": "0xe05eca8302eba1c3acf2dd968ed0b5ef04f12d87ceb3fb39690a89a9c04abff7",
+    "exit_block": 42702285,
+    "pool_weth_at_entry_wei": "5146337904373897191",
+    "notional_share_of_pool_weth_exact": "1000000000000000/5146337904373897191",
+    "fixture_source": "tests/fixtures/base_reaudit10_golden_20260715.json"
+  },
+  "arm_requirements": {
+    "human_only": true,
+    "exactly_one_roundtrip": true,
+    "new_human_arm_required_after_any_open_or_close": true,
+    "wallet_address_required": true,
+    "rpc_endpoint_identity_required_but_url_forbidden_in_artifacts": true,
+    "router_whitelist_confirmation_required": true,
+    "chainlink_feed_confirmation_required": true,
+    "shakedown_N_required_when_mode_is_SHAKEDOWN": true,
+    "human_owned_broadcast_adapter_required": true,
+    "broadcast_adapter_in_this_delivery": false
+  }
+}

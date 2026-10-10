@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="720" viewBox="0 0 720 720" fill="none">
+  <defs>
+    <style>
+      .bg { fill: #0B0E14; }
+      .ring { fill: none; stroke: #1C2129; stroke-width: 2; }
+      .node { fill: #11151C; stroke: #2A2F36; stroke-width: 1; }
+      .t { fill: #FFF; font: 600 14px Inter, sans-serif; }
+      .s { fill: #9E9E9E; font: 400 11px Inter, sans-serif; }
+      .gold { fill: #F5A623; }
+      .arrow { stroke: #F5A623; stroke-width: 2.5; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#F5A623"/>
+    </marker>
+  </defs>
+
+  <rect width="720" height="720" class="bg" rx="12"/>
+  <text x="360" y="48" text-anchor="middle" class="s" style="letter-spacing:0.14em">PHASE 6 - RL-STYLE ITERATION</text>
+
+  <!-- guide ring -->
+  <circle cx="360" cy="360" r="220" class="ring"/>
+
+  <!-- center -->
+  <circle cx="360" cy="360" r="48" class="node"/>
+  <text x="360" y="356" text-anchor="middle" class="t" style="font-size:12px">EDGE</text>
+  <text x="360" y="372" text-anchor="middle" class="gold" style="font-size:11px">72% P</text>
+
+  <!-- nodes on hex ring (clockwise from top) -->
+  <g transform="translate(300,112)">
+    <rect width="120" height="56" rx="6" class="node"/>
+    <text x="60" y="24" text-anchor="middle" class="t" style="font-size:12px">Ingest</text>
+    <text x="60" y="42" text-anchor="middle" class="s">soak / dashcam</text>
+  </g>
+  <g transform="translate(490.5,222)">
+    <rect width="120" height="56" rx="6" class="node"/>
+    <text x="60" y="24" text-anchor="middle" class="t" style="font-size:12px">Label</text>
+    <text x="60" y="42" text-anchor="middle" class="s">tri / QC</text>
+  </g>
+  <g transform="translate(490.5,442)">
+    <rect width="120" height="56" rx="6" class="node"/>
+    <text x="60" y="24" text-anchor="middle" class="t" style="font-size:12px">Train</text>
+    <text x="60" y="42" text-anchor="middle" class="s">holdout gate</text>
+  </g>
+  <g transform="translate(300,552)">
+    <rect width="120" height="56" rx="6" class="node"/>
+    <text x="60" y="24" text-anchor="middle" class="t" style="font-size:12px">Paper</text>
+    <text x="60" y="42" text-anchor="middle" class="s">no BUY if below thr</text>
+  </g>
+  <g transform="translate(109.5,442)">
+    <rect width="120" height="56" rx="6" class="node"/>
+    <text x="60" y="24" text-anchor="middle" class="t" style="font-size:12px">Ledger</text>
+    <text x="60" y="42" text-anchor="middle" class="s">replay / audit</text>
+  </g>
+  <g transform="translate(109.5,222)">
+    <rect width="120" height="56" rx="6" class="node"/>
+    <text x="60" y="24" text-anchor="middle" class="t" style="font-size:12px">Diagnose</text>
+    <text x="60" y="42" text-anchor="middle" class="s">edge / worst</text>
+  </g>
+
+  <!-- clockwise arrows on r=220 ring -->
+  <path d="M 442.4 156.0 A 220 220 0 0 1 495.4 186.6" class="arrow"/>
+  <path d="M 577.9 329.4 A 220 220 0 0 1 577.9 390.6" class="arrow"/>
+  <path d="M 495.4 533.4 A 220 220 0 0 1 442.4 564.0" class="arrow"/>
+  <path d="M 277.6 564.0 A 220 220 0 0 1 224.6 533.4" class="arrow"/>
+  <path d="M 142.1 390.6 A 220 220 0 0 1 142.1 329.4" class="arrow"/>
+  <path d="M 224.6 186.6 A 220 220 0 0 1 277.6 156.0" class="arrow"/>
+</svg>

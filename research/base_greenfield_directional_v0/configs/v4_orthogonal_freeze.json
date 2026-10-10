@@ -1,0 +1,108 @@
+{
+  "status": "FROZEN_BEFORE_V4_RESULTS",
+  "role": "Base Uniswap New-Pool Narrow-Market Rescue Research Agent",
+  "phase": "V4_ORTHOGONAL_HYPOTHESIS_ROUND",
+  "parent_phase": "V3_NARROW_MARKET_RESCUE",
+  "parent_verdict": "LOTTERY_DEPENDENT_REJECT",
+  "venue_fixed": true,
+  "venue_rejection_forbidden": true,
+  "expand_search_after_failure_forbidden": true,
+  "one_shot_round": true,
+  "note": "Single pre-registered orthogonal round after V3. No iterative retune. If all fail, honest closeout.",
+  "universe": {
+    "chain": "base",
+    "dex": "uniswap_v3",
+    "quote_leg": "WETH",
+    "discovered_pools_filter": "pool_type='v3' AND has_weth_leg=1"
+  },
+  "calendar": {
+    "decision_start": "2025-10-01T00:00:00Z",
+    "decision_end": "2026-07-01T00:00:00Z",
+    "label_design_end_utc": "2025-12-01T14:30:00Z"
+  },
+  "age_anchors_seconds": {
+    "15-60m_NEGATIVE_CONTROL": 1800,
+    "1-6h": 10800,
+    "6-24h": 43200,
+    "1-3d": 172800,
+    "3-7d": 432000
+  },
+  "formal_buckets": ["1-6h", "6-24h", "1-3d", "3-7d"],
+  "negative_control_bucket": "15-60m_NEGATIVE_CONTROL",
+  "future_horizon_seconds": 21600,
+  "splits": {
+    "method": "salted_signal_hash",
+    "salt": "V4_RESEAL_20260720_ORTHOGONAL",
+    "label_design_frac": 0.2,
+    "dev_frac": 0.6,
+    "internal_holdout_frac": 0.1,
+    "untouched_frac": 0.1,
+    "embargo_days": 1,
+    "burn_v3_confirmation_from_v4_confirmation": true,
+    "v3_panel_path": "out_v3/panel/rescue_panel.parquet"
+  },
+  "banned_reuse_from_v3": {
+    "hypothesis_ids": [
+      "H_FLOW_PERSIST",
+      "H_LIQ_REGIME",
+      "H_PARTICIPANT",
+      "H_DEPLOYER_PIT",
+      "H_PATH_STATE",
+      "H_TRADEABLE_RISK_SPLIT",
+      "H_FULL_DUAL"
+    ],
+    "modeling_patterns": [
+      "pooled_soft_utility_blend_on_v3_feature_families",
+      "retune_thresholds_after_v3_holdout_peek"
+    ]
+  },
+  "capital": {
+    "initial_capital_usd": 1000.0,
+    "eth_usd_freeze": 3000.0,
+    "initial_weth": 0.3333333333333333,
+    "monthly_withdraw_target_usd": 1000.0,
+    "compound_profits": false,
+    "max_concurrent": 3,
+    "leverage_forbidden": true
+  },
+  "execution": {
+    "amount_in_wei": "16666666666666666",
+    "gas_weth_per_leg": 0.00008,
+    "economic_unsellable_recovery_floor": 0.10,
+    "depth_slippage_ceiling": 0.10
+  },
+  "tail_haircut": {
+    "method": "winsorize_positive_pnl_at_q95",
+    "miss_top_k": [1, 3, 5]
+  },
+  "oof": {
+    "n_folds": 5,
+    "embargo_seconds": 86400,
+    "utility_select_threshold_quantile": 0.70,
+    "top_k_per_decision_time": 2
+  },
+  "route_defaults": {
+    "hard_veto_future_unsellable_max": 0.35,
+    "hard_veto_liq_collapse_max": 0.40,
+    "sparse_select_quantile": 0.90,
+    "deployer_max_per_week": 1
+  },
+  "latchpi": {
+    "enabled": false,
+    "reason": "DATA_LINEAGE_INSUFFICIENT"
+  },
+  "phase0_gates_diagnostic_only": true,
+  "stop_research_on_phase0_gate_fail": false,
+  "deploy_allowed": false,
+  "allowed_verdicts": [
+    "ORTHOGONAL_EDGE_CONFIRMED",
+    "ORTHOGONAL_EDGE_NOT_CONFIRMED",
+    "LOTTERY_DEPENDENT_REJECT",
+    "EXECUTION_RISK_DOMINATES",
+    "INSUFFICIENT_INDEPENDENT_RIGHT_TAIL_EVENTS",
+    "DATA_LINEAGE_INSUFFICIENT",
+    "PROSPECTIVE_CONFIRMATION_REQUIRED"
+  ],
+  "source_feature_matrix": "out_v3/features/feature_matrix.parquet",
+  "source_labels": "out_v3/labels/dual_labels.parquet"
+}

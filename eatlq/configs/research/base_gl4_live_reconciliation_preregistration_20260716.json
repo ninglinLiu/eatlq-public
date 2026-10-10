@@ -1,0 +1,144 @@
+{
+  "schema_version": "base_gl4_live_reconciliation_preregistration_v1",
+  "frozen_at_utc": "2026-07-16T00:00:00Z",
+  "alpha_id": "AR-GL4-LIVE-RECON",
+  "scope": {
+    "chain_id": 8453,
+    "start_utc_inclusive": "2026-06-10T00:00:00Z",
+    "end_utc_inclusive": "2026-07-13T23:59:59Z",
+    "exclude": "Artifacts and work first created for GL/RM on or after 2026-07-14; pre-existing live evidence later cited by GL/RM remains eligible from its original source.",
+    "required_source_families": [
+      "services/executor/src",
+      "services/strategy",
+      "services/signal_bridge",
+      "scripts/live",
+      "mvp/diagnostics/live/live_ledger.csv",
+      "mvp/diagnostics/live/canary_state.json",
+      "all files matching *realized_pnl*",
+      "mvp/audits/keystone_eth_usd_pnl.json",
+      "logs/sprint075 through sprint079 and sprint086",
+      "mvp/runs",
+      "mvp/audits live/go-live/config-rebacktest/aggressive/execution-readiness/sprint-live-review/pilot/canary families",
+      "docs/keystone-go-live.md",
+      "configs live/canary families"
+    ]
+  },
+  "safety": {
+    "read_only": true,
+    "rpc_read_only": true,
+    "rpc_profile": "prettiest-blue-aura",
+    "forbidden": [
+      "send transaction",
+      "sign transaction",
+      "broadcast transaction",
+      "start executor",
+      "write live signals",
+      "write Redis",
+      "change live or canary runtime configuration",
+      "self-authorize GO"
+    ]
+  },
+  "corpus_completeness_rule": {
+    "method": "Build a path-level manifest of every regular file in the required source families, record size and SHA256, and parse every bounded text/JSON/CSV/log/source file rather than sample. Binary/model artifacts are hashed and their adjacent metadata plus code loading semantics are read; binary bytes are not interpreted as prose.",
+    "date_rule": "Use embedded event timestamps for event inclusion. File mtime is inventory metadata only and does not override an in-window embedded timestamp. Source/config state is reconstructed from contemporaneous audit snapshots, run logs, and git history where available.",
+    "quote_rule": "A quote, simulation, estimate, proposal, prepared transaction, or submitted hash without a successful receipt is never a fill."
+  },
+  "classification": {
+    "real_successful_fill": {
+      "all_required": [
+        "Contemporaneous evidence says dry_run=false or equivalently armed real execution.",
+        "A syntactically valid transaction hash exists on Base chain 8453.",
+        "eth_getTransactionReceipt returns a receipt with status=1.",
+        "Receipt transaction/log evidence proves a wallet-relevant asset movement for the claimed leg; a mere approval or unrelated transaction is not a trade."
+      ],
+      "attempt_not_fill": "dry_run=false with missing receipt, status=0, approval-only logs, or no claimed wallet asset movement.",
+      "paper_or_canary_dry": "dry_run=true, paper/shadow/simulation/QV2-only rows, or canary records without a matching successful real receipt and wallet asset movement.",
+      "unknown": "Insufficient evidence remains unknown and is excluded from real-fill aggregates, with the exclusion listed explicitly."
+    },
+    "cash_flow": {
+      "native_in_out": "Derive transaction value and native/WETH movements from the canonical transaction and receipt logs; normalize ETH and WETH 1:1 in WETH units while retaining the raw components.",
+      "token_in_out": "Decode ERC-20 Transfer logs using on-chain token decimals at the receipt block where available.",
+      "gas": "gas_used * effective_gas_price from the successful receipt, paid by tx.from; allocate each leg's gas to its matched round trip.",
+      "matching": "Match BUY and SELL legs by wallet, pool/token and contemporaneous position identity. Use FIFO only if multiple indistinguishable lots overlap. Do not realize unsold inventory.",
+      "realized_pnl_weth": "WETH/ETH proceeds minus WETH/ETH cost basis minus successful-leg gas. Failed attempts are reported separately and their gas is included only if receipt status=0 and tx.from is the live wallet, but they do not become fills.",
+      "cumulative_invested_weth": "Sum successful real BUY principal actually paid, excluding gas and excluding quotes.",
+      "win": "A closed matched round trip with realized_pnl_weth > 0 after all matched-leg gas.",
+      "worst_trade": "Minimum realized_pnl_weth among closed matched real round trips."
+    },
+    "usd_conversion": {
+      "source": "Project-pinned on-chain ETH/USD oracle on Base, queried read-only at each receipt block; never substitute an off-chain spot price.",
+      "time_rule": "Use the latest oracle round whose updatedAt is not after the receipt block timestamp. Record feed address, round, answer, decimals and updatedAt.",
+      "failure_rule": "If a historical oracle value cannot be proven, report USD as null/unknown rather than interpolate or use today's price."
+    }
+  },
+  "configuration_reconstruction": {
+    "segments": "Start a new segment at every evidenced go-live, pause, restart, or parameter/model/risk-gate change.",
+    "pin_fields": [
+      "F removal/rug list enabled",
+      "TRAIL parameters",
+      "trade size",
+      "concurrency/max positions",
+      "entry and safety thresholds",
+      "E window",
+      "model artifact and params hashes",
+      "dry_run/live flags",
+      "panic or pause controls"
+    ],
+    "conflict_priority": [
+      "contemporaneous runtime log or immutable session snapshot",
+      "contemporaneous generated config/readiness artifact",
+      "git history at the segment timestamp",
+      "later narrative recollection",
+      "current source defaults"
+    ],
+    "unknown_rule": "Do not fill a missing runtime value with a current default; mark it unknown."
+  },
+  "attribution_waterfall": {
+    "unit": "WETH-equivalent net realized PnL",
+    "identity": "execution_gap + rug_realization + regime_decay + selection_timing + small_sample_residual == actual_realized_pnl_weth",
+    "counterfactual": "For each real closed trade, reconstruct same-block QV2 and, where available, atomic executable buy/sell amounts at the actual sizes and pinned fee/path. Counterfactual includes the preregistered gas convention and never treats a quote as an observed fill.",
+    "priority": [
+      {
+        "bucket": "execution_gap",
+        "amount": "actual realized PnL minus the same-block executable counterfactual PnL for each closed trade",
+        "unknown": "If same-block counterfactual cannot be reproduced, this component is null for that trade and moves to the residual, not zero."
+      },
+      {
+        "bucket": "rug_realization",
+        "amount": "Remaining same-block counterfactual PnL for trades independently classified as rug/fatal before looking at PnL magnitude.",
+        "classification": "Requires contemporaneous rug/fatal evidence tied to the pool plus on-chain liquidity/removal, sell restriction, or exit-path evidence. A large loss alone is insufficient."
+      },
+      {
+        "bucket": "regime_decay",
+        "amount": "Remaining same-block counterfactual PnL for non-rug trades in a live segment whose candidate density/quoteability/market condition is demonstrably outside the +56% estimator's pinned sample regime.",
+        "classification": "Requires a full-period inventory metric, not a hand-picked date anecdote."
+      },
+      {
+        "bucket": "selection_timing",
+        "amount": "Remaining same-block counterfactual PnL for non-rug trades when the complete candidate inventory supports an open-window versus paused-window timing difference.",
+        "classification": "Requires the full eligible candidate set and exact open/paused windows; otherwise zero identified amount and diagnose only as unknown."
+      },
+      {
+        "bucket": "small_sample_residual",
+        "amount": "All remaining PnL, including unidentifiable counterfactual components, such that the identity holds exactly.",
+        "diagnostics": "Report n, win rate, sample standard deviation where n permits, exact/binomial uncertainty, and +56% benchmark probability where its per-trade distribution is reproducible. Residual is not proof that noise caused the loss."
+      }
+    ],
+    "reporting_rule": "Report both the exact additive waterfall and non-additive diagnostics. Do not present overlap-prone diagnostics as additive causal proof."
+  },
+  "adjudication": {
+    "overturn_iron_if_any": [
+      "Real receipts show a material systematic actual-fill versus same-block executable gap large enough to reverse the +56% historical estimate under the same strategy/configuration.",
+      "The +56% estimator used quotes, in-sample rug survivorship, omitted fatal sell outcomes, or a materially different configuration without an honest scope label, and correction reverses the claim.",
+      "The purported historical fact is not reproducible under its frozen hashes or contains an accounting identity failure."
+    ],
+    "compatible_only_if": "The +56% remains a correctly scoped historical estimate under its own frozen sample and executable assumptions, while real losses are quantitatively explained or remain statistically compatible through configuration mismatch, rug realization, regime, timing, and/or small n. Compatibility does not establish forward net edge.",
+    "gl1_02_rule": "GL1-02 is decided from successful receipt-verified real fills only: positive realized net edge => evidence-positive at observed tiny scale; negative => FAIL for observed live sample; no or unmatched fills => OPEN/INCONCLUSIVE. A negative tiny sample may coexist with a historical alpha fact but cannot be relabeled positive."
+  },
+  "decision_flags": {
+    "training_allowed": false,
+    "live_allowed": false,
+    "self_go_allowed": false,
+    "human_line_review_required": true
+  }
+}

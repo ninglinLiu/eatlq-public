@@ -1,0 +1,24 @@
+{
+  "network_enabled": false,
+  "credential_loading_enabled": false,
+  "live_execution_enabled": false,
+  "max_workers": 1,
+  "max_concurrent_tasks": 1,
+  "batch_size": 100,
+  "max_input_records": 5000,
+  "max_input_bytes": 10485760,
+  "max_memory_mb": 256,
+  "max_disk_mb": 64,
+  "max_retries": 2,
+  "retry_backoff_seconds": 0.25,
+  "operation_timeout_seconds": 10,
+  "query_timeout_seconds": 5,
+  "local_ports": [],
+  "compose_project": "launchpad_intelligence_offline_v01",
+  "database_name": "launchpad_intelligence_offline_v01",
+  "schema_name": "launchpad_intelligence_offline_v01",
+  "queue_name": "launchpad_intelligence_offline_v01",
+  "log_directory": "launchpad_intelligence/var/logs",
+  "checkpoint_directory": "launchpad_intelligence/var/checkpoints"
+}
+

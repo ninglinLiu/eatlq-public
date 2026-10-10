@@ -1,0 +1,29 @@
+{
+  "strategy_id": "F06_REV_VOL_BEFORE_PRICE",
+  "data_class": "A_OFFLINE_DATA_LIKELY_AVAILABLE",
+  "required_tables_or_files": [
+    "1m ohlcv+counts"
+  ],
+  "required_columns": [
+    "pool",
+    "time",
+    "close",
+    "trade_count"
+  ],
+  "required_time_resolution": "1m",
+  "point_in_time_requirements": "PIT",
+  "minimum_history": ">=30d",
+  "estimated_rows": "~1e6",
+  "estimated_read_bytes": "50-500MB",
+  "whether_current_diagnostics_may_support_it": "yes if ohlcv+counts",
+  "whether_production_database_would_be_required": false,
+  "missing_data": [
+    "trade_count column may be missing in some OHLCV files"
+  ],
+  "feasibility": "PARTIAL",
+  "evidence": [
+    "normalized/wave1_probe/base_b5_real_swaps_head50k.tsv"
+  ],
+  "notes": "need trade_count on derived bars",
+  "data_class_revised": "B_DERIVE_OR_SMALL_EXPORT"
+}

@@ -1,0 +1,15 @@
+{
+  "access_list_evidence": null,
+  "attempts": [
+    {
+      "http_status": 200,
+      "key": "ef66e99276e294fd8557f701755fb3a3a9eb4489d3a642194898e3d9c14043d7",
+      "rpc_error": null
+    }
+  ],
+  "block": 51692146,
+  "detector_version": 2,
+  "layout_source": "https://github.com/base/base-std/blob/main/test/lib/mocks/MockB20Storage.sol",
+  "slot": "0x1c76cfbd3a760f85759d80d9e5c75b7dabb48d25dd02baee7f15245c7d88f9d1",
+  "token": "0xb200000000000000000000eed7fe31823dda0b20"
+}

@@ -1,0 +1,98 @@
+{
+  "r2_version": "r2.1.0",
+  "created_utc": "2026-07-20T04:53:57Z",
+  "closes": "r2.0.0",
+  "immutability": "Closed freeze. Any change requires r2.2.0+ / r3.x. No post_freeze_artifact_binding.",
+  "adjudication": "PROSPECTIVE_DIRECTIONAL_META_ALPHA_LEAD; FORWARD_ELIGIBLE=false; DEPLOY_ELIGIBLE=false",
+  "champion_keystone": {
+    "p_cut_expression": "min(0.46818927983255865, 0.27)",
+    "p_cut_effective": 0.27,
+    "model_sha256": "bd02d79d016fb112b2ba8fff95f968b4036bb03a80818ee5b825efa4d714ae6b",
+    "params_sha256": "749a61da5dc3ac0d500b071edfccaf205d1b6141853d4057e343e7736c564cd6"
+  },
+  "f10_operational_artifact": {
+    "role": "OPERATIONAL_PROSPECTIVE_SCORER",
+    "path": "/root/keystone_r2_atomic/out/r21_f10_fullfit_operational.pkl",
+    "sha256": "9cf8fa1977f2e1523307516612bb3100ccdd63c89e14ba2e1d395074d0322dc5",
+    "r20_reference_sha256": "e1c68ae160004cd80711a7ae5461ee1d3d8e1f4359aebf1f890c25b74c277c5c",
+    "feature_schema_sha256": "3169ef58a34ebd33990a172404a9f70b5193d13af6cbb8c8f981b758dfe624a1",
+    "features_in_order": [
+      "impact_residual",
+      "ineffective_buying",
+      "liq_fragility_score",
+      "part_exhaust_score",
+      "accel"
+    ],
+    "hgb_params": {
+      "max_depth": 3,
+      "max_iter": 80,
+      "learning_rate": 0.05,
+      "random_state": 0
+    },
+    "primary_threshold": 0.8624456161522396,
+    "sensitivity_thresholds_only": {
+      "train_q40": 0.8284417809694159,
+      "train_q50": 0.8624456161522396,
+      "train_q60": 0.8886893755257821
+    },
+    "missing_value_policy": "fillna(0.0) after residualization",
+    "sklearn_version": "1.8.0",
+    "python_version": "3.12.3"
+  },
+  "score_reporting_policy": {
+    "DEV_IN_SAMPLE": "fullfit \u2014 NOT confirmation",
+    "DEV_WALK_FORWARD_OOF": "oof score with row_is_in_oof_model_training_set=false \u2014 research OOS only",
+    "BURNED_HOLDOUT": "SUPPORTIVE_POST-SELECTION_EVIDENCE only",
+    "PROSPECTIVE_CONFIRMATION": "only post-freeze new signals"
+  },
+  "calibration": {
+    "calibration_trustworthy": false,
+    "calibration_smoke_test_passed": true,
+    "calibration_external_validity": "insufficient",
+    "engineering_smoke_test": "ENGINEERING_SMOKE_TEST_PASS"
+  },
+  "sizing_for_r3_primary": {
+    "production_primary_usd": 50,
+    "production_max_eth": 0.02,
+    "research_comparison_grid_eth": [
+      0.005,
+      0.01,
+      0.0166666667,
+      0.0333333333
+    ],
+    "note": "R3 primary labels must use production cap; $100@3000 is comparison only"
+  },
+  "hashes": {
+    "eatlq_git_head": "90077ef020315e2490833c328d46941d6a24d996",
+    "pipeline_r21_sha256": "69f56a47817583ad4b1eb43877cd0b507edff0de6182ecb98c5bb4ba7acae833",
+    "scores_parquet_sha256": "b0171ec92eeaa34ba04c0c13a1914cd6d8fecb98c8802d23fb9472c3b92f3d89",
+    "adjudication_sha256": "a47a4f79ce22dc6f970188f5535d2643e85cb347921908b00807bb4b9978ea05",
+    "split_metrics_sha256": "fd79024d352123331cf0542051fc1b26facc0c012cad70b8a49520cd6dc36afb"
+  },
+  "split_metrics_summary": {
+    "DEV_IN_SAMPLE_fullfit": {
+      "n_base": 306,
+      "n_accepted": 154,
+      "accept_rate": 0.5032679738562091,
+      "ev_accepted": 1.5883079419947448,
+      "median": 0.9741442112545985,
+      "ev_per_signal_skip0": 0.7993445198274205
+    },
+    "DEV_WALK_FORWARD_OOF": {
+      "n_base": 147,
+      "n_accepted": 61,
+      "accept_rate": 0.41496598639455784,
+      "ev_accepted": 1.466614651024219,
+      "median": 1.093396951587256,
+      "ev_per_signal_skip0": 0.6085951953229753
+    },
+    "BURNED_HOLDOUT": {
+      "n_base": 93,
+      "n_accepted": 15,
+      "accept_rate": 0.16129032258064516,
+      "ev_accepted": 1.2477273383427723,
+      "median": 1.1610784956038969,
+      "ev_per_signal_skip0": 0.20124634489399557
+    }
+  }
+}

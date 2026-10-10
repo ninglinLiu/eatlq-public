@@ -1,0 +1,31 @@
+{
+  "after_snapshot": true,
+  "block_number": 51791847,
+  "index_complete": true,
+  "native_net_raw": "-25000000000000000",
+  "quote": "ETH",
+  "quote_net_raw": "-25000000000000000",
+  "receipt_evidence": {
+    "http_status": 200,
+    "key": "6a92697b7a69acfaec74fc75c96ab93217e89049c0560fa2507c727559cfebd3",
+    "rpc_error": null
+  },
+  "receipt_from_matches_wallet": true,
+  "receipt_status": "CONFIRMED_SUCCESS",
+  "receipt_token_net_matches_index": true,
+  "receipt_token_net_raw": "53367854218086993604162498",
+  "side": "buy",
+  "source_fee_raw": "668684857446284",
+  "source_fee_receipt_raw": "668684857446284",
+  "status": "SINGLE_TARGET_OPPOSITE_ACCOUNT_CASH",
+  "swap_logs": [],
+  "timestamp": 1790373041.0,
+  "token": "0x3493401b7fce756dc0573bf216d3f20bb0aa54b8",
+  "token_net_raw": "53367854218086993604162498",
+  "token_nets": {
+    "0x3493401b7fce756dc0573bf216d3f20bb0aa54b8": "53367854218086993604162498"
+  },
+  "tx_hash": "0x3155370bcdcb19e5d12930908d4ea0c05f2b1492034f11f1e4aab4406cee20c5",
+  "validation_layer": "ACCOUNT_RECEIPT_AND_LOGS; PROTOCOL/ROUTE MUST BE VERIFIED SEPARATELY",
+  "wallet": "0xfd7e55a555555c2f25053a38ec744de1afea4fa4"
+}

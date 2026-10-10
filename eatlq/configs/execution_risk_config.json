@@ -1,0 +1,101 @@
+{
+  "_comment": "Execution layer risk parameters for EATLQ dry-run and live trading. Env vars override these defaults.",
+  "_schema_version": "1.0",
+  "_generated_at": "2026-05-17T07:40:00Z",
+  "_mode": "DRY_RUN_ONLY",
+
+  "position_limits": {
+    "max_trade_usd": 100.0,
+    "max_balance_fraction": 0.10,
+    "max_open_positions": 3,
+    "min_trade_wei": 100000000000000,
+    "env_overrides": {
+      "max_trade_usd": "EXECUTOR_MAX_POSITION_USD",
+      "max_balance_fraction": "EXECUTOR_MAX_BALANCE_FRACTION",
+      "max_open_positions": "EXECUTOR_MAX_CONCURRENT_POSITIONS"
+    }
+  },
+
+  "loss_limits": {
+    "daily_loss_pct": 20.0,
+    "max_daily_loss_usd": 50.0,
+    "env_overrides": {
+      "daily_loss_pct": "EXECUTOR_DAILY_LOSS_PCT",
+      "max_daily_loss_usd": "EXECUTOR_MAX_DAILY_LOSS_USD"
+    }
+  },
+
+  "slippage": {
+    "slippage_bps_cap": 300,
+    "slippage_by_urgency": {
+      "buy": 300,
+      "take_profit": 100,
+      "stop_loss": 500,
+      "trailing_stop": 200,
+      "time_decay": 300
+    },
+    "env_overrides": {
+      "slippage_bps_cap": "EXECUTOR_SLIPPAGE_BPS_CAP"
+    }
+  },
+
+  "gas": {
+    "max_gas_usd": 2.0,
+    "gas_estimate_units": 350000,
+    "env_overrides": {
+      "max_gas_usd": "EXECUTOR_MAX_GAS_USD"
+    }
+  },
+
+  "exit_rules": {
+    "take_profit_pct": 15.0,
+    "stop_loss_pct": 10.0,
+    "trailing_stop_pct": 5.0,
+    "time_decay_min": 240.0,
+    "env_overrides": {
+      "take_profit_pct": "EXECUTOR_TAKE_PROFIT_PCT",
+      "stop_loss_pct": "EXECUTOR_STOP_LOSS_PCT",
+      "trailing_stop_pct": "EXECUTOR_TRAILING_STOP_PCT",
+      "time_decay_min": "EXECUTOR_TIME_DECAY_MIN"
+    }
+  },
+
+  "panic": {
+    "panic_key": "SYSTEM_PANIC",
+    "ghost_position_ttl_h": 8,
+    "env_overrides": {
+      "panic_key": "SYSTEM_PANIC_KEY"
+    }
+  },
+
+  "sender_gate": {
+    "require_0x6ff5_sender": true,
+    "0x6ff5_address": "0x6ff5693b99212da76ad316178a184ab56d299b43",
+    "description": "Uniswap Universal Router on Base. Only pools where this address is dominant onset sender are eligible.",
+    "env_overrides": {
+      "require_0x6ff5_sender": "EXECUTOR_REQUIRE_0X6FF5_SENDER"
+    }
+  },
+
+  "live_gate": {
+    "LIVE_TRADING_MODE": false,
+    "LIVE_AUTHORIZED_BY": null,
+    "description": "LIVE_TRADING_MODE must remain false. To enable live trading, a human operator must set LIVE_AUTHORIZED_BY=HUMAN AND LIVE_TRADING_MODE=true AND provide EXECUTOR_PRIVATE_KEY.",
+    "env_overrides": {
+      "LIVE_TRADING_MODE": "LIVE_TRADING_MODE",
+      "LIVE_AUTHORIZED_BY": "LIVE_AUTHORIZED_BY"
+    }
+  },
+
+  "signal_filter": {
+    "strategy_ids": ["S074_022_6ff5", "S074_032_6ff5"],
+    "exit_horizon": "2h",
+    "entry_gates": {
+      "pool_age_sec_min": 1800,
+      "pool_age_sec_max": 86400,
+      "fee_ppm_max": 9999,
+      "is_0x6ff5": true
+    },
+    "pool_cooldown_sec": 1800
+  }
+}

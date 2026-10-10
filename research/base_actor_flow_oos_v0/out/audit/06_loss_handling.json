@@ -1,0 +1,53 @@
+{
+  "task": "conservative_loss_handling",
+  "recovery_floor": 0.1,
+  "stake_weth": 0.016666666666666666,
+  "expected_floor_pnl_weth": -0.015,
+  "findings": [
+    {
+      "check": "recovery_floor_applied_in_labels",
+      "pass": false,
+      "detail": "economic_unsellable_recovery_floor=0.1 is present in freeze but never applied in src/labels_exec.py (confirmed by repo grep). NO_FILL rows keep wallet_pnl=NaN.",
+      "expected_floor_pnl_weth": -0.015
+    },
+    {
+      "check": "no_fill_charged_conservative_loss",
+      "pass": false,
+      "n_no_fill": 586,
+      "n_no_fill_nan_pnl": 586,
+      "n_no_fill_zero_pnl": 586,
+      "n_no_fill_at_floor": 0,
+      "detail": "NO_FILL rows are NaN/0, not charged stake*(floor-1). Mitigated only because selection requires buy_status==SUCCESS."
+    },
+    {
+      "check": "censored_transfer_out_conservative",
+      "pass": true,
+      "n_censored": 0,
+      "n_censored_success_labeled": 0,
+      "mean_pnl_censored_success": null,
+      "detail": "Panel censored flag comes from actor-resolution FIFO transfer-out logic; labels_exec still marks price-path SUCCESS and assigns full TP-ladder PnL. FIFO episodes.parquet uses NaN pnl when censored, but copy-sim labels do not."
+    },
+    {
+      "check": "infrastructure_unknown_excluded_or_conservatively_charged",
+      "n_infra_rows": 2840,
+      "n_unknown_actor_rows": 3041,
+      "n_infra_with_success_fill": 2836,
+      "mean_pnl_infra_success": -0.0007046588567693163,
+      "pass": false,
+      "detail": "Shared-infra/solver tier-D rows should not be scorable copy subjects."
+    }
+  ],
+  "episode_cross_check": {
+    "present": true,
+    "n_episodes": 7079,
+    "n_censored": 0,
+    "censored_pnl_all_nan": true,
+    "detail": "FIFO episodes correctly NaN pnl when censored; identity scores exclude them."
+  },
+  "summary": {
+    "n_checks": 4,
+    "n_failures": 3,
+    "verdict": "LOSS_HANDLING_GAPS_FOUND",
+    "materiality_for_whale_scorecard": "Selection requires buy_status==SUCCESS, so NO_FILL NaNs do not enter WHALE totals. Main residual risk: censored transfer-out buys that still receive optimistic price-path PnL in wallet_pnl_weth, and recovery_floor never applied."
+  }
+}

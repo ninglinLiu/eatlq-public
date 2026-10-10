@@ -1,0 +1,95 @@
+{
+  "amount_quote_instrument": {
+    "expanded_candidates": 441,
+    "size_cases": 44,
+    "status_counts": {
+      "AMOUNT_SPECIFIC_POOL_QUOTE_NOT_SETTLED_FILL": 14,
+      "ENGINEERING_PENDING_MIXED_ROUTE_ADAPTER": 4,
+      "UNRESOLVED_POOL_KEY_OR_ROUTE": 26
+    }
+  },
+  "compile_passed": true,
+  "failures": [],
+  "frozen_entries": 22,
+  "frozen_tokens": 19,
+  "hashed_artifacts": 1800,
+  "passed": true,
+  "price_path_status": {
+    "PRICE_PROXY_PATH": 9,
+    "UNRESOLVED_POOL_KEY_OR_ROUTE": 13
+  },
+  "public_requests": 3235,
+  "qualification": "PACKAGE_AND_ACCOUNTING_INSTRUMENT_VERIFICATION_NOT_PROFITABILITY_CERTIFICATION",
+  "raw_metadata_verified": 3215,
+  "request_budget": 6000,
+  "settlement_contract_test_output": "Compiling 4 files with Solc 0.8.26\nSolc 0.8.26 finished in 21.94s\nCompiler run successful!\n\nRan 2 tests for test/ResearchPancakeV2Executor.t.sol:ResearchPancakeV2ExecutorTest\n[PASS] testRegistryMismatchRejected() (gas: 99653)\n[PASS] testUses25BpsNot30Bps() (gas: 117087)\nSuite result: ok. 2 passed; 0 failed; 0 skipped; finished in 31.48ms (9.16ms CPU time)\n\nRan 4 tests for test/ResearchV4Executor.t.sol:ResearchV4ExecutorTest\n[PASS] testBuyMeasuresRealReceivedNotPoolNominal() (gas: 192638)\n[PASS] testSellSpendsExactInjectedInventory() (gas: 165388)\n[PASS] testTaxedInputMustNotPretendToSettle() (gas: 195750)\n[PASS] testUnauthorizedCallbackRejected() (gas: 5481)\nSuite result: ok. 4 passed; 0 failed; 0 skipped; finished in 31.79ms (29.85ms CPU time)\n\nRan 8 tests for test/ResearchMixedExecutor.t.sol:ResearchMixedExecutorTest\n[PASS] testAeroV2UsesHistoricalPoolQuoteNotUniFee() (gas: 715531)\n[PASS] testAlgebraRegisteredPoolAndCallback() (gas: 318301)\n[PASS] testExternalCallbackRejected() (gas: 8028)\n[PASS] testPartialExitRecordsInventory() (gas: 164988)\n[PASS] testSelfReportedFactoryNotEnough() (gas: 100509)\n[PASS] testV2TaxedInputUsesPoolReceivedAmount() (gas: 672174)\n[PASS] testV3BalancesAndTax() (gas: 189107)\n[PASS] testV4AndV3MixedBalances() (gas: 768418)\nSuite result: ok. 8 passed; 0 failed; 0 skipped; finished in 30.57ms (33.59ms CPU time)\n\nRan 3 test suites in 75.85ms (93.85ms CPU time): 14 tests passed, 0 failed, 0 skipped (14 total tests)\n",
+  "settlement_contract_tests_passed": true,
+  "smartmoney_full_candidate_audit": {
+    "receipts": {
+      "cash_index_incomplete": 166,
+      "from_matches": 441,
+      "n_rows": 441,
+      "source_fee_matches": 441,
+      "status": {
+        "CONFIRMED_SUCCESS": 441
+      },
+      "swap_logs_by_kind": {
+        "V2": 35,
+        "V3": 290,
+        "V4": 566
+      },
+      "token_net_matches": 441,
+      "with_recognized_swap_log": 440
+    },
+    "smartmoney_cost_ledger.json": {
+      "identified_routes": 379,
+      "own_net_profit_certified": 0,
+      "source_cash_and_swap_delta_comparable": 247,
+      "source_fee_reconciled": 441,
+      "source_swap_currency_flows_parsed": 412
+    },
+    "smartmoney_cost_ledger_extended.json": {
+      "identified_routes": 439,
+      "own_net_profit_certified": 0,
+      "source_amm_buy_direction_supported": 439,
+      "source_cash_and_swap_delta_comparable": 275,
+      "source_fee_reconciled": 441,
+      "source_swap_currency_flows_parsed": 441
+    },
+    "smartmoney_follower_execution_result.json": {
+      "BUY_SIMULATION_UNRESOLVED_OR_ZERO": 13,
+      "CONDITIONAL_EXECUTION_COST_MODEL": 317,
+      "EXIT_HORIZON_NOT_YET_OBSERVED": 26,
+      "PARTIAL_EXIT_INVENTORY_REMAINS": 77,
+      "SELL_SIMULATION_UNRESOLVED": 8
+    },
+    "smartmoney_follower_routes.json": null,
+    "smartmoney_routes.json": {
+      "ROUTE_CURRENCIES_IDENTIFIED": 379,
+      "UNRESOLVED_POOL_KEY_OR_ROUTE": 62
+    },
+    "smartmoney_routes_extended.json": {
+      "ROUTE_CURRENCIES_IDENTIFIED": 439,
+      "UNRESOLVED_POOL_KEY_OR_ROUTE": 2
+    },
+    "smartmoney_settlement_expanded_result.json": {
+      "BUY_SIMULATION_UNRESOLVED_OR_ZERO": 17,
+      "CONDITIONAL_EXECUTION_COST_MODEL": 312,
+      "EXIT_HORIZON_NOT_YET_OBSERVED": 26,
+      "PARTIAL_EXIT_INVENTORY_REMAINS": 77,
+      "ROUTE_UNRESOLVED": 2,
+      "SELL_SIMULATION_UNRESOLVED": 7
+    },
+    "smartmoney_settlement_result.json": {
+      "BUY_SIMULATION_UNRESOLVED_OR_ZERO": 3,
+      "CONDITIONAL_EXECUTION_COST_MODEL": 150,
+      "MIXED_PROTOCOL_ADAPTER_PENDING": 161,
+      "PARTIAL_EXIT_INVENTORY_REMAINS": 62,
+      "ROUTE_UNRESOLVED": 62,
+      "SELL_SIMULATION_UNRESOLVED": 3
+    }
+  },
+  "unit_test_output": "test_airdrop_is_not_purchase (__main__.ResearchTests.test_airdrop_is_not_purchase) ... ok\ntest_amount_quote_directions_and_amount (__main__.ResearchTests.test_amount_quote_directions_and_amount) ... ok\ntest_amount_quote_parse_zero_and_missing (__main__.ResearchTests.test_amount_quote_parse_zero_and_missing) ... ok\ntest_amount_quote_summary_preserves_missing_and_is_not_net (__main__.ResearchTests.test_amount_quote_summary_preserves_missing_and_is_not_net) ... ok\ntest_b20_namespace_is_official_erc7201_layout (__main__.ResearchTests.test_b20_namespace_is_official_erc7201_layout) ... ok\ntest_b20_unresolved_old_adapter_retried_not_failure (__main__.ResearchTests.test_b20_unresolved_old_adapter_retried_not_failure) ... ok\ntest_cash_schedule_same_timestamp_is_explicit_assumption (__main__.ResearchTests.test_cash_schedule_same_timestamp_is_explicit_assumption) ... ok\ntest_cash_schedule_uses_chronology_not_positive_terminal_profit (__main__.ResearchTests.test_cash_schedule_uses_chronology_not_positive_terminal_profit) ... ok\ntest_completed_hour_and_left_censor (__main__.ResearchTests.test_completed_hour_and_left_censor) ... ok\ntest_funding_supplement_label_and_prior_metadata (__main__.ResearchTests.test_funding_supplement_label_and_prior_metadata) ... ok\ntest_future_exit_is_not_a_trade_failure (__main__.ResearchTests.test_future_exit_is_not_a_trade_failure) ... ok\ntest_intermediate_residual_is_not_full_net (__main__.ResearchTests.test_intermediate_residual_is_not_full_net) ... ok\ntest_mixed_calldata_reverses_all_legs_not_token_order (__main__.ResearchTests.test_mixed_calldata_reverses_all_legs_not_token_order) ... ok\ntest_multihop_route_preserves_currency (__main__.ResearchTests.test_multihop_route_preserves_currency) ... ok\ntest_multiple_targets_unresolved (__main__.ResearchTests.test_multiple_targets_unresolved) ... ok\ntest_native_buy_and_sell (__main__.ResearchTests.test_native_buy_and_sell) ... ok\ntest_no_missing_competitor_zero_fill (__main__.ResearchTests.test_no_missing_competitor_zero_fill) ... ok\ntest_no_synthetic_route_through_unseen_pool (__main__.ResearchTests.test_no_synthetic_route_through_unseen_pool) ... ok\ntest_partial_exit_cash_is_not_net_or_total_loss (__main__.ResearchTests.test_partial_exit_cash_is_not_net_or_total_loss) ... ok\ntest_partial_refund_changes_cost (__main__.ResearchTests.test_partial_refund_changes_cost) ... ok\ntest_pool_key_recovery_requires_full_hash (__main__.ResearchTests.test_pool_key_recovery_requires_full_hash) ... ok\ntest_quote_orientation_and_decimal_cancellation (__main__.ResearchTests.test_quote_orientation_and_decimal_cancellation) ... ok\ntest_settlement_buy_and_sell_directions (__main__.ResearchTests.test_settlement_buy_and_sell_directions) ... ok\ntest_source_authorization_is_not_copier_authorization (__main__.ResearchTests.test_source_authorization_is_not_copier_authorization) ... ok\ntest_tail_concentration_not_automatic_failure (__main__.ResearchTests.test_tail_concentration_not_automatic_failure) ... ok\ntest_usdc_does_not_become_eth (__main__.ResearchTests.test_usdc_does_not_become_eth) ... ok\ntest_v2_ratio (__main__.ResearchTests.test_v2_ratio) ... ok\ntest_v4_key_verified (__main__.ResearchTests.test_v4_key_verified) ... ok\ntest_wrap_is_not_purchase (__main__.ResearchTests.test_wrap_is_not_purchase) ... ok\ntest_zero_reserves_unknown_not_total_loss (__main__.ResearchTests.test_zero_reserves_unknown_not_total_loss) ... ok\n\n----------------------------------------------------------------------\nRan 30 tests in 0.086s\n\nOK\n",
+  "unit_tests_passed": true,
+  "verified_at": "2026-10-01T13:26:05.162675+00:00"
+}

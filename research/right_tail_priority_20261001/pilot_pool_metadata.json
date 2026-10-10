@@ -1,0 +1,292 @@
+[
+  {
+    "block_number": 51607363,
+    "fee": 500,
+    "fee_evidence": {
+      "http_status": 200,
+      "key": "b3c3fdf52ce1f0f2cb03715442e515441f4b2b16e7ea96c1b4002ff0e420eb8c",
+      "rpc_error": null
+    },
+    "pool": "0x0bf58fe0fac935ac69595c19b12ba0d75e3f8c0e",
+    "token0": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+    "token0_evidence": {
+      "http_status": 200,
+      "key": "19fd6dbbc1f7fdbefd9693cf4d7a5893d8addea6aca749febc2334b2c3bf6131",
+      "rpc_error": null
+    },
+    "token1": "0xb2000000000000000000007b9fcbd005511acbd5",
+    "token1_evidence": {
+      "http_status": 200,
+      "key": "f63bb26d23c90fc6a2afe47ab11a062afd1034a7741019ff5d8f781b998e7905",
+      "rpc_error": null
+    }
+  },
+  {
+    "block_number": 51623944,
+    "fee_evidence": {
+      "http_status": 200,
+      "key": "1a3eeb6d696d5d04e689f09b0e3c604b5c565100dd8187f29a404c9cbcbcd191",
+      "rpc_error": {
+        "code": 3,
+        "message": "execution reverted"
+      }
+    },
+    "pool": "0x0ca83c6816bba50add784a422ea54540e4ca3803",
+    "token0": "0x798b24ba106188002ea1349654be2b0d515c7777",
+    "token0_evidence": {
+      "http_status": 200,
+      "key": "329845de018d72bf10dcda617af35134e0b6b966462aa955f8e77fbf9113863b",
+      "rpc_error": null
+    },
+    "token1": "0xacfe6019ed1a7dc6f7b508c02d1b04ec88cc21bf",
+    "token1_evidence": {
+      "http_status": 200,
+      "key": "1d13693fdfa4b4ab879ba4addb18969b50ba78f8bf0507bcbce1fea652d15b1d",
+      "rpc_error": null
+    }
+  },
+  {
+    "block_number": 51711595,
+    "fee": 3000,
+    "fee_evidence": {
+      "http_status": 200,
+      "key": "a6788c1e09e35c8e7918a9aab021501e8fc265f1ede8d81104eb47d9c29af64f",
+      "rpc_error": null
+    },
+    "pool": "0x4618dfcbc52d9fbcd45ec4a65fc61b5da57ad205",
+    "token0": "0x5cda0e1ca4ce2af96315f7f8963c85399c172204",
+    "token0_evidence": {
+      "http_status": 200,
+      "key": "bad34008a84f7f7790459755ba4d44133a672d091c930bf4624bfe82e8068e71",
+      "rpc_error": null
+    },
+    "token1": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+    "token1_evidence": {
+      "http_status": 200,
+      "key": "3e8214591240150a2c33b7a0a6934eed175e7c92e33127755d97ac726f5cfc3d",
+      "rpc_error": null
+    }
+  },
+  {
+    "block_number": 51623944,
+    "fee": 3000,
+    "fee_evidence": {
+      "http_status": 200,
+      "key": "ec135e3eb3460ae3cb7f9d283654e7585af463b72762ccb114ddbe4919c75e62",
+      "rpc_error": null
+    },
+    "pool": "0x67a11022b7b6ed66f81233f6c8ed6e48f7826530",
+    "token0": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+    "token0_evidence": {
+      "http_status": 200,
+      "key": "397a69a657505579437f14e39341e9ce5e7a63589f399e2c62ee2ece529a399f",
+      "rpc_error": null
+    },
+    "token1": "0xacfe6019ed1a7dc6f7b508c02d1b04ec88cc21bf",
+    "token1_evidence": {
+      "http_status": 200,
+      "key": "95f8f48e9e11a11b4d4280cf0de35282af989db3253aaabd9e41b3960c895976",
+      "rpc_error": null
+    }
+  },
+  {
+    "block_number": 51589437,
+    "fee": 3000,
+    "fee_evidence": {
+      "http_status": 200,
+      "key": "784d0de503cae4d5b16a5d16533f96f344362518e5442deefca4c5bf6ad06858",
+      "rpc_error": null
+    },
+    "pool": "0x6c561b446416e1a00e8e93e221854d6ea4171372",
+    "token0": "0x4200000000000000000000000000000000000006",
+    "token0_evidence": {
+      "http_status": 200,
+      "key": "1563adde1e26cbda804556e1cffe9a1a726e37ab8f1d920257f5ef89530b5647",
+      "rpc_error": null
+    },
+    "token1": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+    "token1_evidence": {
+      "http_status": 200,
+      "key": "44862646e97ac8129bb35b487a0b761266cfb908586a4c62167cd04ab9ab6ae8",
+      "rpc_error": null
+    }
+  },
+  {
+    "block_number": 51528479,
+    "fee": 9500,
+    "fee_evidence": {
+      "http_status": 200,
+      "key": "a836679d9b2eeccb119035c9a02567f6e91628d613cf8ceeda0891923668a4a1",
+      "rpc_error": null
+    },
+    "pool": "0x71fe33676773df7cf9ce14f640cae06823f083cc",
+    "token0": "0x4200000000000000000000000000000000000006",
+    "token0_evidence": {
+      "http_status": 200,
+      "key": "b9d1d935ec1a9f6ca7dc36c13a55931796ac4a25c0f36e736937d5048fed1fbc",
+      "rpc_error": null
+    },
+    "token1": "0xff8104251e7761163fac3211ef5583fb3f8583d6",
+    "token1_evidence": {
+      "http_status": 200,
+      "key": "a862ea1277916ff7fefc12ce89579eef7d1ea4c9410d811381c65ec931bab53e",
+      "rpc_error": null
+    }
+  },
+  {
+    "block_number": 51477330,
+    "fee": 90,
+    "fee_evidence": {
+      "http_status": 200,
+      "key": "5917a94e38f7ab90d9420906bc4e6d6a19510e77005dcfe7aa5963a00d79a4c0",
+      "rpc_error": null
+    },
+    "pool": "0x861a2922be165a5bd41b1e482b49216b465e1b5f",
+    "token0": "0x4200000000000000000000000000000000000006",
+    "token0_evidence": {
+      "http_status": 200,
+      "key": "aafb3367943b3ff9b159c91d70bb6123d5800bc851427dba33d179b4ef9fdf8c",
+      "rpc_error": null
+    },
+    "token1": "0xc1cba3fcea344f92d9239c08c0568f6f2f0ee452",
+    "token1_evidence": {
+      "http_status": 200,
+      "key": "3e4ec169a8a88438900a49831ed03155c43bca847fd12e699548a08b0b560331",
+      "rpc_error": null
+    }
+  },
+  {
+    "block_number": 51607363,
+    "fee_evidence": {
+      "http_status": 200,
+      "key": "7e839dc6623f4c3645e8a38b3aded91841a3f3a7aed10626ab46c398dce9be43",
+      "rpc_error": {
+        "code": 3,
+        "message": "execution reverted"
+      }
+    },
+    "pool": "0x88a43bbdf9d098eec7bceda4e2494615dfd9bb9c",
+    "token0": "0x4200000000000000000000000000000000000006",
+    "token0_evidence": {
+      "http_status": 200,
+      "key": "d6a074611d049e952056147fb32b08f8b309bccd2f9ac83a559202bbff2b9b45",
+      "rpc_error": null
+    },
+    "token1": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+    "token1_evidence": {
+      "http_status": 200,
+      "key": "95d058d98d9c89f39487de9891c6b6538d352844821f8baa8a75e938e039af0f",
+      "rpc_error": null
+    }
+  },
+  {
+    "block_number": 51579676,
+    "fee": 3000,
+    "fee_evidence": {
+      "http_status": 200,
+      "key": "bda132b9ca89c8c9b39804fe9e338357cee4c21adde79acb8186be2d5c74c4b9",
+      "rpc_error": null
+    },
+    "pool": "0xa0ca5bebc42cdbf3623b1c09206ae4e3975b0fc7",
+    "token0": "0x1111111111166b7fe7bd91427724b487980afc69",
+    "token0_evidence": {
+      "http_status": 200,
+      "key": "5debc522fb2f4d984a111ede8226dcbe3ad8ccd6d1030c0324ef30285d33583e",
+      "rpc_error": null
+    },
+    "token1": "0x4200000000000000000000000000000000000006",
+    "token1_evidence": {
+      "http_status": 200,
+      "key": "c78b34037cc304ad5aef18eb634c8d14e7b1fb9c4f7ce48cad1bcebf62b29c0c",
+      "rpc_error": null
+    }
+  },
+  {
+    "block_number": 51612872,
+    "fee": 3000,
+    "fee_evidence": {
+      "http_status": 200,
+      "key": "933276c7f50c50b7968c806ec6c87cff767ca256d2b08d3fbb90374e0f149db1",
+      "rpc_error": null
+    },
+    "pool": "0xa0ca5bebc42cdbf3623b1c09206ae4e3975b0fc7",
+    "token0": "0x1111111111166b7fe7bd91427724b487980afc69",
+    "token0_evidence": {
+      "http_status": 200,
+      "key": "a1e9b8c0418a783ba961473db048cdfd810d56635bdd0c65bd0f29586c4ecaeb",
+      "rpc_error": null
+    },
+    "token1": "0x4200000000000000000000000000000000000006",
+    "token1_evidence": {
+      "http_status": 200,
+      "key": "c72b5b75543c5996f33823b920d54659c8e19cf073e7b77219491d0cc723a707",
+      "rpc_error": null
+    }
+  },
+  {
+    "block_number": 51437442,
+    "fee": 2700,
+    "fee_evidence": {
+      "http_status": 200,
+      "key": "e4384a1d2e7eeca61a2ba1dfd7fe7fc9790bd38041136582eaf075fe51ea056c",
+      "rpc_error": null
+    },
+    "pool": "0xbc3231036ee1eca03e5f67fecedc640d21610823",
+    "token0": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+    "token0_evidence": {
+      "http_status": 200,
+      "key": "81801435a898bd8431012dabe80da26fb2b2f1c5461781ef38278200699dd871",
+      "rpc_error": null
+    },
+    "token1": "0xf4d97f2da56e8c3098f3a8d538db630a2606a024",
+    "token1_evidence": {
+      "http_status": 200,
+      "key": "4feb2145d47f7b7fa30ed8023505383f9088090157692813fc10d3a992b68e9f",
+      "rpc_error": null
+    }
+  },
+  {
+    "block_number": 51437442,
+    "fee": 500,
+    "fee_evidence": {
+      "http_status": 200,
+      "key": "52bae11de01b09662dd88a1d782c8cfd6294ca8bc6fb2bbbf9cbdd23760b2df2",
+      "rpc_error": null
+    },
+    "pool": "0xd0b53d9277642d899df5c87a3966a349a798f224",
+    "token0": "0x4200000000000000000000000000000000000006",
+    "token0_evidence": {
+      "http_status": 200,
+      "key": "185b163cfcd4d6531912891854c1a5e74e05529deecf390c099937f9c7324861",
+      "rpc_error": null
+    },
+    "token1": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+    "token1_evidence": {
+      "http_status": 200,
+      "key": "1434caf86a00ce1ef02d37caf795f8ff2deb77488e4769e1b3c2b1525b12491f",
+      "rpc_error": null
+    }
+  },
+  {
+    "block_number": 51711595,
+    "fee": 500,
+    "fee_evidence": {
+      "http_status": 200,
+      "key": "2019e70a92b128186a1d2743d276e2e8c36c21443bfdcc4e095f9f146634c173",
+      "rpc_error": null
+    },
+    "pool": "0xd0b53d9277642d899df5c87a3966a349a798f224",
+    "token0": "0x4200000000000000000000000000000000000006",
+    "token0_evidence": {
+      "http_status": 200,
+      "key": "da377f5e63e50c04280ee52e52eef79866c8c28395d47b19f4123b7948b3a0fd",
+      "rpc_error": null
+    },
+    "token1": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+    "token1_evidence": {
+      "http_status": 200,
+      "key": "dbeffba19e721e3fc792dcb58f8ee3ce75fe0abf73bcbf693ce1aeca8d70d140",
+      "rpc_error": null
+    }
+  }
+]

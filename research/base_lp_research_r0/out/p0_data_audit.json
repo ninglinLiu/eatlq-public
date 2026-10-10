@@ -1,0 +1,170 @@
+{
+  "generated_at_utc": "2026-08-07T06:10:24.723995+00:00",
+  "audit_date": "2026-03-14",
+  "event_count_as_of_utc": "2026-08-07 06:00:00",
+  "chain_filter_for_base": "chain_id = 8453",
+  "specified_pool_event_counts": {
+    "uniswap_v3_swaps": [
+      {
+        "pool_address": "0x82321f3beb69f503380d6b233857d5c43562e2d0",
+        "dedup_events": "366270",
+        "min_time": "2026-02-23 10:01:33.000",
+        "max_time": "2026-08-07 05:55:17.000",
+        "source_rows": "380043"
+      },
+      {
+        "pool_address": "0xb4cb800910b228ed3d0834cf79d697127bbb00e5",
+        "dedup_events": "3799826",
+        "min_time": "2026-02-19 09:06:05.000",
+        "max_time": "2026-08-07 05:59:55.000",
+        "source_rows": "5368623"
+      },
+      {
+        "pool_address": "0xd0b53d9277642d899df5c87a3966a349a798f224",
+        "dedup_events": "2524937",
+        "min_time": "2026-02-19 09:06:05.000",
+        "max_time": "2026-08-07 05:59:59.000",
+        "source_rows": "3613212"
+      }
+    ],
+    "uniswap_v3_mints": [
+      {
+        "pool_address": "0x82321f3beb69f503380d6b233857d5c43562e2d0",
+        "dedup_events": "814717",
+        "min_time": "2026-02-23 10:00:15.000",
+        "max_time": "2026-05-20 11:35:23.000",
+        "source_rows": "815095"
+      },
+      {
+        "pool_address": "0xb4cb800910b228ed3d0834cf79d697127bbb00e5",
+        "dedup_events": "2283",
+        "min_time": "2026-02-19 09:06:39.000",
+        "max_time": "2026-05-20 10:50:41.000",
+        "source_rows": "3980"
+      },
+      {
+        "pool_address": "0xd0b53d9277642d899df5c87a3966a349a798f224",
+        "dedup_events": "82695",
+        "min_time": "2026-02-19 09:07:45.000",
+        "max_time": "2026-05-20 11:32:51.000",
+        "source_rows": "134676"
+      }
+    ],
+    "uniswap_v3_burns": [
+      {
+        "pool_address": "0x82321f3beb69f503380d6b233857d5c43562e2d0",
+        "dedup_events": "2160199",
+        "min_time": "2026-02-23 09:59:59.000",
+        "max_time": "2026-05-20 11:35:25.000",
+        "source_rows": "2161199"
+      },
+      {
+        "pool_address": "0xb4cb800910b228ed3d0834cf79d697127bbb00e5",
+        "dedup_events": "2684",
+        "min_time": "2026-02-19 09:11:05.000",
+        "max_time": "2026-05-20 10:49:47.000",
+        "source_rows": "4597"
+      },
+      {
+        "pool_address": "0xd0b53d9277642d899df5c87a3966a349a798f224",
+        "dedup_events": "122638",
+        "min_time": "2026-02-19 09:06:49.000",
+        "max_time": "2026-05-20 11:21:13.000",
+        "source_rows": "203843"
+      }
+    ]
+  },
+  "collect_topic": "0x70935338e69775456a85ddef226c395fb668b63fa0115f5f20610b388e6ca9c0",
+  "collect_counts_by_chain": [
+    {
+      "requested_chain_id": 8453,
+      "rows": "0",
+      "events": "0",
+      "pools": "0",
+      "min_time": null,
+      "max_time": null
+    },
+    {
+      "requested_chain_id": 1,
+      "rows": "31",
+      "events": "31",
+      "pools": "23",
+      "min_time": "2026-03-14 09:34:59.000",
+      "max_time": "2026-03-14 09:46:11.000"
+    }
+  ],
+  "burn_principal_reconciliation": [
+    {
+      "pool_address": "0xd0b53d9277642d899df5c87a3966a349a798f224",
+      "date": "2026-03-14",
+      "burn_events": 1223,
+      "events_with_preceding_price": 1223,
+      "nonzero_amount_sides_compared": 979,
+      "exact_zero_sides": 1467,
+      "principal_formula_relative_error_p50": 3.7843000043399215e-10,
+      "principal_formula_relative_error_p99": 0.00020218460346443
+    },
+    {
+      "pool_address": "0x82321f3beb69f503380d6b233857d5c43562e2d0",
+      "date": "2026-03-14",
+      "burn_events": 3665,
+      "events_with_preceding_price": 3621,
+      "nonzero_amount_sides_compared": 2263,
+      "exact_zero_sides": 4979,
+      "principal_formula_relative_error_p50": 7.525818774964983e-11,
+      "principal_formula_relative_error_p99": 3.0300756320340753e-09
+    },
+    {
+      "pool_address": "0xb4cb800910b228ed3d0834cf79d697127bbb00e5",
+      "date": "2026-03-14",
+      "burn_events": 135,
+      "events_with_preceding_price": 135,
+      "nonzero_amount_sides_compared": 157,
+      "exact_zero_sides": 113,
+      "principal_formula_relative_error_p50": 5.363990382699485e-10,
+      "principal_formula_relative_error_p99": 1.475846174865043e-07
+    }
+  ],
+  "capacity_audit": [
+    {
+      "pool_address": "0xd0b53d9277642d899df5c87a3966a349a798f224",
+      "pair": "WETH/USDC",
+      "date": "2026-03-14",
+      "capital_usd": 500.0,
+      "band_half_width_pct": 15.0,
+      "in_range_swaps": 23174,
+      "implied_share_p50": 5.072510834294055e-05,
+      "implied_share_p99": 6.034594827675449e-05,
+      "capacity_violation_pct": 0.0,
+      "status": "OK",
+      "pricing_note": "USDC is USD quote"
+    },
+    {
+      "pool_address": "0x82321f3beb69f503380d6b233857d5c43562e2d0",
+      "pair": "WETH/AERO",
+      "date": "2026-03-14",
+      "capital_usd": 500.0,
+      "band_half_width_pct": 15.0,
+      "in_range_swaps": 944,
+      "implied_share_p50": 0.00048157024151912356,
+      "implied_share_p99": 0.0006315037799157463,
+      "capacity_violation_pct": 0.0,
+      "status": "OK",
+      "pricing_note": "AERO quote value cross-converted through simultaneous WETH/USDC"
+    },
+    {
+      "pool_address": "0xb4cb800910b228ed3d0834cf79d697127bbb00e5",
+      "pair": "WETH/USDC",
+      "date": "2026-03-14",
+      "capital_usd": 500.0,
+      "band_half_width_pct": 15.0,
+      "in_range_swaps": 24956,
+      "implied_share_p50": 0.0028353953691032654,
+      "implied_share_p99": 0.0034515794541448174,
+      "capacity_violation_pct": 0.0,
+      "status": "OK",
+      "pricing_note": "USDC is USD quote"
+    }
+  ],
+  "conclusion": "Base Collect truth is absent; Burn amounts reconcile to principal formulas and cannot be used as fee truth. P0.2 calibration is unidentified."
+}

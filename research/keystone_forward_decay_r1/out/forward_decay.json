@@ -1,0 +1,696 @@
+{
+  "archive_rpc_available": false,
+  "conditional_alpha": {
+    "identified": false,
+    "reason": "point-in-time F selection is not identified for forward tokens; archive depth/friction unavailable"
+  },
+  "definite_selected_metrics": {
+    "1": {
+      "mean_interval": [
+        null,
+        null
+      ],
+      "n": 0,
+      "right_tail_pass": false,
+      "unresolved_n": 0
+    },
+    "15": {
+      "mean_interval": [
+        null,
+        null
+      ],
+      "n": 0,
+      "right_tail_pass": false,
+      "unresolved_n": 0
+    },
+    "5": {
+      "mean_interval": [
+        null,
+        null
+      ],
+      "n": 0,
+      "right_tail_pass": false,
+      "unresolved_n": 0
+    }
+  },
+  "depth_flow_possible_ch_proxy_metrics": {
+    "1": {
+      "mean_interval": [
+        null,
+        null
+      ],
+      "n": 0,
+      "right_tail_pass": false,
+      "unresolved_n": 0
+    },
+    "15": {
+      "mean_interval": [
+        null,
+        null
+      ],
+      "n": 0,
+      "right_tail_pass": false,
+      "unresolved_n": 0
+    },
+    "5": {
+      "mean_interval": [
+        null,
+        null
+      ],
+      "n": 0,
+      "right_tail_pass": false,
+      "unresolved_n": 0
+    }
+  },
+  "feature_census": {
+    "min_pre_pass_n": 275,
+    "path": "/root/keystone_forward_decay_r1/out/feature_census.json",
+    "sha256": "affd93e7ff5ed9da70387a6053883637d2813af9bc68067884455cb3407f0d67"
+  },
+  "frozen_config": {
+    "depth_archive": "UNAVAILABLE",
+    "forward_rows_in_fit": 0,
+    "friction_archive": "UNAVAILABLE",
+    "hard_stop": 0.5,
+    "max_hold_blocks": 7200,
+    "min_pre": 5,
+    "model": "deterministic reconstruction via risk_rebacktest.fit_model on frozen historical _pools.tsv only",
+    "p_cut": 0.27,
+    "stake_eth": 0.0302,
+    "trail": 0.35
+  },
+  "funnel": {
+    "definite_selected": 0,
+    "depth_flow_pass_possible": 0,
+    "f_block": 0,
+    "f_identity_unresolved": 98,
+    "f_not_available_pit": 0,
+    "f_pass": 0,
+    "f_unresolved_possible": 98,
+    "min_pre_block": 5437,
+    "min_pre_pass": 275,
+    "model_pass": 98,
+    "possible_selected": 98,
+    "raw_universe": 5712,
+    "signals_still_present": true
+  },
+  "generated_utc": "2026-08-14T14:41:22.232777+00:00",
+  "gl6_model_identity_erratum_sha256": "5cf1a7da94ceddc341692466e5811bf1adffa54b16d66fc03cf52490573bb9d2",
+  "gl6_preregistration_sha256": "fa216ded00bd36420f907f529793049fc2dae7e8d286bf0496f6903d34c8c64a",
+  "go_decision": "NOT_MADE",
+  "historical_gl5v3": {
+    "rug_interval_1": [
+      0,
+      0.025
+    ],
+    "selected_return_intervals": {
+      "1": [
+        1.3672943342260926,
+        1.4770342541250798
+      ],
+      "15": [
+        1.4771676388156305,
+        1.489564076021217
+      ],
+      "5": [
+        1.3960784104486632,
+        1.4881408064429673
+      ]
+    }
+  },
+  "historical_gl6": {
+    "definite_selected": 0,
+    "gate_identified_n": 7,
+    "plus15_collapse": "4/7",
+    "plus15_mean": -0.24527,
+    "plus1_mean": 0.19927
+  },
+  "model_pass_ch_proxy_metrics": {
+    "1": {
+      "branches": {
+        "PROXY_ALIVE": 82,
+        "UNRESOLVED": 16
+      },
+      "confirmed_rug_interval": [
+        0.0,
+        0.16326530612244897
+      ],
+      "mean_interval": [
+        1.3825041005645586,
+        1.5355653250543546
+      ],
+      "median_interval": [
+        -0.02947032586078662,
+        -0.022994355639619317
+      ],
+      "n": 98,
+      "pricing": "CH_PROXY_TICK_AND_LIQUIDITY",
+      "resolved_mean": 1.851869652994642,
+      "resolved_n": 82,
+      "right_tail_pass": false,
+      "right_tail_reason": "N<30 and/or point-in-time F selection unresolved; CH_PROXY not adjudicable",
+      "top1_positive_contribution_interval": [
+        0.4272898095066651,
+        0.4272898095066651
+      ],
+      "top1_removed_lower_mean": 0.6904060297399885,
+      "unresolved_n": 16,
+      "win_rate_interval": [
+        0.20408163265306123,
+        0.20408163265306123
+      ]
+    },
+    "15": {
+      "branches": {
+        "PROXY_ALIVE": 32,
+        "UNRESOLVED": 66
+      },
+      "confirmed_rug_interval": [
+        0.0,
+        0.673469387755102
+      ],
+      "mean_interval": [
+        0.1910043334026923,
+        1.5355653250543546
+      ],
+      "median_interval": [
+        -1.0229943556396193,
+        -0.022994355639619317
+      ],
+      "n": 98,
+      "pricing": "CH_PROXY_TICK_AND_LIQUIDITY",
+      "resolved_mean": 2.69487662955246,
+      "resolved_n": 32,
+      "right_tail_pass": false,
+      "right_tail_reason": "N<30 and/or point-in-time F selection unresolved; CH_PROXY not adjudicable",
+      "top1_positive_contribution_interval": [
+        0.3894116996207044,
+        0.7557527591167272
+      ],
+      "top1_removed_lower_mean": -0.4507611223226027,
+      "unresolved_n": 66,
+      "win_rate_interval": [
+        0.15306122448979592,
+        0.20408163265306123
+      ]
+    },
+    "5": {
+      "branches": {
+        "PROXY_ALIVE": 32,
+        "UNRESOLVED": 66
+      },
+      "confirmed_rug_interval": [
+        0.0,
+        0.673469387755102
+      ],
+      "mean_interval": [
+        0.1910043334026923,
+        1.5355653250543546
+      ],
+      "median_interval": [
+        -1.0229943556396193,
+        -0.022994355639619317
+      ],
+      "n": 98,
+      "pricing": "CH_PROXY_TICK_AND_LIQUIDITY",
+      "resolved_mean": 2.69487662955246,
+      "resolved_n": 32,
+      "right_tail_pass": false,
+      "right_tail_reason": "N<30 and/or point-in-time F selection unresolved; CH_PROXY not adjudicable",
+      "top1_positive_contribution_interval": [
+        0.3894116996207044,
+        0.7557527591167272
+      ],
+      "top1_removed_lower_mean": -0.4507611223226027,
+      "unresolved_n": 66,
+      "win_rate_interval": [
+        0.15306122448979592,
+        0.20408163265306123
+      ]
+    }
+  },
+  "possible_selected_ch_proxy_metrics": {
+    "1": {
+      "branches": {
+        "PROXY_ALIVE": 82,
+        "UNRESOLVED": 16
+      },
+      "confirmed_rug_interval": [
+        0.0,
+        0.16326530612244897
+      ],
+      "mean_interval": [
+        1.3825041005645586,
+        1.5355653250543546
+      ],
+      "median_interval": [
+        -0.02947032586078662,
+        -0.022994355639619317
+      ],
+      "n": 98,
+      "pricing": "CH_PROXY_TICK_AND_LIQUIDITY",
+      "resolved_mean": 1.851869652994642,
+      "resolved_n": 82,
+      "right_tail_pass": false,
+      "right_tail_reason": "N<30 and/or point-in-time F selection unresolved; CH_PROXY not adjudicable",
+      "top1_positive_contribution_interval": [
+        0.4272898095066651,
+        0.4272898095066651
+      ],
+      "top1_removed_lower_mean": 0.6904060297399885,
+      "unresolved_n": 16,
+      "win_rate_interval": [
+        0.20408163265306123,
+        0.20408163265306123
+      ]
+    },
+    "15": {
+      "branches": {
+        "PROXY_ALIVE": 32,
+        "UNRESOLVED": 66
+      },
+      "confirmed_rug_interval": [
+        0.0,
+        0.673469387755102
+      ],
+      "mean_interval": [
+        0.1910043334026923,
+        1.5355653250543546
+      ],
+      "median_interval": [
+        -1.0229943556396193,
+        -0.022994355639619317
+      ],
+      "n": 98,
+      "pricing": "CH_PROXY_TICK_AND_LIQUIDITY",
+      "resolved_mean": 2.69487662955246,
+      "resolved_n": 32,
+      "right_tail_pass": false,
+      "right_tail_reason": "N<30 and/or point-in-time F selection unresolved; CH_PROXY not adjudicable",
+      "top1_positive_contribution_interval": [
+        0.3894116996207044,
+        0.7557527591167272
+      ],
+      "top1_removed_lower_mean": -0.4507611223226027,
+      "unresolved_n": 66,
+      "win_rate_interval": [
+        0.15306122448979592,
+        0.20408163265306123
+      ]
+    },
+    "5": {
+      "branches": {
+        "PROXY_ALIVE": 32,
+        "UNRESOLVED": 66
+      },
+      "confirmed_rug_interval": [
+        0.0,
+        0.673469387755102
+      ],
+      "mean_interval": [
+        0.1910043334026923,
+        1.5355653250543546
+      ],
+      "median_interval": [
+        -1.0229943556396193,
+        -0.022994355639619317
+      ],
+      "n": 98,
+      "pricing": "CH_PROXY_TICK_AND_LIQUIDITY",
+      "resolved_mean": 2.69487662955246,
+      "resolved_n": 32,
+      "right_tail_pass": false,
+      "right_tail_reason": "N<30 and/or point-in-time F selection unresolved; CH_PROXY not adjudicable",
+      "top1_positive_contribution_interval": [
+        0.3894116996207044,
+        0.7557527591167272
+      ],
+      "top1_removed_lower_mean": -0.4507611223226027,
+      "unresolved_n": 66,
+      "win_rate_interval": [
+        0.15306122448979592,
+        0.20408163265306123
+      ]
+    }
+  },
+  "preregistration_sha256": "d17e5ec1f7c528a22e0bb644af9489473cc6f76be1a372ded10da96d1c2043b8",
+  "research_only": true,
+  "schema_version": 1,
+  "step0_anchor": {
+    "aggressive_gate": 339,
+    "f_on_pass": 120,
+    "labeled_n": 644
+  },
+  "strata_funnel": {
+    "S0_jun24_30": {
+      "depth_flow_pass": 0,
+      "f_block": 0,
+      "f_identity_unresolved": 14,
+      "f_pass": 0,
+      "min_pre_pass": 26,
+      "model_pass": 14,
+      "proxy_metrics_model_pass": {
+        "1": {
+          "branches": {
+            "PROXY_ALIVE": 10,
+            "UNRESOLVED": 4
+          },
+          "confirmed_rug_interval": [
+            0.0,
+            0.2857142857142857
+          ],
+          "mean_interval": [
+            -0.3599218340902693,
+            -0.14563611980455501
+          ],
+          "median_interval": [
+            -0.18087931294310183,
+            -0.023793676047425598
+          ],
+          "n": 14,
+          "pricing": "CH_PROXY_TICK_AND_LIQUIDITY",
+          "resolved_mean": -0.09469282547052933,
+          "resolved_n": 10,
+          "right_tail_pass": false,
+          "right_tail_reason": "N<30 and/or point-in-time F selection unresolved; CH_PROXY not adjudicable",
+          "top1_positive_contribution_interval": [
+            0.8530131018623625,
+            0.8530131018623625
+          ],
+          "top1_removed_lower_mean": -0.4556872657384114,
+          "unresolved_n": 4,
+          "win_rate_interval": [
+            0.14285714285714285,
+            0.14285714285714285
+          ]
+        },
+        "15": {
+          "branches": {
+            "PROXY_ALIVE": 2,
+            "UNRESOLVED": 12
+          },
+          "confirmed_rug_interval": [
+            0.0,
+            0.8571428571428571
+          ],
+          "mean_interval": [
+            -0.901153755878437,
+            -0.14563611980455501
+          ],
+          "median_interval": [
+            -1.0229943556396193,
+            -0.023793676047425598
+          ],
+          "n": 14,
+          "pricing": "CH_PROXY_TICK_AND_LIQUIDITY",
+          "resolved_mean": -0.17011015731134294,
+          "resolved_n": 2,
+          "right_tail_pass": false,
+          "right_tail_reason": "N<30 and/or point-in-time F selection unresolved; CH_PROXY not adjudicable",
+          "top1_positive_contribution_interval": [
+            0.1469868981376376,
+            1.0
+          ],
+          "top1_removed_lower_mean": -0.9822043276545414,
+          "unresolved_n": 12,
+          "win_rate_interval": [
+            0.07142857142857142,
+            0.14285714285714285
+          ]
+        },
+        "5": {
+          "branches": {
+            "PROXY_ALIVE": 2,
+            "UNRESOLVED": 12
+          },
+          "confirmed_rug_interval": [
+            0.0,
+            0.8571428571428571
+          ],
+          "mean_interval": [
+            -0.901153755878437,
+            -0.14563611980455501
+          ],
+          "median_interval": [
+            -1.0229943556396193,
+            -0.023793676047425598
+          ],
+          "n": 14,
+          "pricing": "CH_PROXY_TICK_AND_LIQUIDITY",
+          "resolved_mean": -0.17011015731134294,
+          "resolved_n": 2,
+          "right_tail_pass": false,
+          "right_tail_reason": "N<30 and/or point-in-time F selection unresolved; CH_PROXY not adjudicable",
+          "top1_positive_contribution_interval": [
+            0.1469868981376376,
+            1.0
+          ],
+          "top1_removed_lower_mean": -0.9822043276545414,
+          "unresolved_n": 12,
+          "win_rate_interval": [
+            0.07142857142857142,
+            0.14285714285714285
+          ]
+        }
+      }
+    },
+    "S1_jul": {
+      "depth_flow_pass": 0,
+      "f_block": 0,
+      "f_identity_unresolved": 75,
+      "f_pass": 0,
+      "min_pre_pass": 226,
+      "model_pass": 75,
+      "proxy_metrics_model_pass": {
+        "1": {
+          "branches": {
+            "PROXY_ALIVE": 68,
+            "UNRESOLVED": 7
+          },
+          "confirmed_rug_interval": [
+            0.0,
+            0.09333333333333334
+          ],
+          "mean_interval": [
+            1.9430834231112946,
+            2.036416756444628
+          ],
+          "median_interval": [
+            -0.02509204740955722,
+            -0.022994355639619317
+          ],
+          "n": 75,
+          "pricing": "CH_PROXY_TICK_AND_LIQUIDITY",
+          "resolved_mean": 2.248414959159182,
+          "resolved_n": 68,
+          "right_tail_pass": false,
+          "right_tail_reason": "N<30 and/or point-in-time F selection unresolved; CH_PROXY not adjudicable",
+          "top1_positive_contribution_interval": [
+            0.4300725573127858,
+            0.4300725573127858
+          ],
+          "top1_removed_lower_mean": 1.0434491859837733,
+          "unresolved_n": 7,
+          "win_rate_interval": [
+            0.24,
+            0.24
+          ]
+        },
+        "15": {
+          "branches": {
+            "PROXY_ALIVE": 29,
+            "UNRESOLVED": 46
+          },
+          "confirmed_rug_interval": [
+            0.0,
+            0.6133333333333333
+          ],
+          "mean_interval": [
+            0.5272203527535807,
+            2.036416756444628
+          ],
+          "median_interval": [
+            -1.0229943556396193,
+            -0.022994355639619317
+          ],
+          "n": 75,
+          "pricing": "CH_PROXY_TICK_AND_LIQUIDITY",
+          "resolved_mean": 2.986181614342794,
+          "resolved_n": 29,
+          "right_tail_pass": false,
+          "right_tail_reason": "N<30 and/or point-in-time F selection unresolved; CH_PROXY not adjudicable",
+          "top1_positive_contribution_interval": [
+            0.39194776420424404,
+            0.7570262002069883
+          ],
+          "top1_removed_lower_mean": -0.3094692848951049,
+          "unresolved_n": 46,
+          "win_rate_interval": [
+            0.18666666666666668,
+            0.24
+          ]
+        },
+        "5": {
+          "branches": {
+            "PROXY_ALIVE": 29,
+            "UNRESOLVED": 46
+          },
+          "confirmed_rug_interval": [
+            0.0,
+            0.6133333333333333
+          ],
+          "mean_interval": [
+            0.5272203527535807,
+            2.036416756444628
+          ],
+          "median_interval": [
+            -1.0229943556396193,
+            -0.022994355639619317
+          ],
+          "n": 75,
+          "pricing": "CH_PROXY_TICK_AND_LIQUIDITY",
+          "resolved_mean": 2.986181614342794,
+          "resolved_n": 29,
+          "right_tail_pass": false,
+          "right_tail_reason": "N<30 and/or point-in-time F selection unresolved; CH_PROXY not adjudicable",
+          "top1_positive_contribution_interval": [
+            0.39194776420424404,
+            0.7570262002069883
+          ],
+          "top1_removed_lower_mean": -0.3094692848951049,
+          "unresolved_n": 46,
+          "win_rate_interval": [
+            0.18666666666666668,
+            0.24
+          ]
+        }
+      }
+    },
+    "S2_aug": {
+      "depth_flow_pass": 0,
+      "f_block": 0,
+      "f_identity_unresolved": 9,
+      "f_pass": 0,
+      "min_pre_pass": 23,
+      "model_pass": 9,
+      "proxy_metrics_model_pass": {
+        "1": {
+          "branches": {
+            "PROXY_ALIVE": 4,
+            "UNRESOLVED": 5
+          },
+          "confirmed_rug_interval": [
+            0.0,
+            0.5555555555555556
+          ],
+          "mean_interval": [
+            -0.5785499111951748,
+            -0.022994355639619317
+          ],
+          "median_interval": [
+            -1.0229943556396193,
+            -0.022994355639619317
+          ],
+          "n": 9,
+          "pricing": "CH_PROXY_TICK_AND_LIQUIDITY",
+          "resolved_mean": -0.022994355639619317,
+          "resolved_n": 4,
+          "right_tail_pass": false,
+          "right_tail_reason": "N<30 and/or point-in-time F selection unresolved; CH_PROXY not adjudicable",
+          "top1_positive_contribution_interval": [
+            null,
+            null
+          ],
+          "top1_removed_lower_mean": -0.6479943556396193,
+          "unresolved_n": 5,
+          "win_rate_interval": [
+            0.0,
+            0.0
+          ]
+        },
+        "15": {
+          "branches": {
+            "PROXY_ALIVE": 1,
+            "UNRESOLVED": 8
+          },
+          "confirmed_rug_interval": [
+            0.0,
+            0.8888888888888888
+          ],
+          "mean_interval": [
+            -0.9118832445285082,
+            -0.022994355639619317
+          ],
+          "median_interval": [
+            -1.0229943556396193,
+            -0.022994355639619317
+          ],
+          "n": 9,
+          "pricing": "CH_PROXY_TICK_AND_LIQUIDITY",
+          "resolved_mean": -0.022994355639619317,
+          "resolved_n": 1,
+          "right_tail_pass": false,
+          "right_tail_reason": "N<30 and/or point-in-time F selection unresolved; CH_PROXY not adjudicable",
+          "top1_positive_contribution_interval": [
+            null,
+            null
+          ],
+          "top1_removed_lower_mean": -1.0229943556396193,
+          "unresolved_n": 8,
+          "win_rate_interval": [
+            0.0,
+            0.0
+          ]
+        },
+        "5": {
+          "branches": {
+            "PROXY_ALIVE": 1,
+            "UNRESOLVED": 8
+          },
+          "confirmed_rug_interval": [
+            0.0,
+            0.8888888888888888
+          ],
+          "mean_interval": [
+            -0.9118832445285082,
+            -0.022994355639619317
+          ],
+          "median_interval": [
+            -1.0229943556396193,
+            -0.022994355639619317
+          ],
+          "n": 9,
+          "pricing": "CH_PROXY_TICK_AND_LIQUIDITY",
+          "resolved_mean": -0.022994355639619317,
+          "resolved_n": 1,
+          "right_tail_pass": false,
+          "right_tail_reason": "N<30 and/or point-in-time F selection unresolved; CH_PROXY not adjudicable",
+          "top1_positive_contribution_interval": [
+            null,
+            null
+          ],
+          "top1_removed_lower_mean": -1.0229943556396193,
+          "unresolved_n": 8,
+          "win_rate_interval": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    }
+  },
+  "task_id": "KS-FWD-R1",
+  "verdict_candidate": "INSUFFICIENT_FORWARD_N",
+  "verdict_reason": "definite F-on forward population is below preregistered N and/or F-unresolved exceeds 20%",
+  "window": {
+    "end": "2026-08-14 14:22:59Z",
+    "f_ready": "2026-06-24 11:47:16+00:00",
+    "observed_coverage": {
+      "earliest_first_swap_block": 47756627,
+      "latest_first_swap_block": 49963551,
+      "latest_first_swap_time": "2026-08-14 14:07:29.000Z",
+      "raw_universe_n": 5712
+    },
+    "start": "2026-06-24 11:47:16Z"
+  }
+}

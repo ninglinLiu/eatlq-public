@@ -1,0 +1,325 @@
+{
+  "n": 8,
+  "rows": [
+    {
+      "actual_paired_out": 976972077348556994,
+      "actual_token_in": 5323041131565913883490975810,
+      "limitation": "prior-block state approximation; not transaction-index replay",
+      "log_index": 8,
+      "pass_threshold": "relative_output_error <= 0.25",
+      "passed": false,
+      "pool_id": "0x275b12c8374bde2ee088703ca1418c3a9183662051d1e30ff6389e1853885bf6",
+      "quote": {
+        "amount_in": 5323041131565913883490975810,
+        "amount_out": null,
+        "block": 48716286,
+        "calldata_sha256": "bd04909eee05c5ff97bd7b395da07272a3c22b797767864ee5ebd52811eb8294",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": null,
+        "ok": false,
+        "pool_id": "0x275b12c8374bde2ee088703ca1418c3a9183662051d1e30ff6389e1853885bf6",
+        "rpc": {
+          "error_class": "UNKNOWN_REVERT",
+          "error_message": "{'code': 3, 'message': 'execution reverted', 'data': '0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed734275b12c8374bde2ee088703ca1418c3a9183662051d1e30ff6389e1853885bf600000000000000000000000000000000000000000000000000000000'}",
+          "final_attempt_id": 1,
+          "ok": false,
+          "result": null,
+          "revert_data": "0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed734275b12c8374bde2ee088703ca1418c3a9183662051d1e30ff6389e1853885bf600000000000000000000000000000000000000000000000000000000",
+          "revert_selectors": [
+            "0x6190b2b0",
+            "0x7a5ed734",
+            "0x53885bf6"
+          ]
+        },
+        "side": "REAL_SELL_PREBLOCK_CROSSCHECK",
+        "token": "0x7e84588b6997bbfddcd50beac0ca0f9582547b07",
+        "zero_for_one": false
+      },
+      "quote_block": 48716286,
+      "relative_output_error": null,
+      "swap_block": 48716287,
+      "token": "0x7e84588b6997bbfddcd50beac0ca0f9582547b07",
+      "transaction_hash": "0x4a9bddac1670b2fe6f50b1d7abbf05ffeda871d30d806a4892755461a3b7b0f2"
+    },
+    {
+      "actual_paired_out": 402812,
+      "actual_token_in": 1984568732735609866712889,
+      "limitation": "prior-block state approximation; not transaction-index replay",
+      "log_index": 200,
+      "pass_threshold": "relative_output_error <= 0.25",
+      "passed": false,
+      "pool_id": "0xb57755b367ea64b0dd06e94dd308b939f531c40e92d77503de5a6a1398f71def",
+      "quote": {
+        "amount_in": 1984568732735609866712889,
+        "amount_out": null,
+        "block": 48725556,
+        "calldata_sha256": "6b205df7c07bfc0c8a52b61bb1c7ce4c65e924dee7424ceb72f37439a9f9e34a",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": null,
+        "ok": false,
+        "pool_id": "0xb57755b367ea64b0dd06e94dd308b939f531c40e92d77503de5a6a1398f71def",
+        "rpc": {
+          "error_class": "UNKNOWN_REVERT",
+          "error_message": "{'code': 3, 'message': 'execution reverted', 'data': '0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed734b57755b367ea64b0dd06e94dd308b939f531c40e92d77503de5a6a1398f71def00000000000000000000000000000000000000000000000000000000'}",
+          "final_attempt_id": 2,
+          "ok": false,
+          "result": null,
+          "revert_data": "0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed734b57755b367ea64b0dd06e94dd308b939f531c40e92d77503de5a6a1398f71def00000000000000000000000000000000000000000000000000000000",
+          "revert_selectors": [
+            "0x6190b2b0",
+            "0x7a5ed734",
+            "0x98f71def"
+          ]
+        },
+        "side": "REAL_SELL_PREBLOCK_CROSSCHECK",
+        "token": "0x36d6f486e789e511e145ed2899644e224d9b6b07",
+        "zero_for_one": true
+      },
+      "quote_block": 48725556,
+      "relative_output_error": null,
+      "swap_block": 48725557,
+      "token": "0x36d6f486e789e511e145ed2899644e224d9b6b07",
+      "transaction_hash": "0x1667deded06f602646ca13ca7aa1539d6f9982430a0488497d87fcb708aeb395"
+    },
+    {
+      "actual_paired_out": 9880239520958084,
+      "actual_token_in": 98996270339808831736620068,
+      "limitation": "prior-block state approximation; not transaction-index replay",
+      "log_index": 199,
+      "pass_threshold": "relative_output_error <= 0.25",
+      "passed": false,
+      "pool_id": "0xdac765e6067128f453bb7d8e6ad85bfae2eef344d881db3f775028ea009a732d",
+      "quote": {
+        "amount_in": 98996270339808831736620068,
+        "amount_out": null,
+        "block": 48713596,
+        "calldata_sha256": "988a860fd27fe6df23b996c137cafa1b1a2fda4851274ce4e45ef2966702ec16",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": null,
+        "ok": false,
+        "pool_id": "0xdac765e6067128f453bb7d8e6ad85bfae2eef344d881db3f775028ea009a732d",
+        "rpc": {
+          "error_class": "UNKNOWN_REVERT",
+          "error_message": "{'code': 3, 'message': 'execution reverted', 'data': '0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed734dac765e6067128f453bb7d8e6ad85bfae2eef344d881db3f775028ea009a732d00000000000000000000000000000000000000000000000000000000'}",
+          "final_attempt_id": 3,
+          "ok": false,
+          "result": null,
+          "revert_data": "0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed734dac765e6067128f453bb7d8e6ad85bfae2eef344d881db3f775028ea009a732d00000000000000000000000000000000000000000000000000000000",
+          "revert_selectors": [
+            "0x6190b2b0",
+            "0x7a5ed734",
+            "0x009a732d"
+          ]
+        },
+        "side": "REAL_SELL_PREBLOCK_CROSSCHECK",
+        "token": "0x80b8991af0b05e6cadc29088ad920d0c09479b07",
+        "zero_for_one": false
+      },
+      "quote_block": 48713596,
+      "relative_output_error": null,
+      "swap_block": 48713597,
+      "token": "0x80b8991af0b05e6cadc29088ad920d0c09479b07",
+      "transaction_hash": "0x79275506f574ac934df9777f7f5fe3d76731895746a265907ef99b5dc2404669"
+    },
+    {
+      "actual_paired_out": 1033608,
+      "actual_token_in": 4634885782602865521053557,
+      "limitation": "prior-block state approximation; not transaction-index replay",
+      "log_index": 430,
+      "pass_threshold": "relative_output_error <= 0.25",
+      "passed": false,
+      "pool_id": "0xf5592764a01a7e94be4e79c18d6f9b609afad5a69cc4f27620795079a35e5253",
+      "quote": {
+        "amount_in": 4634885782602865521053557,
+        "amount_out": null,
+        "block": 48714764,
+        "calldata_sha256": "cd074a5de967a070a8b7133884c8ff019e65cd373c07a0e6bf590bbb7ff85e39",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": null,
+        "ok": false,
+        "pool_id": "0xf5592764a01a7e94be4e79c18d6f9b609afad5a69cc4f27620795079a35e5253",
+        "rpc": {
+          "error_class": "UNKNOWN_REVERT",
+          "error_message": "{'code': 3, 'message': 'execution reverted', 'data': '0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed734f5592764a01a7e94be4e79c18d6f9b609afad5a69cc4f27620795079a35e525300000000000000000000000000000000000000000000000000000000'}",
+          "final_attempt_id": 4,
+          "ok": false,
+          "result": null,
+          "revert_data": "0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed734f5592764a01a7e94be4e79c18d6f9b609afad5a69cc4f27620795079a35e525300000000000000000000000000000000000000000000000000000000",
+          "revert_selectors": [
+            "0x6190b2b0",
+            "0x7a5ed734",
+            "0xa35e5253"
+          ]
+        },
+        "side": "REAL_SELL_PREBLOCK_CROSSCHECK",
+        "token": "0xa16206cf592de73197f23ba9866f81cff7e78b07",
+        "zero_for_one": false
+      },
+      "quote_block": 48714764,
+      "relative_output_error": null,
+      "swap_block": 48714765,
+      "token": "0xa16206cf592de73197f23ba9866f81cff7e78b07",
+      "transaction_hash": "0xdcba363953a2b0c2cfa986d27ad1c0eda68068ee91506515c3e18623f3362a7a"
+    },
+    {
+      "actual_paired_out": 49401197604790420,
+      "actual_token_in": 190033958643692877164842495,
+      "limitation": "prior-block state approximation; not transaction-index replay",
+      "log_index": 16,
+      "pass_threshold": "relative_output_error <= 0.25",
+      "passed": true,
+      "pool_id": "0x275b12c8374bde2ee088703ca1418c3a9183662051d1e30ff6389e1853885bf6",
+      "quote": {
+        "amount_in": 190033958643692877164842495,
+        "amount_out": 44800550924642312,
+        "block": 48716288,
+        "calldata_sha256": "6375dca86f801f260a36960077f4ee90005c2de93044c3c81a17f85cacdfd90d",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": 173553,
+        "ok": true,
+        "pool_id": "0x275b12c8374bde2ee088703ca1418c3a9183662051d1e30ff6389e1853885bf6",
+        "rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 5,
+          "ok": true,
+          "result": "0x000000000000000000000000000000000000000000000000009f29dd1b9ae808000000000000000000000000000000000000000000000000000000000002a5f1",
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "side": "REAL_SELL_PREBLOCK_CROSSCHECK",
+        "token": "0x7e84588b6997bbfddcd50beac0ca0f9582547b07",
+        "zero_for_one": false
+      },
+      "quote_block": 48716288,
+      "relative_output_error": 0.09312824188905867,
+      "swap_block": 48716289,
+      "token": "0x7e84588b6997bbfddcd50beac0ca0f9582547b07",
+      "transaction_hash": "0x944af7a7e8fe99d8ec758185f34624f6a889049a5ec675faa677e985b71f3acf"
+    },
+    {
+      "actual_paired_out": 812501,
+      "actual_token_in": 4000483660869018743118521,
+      "limitation": "prior-block state approximation; not transaction-index replay",
+      "log_index": 288,
+      "pass_threshold": "relative_output_error <= 0.25",
+      "passed": false,
+      "pool_id": "0xb57755b367ea64b0dd06e94dd308b939f531c40e92d77503de5a6a1398f71def",
+      "quote": {
+        "amount_in": 4000483660869018743118521,
+        "amount_out": null,
+        "block": 48744107,
+        "calldata_sha256": "055a7be0d3e855952ccce7773728bc70b9836fa569db3e0ce237f9a5070d4aeb",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": null,
+        "ok": false,
+        "pool_id": "0xb57755b367ea64b0dd06e94dd308b939f531c40e92d77503de5a6a1398f71def",
+        "rpc": {
+          "error_class": "UNKNOWN_REVERT",
+          "error_message": "{'code': 3, 'message': 'execution reverted', 'data': '0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed734b57755b367ea64b0dd06e94dd308b939f531c40e92d77503de5a6a1398f71def00000000000000000000000000000000000000000000000000000000'}",
+          "final_attempt_id": 6,
+          "ok": false,
+          "result": null,
+          "revert_data": "0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed734b57755b367ea64b0dd06e94dd308b939f531c40e92d77503de5a6a1398f71def00000000000000000000000000000000000000000000000000000000",
+          "revert_selectors": [
+            "0x6190b2b0",
+            "0x7a5ed734",
+            "0x98f71def"
+          ]
+        },
+        "side": "REAL_SELL_PREBLOCK_CROSSCHECK",
+        "token": "0x36d6f486e789e511e145ed2899644e224d9b6b07",
+        "zero_for_one": true
+      },
+      "quote_block": 48744107,
+      "relative_output_error": null,
+      "swap_block": 48744108,
+      "token": "0x36d6f486e789e511e145ed2899644e224d9b6b07",
+      "transaction_hash": "0xdee930270990e0b8467426150cef37d4f7728c44cd29c91175a8bbea944318f9"
+    },
+    {
+      "actual_paired_out": 247005988023952096,
+      "actual_token_in": 860733902839734188195784746,
+      "limitation": "prior-block state approximation; not transaction-index replay",
+      "log_index": 20,
+      "pass_threshold": "relative_output_error <= 0.25",
+      "passed": true,
+      "pool_id": "0x275b12c8374bde2ee088703ca1418c3a9183662051d1e30ff6389e1853885bf6",
+      "quote": {
+        "amount_in": 860733902839734188195784746,
+        "amount_out": 206610947600613079,
+        "block": 48716289,
+        "calldata_sha256": "b10925add944210a08082d8d8111346cddd2a50a1267d903ff4c6e808dcfc7c7",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": 427280,
+        "ok": true,
+        "pool_id": "0x275b12c8374bde2ee088703ca1418c3a9183662051d1e30ff6389e1853885bf6",
+        "rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 7,
+          "ok": true,
+          "result": "0x00000000000000000000000000000000000000000000000002de078fea70fed70000000000000000000000000000000000000000000000000000000000068510",
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "side": "REAL_SELL_PREBLOCK_CROSSCHECK",
+        "token": "0x7e84588b6997bbfddcd50beac0ca0f9582547b07",
+        "zero_for_one": false
+      },
+      "quote_block": 48716289,
+      "relative_output_error": 0.16353870910782098,
+      "swap_block": 48716290,
+      "token": "0x7e84588b6997bbfddcd50beac0ca0f9582547b07",
+      "transaction_hash": "0x87fd25ee9eb9c3349a2d2f0105eb48fe582b07c77ee1ef7569de3f335c06988f"
+    },
+    {
+      "actual_paired_out": 1474482,
+      "actual_token_in": 7239553564487398667927500,
+      "limitation": "prior-block state approximation; not transaction-index replay",
+      "log_index": 377,
+      "pass_threshold": "relative_output_error <= 0.25",
+      "passed": false,
+      "pool_id": "0xb57755b367ea64b0dd06e94dd308b939f531c40e92d77503de5a6a1398f71def",
+      "quote": {
+        "amount_in": 7239553564487398667927500,
+        "amount_out": null,
+        "block": 48745796,
+        "calldata_sha256": "3da0d919efc2d7d6986bcdb3d3f1464114dc38c6c8550ea5bbe6fd8639eee8d9",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": null,
+        "ok": false,
+        "pool_id": "0xb57755b367ea64b0dd06e94dd308b939f531c40e92d77503de5a6a1398f71def",
+        "rpc": {
+          "error_class": "UNKNOWN_REVERT",
+          "error_message": "{'code': 3, 'message': 'execution reverted', 'data': '0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed734b57755b367ea64b0dd06e94dd308b939f531c40e92d77503de5a6a1398f71def00000000000000000000000000000000000000000000000000000000'}",
+          "final_attempt_id": 8,
+          "ok": false,
+          "result": null,
+          "revert_data": "0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed734b57755b367ea64b0dd06e94dd308b939f531c40e92d77503de5a6a1398f71def00000000000000000000000000000000000000000000000000000000",
+          "revert_selectors": [
+            "0x6190b2b0",
+            "0x7a5ed734",
+            "0x98f71def"
+          ]
+        },
+        "side": "REAL_SELL_PREBLOCK_CROSSCHECK",
+        "token": "0x36d6f486e789e511e145ed2899644e224d9b6b07",
+        "zero_for_one": true
+      },
+      "quote_block": 48745796,
+      "relative_output_error": null,
+      "swap_block": 48745797,
+      "token": "0x36d6f486e789e511e145ed2899644e224d9b6b07",
+      "transaction_hash": "0x327f5f7435eef677572d16b3db9aab1fd68b07211577f1a6a50e9df47f864248"
+    }
+  ]
+}

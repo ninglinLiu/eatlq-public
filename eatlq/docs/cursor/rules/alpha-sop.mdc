@@ -1,0 +1,18 @@
+---
+description: Mandatory Alpha SOP workflow for alpha, signals, wallets, pools, models, paper-shadow, dry-run, and live-readiness docs.
+alwaysApply: true
+---
+
+# Alpha SOP — default workflow (EATLQ)
+
+Before **any** work touching **alpha / signal / wallet / pool / model / paper-shadow / dry-run / live-readiness**:
+
+1. **Read** `docs/alpha-sop-decision-tree.md` first (decision map; **not** live/training authorization).
+1b. **Sprint090+ alpha search**: read `docs/alpha-search-sprint-sop.md` — **PROVISIONAL, not permanent**; if experiments fail, **delete aggressive clauses**, do not defend outdated SOP text. Today: execute first, refine SOP after evidence.
+2. **Cross-check** hard contracts: `Architecture.md`, `Operations.md`, `AGENTS.md`, `docs/*contract.md`, `docs/*freeze.md`, `docs/*gate.md`, and `mvp/audits/failed_no_7d_alpha_guard.md`.
+3. **Register** scope: add/update a row in `mvp/audits/alpha_registry.md` when starting or extending a sprint-line.
+4. **New B/C-tier artifacts** (audits/readouts/designs tied to mining or execution): include YAML frontmatter with `sop_applied`, `alpha_id`, `family`, `next_gate`, `decision_flags` — see `python3 scripts/check_alpha_sop_compliance.py --print-template`.
+5. **Validate** optionally: `python3 scripts/check_alpha_sop_compliance.py path/to/new_artifact.md`
+6. **Forbidden:** claiming this rule authorizes labeling, training, live trading, model promotion, or superseding `FAILED_NO_7D_ALPHA` without human gates and artifacts named in Phase 6 resolution criteria.
+
+Canonical committed path: **`docs/cursor/rules/alpha-sop.mdc`**. If your IDE reads `.cursor/rules/`, symlink or copy from `docs/cursor/rules/`.

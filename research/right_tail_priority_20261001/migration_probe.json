@@ -1,0 +1,14 @@
+{
+  "error": {
+    "error": {
+      "code": -32602,
+      "message": "Archive requests require a personal token. Get one at: https://www.allnodes.com/publicnode"
+    },
+    "id": 1,
+    "jsonrpc": "2.0"
+  },
+  "hi": 124486491,
+  "key": "2b16952b7cb106a4fd29b81d0d9c06d6a1071e73c02e97b3def05167199abc50",
+  "lo": 124484492,
+  "ok": false
+}

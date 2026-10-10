@@ -1,0 +1,50 @@
+[
+ {
+  "sym": "USDC",
+  "X": "0x3fe04a59ebd38cf06080a6f60a98d124eb59392a",
+  "Y": "0xb2cc224c1c9fee385f8ad6a55b4d94e92359dc59",
+  "n_sig_blocks": 88438,
+  "n_episodes": 21942,
+  "median_episode_len": 2,
+  "mean_episode_len": 4.030535046941938,
+  "n_tradeable": 21942,
+  "ep_net_mean": 0.31830064976030364,
+  "ep_net_median": 0.28062825680880743,
+  "pct_pos": 63.48099535138091,
+  "n_days": 89,
+  "usd_total_94d": 3492.0764285202913,
+  "usd_per_day": 36.914127151377286
+ },
+ {
+  "sym": "USDC",
+  "X": "0x3fe04a59ebd38cf06080a6f60a98d124eb59392a",
+  "Y": "0xb4cb800910b228ed3d0834cf79d697127bbb00e5",
+  "n_sig_blocks": 2211,
+  "n_episodes": 570,
+  "median_episode_len": 1,
+  "mean_episode_len": 3.8789473684210525,
+  "n_tradeable": 570,
+  "ep_net_mean": -3.9427352473176294,
+  "ep_net_median": 0.048887706829857436,
+  "pct_pos": 51.05263157894737,
+  "n_days": 56,
+  "usd_total_94d": -1123.6795454855244,
+  "usd_per_day": -11.878219296887151
+ },
+ {
+  "sym": "USDC",
+  "X": "0x3fe04a59ebd38cf06080a6f60a98d124eb59392a",
+  "Y": "0xd0b53d9277642d899df5c87a3966a349a798f224",
+  "n_sig_blocks": 9215,
+  "n_episodes": 1538,
+  "median_episode_len": 3,
+  "mean_episode_len": 5.991547464239272,
+  "n_tradeable": 1538,
+  "ep_net_mean": 1.1400832221151627,
+  "ep_net_median": 0.8639060056284844,
+  "pct_pos": 75.2925877763329,
+  "n_days": 84,
+  "usd_total_94d": 876.7239978065601,
+  "usd_per_day": 9.267695537067231
+ }
+]

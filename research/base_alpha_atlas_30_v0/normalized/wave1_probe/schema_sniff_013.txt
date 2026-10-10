@@ -1,0 +1,9 @@
+2:DROP VIEW IF EXISTS eatlq.uniswap_v3_mints_decoded;
+5:DROP VIEW IF EXISTS eatlq.uniswap_v3_swaps_decoded;
+30:CREATE VIEW eatlq.erc20_transfers_decoded
+52:CREATE VIEW eatlq.uniswap_v2_swaps_decoded
+80:CREATE VIEW eatlq.uniswap_v2_mints_decoded
+103:CREATE VIEW eatlq.uniswap_v2_burns_decoded
+127:CREATE VIEW eatlq.uniswap_v3_swaps_decoded
+157:CREATE VIEW eatlq.uniswap_v3_mints_decoded
+187:CREATE VIEW eatlq.uniswap_v3_burns_decoded

@@ -1,0 +1,23 @@
+{
+  "action": {
+    "action": null,
+    "action_name": null,
+    "action_order": null,
+    "actions_bytes_hex": null,
+    "ambiguity": "MULTICALL_WRAPPER",
+    "amount_in": null,
+    "amount_out_minimum": null,
+    "hook_data_hex": null,
+    "notes": [
+      "multicall_or_aggregator_not_fully_expanded"
+    ],
+    "pool_key": null,
+    "status": "AMBIGUOUS_MULTI_LEG",
+    "to_address": "0xca11bde05977b3631167028862be2a173976ca11",
+    "top_level_selector": "0x174dea71",
+    "zero_for_one": null
+  },
+  "expected_reject_status": "AMBIGUOUS_MULTI_LEG",
+  "kind": "reject_ambiguity",
+  "transaction_hash": "0xdcba363953a2b0c2cfa986d27ad1c0eda68068ee91506515c3e18623f3362a7a"
+}

@@ -1,0 +1,104 @@
+clickhouse:
+  url: http://clickhouse:8123
+  database: eatlq
+  docker_container: eatlq-clickhouse-1
+  query_timeout_sec: 180
+  decoded_sources:
+    v2_table: uniswap_v2_swaps_decoded
+    metadata_table: discovered_pools
+
+rpc:
+  env_vars:
+    - LABEL_RPC_URL
+    - EVM_HTTP_URL
+    - LIVE_BASE_RPC_URL
+  env_files:
+    - infra/compose/.env
+    - infra/compose/.env.example
+  max_backfill_pools: 2000
+  batch_size: 80
+  timeout_sec: 60
+  max_retries: 3
+
+candidate_repair:
+  target_candidates: 15000
+  max_pools_for_repair: 5000
+  max_per_pool: 25
+  max_per_pool_time_bucket: 3
+  query_pool_chunk_size: 400
+  deterministic_sample_seed: run004_h1610r_v2_decoded_backed_repair
+
+features:
+  include_source_event_in_features: true
+
+windows_sec:
+  - 60
+  - 180
+  - 300
+  - 900
+  - 1800
+
+pilot:
+  rows: 200
+  quote_success_gate: 0.90
+
+labeling:
+  target_success_rows: 10000
+  max_attempts: 15000
+  batch_size: 250
+  workers: 8
+  fixed_horizon_sec: 1800
+  notional_wei: 500000000000000
+  round_trip_cost: 0.006
+  slippage_stress_bps: 100
+  rpc_env_vars:
+    - LABEL_RPC_URL
+    - EVM_HTTP_URL
+    - LIVE_BASE_RPC_URL
+  gas_price_gwei:
+    low: 0.01
+    medium: 0.03
+    high: 0.10
+  include_approval_gas: true
+  approval_gas_units: 50000
+  gas_units:
+    v2:
+      buy: 180000
+      sell: 160000
+    v3:
+      buy: 260000
+      sell: 240000
+
+risk_severity:
+  hard_exclude_abs_return: 0.20
+  confirmed_bad_pools:
+    - "0x3e118916cd67cc9bfeb0fc44ae3dde8bc33c2d4a"
+  alpha_island_pools:
+    - "0x54219bce730d2727d91d8dcdf1465c7d299dee45"
+    - "0xc2476883d28d40b6c057f242fce2e8bda674faa0"
+
+outputs:
+  patch_json: mvp/diagnostics/run004_patch_h1610r_v2_decoded_backed_candidate_repair_rpc_metadata_backfill.json
+  filter_waterfall_report_json: mvp/diagnostics/run004_h1610r_filter_waterfall_report.json
+  weth_resolver_report_json: mvp/diagnostics/run004_h1610r_weth_resolver_report.json
+  weth_resolver_cache_json: mvp/diagnostics/run004_h1610r_weth_resolver_cache.json
+  rpc_readiness_injection_report_json: mvp/diagnostics/run004_h1610r_rpc_readiness_injection_report.json
+  repaired_candidate_csv: mvp/diagnostics/run004_h1610r_repaired_v2_decoded_backed_candidates.csv
+  candidate_report_json: mvp/diagnostics/run004_h1610r_candidate_report.json
+  feature_coverage_precheck_report_json: mvp/diagnostics/run004_h1610r_feature_coverage_precheck_report.json
+  pilot_report_json: mvp/diagnostics/run004_h1610r_pilot_report.json
+  pilot_dataset_csv: mvp/diagnostics/run004_h1610r_pilot_dataset.csv
+  next_step_decision_report_json: mvp/diagnostics/run004_h1610r_next_step_decision_report.json
+  markdown: mvp/runs/run-004-patch-h1610r-v2-decoded-backed-candidate-repair-rpc-metadata-backfill.md
+
+safety:
+  diagnostics_only: true
+  no_training: true
+  no_production_retrain: true
+  no_promote: true
+  no_live: true
+  no_v3_artifact_changes: true
+  no_mixed_v2_v3_artifact_changes: true
+  no_production_model_write: true
+  no_active_model_overwrite: true
+  not_full_strategy_backtest: true

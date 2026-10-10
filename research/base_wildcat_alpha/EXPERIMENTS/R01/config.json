@@ -1,0 +1,23 @@
+{
+  "alpha_id": "R01",
+  "family": "regime",
+  "hypothesis": "high market breadth favors momentum",
+  "mechanism": "cross-pool agreement reflects common risk-on state",
+  "venue": "Base V3",
+  "universe": "active observed pools",
+  "horizon": "4h",
+  "data_source": "cross-pool hourly state",
+  "experiment": "regime interaction",
+  "feature": "market_breadth",
+  "direction": 1,
+  "prediction_object": "next return",
+  "falsifier": "no out-of-time consistency",
+  "status": "NOT_YET_TESTED",
+  "sample_size": 0,
+  "gross_result": "pending",
+  "cost_adjusted_result": "pending",
+  "capacity": "pending",
+  "concentration": "pending",
+  "tail_risk": "pending",
+  "next_action": "run rapid screen"
+}

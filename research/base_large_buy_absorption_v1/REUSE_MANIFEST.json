@@ -1,0 +1,35 @@
+{
+  "project": "base_large_buy_absorption_v1",
+  "adapted_from": "/root/base_actor_flow_oos_v0",
+  "data": {
+    "resolved_swaps_parquet": {
+      "path": "data/resolved_swaps.parquet",
+      "source": "/root/base_actor_flow_oos_v0/out/phase1/resolved_swaps.parquet",
+      "sha256": "075b801d092368034462d4027b765e87e59c31002f31e3d07caa11836e1ef6f9",
+      "link": "symlink",
+      "note": "No CH/RPC re-pull; hash-locked"
+    }
+  },
+  "copied_modules_unchanged_logic": [
+    "src/common.py (ROOT/CFG paths retargeted)",
+    "src/attribution_policy.py",
+    "src/actor_resolution.py",
+    "src/fifo_episodes.py",
+    "src/wallet_monthly.py",
+    "src/atomic_sim.py"
+  ],
+  "new_modules": [
+    "src/features_pit.py",
+    "src/signals.py",
+    "src/labels_truth.py",
+    "src/scheduler.py",
+    "src/arms_v1.py",
+    "src/scorecard_v1.py",
+    "src/calendar_audit.py",
+    "src/reconcile.py",
+    "src/finalize_v1.py",
+    "src/run_all_v1.py",
+    "src/shadow_recorder.py"
+  ],
+  "v0_status_seal": "/root/base_actor_flow_oos_v0/out/ACTOR_FLOW_V0_STATUS.json"
+}

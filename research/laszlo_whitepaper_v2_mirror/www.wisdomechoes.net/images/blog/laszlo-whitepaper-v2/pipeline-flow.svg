@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="280" viewBox="0 0 960 280" fill="none">
+  <defs>
+    <style>
+      .bg { fill: #0B0E14; }
+      .panel { fill: #11151C; stroke: #1C2129; stroke-width: 1; }
+      .title { fill: #9E9E9E; font: 600 11px Inter, sans-serif; letter-spacing: 0.12em; }
+      .label { fill: #FFFFFF; font: 600 13px Inter, sans-serif; }
+      .sub { fill: #6B7280; font: 400 11px Roboto Mono, monospace; }
+      .arrow { stroke: #F5A623; stroke-width: 2; fill: none; marker-end: url(#arr); }
+    </style>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#F5A623"/>
+    </marker>
+  </defs>
+  <rect width="960" height="280" class="bg" rx="8"/>
+  <text x="32" y="36" class="title">LASZLO DATA PIPELINE</text>
+
+  <rect x="32" y="64" width="120" height="72" rx="6" class="panel"/>
+  <text x="48" y="92" class="label">Base L2</text>
+  <text x="48" y="114" class="sub">Alchemy WS/HTTP</text>
+
+  <rect x="184" y="64" width="120" height="72" rx="6" class="panel"/>
+  <text x="200" y="92" class="label">Ingestor</text>
+  <text x="200" y="114" class="sub">market_ticks</text>
+
+  <rect x="336" y="64" width="120" height="72" rx="6" class="panel"/>
+  <text x="352" y="92" class="label">Redis</text>
+  <text x="352" y="114" class="sub">Streams</text>
+
+  <rect x="488" y="64" width="120" height="72" rx="6" class="panel"/>
+  <text x="504" y="92" class="label">Strategy</text>
+  <text x="504" y="114" class="sub">XGBoost v3</text>
+
+  <rect x="640" y="64" width="120" height="72" rx="6" class="panel"/>
+  <text x="656" y="92" class="label">Executor</text>
+  <text x="656" y="114" class="sub">swap + ledger</text>
+
+  <rect x="792" y="64" width="136" height="72" rx="6" class="panel"/>
+  <text x="808" y="92" class="label">Ledger</text>
+  <text x="808" y="114" class="sub">trade_ledger.jsonl</text>
+
+  <path d="M152 100 H184" class="arrow"/>
+  <path d="M304 100 H336" class="arrow"/>
+  <path d="M456 100 H488" class="arrow"/>
+  <path d="M608 100 H640" class="arrow"/>
+  <path d="M760 100 H792" class="arrow"/>
+
+  <rect x="184" y="168" width="272" height="72" rx="6" class="panel"/>
+  <text x="200" y="196" class="label">dashcam.csv</text>
+  <text x="200" y="218" class="sub">Phase 6 label → train → holdout Pe72%</text>
+
+  <path d="M548 136 V152 H320 V168" class="arrow" stroke-dasharray="4 4"/>
+
+  <rect x="488" y="168" width="440" height="72" rx="6" class="panel"/>
+  <text x="504" y="196" class="label">Risk gates</text>
+  <text x="504" y="218" class="sub">stale head · drawdown · SELL_ONLY · fire_thr=max(model,0.68)</text>
+</svg>

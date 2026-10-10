@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="220" viewBox="0 0 960 220" fill="none">
+  <defs>
+    <style>
+      .bg { fill: #0B0E14; }
+      .box { fill: #11151C; stroke: #1C2129; }
+      .arr { stroke: #F5A623; stroke-width: 2; fill: none; marker-end: url(#a); }
+      .t { fill: #FFF; font: 600 12px Inter, sans-serif; }
+      .s { fill: #9E9E9E; font: 400 10px Inter, sans-serif; }
+      .title { fill: #9E9E9E; font: 600 11px Inter, sans-serif; letter-spacing: 0.12em; }
+    </style>
+    <marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#F5A623"/></marker>
+  </defs>
+  <rect width="960" height="220" class="bg" rx="10"/>
+  <text x="32" y="28" class="title">ML LOOP · SIGNAL TO DEPLOYMENT</text>
+
+  <g>
+    <rect x="24" y="64" width="130" height="72" rx="6" class="box"/>
+    <text x="44" y="92" class="t">Collect</text><text x="44" y="112" class="s">live signals</text>
+    <rect x="174" y="64" width="130" height="72" rx="6" class="box"/>
+    <text x="194" y="92" class="t">Prepare</text><text x="194" y="112" class="s">clean dataset</text>
+    <rect x="324" y="64" width="130" height="72" rx="6" class="box"/>
+    <text x="344" y="92" class="t">Label</text><text x="344" y="112" class="s">outcome verify</text>
+    <rect x="474" y="64" width="130" height="72" rx="6" class="box"/>
+    <text x="494" y="92" class="t">Train</text><text x="494" y="112" class="s">out-of-sample</text>
+    <rect x="624" y="64" width="130" height="72" rx="6" class="box"/>
+    <text x="644" y="92" class="t">Deploy</text><text x="644" y="112" class="s"> gated release</text>
+    <rect x="774" y="64" width="130" height="72" rx="6" class="box"/>
+    <text x="794" y="92" class="t">Monitor</text><text x="794" y="112" class="s">review loop</text>
+    <path d="M154 100 H174 M304 100 H324 M454 100 H474 M604 100 H624 M754 100 H774" class="arr"/>
+  </g>
+
+  <text x="32" y="188" class="s">Models graduate only after independent validation  never by lowering standards.</text>
+</svg>

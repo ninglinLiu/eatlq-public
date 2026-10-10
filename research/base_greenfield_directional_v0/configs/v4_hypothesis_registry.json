@@ -1,0 +1,84 @@
+{
+  "status": "FROZEN_BEFORE_V4_SEARCH",
+  "round": "V4_ORTHOGONAL_HYPOTHESIS_ROUND",
+  "multiplicity_correction": "benjamini_hochberg",
+  "family_wise_alpha": 0.10,
+  "orthogonality_note": "Each hypothesis changes decision STRUCTURE, sample definition, or exit/capacity policy — not a re-tune of V3 soft-utility feature families.",
+  "v3_failed_banned": [
+    "H_FLOW_PERSIST",
+    "H_LIQ_REGIME",
+    "H_PARTICIPANT",
+    "H_DEPLOYER_PIT",
+    "H_PATH_STATE",
+    "H_TRADEABLE_RISK_SPLIT",
+    "H_FULL_DUAL"
+  ],
+  "hypotheses": [
+    {
+      "id": "H_HARD_FATAL_VETO",
+      "orthogonal_to": "V3 soft utility blend of risk+opportunity",
+      "mechanism": "Hard gate: refuse trade if predicted future-unsellable or liquidity-collapse exceeds frozen thresholds; only survivors are ranked by opportunity head. Risk is a veto, not a soft penalty.",
+      "pit_fields": ["liq_drawdown", "depth_proxy", "buy_ok_proxy", "infra_lag_s", "executable_depth_weth", "flow_persist_score", "early_ret", "pre_vol"],
+      "predicts": ["p_future_unsellable", "p_liquidity_collapse", "p_right_tail_25", "expected_mfe"],
+      "lifecycle_buckets": ["1-6h", "6-24h", "1-3d", "3-7d"],
+      "failure_condition": "OOF wallet PnL<=0 after haircut, or fatal rate not below universe, or does not beat C1/C2/C3",
+      "max_searches": 1,
+      "multiplicity": "benjamini_hochberg"
+    },
+    {
+      "id": "H_ATOMIC_AUDITED_ONLY",
+      "orthogonal_to": "V3 training on mixed PROXY_PATH + unaudited rows",
+      "mechanism": "Restrict modeling and selection to rows with PIT-audited buy SUCCESS and current sell SUCCESS at decision block; drop proxy labels. Tests whether execution-clean sub-universe carries edge.",
+      "pit_fields": ["buy_status", "current_sell_status", "executable_depth_weth", "entry_slip_proxy", "depth_proxy", "buy_ok_proxy"],
+      "predicts": ["expected_wallet_utility", "p_right_tail_25", "p_future_unsellable"],
+      "lifecycle_buckets": ["1-6h", "6-24h", "1-3d", "3-7d"],
+      "failure_condition": "Clean subsample too thin for repeatable right-tail, or OOF utility still non-positive vs baselines",
+      "max_searches": 1,
+      "multiplicity": "benjamini_hochberg"
+    },
+    {
+      "id": "H_BUCKET_SPECIALIST",
+      "orthogonal_to": "V3 pooled model across lifecycle buckets",
+      "mechanism": "Fit separate dual-head models inside each formal age bucket; no cross-bucket parameter sharing. Edge may be bucket-local.",
+      "pit_fields": ["age_s", "flow_persist_score", "liq_trend", "liq_drawdown", "early_ret", "mom_h2", "part_concentration", "deployer_prior_fatal_rate"],
+      "predicts": ["expected_wallet_utility"],
+      "lifecycle_buckets": ["1-6h", "6-24h", "1-3d", "3-7d"],
+      "failure_condition": "No bucket produces positive haircut PnL that beats baselines with repeatable right-tail",
+      "max_searches": 1,
+      "multiplicity": "benjamini_hochberg"
+    },
+    {
+      "id": "H_EXIT_BARRIER_SHORT",
+      "orthogonal_to": "V3 entry-score focus with fixed 6h horizon wallet label",
+      "mechanism": "Select on high p(TP-before-SL) and short predicted time_to_right_tail; prefer quick right-tail capture over terminal 6h return.",
+      "pit_fields": ["mom_h1", "mom_h2", "accel", "pre_vol", "range_location", "flow_persist_score", "vol_depth"],
+      "predicts": ["p_tp_before_sl", "time_to_right_tail", "p_right_tail_25"],
+      "lifecycle_buckets": ["1-6h", "6-24h", "1-3d"],
+      "failure_condition": "Short-barrier score does not yield positive OOF wallet PnL with breadth",
+      "max_searches": 1,
+      "multiplicity": "benjamini_hochberg"
+    },
+    {
+      "id": "H_SPARSE_CAPACITY_CAP",
+      "orthogonal_to": "V3 top-k=2 dense selection without deployer weekly cap",
+      "mechanism": "Ultra-sparse policy: select only utility >= train q90, at most 1 per decision_time, and at most 1 fill per deployer per calendar week to force breadth.",
+      "pit_fields": ["expected_wallet_utility_inputs"],
+      "predicts": ["expected_wallet_utility"],
+      "lifecycle_buckets": ["1-6h", "6-24h", "1-3d", "3-7d"],
+      "failure_condition": "Sparsity removes all edge or remaining winners are lottery-dependent",
+      "max_searches": 1,
+      "multiplicity": "benjamini_hochberg"
+    },
+    {
+      "id": "H_NEGCTRL_AVOID_TRANSFER",
+      "orthogonal_to": "V3 treating 15-60m only as unused negative control",
+      "mechanism": "Train a fatal/avoid classifier on 15-60m negative-control rows only; apply as PIT veto on formal buckets (transfer of avoid signature, not of V3 alpha scores).",
+      "pit_fields": ["early_ret", "pre_vol", "liq_drawdown", "flow_persist_score", "buys_10m", "sells_10m", "part_concentration", "mom_h2"],
+      "predicts": ["p_avoid_fatal", "expected_wallet_utility"],
+      "lifecycle_buckets": ["1-6h", "6-24h", "1-3d", "3-7d"],
+      "failure_condition": "Avoid transfer does not reduce fatal rate enough for positive haircut PnL",
+      "max_searches": 1,
+      "multiplicity": "benjamini_hochberg"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "workspace_version": "1.0.0",
+  "chain_id": 8453,
+  "source_database": "eatlq",
+  "clickhouse_container": "eatlq-clickhouse-1",
+  "random_seed": 8453,
+  "notional_usd": 1000.0,
+  "base_cost_bps": 60.0,
+  "stress_cost_bps": [0.0, 30.0, 60.0, 100.0, 200.0],
+  "stress_delay_bars": [0, 1, 2, 4],
+  "min_train_days": 14,
+  "min_test_days": 7,
+  "deep_dive_count": 8,
+  "data_cutoff_utc": "2026-08-14T14:00:00Z"
+}
+

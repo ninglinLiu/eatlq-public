@@ -1,0 +1,1288 @@
+{
+  "schema_version": 1,
+  "chain_id": 8453,
+  "status": "suspected_shared_infra_research_exclusion",
+  "pre_registered_rule": "distinct_tx_from_count >= 20 OR overall resolved-account volume rank in top 0.1%",
+  "addresses": [
+    {
+      "address": "0x51c72848c68a965f66fa7a88855f9f7784502a7f",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x51c72848c68a965f66fa7a88855f9f7784502a7f",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 3722,
+        "distinct_tx_from_count": 199,
+        "distinct_target_token_count": 3,
+        "overall_volume_rank": 1,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": true,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 7.025823
+      }
+    },
+    {
+      "address": "0xecec48ec5a7b7f7b96460b0f4e2b99cf0db94cb1",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xecec48ec5a7b7f7b96460b0f4e2b99cf0db94cb1",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 2769,
+        "distinct_tx_from_count": 3,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 2,
+        "flag_signer_count": false,
+        "flag_top_0_1pct": true,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 5.226895
+      }
+    },
+    {
+      "address": "0x8a8e4170c09074b109352190d47e54d7c1f61e4e",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x8a8e4170c09074b109352190d47e54d7c1f61e4e",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 2498,
+        "distinct_tx_from_count": 235,
+        "distinct_target_token_count": 2,
+        "overall_volume_rank": 3,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": true,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 4.715343
+      }
+    },
+    {
+      "address": "0x24bddff0577d1ee32f92a0b92296ca9702611c6a",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x24bddff0577d1ee32f92a0b92296ca9702611c6a",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 2361,
+        "distinct_tx_from_count": 271,
+        "distinct_target_token_count": 2,
+        "overall_volume_rank": 4,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": true,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 4.456735
+      }
+    },
+    {
+      "address": "0x278d858f05b94576c1e6f73285886876ff6ef8d2",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x278d858f05b94576c1e6f73285886876ff6ef8d2",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 1837,
+        "distinct_tx_from_count": 4,
+        "distinct_target_token_count": 3,
+        "overall_volume_rank": 5,
+        "flag_signer_count": false,
+        "flag_top_0_1pct": true,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 3.467608
+      }
+    },
+    {
+      "address": "0xedc625b74537ee3a10874f53d170e9c17a906b9c",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xedc625b74537ee3a10874f53d170e9c17a906b9c",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 1701,
+        "distinct_tx_from_count": 28,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 6,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": true,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 3.210888
+      }
+    },
+    {
+      "address": "0xeec28cf242b4523c4e2a186252a8d951660f66db",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xeec28cf242b4523c4e2a186252a8d951660f66db",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 1471,
+        "distinct_tx_from_count": 29,
+        "distinct_target_token_count": 2,
+        "overall_volume_rank": 7,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": true,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 2.776729
+      }
+    },
+    {
+      "address": "0x73d8bd54f7cf5fab43fe4ef40a62d390644946db",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x73d8bd54f7cf5fab43fe4ef40a62d390644946db",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 1416,
+        "distinct_tx_from_count": 100,
+        "distinct_target_token_count": 2,
+        "overall_volume_rank": 8,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 2.672908
+      }
+    },
+    {
+      "address": "0x01989c93890aed05a63d179b03424997075b6acf",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x01989c93890aed05a63d179b03424997075b6acf",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 1118,
+        "distinct_tx_from_count": 202,
+        "distinct_target_token_count": 3,
+        "overall_volume_rank": 10,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 2.11039
+      }
+    },
+    {
+      "address": "0xa4ad26f96f542ddd51a650f5df0b3f3c61df593d",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xa4ad26f96f542ddd51a650f5df0b3f3c61df593d",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 481,
+        "distinct_tx_from_count": 50,
+        "distinct_target_token_count": 2,
+        "overall_volume_rank": 13,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.907958
+      }
+    },
+    {
+      "address": "0x238a358808379702088667322f80ac48bad5e6c4",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x238a358808379702088667322f80ac48bad5e6c4",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 350,
+        "distinct_tx_from_count": 137,
+        "distinct_target_token_count": 2,
+        "overall_volume_rank": 15,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.660677
+      }
+    },
+    {
+      "address": "0x3dbe077e7986657e95e1cc50089f17a5a4af0aae",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x3dbe077e7986657e95e1cc50089f17a5a4af0aae",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 314,
+        "distinct_tx_from_count": 176,
+        "distinct_target_token_count": 2,
+        "overall_volume_rank": 16,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.592721
+      }
+    },
+    {
+      "address": "0x770004fe4411e42ea51a7fcaca32b267d791f3d4",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x770004fe4411e42ea51a7fcaca32b267d791f3d4",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 291,
+        "distinct_tx_from_count": 74,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 17,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.549305
+      }
+    },
+    {
+      "address": "0x6c561b446416e1a00e8e93e221854d6ea4171372",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x6c561b446416e1a00e8e93e221854d6ea4171372",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 285,
+        "distinct_tx_from_count": 66,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 18,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.537979
+      }
+    },
+    {
+      "address": "0x72ab388e2e2f6facef59e3c3fa2c4e29011c2d38",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x72ab388e2e2f6facef59e3c3fa2c4e29011c2d38",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 269,
+        "distinct_tx_from_count": 201,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 19,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.507777
+      }
+    },
+    {
+      "address": "0xbee3211ab312a8d065c4fef0247448e17a8da000",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xbee3211ab312a8d065c4fef0247448e17a8da000",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 244,
+        "distinct_tx_from_count": 105,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 20,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.460586
+      }
+    },
+    {
+      "address": "0xe5b5f522e98b5a2baae212d4da66b865b781db97",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xe5b5f522e98b5a2baae212d4da66b865b781db97",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 244,
+        "distinct_tx_from_count": 120,
+        "distinct_target_token_count": 2,
+        "overall_volume_rank": 21,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.460586
+      }
+    },
+    {
+      "address": "0xb5b8d7757aa2f6415537bb656bbcdf59969e7445",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xb5b8d7757aa2f6415537bb656bbcdf59969e7445",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 239,
+        "distinct_tx_from_count": 88,
+        "distinct_target_token_count": 2,
+        "overall_volume_rank": 22,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.451148
+      }
+    },
+    {
+      "address": "0xde7259893af7cdbc9fd806c6ba61d22d581d5667",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xde7259893af7cdbc9fd806c6ba61d22d581d5667",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 238,
+        "distinct_tx_from_count": 138,
+        "distinct_target_token_count": 7,
+        "overall_volume_rank": 23,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.44926
+      }
+    },
+    {
+      "address": "0xa8a14ce28771ff0e750caa2685d9da636d4808c6",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xa8a14ce28771ff0e750caa2685d9da636d4808c6",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 210,
+        "distinct_tx_from_count": 38,
+        "distinct_target_token_count": 2,
+        "overall_volume_rank": 27,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.396406
+      }
+    },
+    {
+      "address": "0xa52d7756491b007f724c980f6648b93d64b33cd3",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xa52d7756491b007f724c980f6648b93d64b33cd3",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 209,
+        "distinct_tx_from_count": 124,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 28,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.394518
+      }
+    },
+    {
+      "address": "0x4e392fbfe4d0557c82d2f97f02ec39daa31516dd",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x4e392fbfe4d0557c82d2f97f02ec39daa31516dd",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 179,
+        "distinct_tx_from_count": 108,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 30,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.337889
+      }
+    },
+    {
+      "address": "0x4cd00e387622c35bddb9b4c962c136462338bc31",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x4cd00e387622c35bddb9b4c962c136462338bc31",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 174,
+        "distinct_tx_from_count": 74,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 31,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.328451
+      }
+    },
+    {
+      "address": "0xb2cc224c1c9fee385f8ad6a55b4d94e92359dc59",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xb2cc224c1c9fee385f8ad6a55b4d94e92359dc59",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 166,
+        "distinct_tx_from_count": 116,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 32,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.313349
+      }
+    },
+    {
+      "address": "0xb94b22332abf5f89877a14cc88f2abc48c34b3df",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xb94b22332abf5f89877a14cc88f2abc48c34b3df",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 144,
+        "distinct_tx_from_count": 104,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 35,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.271821
+      }
+    },
+    {
+      "address": "0x06959273e9a65433de71f5a452d529544e07ddd0",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x06959273e9a65433de71f5a452d529544e07ddd0",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 123,
+        "distinct_tx_from_count": 88,
+        "distinct_target_token_count": 2,
+        "overall_volume_rank": 41,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.232181
+      }
+    },
+    {
+      "address": "0x7501bc8bb51616f79bfa524e464fb7b41f0b10fb",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x7501bc8bb51616f79bfa524e464fb7b41f0b10fb",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 118,
+        "distinct_tx_from_count": 62,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 45,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.222742
+      }
+    },
+    {
+      "address": "0xdbc6998296caa1652a810dc8d3baf4a8294330f1",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xdbc6998296caa1652a810dc8d3baf4a8294330f1",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 114,
+        "distinct_tx_from_count": 85,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 46,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.215192
+      }
+    },
+    {
+      "address": "0xa4fdd479eda160671636e2ecf8f993cbf86258a8",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xa4fdd479eda160671636e2ecf8f993cbf86258a8",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 113,
+        "distinct_tx_from_count": 54,
+        "distinct_target_token_count": 2,
+        "overall_volume_rank": 47,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.213304
+      }
+    },
+    {
+      "address": "0x82dbe18346a8656dbb5e76f74bf3ae279cc16b29",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x82dbe18346a8656dbb5e76f74bf3ae279cc16b29",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 91,
+        "distinct_tx_from_count": 71,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 51,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.171776
+      }
+    },
+    {
+      "address": "0x4e962bb3889bf030368f56810a9c96b83cb3e778",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x4e962bb3889bf030368f56810a9c96b83cb3e778",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 87,
+        "distinct_tx_from_count": 46,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 54,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.164225
+      }
+    },
+    {
+      "address": "0x7cb770d0513c30e0cb45e4899e4a2cbeed6f9830",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x7cb770d0513c30e0cb45e4899e4a2cbeed6f9830",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 85,
+        "distinct_tx_from_count": 66,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 55,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.16045
+      }
+    },
+    {
+      "address": "0x6fd0fb03d7e0998736100f8c9344227bec004e81",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x6fd0fb03d7e0998736100f8c9344227bec004e81",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 78,
+        "distinct_tx_from_count": 49,
+        "distinct_target_token_count": 2,
+        "overall_volume_rank": 57,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.147236
+      }
+    },
+    {
+      "address": "0xb30540172f1b37d1ee1d109e49f883e935e69219",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xb30540172f1b37d1ee1d109e49f883e935e69219",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 77,
+        "distinct_tx_from_count": 60,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 58,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.145349
+      }
+    },
+    {
+      "address": "0x0ba69825c4c033e72309f6ac0bde0023b15cc97c",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x0ba69825c4c033e72309f6ac0bde0023b15cc97c",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 74,
+        "distinct_tx_from_count": 58,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 60,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.139686
+      }
+    },
+    {
+      "address": "0xdf033790907c60c9b81ae355f76f74f52f92114a",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xdf033790907c60c9b81ae355f76f74f52f92114a",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 71,
+        "distinct_tx_from_count": 21,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 62,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.134023
+      }
+    },
+    {
+      "address": "0x70b1419aaa19f5071250577576e4a0adf1b7f396",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x70b1419aaa19f5071250577576e4a0adf1b7f396",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 67,
+        "distinct_tx_from_count": 60,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 64,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.126472
+      }
+    },
+    {
+      "address": "0x78126b4183291964ea5fba23edf1cfa3752d2ce9",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x78126b4183291964ea5fba23edf1cfa3752d2ce9",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 64,
+        "distinct_tx_from_count": 32,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 66,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.120809
+      }
+    },
+    {
+      "address": "0x256f399754f7ed5baa75b911ae6fd3c1a63b169c",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x256f399754f7ed5baa75b911ae6fd3c1a63b169c",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 58,
+        "distinct_tx_from_count": 52,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 69,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.109484
+      }
+    },
+    {
+      "address": "0x6aba0315493b7e6989041c91181337b662fb1b90",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x6aba0315493b7e6989041c91181337b662fb1b90",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 58,
+        "distinct_tx_from_count": 46,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 70,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.109484
+      }
+    },
+    {
+      "address": "0xf1cacd7e005b9337c58aae77bc88d93c635cdf4d",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xf1cacd7e005b9337c58aae77bc88d93c635cdf4d",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 52,
+        "distinct_tx_from_count": 25,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 79,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.098158
+      }
+    },
+    {
+      "address": "0x5d0bc342178c8fe2c2f9a9fcc9d52555c99936db",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x5d0bc342178c8fe2c2f9a9fcc9d52555c99936db",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 47,
+        "distinct_tx_from_count": 30,
+        "distinct_target_token_count": 2,
+        "overall_volume_rank": 85,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.088719
+      }
+    },
+    {
+      "address": "0xe25c6353a04f9375e9cbac224fda91a90c272e42",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xe25c6353a04f9375e9cbac224fda91a90c272e42",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 46,
+        "distinct_tx_from_count": 30,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 87,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.086832
+      }
+    },
+    {
+      "address": "0xc758d81b9b81a6fcdad075bd471874a2c46b54e0",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xc758d81b9b81a6fcdad075bd471874a2c46b54e0",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 44,
+        "distinct_tx_from_count": 35,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 90,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.083056
+      }
+    },
+    {
+      "address": "0x9d14ff91ae2c6e3d1a760542248b6c7f206894b0",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x9d14ff91ae2c6e3d1a760542248b6c7f206894b0",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 42,
+        "distinct_tx_from_count": 32,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 94,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.079281
+      }
+    },
+    {
+      "address": "0x160d7e9d948b16c163332a277b393c288408eb12",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x160d7e9d948b16c163332a277b393c288408eb12",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 39,
+        "distinct_tx_from_count": 35,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 97,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.073618
+      }
+    },
+    {
+      "address": "0x2aa7d880b7ad5964c02b919074fb27a71a7ddd07",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x2aa7d880b7ad5964c02b919074fb27a71a7ddd07",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 39,
+        "distinct_tx_from_count": 24,
+        "distinct_target_token_count": 3,
+        "overall_volume_rank": 98,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.073618
+      }
+    },
+    {
+      "address": "0xd22a820dc52f1cacea7a5c86da16757f434f43c6",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xd22a820dc52f1cacea7a5c86da16757f434f43c6",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 38,
+        "distinct_tx_from_count": 30,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 101,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.071731
+      }
+    },
+    {
+      "address": "0xba1333333333a1ba1108e8412f11850a5c319ba9",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xba1333333333a1ba1108e8412f11850a5c319ba9",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 37,
+        "distinct_tx_from_count": 24,
+        "distinct_target_token_count": 2,
+        "overall_volume_rank": 105,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.069843
+      }
+    },
+    {
+      "address": "0xd03ff08155a70d5ba88e5ff204b43fa09a2ee0d9",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xd03ff08155a70d5ba88e5ff204b43fa09a2ee0d9",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 37,
+        "distinct_tx_from_count": 26,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 106,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.069843
+      }
+    },
+    {
+      "address": "0xf39b7c34be147f5dc1bc374f27af2e9f03ad3113",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xf39b7c34be147f5dc1bc374f27af2e9f03ad3113",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 37,
+        "distinct_tx_from_count": 25,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 107,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.069843
+      }
+    },
+    {
+      "address": "0x8355378e9666b4002227fab20484b6df5c04b510",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x8355378e9666b4002227fab20484b6df5c04b510",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 36,
+        "distinct_tx_from_count": 27,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 109,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.067955
+      }
+    },
+    {
+      "address": "0x0e635f8eeed4f7279d56692d552f034ece136019",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x0e635f8eeed4f7279d56692d552f034ece136019",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 35,
+        "distinct_tx_from_count": 29,
+        "distinct_target_token_count": 2,
+        "overall_volume_rank": 111,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.066068
+      }
+    },
+    {
+      "address": "0xbb8b2da5db110ad625270061e81987ce342677c3",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xbb8b2da5db110ad625270061e81987ce342677c3",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 35,
+        "distinct_tx_from_count": 30,
+        "distinct_target_token_count": 2,
+        "overall_volume_rank": 112,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.066068
+      }
+    },
+    {
+      "address": "0xc5e51044eb7318950b1afb044fccfb25782c48c1",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xc5e51044eb7318950b1afb044fccfb25782c48c1",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 35,
+        "distinct_tx_from_count": 22,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 113,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.066068
+      }
+    },
+    {
+      "address": "0xf1fdc83c3a336bdbdc9fb06e318b08eaddc82ff4",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xf1fdc83c3a336bdbdc9fb06e318b08eaddc82ff4",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 35,
+        "distinct_tx_from_count": 25,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 115,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.066068
+      }
+    },
+    {
+      "address": "0xf6062550e8711dd6a38ca87299b14dcd6d45d783",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xf6062550e8711dd6a38ca87299b14dcd6d45d783",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 35,
+        "distinct_tx_from_count": 30,
+        "distinct_target_token_count": 2,
+        "overall_volume_rank": 116,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.066068
+      }
+    },
+    {
+      "address": "0x0251cbb9a752331d29031eec88c5a8bcbcdafffa",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x0251cbb9a752331d29031eec88c5a8bcbcdafffa",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 34,
+        "distinct_tx_from_count": 21,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 117,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.06418
+      }
+    },
+    {
+      "address": "0x3175c14489bbd51ba73b76e3627d09dd76e021da",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x3175c14489bbd51ba73b76e3627d09dd76e021da",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 33,
+        "distinct_tx_from_count": 26,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 119,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.062292
+      }
+    },
+    {
+      "address": "0x67a11022b7b6ed66f81233f6c8ed6e48f7826530",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x67a11022b7b6ed66f81233f6c8ed6e48f7826530",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 33,
+        "distinct_tx_from_count": 24,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 122,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.062292
+      }
+    },
+    {
+      "address": "0xba12222222228d8ba445958a75a0704d566bf2c8",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xba12222222228d8ba445958a75a0704d566bf2c8",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 33,
+        "distinct_tx_from_count": 28,
+        "distinct_target_token_count": 2,
+        "overall_volume_rank": 125,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.062292
+      }
+    },
+    {
+      "address": "0xe846373c1a92b167b4e9cd5d8e4d6b1db9e90ec7",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xe846373c1a92b167b4e9cd5d8e4d6b1db9e90ec7",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 33,
+        "distinct_tx_from_count": 23,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 126,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.062292
+      }
+    },
+    {
+      "address": "0xfbb6eed8e7aa03b138556eedaf5d271a5e1e43ef",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xfbb6eed8e7aa03b138556eedaf5d271a5e1e43ef",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 33,
+        "distinct_tx_from_count": 25,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 127,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.062292
+      }
+    },
+    {
+      "address": "0xa4caebcbd5d8dab9f360429b9ad1ea2e12849e01",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xa4caebcbd5d8dab9f360429b9ad1ea2e12849e01",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 32,
+        "distinct_tx_from_count": 29,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 130,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.060405
+      }
+    },
+    {
+      "address": "0x20cb8f872ae894f7c9e32e621c186e5afce82fd0",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x20cb8f872ae894f7c9e32e621c186e5afce82fd0",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 30,
+        "distinct_tx_from_count": 20,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 137,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.056629
+      }
+    },
+    {
+      "address": "0x331c12605938d2a9ab893c495cfd5f4e875e3313",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x331c12605938d2a9ab893c495cfd5f4e875e3313",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 30,
+        "distinct_tx_from_count": 27,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 138,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.056629
+      }
+    },
+    {
+      "address": "0x5a9ad2bb92b0b3e5c571fdd5125114e04e02be1a",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x5a9ad2bb92b0b3e5c571fdd5125114e04e02be1a",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 30,
+        "distinct_tx_from_count": 27,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 139,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.056629
+      }
+    },
+    {
+      "address": "0x98c7a2338336d2d354663246f64676009c7bda97",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x98c7a2338336d2d354663246f64676009c7bda97",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 30,
+        "distinct_tx_from_count": 23,
+        "distinct_target_token_count": 2,
+        "overall_volume_rank": 141,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.056629
+      }
+    },
+    {
+      "address": "0x9ab7730b09ebd9ff2df70f06339bd289a1680a46",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x9ab7730b09ebd9ff2df70f06339bd289a1680a46",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 29,
+        "distinct_tx_from_count": 24,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 147,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.054742
+      }
+    },
+    {
+      "address": "0xe6c694f8b9ee84353a10de59c9b4cdefa0f5b4ad",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xe6c694f8b9ee84353a10de59c9b4cdefa0f5b4ad",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 29,
+        "distinct_tx_from_count": 25,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 150,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.054742
+      }
+    },
+    {
+      "address": "0xb4cb800910b228ed3d0834cf79d697127bbb00e5",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xb4cb800910b228ed3d0834cf79d697127bbb00e5",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 27,
+        "distinct_tx_from_count": 21,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 156,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.050966
+      }
+    },
+    {
+      "address": "0xcde41d0b1ad079c3ceb7271559f738f503102852",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xcde41d0b1ad079c3ceb7271559f738f503102852",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 27,
+        "distinct_tx_from_count": 21,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 157,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.050966
+      }
+    },
+    {
+      "address": "0xe2c8011f9098f2b17eaa63c58d7443fd60efc267",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xe2c8011f9098f2b17eaa63c58d7443fd60efc267",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 26,
+        "distinct_tx_from_count": 22,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 172,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.049079
+      }
+    },
+    {
+      "address": "0xf6c5f01c7f3148891ad0e19df78743d31e390d1f",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xf6c5f01c7f3148891ad0e19df78743d31e390d1f",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 25,
+        "distinct_tx_from_count": 23,
+        "distinct_target_token_count": 2,
+        "overall_volume_rank": 179,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.047191
+      }
+    },
+    {
+      "address": "0xffaabcef9bde634127360c6b139c357748c0a223",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xffaabcef9bde634127360c6b139c357748c0a223",
+        "account_code_class": "eip7702",
+        "swaps_count": 23,
+        "distinct_tx_from_count": 20,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 204,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.043416
+      }
+    },
+    {
+      "address": "0x25fd39f3ac6f355e7de7d629481bb00b5a0d9ae6",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x25fd39f3ac6f355e7de7d629481bb00b5a0d9ae6",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 22,
+        "distinct_tx_from_count": 21,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 207,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.041528
+      }
+    },
+    {
+      "address": "0x8a9f959ae1f8f78836a3e48264e6b7c84cce75bc",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x8a9f959ae1f8f78836a3e48264e6b7c84cce75bc",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 22,
+        "distinct_tx_from_count": 22,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 216,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.041528
+      }
+    },
+    {
+      "address": "0xcfef8898b6e95d17122695f2f1f1cb0369e7ce1b",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xcfef8898b6e95d17122695f2f1f1cb0369e7ce1b",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 22,
+        "distinct_tx_from_count": 22,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 217,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.041528
+      }
+    },
+    {
+      "address": "0xb932d54085d2ee4659d0fa7f9f3abfeac6c749f9",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0xb932d54085d2ee4659d0fa7f9f3abfeac6c749f9",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 21,
+        "distinct_tx_from_count": 21,
+        "distinct_target_token_count": 1,
+        "overall_volume_rank": 232,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.039641
+      }
+    },
+    {
+      "address": "0x29a857629e58c531f351bb7fbd86aa46ef6af0b7",
+      "category": "suspected_shared_infra",
+      "evidence": {
+        "address": "0x29a857629e58c531f351bb7fbd86aa46ef6af0b7",
+        "account_code_class": "contract_wallet",
+        "swaps_count": 20,
+        "distinct_tx_from_count": 20,
+        "distinct_target_token_count": 2,
+        "overall_volume_rank": 241,
+        "flag_signer_count": true,
+        "flag_top_0_1pct": false,
+        "suspected_shared_infra": true,
+        "beneficial_share_pct": 0.037753
+      }
+    }
+  ]
+}

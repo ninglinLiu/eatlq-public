@@ -1,0 +1,2 @@
+event_id,contract_id,attach,righttail,extract,vol_share_collect,is_earliest,window_note,labeled_after_scores_frozen,notes
+# SCHEMA: attach computed on contracts_all at COLLECT clock (24h volume share). righttail/extract stay empty until independently measured. No PnL.

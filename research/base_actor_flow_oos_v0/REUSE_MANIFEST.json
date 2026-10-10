@@ -1,0 +1,83 @@
+{
+  "project": "base_actor_flow_oos_v0",
+  "created_utc": "2026-07-20T15:00:00Z",
+  "mode": "adapted_copy_isolation",
+  "reuse": [
+    {
+      "asset": "resolve_eoa_and_exclusion_manifest",
+      "source": "/opt/EATLQ/scripts/wallet_profile_v0/base_attribution.py",
+      "local_copy": "src/attribution_policy.py",
+      "mode": "adapted_copy",
+      "notes": "Canonical exclusion manifest + resolve_eoa cascade; extended with tier A/B/C/D"
+    },
+    {
+      "asset": "exclusion_manifest_json",
+      "source": "/opt/EATLQ/configs/research/base_attribution_exclusions.json",
+      "local_copy": "configs/base_attribution_exclusions.json",
+      "mode": "copied"
+    },
+    {
+      "asset": "b3_erc4337_route_resolution",
+      "source": "/opt/EATLQ/scripts/wallet_profile_v0/base_b3_entity_attribution.py",
+      "local_copy": "src/actor_resolution.py",
+      "mode": "adapted_copy",
+      "notes": "UserOperationEvent log-boundary + route_family + EntryPoint/UR/aggregator sets"
+    },
+    {
+      "asset": "b3_trace_golden_pattern",
+      "source": "/opt/EATLQ/scripts/wallet_profile_v0/base_b3_trace_golden.py",
+      "local_copy": "src/resolution_gate.py",
+      "mode": "pattern_reimplementation",
+      "notes": "Stratified callTracer golden audit for resolved_economic_actor error rate"
+    },
+    {
+      "asset": "fifo_wallet_pnl_core",
+      "source": "/opt/EATLQ/scripts/research/base_rh1_smartmoney_core.py",
+      "local_copy": "src/fifo_episodes.py",
+      "mode": "adapted_copy",
+      "notes": "FIFO episode construction + CENSORED_TRANSFER_OUT truncation"
+    },
+    {
+      "asset": "ch_query_splits_helpers",
+      "source": "/root/base_greenfield_directional_v0/src/common.py",
+      "local_copy": "src/common.py",
+      "mode": "adapted_copy"
+    },
+    {
+      "asset": "fixed_capital_monthly_sim",
+      "source": "/root/base_greenfield_directional_v0/src/v3/wallet_monthly.py",
+      "local_copy": "src/wallet_monthly.py",
+      "mode": "adapted_copy"
+    },
+    {
+      "asset": "oof_scorecard_pattern",
+      "source": "/root/base_greenfield_directional_v0/src/v3/oof_eval.py",
+      "local_copy": "src/scorecard.py",
+      "mode": "pattern_reimplementation",
+      "notes": "Dual INFORMATION_EDGE / COPY_EDGE verdicts + POOL_ONLY incremental"
+    },
+    {
+      "asset": "atomic_sell_simulator",
+      "source": "/root/base_greenfield_directional_v0/src/atomic_sim.py",
+      "local_copy": "src/atomic_sim.py",
+      "mode": "adapted_copy"
+    },
+    {
+      "asset": "clickhouse_decoded_swaps",
+      "source": "eatlq.uniswap_v3_swaps_decoded + eatlq.discovered_pools + eatlq.tx_from_by_hash + eatlq.erc20_transfers",
+      "mode": "readonly_query"
+    },
+    {
+      "asset": "archive_rpc",
+      "source": "/tmp/rpc_url.txt",
+      "mode": "readonly_eth_call_and_debug_trace_sample"
+    }
+  ],
+  "explicitly_not_reused": [
+    "KEYSTONE live-pass universe",
+    "F10 / G2 / C3 / P2 / H1-H9 scores",
+    "abs_pnl wallet rankings as features",
+    "B2 transfer-net as primary subject (known contaminated)",
+    "production signal_bridge / executor"
+  ]
+}

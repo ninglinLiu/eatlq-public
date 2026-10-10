@@ -1,0 +1,40 @@
+{
+  "status": "BLOCKED_INVENTORY",
+  "new_rpc": false,
+  "new_clickhouse": false,
+  "thresholds_changed": false,
+  "new_forward_signals": 0,
+  "merit": "UNTESTED_ELIGIBILITY_CONTAMINATED",
+  "source": "/root/copy_cascade_invert_r0/data/raw/golden/base_gl2_b_final_20260715.json",
+  "frozen_rule": "oversell_raw > 0 is left-truncated and cannot supply the merit sample; do not loosen after seeing zero forward buys",
+  "complete_inventory_wallets": [
+    "0x44e5f8183162994e70f3d4a9235a8a1e2471b038",
+    "0x5ccfc6e399003a8e2f68d9c7710f965b9cf67c6d",
+    "0xb32a88954e85ff3e0b7977c41847682970fc52d1"
+  ],
+  "complete_inventory_forward_buys": 0,
+  "left_truncated_wallets": [
+    "0x47b19472132ab2bb31b10e749437473bbdc3979b",
+    "0x875ab0ae8ba199549acc88dd24d4adc6b8a4aae1"
+  ],
+  "forward_signals_from_left_truncated": 4,
+  "residuals": [
+    {
+      "item": "prewindow_inventory_of_two_oversell_wallets",
+      "why": "Local golden stores the flag, not opening balances or inbound transfers before block 46389458"
+    },
+    {
+      "item": "bytecode_class",
+      "why": "The five addresses are not split here into EOA, delegated account, private contract wallet, or shared router. Code present is not identity"
+    },
+    {
+      "item": "unresolved_weth_cash_legs",
+      "n": 69,
+      "why": "GL2-B report left 69 transactions unresolved. They stay unresolved"
+    },
+    {
+      "item": "nansen",
+      "why": "NOT_RUN_MISSING_AUTHORITY_AND_API_KEY"
+    }
+  ]
+}

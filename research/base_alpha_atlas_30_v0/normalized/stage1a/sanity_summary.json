@@ -1,0 +1,280 @@
+{
+  "f01": {
+    "label": "F01",
+    "signal_count": 217,
+    "pools_covered": 11,
+    "signals_per_pool": {
+      "0x5d2091e0b3e0b516e0f3abd75242e9287c253499": 35,
+      "0x98d6b4115341f16167870f18bcafab730b82c012": 33,
+      "0xaaadf28e97e8294fc40205c620460264d8920ed9": 32,
+      "0x8aed442e9c17746c0eb85dd22981ce8974182892": 31,
+      "0x1e98a167082332e5e89146662e34c3c99481e5e6": 30,
+      "0xfafab61b28c15166191b28e577edf4184664dff6": 29,
+      "0x8c0efaa997655047f484be6cea111d3238eee937": 22,
+      "0x99188f1755b91b95e1f4d732536a833fb82b4ad1": 2,
+      "0x78d5897ea7e34dfcedd594eda7f2a18060e5ceb7": 1,
+      "0x87b73c76c4cffe0610da8efb8ecb8e04f0a4ca62": 1,
+      "0xaf2c31a7a13c87baf86259d9692a026c62bd05b9": 1
+    },
+    "signals_per_pool_mean": 19.727272727272727,
+    "signals_per_hour": {
+      "493363": 1,
+      "493385": 8,
+      "493386": 11,
+      "493387": 10,
+      "493388": 3,
+      "493411": 6,
+      "493413": 1,
+      "493415": 7,
+      "493416": 7,
+      "493417": 1,
+      "493424": 4,
+      "493425": 5,
+      "493426": 13,
+      "493427": 7,
+      "493444": 1,
+      "493455": 5,
+      "493456": 5,
+      "493457": 9,
+      "493458": 7,
+      "493459": 8,
+      "493460": 7,
+      "493461": 5,
+      "493462": 10,
+      "493463": 4,
+      "493464": 2,
+      "493515": 5,
+      "493516": 22,
+      "493517": 19,
+      "493518": 8,
+      "493519": 6,
+      "493520": 5,
+      "493521": 3,
+      "493531": 1,
+      "493548": 1
+    },
+    "signals_per_hour_mean": 6.382352941176471,
+    "feature_coverage": {
+      "n_swaps": 7000,
+      "unknown_sign_rate": 0.0,
+      "unknown_notional_rate": 0.0,
+      "transaction_index": "UNKNOWN",
+      "source": "/root/base_alpha_atlas_30_v0/normalized/wave1_probe/run004_v3r6_candidate_pool_head20k.csv",
+      "unknown_rate": 0.0
+    },
+    "UNKNOWN_rate": 0.0,
+    "duplicate_signal_rate": 0.0,
+    "sample_triggers": [
+      {
+        "pool_id": "0x1e98a167082332e5e89146662e34c3c99481e5e6",
+        "observation_timestamp": 1776439461000,
+        "feature_available_at": 1776439461000,
+        "trigger_coordinates": {
+          "trigger_block_number": 44825057,
+          "trigger_log_index": 352,
+          "trigger_transaction_index": null,
+          "bar_index": null,
+          "run_length": 3
+        }
+      },
+      {
+        "pool_id": "0x1e98a167082332e5e89146662e34c3c99481e5e6",
+        "observation_timestamp": 1776440963000,
+        "feature_available_at": 1776440963000,
+        "trigger_coordinates": {
+          "trigger_block_number": 44825808,
+          "trigger_log_index": 214,
+          "trigger_transaction_index": null,
+          "bar_index": null,
+          "run_length": 3
+        }
+      },
+      {
+        "pool_id": "0x1e98a167082332e5e89146662e34c3c99481e5e6",
+        "observation_timestamp": 1776441395000,
+        "feature_available_at": 1776441395000,
+        "trigger_coordinates": {
+          "trigger_block_number": 44826024,
+          "trigger_log_index": 511,
+          "trigger_transaction_index": null,
+          "bar_index": null,
+          "run_length": 3
+        }
+      },
+      {
+        "pool_id": "0x1e98a167082332e5e89146662e34c3c99481e5e6",
+        "observation_timestamp": 1776441757000,
+        "feature_available_at": 1776441757000,
+        "trigger_coordinates": {
+          "trigger_block_number": 44826205,
+          "trigger_log_index": 339,
+          "trigger_transaction_index": null,
+          "bar_index": null,
+          "run_length": 3
+        }
+      },
+      {
+        "pool_id": "0x1e98a167082332e5e89146662e34c3c99481e5e6",
+        "observation_timestamp": 1776442471000,
+        "feature_available_at": 1776442471000,
+        "trigger_coordinates": {
+          "trigger_block_number": 44826562,
+          "trigger_log_index": 495,
+          "trigger_transaction_index": null,
+          "bar_index": null,
+          "run_length": 3
+        }
+      },
+      {
+        "pool_id": "0x1e98a167082332e5e89146662e34c3c99481e5e6",
+        "observation_timestamp": 1776443565000,
+        "feature_available_at": 1776443565000,
+        "trigger_coordinates": {
+          "trigger_block_number": 44827109,
+          "trigger_log_index": 405,
+          "trigger_transaction_index": null,
+          "bar_index": null,
+          "run_length": 3
+        }
+      },
+      {
+        "pool_id": "0x1e98a167082332e5e89146662e34c3c99481e5e6",
+        "observation_timestamp": 1776445221000,
+        "feature_available_at": 1776445221000,
+        "trigger_coordinates": {
+          "trigger_block_number": 44827937,
+          "trigger_log_index": 738,
+          "trigger_transaction_index": null,
+          "bar_index": null,
+          "run_length": 3
+        }
+      },
+      {
+        "pool_id": "0x1e98a167082332e5e89146662e34c3c99481e5e6",
+        "observation_timestamp": 1776446169000,
+        "feature_available_at": 1776446169000,
+        "trigger_coordinates": {
+          "trigger_block_number": 44828411,
+          "trigger_log_index": 750,
+          "trigger_transaction_index": null,
+          "bar_index": null,
+          "run_length": 3
+        }
+      },
+      {
+        "pool_id": "0x1e98a167082332e5e89146662e34c3c99481e5e6",
+        "observation_timestamp": 1776446875000,
+        "feature_available_at": 1776446875000,
+        "trigger_coordinates": {
+          "trigger_block_number": 44828764,
+          "trigger_log_index": 664,
+          "trigger_transaction_index": null,
+          "bar_index": null,
+          "run_length": 3
+        }
+      },
+      {
+        "pool_id": "0x1e98a167082332e5e89146662e34c3c99481e5e6",
+        "observation_timestamp": 1776447201000,
+        "feature_available_at": 1776447201000,
+        "trigger_coordinates": {
+          "trigger_block_number": 44828927,
+          "trigger_log_index": 412,
+          "trigger_transaction_index": null,
+          "bar_index": null,
+          "run_length": 3
+        }
+      }
+    ],
+    "runtime_s": 0.3809518814086914,
+    "peak_memory_mb": 19.875
+  },
+  "f03": {
+    "label": "F03",
+    "signal_count": 2,
+    "pools_covered": 2,
+    "signals_per_pool": {
+      "0x14792111d6bd84fd812d09c92ff3bfe81bc797cc": 1,
+      "0x18d2b4aaa5ffe6d9b7e9ae0da740a635474c969d": 1
+    },
+    "signals_per_pool_mean": 1.0,
+    "signals_per_hour": {
+      "494009": 1,
+      "494418": 1
+    },
+    "signals_per_hour_mean": 1.0,
+    "feature_coverage": {
+      "n_bars": 8419,
+      "n_pools": 30,
+      "unknown_rate": 0.0,
+      "status_label": "FIXTURE_VALIDATED_SIGNAL_LOGIC",
+      "source": "/root/base_alpha_atlas_30_v0/shared_panel/tiny_wave1/base_alpha_atlas_tiny_wave1_panel.csv",
+      "l_used": 30,
+      "note": "l=30 for tiny panel depth; search space still freezes l in {60,120}"
+    },
+    "UNKNOWN_rate": 0.0,
+    "duplicate_signal_rate": 0.0,
+    "sample_triggers": [
+      {
+        "pool_id": "0x14792111d6bd84fd812d09c92ff3bfe81bc797cc",
+        "observation_timestamp": 1778433420,
+        "feature_available_at": 1778433420,
+        "trigger_coordinates": {
+          "trigger_block_number": null,
+          "trigger_log_index": null,
+          "bar_index": 529,
+          "bar_close_time": 1778433420,
+          "jump_ratio": 3.7310101381767606
+        }
+      },
+      {
+        "pool_id": "0x18d2b4aaa5ffe6d9b7e9ae0da740a635474c969d",
+        "observation_timestamp": 1779907560,
+        "feature_available_at": 1779907560,
+        "trigger_coordinates": {
+          "trigger_block_number": null,
+          "trigger_log_index": null,
+          "bar_index": 40,
+          "bar_close_time": 1779907560,
+          "jump_ratio": 4.1221705984996895
+        }
+      }
+    ],
+    "runtime_s": 0.13106369972229004,
+    "peak_memory_mb": 114.75390625
+  },
+  "formats": {
+    "f01": "parquet",
+    "f03": "parquet"
+  },
+  "ortho": {
+    "same_pool_hit_jaccard": 0.0,
+    "same_pool_hour_jaccard": 0.0,
+    "f01_pools": 11,
+    "f03_pools": 2,
+    "intersection_pools": [],
+    "mechanism_note": "F01=swap-run microstructure; F03=closed-bar vol jump. Overlap in pools/hours does not imply same mechanism.",
+    "primary_inputs": {
+      "F01": [
+        "trade_sign",
+        "run_length",
+        "run_notional_eth"
+      ],
+      "F03": [
+        "close_to_close_log_return",
+        "realized_vol_baseline",
+        "jump_ratio"
+      ]
+    },
+    "trigger_frequency_corr_hourly": -0.514437538085849
+  },
+  "forbidden_outputs": [
+    "return",
+    "PnL",
+    "MFE",
+    "MAE",
+    "win_rate",
+    "profit_factor",
+    "best_parameter"
+  ]
+}

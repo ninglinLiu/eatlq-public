@@ -1,0 +1,106 @@
+DROP VIEW IF EXISTS eatlq.sender_training_examples_split_v1;
+DROP VIEW IF EXISTS eatlq.sender_training_examples_matured_v1;
+
+CREATE VIEW eatlq.sender_training_examples_matured_v1
+AS
+SELECT
+    examples.chain_id AS chain_id,
+    examples.activity_date AS activity_date,
+    examples.sender_address AS sender_address,
+    examples.trade_count AS trade_count,
+    examples.v2_trade_count AS v2_trade_count,
+    examples.v3_trade_count AS v3_trade_count,
+    examples.v2_trade_share AS v2_trade_share,
+    examples.v3_trade_share AS v3_trade_share,
+    examples.distinct_venues AS distinct_venues,
+    examples.distinct_recipients AS distinct_recipients,
+    examples.distinct_sold_assets AS distinct_sold_assets,
+    examples.distinct_bought_assets AS distinct_bought_assets,
+    examples.avg_sold_amount_normalized AS avg_sold_amount_normalized,
+    examples.avg_bought_amount_normalized AS avg_bought_amount_normalized,
+    examples.top_venue_trade_count AS top_venue_trade_count,
+    examples.venue_concentration_ratio AS venue_concentration_ratio,
+    examples.top_token_trade_touch_count AS top_token_trade_touch_count,
+    examples.total_token_touches AS total_token_touches,
+    examples.token_concentration_ratio AS token_concentration_ratio,
+    examples.protocol_preference AS protocol_preference,
+    examples.venue_concentration_band AS venue_concentration_band,
+    examples.token_concentration_band AS token_concentration_band,
+    examples.activity_band AS activity_band,
+    examples.recipient_diversity_band AS recipient_diversity_band,
+    examples.cross_protocol_flag AS cross_protocol_flag,
+    examples.multi_venue_flag AS multi_venue_flag,
+    examples.next_day_trade_count AS next_day_trade_count,
+    examples.next_day_v2_trade_count AS next_day_v2_trade_count,
+    examples.next_day_v3_trade_count AS next_day_v3_trade_count,
+    examples.next_day_v2_trade_share AS next_day_v2_trade_share,
+    examples.next_day_v3_trade_share AS next_day_v3_trade_share,
+    examples.next_day_distinct_venues AS next_day_distinct_venues,
+    examples.next_day_distinct_recipients AS next_day_distinct_recipients,
+    examples.next_day_avg_sold_amount_normalized AS next_day_avg_sold_amount_normalized,
+    examples.next_day_avg_bought_amount_normalized AS next_day_avg_bought_amount_normalized,
+    examples.next_day_active_flag AS next_day_active_flag,
+    examples.next_day_higher_trade_count_flag AS next_day_higher_trade_count_flag,
+    examples.next_day_cross_protocol_flag AS next_day_cross_protocol_flag,
+    examples.next_day_protocol_preference AS next_day_protocol_preference,
+    examples.first_trade_at AS first_trade_at,
+    examples.latest_trade_at AS latest_trade_at,
+    examples.latest_ingested_at AS latest_ingested_at
+FROM eatlq.sender_training_examples_v1 AS examples
+WHERE examples.activity_date < (
+    SELECT max(activity_date)
+    FROM eatlq.sender_trade_day_rollup_v1
+);
+
+CREATE VIEW eatlq.sender_training_examples_split_v1
+AS
+SELECT
+    matured.chain_id AS chain_id,
+    matured.activity_date AS activity_date,
+    matured.sender_address AS sender_address,
+    matured.trade_count AS trade_count,
+    matured.v2_trade_count AS v2_trade_count,
+    matured.v3_trade_count AS v3_trade_count,
+    matured.v2_trade_share AS v2_trade_share,
+    matured.v3_trade_share AS v3_trade_share,
+    matured.distinct_venues AS distinct_venues,
+    matured.distinct_recipients AS distinct_recipients,
+    matured.distinct_sold_assets AS distinct_sold_assets,
+    matured.distinct_bought_assets AS distinct_bought_assets,
+    matured.avg_sold_amount_normalized AS avg_sold_amount_normalized,
+    matured.avg_bought_amount_normalized AS avg_bought_amount_normalized,
+    matured.top_venue_trade_count AS top_venue_trade_count,
+    matured.venue_concentration_ratio AS venue_concentration_ratio,
+    matured.top_token_trade_touch_count AS top_token_trade_touch_count,
+    matured.total_token_touches AS total_token_touches,
+    matured.token_concentration_ratio AS token_concentration_ratio,
+    matured.protocol_preference AS protocol_preference,
+    matured.venue_concentration_band AS venue_concentration_band,
+    matured.token_concentration_band AS token_concentration_band,
+    matured.activity_band AS activity_band,
+    matured.recipient_diversity_band AS recipient_diversity_band,
+    matured.cross_protocol_flag AS cross_protocol_flag,
+    matured.multi_venue_flag AS multi_venue_flag,
+    matured.next_day_trade_count AS next_day_trade_count,
+    matured.next_day_v2_trade_count AS next_day_v2_trade_count,
+    matured.next_day_v3_trade_count AS next_day_v3_trade_count,
+    matured.next_day_v2_trade_share AS next_day_v2_trade_share,
+    matured.next_day_v3_trade_share AS next_day_v3_trade_share,
+    matured.next_day_distinct_venues AS next_day_distinct_venues,
+    matured.next_day_distinct_recipients AS next_day_distinct_recipients,
+    matured.next_day_avg_sold_amount_normalized AS next_day_avg_sold_amount_normalized,
+    matured.next_day_avg_bought_amount_normalized AS next_day_avg_bought_amount_normalized,
+    matured.next_day_active_flag AS next_day_active_flag,
+    matured.next_day_higher_trade_count_flag AS next_day_higher_trade_count_flag,
+    matured.next_day_cross_protocol_flag AS next_day_cross_protocol_flag,
+    matured.next_day_protocol_preference AS next_day_protocol_preference,
+    cityHash64(toString(matured.chain_id), matured.sender_address, toString(matured.activity_date)) % 100 AS split_bucket,
+    multiIf(
+        cityHash64(toString(matured.chain_id), matured.sender_address, toString(matured.activity_date)) % 100 < 80, 'train',
+        cityHash64(toString(matured.chain_id), matured.sender_address, toString(matured.activity_date)) % 100 < 90, 'validation',
+        'test'
+    ) AS dataset_split,
+    matured.first_trade_at AS first_trade_at,
+    matured.latest_trade_at AS latest_trade_at,
+    matured.latest_ingested_at AS latest_ingested_at
+FROM eatlq.sender_training_examples_matured_v1 AS matured;

@@ -1,0 +1,1025 @@
+[
+  {
+    "before_source_balance_raw": "0",
+    "caveat": "NONZERO_ACTIVE_LIQUIDITY_IS_NOT_EXECUTABLE_DEPTH_OR_SELLABILITY_PROOF",
+    "checks": [
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "3487d7911804bae826f8b1c14de794732103b8fab44372c701d70ed51e58beab",
+              "rpc_error": null
+            },
+            "id": "0x1f601b26422ccad68cd4d0f0c9de8bed20914a5bc752325b9714583d0eeb9db5",
+            "kind": "V4",
+            "liquidity_raw": "737851904998315804914920",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "entry_10s"
+      },
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "571c9a65ba4d16651b45143abffc4dbd061a5a695d794e16a6022d10cc776209",
+              "rpc_error": null
+            },
+            "id": "0x1f601b26422ccad68cd4d0f0c9de8bed20914a5bc752325b9714583d0eeb9db5",
+            "kind": "V4",
+            "liquidity_raw": "57890640945237702667620",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "exit_30m"
+      },
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "ab32eb23c99b116c51a0334516af23aa553b15ab25f188360317ff76c52ea1c0",
+              "rpc_error": null
+            },
+            "id": "0x1f601b26422ccad68cd4d0f0c9de8bed20914a5bc752325b9714583d0eeb9db5",
+            "kind": "V4",
+            "liquidity_raw": "57890640945237702667620",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "exit_2h"
+      },
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "ae23238f2f709028873ac5bf6529482d75fce8551c27403c2281b1c5ecddbc01",
+              "rpc_error": null
+            },
+            "id": "0x1f601b26422ccad68cd4d0f0c9de8bed20914a5bc752325b9714583d0eeb9db5",
+            "kind": "V4",
+            "liquidity_raw": "57891211469924438693564",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "exit_24h"
+      },
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "075fed4e0ae51e54447298df77f38820ecc70dcc7eee0b4a076921e8d7e8fdf2",
+              "rpc_error": null
+            },
+            "id": "0x1f601b26422ccad68cd4d0f0c9de8bed20914a5bc752325b9714583d0eeb9db5",
+            "kind": "V4",
+            "liquidity_raw": "738441908257081726290692",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "exit_source_first_sell"
+      }
+    ],
+    "inventory_evidence": {
+      "http_status": 200,
+      "key": "ab2f8d9c9619a720006f36d213606653df2651dd9ebebb1864daadd1e5958b27",
+      "rpc_error": null
+    },
+    "source_tx": "0xc1272de959e567564ef4901708bdb2c13b24c3d7fa75a6b3ae586af42fa6f67e",
+    "token": "0x6666dd8d0a8889e41418141760753b69ab319ba3",
+    "wallet": "0xa05ec35f7d1eba823cff2ed26aeaed419683742f"
+  },
+  {
+    "before_source_balance_raw": "1351528926373692523881966555",
+    "caveat": "NONZERO_ACTIVE_LIQUIDITY_IS_NOT_EXECUTABLE_DEPTH_OR_SELLABILITY_PROOF",
+    "checks": [
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "08fc460ebc84bcf26e60c0f72d5b5ee84956460ac22dbe90cc6cf323ae6d7ed7",
+              "rpc_error": null
+            },
+            "id": "0x24ecedb296899f0110dce5cfdd9c9dd74b2b11a21dee752e085f93c700c7fccb",
+            "kind": "V4",
+            "liquidity_raw": "951260372455751963733727",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "entry_10s"
+      },
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "0f392fa27a1aab6d9f66ba6f598fd28b147b65302530cef588104fac8b421089",
+              "rpc_error": null
+            },
+            "id": "0x24ecedb296899f0110dce5cfdd9c9dd74b2b11a21dee752e085f93c700c7fccb",
+            "kind": "V4",
+            "liquidity_raw": "951328893964683728025191",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "exit_30m"
+      },
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "aa85df87b37bc8ac7044bacf222f70d28dd28e459fa447866b91fd388667c395",
+              "rpc_error": null
+            },
+            "id": "0x24ecedb296899f0110dce5cfdd9c9dd74b2b11a21dee752e085f93c700c7fccb",
+            "kind": "V4",
+            "liquidity_raw": "951392024750155610143121",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "exit_2h"
+      },
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "7de87d32f9d50e880c4e9ec8d538da3a61a4bd9d6cf5db2aa5421fcc543f9246",
+              "rpc_error": null
+            },
+            "id": "0x24ecedb296899f0110dce5cfdd9c9dd74b2b11a21dee752e085f93c700c7fccb",
+            "kind": "V4",
+            "liquidity_raw": "952222519681027496332229",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "exit_24h"
+      }
+    ],
+    "inventory_evidence": {
+      "http_status": 200,
+      "key": "2e9deb466c6166b9f32f52a7b1b381b1fda761b0598063b0703828b37b3492ea",
+      "rpc_error": null
+    },
+    "source_tx": "0xc704147d839c37ffd2ac97fc6afebee7f1442ac8e2436242b94a0eed495440a5",
+    "token": "0x9e00fc92493451eba1c63dd3880d68b622037ba3",
+    "wallet": "0xa05ec35f7d1eba823cff2ed26aeaed419683742f"
+  },
+  {
+    "before_source_balance_raw": "0",
+    "caveat": "NONZERO_ACTIVE_LIQUIDITY_IS_NOT_EXECUTABLE_DEPTH_OR_SELLABILITY_PROOF",
+    "checks": [
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "699ad808b9fe1a4701758c9d7fc99b82e36dd518fe2bd6212f062bf7745e4d56",
+              "rpc_error": null
+            },
+            "id": "0x24ecedb296899f0110dce5cfdd9c9dd74b2b11a21dee752e085f93c700c7fccb",
+            "kind": "V4",
+            "liquidity_raw": "952044529193141190671589",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "entry_10s"
+      },
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "434ef5b4d26622ef810254064a2de7b52e451637c8ba0288d52088b48b2a7401",
+              "rpc_error": null
+            },
+            "id": "0x24ecedb296899f0110dce5cfdd9c9dd74b2b11a21dee752e085f93c700c7fccb",
+            "kind": "V4",
+            "liquidity_raw": "952161368113884758959242",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "exit_30m"
+      },
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "112cbe3c38360a710ac6ed829d38240398567de16f0093339a16f6fc64d1e703",
+              "rpc_error": null
+            },
+            "id": "0x24ecedb296899f0110dce5cfdd9c9dd74b2b11a21dee752e085f93c700c7fccb",
+            "kind": "V4",
+            "liquidity_raw": "952167510553263626183294",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "exit_2h"
+      },
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "28801239bac3a6a6cfceeaa151c977bc685689bce68aca57b348b4b8c90aadf2",
+              "rpc_error": null
+            },
+            "id": "0x24ecedb296899f0110dce5cfdd9c9dd74b2b11a21dee752e085f93c700c7fccb",
+            "kind": "V4",
+            "liquidity_raw": "952900059367235466025596",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "exit_24h"
+      },
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "87abcfe5650ca04472b6bcc877f8942dc03ee61f64d532bcbae5aabcf9721a9e",
+              "rpc_error": null
+            },
+            "id": "0x24ecedb296899f0110dce5cfdd9c9dd74b2b11a21dee752e085f93c700c7fccb",
+            "kind": "V4",
+            "liquidity_raw": "954278557038882713652552",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "exit_source_first_sell"
+      }
+    ],
+    "inventory_evidence": {
+      "http_status": 200,
+      "key": "7405819d56fa941442e50e87feeb46d368ecb302180fb68b943de66df6e7edca",
+      "rpc_error": null
+    },
+    "source_tx": "0xefa7da961e655c5f793a681a7aae53722379087f5f3a94db80dc2cbe7630d795",
+    "token": "0x9e00fc92493451eba1c63dd3880d68b622037ba3",
+    "wallet": "0x9631335762e3603d2a7507d84838aa3236d52745"
+  },
+  {
+    "before_source_balance_raw": "0",
+    "caveat": "NONZERO_ACTIVE_LIQUIDITY_IS_NOT_EXECUTABLE_DEPTH_OR_SELLABILITY_PROOF",
+    "checks": [],
+    "inventory_evidence": {
+      "http_status": 200,
+      "key": "b12bdc1da0a4adb810c013da8985de4821aa2c19bda69e791398eb110624f256",
+      "rpc_error": null
+    },
+    "source_tx": "0x2faeadd305a3ee7688bd7e2e8d93a30f4e60ab37550fdeb3ceabf2d83f8b903e",
+    "token": "0x798b24ba106188002ea1349654be2b0d515c7777",
+    "wallet": "0x9631335762e3603d2a7507d84838aa3236d52745"
+  },
+  {
+    "before_source_balance_raw": "0",
+    "caveat": "NONZERO_ACTIVE_LIQUIDITY_IS_NOT_EXECUTABLE_DEPTH_OR_SELLABILITY_PROOF",
+    "checks": [
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "40399fcf21f5a41266a7a5d6b5fbefd1149ebc4bbcc1db0a8f3013fe633cc9ad",
+              "rpc_error": null
+            },
+            "id": "0x0281d408c8b18e7c43106f65224cbfa3c73c95dff416e13f1bd81bd69900c898",
+            "kind": "V4",
+            "liquidity_raw": "741109772965860317767666",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "entry_10s"
+      },
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "063d548007acd23b6e5e365db7a0837ddda1fd7fabc3a12450b772bce2d1adfb",
+              "rpc_error": null
+            },
+            "id": "0x0281d408c8b18e7c43106f65224cbfa3c73c95dff416e13f1bd81bd69900c898",
+            "kind": "V4",
+            "liquidity_raw": "60965898845430124556259",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "exit_30m"
+      },
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "b3b5b7b3993178a59c68afa50c35ff76c94b249ca43d083bbe6c1e2c9bc31614",
+              "rpc_error": null
+            },
+            "id": "0x0281d408c8b18e7c43106f65224cbfa3c73c95dff416e13f1bd81bd69900c898",
+            "kind": "V4",
+            "liquidity_raw": "60965898845430124556259",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "exit_2h"
+      },
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "d047bebec90e74ef1ac29c3c16e53b88bb52defd3601dcbaff34f63974a3610b",
+              "rpc_error": null
+            },
+            "id": "0x0281d408c8b18e7c43106f65224cbfa3c73c95dff416e13f1bd81bd69900c898",
+            "kind": "V4",
+            "liquidity_raw": "60966127326642796494668",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "exit_24h"
+      },
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "51c36b8f68ad7d05fbf57894d196072b8a6c4e10b959b29a4d4c8a70c96861e4",
+              "rpc_error": null
+            },
+            "id": "0x0281d408c8b18e7c43106f65224cbfa3c73c95dff416e13f1bd81bd69900c898",
+            "kind": "V4",
+            "liquidity_raw": "741474451456251515583912",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "exit_source_first_sell"
+      }
+    ],
+    "inventory_evidence": {
+      "http_status": 200,
+      "key": "ebc859b182867e7fd2cc33a76ed76c9c5f51c14afb9407de8c8a3ad131c1fd78",
+      "rpc_error": null
+    },
+    "source_tx": "0x4b59a1bab1f277d95c1ac0fd773e8797becad855cdabedfb2106278d2caf581a",
+    "token": "0x7e298d798656c03ec80f2a7843d0805103749ba3",
+    "wallet": "0xe28601398a5448d1147e6e8b0e0c6d686f0d216d"
+  },
+  {
+    "before_source_balance_raw": "0",
+    "caveat": "NONZERO_ACTIVE_LIQUIDITY_IS_NOT_EXECUTABLE_DEPTH_OR_SELLABILITY_PROOF",
+    "checks": [
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "c0101471b7e04032dd2220949b8a63a88682f7c2979d5ca13efdc79affb42894",
+              "rpc_error": null
+            },
+            "id": "0x1157c559cac9088c27ef7cf24f500e83481f2125dba3428498fe3fe28f8c76d1",
+            "kind": "V4",
+            "liquidity_raw": "0",
+            "liquidity_status": "ZERO"
+          }
+        ],
+        "point": "entry_10s"
+      },
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "d917d37036b308291b761681cf6668d7880b95d7737dbf583e72986a0df8804f",
+              "rpc_error": null
+            },
+            "id": "0x1157c559cac9088c27ef7cf24f500e83481f2125dba3428498fe3fe28f8c76d1",
+            "kind": "V4",
+            "liquidity_raw": "713663247046257301579",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "exit_30m"
+      },
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "c536730bb56d0952cf80a0010190d2d64500ccf2e45dbde8197f1aae4d11f658",
+              "rpc_error": null
+            },
+            "id": "0x1157c559cac9088c27ef7cf24f500e83481f2125dba3428498fe3fe28f8c76d1",
+            "kind": "V4",
+            "liquidity_raw": "713738421839877575114",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "exit_2h"
+      },
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "bfc77eab7f29cbe2cf083c059dc4b40c4a27683cb6405b7d905469558265ca13",
+              "rpc_error": null
+            },
+            "id": "0x1157c559cac9088c27ef7cf24f500e83481f2125dba3428498fe3fe28f8c76d1",
+            "kind": "V4",
+            "liquidity_raw": "713939763337357119207",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "exit_24h"
+      }
+    ],
+    "inventory_evidence": {
+      "http_status": 200,
+      "key": "1ab3b97a2ed1e75abf24604067bf336f1b77d8a2928560193a2b7e3c1d800ccf",
+      "rpc_error": null
+    },
+    "source_tx": "0xf1e047b9a9feefaa6463ea636379fc45d75385dff84f6eb9a9fd1bdfd695c803",
+    "token": "0xa474be8f2c404a3dbbaa4e703d679aa188aa6757",
+    "wallet": "0xe28601398a5448d1147e6e8b0e0c6d686f0d216d"
+  },
+  {
+    "before_source_balance_raw": "0",
+    "caveat": "NONZERO_ACTIVE_LIQUIDITY_IS_NOT_EXECUTABLE_DEPTH_OR_SELLABILITY_PROOF",
+    "checks": [],
+    "inventory_evidence": {
+      "http_status": 200,
+      "key": "f34f14ebf5123be601fc1767d87d540c0eab38b166946724123e711367ddab14",
+      "rpc_error": null
+    },
+    "source_tx": "0xbd21bbf6d51300a162d27b5fe52fff3e0000d18ffa1ca4aa1fbe6c5e277381d6",
+    "token": "0x882c8e35504d58979b1280fe76d6553f717029f8",
+    "wallet": "0x2ce9d43d1cba6ae31d7f07bfe0098dfa2d833373"
+  },
+  {
+    "before_source_balance_raw": "0",
+    "caveat": "NONZERO_ACTIVE_LIQUIDITY_IS_NOT_EXECUTABLE_DEPTH_OR_SELLABILITY_PROOF",
+    "checks": [],
+    "inventory_evidence": {
+      "http_status": 200,
+      "key": "a123126d3abb757b12add6104b13a16d5d2bcdc5d2b9edffb95bee88da263edb",
+      "rpc_error": null
+    },
+    "source_tx": "0x2608d62a37b906b11de1ef858c0d9c7d26c1df02e2aa49ef0940682d03a111b2",
+    "token": "0xe3f4b833512f0bcb1467ee55e25804bbb8304ba3",
+    "wallet": "0x2ce9d43d1cba6ae31d7f07bfe0098dfa2d833373"
+  },
+  {
+    "before_source_balance_raw": "0",
+    "caveat": "NONZERO_ACTIVE_LIQUIDITY_IS_NOT_EXECUTABLE_DEPTH_OR_SELLABILITY_PROOF",
+    "checks": [
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "5d3c0d09c20737717e4bc8967c3a755aa419962ea17ad45b5824115f89a62235",
+              "rpc_error": null
+            },
+            "id": "0x0281d408c8b18e7c43106f65224cbfa3c73c95dff416e13f1bd81bd69900c898",
+            "kind": "V4",
+            "liquidity_raw": "740973825007148919670524",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "entry_10s"
+      },
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "e8acff3124552f959eaa9877be2ca28de21db09489578b71e6f46242b8c01be6",
+              "rpc_error": null
+            },
+            "id": "0x0281d408c8b18e7c43106f65224cbfa3c73c95dff416e13f1bd81bd69900c898",
+            "kind": "V4",
+            "liquidity_raw": "60965898845430124556259",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "exit_30m"
+      },
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "727ba1402fa7c8c6102f018f91819ded5502aef1fff51b4ece3907e3e406fff0",
+              "rpc_error": null
+            },
+            "id": "0x0281d408c8b18e7c43106f65224cbfa3c73c95dff416e13f1bd81bd69900c898",
+            "kind": "V4",
+            "liquidity_raw": "60965898845430124556259",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "exit_2h"
+      },
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "8da29d6cb5f5448b13d04899516cba2d55c3b14f6b1c2c0a0ac04f293ba072ba",
+              "rpc_error": null
+            },
+            "id": "0x0281d408c8b18e7c43106f65224cbfa3c73c95dff416e13f1bd81bd69900c898",
+            "kind": "V4",
+            "liquidity_raw": "60966127326642796494668",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "exit_24h"
+      },
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "67e6870b67cb00698916b95192ad1b1e1e20ee4f685f785a31c8464adc0e8929",
+              "rpc_error": null
+            },
+            "id": "0x0281d408c8b18e7c43106f65224cbfa3c73c95dff416e13f1bd81bd69900c898",
+            "kind": "V4",
+            "liquidity_raw": "741722048709676644977961",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "exit_source_first_sell"
+      }
+    ],
+    "inventory_evidence": {
+      "http_status": 200,
+      "key": "2069aec7418e735730aa519b237172fcd4b2e31f717f249f6078f105c74757c4",
+      "rpc_error": null
+    },
+    "source_tx": "0xfc443a645511d2f0a40322f6d4b701cad9d225ea6663359a4a914db0fd70e757",
+    "token": "0x7e298d798656c03ec80f2a7843d0805103749ba3",
+    "wallet": "0x371903abb32f5f69b536b77495e92adedfea25da"
+  },
+  {
+    "before_source_balance_raw": "0",
+    "caveat": "NONZERO_ACTIVE_LIQUIDITY_IS_NOT_EXECUTABLE_DEPTH_OR_SELLABILITY_PROOF",
+    "checks": [
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "a1b87eaaedd33b6f25c7a4e9d259bccb4b3ccde9e7a9e35d9bdb85f601f1c094",
+              "rpc_error": null
+            },
+            "id": "0x3ef3dc89977ffd1364bc930fb38eff56c16f120ede60b39a500cbb24bde4310d",
+            "kind": "V4",
+            "liquidity_raw": "1017700697398720740550188",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "entry_10s"
+      },
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "85beed7d2cebbf60966c6cf71a4bce27f23e6a779161670639782a393fbf25d9",
+              "rpc_error": null
+            },
+            "id": "0x3ef3dc89977ffd1364bc930fb38eff56c16f120ede60b39a500cbb24bde4310d",
+            "kind": "V4",
+            "liquidity_raw": "1017700697398720740550188",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "exit_30m"
+      },
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "cc952be1da4c2bc80ae51261fa2138e7823809a4aa5813a36763cb7cd82b1774",
+              "rpc_error": null
+            },
+            "id": "0x3ef3dc89977ffd1364bc930fb38eff56c16f120ede60b39a500cbb24bde4310d",
+            "kind": "V4",
+            "liquidity_raw": "1017700697398720740550188",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "exit_2h"
+      },
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "0176ad90c4ab513f7c454b59c780a3378a185ae2bdd5f6af51621662473cdea5",
+              "rpc_error": null
+            },
+            "id": "0x3ef3dc89977ffd1364bc930fb38eff56c16f120ede60b39a500cbb24bde4310d",
+            "kind": "V4",
+            "liquidity_raw": "1017700697398720740550188",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "exit_24h"
+      }
+    ],
+    "inventory_evidence": {
+      "http_status": 200,
+      "key": "e7526d12d439f3d51f246249cc1e4ab600c66e7a4b25cae72163dce3ce746001",
+      "rpc_error": null
+    },
+    "source_tx": "0x84ba76eeb724ee0a8fdfce710b4980623954e550e893e86c8346d9fd0456dd9e",
+    "token": "0xeb148dedecf90ed4c824efa3f6ce486d15afcba3",
+    "wallet": "0x371903abb32f5f69b536b77495e92adedfea25da"
+  },
+  {
+    "before_source_balance_raw": "0",
+    "caveat": "NONZERO_ACTIVE_LIQUIDITY_IS_NOT_EXECUTABLE_DEPTH_OR_SELLABILITY_PROOF",
+    "checks": [
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "fda68a82d2b4f4bf57d422cfabf3a3848c5964803bd1f6aa2e54ee9094414c38",
+              "rpc_error": null
+            },
+            "id": "0x2ad29751705d81aeb0aa31987d17fe76b0c88d3c038c0a198f3c7bf8c1f2b750",
+            "kind": "V4",
+            "liquidity_raw": "16691251789815999661606164",
+            "liquidity_status": "NONZERO"
+          },
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "55f958fe920dfbe0074fe476f486664d22e19713600ea23dec34476b62579099",
+              "rpc_error": null
+            },
+            "id": "0xa0ca5bebc42cdbf3623b1c09206ae4e3975b0fc7",
+            "kind": "V3",
+            "liquidity_raw": "4212456380064672837414",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "entry_10s"
+      },
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "2207e65e87bb93b8cd77ece95edeaba43f10734108bb29e36740b1d2cfe8e4db",
+              "rpc_error": null
+            },
+            "id": "0x2ad29751705d81aeb0aa31987d17fe76b0c88d3c038c0a198f3c7bf8c1f2b750",
+            "kind": "V4",
+            "liquidity_raw": "15494790473743171348222599",
+            "liquidity_status": "NONZERO"
+          },
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "b9bd953f8ed2939c6f4517709c8fd9ddea5c0c684aa8b5308131af4bd29c96d7",
+              "rpc_error": null
+            },
+            "id": "0xa0ca5bebc42cdbf3623b1c09206ae4e3975b0fc7",
+            "kind": "V3",
+            "liquidity_raw": "3575003611744623327548",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "exit_30m"
+      },
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "86f6805550e25e274c1a00ebc270d07cf74a71a24f5d73173c7c0a98601701d5",
+              "rpc_error": null
+            },
+            "id": "0x2ad29751705d81aeb0aa31987d17fe76b0c88d3c038c0a198f3c7bf8c1f2b750",
+            "kind": "V4",
+            "liquidity_raw": "15494790473743171348222599",
+            "liquidity_status": "NONZERO"
+          },
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "a3c3b1287be8c479c4df149f94f826e65e0c49ec9b9a870a707579f07f7336b5",
+              "rpc_error": null
+            },
+            "id": "0xa0ca5bebc42cdbf3623b1c09206ae4e3975b0fc7",
+            "kind": "V3",
+            "liquidity_raw": "3575003611744623327548",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "exit_2h"
+      },
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "e274fa2cee2f125b403887905f2167f6ee34b54cf1e3270ebc7d6abc477fab91",
+              "rpc_error": null
+            },
+            "id": "0x2ad29751705d81aeb0aa31987d17fe76b0c88d3c038c0a198f3c7bf8c1f2b750",
+            "kind": "V4",
+            "liquidity_raw": "15431140021014177521146798",
+            "liquidity_status": "NONZERO"
+          },
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "b518949d9f2b3198118308c613830e618896e3add9cc31aa45dda6b94a7aea15",
+              "rpc_error": null
+            },
+            "id": "0xa0ca5bebc42cdbf3623b1c09206ae4e3975b0fc7",
+            "kind": "V3",
+            "liquidity_raw": "4175273804921332562406",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "exit_24h"
+      }
+    ],
+    "inventory_evidence": {
+      "http_status": 200,
+      "key": "06a68eba16ffb0e6e11663110351fda1b76a91c46bd9afc429856d373cfa86e5",
+      "rpc_error": null
+    },
+    "source_tx": "0xf2202819e8e11dbb608e190df5eb2561e110469f701773da15b35c47a942508b",
+    "token": "0x9f62b62cf8cc3aea56a3ce8808cf13503d1131e7",
+    "wallet": "0xfd7e55a555555c2f25053a38ec744de1afea4fa4"
+  },
+  {
+    "before_source_balance_raw": "0",
+    "caveat": "NONZERO_ACTIVE_LIQUIDITY_IS_NOT_EXECUTABLE_DEPTH_OR_SELLABILITY_PROOF",
+    "checks": [],
+    "inventory_evidence": {
+      "http_status": 200,
+      "key": "b3df6e3a6dbd9c5aaea467d83dc7909615dd83ec29864ccc5eeb5b130edcbe58",
+      "rpc_error": null
+    },
+    "source_tx": "0x504ebd0ccecf169a91c50d90eff297ed583b4b281a5a6851bbf0e7305e7f375e",
+    "token": "0xb2000000000000000000009b58ad4f11efabbae5",
+    "wallet": "0xfd7e55a555555c2f25053a38ec744de1afea4fa4"
+  },
+  {
+    "before_source_balance_raw": "0",
+    "caveat": "NONZERO_ACTIVE_LIQUIDITY_IS_NOT_EXECUTABLE_DEPTH_OR_SELLABILITY_PROOF",
+    "checks": [],
+    "inventory_evidence": {
+      "http_status": 200,
+      "key": "48b1eb66d5d37ddcb8cc791463b982f1141ef961cfdb5e5d99cc3a3747c1d5ed",
+      "rpc_error": null
+    },
+    "source_tx": "0xe0d8089ef9f0e5e276833f338e5c9cd8639cc8de675e2deeaa758adbb6c1b8fb",
+    "token": "0xfc28f881426a2931ec01b7392fe7bd87de220222",
+    "wallet": "0x217946e128c1b9c7f8c3f16b33878a908713923a"
+  },
+  {
+    "before_source_balance_raw": "5302346128497349379855543",
+    "caveat": "NONZERO_ACTIVE_LIQUIDITY_IS_NOT_EXECUTABLE_DEPTH_OR_SELLABILITY_PROOF",
+    "checks": [
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "ba604593243acb787bf66805a2d962114ebd4d5f8d7f281b59f025396e856875",
+              "rpc_error": null
+            },
+            "id": "0xc9786476d2492eb8ddb2ebf8b4b69e227e1f31397c790d877541ab0ed5cf5ee2",
+            "kind": "V4",
+            "liquidity_raw": "1400133497182778502",
+            "liquidity_status": "NONZERO"
+          },
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "82bea62ab0d748061057a228fe791907de2e094e5502bd84a55c4e631251d618",
+              "rpc_error": null
+            },
+            "id": "0x6c561b446416e1a00e8e93e221854d6ea4171372",
+            "kind": "V3",
+            "liquidity_raw": "30695480393897219298",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "entry_10s"
+      },
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "3c52bd7394fe0e689c95cad6890a7d3017b662fb25f046b466889348854244ae",
+              "rpc_error": null
+            },
+            "id": "0xc9786476d2492eb8ddb2ebf8b4b69e227e1f31397c790d877541ab0ed5cf5ee2",
+            "kind": "V4",
+            "liquidity_raw": "1400098712290329410",
+            "liquidity_status": "NONZERO"
+          },
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "57def2049c74e4a60938d161114cdb2dbe4bb2bc390f185235a48c0e60ea0901",
+              "rpc_error": null
+            },
+            "id": "0x6c561b446416e1a00e8e93e221854d6ea4171372",
+            "kind": "V3",
+            "liquidity_raw": "30717913282424319444",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "exit_30m"
+      },
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "fb410889ddaa0adf45b465b488c6afeb559e6ab457facbef6869c11d23660f95",
+              "rpc_error": null
+            },
+            "id": "0xc9786476d2492eb8ddb2ebf8b4b69e227e1f31397c790d877541ab0ed5cf5ee2",
+            "kind": "V4",
+            "liquidity_raw": "1400098712290329410",
+            "liquidity_status": "NONZERO"
+          },
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "0b9ad363e0cdb30164f2ab3e4a17b897491f7385ada3470e099c6fffda92a80e",
+              "rpc_error": null
+            },
+            "id": "0x6c561b446416e1a00e8e93e221854d6ea4171372",
+            "kind": "V3",
+            "liquidity_raw": "30893569413332429402",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "exit_2h"
+      },
+      {
+        "legs": [
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "fc205184cb85e519c10eab50df2de9e0fc9a24b0e063c53a7d8352bc06fa6411",
+              "rpc_error": null
+            },
+            "id": "0xc9786476d2492eb8ddb2ebf8b4b69e227e1f31397c790d877541ab0ed5cf5ee2",
+            "kind": "V4",
+            "liquidity_raw": "1400098712290329410",
+            "liquidity_status": "NONZERO"
+          },
+          {
+            "evidence": {
+              "http_status": 200,
+              "key": "5d60c01d6407d034c12cb21eef48f5eec108d9682adee757ef84474a60f65074",
+              "rpc_error": null
+            },
+            "id": "0x6c561b446416e1a00e8e93e221854d6ea4171372",
+            "kind": "V3",
+            "liquidity_raw": "36333808686772526865",
+            "liquidity_status": "NONZERO"
+          }
+        ],
+        "point": "exit_24h"
+      }
+    ],
+    "inventory_evidence": {
+      "http_status": 200,
+      "key": "fc6ca64b059dd9bf1a44a0a7cad12d814bdad3ed4770741ed07c12bfc3c2f769",
+      "rpc_error": null
+    },
+    "source_tx": "0x5d7e39b79f8e7bd0f3e54f800bfc8cd4ee416f8ac0c69fc3008716e0403323ee",
+    "token": "0x0f61edbfe6cd86024c0f210c0695b08df55fdfc9",
+    "wallet": "0x217946e128c1b9c7f8c3f16b33878a908713923a"
+  },
+  {
+    "before_source_balance_raw": "0",
+    "caveat": "NONZERO_ACTIVE_LIQUIDITY_IS_NOT_EXECUTABLE_DEPTH_OR_SELLABILITY_PROOF",
+    "checks": [],
+    "inventory_evidence": {
+      "http_status": 200,
+      "key": "4635606bfd7259177e52a16eaae219b38f68b149fc52d7b593f51e720265c741",
+      "rpc_error": null
+    },
+    "source_tx": "0x9fe9aacef500c34dc188449e76fd725783fbef317ba438d20104b486ef63953f",
+    "token": "0x882c8e35504d58979b1280fe76d6553f717029f8",
+    "wallet": "0xdd6f338b91f40e5a02c468b7cb49cccc569a3134"
+  },
+  {
+    "before_source_balance_raw": "0",
+    "caveat": "NONZERO_ACTIVE_LIQUIDITY_IS_NOT_EXECUTABLE_DEPTH_OR_SELLABILITY_PROOF",
+    "checks": [],
+    "inventory_evidence": {
+      "http_status": 200,
+      "key": "ef41c8bf7756db6e1f0d12632163028f25a96f667fa29acfbaaed79a060bc096",
+      "rpc_error": null
+    },
+    "source_tx": "0x553794de99a2b6549c52f2bc1920b79e1970adfa83691e6e7371206b201852ae",
+    "token": "0xb20000000000000000000046012e90119e505b01",
+    "wallet": "0xdd6f338b91f40e5a02c468b7cb49cccc569a3134"
+  },
+  {
+    "before_source_balance_raw": "0",
+    "caveat": "NONZERO_ACTIVE_LIQUIDITY_IS_NOT_EXECUTABLE_DEPTH_OR_SELLABILITY_PROOF",
+    "checks": [],
+    "inventory_evidence": {
+      "http_status": 200,
+      "key": "f4bfb65b3179312d8f70f26e4419a5a1896aaf526ed1ee99aca82dfbff1d3d76",
+      "rpc_error": null
+    },
+    "source_tx": "0x6551d8cdec6e0ab147d10199c8e1c675a5dab5396cccaf07a2dba15722165bb0",
+    "token": "0x46324147ce37f551faec752084f9b51e05a33425",
+    "wallet": "0xd569e570b94265e5ebc7df1990f99ee68d3f60a1"
+  },
+  {
+    "before_source_balance_raw": "0",
+    "caveat": "NONZERO_ACTIVE_LIQUIDITY_IS_NOT_EXECUTABLE_DEPTH_OR_SELLABILITY_PROOF",
+    "checks": [],
+    "inventory_evidence": {
+      "http_status": 200,
+      "key": "0a5920c4d153681c1c9e0a8d363553f9f89945b0e9f09f00674b13fcdaf2772e",
+      "rpc_error": null
+    },
+    "source_tx": "0x98e84da5926dafd426b9e8389fe5ecb79802e85cd6645cb81222880ab5d7a480",
+    "token": "0xb2000000000000000000007ab5bf182b1f897401",
+    "wallet": "0xd569e570b94265e5ebc7df1990f99ee68d3f60a1"
+  },
+  {
+    "before_source_balance_raw": "0",
+    "caveat": "NONZERO_ACTIVE_LIQUIDITY_IS_NOT_EXECUTABLE_DEPTH_OR_SELLABILITY_PROOF",
+    "checks": [],
+    "inventory_evidence": {
+      "http_status": 200,
+      "key": "676c2a21239b4f67e5b6ef7c7f481fdf4e7363443ad971dfc3bebb1f387ed6ff",
+      "rpc_error": null
+    },
+    "source_tx": "0x3e43a15bada54a0b8f9d0e438890a38999e0cc42ed7c080fe551a461faea18ef",
+    "token": "0xb20000000000000000000009cdb12aefd9830b01",
+    "wallet": "0x0b3edd0d0bf7c6281a7f8ae5a5630defb94ae78e"
+  },
+  {
+    "before_source_balance_raw": "0",
+    "caveat": "NONZERO_ACTIVE_LIQUIDITY_IS_NOT_EXECUTABLE_DEPTH_OR_SELLABILITY_PROOF",
+    "checks": [],
+    "inventory_evidence": {
+      "http_status": 200,
+      "key": "615a999bff1065fe1f7aa58aad6b92ce0098d62b9e2edc55a244387e621df029",
+      "rpc_error": null
+    },
+    "source_tx": "0x6a09074547ecd02a85d0c3733d0f082de0bfd4d3216bcadd8d8c421ca0243fc4",
+    "token": "0x366b11937eff8dfa59e347310a2f86e88821d222",
+    "wallet": "0x0b3edd0d0bf7c6281a7f8ae5a5630defb94ae78e"
+  },
+  {
+    "before_source_balance_raw": "0",
+    "caveat": "NONZERO_ACTIVE_LIQUIDITY_IS_NOT_EXECUTABLE_DEPTH_OR_SELLABILITY_PROOF",
+    "checks": [],
+    "inventory_evidence": {
+      "http_status": 200,
+      "key": "3f90757528c15f8099940d16abdf60d4320dd325afd0537bfb4794aa2a859e2f",
+      "rpc_error": null
+    },
+    "source_tx": "0x497107c1d2f5da1167cc6fa49dbfa31259791f5e4fcb0bcda78f92e6f4e5a89d",
+    "token": "0xb2000000000000000000000b0a815fd8838d9f01",
+    "wallet": "0x347ffc6db9acc54ac2019795173b9599e8b82bd9"
+  },
+  {
+    "before_source_balance_raw": "0",
+    "caveat": "NONZERO_ACTIVE_LIQUIDITY_IS_NOT_EXECUTABLE_DEPTH_OR_SELLABILITY_PROOF",
+    "checks": [],
+    "inventory_evidence": {
+      "http_status": 200,
+      "key": "5626181ddf8fa662abaa3b88b9b736cdb19a55152a427039e4613e48a994c641",
+      "rpc_error": null
+    },
+    "source_tx": "0xd0b744f64a7d90eb83591cddb77281051efe5a821e881ca144b9dc8d17eb8165",
+    "token": "0x08a9da206c41d2a79a0cb047c28c56d9b6787de0",
+    "wallet": "0x347ffc6db9acc54ac2019795173b9599e8b82bd9"
+  }
+]

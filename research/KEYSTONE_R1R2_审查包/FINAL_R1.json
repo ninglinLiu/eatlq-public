@@ -1,0 +1,290 @@
+{
+  "round": "R1",
+  "champion_keystone": {
+    "name": "KEYSTONE",
+    "model": "/opt/EATLQ/services/signal_bridge/_model.pkl",
+    "params": "/opt/EATLQ/services/signal_bridge/_params.json",
+    "p_cut_file": 0.46818927983255865,
+    "p_cut_live": 0.27,
+    "entry": "t0+600s window to +900s; MIN_PRE=5; friction>=-5%; p_fatal<=p_cut",
+    "exit": "hard_stop -50%; hold 14400s; trailing OFF (pull=1.0)",
+    "universe": "Base Uniswap V3 WETH pools, first-swap t0 in 2025-10-01..2026-06-01, ns_pre>=5",
+    "sizing": "bridge default $100; executor env-capped",
+    "research_pass_n": 462,
+    "live_pass_n": 404,
+    "ks_oos_fold_ev": [
+      0.7100051314149747,
+      1.2886409663935423,
+      1.2796449140125006,
+      1.1417924089883205
+    ]
+  },
+  "preregistration": {
+    "primary_barrier": {
+      "tp": 0.5,
+      "sl": 0.35
+    },
+    "secondary_barrier": {
+      "tp": 1.0,
+      "sl": 0.5
+    },
+    "horizons_bkt": [
+      1,
+      3,
+      6,
+      12
+    ],
+    "sequence_n": [
+      3,
+      6,
+      12
+    ],
+    "holdout_frac": 0.2,
+    "embargo_days": 1
+  },
+  "n_models_fit": 32,
+  "n_trials": 21,
+  "candidates_max5": [
+    {
+      "candidate_id": "R1_F10_KS_CONTINUATION",
+      "family": "F10",
+      "statistical_state_description": "Among KEYSTONE live-pass pools (friction>=-5% & p_fatal<=min(0.468,0.27)), entry-time residual state predicts continuation of executable QuoterV2 net>0. Selected state tends to higher impact_residual, higher ineffective_buying residual, negative pre-entry acceleration (mom_h2-mom_h1), and non-zero participation-exhaust score.",
+      "exact_features": [
+        "impact_residual = early_ret - E[early_ret|liq_log,pre_vol,ns_pre,active_pools_l1]",
+        "flow_surprise = ns_pre - E[ns_pre|liq_log,pre_vol,active_pools_l1]",
+        "ineffective_buying = flow_surprise - impact_residual",
+        "liq_fragility_score = 1{early_ret>0}*(1-liq_trend/2)*(1-liq_drawdown)*early_ret",
+        "part_exhaust_score = 1{seq_part_exhaust} * max(early_ret,0)",
+        "accel = mom_h2 - mom_h1",
+        "p_fatal (KEYSTONE production model)"
+      ],
+      "exact_point_in_time_formula": "t = t0+600s. All RHS uses swaps with block_time in [t0,t]. Market controls active_pools_l1/chain_swaps_l1 are previous UTC day aggregates. Residualizers LinearRegression fit on chronologically prior fold only. Score s = HGB(max_depth=3,max_iter=80,lr=0.05).predict_proba(X)[:,1]; threshold = train quantile 0.50 of s on KEYSTONE live-pass.",
+      "sequence_or_snapshot": "snapshot residuals + binary seq_part_exhaust from N=6 pre-entry bars",
+      "entry_logic": "KEYSTONE entry UNCHANGED: WETH V3, ns_pre>=5, age window [600,900]s from first swap, QuoterV2 round-trip friction>=-5%, p_fatal<=min(file_p_cut=0.4682, live_cap=0.27). ADDITIONAL filter: continuation score s >= train_q50.",
+      "exit_or_expiry_logic": "KEYSTONE production exit frozen: hard_stop -50%, hold 14400s, trailing OFF",
+      "target": "executable QuoterV2 net_exec (priced_live) ; secondary tp_before_sl with TP+50%/SL-35%",
+      "primary_horizon": "KEYSTONE H=14400s",
+      "universe": "Base UniV3 WETH new pools t0 in 2025-10-01..2026-06-01, priced_ok, KEYSTONE live-pass subset",
+      "development_results": {
+        "n": 61,
+        "ev": 1.4651146510242188,
+        "med": 1.091896951587256,
+        "wr": 0.9344262295081968,
+        "top1": 0.07179851976368606,
+        "top5": 0.3079851097972685,
+        "ev_drop_top5": 1.0965663753608026,
+        "tokens": 61,
+        "days": 9,
+        "worst_fold": 1.3702632305703275,
+        "corr_early_ret": 0.0712882505543579,
+        "corr_ns_pre": 0.13490493759648606,
+        "leave_one_week_min": 1.2404381151954367
+      },
+      "walk_forward_results": {
+        "fold_evs_from_discovery": "ks_base_ev=1.2241338381638374; folds=[1.5266398967240409, 1.3702632305703275] | holdout_rule_fallback",
+        "oos_ev": 1.4651146510242188,
+        "worst_fold": 1.3702632305703275,
+        "holdout": {
+          "n": 22,
+          "ev": 1.0480514691988247,
+          "med": 0.9209944431423376,
+          "wr": 0.9545454545454546,
+          "top1": 0.1577264762847764,
+          "top5": 0.46118671814397594,
+          "ev_drop_top1": 0.922710311387881,
+          "ev_drop_top5": 0.7233123334382248,
+          "tokens": 22,
+          "days": 9
+        },
+        "incremental_vs_ks_holdout_pp": 0.167,
+        "vs_neg_early_ret_oos": 0.7500942527755939
+      },
+      "token_breadth": 61,
+      "day_breadth": 9,
+      "top_pnl_concentration": {
+        "oos_top1": 0.07179851976368606,
+        "holdout_top1": 0.1577264762847764,
+        "holdout_ev_drop_top5": 0.7233123334382248
+      },
+      "cost_stress": {
+        "extra_0": 1.042,
+        "extra_2pct": 1.022,
+        "extra_5pct": 0.992,
+        "ks_base_extra_5pct": 0.824
+      },
+      "parameter_stability": "score quantile q40/q50/q60 holdout EV all positive and monotone (0.95/1.04/1.21)",
+      "relationship_to_keystone": "META filter on frozen KEYSTONE live-pass; does not alter KEYSTONE model/gates/exit",
+      "main_failure_risk": "QuoterV2 sellability optimism (GL4 rugs); label=same family as train; holdout n small; no forward/shadow yet",
+      "verdict": "HOLDOUT_ELIGIBLE"
+    },
+    {
+      "candidate_id": "R1_F8_SIGN6_TRANSITION",
+      "family": "F8",
+      "statistical_state_description": "Pre-entry 6-bar tick-sign sequences whose train EV exceeds fric baseline by >3pp; enter if pattern \u2208 top-3 train patterns.",
+      "exact_features": [
+        "seq_sign6 from N=6 equal bars in [t0,t0+600] tick_last differences encoded U/D/F"
+      ],
+      "exact_point_in_time_formula": "bar_sec=100; signs=sign(\u0394tick_last) over bars 0..5; patterns learned only on prior fold fric-pass.",
+      "sequence_or_snapshot": "sequence N=6",
+      "entry_logic": "fric>=-5% AND seq_sign6 in train top-3 lift patterns",
+      "exit_or_expiry_logic": "KEYSTONE-style net_exec evaluation path (trail in priced_live cache)",
+      "target": "net_exec",
+      "primary_horizon": "14400s priced path",
+      "universe": "priced_ok friction-pass",
+      "development_results": {
+        "n": 35,
+        "ev": 0.8394431944012528,
+        "med": 0.4963415810465288,
+        "wr": 0.7428571428571429,
+        "top1": 0.17362975636794492,
+        "top5": 0.5607468780618439,
+        "ev_drop_top5": 0.27755451241088575,
+        "tokens": 35,
+        "days": 8,
+        "worst_fold": 0.21057977089153704,
+        "corr_early_ret": 0.06897734347354581,
+        "corr_ns_pre": 0.06147822210171131,
+        "leave_one_week_min": 0.3630421214671252
+      },
+      "walk_forward_results": {
+        "holdout": {
+          "n": 16,
+          "ev": 0.3817112983714725,
+          "med": 0.40935086793814945,
+          "wr": 0.6875,
+          "top1": 0.16745237804738053,
+          "top5": 0.5795455298837884,
+          "ev_drop_top1": 0.3223182260758577,
+          "ev_drop_top5": 0.1548128149847999,
+          "tokens": 16,
+          "days": 9
+        },
+        "vs_neg_early_ret_holdout": "FAIL +3pp gate"
+      },
+      "token_breadth": 35,
+      "day_breadth": 8,
+      "top_pnl_concentration": {
+        "holdout_top1": 0.16745237804738053
+      },
+      "cost_stress": "not re-stressed; RESEARCH only",
+      "parameter_stability": "pattern set unstable across folds (top_pats often empty on fold0)",
+      "relationship_to_keystone": "orthogonal entry; low corr with p_fatal expected",
+      "main_failure_risk": "pattern instability; holdout not better than early_ret control; sparse n",
+      "verdict": "RESEARCH_LEAD"
+    },
+    {
+      "candidate_id": "R1_F8_TREE_DISTILL",
+      "family": "F8",
+      "statistical_state_description": "Depth-3 tree on residual/anomaly features; keep top 30% predicted P(net>0) among fric-pass.",
+      "exact_features": [
+        "impact_residual",
+        "flow_surprise",
+        "ineffective_buying",
+        "absorption_score",
+        "range_pos",
+        "buyer_conc",
+        "seq_*",
+        "active_pools_l1",
+        "..."
+      ],
+      "exact_point_in_time_formula": "DecisionTree(max_depth=3,min_leaf=25) fit prior fold; threshold=train score q70.",
+      "sequence_or_snapshot": "snapshot + seq features",
+      "entry_logic": "fric>=-5% AND tree_score>=train_q70",
+      "exit_or_expiry_logic": "priced_live KEYSTONE-like path",
+      "target": "net_exec",
+      "primary_horizon": "14400s",
+      "universe": "priced_ok friction-pass",
+      "development_results": {
+        "n": 61,
+        "ev": 0.9066607711953579,
+        "med": 0.5620632736174288,
+        "wr": 0.7377049180327869,
+        "top1": 0.0861691306334276,
+        "top5": 0.30792338656585033,
+        "ev_drop_top5": 0.6102504427471956,
+        "tokens": 61,
+        "days": 9,
+        "worst_fold": 0.7348396323329154,
+        "corr_early_ret": 0.047126873643759795,
+        "corr_ns_pre": 0.23045776015070055,
+        "leave_one_week_min": 0.6677427683586856
+      },
+      "walk_forward_results": {
+        "holdout": {
+          "n": 59,
+          "ev": 0.5539653920994138,
+          "med": 0.4953999124266169,
+          "wr": 0.6949152542372882,
+          "top1": 0.0873636483511497,
+          "top5": 0.2700550007554151,
+          "ev_drop_top1": 0.5000645232868408,
+          "ev_drop_top5": 0.39458931339679026,
+          "tokens": 59,
+          "days": 17
+        },
+        "note": "holdout tree dominated by range_pos (0.64) \u2014 path/momentum proxy"
+      },
+      "token_breadth": 61,
+      "day_breadth": 9,
+      "top_pnl_concentration": {
+        "holdout_top1": 0.0873636483511497
+      },
+      "cost_stress": "not fully stressed",
+      "parameter_stability": "feature importance unstable fold-to-fold (ineffective_buying vs range_pos)",
+      "relationship_to_keystone": "broader than KEYSTONE; may overlap friction universe",
+      "main_failure_risk": "collapses toward range_pos/momentum; fails NEG_early_ret holdout gate",
+      "verdict": "RESEARCH_LEAD"
+    }
+  ],
+  "rejected_highlights": [
+    {
+      "id": "S1_F5_impact_residual",
+      "failure": "MARKET_BETA_ONLY",
+      "why": "corr(impact_residual, early_ret)=0.87; not incremental vs early_ret control"
+    },
+    {
+      "id": "S1_F1_absorption_score",
+      "failure": "TAIL_DEPENDENT",
+      "why": "holdout ev_drop_top5<0; OOS not > early_ret control"
+    },
+    {
+      "id": "S2_F5_price_flow_div",
+      "failure": "TAIL_DEPENDENT",
+      "why": "holdout top5-dependent; med holdout <0"
+    },
+    {
+      "id": "S5_F11_missed_winners",
+      "failure": "NO_PREDICTIVE_DIFFERENCE",
+      "why": "OOS EV negative on non-KS friction set"
+    },
+    {
+      "id": "S5_F12_fragility_early_exit",
+      "failure": "ENTRY_VALID_EXIT_INVALID",
+      "why": "early-exit proxy destroyed convex right tail vs KEYSTONE hold"
+    },
+    {
+      "id": "NEG_early_ret / NEG_ns_pre",
+      "failure": "control",
+      "why": "forbidden singles already strong under QuoterV2 net \u2014 sets high bar"
+    }
+  ],
+  "full_trial_ledger_path": "/root/alpha_discovery_keystone_r1/out/trial_ledger_r1.csv",
+  "strict_validation_path": "/root/alpha_discovery_keystone_r1/out/validation_r1_strict.json",
+  "next_round_search_dimension": {
+    "driven_by": [
+      "MARKET_BETA_ONLY on residual-looking features",
+      "ENTRY_VALID_EXIT_INVALID on F12",
+      "QuoterV2 sellability gap (DATA_SEMANTICS_FAILURE risk for all net_exec labels)"
+    ],
+    "orthogonal_direction": "Rebuild targets as realizable-exit / atomic-sell residual return (GL5/GL7 style), then re-test F10 continuation and F2 ineffective-buying as predictors of TP-before-SL and MAE-before-MFE under sellability-aware labels \u2014 not QuoterV2 markouts.",
+    "keep_frozen": "KEYSTONE production entry/exit/model",
+    "do_not": "add more correlated price-path features or retune KEYSTONE p_cut"
+  },
+  "reproduce": {
+    "discover": "cd /root/alpha_discovery_keystone_r1 && OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 src/discover_r1.py",
+    "validate": "cd /root/alpha_discovery_keystone_r1 && OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 src/validate_leads_r1.py"
+  },
+  "forward_eligible_count": 0,
+  "holdout_eligible_count": 1,
+  "no_stable_banner": null
+}

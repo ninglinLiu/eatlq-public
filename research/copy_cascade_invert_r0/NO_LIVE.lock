@@ -1,0 +1,9 @@
+COPY_CASCADE_INVERT_R0
+deploy_allowed=false
+live_allowed=false
+training_allowed=false
+self_go_allowed=false
+rpc_forbidden=true
+production_clickhouse_scan_forbidden=true
+eatlq_write_forbidden=true
+dune_may_not_impersonate_vendor_boards=true

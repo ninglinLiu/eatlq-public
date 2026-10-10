@@ -1,0 +1,55 @@
+{
+  "task": "PNL_DECOMPOSITION",
+  "generated_at": "2026-07-21T07:22:48Z",
+  "eth_usd_freeze": 3000.0,
+  "REGIME": {
+    "name": "REGIME",
+    "definition": "Entering new-pool WETH V3 structure (POOL_ONLY / random on same spine) with TP ladder + scheduled wallet. Money from 'being in the game', not from sieves.",
+    "pool_only_cum_withdrawn_usd": 404.782557732519,
+    "random_cum_withdrawn_usd": 852.0292175516673,
+    "pool_only_sched_weth": 0.13492751924417115,
+    "random_sched_weth": 0.28400973918388506,
+    "interpretation": "Random ~$852 and POOL_ONLY ~$405 over the covered window show the regime (new pools + exits + capital rules) can print positive USD. That is NOT proof of a selectable edge over the baseline."
+  },
+  "SELECTION": {
+    "name": "SELECTION",
+    "definition": "Incremental scheduled PnL of large-buy / absorption sieves vs POOL_ONLY under identical scheduler (paired day bootstrap).",
+    "lba_vs_pool_sum_delta_weth": 0.11176135607393439,
+    "lba_vs_pool_p05_day": -0.12822337434074288,
+    "lba_vs_pool_passes": false,
+    "rand_vs_pool_sum_delta_weth": 0.14908221993971393,
+    "rand_vs_pool_p05_day": -0.061075254728294684,
+    "lba_vs_rand_sum_delta_weth": -0.03732086386577953,
+    "lba_vs_rand_p05_day": -0.21771848185007942,
+    "lba_vs_rand_passes": false,
+    "arm_cum_withdrawn_usd": {
+      "POOL_ONLY": 404.782557732519,
+      "CAPACITY_MATCHED_RANDOM": 852.0292175516673,
+      "LARGE_BUY_ONLY": 437.3297946803752,
+      "ABSORPTION_ONLY": 371.1724643180041,
+      "LARGE_BUY_ABSORPTION": 740.0666259543277
+    },
+    "interpretation": "SELECTION edge requires LBA paired \u0394 vs POOL_ONLY with day-cluster bootstrap p05 > 0. Beating random is a secondary check (does the sieve beat luck under same capacity)."
+  },
+  "EXECUTION": {
+    "name": "EXECUTION",
+    "definition": "Drag from latency, capacity skips, failed fills, conservative loss floors.",
+    "lba_unconstrained_opportunity_weth": 65.88527253601077,
+    "lba_scheduled_weth": 0.24668887531810554,
+    "capacity_skip_rate": 0.9934856735711741,
+    "latency_seconds_primary": 0,
+    "absorption_window_seconds_primary": 5,
+    "drag_unconst_minus_sched_weth": 65.63858366069267,
+    "interpretation": "Skip rate 99.3% under 3-slot / one-token scheduler dominates. Unconstrained opportunity is diagnostic only \u2014 not tradable capital."
+  },
+  "POOL_ONLY_explainer": {
+    "what_it_is": "POOL_ONLY = buy opportunities that pass only pool-structure filters (age 15m\u201324h, min size, depth/momentum/intensity score quantile), WITHOUT requiring a 'large buy' or 'absorbed' flag. Same $1000 wallet, 3 concurrent slots, one position per token, TP ladder exits.",
+    "what_it_is_not": "Not 'all Base swaps'. Not smart-money. Not proof you should trade randomly.",
+    "why_random_can_look_good": "CAPACITY_MATCHED_RANDOM picks the same count of eligible buys as POOL_ONLY from the same spine. If the regime itself has positive expected USD after costs, random can withdraw ~$500\u2013$600 without any sieve edge."
+  },
+  "verdicts": {
+    "REGIME_POSITIVE_USD": "PROVEN",
+    "SELECTION_EDGE_LBA_VS_POOL": "UNCONFIRMED",
+    "SELECTION_EDGE_LBA_VS_RANDOM": "REFUTED"
+  }
+}

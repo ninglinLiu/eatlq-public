@@ -1,0 +1,101 @@
+{
+  "buy": {
+    "amount_raw": "10000000000000000",
+    "base_fee_header_evidence": null,
+    "base_fee_wei": 5000000,
+    "block": 51483737,
+    "direction": "buy",
+    "evidence": {
+      "http_status": 200,
+      "key": "d020001cdb7c0ee1f388f6eb8d23a19ac0a890a7deca28ebc9829f11194a6369",
+      "rpc_error": null
+    },
+    "gas_model_note": "measured internal execution + intrinsic calldata + explicit 5000 dispatcher/return buffer; not a mined receipt",
+    "gas_model_units": 191621,
+    "intrinsic_gas": 23104,
+    "measured_internal_gas": 163517,
+    "received_raw": "2672405833164159694438355",
+    "simulation_context": "hypothetical executor with empty hookData; no persistent state change",
+    "spent_raw": "10000000000000000",
+    "status": "HISTORICAL_TRANSFER_SETTLED_SIMULATION",
+    "timestamp": 1789756821
+  },
+  "buy_fees": {
+    "assumptions": "historical base fee; 0.01 gwei tip; measured gas+intrinsic+5000; unsigned type-2 nonce 0 L1 fee estimate; excludes deployment and adverse transaction ordering",
+    "evidence": {
+      "http_status": 200,
+      "key": "39275a3dbc77d5f248c035d256906b6b76a7f00d2fc86dcc71e1ada72b13a197",
+      "rpc_error": null
+    },
+    "gas_model_units": 191621,
+    "l1_fee_model_raw": "4586191421",
+    "l2_fee_model_raw": "2874315000000",
+    "operator_fee_model_raw": "0",
+    "priority_fee_assumption_wei": 10000000,
+    "total_fee_model_raw": "2878901191421"
+  },
+  "delay_seconds": 10,
+  "entry_delay_seconds_observed": 10.0,
+  "exit_policy": "24h",
+  "horizon_seconds_observed": 86400,
+  "input_eth_raw": "10000000000000000",
+  "modeled_net_eth_raw": "-961578734497939",
+  "net_profit_certified": false,
+  "platform_fee_status": "NOT_SPECIFIED_SEPARATE_FROM_ONCHAIN_MODEL",
+  "sell": {
+    "amount_raw": "2672405833164159694438355",
+    "base_fee_header_evidence": null,
+    "base_fee_wei": 5000000,
+    "block": 51526937,
+    "direction": "sell",
+    "evidence": {
+      "http_status": 200,
+      "key": "5a9fca56043748f56e1e4445ed65b293843616086251278fdf6f8e525953decc",
+      "rpc_error": null
+    },
+    "gas_model_note": "measured internal execution + intrinsic calldata + explicit 5000 dispatcher/return buffer; not a mined receipt",
+    "gas_model_units": 192979,
+    "intrinsic_gas": 23164,
+    "measured_internal_gas": 164815,
+    "received_raw": "9044196408361875",
+    "simulation_context": "hypothetical executor with empty hookData; no persistent state change",
+    "spent_raw": "2672405833164159694438355",
+    "status": "HISTORICAL_TRANSFER_SETTLED_SIMULATION",
+    "timestamp": 1789843221
+  },
+  "sell_fees": {
+    "assumptions": "historical base fee; 0.01 gwei tip; measured gas+intrinsic+5000; unsigned type-2 nonce 0 L1 fee estimate; excludes deployment and adverse transaction ordering",
+    "evidence": {
+      "http_status": 200,
+      "key": "cb4f846ad950aad16506f4eb2b0d76ac87c6a371adc80e414e7dea6eda9bbfa7",
+      "rpc_error": null
+    },
+    "gas_model_units": 192979,
+    "l1_fee_model_raw": "1556668393",
+    "l2_fee_model_raw": "2894685000000",
+    "operator_fee_model_raw": "0",
+    "priority_fee_assumption_wei": 10000000,
+    "total_fee_model_raw": "2896241668393"
+  },
+  "settled_before_gas_pnl_raw": "-955803591638125",
+  "slot_evidence": {
+    "access_list_evidence": null,
+    "attempts": [
+      {
+        "http_status": 200,
+        "key": "21a73af96ccf17ad317c6defa16b2c6d9687ad4f75a664a5c60a8b7d8f649214",
+        "rpc_error": null
+      }
+    ],
+    "block": 51526937,
+    "detector_version": 2,
+    "layout_source": "https://github.com/base/base-std/blob/main/test/lib/mocks/MockB20Storage.sol",
+    "slot": "0x1c76cfbd3a760f85759d80d9e5c75b7dabb48d25dd02baee7f15245c7d88f9d1",
+    "token": "0xb200000000000000000000a4e3d33b7c9a174801"
+  },
+  "source_block": 51483732,
+  "source_tx": "0xf83530f76fd8e99631736e1eb6ada1da5f046ed798d5e700e3f38f58b51673d9",
+  "status": "CONDITIONAL_EXECUTION_COST_MODEL",
+  "token": "0xb200000000000000000000a4e3d33b7c9a174801",
+  "wallet": "0x347ffc6db9acc54ac2019795173b9599e8b82bd9"
+}

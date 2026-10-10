@@ -1,0 +1,41 @@
+{
+  "project": "base_greenfield_directional_v0",
+  "created_utc": "2026-07-20T05:21:00Z",
+  "reuse": [
+    {
+      "asset": "atomic_sell_simulator",
+      "source": "/root/keystone_r2_atomic/src/r2_pipeline.py",
+      "local_copy": "src/atomic_sim.py",
+      "mode": "adapted_copy",
+      "notes": "ArchiveSim atomic_sell + status taxonomy; no production writes"
+    },
+    {
+      "asset": "trial_ledger_pattern",
+      "source": "/root/alpha_discovery_keystone_r1/src/discover_r1.py",
+      "local_copy": "src/trial_ledger.py",
+      "mode": "pattern_reimplementation"
+    },
+    {
+      "asset": "clickhouse_decoded_swaps",
+      "source": "eatlq.uniswap_v3_swaps_decoded + eatlq.discovered_pools",
+      "mode": "readonly_query"
+    },
+    {
+      "asset": "archive_rpc",
+      "source": "/tmp/rpc_url.txt",
+      "mode": "readonly_eth_call"
+    },
+    {
+      "asset": "executor_capital_caps",
+      "source": "/opt/EATLQ/services/executor (documented only)",
+      "mode": "documentation"
+    }
+  ],
+  "explicitly_not_reused": [
+    "/opt/EATLQ/services/signal_bridge/_model.pkl",
+    "/opt/EATLQ/services/signal_bridge/_params.json",
+    "/root/keystone_r2_atomic/out/frozen_f10_hgb.pkl",
+    "KEYSTONE live-pass universe",
+    "F10 scores / thresholds"
+  ]
+}

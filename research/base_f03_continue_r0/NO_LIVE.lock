@@ -1,0 +1,12 @@
+ABSOLUTE_NO_LIVE
+
+This workspace is permanently read-only with respect to chains, exchanges,
+wallets, protocols, and order-routing systems.
+
+LIVE_TRADING = FORBIDDEN
+REAL_ORDERS_SENT = 0
+REAL_TRANSACTIONS_SIGNED = 0
+REAL_CAPITAL_AT_RISK = 0
+HIGHEST_ALLOWED_STATE = SHADOW_CANDIDATE
+CREATED = 2026-08-17
+REASON = F03 continuation is read-only. Any write-chain, signer, swap, LP, authorize, or executor path must fail closed while this file exists. Do not modify /root/base_wildcat_alpha conclusions or code.

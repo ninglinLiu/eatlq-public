@@ -1,0 +1,25 @@
+{
+  "strategy_id": "F07_WAL_CONC_DECLINE",
+  "data_class": "C_PRODUCTION_DB_HEAVY",
+  "required_tables_or_files": [
+    "erc20_transfers_decoded",
+    "balance snapshots"
+  ],
+  "required_columns": [
+    "token",
+    "from",
+    "to",
+    "value",
+    "time"
+  ],
+  "required_time_resolution": "5m-1h",
+  "point_in_time_requirements": "PIT balances",
+  "minimum_history": ">=60d",
+  "estimated_rows": "very large transfers",
+  "estimated_read_bytes": ">>2GB",
+  "whether_current_diagnostics_may_support_it": "transfer net audits exist by name but huge",
+  "whether_production_database_would_be_required": true,
+  "missing_data": [
+    "point-in-time balance engine"
+  ]
+}

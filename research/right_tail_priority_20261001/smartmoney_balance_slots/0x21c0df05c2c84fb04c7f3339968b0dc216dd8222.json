@@ -1,0 +1,19 @@
+{
+  "access_list_evidence": {
+    "http_status": 200,
+    "key": "c60431bdf36b8738cf83c3f87f1fc253fc86e463d4880f2325fb2a4b05ddc2dc",
+    "rpc_error": null
+  },
+  "attempts": [
+    {
+      "http_status": 200,
+      "key": "87d7be50241c8ef14def93927bf7135920acf770fbcbc6bf9b8783b420904400",
+      "rpc_error": null
+    }
+  ],
+  "block": 51999066,
+  "detector_version": 2,
+  "layout_source": null,
+  "slot": "0x3d9c1636abd80c1e50f5e5c7b9d5579b35fce9ba1343b829acbbd0a3b8add1d9",
+  "token": "0x21c0df05c2c84fb04c7f3339968b0dc216dd8222"
+}

@@ -1,0 +1,39 @@
+timestamp_utc=2026-07-17T13:15:43Z
+loadavg=7.76 8.26 7.67 11/1606 3030653
+MemTotal:       24608580 kB
+MemAvailable:   17353264 kB
+SwapTotal:       4194300 kB
+SwapFree:        1945824 kB
+/dev/sda1      206900281344 90963988480 115919515648  44% /
+---docker---
+/eatlq-executor-1 restart=0 started=2026-07-17T04:30:13.652085208Z status=running
+/eatlq-signal-bridge-1 restart=0 started=2026-06-29T09:05:18.111455712Z status=running
+/eatlq-archiver-1 restart=0 started=2026-07-05T20:51:10.997507793Z status=running
+/eatlq-ingestor-1 restart=0 started=2026-06-27T06:19:12.473029377Z status=running
+/eatlq-telegram-bot-1 restart=0 started=2026-06-22T07:21:44.633075092Z status=running
+/eatlq-pool-discovery-1 restart=0 started=2026-06-20T04:07:54.756517966Z status=running
+/eatlq-clickhouse-1 restart=0 started=2026-06-18T17:50:00.607616681Z status=running
+/eatlq-postgres-1 restart=0 started=2026-06-18T17:50:00.612932577Z status=running
+/eatlq-dashboard-1 restart=0 started=2026-06-14T04:26:25.13130323Z status=running
+/eatlq-swap-poller-1 restart=0 started=2026-07-06T02:59:33.645324239Z status=running
+/eatlq-redis-1 restart=0 started=2026-06-13T12:33:45.101262526Z status=running
+/eatlq-autoheal-1 restart=0 started=2026-06-12T01:51:30.206522365Z status=running
+---executor_consumer---
+*1
+*8
+$4
+name
+$10
+executor-1
+$7
+pending
+:0
+$4
+idle
+:1872
+$8
+inactive
+:15764264
+---clickhouse_health_meta---
+1
+0

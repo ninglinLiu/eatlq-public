@@ -1,0 +1,23 @@
+{
+  "alpha_id": "V01",
+  "family": "venue",
+  "hypothesis": "fee tier predicts return persistence",
+  "mechanism": "higher fees segment toxic and retail flow",
+  "venue": "Base V3",
+  "universe": "active observed pools",
+  "horizon": "4h",
+  "data_source": "V2/V3 and fee-tier metadata",
+  "experiment": "fee-tier interaction",
+  "feature": "fee_bps",
+  "direction": 1,
+  "prediction_object": "next return",
+  "falsifier": "token composition explains it",
+  "status": "NOT_YET_TESTED",
+  "sample_size": 0,
+  "gross_result": "pending",
+  "cost_adjusted_result": "pending",
+  "capacity": "pending",
+  "concentration": "pending",
+  "tail_risk": "pending",
+  "next_action": "run rapid screen"
+}

@@ -1,0 +1,44 @@
+{
+  "after_snapshot": true,
+  "block_number": 51950782,
+  "cash_reconciliation": "INTERNAL_INDEX_INCOMPLETE",
+  "index_complete": false,
+  "native_net_raw": "-1000000000000000",
+  "quote": "ETH",
+  "quote_net_raw": "-1000000000000000",
+  "receipt_evidence": {
+    "http_status": 200,
+    "key": "28d84a109f381e977c2db40878c10cff11b9b90762e988dc3b7b8583d64e65e1",
+    "rpc_error": null
+  },
+  "receipt_from_matches_wallet": true,
+  "receipt_status": "CONFIRMED_SUCCESS",
+  "receipt_token_net_matches_index": true,
+  "receipt_token_net_raw": "457760361906680903670776",
+  "side": "buy",
+  "source_fee_raw": "5530189259613",
+  "source_fee_receipt_raw": "5530189259613",
+  "status": "SINGLE_TARGET_OPPOSITE_ACCOUNT_CASH",
+  "swap_logs": [
+    {
+      "data": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffc849aafa7d8000000000000000000000000000000000000000000000060ef3d2b5bc8d19a9bf800000000000000000000000000000000000054656af3b88de3a6b9fe141705b0000000000000000000000000000000000000000000000808c268ac91460a32f90000000000000000000000000000000000000000000000000000000000030bc70000000000000000000000000000000000000000000000000000000000000000",
+      "kind": "V4",
+      "log_index": 511,
+      "pool": "0x498581ff718922c3f8e6a244956af099b2652b2b",
+      "topics": [
+        "0x40e9cecb9f5f1f1c5b9c97dec2917b7ee92e57ba5563708daca94dd84ad7112f",
+        "0x8a2742ca2da1f2c982b3512c7eb07e16e29e8291e2e3a2bdc05f8e3608a96e09",
+        "0x000000000000000000000000d8ba9d1a99fc21f0eca24e9b85737c28a194a4e2"
+      ]
+    }
+  ],
+  "timestamp": 1790690911.0,
+  "token": "0x84b693350f768a91edf427fd898b109805689d01",
+  "token_net_raw": "457760361906680903670776",
+  "token_nets": {
+    "0x84b693350f768a91edf427fd898b109805689d01": "457760361906680903670776"
+  },
+  "tx_hash": "0xbac51e0f383854ba1576193c48493bbacf7358224382a061d80e5b69ac608675",
+  "validation_layer": "ACCOUNT_RECEIPT_AND_LOGS; PROTOCOL/ROUTE MUST BE VERIFIED SEPARATELY",
+  "wallet": "0x347ffc6db9acc54ac2019795173b9599e8b82bd9"
+}

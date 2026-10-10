@@ -1,0 +1,30 @@
+{
+  "p_cut": 0.46818927983255865,
+  "W": 600,
+  "H": 14400,
+  "MIN_PRE": 5,
+  "FRIC_THR": -0.05,
+  "features": [
+    "ns_pre",
+    "buyers_pre",
+    "senders_pre",
+    "swaps_per_buyer",
+    "buyer_sender_ratio",
+    "early_ret",
+    "pre_vol",
+    "pre_pullback",
+    "pre_runup_from_lo",
+    "liq_log",
+    "liq_trend",
+    "liq_drawdown",
+    "heat_accel",
+    "mom_h1",
+    "mom_h2"
+  ],
+  "train_n": 1275,
+  "fatal_rate": 0.41490196078431374,
+  "train_date_range": [
+    "2025-10-01",
+    "2026-06-01"
+  ]
+}

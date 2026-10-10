@@ -1,0 +1,35 @@
+{
+  "strategy_id": "F05_REG_NEWPOOL_DILUTION",
+  "family": "F05",
+  "name": "New-pool dilution avoidance",
+  "parameter_search_space": {
+    "dilution_max": [
+      1.5,
+      2.0,
+      3.0
+    ],
+    "lookback_d": [
+      7,
+      14
+    ],
+    "basket_k": [
+      5,
+      10
+    ],
+    "hold_h": [
+      1,
+      2
+    ],
+    "z_volume": [
+      0,
+      1
+    ]
+  },
+  "param_combo_count": 48,
+  "access_flags": {
+    "database_access_enabled": false,
+    "rpc_access_enabled": false,
+    "large_file_access_enabled": false,
+    "backtest_enabled": false
+  }
+}

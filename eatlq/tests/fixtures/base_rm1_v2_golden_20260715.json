@@ -1,0 +1,32 @@
+{
+  "schema_version": 2,
+  "preregistration_sha256": "8a8d8dfa5f302c1111c30645f633b3151ddccf4160b07e77e7a1bac9ea17f6f0",
+  "notional_weth_wei": "1000000000000000",
+  "keystone_exit": {
+    "hard_stop_fraction": -0.5,
+    "trailing_drawdown_fraction": 0.35,
+    "maximum_hold_blocks": 7200
+  },
+  "shallow_archive_fixture": {
+    "pool": "0x0019ed71f9eab03ce728738ff2381b92f6143092",
+    "token": "0x2bdcd40bab1ac0b8e124fbf9913032acc5e2584d",
+    "fee": 3000,
+    "entry_block": 42702284,
+    "entry_block_hash": "0xe05eca8302eba1c3acf2dd968ed0b5ef04f12d87ceb3fb39690a89a9c04abff7",
+    "pool_weth_at_entry_wei": "5146337904373897191",
+    "expected_d5_received_target": "146462276972241751765",
+    "expected_d5_recovered_weth": "994009174828413"
+  },
+  "chainlink_dashboard_only": {
+    "base_eth_usd_feed": "0x71041dDdad3595F9CEd3DcCFBe3D1F4b0a16Bb70",
+    "used_in_core_estimands": false
+  },
+  "hard_thresholds": {
+    "slippage_absolute_percent": 3.0,
+    "broadcast_to_inclusion_seconds": 30,
+    "gap_percentage_points": -5.0,
+    "d5_recovery_ratio_exclusive": 0.1,
+    "position_after_exit_wei": "0",
+    "roundtrips_per_arm": 1
+  }
+}

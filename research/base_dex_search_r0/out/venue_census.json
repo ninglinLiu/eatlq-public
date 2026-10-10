@@ -1,0 +1,1285 @@
+{
+  "venues": [
+    {
+      "venue": "aero_cl",
+      "factory": "0xade65c38cd4849adba595a4323a8c7ddfe89716a",
+      "swaps": 193737738,
+      "pools": 1937,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": {
+        "pools": 248,
+        "cheap": 194,
+        "table": "census.pit_cost_50",
+        "size": 50
+      },
+      "tradeable_25": {
+        "pools": 248,
+        "cheap": 200,
+        "table": "census.pit_cost_25",
+        "size": 25
+      }
+    },
+    {
+      "venue": "univ3",
+      "factory": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
+      "swaps": 173142245,
+      "pools": 35863,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": {
+        "pools": 2459,
+        "cheap": 444,
+        "table": "census.pit_cost_50",
+        "size": 50
+      },
+      "tradeable_25": {
+        "pools": 2459,
+        "cheap": 515,
+        "table": "census.pit_cost_25",
+        "size": 25
+      }
+    },
+    {
+      "venue": "sushi_v3",
+      "factory": "0xc35dadb65012ec5796536bd9864ed8773abc74c4",
+      "swaps": 10101590,
+      "pools": 441,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": {
+        "pools": 122,
+        "cheap": 14,
+        "table": "census.pit_cost_50",
+        "size": 50
+      },
+      "tradeable_25": {
+        "pools": 122,
+        "cheap": 16,
+        "table": "census.pit_cost_25",
+        "size": 25
+      }
+    },
+    {
+      "venue": "alienbase_cl",
+      "factory": "0x0fd83557b2be93617c9c1c1b6fd549401c74558c",
+      "swaps": 10020057,
+      "pools": 70,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": {
+        "pools": 28,
+        "cheap": 12,
+        "table": "census.pit_cost_50",
+        "size": 50
+      },
+      "tradeable_25": {
+        "pools": 28,
+        "cheap": 12,
+        "table": "census.pit_cost_25",
+        "size": 25
+      }
+    },
+    {
+      "venue": "other:0x38015d05",
+      "factory": "0x38015d05f4fec8afe15d7cc0386a126574e8077b",
+      "swaps": 2817519,
+      "pools": 66,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": {
+        "pools": 25,
+        "cheap": 7,
+        "table": "census.pit_cost_50",
+        "size": 50
+      },
+      "tradeable_25": {
+        "pools": 25,
+        "cheap": 11,
+        "table": "census.pit_cost_25",
+        "size": 25
+      }
+    },
+    {
+      "venue": "other:0x70fe4a44",
+      "factory": "0x70fe4a44ea505cfa3a57b95cf2862d4fd5f0f687",
+      "swaps": 2079629,
+      "pools": 32,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "univ2",
+      "factory": "",
+      "swaps": 1090463,
+      "pools": 21518,
+      "sources": [
+        "eatlq.uniswap_v2_swaps_decoded"
+      ],
+      "tradeable_50": {
+        "pools": 20911,
+        "cheap": 275,
+        "table": "v2_size_proxy",
+        "size": 50,
+        "note": "max_weth_swap >= size/2500 ETH; fee assumed 30 bps"
+      },
+      "tradeable_25": {
+        "pools": 20911,
+        "cheap": 280,
+        "table": "v2_size_proxy",
+        "size": 25,
+        "note": "max_weth_swap >= size/2500 ETH; fee assumed 30 bps"
+      }
+    },
+    {
+      "venue": "aero_vamm",
+      "factory": "0x420dd381b31aef6683db6b902084cb0ffece40da",
+      "swaps": 984784,
+      "pools": 4,
+      "sources": [
+        "eatlq.uniswap_v2_swaps_decoded"
+      ],
+      "tradeable_50": {
+        "pools": 2,
+        "cheap": 2,
+        "table": "v2_size_proxy",
+        "size": 50,
+        "note": "max_weth_swap >= size/2500 ETH; fee assumed 30 bps"
+      },
+      "tradeable_25": {
+        "pools": 2,
+        "cheap": 2,
+        "table": "v2_size_proxy",
+        "size": 25,
+        "note": "max_weth_swap >= size/2500 ETH; fee assumed 30 bps"
+      }
+    },
+    {
+      "venue": "other:0x6e606cf9",
+      "factory": "0x6e606cf94a4ddc01aeed2fce16d1b4f5b33e0a31",
+      "swaps": 512265,
+      "pools": 23,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": {
+        "pools": 14,
+        "cheap": 5,
+        "table": "census.pit_cost_50",
+        "size": 50
+      },
+      "tradeable_25": {
+        "pools": 14,
+        "cheap": 6,
+        "table": "census.pit_cost_25",
+        "size": 25
+      }
+    },
+    {
+      "venue": "other:0xe6da85fe",
+      "factory": "0xe6da85feb3b4e0d6aed95c41a125fba859bb9d24",
+      "swaps": 460062,
+      "pools": 16,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": {
+        "pools": 7,
+        "cheap": 2,
+        "table": "census.pit_cost_50",
+        "size": 50
+      },
+      "tradeable_25": {
+        "pools": 7,
+        "cheap": 3,
+        "table": "census.pit_cost_25",
+        "size": 25
+      }
+    },
+    {
+      "venue": "other:0x7ca1dccf",
+      "factory": "0x7ca1dccfb4f49564b8f13e18a67747fd428f1c40",
+      "swaps": 172700,
+      "pools": 29,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": {
+        "pools": 1,
+        "cheap": 1,
+        "table": "census.pit_cost_50",
+        "size": 50
+      },
+      "tradeable_25": {
+        "pools": 1,
+        "cheap": 1,
+        "table": "census.pit_cost_25",
+        "size": 25
+      }
+    },
+    {
+      "venue": "other:0x2f0d41f9",
+      "factory": "0x2f0d41f94d5d1550b79a83d2fe85c82d68c5a3ca",
+      "swaps": 152759,
+      "pools": 3,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": {
+        "pools": 1,
+        "cheap": 1,
+        "table": "census.pit_cost_50",
+        "size": 50
+      },
+      "tradeable_25": {
+        "pools": 1,
+        "cheap": 1,
+        "table": "census.pit_cost_25",
+        "size": 25
+      }
+    },
+    {
+      "venue": "other:0xa37359e6",
+      "factory": "0xa37359e63d1aa44c0acb2a4605d3b45785c97ee3",
+      "swaps": 126841,
+      "pools": 8,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0xb5e5a9e6",
+      "factory": "0xb5e5a9e628fef819150a6e5127ab481cee5d6ca9",
+      "swaps": 109785,
+      "pools": 7,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": {
+        "pools": 2,
+        "cheap": 2,
+        "table": "census.pit_cost_50",
+        "size": 50
+      },
+      "tradeable_25": {
+        "pools": 2,
+        "cheap": 2,
+        "table": "census.pit_cost_25",
+        "size": 25
+      }
+    },
+    {
+      "venue": "other:0x8888a3d8",
+      "factory": "0x8888a3d87ef6abc5f50572661e4729a45b255cf6",
+      "swaps": 72213,
+      "pools": 12,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": {
+        "pools": 4,
+        "cheap": 0,
+        "table": "census.pit_cost_50",
+        "size": 50
+      },
+      "tradeable_25": {
+        "pools": 4,
+        "cheap": 0,
+        "table": "census.pit_cost_25",
+        "size": 25
+      }
+    },
+    {
+      "venue": "other:0xc207628e",
+      "factory": "0xc207628e5e2b59e9c690071e68c7c1c4193b0252",
+      "swaps": 66473,
+      "pools": 10,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0x9592cd9b",
+      "factory": "0x9592cd9b267748cbfbde90ac9f7df3c437a6d51b",
+      "swaps": 59507,
+      "pools": 3,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": {
+        "pools": 3,
+        "cheap": 2,
+        "table": "census.pit_cost_50",
+        "size": 50
+      },
+      "tradeable_25": {
+        "pools": 3,
+        "cheap": 2,
+        "table": "census.pit_cost_25",
+        "size": 25
+      }
+    },
+    {
+      "venue": "other:0xade65c38",
+      "factory": "0xade65c38cd4849adba595a4323a8c7ddfe89716a",
+      "swaps": 51497,
+      "pools": 10,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": {
+        "pools": 4,
+        "cheap": 4,
+        "table": "census.pit_cost_50",
+        "size": 50
+      },
+      "tradeable_25": {
+        "pools": 4,
+        "cheap": 4,
+        "table": "census.pit_cost_25",
+        "size": 25
+      }
+    },
+    {
+      "venue": "other:0x07aced56",
+      "factory": "0x07aced5690e09935b1c0e6e88b772d9440f64718",
+      "swaps": 48436,
+      "pools": 27,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0xe82fa4d4",
+      "factory": "0xe82fa4d4ff25bad8b07c4d1ebd50e83180dd5eb8",
+      "swaps": 34464,
+      "pools": 35,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": {
+        "pools": 3,
+        "cheap": 0,
+        "table": "census.pit_cost_50",
+        "size": 50
+      },
+      "tradeable_25": {
+        "pools": 3,
+        "cheap": 0,
+        "table": "census.pit_cost_25",
+        "size": 25
+      }
+    },
+    {
+      "venue": "other:0x0e5ab24b",
+      "factory": "0x0e5ab24bebda7e5bb3961f7e9b3532a83ae86b48",
+      "swaps": 22764,
+      "pools": 7,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": {
+        "pools": 1,
+        "cheap": 1,
+        "table": "census.pit_cost_50",
+        "size": 50
+      },
+      "tradeable_25": {
+        "pools": 1,
+        "cheap": 1,
+        "table": "census.pit_cost_25",
+        "size": 25
+      }
+    },
+    {
+      "venue": "other:0xdc323d16",
+      "factory": "0xdc323d16c451819890805737997f4ede96b95e3e",
+      "swaps": 20291,
+      "pools": 12,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": {
+        "pools": 9,
+        "cheap": 1,
+        "table": "census.pit_cost_50",
+        "size": 50
+      },
+      "tradeable_25": {
+        "pools": 9,
+        "cheap": 1,
+        "table": "census.pit_cost_25",
+        "size": 25
+      }
+    },
+    {
+      "venue": "other:0x576a1301",
+      "factory": "0x576a1301b42942537d38fb147895fe83fb418fd4",
+      "swaps": 17188,
+      "pools": 16,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": {
+        "pools": 5,
+        "cheap": 0,
+        "table": "census.pit_cost_50",
+        "size": 50
+      },
+      "tradeable_25": {
+        "pools": 5,
+        "cheap": 0,
+        "table": "census.pit_cost_25",
+        "size": 25
+      }
+    },
+    {
+      "venue": "other:0xeddef427",
+      "factory": "0xeddef4273518b137cdbcb3a7fa1c6a688303dfe2",
+      "swaps": 8300,
+      "pools": 6,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": {
+        "pools": 2,
+        "cheap": 0,
+        "table": "census.pit_cost_50",
+        "size": 50
+      },
+      "tradeable_25": {
+        "pools": 2,
+        "cheap": 0,
+        "table": "census.pit_cost_25",
+        "size": 25
+      }
+    },
+    {
+      "venue": "other:0xc7a59029",
+      "factory": "0xc7a590291e07b9fe9e64b86c58fd8fc764308c4a",
+      "swaps": 7087,
+      "pools": 14,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0xf6c96ac4",
+      "factory": "0xf6c96ac4251905572c7083b1804825850b9bc9e6",
+      "swaps": 6930,
+      "pools": 3,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": {
+        "pools": 2,
+        "cheap": 0,
+        "table": "census.pit_cost_50",
+        "size": 50
+      },
+      "tradeable_25": {
+        "pools": 2,
+        "cheap": 0,
+        "table": "census.pit_cost_25",
+        "size": 25
+      }
+    },
+    {
+      "venue": "other:0x53400ed2",
+      "factory": "0x53400ed24c77515397fc3a559ff1363dab81b5c7",
+      "swaps": 5628,
+      "pools": 2,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0x34596707",
+      "factory": "0x3459670786e3ea7aeb1e09518d89eb277a23c68c",
+      "swaps": 5001,
+      "pools": 2,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0xb4ccd44d",
+      "factory": "0xb4ccd44d3babe05dfc70b39944796d281ae905ee",
+      "swaps": 4542,
+      "pools": 1,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0x9daaa904",
+      "factory": "0x9daaa9041e84025af8b8d941b302b22204f0a267",
+      "swaps": 3367,
+      "pools": 2,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": {
+        "pools": 2,
+        "cheap": 0,
+        "table": "census.pit_cost_50",
+        "size": 50
+      },
+      "tradeable_25": {
+        "pools": 2,
+        "cheap": 0,
+        "table": "census.pit_cost_25",
+        "size": 25
+      }
+    },
+    {
+      "venue": "other:0x4963818c",
+      "factory": "0x4963818c35d5793d771bf8091c750b5a71ed101b",
+      "swaps": 3108,
+      "pools": 3,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": {
+        "pools": 2,
+        "cheap": 0,
+        "table": "census.pit_cost_50",
+        "size": 50
+      },
+      "tradeable_25": {
+        "pools": 2,
+        "cheap": 0,
+        "table": "census.pit_cost_25",
+        "size": 25
+      }
+    },
+    {
+      "venue": "other:0xeaa05de8",
+      "factory": "0xeaa05de8a7300e6baa8d05ce86d01140dd2d9374",
+      "swaps": 2685,
+      "pools": 2,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": {
+        "pools": 1,
+        "cheap": 0,
+        "table": "census.pit_cost_50",
+        "size": 50
+      },
+      "tradeable_25": {
+        "pools": 1,
+        "cheap": 0,
+        "table": "census.pit_cost_25",
+        "size": 25
+      }
+    },
+    {
+      "venue": "other:0xd0de7ca3",
+      "factory": "0xd0de7ca3298fff085e2cb82f8a861a0254256ba0",
+      "swaps": 2630,
+      "pools": 8,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0xc05a5aa5",
+      "factory": "0xc05a5aa56df0dc97d6b9849a06627a079790014f",
+      "swaps": 2605,
+      "pools": 3,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": {
+        "pools": 2,
+        "cheap": 0,
+        "table": "census.pit_cost_50",
+        "size": 50
+      },
+      "tradeable_25": {
+        "pools": 2,
+        "cheap": 0,
+        "table": "census.pit_cost_25",
+        "size": 25
+      }
+    },
+    {
+      "venue": "other:0x5fd88cd0",
+      "factory": "0x5fd88cd0034a0b2fc77e75ea09b6e512511b0eb9",
+      "swaps": 2327,
+      "pools": 1,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": {
+        "pools": 1,
+        "cheap": 0,
+        "table": "census.pit_cost_50",
+        "size": 50
+      },
+      "tradeable_25": {
+        "pools": 1,
+        "cheap": 0,
+        "table": "census.pit_cost_25",
+        "size": 25
+      }
+    },
+    {
+      "venue": "other:0xadd30837",
+      "factory": "0xadd30837a707cce4567eea2c27d0617270d54c75",
+      "swaps": 2294,
+      "pools": 10,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0x3774bbad",
+      "factory": "0x3774bbad02ebd18a49919e1ed473163d83882dae",
+      "swaps": 1951,
+      "pools": 1,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": {
+        "pools": 1,
+        "cheap": 0,
+        "table": "census.pit_cost_50",
+        "size": 50
+      },
+      "tradeable_25": {
+        "pools": 1,
+        "cheap": 0,
+        "table": "census.pit_cost_25",
+        "size": 25
+      }
+    },
+    {
+      "venue": "other:0xc7000871",
+      "factory": "0xc7000871c318b1f038564afd94fdceec4f2c8d2e",
+      "swaps": 1838,
+      "pools": 1,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": {
+        "pools": 1,
+        "cheap": 0,
+        "table": "census.pit_cost_50",
+        "size": 50
+      },
+      "tradeable_25": {
+        "pools": 1,
+        "cheap": 0,
+        "table": "census.pit_cost_25",
+        "size": 25
+      }
+    },
+    {
+      "venue": "other:0x6e0e8d17",
+      "factory": "0x6e0e8d1703a0d0c1b41edc56eaed55a40386a441",
+      "swaps": 1788,
+      "pools": 2,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": {
+        "pools": 1,
+        "cheap": 0,
+        "table": "census.pit_cost_50",
+        "size": 50
+      },
+      "tradeable_25": {
+        "pools": 1,
+        "cheap": 0,
+        "table": "census.pit_cost_25",
+        "size": 25
+      }
+    },
+    {
+      "venue": "other:0xddf5a325",
+      "factory": "0xddf5a3259a88ab79d5530eb3eb14c1c92cd97fcf",
+      "swaps": 1587,
+      "pools": 4,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": {
+        "pools": 2,
+        "cheap": 0,
+        "table": "census.pit_cost_50",
+        "size": 50
+      },
+      "tradeable_25": {
+        "pools": 2,
+        "cheap": 0,
+        "table": "census.pit_cost_25",
+        "size": 25
+      }
+    },
+    {
+      "venue": "other:0x88888493",
+      "factory": "0x88888493d3e3a133cb80da23610f23a6d563d083",
+      "swaps": 1079,
+      "pools": 1,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0x3539da2a",
+      "factory": "0x3539da2adb3f8311d203d334f25f7bee604a5c50",
+      "swaps": 1001,
+      "pools": 1,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": {
+        "pools": 1,
+        "cheap": 0,
+        "table": "census.pit_cost_50",
+        "size": 50
+      },
+      "tradeable_25": {
+        "pools": 1,
+        "cheap": 0,
+        "table": "census.pit_cost_25",
+        "size": 25
+      }
+    },
+    {
+      "venue": "other:0x824e9c1c",
+      "factory": "0x824e9c1c1e94454b0128f271a75d819596c5a2a4",
+      "swaps": 833,
+      "pools": 4,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": {
+        "pools": 1,
+        "cheap": 0,
+        "table": "census.pit_cost_50",
+        "size": 50
+      },
+      "tradeable_25": {
+        "pools": 1,
+        "cheap": 0,
+        "table": "census.pit_cost_25",
+        "size": 25
+      }
+    },
+    {
+      "venue": "other:0xbd6a46b9",
+      "factory": "0xbd6a46b9a3a78b90564cfec571a28f1e48d5d15a",
+      "swaps": 737,
+      "pools": 1,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0x407fa802",
+      "factory": "0x407fa8029852a8386a907287018ceafd7242c621",
+      "swaps": 569,
+      "pools": 3,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": {
+        "pools": 1,
+        "cheap": 0,
+        "table": "census.pit_cost_50",
+        "size": 50
+      },
+      "tradeable_25": {
+        "pools": 1,
+        "cheap": 0,
+        "table": "census.pit_cost_25",
+        "size": 25
+      }
+    },
+    {
+      "venue": "other:0x40fe2f4e",
+      "factory": "0x40fe2f4eead3d472e5c064b8e970e5a595a44558",
+      "swaps": 418,
+      "pools": 3,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": {
+        "pools": 1,
+        "cheap": 0,
+        "table": "census.pit_cost_50",
+        "size": 50
+      },
+      "tradeable_25": {
+        "pools": 1,
+        "cheap": 0,
+        "table": "census.pit_cost_25",
+        "size": 25
+      }
+    },
+    {
+      "venue": "other:0xf8c866e3",
+      "factory": "0xf8c866e365ac64b06d8c044d866aa6d3bc73d3af",
+      "swaps": 238,
+      "pools": 1,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0x2798fde6",
+      "factory": "0x2798fde6e53998d7d7d3e34fa2920af07412d6d2",
+      "swaps": 176,
+      "pools": 3,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0xd9c313ac",
+      "factory": "0xd9c313ace6d5cc11cae1037c2259507d1a14a7c0",
+      "swaps": 159,
+      "pools": 1,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0xb07cb877",
+      "factory": "0xb07cb8774f65c288fbcee93b9a35568f36cd4c1b",
+      "swaps": 129,
+      "pools": 1,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0xbaa8353c",
+      "factory": "0xbaa8353cc9d02733ef12f9556ed999521f6e554c",
+      "swaps": 119,
+      "pools": 1,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0xb1d2f5cd",
+      "factory": "0xb1d2f5cd8f9bac0313cbeb9aaaabf60c7ff67251",
+      "swaps": 106,
+      "pools": 2,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0x76f1d72d",
+      "factory": "0x76f1d72dda79827e7577a1df2bf3585c7d16c2b1",
+      "swaps": 98,
+      "pools": 1,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0xe9604427",
+      "factory": "0xe9604427465eade81a66d720ff13767280fcba24",
+      "swaps": 91,
+      "pools": 1,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0xb92eb4ff",
+      "factory": "0xb92eb4ffc52a0ec383efa6577b2c3c89b7b980f5",
+      "swaps": 73,
+      "pools": 1,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0x7385197b",
+      "factory": "0x7385197b160ca2ec114960bcb32bc5d7cfa2720c",
+      "swaps": 66,
+      "pools": 1,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0x154bafc6",
+      "factory": "0x154bafc6c311f3909080f28438294cd5184c2924",
+      "swaps": 66,
+      "pools": 6,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0x6a96b231",
+      "factory": "0x6a96b231b6fb71ea74ab053653794f6e9fbe80da",
+      "swaps": 33,
+      "pools": 1,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0x0298e0c8",
+      "factory": "0x0298e0c8a3ed835afb4e2c54643ce14a7cc59196",
+      "swaps": 21,
+      "pools": 1,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0x5e66a7e4",
+      "factory": "0x5e66a7e489b0e7384b332e99b93fc84af81f115c",
+      "swaps": 14,
+      "pools": 1,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0xc8a90964",
+      "factory": "0xc8a9096457a5a8438b44a98be63696ab63ea7945",
+      "swaps": 11,
+      "pools": 1,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0xa6fcdcd4",
+      "factory": "0xa6fcdcd4a53072e8a5a73344fdb2ddfcdd78f94b",
+      "swaps": 11,
+      "pools": 1,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0x6b850508",
+      "factory": "0x6b8505081eee10460cafd1461ec528466c738bc2",
+      "swaps": 8,
+      "pools": 7,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0xf698d657",
+      "factory": "0xf698d65748342b84c55ff938888061a138a834fe",
+      "swaps": 6,
+      "pools": 1,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0x44474a60",
+      "factory": "0x44474a60f54623b4c278ec86eebaeb93ea4250cf",
+      "swaps": 6,
+      "pools": 2,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0x37aebd50",
+      "factory": "0x37aebd500c980e56305db91ba5ec6d4472c45336",
+      "swaps": 6,
+      "pools": 1,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0xb7ca22b4",
+      "factory": "0xb7ca22b43dd02f08068c92e09e71d4f75939471e",
+      "swaps": 6,
+      "pools": 2,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0x150bc87b",
+      "factory": "0x150bc87b0314ed87ab726c2a95d44edb962482bd",
+      "swaps": 6,
+      "pools": 1,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0x507098e2",
+      "factory": "0x507098e22124433dde935a7d485748f8f9444442",
+      "swaps": 6,
+      "pools": 3,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0x263a0062",
+      "factory": "0x263a00623e00e135ec1810280d491c0fd4e5b8dd",
+      "swaps": 6,
+      "pools": 1,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0x8ececeb6",
+      "factory": "0x8ececeb6f71b9e4da9a439d805c9ef426a5c9dea",
+      "swaps": 6,
+      "pools": 6,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0x65e78dcc",
+      "factory": "0x65e78dcc331b0d48362a93cbf9a35d46e66b96dd",
+      "swaps": 4,
+      "pools": 2,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0x057d10aa",
+      "factory": "0x057d10aa0109b74e7db6725d049e1f7302471c15",
+      "swaps": 4,
+      "pools": 2,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0x4242001a",
+      "factory": "0x4242001a94973205531ae6aabcab6a764db080b1",
+      "swaps": 1,
+      "pools": 1,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0x8692c2a0",
+      "factory": "0x8692c2a0a7a2f594fb7ae3c3bb35092d13283bc1",
+      "swaps": 1,
+      "pools": 1,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0x58efaace",
+      "factory": "0x58efaace770fa61ecd19ad6093bb518df394d558",
+      "swaps": 1,
+      "pools": 1,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0xcfb10795",
+      "factory": "0xcfb1079585de8b35ddf1ec13eed8ce64a99392e0",
+      "swaps": 1,
+      "pools": 1,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0xa803a02e",
+      "factory": "0xa803a02e79dbd3f1da0d49a5b13a560ea7c737d4",
+      "swaps": 1,
+      "pools": 1,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0xb168f440",
+      "factory": "0xb168f4407f34222a87e376e7858d53d1fac960eb",
+      "swaps": 1,
+      "pools": 1,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0x2f9aa895",
+      "factory": "0x2f9aa895d2278f385d6c1c7666ebb4624ad52be0",
+      "swaps": 1,
+      "pools": 1,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0xa8de7f6c",
+      "factory": "0xa8de7f6cf89fad6eeda3df3e7a2afb5e0499ee68",
+      "swaps": 1,
+      "pools": 1,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0x06d15016",
+      "factory": "0x06d15016509d0243bc7fdf135f3355560460085c",
+      "swaps": 1,
+      "pools": 1,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    },
+    {
+      "venue": "other:0x5722fa31",
+      "factory": "0x5722fa3119d81241e7fbbaa15d9bf887c1f4768b",
+      "swaps": 1,
+      "pools": 1,
+      "sources": [
+        "census.cl_swaps"
+      ],
+      "tradeable_50": null,
+      "tradeable_25": null
+    }
+  ],
+  "ranked_for_recipes": [
+    "aero_cl",
+    "univ3",
+    "sushi_v3",
+    "alienbase_cl",
+    "other:0x38015d05",
+    "other:0x70fe4a44",
+    "univ2",
+    "aero_vamm"
+  ],
+  "v4": {
+    "venue": "univ4",
+    "source": "opt/EATLQ/scripts/research/base_v4",
+    "swaps": null,
+    "pools": null,
+    "verdict": "v4_alpha_candidate_no",
+    "note": "Initialize 0.003 ETH roundtrip: clean n=112, 0% positive, median -2.6%. No ClickHouse V4 swap table. Confirmation cell only."
+  },
+  "gaps": [
+    "1-minute CL bars: not in panel (10m proxied by 15m).",
+    "univ4: no CH swap table; confirmation only.",
+    "aerodrome_vamm_swaps_mv is a 100% pair-overlap duplicate of uniswap_v2_swaps_decoded; venue split uses discovered_pools.factory.",
+    "pit_cost_25 built separately; if missing, $25 CL cheap-count falls back to proxy/empty."
+  ]
+}

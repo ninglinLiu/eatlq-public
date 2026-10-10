@@ -1,0 +1,178 @@
+{
+  "cases": [
+    {
+      "action": {
+        "action": 6,
+        "action_name": "SWAP_EXACT_IN_SINGLE",
+        "action_order": 0,
+        "actions_bytes_hex": "0x060c0f",
+        "ambiguity": null,
+        "amount_in": 404100,
+        "amount_out_minimum": 1925031670753541570711502,
+        "hook_data_hex": "0x",
+        "notes": [
+          "execute_embedded_in_wrapper",
+          "entrypoint_or_ur_path"
+        ],
+        "pool_key": {
+          "currency0": "0x36d6f486e789e511e145ed2899644e224d9b6b07",
+          "currency1": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+          "fee": 8388608,
+          "fee_mode": "DYNAMIC_FLAG",
+          "hooks": "0xd60d6b218116cfd801e28f78d011a203d2b068cc",
+          "tick_spacing": 200
+        },
+        "status": "MAPPED",
+        "to_address": "0x0000000071727de22e5e9d8baf0edac6f37da032",
+        "top_level_selector": "0x765e827f",
+        "zero_for_one": false
+      },
+      "expected_side": "BUY_TOKEN",
+      "observed_side": "BUY_TOKEN",
+      "old_incorrect_would_call_buy": false,
+      "synthetic_event": {
+        "amount0": 1925031670753541570711502,
+        "amount1": -404100,
+        "paired": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "token": "0x36d6f486e789e511e145ed2899644e224d9b6b07"
+      },
+      "transaction_hash": "0x1667deded06f602646ca13ca7aa1539d6f9982430a0488497d87fcb708aeb395"
+    },
+    {
+      "action": {
+        "action": 6,
+        "action_name": "SWAP_EXACT_IN_SINGLE",
+        "action_order": 0,
+        "actions_bytes_hex": "0x060c0f",
+        "ambiguity": null,
+        "amount_in": 815100,
+        "amount_out_minimum": 3880469151042948180824965,
+        "hook_data_hex": "0x",
+        "notes": [
+          "execute_embedded_in_wrapper",
+          "entrypoint_or_ur_path"
+        ],
+        "pool_key": {
+          "currency0": "0x36d6f486e789e511e145ed2899644e224d9b6b07",
+          "currency1": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+          "fee": 8388608,
+          "fee_mode": "DYNAMIC_FLAG",
+          "hooks": "0xd60d6b218116cfd801e28f78d011a203d2b068cc",
+          "tick_spacing": 200
+        },
+        "status": "MAPPED",
+        "to_address": "0x0000000071727de22e5e9d8baf0edac6f37da032",
+        "top_level_selector": "0x765e827f",
+        "zero_for_one": false
+      },
+      "expected_side": "BUY_TOKEN",
+      "observed_side": "BUY_TOKEN",
+      "old_incorrect_would_call_buy": false,
+      "synthetic_event": {
+        "amount0": 3880469151042948180824965,
+        "amount1": -815100,
+        "paired": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "token": "0x36d6f486e789e511e145ed2899644e224d9b6b07"
+      },
+      "transaction_hash": "0xdee930270990e0b8467426150cef37d4f7728c44cd29c91175a8bbea944318f9"
+    },
+    {
+      "action": {
+        "action": 6,
+        "action_name": "SWAP_EXACT_IN_SINGLE",
+        "action_order": 0,
+        "actions_bytes_hex": "0x060c0f",
+        "ambiguity": null,
+        "amount_in": 1479200,
+        "amount_out_minimum": 7022366957552776707889675,
+        "hook_data_hex": "0x",
+        "notes": [
+          "execute_embedded_in_wrapper",
+          "entrypoint_or_ur_path"
+        ],
+        "pool_key": {
+          "currency0": "0x36d6f486e789e511e145ed2899644e224d9b6b07",
+          "currency1": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+          "fee": 8388608,
+          "fee_mode": "DYNAMIC_FLAG",
+          "hooks": "0xd60d6b218116cfd801e28f78d011a203d2b068cc",
+          "tick_spacing": 200
+        },
+        "status": "MAPPED",
+        "to_address": "0x0000000071727de22e5e9d8baf0edac6f37da032",
+        "top_level_selector": "0x765e827f",
+        "zero_for_one": false
+      },
+      "expected_side": "BUY_TOKEN",
+      "observed_side": "BUY_TOKEN",
+      "old_incorrect_would_call_buy": false,
+      "synthetic_event": {
+        "amount0": 7022366957552776707889675,
+        "amount1": -1479200,
+        "paired": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "token": "0x36d6f486e789e511e145ed2899644e224d9b6b07"
+      },
+      "transaction_hash": "0x327f5f7435eef677572d16b3db9aab1fd68b07211577f1a6a50e9df47f864248"
+    },
+    {
+      "action": {
+        "action": null,
+        "action_name": "CUSTOM_EFFBEC13_SINGLE_HOP",
+        "action_order": 0,
+        "actions_bytes_hex": null,
+        "ambiguity": null,
+        "amount_in": 1000000000000000000,
+        "amount_out_minimum": 2641396673719898026607478114,
+        "hook_data_hex": null,
+        "notes": [
+          "effbec13_template_parse",
+          "hookData_not_fully_typed"
+        ],
+        "pool_key": {
+          "currency0": "0x4200000000000000000000000000000000000006",
+          "currency1": "0x7e84588b6997bbfddcd50beac0ca0f9582547b07",
+          "fee": 8388608,
+          "fee_mode": "DYNAMIC_FLAG",
+          "hooks": "0xb429d62f8f3bffb98cdb9569533ea23bf0ba28cc",
+          "path_order": [
+            "0x4200000000000000000000000000000000000006",
+            "0x7e84588b6997bbfddcd50beac0ca0f9582547b07"
+          ],
+          "tick_spacing": 200
+        },
+        "status": "MAPPED_CUSTOM_ROUTER",
+        "to_address": "0xd8ba9d1a99fc21f0eca24e9b85737c28a194a4e2",
+        "top_level_selector": "0xeffbec13",
+        "zero_for_one": true
+      },
+      "expected_status": "MAPPED_CUSTOM_ROUTER",
+      "kind": "custom_router_template",
+      "transaction_hash": "0x4a9bddac1670b2fe6f50b1d7abbf05ffeda871d30d806a4892755461a3b7b0f2"
+    },
+    {
+      "action": {
+        "action": null,
+        "action_name": null,
+        "action_order": null,
+        "actions_bytes_hex": null,
+        "ambiguity": "MULTICALL_WRAPPER",
+        "amount_in": null,
+        "amount_out_minimum": null,
+        "hook_data_hex": null,
+        "notes": [
+          "multicall_or_aggregator_not_fully_expanded"
+        ],
+        "pool_key": null,
+        "status": "AMBIGUOUS_MULTI_LEG",
+        "to_address": "0xca11bde05977b3631167028862be2a173976ca11",
+        "top_level_selector": "0x174dea71",
+        "zero_for_one": null
+      },
+      "expected_reject_status": "AMBIGUOUS_MULTI_LEG",
+      "kind": "reject_ambiguity",
+      "transaction_hash": "0xdcba363953a2b0c2cfa986d27ad1c0eda68068ee91506515c3e18623f3362a7a"
+    }
+  ],
+  "n": 5,
+  "rule": "fail_closed_on_old_sign_convention_and_multi_leg_ambiguity"
+}

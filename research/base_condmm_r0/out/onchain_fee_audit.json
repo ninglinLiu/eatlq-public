@@ -1,0 +1,4112 @@
+[
+ {
+  "pool": "0x035d6b8ac7fe438f8b3b52eac81e346377f7509f",
+  "venue": "aero_cl",
+  "symbol": "A0X",
+  "fee_field": 7500,
+  "fee_chain_now": 7500,
+  "ts_now": 200,
+  "fee_chain_early": 7500,
+  "ts_early": 200
+ },
+ {
+  "pool": "0xee43f28bf16abaa17d5874e57b3a8ffdc99ecbba",
+  "venue": "aero_cl",
+  "symbol": "AAA",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 50,
+  "fee_chain_early": 3000,
+  "ts_early": 50
+ },
+ {
+  "pool": "0x4a79b0168296c0ef7b8f314973b82ad406a29f1b",
+  "venue": "aero_cl",
+  "symbol": "AAVE",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": 3000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x4e506648d493c8870f55e870480f92f2f33ece51",
+  "venue": "aero_cl",
+  "symbol": "AERO",
+  "fee_field": 2025,
+  "fee_chain_now": 2250,
+  "ts_now": 200,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x82321f3beb69f503380d6b233857d5c43562e2d0",
+  "venue": "aero_cl",
+  "symbol": "AERO",
+  "fee_field": 3000,
+  "fee_chain_now": 3024,
+  "ts_now": 200,
+  "fee_chain_early": 3978,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x22a52bb644f855ebd5ca2edb643ff70222d70c31",
+  "venue": "aero_cl",
+  "symbol": "AIXBT",
+  "fee_field": 2600,
+  "fee_chain_now": 2600,
+  "ts_now": 200,
+  "fee_chain_early": 2600,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x4e6a3f08b1266cff9c52dbe5cc4e7ff48f8bb055",
+  "venue": "aero_cl",
+  "symbol": "ANY",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 100,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x206eeca35956c9a86780ddf515efd5fbd0bff722",
+  "venue": "aero_cl",
+  "symbol": "ARA",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 100,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0xbdb6f998176b2766befb2037033dfb3f8e368d52",
+  "venue": "aero_cl",
+  "symbol": "AUDD",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 100,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x1807af3897aa6419e770d4642df7b8b06e542c02",
+  "venue": "aero_cl",
+  "symbol": "Anon",
+  "fee_field": 8000,
+  "fee_chain_now": 8000,
+  "ts_now": 100,
+  "fee_chain_early": 8000,
+  "ts_early": 100
+ },
+ {
+  "pool": "0xb099c658e784b41ee435d48a8eb67e8f27285c93",
+  "venue": "aero_cl",
+  "symbol": "B3",
+  "fee_field": 3000,
+  "fee_chain_now": 3009,
+  "ts_now": 100,
+  "fee_chain_early": 3087,
+  "ts_early": 100
+ },
+ {
+  "pool": "0x1024c20c048ea6087293f46d4a1c042cb6705924",
+  "venue": "aero_cl",
+  "symbol": "BID",
+  "fee_field": 2700,
+  "fee_chain_now": 2700,
+  "ts_now": 200,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x222ccbe78890a4d9ef8d22d7fc1b968be0f2c653",
+  "venue": "aero_cl",
+  "symbol": "BIO",
+  "fee_field": 2500,
+  "fee_chain_now": 2500,
+  "ts_now": 100,
+  "fee_chain_early": 2500,
+  "ts_early": 100
+ },
+ {
+  "pool": "0xfd22d75b2fb405ee185155d57b0277b9db2f8e29",
+  "venue": "aero_cl",
+  "symbol": "BITCOIN",
+  "fee_field": 7000,
+  "fee_chain_now": 7000,
+  "ts_now": 200,
+  "fee_chain_early": 7000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0xcdd442e2de893c07146b2f1072f8e077559f9aa4",
+  "venue": "aero_cl",
+  "symbol": "BNKR",
+  "fee_field": 2711,
+  "fee_chain_now": 2621,
+  "ts_now": 200,
+  "fee_chain_early": 2666,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x4e829f8a5213c42535ab84aa40bd4adcce9cba02",
+  "venue": "aero_cl",
+  "symbol": "BRETT",
+  "fee_field": 2090,
+  "fee_chain_now": 2225,
+  "ts_now": 200,
+  "fee_chain_early": 2126,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x9aa26b650357bf9cc5439123bcd7e0c0200d90e6",
+  "venue": "aero_cl",
+  "symbol": "Base is for everyone",
+  "fee_field": 2700,
+  "fee_chain_now": 2700,
+  "ts_now": 100,
+  "fee_chain_early": 2700,
+  "ts_early": 100
+ },
+ {
+  "pool": "0x3debc1a83ede28e30baaa43f9fa110e052d4ccdd",
+  "venue": "aero_cl",
+  "symbol": "CADC",
+  "fee_field": 1500,
+  "fee_chain_now": 1500,
+  "ts_now": 100,
+  "fee_chain_early": 500,
+  "ts_early": 100
+ },
+ {
+  "pool": "0xd23fe2db317e1a96454a2d1c7e8fc0dbf19bb000",
+  "venue": "aero_cl",
+  "symbol": "CLANKER",
+  "fee_field": 2600,
+  "fee_chain_now": 2600,
+  "ts_now": 200,
+  "fee_chain_early": 2600,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x45df01efa0de71725d4d8fc1165b102bc2e989fb",
+  "venue": "aero_cl",
+  "symbol": "COMMON",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0xe8833415bd6aee9c0c7b6aad7dc80421c3f28ca1",
+  "venue": "aero_cl",
+  "symbol": "COOKIE",
+  "fee_field": 2700,
+  "fee_chain_now": 2700,
+  "ts_now": 200,
+  "fee_chain_early": null,
+  "ts_early": 200
+ },
+ {
+  "pool": "0xafb62448929664bfccb0aae22f232520e765ba88",
+  "venue": "aero_cl",
+  "symbol": "DEGEN",
+  "fee_field": 2400,
+  "fee_chain_now": 2400,
+  "ts_now": 200,
+  "fee_chain_early": 2442,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x385b47e56b73eb6549378f78f7c7cbc42c56c9e0",
+  "venue": "aero_cl",
+  "symbol": "DRB",
+  "fee_field": 2500,
+  "fee_chain_now": 2500,
+  "ts_now": 200,
+  "fee_chain_early": 2500,
+  "ts_early": 200
+ },
+ {
+  "pool": "0xa0e2bac96ab51c92d3284781aee1eec817f6f9c2",
+  "venue": "aero_cl",
+  "symbol": "DRV",
+  "fee_field": 8000,
+  "fee_chain_now": 8000,
+  "ts_now": 200,
+  "fee_chain_early": 8000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0xef7e596aef9e4c6301b4d1f1e88f8ffe8c306222",
+  "venue": "aero_cl",
+  "symbol": "DRV",
+  "fee_field": 8000,
+  "fee_chain_now": 8000,
+  "ts_now": 200,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x3c5428b3d6e07f6de38b0c7f84ea9d30b3b27231",
+  "venue": "aero_cl",
+  "symbol": "EIGEN",
+  "fee_field": 2500,
+  "fee_chain_now": 2500,
+  "ts_now": 200,
+  "fee_chain_early": 2500,
+  "ts_early": 200
+ },
+ {
+  "pool": "0xc422bfb18f9fc217f955d759d3753f31137ccefd",
+  "venue": "aero_cl",
+  "symbol": "ENA",
+  "fee_field": 2500,
+  "fee_chain_now": 2500,
+  "ts_now": 200,
+  "fee_chain_early": 2500,
+  "ts_early": 200
+ },
+ {
+  "pool": "0xfefe4e80f2d747a484154f7ae18b20d478e49d40",
+  "venue": "aero_cl",
+  "symbol": "ETHFI",
+  "fee_field": 2700,
+  "fee_chain_now": 2700,
+  "ts_now": 200,
+  "fee_chain_early": 2700,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x5d4e504eb4c526995e0cc7a6e327fda75d8b52b5",
+  "venue": "aero_cl",
+  "symbol": "EURC",
+  "fee_field": 150,
+  "fee_chain_now": 150,
+  "ts_now": 100,
+  "fee_chain_early": 530,
+  "ts_early": 100
+ },
+ {
+  "pool": "0xaa5fe7dcc07dcb8b7afcd1b93874e7cb1e0ab50b",
+  "venue": "aero_cl",
+  "symbol": "EURC",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 100,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x5a1401c002f67ca00557e7179d34c3fe6d753b28",
+  "venue": "aero_cl",
+  "symbol": "EXTRA",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": 3000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x28a9ec9928a689410e82e579fd9418fbbf6452f3",
+  "venue": "aero_cl",
+  "symbol": "FAI",
+  "fee_field": 5000,
+  "fee_chain_now": 5000,
+  "ts_now": 200,
+  "fee_chain_early": 5000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x2a36148a416cba81699b555120bd65f4682bdfd2",
+  "venue": "aero_cl",
+  "symbol": "GAME",
+  "fee_field": 7000,
+  "fee_chain_now": 7000,
+  "ts_now": 200,
+  "fee_chain_early": 7000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x3c589883d42d5d45b50b9fff4f07d990a1242a3f",
+  "venue": "aero_cl",
+  "symbol": "GIZA",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": 3000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0xb62db7f4846f460f4ebf8463ee78b4dc1bc69c1e",
+  "venue": "aero_cl",
+  "symbol": "HEIST",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": 3000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x7c42dd1556754be827e187ce0870e70c5e571f35",
+  "venue": "aero_cl",
+  "symbol": "HEU",
+  "fee_field": 7000,
+  "fee_chain_now": 7000,
+  "ts_now": 200,
+  "fee_chain_early": 7000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x098a4de96305bafaea0c0ce07cf6456e2c64982a",
+  "venue": "aero_cl",
+  "symbol": "HOME",
+  "fee_field": 2700,
+  "fee_chain_now": 2700,
+  "ts_now": 200,
+  "fee_chain_early": 2700,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x9e48d016ee76cf53e2de8dc8058c7549c8c202df",
+  "venue": "aero_cl",
+  "symbol": "HYPE",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 50,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x29af315b3bd7566005f14d81c582b59e1c632ffd",
+  "venue": "aero_cl",
+  "symbol": "HYPER",
+  "fee_field": 2700,
+  "fee_chain_now": 2700,
+  "ts_now": 200,
+  "fee_chain_early": 2700,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x7bf0a9e81b51331dbfe96997e09e5d1c717e2fa6",
+  "venue": "aero_cl",
+  "symbol": "ICP",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 100,
+  "fee_chain_early": 500,
+  "ts_early": 100
+ },
+ {
+  "pool": "0xbe762d548f8ca86a78e9da6e3ddc87f91457e398",
+  "venue": "aero_cl",
+  "symbol": "ICP",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 50,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x30e8b965852ffb425aac5b265dd985ab43123c3d",
+  "venue": "aero_cl",
+  "symbol": "JKL",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": 3000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x56b92e5b391dbfb8b8028ac95a4b97f52ffeb416",
+  "venue": "aero_cl",
+  "symbol": "KAITO",
+  "fee_field": 2500,
+  "fee_chain_now": 2611,
+  "ts_now": 100,
+  "fee_chain_early": 2641,
+  "ts_early": 100
+ },
+ {
+  "pool": "0xb211a9ddff3a10806c8fdb92dbc4c34596a23f84",
+  "venue": "aero_cl",
+  "symbol": "KEYCAT",
+  "fee_field": 2500,
+  "fee_chain_now": 2500,
+  "ts_now": 200,
+  "fee_chain_early": 2500,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x46d710c35bdfb800a18a820712310048ef8b5256",
+  "venue": "aero_cl",
+  "symbol": "KTA",
+  "fee_field": 2500,
+  "fee_chain_now": 2536,
+  "ts_now": 200,
+  "fee_chain_early": 2552,
+  "ts_early": 200
+ },
+ {
+  "pool": "0xeda5c8f08e92e6983ae29ab2d5dc244342bf70c8",
+  "venue": "aero_cl",
+  "symbol": "LAY",
+  "fee_field": 7000,
+  "fee_chain_now": 7000,
+  "ts_now": 200,
+  "fee_chain_early": 7000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x3a88ef38879efb900c2d7b6199d21c139cef5fa7",
+  "venue": "aero_cl",
+  "symbol": "LCAP",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": 3000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x72be417afb0abea66913141c605d313bb389b59c",
+  "venue": "aero_cl",
+  "symbol": "LINK",
+  "fee_field": 2500,
+  "fee_chain_now": 2500,
+  "ts_now": 100,
+  "fee_chain_early": 2500,
+  "ts_early": 100
+ },
+ {
+  "pool": "0x4ba79157c6e7ab14bce06a869af2d14c51c8e269",
+  "venue": "aero_cl",
+  "symbol": "LINKS",
+  "fee_field": 9000,
+  "fee_chain_now": 9000,
+  "ts_now": 100,
+  "fee_chain_early": 9000,
+  "ts_early": 100
+ },
+ {
+  "pool": "0xcd1f9777571493aeacb7eae45cd30a226d3e612d",
+  "venue": "aero_cl",
+  "symbol": "LITKEY",
+  "fee_field": 9500,
+  "fee_chain_now": 9500,
+  "ts_now": 200,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x162ee97a4b9d27c7dda2e806539a7cd82757cee8",
+  "venue": "aero_cl",
+  "symbol": "LL",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x275be3a43b66516e532bcaa36ee453edd47614ea",
+  "venue": "aero_cl",
+  "symbol": "LSK",
+  "fee_field": 2700,
+  "fee_chain_now": 2700,
+  "ts_now": 200,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x52dfbc3faab689a929b44a3ead4320fe1ca6be59",
+  "venue": "aero_cl",
+  "symbol": "LUMPY",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": 3000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0xb6b777577a05d85ffca7d9ebc7476fb344b92445",
+  "venue": "aero_cl",
+  "symbol": "LUNA",
+  "fee_field": 7000,
+  "fee_chain_now": 7000,
+  "ts_now": 200,
+  "fee_chain_early": 7000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x04f8375dad560480d6639b9600cd88ca594e2293",
+  "venue": "aero_cl",
+  "symbol": "LsETH",
+  "fee_field": 100,
+  "fee_chain_now": 100,
+  "ts_now": 1,
+  "fee_chain_early": 100,
+  "ts_early": 1
+ },
+ {
+  "pool": "0xaa067f08fef60420d050a92e7800e588748b7d67",
+  "venue": "aero_cl",
+  "symbol": "MAMO",
+  "fee_field": 2500,
+  "fee_chain_now": 2500,
+  "ts_now": 200,
+  "fee_chain_early": 2500,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x531a13a588c4188fdae818d56cb91ecc4f6bdeaf",
+  "venue": "aero_cl",
+  "symbol": "MEM",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0xa3116c935b8fe346a8f42d7efc4c6e7a52947e48",
+  "venue": "aero_cl",
+  "symbol": "MEY",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x326841efd63340767e02ec88e583f18a82af4a48",
+  "venue": "aero_cl",
+  "symbol": "MIGGLES",
+  "fee_field": 2500,
+  "fee_chain_now": 2500,
+  "ts_now": 200,
+  "fee_chain_early": 2500,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x85fb468a5e65a537c5ac767776599708a3d41046",
+  "venue": "aero_cl",
+  "symbol": "MOLT",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0xb5f0b4ae66c14f7efaa9aa1468e8fc536a3e288c",
+  "venue": "aero_cl",
+  "symbol": "MORPHO",
+  "fee_field": 2700,
+  "fee_chain_now": 2733,
+  "ts_now": 200,
+  "fee_chain_early": 2730,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x8a80bc9528564c75c50e227a7213c3136b1de7e5",
+  "venue": "aero_cl",
+  "symbol": "MXNe",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": 3000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0xc29dc26b28fff463e32834ce6325b5c74fac7098",
+  "venue": "aero_cl",
+  "symbol": "Mog",
+  "fee_field": 2600,
+  "fee_chain_now": 2600,
+  "ts_now": 200,
+  "fee_chain_early": 2600,
+  "ts_early": 200
+ },
+ {
+  "pool": "0xe8898c5653f5843f4979c8e11f575c3ec1d48fc0",
+  "venue": "aero_cl",
+  "symbol": "NATION",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": 3000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x27bd426ec343845995c527d634c4e07f0608aacd",
+  "venue": "aero_cl",
+  "symbol": "ORDER",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": 3000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x016df91005f30039c9f1a89b44db5e8c60613603",
+  "venue": "aero_cl",
+  "symbol": "PENDLE",
+  "fee_field": 1500,
+  "fee_chain_now": 1500,
+  "ts_now": 100,
+  "fee_chain_early": 1500,
+  "ts_early": 100
+ },
+ {
+  "pool": "0x3333e1d9174720d6ec2cf815e65b82915a9eae1e",
+  "venue": "aero_cl",
+  "symbol": "PEPE",
+  "fee_field": 7000,
+  "fee_chain_now": 7000,
+  "ts_now": 200,
+  "fee_chain_early": 7000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0xac858b9d917442411a5c9fc1d02ce05ba96eae5c",
+  "venue": "aero_cl",
+  "symbol": "PHI",
+  "fee_field": 9000,
+  "fee_chain_now": 9000,
+  "ts_now": 200,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x5d28f920c9d23100e4a38b2ba2d8ae617c3b2615",
+  "venue": "aero_cl",
+  "symbol": "PING",
+  "fee_field": 4500,
+  "fee_chain_now": 4500,
+  "ts_now": 100,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x76cc74d094ecee7d99ea65445e46b01983e633a8",
+  "venue": "aero_cl",
+  "symbol": "PLAI",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x32bb4ad5fed77f7abf97d1435f8d6aaae59aa64e",
+  "venue": "aero_cl",
+  "symbol": "POKT",
+  "fee_field": 2000,
+  "fee_chain_now": 2000,
+  "ts_now": 200,
+  "fee_chain_early": 3000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x0c86a9584175ad79252316d46fb127002ee9b3c6",
+  "venue": "aero_cl",
+  "symbol": "PREDI",
+  "fee_field": 2700,
+  "fee_chain_now": 2700,
+  "ts_now": 200,
+  "fee_chain_early": 3000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x87cd18069b6547a0e88b6155dd657e71779500ea",
+  "venue": "aero_cl",
+  "symbol": "PRIME",
+  "fee_field": 2500,
+  "fee_chain_now": 2500,
+  "ts_now": 200,
+  "fee_chain_early": 2500,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x23e5dcf87407870ff71b972cf6d785e82cdcf3d0",
+  "venue": "aero_cl",
+  "symbol": "PRO",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x697e8f87014ae96e553eccec048b25640d90f542",
+  "venue": "aero_cl",
+  "symbol": "PRXS",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x2092f4acbb18bb1649595df59b9cb601bba1ebb7",
+  "venue": "aero_cl",
+  "symbol": "RDNT",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": 3000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x6ee714d6d8df7662bca805f58cc1d5a8886d78eb",
+  "venue": "aero_cl",
+  "symbol": "RECALL",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x80866012a372c686a3b71a2ab05d004e29b36e1b",
+  "venue": "aero_cl",
+  "symbol": "RED",
+  "fee_field": 8000,
+  "fee_chain_now": 8000,
+  "ts_now": 200,
+  "fee_chain_early": 8000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x0040559f59e2391ec57162826df354b1bbb05c12",
+  "venue": "aero_cl",
+  "symbol": "RED",
+  "fee_field": 8000,
+  "fee_chain_now": 8000,
+  "ts_now": 200,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x54cdd0222df6b3bc17754c2c1b3d7d4203fe3d89",
+  "venue": "aero_cl",
+  "symbol": "REI",
+  "fee_field": 2600,
+  "fee_chain_now": 2600,
+  "ts_now": 200,
+  "fee_chain_early": 2600,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x6b67e830a098ccce0fd7d3297aaf4c1f6be38fcc",
+  "venue": "aero_cl",
+  "symbol": "REKT",
+  "fee_field": 100,
+  "fee_chain_now": 100,
+  "ts_now": 1,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x71fe33676773df7cf9ce14f640cae06823f083cc",
+  "venue": "aero_cl",
+  "symbol": "REPPO",
+  "fee_field": 9500,
+  "fee_chain_now": 9500,
+  "ts_now": 200,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x298d4edbda0e3a4d00104f740b5d5bf766990fda",
+  "venue": "aero_cl",
+  "symbol": "RIO",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x6cda37ddb9e099bb49495a9ca7df9cd445a6965f",
+  "venue": "aero_cl",
+  "symbol": "RSC",
+  "fee_field": 7500,
+  "fee_chain_now": 7500,
+  "ts_now": 50,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x6cca90e732942d73c276f73b805ca2948f6b3018",
+  "venue": "aero_cl",
+  "symbol": "RSC",
+  "fee_field": 7500,
+  "fee_chain_now": 7500,
+  "ts_now": 200,
+  "fee_chain_early": 7500,
+  "ts_early": 200
+ },
+ {
+  "pool": "0xc36eaa38e17b0270a374969dd301af981f50b2b2",
+  "venue": "aero_cl",
+  "symbol": "RSR",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0xa69cdf524d072c366fd050957880552916d29405",
+  "venue": "aero_cl",
+  "symbol": "SAND",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 100,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x681d6e4b0b020656ca04956ddaf76add7ef022f6",
+  "venue": "aero_cl",
+  "symbol": "SEDA",
+  "fee_field": 3500,
+  "fee_chain_now": 3500,
+  "ts_now": 200,
+  "fee_chain_early": 3000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x8a7b72f8ff5299e493317d4430293894107af859",
+  "venue": "aero_cl",
+  "symbol": "SIGN",
+  "fee_field": 2700,
+  "fee_chain_now": 2700,
+  "ts_now": 200,
+  "fee_chain_early": 2700,
+  "ts_early": 200
+ },
+ {
+  "pool": "0xe782b72a1157b7bea1a9452835cce214962ad43b",
+  "venue": "aero_cl",
+  "symbol": "SKI",
+  "fee_field": 2600,
+  "fee_chain_now": 2600,
+  "ts_now": 200,
+  "fee_chain_early": 2600,
+  "ts_early": 200
+ },
+ {
+  "pool": "0xc75a16d7e685eae65ba0ab6cf596f73f6edf170d",
+  "venue": "aero_cl",
+  "symbol": "SOON",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 10,
+  "fee_chain_early": 500,
+  "ts_early": 10
+ },
+ {
+  "pool": "0x9df071e11b60765f9bd083d3095f2e29c3ff10c0",
+  "venue": "aero_cl",
+  "symbol": "SOSO",
+  "fee_field": 100,
+  "fee_chain_now": 100,
+  "ts_now": 1,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x4ba1e3e9280facbacafa7baf4ae0b78bea60beca",
+  "venue": "aero_cl",
+  "symbol": "SPX",
+  "fee_field": 2500,
+  "fee_chain_now": 2500,
+  "ts_now": 200,
+  "fee_chain_early": 2500,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x1c6511ef0ec38b5b91208d1a21ef9f9d1aa532b3",
+  "venue": "aero_cl",
+  "symbol": "SUPR",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": 3000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x50f8f7ffbd70c6c87b1668eee4e03f5ac057de3f",
+  "venue": "aero_cl",
+  "symbol": "SYND",
+  "fee_field": 9500,
+  "fee_chain_now": 9500,
+  "ts_now": 200,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x7432aab631b801a10bef7d70c1507a32755595fa",
+  "venue": "aero_cl",
+  "symbol": "SYRUP",
+  "fee_field": 2700,
+  "fee_chain_now": 2700,
+  "ts_now": 100,
+  "fee_chain_early": 2700,
+  "ts_early": 100
+ },
+ {
+  "pool": "0x346edb1aaa704df6ddbfc604724aafcdc12b2fed",
+  "venue": "aero_cl",
+  "symbol": "TALENT",
+  "fee_field": 7000,
+  "fee_chain_now": 7000,
+  "ts_now": 200,
+  "fee_chain_early": 7000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x0e4409f7a8eba3213f336daf608985302e79328c",
+  "venue": "aero_cl",
+  "symbol": "TIBBIR",
+  "fee_field": 2500,
+  "fee_chain_now": 2500,
+  "ts_now": 200,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x0f664affb82f074937d5cfcd61b97f3f32d5dc50",
+  "venue": "aero_cl",
+  "symbol": "TIBBIR",
+  "fee_field": 2500,
+  "fee_chain_now": 2500,
+  "ts_now": 200,
+  "fee_chain_early": 2500,
+  "ts_early": 200
+ },
+ {
+  "pool": "0xb4cfcd4a4bc44bbc33fc0928d932e9062be2d056",
+  "venue": "aero_cl",
+  "symbol": "TIG",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x74e4c08bb50619b70550733d32b7e60424e9628e",
+  "venue": "aero_cl",
+  "symbol": "TOSHI",
+  "fee_field": 2418,
+  "fee_chain_now": 2406,
+  "ts_now": 200,
+  "fee_chain_early": 2430,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x48be08d21fccf3f793783c23c33555f5e0c2b7cd",
+  "venue": "aero_cl",
+  "symbol": "TOWNS",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 100,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0xb98185d088c7f3b035cf1384eb9eff4312bf734d",
+  "venue": "aero_cl",
+  "symbol": "TOWNS",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": 3000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x0d542e56cf8e678e1dba53d13b0a1ec4d07bc7db",
+  "venue": "aero_cl",
+  "symbol": "TRAC",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x4d69971ccd4a636c403a3c1b00c85e99bb9b5606",
+  "venue": "aero_cl",
+  "symbol": "USD+",
+  "fee_field": 400,
+  "fee_chain_now": 400,
+  "ts_now": 100,
+  "fee_chain_early": 400,
+  "ts_early": 100
+ },
+ {
+  "pool": "0x0652202c4b2d09cb93aedefadc14b36869483a98",
+  "venue": "aero_cl",
+  "symbol": "USDC",
+  "fee_field": 472,
+  "fee_chain_now": 514,
+  "ts_now": 2000,
+  "fee_chain_early": 10000,
+  "ts_early": 2000
+ },
+ {
+  "pool": "0xb2cc224c1c9fee385f8ad6a55b4d94e92359dc59",
+  "venue": "aero_cl",
+  "symbol": "USDC",
+  "fee_field": 364,
+  "fee_chain_now": 364,
+  "ts_now": 100,
+  "fee_chain_early": 431,
+  "ts_early": 100
+ },
+ {
+  "pool": "0xdbc6998296caa1652a810dc8d3baf4a8294330f1",
+  "venue": "aero_cl",
+  "symbol": "USDC",
+  "fee_field": 80,
+  "fee_chain_now": 80,
+  "ts_now": 1,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x4e392fbfe4d0557c82d2f97f02ec39daa31516dd",
+  "venue": "aero_cl",
+  "symbol": "USDC",
+  "fee_field": 80,
+  "fee_chain_now": 80,
+  "ts_now": 1,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x3fe04a59ebd38cf06080a6f60a98d124eb59392a",
+  "venue": "aero_cl",
+  "symbol": "USDC",
+  "fee_field": 398,
+  "fee_chain_now": 464,
+  "ts_now": 50,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0xc758d81b9b81a6fcdad075bd471874a2c46b54e0",
+  "venue": "aero_cl",
+  "symbol": "USDC",
+  "fee_field": 175,
+  "fee_chain_now": 175,
+  "ts_now": 50,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0xb150768cf55d1625e2337a08fbd1b0f02ff94bdb",
+  "venue": "aero_cl",
+  "symbol": "USDC",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 10,
+  "fee_chain_early": 500,
+  "ts_early": 10
+ },
+ {
+  "pool": "0x98637c29abc801001c63fb0e3b94f27a65b610ac",
+  "venue": "aero_cl",
+  "symbol": "USDL",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 10,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x4289a0666397f517c2a761652aaebaf6a4f7a693",
+  "venue": "aero_cl",
+  "symbol": "USDS",
+  "fee_field": 400,
+  "fee_chain_now": 400,
+  "ts_now": 100,
+  "fee_chain_early": 400,
+  "ts_early": 100
+ },
+ {
+  "pool": "0x9785ef59e2b499fb741674ecf6faf912df7b3c1b",
+  "venue": "aero_cl",
+  "symbol": "USDT",
+  "fee_field": 415,
+  "fee_chain_now": 418,
+  "ts_now": 100,
+  "fee_chain_early": 439,
+  "ts_early": 100
+ },
+ {
+  "pool": "0xcf88b8bf7ccce2d836878e538197eb20fc673bce",
+  "venue": "aero_cl",
+  "symbol": "USDz",
+  "fee_field": 400,
+  "fee_chain_now": 400,
+  "ts_now": 100,
+  "fee_chain_early": 400,
+  "ts_early": 100
+ },
+ {
+  "pool": "0x89ab78d42ba0d381fe3c02666abb4276e21e5a13",
+  "venue": "aero_cl",
+  "symbol": "VCHF",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 100,
+  "fee_chain_early": 500,
+  "ts_early": 100
+ },
+ {
+  "pool": "0xf579b16f9b1a4acc872d34a8141fbbd36c0ce10c",
+  "venue": "aero_cl",
+  "symbol": "VELVET",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0xd6980a81142673a39d9a76f70b4a1f81144eb365",
+  "venue": "aero_cl",
+  "symbol": "VEUR",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 100,
+  "fee_chain_early": 500,
+  "ts_early": 100
+ },
+ {
+  "pool": "0xf935fa2e4ae1593953263f4c1674ea21dae64169",
+  "venue": "aero_cl",
+  "symbol": "VGBP",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 100,
+  "fee_chain_early": 500,
+  "ts_early": 100
+ },
+ {
+  "pool": "0xc200f21efe67c7f41b81a854c26f9cda80593065",
+  "venue": "aero_cl",
+  "symbol": "VIRTUAL",
+  "fee_field": 600,
+  "fee_chain_now": 600,
+  "ts_now": 200,
+  "fee_chain_early": 600,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x9520e1a3bfd86da6c1e9e5ee4b9c2f11c413358f",
+  "venue": "aero_cl",
+  "symbol": "VIRTUAL",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 50,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x3f0296bf652e19bca772ec3df08b32732f93014a",
+  "venue": "aero_cl",
+  "symbol": "VIRTUAL",
+  "fee_field": 100,
+  "fee_chain_now": 500,
+  "ts_now": 100,
+  "fee_chain_early": 457,
+  "ts_early": 100
+ },
+ {
+  "pool": "0xa135b59fe221c0c8d441294f97f96fbc37bc9fbe",
+  "venue": "aero_cl",
+  "symbol": "VVV",
+  "fee_field": 2700,
+  "fee_chain_now": 2760,
+  "ts_now": 100,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x7ec6c9d993d9832aa654593f2dbc21303650bc6c",
+  "venue": "aero_cl",
+  "symbol": "VVV",
+  "fee_field": 2700,
+  "fee_chain_now": 2787,
+  "ts_now": 100,
+  "fee_chain_early": 3000,
+  "ts_early": 100
+ },
+ {
+  "pool": "0x46d398a5b33709877f50c8918a7ee96f1be1d7dd",
+  "venue": "aero_cl",
+  "symbol": "VVV",
+  "fee_field": 8000,
+  "fee_chain_now": 8000,
+  "ts_now": 200,
+  "fee_chain_early": 8000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0xf1eef36d55978edfd427e95c3d0c9b9359ef0aef",
+  "venue": "aero_cl",
+  "symbol": "W",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": 3000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x92d1107062d5914e5683c978229cfbb4d56cb734",
+  "venue": "aero_cl",
+  "symbol": "WBTC",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 100,
+  "fee_chain_early": 500,
+  "ts_early": 100
+ },
+ {
+  "pool": "0xebd2eeab20cefa41c94343f506ac506bfc3f681e",
+  "venue": "aero_cl",
+  "symbol": "WCT",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 100,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x3ba9ce0f19cf3ccb631b973c83712c7e6e9585ae",
+  "venue": "aero_cl",
+  "symbol": "WELL",
+  "fee_field": 9000,
+  "fee_chain_now": 9000,
+  "ts_now": 200,
+  "fee_chain_early": 9000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x2229b66a40ece21d0b5d4e061cb35bc44cd623b5",
+  "venue": "aero_cl",
+  "symbol": "WFRAX",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": 3000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0xad06a870fc2198398c18a6f2ca035bf795edeefe",
+  "venue": "aero_cl",
+  "symbol": "WOO",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": 3000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x7073d6ec6a3caecff085854730a62b83ccd79b57",
+  "venue": "aero_cl",
+  "symbol": "XCCX",
+  "fee_field": 100,
+  "fee_chain_now": 100,
+  "ts_now": 1,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0xfebeebaa6c9585fd97aa9157e3b7aace804b688c",
+  "venue": "aero_cl",
+  "symbol": "XSGD",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 100,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0xdc9279ce30a5044bbc345bf50030d44f45f0e768",
+  "venue": "aero_cl",
+  "symbol": "YGG",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": 3000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x0392b12a1ceb0cd13af5ea448cf5586ea609852d",
+  "venue": "aero_cl",
+  "symbol": "ZEN",
+  "fee_field": 1500,
+  "fee_chain_now": 1500,
+  "ts_now": 100,
+  "fee_chain_early": 1500,
+  "ts_early": 100
+ },
+ {
+  "pool": "0xef32a6e5b1d363ded63e35af03fc53a637926de0",
+  "venue": "aero_cl",
+  "symbol": "ZFI",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": 3000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0xadb8fb846dbd3bd6a23335cee65bb610c1cf0ea3",
+  "venue": "aero_cl",
+  "symbol": "ZORA",
+  "fee_field": 2500,
+  "fee_chain_now": 2500,
+  "ts_now": 100,
+  "fee_chain_early": 2500,
+  "ts_early": 100
+ },
+ {
+  "pool": "0xa4463789e8f3c6a599b3dfb608dde55513bcf289",
+  "venue": "aero_cl",
+  "symbol": "ZRO",
+  "fee_field": 1500,
+  "fee_chain_now": 1500,
+  "ts_now": 100,
+  "fee_chain_early": 1500,
+  "ts_early": 100
+ },
+ {
+  "pool": "0x717e174d5dae280802d1a2c15c1c0976561a3f61",
+  "venue": "aero_cl",
+  "symbol": "ZRO",
+  "fee_field": 1500,
+  "fee_chain_now": 1500,
+  "ts_now": 100,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x7631e2b08317f227bb2916ed0e9d69c64d73bdcd",
+  "venue": "aero_cl",
+  "symbol": "bAP3X",
+  "fee_field": 2000,
+  "fee_chain_now": 2000,
+  "ts_now": 100,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x2ae9df02539887d4ebce0230168a302d34784c82",
+  "venue": "aero_cl",
+  "symbol": "bsdETH",
+  "fee_field": 100,
+  "fee_chain_now": 100,
+  "ts_now": 1,
+  "fee_chain_early": 100,
+  "ts_early": 1
+ },
+ {
+  "pool": "0xb862f23ba38c8c65e256782b31e8c08c9aefd612",
+  "venue": "aero_cl",
+  "symbol": "cbADA",
+  "fee_field": 2500,
+  "fee_chain_now": 2500,
+  "ts_now": 200,
+  "fee_chain_early": 2500,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x22aee3699b6a0fed71490c103bd4e5f3309891d5",
+  "venue": "aero_cl",
+  "symbol": "cbBTC",
+  "fee_field": 85,
+  "fee_chain_now": 85,
+  "ts_now": 1,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x42d4a22cad0f5a49681a5715ce994af73a43b76b",
+  "venue": "aero_cl",
+  "symbol": "cbBTC",
+  "fee_field": 175,
+  "fee_chain_now": 125,
+  "ts_now": 10,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x70acdf2ad0bf2402c957154f944c19ef4e1cbae1",
+  "venue": "aero_cl",
+  "symbol": "cbBTC",
+  "fee_field": 2500,
+  "fee_chain_now": 2500,
+  "ts_now": 100,
+  "fee_chain_early": 461,
+  "ts_early": 100
+ },
+ {
+  "pool": "0x7c7420dd105e2779316423ba3e973f434315efa9",
+  "venue": "aero_cl",
+  "symbol": "cbBTC",
+  "fee_field": 85,
+  "fee_chain_now": 85,
+  "ts_now": 1,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x47ca96ea59c13f72745928887f84c9f52c3d7348",
+  "venue": "aero_cl",
+  "symbol": "cbETH",
+  "fee_field": 65,
+  "fee_chain_now": 65,
+  "ts_now": 1,
+  "fee_chain_early": 100,
+  "ts_early": 1
+ },
+ {
+  "pool": "0x200681425b0c8d78c6a467512c5d49fa56bac88a",
+  "venue": "aero_cl",
+  "symbol": "cbLTC",
+  "fee_field": 2500,
+  "fee_chain_now": 2500,
+  "ts_now": 200,
+  "fee_chain_early": 2500,
+  "ts_early": 200
+ },
+ {
+  "pool": "0xb90fe999be6869af0afc557dccfbe169ea3403d6",
+  "venue": "aero_cl",
+  "symbol": "cbXRP",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 100,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0xa6da283cf7d06b2279626e787c329d6acf7e2994",
+  "venue": "aero_cl",
+  "symbol": "cbXRP",
+  "fee_field": 2500,
+  "fee_chain_now": 2500,
+  "ts_now": 2000,
+  "fee_chain_early": 10000,
+  "ts_early": 2000
+ },
+ {
+  "pool": "0x088c39ee29fc30df8adc394e9f7dea33e3a26507",
+  "venue": "aero_cl",
+  "symbol": "doginme",
+  "fee_field": 2500,
+  "fee_chain_now": 2500,
+  "ts_now": 200,
+  "fee_chain_early": 2500,
+  "ts_early": 200
+ },
+ {
+  "pool": "0xdc7ead706795eda3feda08ad519d9452badf2c0d",
+  "venue": "aero_cl",
+  "symbol": "ezETH",
+  "fee_field": 400,
+  "fee_chain_now": 400,
+  "ts_now": 1,
+  "fee_chain_early": 3000,
+  "ts_early": 1
+ },
+ {
+  "pool": "0x4e40ff3be6bda5b131c91520fa73515076eee098",
+  "venue": "aero_cl",
+  "symbol": "jesse",
+  "fee_field": 2500,
+  "fee_chain_now": 2500,
+  "ts_now": 100,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x74f72788f4814d7ff3c49b44684aa98eee140c0e",
+  "venue": "aero_cl",
+  "symbol": "msETH",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 50,
+  "fee_chain_early": 500,
+  "ts_early": 50
+ },
+ {
+  "pool": "0x9ea86aa9f7203da077371bb2f82ec555e6e22f81",
+  "venue": "aero_cl",
+  "symbol": "noice",
+  "fee_field": 2700,
+  "fee_chain_now": 2700,
+  "ts_now": 200,
+  "fee_chain_early": 2700,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x93617b2909a7c207e4180de0e667ea80c9bdfe9e",
+  "venue": "aero_cl",
+  "symbol": "oUSDT",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 100,
+  "fee_chain_early": 500,
+  "ts_early": 100
+ },
+ {
+  "pool": "0x266f421f80016d670c9de757d561a5c4a6a9ffac",
+  "venue": "aero_cl",
+  "symbol": "stTAO",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": 3000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x6446021f4e396da3df4235c62537431372195d38",
+  "venue": "aero_cl",
+  "symbol": "superOETHb",
+  "fee_field": 400,
+  "fee_chain_now": 400,
+  "ts_now": 1,
+  "fee_chain_early": 400,
+  "ts_early": 1
+ },
+ {
+  "pool": "0xa33f162da19c7273ba1205bfd9d4340da2446e3a",
+  "venue": "aero_cl",
+  "symbol": "tBTC",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": 3000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0xb79c8a96d89f5cca7b907d3d1229b61373c3d439",
+  "venue": "aero_cl",
+  "symbol": "uADA",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": 3000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0xa88c07bd10813cf9b4111deab984c4026f2c83bf",
+  "venue": "aero_cl",
+  "symbol": "uAPT",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": 3000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0xbe700f5c75dfcbef3cae37873aeeb1724daed3f6",
+  "venue": "aero_cl",
+  "symbol": "uDOGE",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": 3000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x006b41c8b19e73324808ece954dddff978c9c8f3",
+  "venue": "aero_cl",
+  "symbol": "uHBAR",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": 3000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0xfd4f716cb3c493afddd40c67d3f42426aeb2d902",
+  "venue": "aero_cl",
+  "symbol": "uLINK",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 100,
+  "fee_chain_early": 3000,
+  "ts_early": 100
+ },
+ {
+  "pool": "0x864cc817099761c7b7f8228822f2bde0b74a6588",
+  "venue": "aero_cl",
+  "symbol": "uNEAR",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": 3000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x777820ca027bdee7d12cae14355da487328ae8d2",
+  "venue": "aero_cl",
+  "symbol": "uPUMP",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x859c91f9fe1ec10e38a7ccad0b87f0aae0b88cfe",
+  "venue": "aero_cl",
+  "symbol": "uSEI",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": 3000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x0225ba893d5f8ecd6d2022f9dec59b34f61098a1",
+  "venue": "aero_cl",
+  "symbol": "uSOL",
+  "fee_field": 1500,
+  "fee_chain_now": 1500,
+  "ts_now": 200,
+  "fee_chain_early": 1500,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x5c45b0f48c326f79b56709d8f63ce2bee7697106",
+  "venue": "aero_cl",
+  "symbol": "uSUI",
+  "fee_field": 1500,
+  "fee_chain_now": 1500,
+  "ts_now": 200,
+  "fee_chain_early": 1500,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x61c6e9e93592e535efc1bee07f491a517e98f6d0",
+  "venue": "aero_cl",
+  "symbol": "uXRP",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": 3000,
+  "ts_early": 200
+ },
+ {
+  "pool": "0x3054f64e28140ee00428be94eac4ad6f7241712a",
+  "venue": "aero_cl",
+  "symbol": "uZEC",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0xbd3cd0d9d429b41f0a2e1c026552bd598294d5e0",
+  "venue": "aero_cl",
+  "symbol": "weETH",
+  "fee_field": 85,
+  "fee_chain_now": 85,
+  "ts_now": 1,
+  "fee_chain_early": 500,
+  "ts_early": 1
+ },
+ {
+  "pool": "0x861a2922be165a5bd41b1e482b49216b465e1b5f",
+  "venue": "aero_cl",
+  "symbol": "wstETH",
+  "fee_field": 90,
+  "fee_chain_now": 90,
+  "ts_now": 1,
+  "fee_chain_early": 100,
+  "ts_early": 1
+ },
+ {
+  "pool": "0xcdf927c0f7b81b146c0c9e9323eb5a28d1bfa183",
+  "venue": "aero_cl",
+  "symbol": "xPufETH",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 50,
+  "fee_chain_early": 500,
+  "ts_early": 50
+ },
+ {
+  "pool": "0x48539a830b1f00a765180027aee28a2d046f024b",
+  "venue": "univ3",
+  "symbol": "$ARTU",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x2e2d61a35fb485f8b95ea06e67bc3a36e9d821ed",
+  "venue": "univ3",
+  "symbol": "$PAAL",
+  "fee_field": 3000,
+  "fee_chain_now": null,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xaa95246c8773950bc00cbbcd00ffdc76de38a77b",
+  "venue": "univ3",
+  "symbol": "$PEACE",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x2e86514cfd61fb19c5cf2b879d536d273d6e693d",
+  "venue": "univ3",
+  "symbol": "AAVE",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x995dac7612755153b69d01b4b2209c88d57aada9",
+  "venue": "univ3",
+  "symbol": "ABTC",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0xe207fab5839ca5bcc0d930761755cc7d82c1f19c",
+  "venue": "univ3",
+  "symbol": "ABX",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x16793ae3a82c0f492baef15f6c5312d06da83d94",
+  "venue": "univ3",
+  "symbol": "ADS",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x3d5d143381916280ff91407febeb52f2b60f33cf",
+  "venue": "univ3",
+  "symbol": "AERO",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xed5210bd97d855e8bec2389439b8487eecc3fc60",
+  "venue": "univ3",
+  "symbol": "AI",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x4815c514077a9bdf0c353fb78eff54f6c38ed800",
+  "venue": "univ3",
+  "symbol": "AIKEK",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x24bf2ee2e09477082d1ddf2f0603baa460b3f5f3",
+  "venue": "univ3",
+  "symbol": "ALI",
+  "fee_field": 100,
+  "fee_chain_now": 100,
+  "ts_now": 1,
+  "fee_chain_early": 100,
+  "ts_early": 1
+ },
+ {
+  "pool": "0xd753bcad56de9c3b5c303e68e916307eb2eb6c00",
+  "venue": "univ3",
+  "symbol": "ALTT",
+  "fee_field": 100,
+  "fee_chain_now": 100,
+  "ts_now": 1,
+  "fee_chain_early": 100,
+  "ts_early": 1
+ },
+ {
+  "pool": "0x951e17d0464035482f23b2865ca81ac3ef7d2a75",
+  "venue": "univ3",
+  "symbol": "AMC",
+  "fee_field": 100,
+  "fee_chain_now": 100,
+  "ts_now": 1,
+  "fee_chain_early": 100,
+  "ts_early": 1
+ },
+ {
+  "pool": "0x53d8288ce9cbcb97fffacfd710c866f721a2394b",
+  "venue": "univ3",
+  "symbol": "ATTN",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x7f950f3c2979ea955e5e8b151b0afa6087c77fc1",
+  "venue": "univ3",
+  "symbol": "Apetardio",
+  "fee_field": 100,
+  "fee_chain_now": 100,
+  "ts_now": 1,
+  "fee_chain_early": 100,
+  "ts_early": 1
+ },
+ {
+  "pool": "0x946066d23919982116c2ce07a5bc841c65a60b63",
+  "venue": "univ3",
+  "symbol": "B4FWX",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x9c0329a579211860efce38c000b06df52200edbe",
+  "venue": "univ3",
+  "symbol": "BARRY",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x8c6bcad6ce067304d505b5d5b36f19c64a933076",
+  "venue": "univ3",
+  "symbol": "BASED",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xd009260564ad99331260115fcf8b830fae04b77d",
+  "venue": "univ3",
+  "symbol": "BASED",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x548e923281f372d28a40287d3a2d30dce482fc66",
+  "venue": "univ3",
+  "symbol": "BEBE",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xbbee7cf0b22f8c8770dca4f86ea6a4d4fbd3a44b",
+  "venue": "univ3",
+  "symbol": "BEMU",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x636bebf45e8bc9db999859da0a1dd839fdd3dc89",
+  "venue": "univ3",
+  "symbol": "BENG",
+  "fee_field": 100,
+  "fee_chain_now": 100,
+  "ts_now": 1,
+  "fee_chain_early": 100,
+  "ts_early": 1
+ },
+ {
+  "pool": "0xd38d1ab8a150e6ee0ae70c86a8e9fb0c83255b76",
+  "venue": "univ3",
+  "symbol": "BGCI",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x73f5d958426b2c77638d946b780abffada4e934d",
+  "venue": "univ3",
+  "symbol": "BID",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x052e77018bfb98dc6373c37d757bb1d3fad09ec5",
+  "venue": "univ3",
+  "symbol": "BIO",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x0aa352230c5c05fa912dac0b538551f79121e29b",
+  "venue": "univ3",
+  "symbol": "BLERF",
+  "fee_field": 100,
+  "fee_chain_now": 100,
+  "ts_now": 1,
+  "fee_chain_early": 100,
+  "ts_early": 1
+ },
+ {
+  "pool": "0xc16e685de885efc4a01d159db62bbb613a96ba70",
+  "venue": "univ3",
+  "symbol": "BNKR",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x6acb9723c5f2d3a2b210609959f8b7c2675b86cc",
+  "venue": "univ3",
+  "symbol": "BONKE",
+  "fee_field": 100,
+  "fee_chain_now": 100,
+  "ts_now": 1,
+  "fee_chain_early": 100,
+  "ts_early": 1
+ },
+ {
+  "pool": "0xfa012a3d8420c8fd29743e9d32aa8aab078ddbb6",
+  "venue": "univ3",
+  "symbol": "BOT",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x36a46dff597c5a444bbc521d26787f57867d2214",
+  "venue": "univ3",
+  "symbol": "BRETT",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 10,
+  "fee_chain_early": 500,
+  "ts_early": 10
+ },
+ {
+  "pool": "0x76bf0abd20f1e0155ce40a62615a90a709a6c3d8",
+  "venue": "univ3",
+  "symbol": "BRETT",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xf4348227607b166917b9f50cf51979e376995b73",
+  "venue": "univ3",
+  "symbol": "BSHIB",
+  "fee_field": 100,
+  "fee_chain_now": 100,
+  "ts_now": 1,
+  "fee_chain_early": 100,
+  "ts_early": 1
+ },
+ {
+  "pool": "0xc564d66292360a683ffd320378261ef6c0a8dd0e",
+  "venue": "univ3",
+  "symbol": "BSX",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x9b5c16774e3c21853c3be4bcda5c21a5b8492107",
+  "venue": "univ3",
+  "symbol": "BTCSWAG",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x4be243426825c4695abf84b7f786769aa861c8a3",
+  "venue": "univ3",
+  "symbol": "BUM",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x2c4aadb6ab7dbd18debcf0edf048ed58aa039a2e",
+  "venue": "univ3",
+  "symbol": "CHICKEN",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xcda99181d6ff2dd5053a87a0c377ff5a8f0b5a1c",
+  "venue": "univ3",
+  "symbol": "CHUMP",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x75fb62aa7d072a6a96692b207278a760e5df42cc",
+  "venue": "univ3",
+  "symbol": "CLANKER",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xfdccd04ddca9ecf052e8e9ef6bd09a9b323fbf49",
+  "venue": "univ3",
+  "symbol": "CLX",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x102680f80efa3caad7e6f9661a34f48eb646e16f",
+  "venue": "univ3",
+  "symbol": "CMC20",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 10,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x93e8542e6ca0efffb9d57a270b76712b968a38f5",
+  "venue": "univ3",
+  "symbol": "DAI",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 10,
+  "fee_chain_early": 500,
+  "ts_early": 10
+ },
+ {
+  "pool": "0xdcf81663e68f076ef9763442de134fd0699de4ef",
+  "venue": "univ3",
+  "symbol": "DAI",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x3860d05a04760625bd4e49b31d8dea6ad4b132cb",
+  "venue": "univ3",
+  "symbol": "DAWG",
+  "fee_field": 100,
+  "fee_chain_now": 100,
+  "ts_now": 1,
+  "fee_chain_early": 100,
+  "ts_early": 1
+ },
+ {
+  "pool": "0xc9034c3e7f58003e6ae0c8438e7c8f4598d5acaa",
+  "venue": "univ3",
+  "symbol": "DEGEN",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xb719324d48f5961dd1068b033327c3ca58298463",
+  "venue": "univ3",
+  "symbol": "DIP",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x80722a2602690cd72ed395b5984c160e8fe2f380",
+  "venue": "univ3",
+  "symbol": "DOLA",
+  "fee_field": 100,
+  "fee_chain_now": 100,
+  "ts_now": 1,
+  "fee_chain_early": 100,
+  "ts_early": 1
+ },
+ {
+  "pool": "0x3065f70aafec3388f64aa86e9c68e562a20425ad",
+  "venue": "univ3",
+  "symbol": "DRINK",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0xdcf5932ea0882ceb7cadefb647a1b0e90d23dbc6",
+  "venue": "univ3",
+  "symbol": "Dt42",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x614e13c9387410704bb0b639f9096c616326664c",
+  "venue": "univ3",
+  "symbol": "ENA",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xc787ff6f332ee11b2c24fd8c112ac155f95b14ab",
+  "venue": "univ3",
+  "symbol": "ESX",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x2ec40480360b60f4ebca488fbe53d4922a82cee8",
+  "venue": "univ3",
+  "symbol": "ETHx",
+  "fee_field": 100,
+  "fee_chain_now": 100,
+  "ts_now": 1,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0xd56f086e7b796b313d49f2bc926fac4bdd2a2b0b",
+  "venue": "univ3",
+  "symbol": "ElonRWA",
+  "fee_field": 100,
+  "fee_chain_now": 100,
+  "ts_now": 1,
+  "fee_chain_early": 100,
+  "ts_early": 1
+ },
+ {
+  "pool": "0x468751695c9ce6bf9ce22573b31d301148778fe6",
+  "venue": "univ3",
+  "symbol": "FARCASTER",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 10,
+  "fee_chain_early": 500,
+  "ts_early": 10
+ },
+ {
+  "pool": "0xc5adb6f67c54d187a9fd8ba4994855e35963b69d",
+  "venue": "univ3",
+  "symbol": "FOOM",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xf77cdd429441636f9badb88feb93d9b395fbacea",
+  "venue": "univ3",
+  "symbol": "FROK",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x1f74eb2996abe1150e9a49681d7a09d55f08fcac",
+  "venue": "univ3",
+  "symbol": "GDP",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x873d3c477bbaed55859c46e43fdac6e73120f80c",
+  "venue": "univ3",
+  "symbol": "GHST",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xc7852e0f2f65c69428cdca473c1a7e267feb328d",
+  "venue": "univ3",
+  "symbol": "GM",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 10,
+  "fee_chain_early": 500,
+  "ts_early": 10
+ },
+ {
+  "pool": "0x2b4f3999a265e4d0d507e1182de4ad1b730f1785",
+  "venue": "univ3",
+  "symbol": "GOD",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x6d8503c85340176f61d5593182cccd37ba7e9b6a",
+  "venue": "univ3",
+  "symbol": "GUD",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x74d47af0885f87b678c76990966cc49b0ec6d5c3",
+  "venue": "univ3",
+  "symbol": "HAIR",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xae74f6ca552c6fd3a9a24f242485d1eca7790b1f",
+  "venue": "univ3",
+  "symbol": "HEIST",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x137d9f2c705f8b9c54b5c9b08b34a5452f88f35c",
+  "venue": "univ3",
+  "symbol": "HINT",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x9d744d3d905897608d24c1b8c1c7db0d30c36cd4",
+  "venue": "univ3",
+  "symbol": "HUNT",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x07c8f5b4cd0c8dbd89831e8e608e11eaaf5d13ff",
+  "venue": "univ3",
+  "symbol": "HYPER",
+  "fee_field": 100,
+  "fee_chain_now": 100,
+  "ts_now": 1,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0xc8262e09ae4a4da3e3b61899aadea5d6a4de1c0f",
+  "venue": "univ3",
+  "symbol": "ISK",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x2d0dcf32b105baed5853407aee0c5e611df8aedc",
+  "venue": "univ3",
+  "symbol": "IVT",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x0bcaebeeee604443feb6d5314a726626a858ebd3",
+  "venue": "univ3",
+  "symbol": "IXS",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xe374618b5e32d98f813860427ebf98b720bb678d",
+  "venue": "univ3",
+  "symbol": "JACK",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x0e0d68bb6db9b219e6fb5f8578079ac8dbf8c495",
+  "venue": "univ3",
+  "symbol": "JELLI",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x37bb450b17721c6720040a150029e504766e9777",
+  "venue": "univ3",
+  "symbol": "KAITO",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x8c686cfa6b5c79d921f70ff05bc142bff37d78eb",
+  "venue": "univ3",
+  "symbol": "KIBBLE",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x82da478b1382b951cbad01beb9ed459cdb16458e",
+  "venue": "univ3",
+  "symbol": "KILT",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x720026065524bb36a754b72050b31d9ebf0872b6",
+  "venue": "univ3",
+  "symbol": "KOLZ",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xf854e8b27658039edf5e44fef3435fa4decfd919",
+  "venue": "univ3",
+  "symbol": "KRL",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x07a1362d0d0b221c21ca4f2cbd83eb58b1ec81c9",
+  "venue": "univ3",
+  "symbol": "KTA",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x5d756b9024a462f8356dc213828a9ff394785344",
+  "venue": "univ3",
+  "symbol": "KULT",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0xf3a6c1e06491ec1c9fa0731f2857bd2fff348496",
+  "venue": "univ3",
+  "symbol": "KellyClaude",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x697a6af8b0fa9d1bae978707df3651ef45eb98c2",
+  "venue": "univ3",
+  "symbol": "LIGHTER",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x3bc5eaa39c3ea491b6f6399fe3b44c03f74cca36",
+  "venue": "univ3",
+  "symbol": "LILPEPE",
+  "fee_field": 100,
+  "fee_chain_now": 100,
+  "ts_now": 1,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x9399da51c1a85e64cce4b30b554875d2b89b2445",
+  "venue": "univ3",
+  "symbol": "LINGO",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x224a5d3f2155f2f85af70b6d72aea61a15273ff4",
+  "venue": "univ3",
+  "symbol": "LINK",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x974c2185bbdaa2362fea53e11f5a39a313802916",
+  "venue": "univ3",
+  "symbol": "LMWR",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xd33d771cceb6690b79e1c461ff6cb7b60c25f99e",
+  "venue": "univ3",
+  "symbol": "LOUDER",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xc67bfb30fed057ae16627457e71b1e29753b2f80",
+  "venue": "univ3",
+  "symbol": "LSTEAK",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x26777bb3ed83a98d697ec9f8e68a219b745e9e70",
+  "venue": "univ3",
+  "symbol": "LUSH",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x7540a7d82cc0b8888af94a1a4d80ae733193bd87",
+  "venue": "univ3",
+  "symbol": "LsETH",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 10,
+  "fee_chain_early": 500,
+  "ts_early": 10
+ },
+ {
+  "pool": "0x3c0ae164970ab9ec216cf1b7ae3118766ab65e43",
+  "venue": "univ3",
+  "symbol": "MAGIC",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x34f9372f0e90e0f94b0abfd4ab66ebac3d6eba59",
+  "venue": "univ3",
+  "symbol": "MENTE",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x77310fc8950dd83a035769018f2a05b1e989a52a",
+  "venue": "univ3",
+  "symbol": "MEY",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x54baf7e5e5f49ffa5b01f11b109734843bd9b7e3",
+  "venue": "univ3",
+  "symbol": "MILKRS",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x8deb37b048f4b3c7bd61eca7dfccbef7cba726de",
+  "venue": "univ3",
+  "symbol": "MOEW",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x37ecd41f5a01b23a3d9bb3b4ddfef4ed455d6fd3",
+  "venue": "univ3",
+  "symbol": "MOR",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x2f42df4af5312b492e9d7f7b2110d9c7bf2d9e4f",
+  "venue": "univ3",
+  "symbol": "MORPHO",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x638de6c410a7b8e4d7762f8286a98c5e46ae62e1",
+  "venue": "univ3",
+  "symbol": "MPH",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xbeae5ba2969c5b3f14164fc32a48fd5350c81788",
+  "venue": "univ3",
+  "symbol": "MT",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xd19c0dbbc5ba2ec4faa0e3fff892f0e95f23d9e0",
+  "venue": "univ3",
+  "symbol": "MVTT10F",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xe0762ad040bb6f8b22ec4a20fd1a1c7e74c6ac6e",
+  "venue": "univ3",
+  "symbol": "Mog",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x5c359454493deb49bd71fab246616cd6c4f36687",
+  "venue": "univ3",
+  "symbol": "Monky",
+  "fee_field": 100,
+  "fee_chain_now": 100,
+  "ts_now": 1,
+  "fee_chain_early": 100,
+  "ts_early": 1
+ },
+ {
+  "pool": "0xb6ee891009f7ea1d8a5b63cf90b4548a79bb7347",
+  "venue": "univ3",
+  "symbol": "NFTWIZ",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x783b62afd1d3a82956e8306e787210f1e2a1213a",
+  "venue": "univ3",
+  "symbol": "NYA",
+  "fee_field": 100,
+  "fee_chain_now": 100,
+  "ts_now": 1,
+  "fee_chain_early": 100,
+  "ts_early": 1
+ },
+ {
+  "pool": "0x00bf864f6bb2466fa875b97715f3b7e0cb76198c",
+  "venue": "univ3",
+  "symbol": "ODOS",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xbdf8953456f17727d31c4af785cc49ba700924ca",
+  "venue": "univ3",
+  "symbol": "OHNO",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x58342c302dd4df0531f60dd3c0eabb0c95ac08cb",
+  "venue": "univ3",
+  "symbol": "OKAYEG",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x6e7b4416e3a2b873f6cd4840e6bee7d88f07da8f",
+  "venue": "univ3",
+  "symbol": "OMI",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x1b363a46d655abbf66e50fcd660d0afed2fec8fb",
+  "venue": "univ3",
+  "symbol": "ONCHAIN",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x7553b61c3e83b37e6a7f8729d72f488172cd420a",
+  "venue": "univ3",
+  "symbol": "PBB",
+  "fee_field": 100,
+  "fee_chain_now": 100,
+  "ts_now": 1,
+  "fee_chain_early": 100,
+  "ts_early": 1
+ },
+ {
+  "pool": "0x99188f1755b91b95e1f4d732536a833fb82b4ad1",
+  "venue": "univ3",
+  "symbol": "PEAQ",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0xd01ea8f0232d5136e65a808242bdfa9a139f5b76",
+  "venue": "univ3",
+  "symbol": "PEPPER",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x03ac059fd9eb9c2da65d745e923583f05bf388db",
+  "venue": "univ3",
+  "symbol": "PHA",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x9abab65d07643e1ef2329b15dfbf733c78e5fd57",
+  "venue": "univ3",
+  "symbol": "PLEB",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x67cd976d5074565734faf683bb87bea9337cc429",
+  "venue": "univ3",
+  "symbol": "POO",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x0c8fed5dd65542ca5f0add1acab14c2e470c9110",
+  "venue": "univ3",
+  "symbol": "PRIME",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xac1605e157039fbf83d710628712c13cf8fcda0d",
+  "venue": "univ3",
+  "symbol": "PSC",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x4b9dff2b79e82d1936f3de002df2f2fcc026d5ef",
+  "venue": "univ3",
+  "symbol": "Pingu",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x551d9c1bfdd3f9de16a355fb44577bda59ebfef1",
+  "venue": "univ3",
+  "symbol": "QWLA",
+  "fee_field": 100,
+  "fee_chain_now": 100,
+  "ts_now": 1,
+  "fee_chain_early": null,
+  "ts_early": 1
+ },
+ {
+  "pool": "0x15b72f42b104d3353395393169d70315dd928de9",
+  "venue": "univ3",
+  "symbol": "REACT",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x6d33206adb1462992c642ba5dd4f4e16beb4d047",
+  "venue": "univ3",
+  "symbol": "ROCK",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xa575dcdc023db26479379375731a05e8f580409e",
+  "venue": "univ3",
+  "symbol": "ROCKY",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x0197b7c77f8ecb9857f110e59bdfb401471ddd95",
+  "venue": "univ3",
+  "symbol": "ROCKY",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 10,
+  "fee_chain_early": 500,
+  "ts_early": 10
+ },
+ {
+  "pool": "0x230dea5bc5c7470b46767b9b44a6b4d0eb0dc2fc",
+  "venue": "univ3",
+  "symbol": "RSR",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xfbfa69c021105e8f97ea12cf9d385e875d0f9e8f",
+  "venue": "univ3",
+  "symbol": "RWA",
+  "fee_field": 100,
+  "fee_chain_now": 100,
+  "ts_now": 1,
+  "fee_chain_early": 100,
+  "ts_early": 1
+ },
+ {
+  "pool": "0x3d59c3489094050744cf4665491b1bbda44eca2e",
+  "venue": "univ3",
+  "symbol": "SAMA",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x9ef332e78004873f9129162c8ac889b686560af8",
+  "venue": "univ3",
+  "symbol": "SAND",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x30747136e3fcd2deeb3a0d90ca0cfaebf1a96563",
+  "venue": "univ3",
+  "symbol": "SHARBI",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xe090c6f3b86de0794b011380cd17e4396f54f4ad",
+  "venue": "univ3",
+  "symbol": "SHARDS",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x81b3bc0ef974c16d71b8614adb8c22ccc045da01",
+  "venue": "univ3",
+  "symbol": "SHIBA",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x3b9b4fd9acfb4e6f1bb9bd34c455800ff901fca2",
+  "venue": "univ3",
+  "symbol": "SHOG",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x0db430ca83183d043e44302daeb6a0fed86471e0",
+  "venue": "univ3",
+  "symbol": "SHRMN",
+  "fee_field": 100,
+  "fee_chain_now": 100,
+  "ts_now": 1,
+  "fee_chain_early": 100,
+  "ts_early": 1
+ },
+ {
+  "pool": "0x82896892f73f4884c0ff41c0b396a67f66e26080",
+  "venue": "univ3",
+  "symbol": "SIAM",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xb7c971aab3c79f54bf94cf8f7c5fd3688936e57f",
+  "venue": "univ3",
+  "symbol": "SIM",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 10,
+  "fee_chain_early": 500,
+  "ts_early": 10
+ },
+ {
+  "pool": "0xadec8cf636bfb631f6941d6a2602c74f2531b47e",
+  "venue": "univ3",
+  "symbol": "SMT",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x1042c0989b02677cd47b0143f43b4f3dca456849",
+  "venue": "univ3",
+  "symbol": "SPR",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x4145081ed6d66cd4133f403fee17625862ade34b",
+  "venue": "univ3",
+  "symbol": "SPX",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x05f6c348e293ce068b5f7682cb01dc28524bf6a0",
+  "venue": "univ3",
+  "symbol": "STRM",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xc4838fbeef72ba0719a4c4f1efeec68991b74a20",
+  "venue": "univ3",
+  "symbol": "SUP",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x07c4a0cd6ca7e1dec16e4f0b4211a10c3abd937e",
+  "venue": "univ3",
+  "symbol": "Sendit",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x5d75edb390ca5f88d58bafae5d9fcde3c622e365",
+  "venue": "univ3",
+  "symbol": "TEVA",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x38981c23364db3a50a6b2dd0196a22842788527c",
+  "venue": "univ3",
+  "symbol": "TIBBIR",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x8672512821ddce7b00c4ec1b98041e3a34f4719e",
+  "venue": "univ3",
+  "symbol": "TONCOIN",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x5aa4ad647580bfe86258d300bc9852f4434e2c61",
+  "venue": "univ3",
+  "symbol": "TOSHI",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x58ecf9cec06bc58fde9280d348f79ed8f3d3046e",
+  "venue": "univ3",
+  "symbol": "TREE",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x5c48cb68a4d5a344b85595ae44b0bd6a98a3b74b",
+  "venue": "univ3",
+  "symbol": "TRX",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x93aa685f230998908f3ea9f441ef0dc4f0203f47",
+  "venue": "univ3",
+  "symbol": "TiTi",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x01c1cff07a7f967fd7613088bb1712554944c6e6",
+  "venue": "univ3",
+  "symbol": "UNA",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xba4325479cc8be38255a0f5212db672c134b1d78",
+  "venue": "univ3",
+  "symbol": "UNI",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x9ef81f4e2f2f15ff1c0c3f8c9ecc636580025242",
+  "venue": "univ3",
+  "symbol": "UP",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xfe6b3ab786712d27942ce16d8f2d2990a5a0728f",
+  "venue": "univ3",
+  "symbol": "USD+",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 10,
+  "fee_chain_early": 500,
+  "ts_early": 10
+ },
+ {
+  "pool": "0x18b497f71122622557e4634c47a05647ff859f47",
+  "venue": "univ3",
+  "symbol": "USDC",
+  "fee_field": 300,
+  "fee_chain_now": 300,
+  "ts_now": 6,
+  "fee_chain_early": 300,
+  "ts_early": 6
+ },
+ {
+  "pool": "0xd0b53d9277642d899df5c87a3966a349a798f224",
+  "venue": "univ3",
+  "symbol": "USDC",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 10,
+  "fee_chain_early": 500,
+  "ts_early": 10
+ },
+ {
+  "pool": "0x6c561b446416e1a00e8e93e221854d6ea4171372",
+  "venue": "univ3",
+  "symbol": "USDC",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xb4cb800910b228ed3d0834cf79d697127bbb00e5",
+  "venue": "univ3",
+  "symbol": "USDC",
+  "fee_field": 100,
+  "fee_chain_now": 100,
+  "ts_now": 1,
+  "fee_chain_early": 100,
+  "ts_early": 1
+ },
+ {
+  "pool": "0xce1d8c90a5f0ef28fe0f457e5ad615215899319a",
+  "venue": "univ3",
+  "symbol": "USDT",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xd92e0767473d1e3ff11ac036f2b1db90ad0ae55f",
+  "venue": "univ3",
+  "symbol": "USDT",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 10,
+  "fee_chain_early": 500,
+  "ts_early": 10
+ },
+ {
+  "pool": "0x3ddf264ac95d19e81f8c25f4c300c4e59e424d43",
+  "venue": "univ3",
+  "symbol": "USDbC",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x3b8000cd10625abdc7370fb47ed4d4a9c6311fd5",
+  "venue": "univ3",
+  "symbol": "USDbC",
+  "fee_field": 100,
+  "fee_chain_now": 100,
+  "ts_now": 1,
+  "fee_chain_early": 100,
+  "ts_early": 1
+ },
+ {
+  "pool": "0x4c36388be6f416a29c8d8eee81c771ce6be14b18",
+  "venue": "univ3",
+  "symbol": "USDbC",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 10,
+  "fee_chain_early": 500,
+  "ts_early": 10
+ },
+ {
+  "pool": "0x414750c7eba4708bdd882b31b61f309adc32724f",
+  "venue": "univ3",
+  "symbol": "VANA",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x5ec8fd9b09454e7e2662a2c4c0432f95e896ea79",
+  "venue": "univ3",
+  "symbol": "VCNT",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x1d4dab3f27c7f656b6323c1d6ef713b48a8f72f1",
+  "venue": "univ3",
+  "symbol": "VIRTUAL",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x9c087eb773291e50cf6c6a90ef0f4500e349b903",
+  "venue": "univ3",
+  "symbol": "VIRTUAL",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 10,
+  "fee_chain_early": 500,
+  "ts_early": 10
+ },
+ {
+  "pool": "0x130c5bc30567987861620971c6b60c08d3784ef8",
+  "venue": "univ3",
+  "symbol": "VTF",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x8eaf39189c73819d3949cab2b1a7afce8e3ba0d9",
+  "venue": "univ3",
+  "symbol": "VVV",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x1dbe0fa77449ac8a099a5d9b068f62ba16dc1b7b",
+  "venue": "univ3",
+  "symbol": "W",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xba6042ca6fd1f4be67c09bbb5e522e2396a3c7ab",
+  "venue": "univ3",
+  "symbol": "WBNB",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xc9289a5ef42eafa9e07665fcacf46127495cc222",
+  "venue": "univ3",
+  "symbol": "WBTC",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x4cc1a6026c8bbbe98358c5ac884d381e5f828bc6",
+  "venue": "univ3",
+  "symbol": "WBTC",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 10,
+  "fee_chain_early": 500,
+  "ts_early": 10
+ },
+ {
+  "pool": "0x1dcaf6ffdaee5b495525ba92af99b444e5b2f073",
+  "venue": "univ3",
+  "symbol": "WILDW",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x62952aa2b466017eaabe06420c672eb3e152df58",
+  "venue": "univ3",
+  "symbol": "WOLF",
+  "fee_field": 100,
+  "fee_chain_now": 100,
+  "ts_now": 1,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x634625cefbc8894be1a97d76f3ea0fedd61f1c8c",
+  "venue": "univ3",
+  "symbol": "WXTZ",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 10,
+  "fee_chain_early": 500,
+  "ts_early": 10
+ },
+ {
+  "pool": "0xf0501988fa68361b67ce4024b9e477af2afec58b",
+  "venue": "univ3",
+  "symbol": "XSWAP",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x6342ae6bd51e2fff62fade66f0a6b00a0bcc9c3b",
+  "venue": "univ3",
+  "symbol": "ZARP",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x46f87bc6e3c568fd4fb8745e0af3b351eee4ed24",
+  "venue": "univ3",
+  "symbol": "ZED",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xa0ca5bebc42cdbf3623b1c09206ae4e3975b0fc7",
+  "venue": "univ3",
+  "symbol": "ZORA",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xa2d4a8e00daad32acace1a0dd0905f6aaf57e84e",
+  "venue": "univ3",
+  "symbol": "ZRO",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x299743334e3fe497e3c765245e8f7e64ca58684d",
+  "venue": "univ3",
+  "symbol": "aBasWETH",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 10,
+  "fee_chain_early": 500,
+  "ts_early": 10
+ },
+ {
+  "pool": "0x89d318261d75ef1503b3675538571e70357d227d",
+  "venue": "univ3",
+  "symbol": "bAP3X",
+  "fee_field": 100,
+  "fee_chain_now": 100,
+  "ts_now": 1,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0xdea629c5587037d0925ff85f1961d95db62bedd6",
+  "venue": "univ3",
+  "symbol": "bsdETH",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 10,
+  "fee_chain_early": 500,
+  "ts_early": 10
+ },
+ {
+  "pool": "0xafbb6fcc92ddb091dbc13e9073c3360c7d9600cc",
+  "venue": "univ3",
+  "symbol": "bsdETH",
+  "fee_field": 100,
+  "fee_chain_now": 100,
+  "ts_now": 1,
+  "fee_chain_early": 100,
+  "ts_early": 1
+ },
+ {
+  "pool": "0x4c1e404a013bf1917faf2dbf5e5cef3e9bafb5aa",
+  "venue": "univ3",
+  "symbol": "cbBTC",
+  "fee_field": 100,
+  "fee_chain_now": 100,
+  "ts_now": 1,
+  "fee_chain_early": 100,
+  "ts_early": 1
+ },
+ {
+  "pool": "0x8c7080564b5a792a33ef2fd473fba6364d5495e5",
+  "venue": "univ3",
+  "symbol": "cbBTC",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x7aea2e8a3843516afa07293a10ac8e49906dabd1",
+  "venue": "univ3",
+  "symbol": "cbBTC",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 10,
+  "fee_chain_early": 500,
+  "ts_early": 10
+ },
+ {
+  "pool": "0xa9dafa443a02fbc907cb0093276b3e6f4ef02a46",
+  "venue": "univ3",
+  "symbol": "cbETH",
+  "fee_field": 100,
+  "fee_chain_now": 100,
+  "ts_now": 1,
+  "fee_chain_early": 100,
+  "ts_early": 1
+ },
+ {
+  "pool": "0x10648ba41b8565907cfa1496765fa4d95390aa0d",
+  "venue": "univ3",
+  "symbol": "cbETH",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 10,
+  "fee_chain_early": 500,
+  "ts_early": 10
+ },
+ {
+  "pool": "0xa60e4edd7428bfd10eb3f7fd8db1f9ab5b9929d5",
+  "venue": "univ3",
+  "symbol": "dream",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 10,
+  "fee_chain_early": 500,
+  "ts_early": 10
+ },
+ {
+  "pool": "0x58603091b4da10685e114d85e330cab36e655627",
+  "venue": "univ3",
+  "symbol": "ezETH",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 10,
+  "fee_chain_early": 500,
+  "ts_early": 10
+ },
+ {
+  "pool": "0x2c1e5bb66a9c18e29662dac577e72b33950deb49",
+  "venue": "univ3",
+  "symbol": "flETH",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 10,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0xa4efe9e8e2a2d5a2ac46805f233b8e49d0e11955",
+  "venue": "univ3",
+  "symbol": "member",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x9e13996a9f5a9870c105d7e3c311848273740e98",
+  "venue": "univ3",
+  "symbol": "rETH",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 10,
+  "fee_chain_early": 500,
+  "ts_early": 10
+ },
+ {
+  "pool": "0xe3fe6f02fb17afd95b3039b37e752fc073b95abe",
+  "venue": "univ3",
+  "symbol": "sWETH",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 10,
+  "fee_chain_early": 500,
+  "ts_early": 10
+ },
+ {
+  "pool": "0xd52ad625a19e5f258630413e374d65825d08e1df",
+  "venue": "univ3",
+  "symbol": "uADA",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xae50c3b3e9be6a836f2fe3c5c8daea5eafaf28b2",
+  "venue": "univ3",
+  "symbol": "uARB",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x9330816bf6a27c1f149640d7ad3408cabc2eb576",
+  "venue": "univ3",
+  "symbol": "uATOM",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x12122ec8f9211a34b228f349a2b6726bcd04554e",
+  "venue": "univ3",
+  "symbol": "uAVAX",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xfd2a49db3a5a2184be19cd130eeff4ed486fa77c",
+  "venue": "univ3",
+  "symbol": "uBCH",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x84a8fedc7f310045c06be3f9e412e58ec82448b2",
+  "venue": "univ3",
+  "symbol": "uDOGE",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xcb620881e671f2b2d5e233b3293c186f94d4100a",
+  "venue": "univ3",
+  "symbol": "uDOT",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x54f6fbbcfb730dbf31829fe4e2d8d769503be115",
+  "venue": "univ3",
+  "symbol": "uHBAR",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x8bbc52f056cbc6fe43f7e46183fef35577d5b217",
+  "venue": "univ3",
+  "symbol": "uLINK",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xab7fed603f0e5eb8f46ab58b086631d75cfbe78d",
+  "venue": "univ3",
+  "symbol": "uLTC",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x38e2e7dead99f8fc492081947031be43eaab13a5",
+  "venue": "univ3",
+  "symbol": "uNEAR",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x44d68f7f1076b02192fe726ce32beebbac38cb1c",
+  "venue": "univ3",
+  "symbol": "uOP",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xab04a352d4ec8d0f1812a4e5ebe7807fa67acd48",
+  "venue": "univ3",
+  "symbol": "uSOL",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x9140d1bc4f976dbcea88575f42d73716054c38bd",
+  "venue": "univ3",
+  "symbol": "uXLM",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xc8da14d7467814a91384796db3ca2c273b30b361",
+  "venue": "univ3",
+  "symbol": "uXRP",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xb1419a7f9e8c6e434b1d05377e0dbc4154e3de78",
+  "venue": "univ3",
+  "symbol": "weETH",
+  "fee_field": 100,
+  "fee_chain_now": 100,
+  "ts_now": 1,
+  "fee_chain_early": 100,
+  "ts_early": 1
+ },
+ {
+  "pool": "0x2007255830b907533fd615a038e2735840c0003f",
+  "venue": "univ3",
+  "symbol": "wow",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 10,
+  "fee_chain_early": 500,
+  "ts_early": 10
+ },
+ {
+  "pool": "0x16e25facba67a40da3436ab9e2e00c30dab0dd97",
+  "venue": "univ3",
+  "symbol": "wrsETH",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x20e068d76f9e90b90604500b84c7e19dcb923e7e",
+  "venue": "univ3",
+  "symbol": "wstETH",
+  "fee_field": 100,
+  "fee_chain_now": 100,
+  "ts_now": 1,
+  "fee_chain_early": 100,
+  "ts_early": 1
+ },
+ {
+  "pool": "0x6f4482cbf7b43599078fcb012732e20480015644",
+  "venue": "univ3",
+  "symbol": "wstETH",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 10,
+  "fee_chain_early": 500,
+  "ts_early": 10
+ },
+ {
+  "pool": "0x8e27128839aea978d65e98b28092367ade6048d8",
+  "venue": "unknown",
+  "symbol": "BEPE",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x6a0586810898b07d22bd4f8be59a36aa09de26a3",
+  "venue": "unknown",
+  "symbol": "BROGE",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x7682d268f34e86accadff56db9668eb6a449ff07",
+  "venue": "unknown",
+  "symbol": "EURC",
+  "fee_field": 200,
+  "fee_chain_now": 200,
+  "ts_now": 4,
+  "fee_chain_early": 200,
+  "ts_early": 4
+ },
+ {
+  "pool": "0x65488ed876fa62489569abc73b6005a0a3f64150",
+  "venue": "unknown",
+  "symbol": "KRAV",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0xdb79699053a9f0a7f91584af7d2e5f33647e04f7",
+  "venue": "unknown",
+  "symbol": "RISE",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 200,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x57713f7716e0b0f65ec116912f834e49805480d2",
+  "venue": "unknown",
+  "symbol": "USDC",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 10,
+  "fee_chain_early": 500,
+  "ts_early": 10
+ },
+ {
+  "pool": "0xbbd7d3f242fe8f4eb318c96b2fac0c459ecca908",
+  "venue": "unknown",
+  "symbol": "USDC",
+  "fee_field": 290,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 420,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x256f399754f7ed5baa75b911ae6fd3c1a63b169c",
+  "venue": "unknown",
+  "symbol": "USDC",
+  "fee_field": 206,
+  "fee_chain_now": 300,
+  "ts_now": 60,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x331c12605938d2a9ab893c495cfd5f4e875e3313",
+  "venue": "unknown",
+  "symbol": "USDC",
+  "fee_field": 200,
+  "fee_chain_now": 200,
+  "ts_now": 4,
+  "fee_chain_early": 200,
+  "ts_early": 4
+ },
+ {
+  "pool": "0x966617c62d5053fceed8fd051c0319ca2b5efd65",
+  "venue": "unknown",
+  "symbol": "USDC",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 100,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x41595326aabe6132fc6c7ae71af087a3a9dbc9f6",
+  "venue": "unknown",
+  "symbol": "USDC",
+  "fee_field": 3000,
+  "fee_chain_now": 3000,
+  "ts_now": 60,
+  "fee_chain_early": 3000,
+  "ts_early": 60
+ },
+ {
+  "pool": "0x482fe995c4a52bc79271ab29a53591363ee30a89",
+  "venue": "unknown",
+  "symbol": "USDC",
+  "fee_field": 100,
+  "fee_chain_now": 100,
+  "ts_now": 1,
+  "fee_chain_early": 100,
+  "ts_early": 1
+ },
+ {
+  "pool": "0x74cb6260be6f31965c239df6d6ef2ac2b5d4f020",
+  "venue": "unknown",
+  "symbol": "USDC",
+  "fee_field": 80,
+  "fee_chain_now": 80,
+  "ts_now": 1,
+  "fee_chain_early": 80,
+  "ts_early": 1
+ },
+ {
+  "pool": "0xb78daa6d74fe0e23e5c95446cfadbadc63205cfc",
+  "venue": "unknown",
+  "symbol": "USDbC",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 10,
+  "fee_chain_early": 500,
+  "ts_early": 10
+ },
+ {
+  "pool": "0x22ca6d83ab887a535ae1c6011cc36ea9d1255c31",
+  "venue": "unknown",
+  "symbol": "USDbC",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 10,
+  "fee_chain_early": 500,
+  "ts_early": 10
+ },
+ {
+  "pool": "0x296303a60f6cb2587f768036a3ef457adad9c431",
+  "venue": "unknown",
+  "symbol": "VIRTUAL",
+  "fee_field": 400,
+  "fee_chain_now": 400,
+  "ts_now": 8,
+  "fee_chain_early": 400,
+  "ts_early": 8
+ },
+ {
+  "pool": "0xcaeedd8f1acf55f2df259afc090d519069f72a2b",
+  "venue": "unknown",
+  "symbol": "ZRO",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 10,
+  "fee_chain_early": 500,
+  "ts_early": 10
+ },
+ {
+  "pool": "0x1d6cfee6eec4688dad33e6fbb2304a9efe8be3c8",
+  "venue": "unknown",
+  "symbol": "cbBTC",
+  "fee_field": 100,
+  "fee_chain_now": 100,
+  "ts_now": 2,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0x09f3805c6743d9d0548ffe5657a985a057f82a7b",
+  "venue": "unknown",
+  "symbol": "cbBTC",
+  "fee_field": 200,
+  "fee_chain_now": 219,
+  "ts_now": 60,
+  "fee_chain_early": null,
+  "ts_early": null
+ },
+ {
+  "pool": "0xbf371ea62f6464d092f715f6cd359bd22e24ff51",
+  "venue": "unknown",
+  "symbol": "cbBTC",
+  "fee_field": 200,
+  "fee_chain_now": 200,
+  "ts_now": 4,
+  "fee_chain_early": 200,
+  "ts_early": 4
+ },
+ {
+  "pool": "0x26f859da14329022dba1b87dd1998f18e3b222fe",
+  "venue": "unknown",
+  "symbol": "cbBTC",
+  "fee_field": 350,
+  "fee_chain_now": 350,
+  "ts_now": 10,
+  "fee_chain_early": 350,
+  "ts_early": 10
+ },
+ {
+  "pool": "0x0e3a32b3b84dab844b16ecf9795122ce3c4462f8",
+  "venue": "unknown",
+  "symbol": "cbETH",
+  "fee_field": 80,
+  "fee_chain_now": 80,
+  "ts_now": 1,
+  "fee_chain_early": 80,
+  "ts_early": 1
+ },
+ {
+  "pool": "0x686a4cdd3f9059e56603840e320e5945e2190216",
+  "venue": "unknown",
+  "symbol": "cbETH",
+  "fee_field": 750,
+  "fee_chain_now": 750,
+  "ts_now": 15,
+  "fee_chain_early": 750,
+  "ts_early": 15
+ },
+ {
+  "pool": "0xb81b9aef36c76d740850c31c45697c83468dcb54",
+  "venue": "unknown",
+  "symbol": "cbETH",
+  "fee_field": 500,
+  "fee_chain_now": 500,
+  "ts_now": 10,
+  "fee_chain_early": 500,
+  "ts_early": 10
+ },
+ {
+  "pool": "0xc715096eecc3f4a0fdbff055a3db2926adc83244",
+  "venue": "unknown",
+  "symbol": "cbETH",
+  "fee_field": 100,
+  "fee_chain_now": 100,
+  "ts_now": 2,
+  "fee_chain_early": 100,
+  "ts_early": 2
+ },
+ {
+  "pool": "0xfea36a5a7ccb6414bfea6d4ede76cbb9e5c6639d",
+  "venue": "unknown",
+  "symbol": "cbLTC",
+  "fee_field": 253,
+  "fee_chain_now": 300,
+  "ts_now": 60,
+  "fee_chain_early": null,
+  "ts_early": null
+ }
+]

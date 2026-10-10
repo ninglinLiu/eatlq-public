@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "frozen_before_b8_results": true,
+  "research_only": true,
+  "seed": 20260714,
+  "universe": {
+    "primary": "the 116 B5 keystone_full pools selected by the pre-W1 learner and frozen friction gate",
+    "baseline": "all 431 W1-W3 opportunities under the same execution estimator; missing legacy exit trigger falls back to entry_block+7200",
+    "regimes": {
+      "W1": ["2026-02-27T05:41:15Z", "2026-04-01T00:00:00Z"],
+      "W2": ["2026-04-01T00:00:00Z", "2026-05-01T00:00:00Z"],
+      "W3": ["2026-05-01T00:00:00Z", "2026-06-08T18:29:40Z"]
+    }
+  },
+  "entry": {
+    "signal_delay_seconds": 600,
+    "implementation_anchor": "existing frozen entry_block, which represents the KEYSTONE t0+10m decision point",
+    "fill": "first decoded real buy at or after entry_block with WETH amount >=0.001 and no later than entry_block+900 blocks",
+    "no_fill": "flat return 0; no fictitious loss and no gas"
+  },
+  "exit": {
+    "delays_minutes": [0, 30, 60],
+    "primary_delay_minutes": 30,
+    "scheduled_blocks": "legacy_exb + delay_minutes*30; if legacy_exb missing, entry_block+7200 + delay_minutes*30",
+    "real_fill_window_blocks": 60,
+    "tier_1_real_fill": "first decoded real sell at or after scheduled block and within 60 blocks whose target-token amount is >= the 0.001-WETH entry quantity; use raw amount average price",
+    "tier_2_atomic": "if tier 1 absent, pinned same-block AtomicRoundTrip; use recovered_weth/received_target as executable unit price for historical entry quantity, then multiply proceeds by 0.90",
+    "atomic_capacity_haircut": 0.10,
+    "observation_cutoff_block": 46865124,
+    "observation_cutoff_source": "maximum locally decoded Base V3 swap block measured before B8 result computation",
+    "late_recovery": "if atomic is a known failure but a later decoded real sell before the fixed observation cutoff has target-token amount >= position quantity, use the first such real price and charge one extra failed-exit gas leg",
+    "true_rug": "known atomic failure and zero later decoded real sells of any size through the fixed observation cutoff; only this state receives -100% gross plus attempted gas",
+    "subcapacity_or_rpc_unknown": "UNRESOLVED, never imputed to -100%; any primary unresolved row prevents PASS"
+  },
+  "cost": {
+    "notional_weth": 0.001,
+    "gas_usd_per_attempted_leg": 0.075,
+    "eth_usd": "B3 frozen daily ETH close",
+    "real_fill_fee_and_impact": "included in decoded raw average price",
+    "atomic_fee_and_impact": "included in AtomicRoundTrip recovered amount before the additional 10% haircut"
+  },
+  "capacity": {
+    "main_weth": 0.001,
+    "larger_weth": [0.003, 0.01],
+    "method": "QuoterV2 token-to-WETH quotes at the primary 30m scheduled block for 1x, 3x and 10x the historical entry quantity; diagnostic only and never used as B8 return"
+  },
+  "helper_address_risk": {
+    "sample_n": 20,
+    "selection": "smallest sha256('B8-holder|'+pool) among entered primary rows",
+    "test": "from entry receipt Transfer logs identify the actual token recipient; at the pinned entry block check balanceOf and eth_call transfer(pool, min(balance, position_qty)) from that recipient",
+    "interpretation": "tests address-specific token transfer restriction only; it does not prove router approval or a historical wallet swap fill"
+  },
+  "chronology": {
+    "gate_calibration_end_exclusive": "2026-04-15T00:00:00Z",
+    "heldout_oos_start": "2026-04-15T00:00:00Z",
+    "rolling_window_days": 14,
+    "rolling_step_days": 7
+  },
+  "derived_regime_gate": {
+    "input": "causal trailing-7d honeypot_proxy_rate from corrected B6 weather data; no W1/W2/W3 label is an input",
+    "threshold": "35th percentile (linear quantile) of eligible pre-2026-04-15 calibration days",
+    "minimum_proxy_n": 20,
+    "missing": "closed",
+    "evaluation": "heldout OOS only; compare ungated, derived gate, and 10000 random calendar-day gates with the identical OOS open-day count"
+  },
+  "monte_carlo": {
+    "paths": 10000,
+    "start_R": 100,
+    "resampling": "stratified by regime from primary 30m ungated returns"
+  },
+  "right_tail": {
+    "applies_to": "primary 30m ungated honest estimator; gate is an incremental OOS test, not a rescue prerequisite",
+    "powered_n_min": 20,
+    "pooled_mean_gt_0": true,
+    "pooled_top1_removed_mean_gt_0": true,
+    "every_powered_rolling_window_mean_floor": -0.10,
+    "minimum_powered_regimes_with_positive_mean_and_positive_alpha": 2,
+    "mc_terminal_p5_gt_R": 100,
+    "mc_mdd_p95_le_R": 20,
+    "heldout_oos_mean_gt_0": true,
+    "primary_delay_must_be_nonzero": true,
+    "primary_unresolved_must_equal": 0,
+    "decision": "all true => PASS evidence status; any tested false => FAIL; n<20 is descriptive; unresolved => INCONCLUSIVE; never a GO decision"
+  },
+  "forbidden": [
+    "B7 post-hoc +57.67% cannot satisfy any B8 pass gate",
+    "QuoterV2 cannot be used as primary realized return",
+    "missing evidence cannot be converted to -100%",
+    "no send, sign, broadcast, live configuration change, executor or strategy start/restart"
+  ]
+}

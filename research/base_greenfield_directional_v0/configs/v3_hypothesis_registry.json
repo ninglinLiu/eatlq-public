@@ -1,0 +1,71 @@
+{
+  "status": "FROZEN_BEFORE_SEARCH",
+  "multiplicity_correction": "benjamini_hochberg",
+  "family_wise_alpha": 0.10,
+  "latchpi_narrative_hypotheses": {
+    "status": "DATA_LINEAGE_INSUFFICIENT",
+    "note": "Narrative/social features excluded this round"
+  },
+  "hypotheses": [
+    {
+      "id": "H_FLOW_PERSIST",
+      "mechanism": "Persistent two-sided trade activity (not single burst) predicts continued attention and lower immediate exit failure while preserving right-tail upside",
+      "pit_fields": ["flow_persist_score", "active_minutes_pre", "n_swaps_pre", "trade_count_imbalance", "buys_10m", "sells_10m"],
+      "predicts": ["p_right_tail_25", "p_future_unsellable"],
+      "lifecycle_buckets": ["1-6h", "6-24h", "1-3d"],
+      "failure_condition": "OOF utility does not beat C1/C2/C3 after BH correction, or right-tail not repeatable across token/deployer/time",
+      "max_searches": 3,
+      "multiplicity": "benjamini_hochberg"
+    },
+    {
+      "id": "H_LIQ_REGIME",
+      "mechanism": "Liquidity accretion/stability regimes differ from withdrawal regimes in fatal risk and recoverable WETH fraction",
+      "pit_fields": ["liq_log", "liq_trend", "liq_drawdown", "liq_accel"],
+      "predicts": ["p_liquidity_collapse", "expected_recovery_fraction", "conditional_q50_return"],
+      "lifecycle_buckets": ["1-6h", "6-24h", "1-3d", "3-7d"],
+      "failure_condition": "Risk head does not reduce fatal rate vs universe baseline at matched capacity",
+      "max_searches": 3,
+      "multiplicity": "benjamini_hochberg"
+    },
+    {
+      "id": "H_PARTICIPANT",
+      "mechanism": "Growth in independent buyers/sellers with falling concentration marks healthier participation than wash/concentrated flow",
+      "pit_fields": ["buyers_pre", "sellers_pre", "senders_pre", "part_concentration", "buyer_growth", "seller_growth"],
+      "predicts": ["p_right_tail_50", "p_future_unsellable"],
+      "lifecycle_buckets": ["6-24h", "1-3d", "3-7d"],
+      "failure_condition": "No OOF lift vs price-path baseline after multiplicity correction",
+      "max_searches": 3,
+      "multiplicity": "benjamini_hochberg"
+    },
+    {
+      "id": "H_DEPLOYER_PIT",
+      "mechanism": "Deployer PIT history (prior pools, prior fatal rates known before decision) separates chronic rug factories from cleaner issuers",
+      "pit_fields": ["deployer_prior_pools", "deployer_prior_fatal_rate", "deployer_prior_right_tail_rate", "deployer_age_hours"],
+      "predicts": ["p_future_unsellable", "p_right_tail_25"],
+      "lifecycle_buckets": ["1-6h", "6-24h", "1-3d", "3-7d"],
+      "failure_condition": "Deployer features unavailable or do not improve utility after embargoed OOF",
+      "max_searches": 2,
+      "multiplicity": "benjamini_hochberg"
+    },
+    {
+      "id": "H_PATH_STATE",
+      "mechanism": "Joint states of volatility, depth proxy, and flow mark transitions into right-tail continuation versus blow-off collapse",
+      "pit_fields": ["early_ret", "pre_vol", "mom_h1", "mom_h2", "accel", "vol_depth", "flow_persist_score", "range_location"],
+      "predicts": ["p_right_tail_25", "p_right_tail_100", "tp_before_sl", "time_to_right_tail"],
+      "lifecycle_buckets": ["1-6h", "6-24h", "1-3d"],
+      "failure_condition": "Price-path-only model already saturates; joint state adds no incremental OOF utility",
+      "max_searches": 3,
+      "multiplicity": "benjamini_hochberg"
+    },
+    {
+      "id": "H_TRADEABLE_RISK_SPLIT",
+      "mechanism": "Currently buyable/sellable pools still differ in future permanent unsellability; risk head can veto without killing all directional opportunity",
+      "pit_fields": ["buy_ok_proxy", "depth_proxy", "entry_slip_proxy", "liq_drawdown", "infra_lag_s", "flow_persist_score"],
+      "predicts": ["p_buy_fail", "p_current_unsellable", "p_future_unsellable", "expected_wallet_utility"],
+      "lifecycle_buckets": ["1-6h", "6-24h", "1-3d", "3-7d"],
+      "failure_condition": "Fatal rate of selected set not below condition-universe baseline, or EXECUTION_RISK_DOMINATES",
+      "max_searches": 3,
+      "multiplicity": "benjamini_hochberg"
+    }
+  ]
+}

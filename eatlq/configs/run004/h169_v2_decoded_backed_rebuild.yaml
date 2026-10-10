@@ -1,0 +1,101 @@
+input_paths:
+  h168_patch_json: mvp/diagnostics/run004_patch_h168_v2_decoded_feature_enrichment_repair.json
+  h168_coverage_root_cause_audit_json: mvp/diagnostics/run004_h168_coverage_root_cause_audit.json
+  h167_all_dataset_csv: mvp/diagnostics/run004_h167_v2_only_all_fixed_horizon_gas_adjusted_dataset.csv
+  h167_checkpoint_report_json: mvp/diagnostics/run004_h167_v2_only_checkpoint_report.json
+  h167_dataset_quality_report_json: mvp/diagnostics/run004_h167_v2_only_dataset_quality_report.json
+  h166_v2_candidate_csv: mvp/diagnostics/run004_h166_v2_candidate_selection.csv
+
+clickhouse:
+  url: http://clickhouse:8123
+  database: eatlq
+  docker_container: eatlq-clickhouse-1
+  query_timeout_sec: 180
+  decoded_sources:
+    v2_table: uniswap_v2_swaps_decoded
+    metadata_table: discovered_pools
+
+candidate_reconstruction:
+  target_candidates: 15000
+  max_per_pool: 25
+  max_per_pool_time_bucket: 3
+  deterministic_sample_seed: run004_h169_v2_decoded_backed
+
+features:
+  include_source_event_in_features: true
+
+windows_sec:
+  - 60
+  - 180
+  - 300
+  - 900
+  - 1800
+
+pilot:
+  rows: 300
+  quote_success_gate: 0.90
+
+labeling:
+  target_success_rows: 10000
+  max_attempts: 15000
+  batch_size: 250
+  workers: 20
+  fixed_horizon_sec: 1800
+  notional_wei: 500000000000000
+  round_trip_cost: 0.006
+  slippage_stress_bps: 100
+  rpc_env_vars:
+    - LABEL_RPC_URL
+    - EVM_HTTP_URL
+    - LIVE_BASE_RPC_URL
+  gas_price_gwei:
+    low: 0.01
+    medium: 0.03
+    high: 0.10
+  include_approval_gas: true
+  approval_gas_units: 50000
+  gas_units:
+    v2:
+      buy: 180000
+      sell: 160000
+    v3:
+      buy: 260000
+      sell: 240000
+
+risk_severity:
+  hard_exclude_abs_return: 0.20
+  confirmed_bad_pools:
+    - "0x3e118916cd67cc9bfeb0fc44ae3dde8bc33c2d4a"
+  alpha_island_pools:
+    - "0x54219bce730d2727d91d8dcdf1465c7d299dee45"
+    - "0xc2476883d28d40b6c057f242fce2e8bda674faa0"
+
+outputs:
+  patch_json: mvp/diagnostics/run004_patch_h169_v2_decoded_backed_rebuild.json
+  p0_lineage_postmortem_json: mvp/diagnostics/run004_h169_p0_lineage_postmortem.json
+  p0_lineage_postmortem_markdown: mvp/runs/run-004-patch-h169-p0-lineage-postmortem.md
+  decoded_backed_candidate_csv: mvp/diagnostics/run004_h169_v2_decoded_backed_candidates.csv
+  candidate_reconstruction_report_json: mvp/diagnostics/run004_h169_candidate_reconstruction_report.json
+  pre_rpc_feature_coverage_report_json: mvp/diagnostics/run004_h169_pre_rpc_feature_coverage_report.json
+  pilot_report_json: mvp/diagnostics/run004_h169_pilot_report.json
+  checkpoint_report_json: mvp/diagnostics/run004_h169_checkpoint_report.json
+  all_feature_ready_dataset_csv: mvp/diagnostics/run004_h169_all_v2_decoded_backed_10k_dataset.csv
+  clean_alpha_dataset_csv: mvp/diagnostics/run004_h169_clean_alpha_v2_decoded_backed_dataset.csv
+  risk_bad_pool_dataset_csv: mvp/diagnostics/run004_h169_risk_bad_pool_v2_decoded_backed_dataset.csv
+  feature_coverage_report_json: mvp/diagnostics/run004_h169_feature_coverage_report.json
+  risk_severity_report_json: mvp/diagnostics/run004_h169_risk_severity_report.json
+  return_accounting_report_json: mvp/diagnostics/run004_h169_return_accounting_report.json
+  dataset_quality_report_json: mvp/diagnostics/run004_h169_dataset_quality_report.json
+  markdown: mvp/runs/run-004-patch-h169-v2-decoded-backed-rebuild.md
+
+safety:
+  diagnostics_only: true
+  no_training: true
+  no_production_retrain: true
+  no_promote: true
+  no_live: true
+  no_v3_artifact_changes: true
+  no_mixed_v2_v3_artifact_changes: true
+  no_production_model_write: true
+  no_active_model_overwrite: true
+  not_full_strategy_backtest: true

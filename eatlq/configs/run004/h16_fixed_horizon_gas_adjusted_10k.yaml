@@ -1,0 +1,83 @@
+input_paths:
+  h15_live_like_ledger_csv: mvp/diagnostics/run004_h15_live_like_replay_ledger.csv
+  h15_bad_pool_forensic_json: mvp/diagnostics/run004_h15_bad_pool_forensic.json
+  h15_clean_risk_subset_report_json: mvp/diagnostics/run004_h15_clean_risk_subset_report.json
+  h15_return_schema_v2_json: mvp/diagnostics/run004_h15_return_schema_v2.json
+  h15_h16_readiness_plan_json: mvp/diagnostics/run004_h15_h16_readiness_plan.json
+  enriched_dataset_csv: mvp/diagnostics/run004_h108_enriched_executable_dataset.csv
+  h14_replay_ledger_csv: mvp/diagnostics/run004_h14_replay_ledger.csv
+
+clickhouse:
+  url: http://clickhouse:8123
+  database: eatlq
+  docker_container: eatlq-clickhouse-1
+  query_timeout_sec: 60
+  decoded_sources:
+    v2_table: uniswap_v2_swaps_decoded
+    v3_table: uniswap_v3_swaps_decoded
+    metadata_table: discovered_pools
+
+selection:
+  target_rows: 10000
+  v2_target_rows: 5000
+  v3_target_rows: 5000
+  min_unique_pools: 40
+  pool_cap_default: 250
+  pool_cap_focus: 150
+  top1_share_target_lte: 0.12
+  top5_share_target_lte: 0.45
+  non_top5_share_target_gte: 0.50
+  deterministic_sample_seed: run004_h16
+  focus_pools:
+    - "0x3e118916cd67cc9bfeb0fc44ae3dde8bc33c2d4a"
+    - "0x54219bce730d2727d91d8dcdf1465c7d299dee45"
+    - "0xc2476883d28d40b6c057f242fce2e8bda674faa0"
+
+labeling:
+  batch_size: 500
+  fixed_horizon_sec: 1800
+  require_rpc_env: true
+  rpc_env_vars:
+    - LABEL_RPC_URL
+    - EVM_HTTP_URL
+  estimated_rpc_calls_per_attempt: 50
+  execute_when_rpc_missing: false
+
+risk_severity:
+  hard_exclude:
+    - confirmed_bad_pool_candidate
+    - severe_quote_anomaly
+    - impossible_exit
+  soft_exclude:
+    - gas_cost_dominates
+  feature_limited:
+    - scale_or_decimals_risk
+  review_only:
+    - alpha_island_candidate
+    - quote_artifact_risk
+  clean:
+    - no_risk_flags
+
+outputs:
+  patch_json: mvp/diagnostics/run004_patch_h16_fixed_horizon_gas_adjusted_10k.json
+  candidate_selection_csv: mvp/diagnostics/run004_h16_candidate_selection_10k.csv
+  candidate_selection_report_json: mvp/diagnostics/run004_h16_candidate_selection_report.json
+  checkpoint_report_json: mvp/diagnostics/run004_h16_checkpoint_report.json
+  all_dataset_csv: mvp/diagnostics/run004_h16_all_fixed_horizon_gas_adjusted_dataset.csv
+  clean_alpha_dataset_csv: mvp/diagnostics/run004_h16_clean_alpha_dataset.csv
+  risk_bad_pool_dataset_csv: mvp/diagnostics/run004_h16_risk_bad_pool_dataset.csv
+  return_accounting_report_json: mvp/diagnostics/run004_h16_return_accounting_report.json
+  risk_severity_report_json: mvp/diagnostics/run004_h16_risk_severity_report.json
+  focus_pool_forensic_report_json: mvp/diagnostics/run004_h16_focus_pool_forensic_report.json
+  dataset_quality_report_json: mvp/diagnostics/run004_h16_dataset_quality_report.json
+  markdown: mvp/runs/run-004-patch-h16-fixed-horizon-gas-adjusted-10k.md
+
+safety:
+  diagnostics_only: true
+  no_training: true
+  no_production_retrain: true
+  no_promote: true
+  no_live: true
+  no_production_model_write: true
+  no_active_model_overwrite: true
+  not_full_strategy_backtest: true

@@ -1,0 +1,20 @@
+{
+  "launchpads": [
+    {"chain":"robinhood","launchpad_id":"noxa","launchpad_name":"NOXA Fun","protocol_family":"bonding_curve","canonical_platform":"NOXA Fun","status":"UNVERIFIED","research_priority":"P0"},
+    {"chain":"robinhood","launchpad_id":"pons","launchpad_name":"Pons","protocol_family":"bonding_curve","canonical_platform":"Pons","status":"UNVERIFIED","research_priority":"P0"},
+    {"chain":"robinhood","launchpad_id":"flap_robinhood","launchpad_name":"Flap.sh","protocol_family":"bonding_curve","canonical_platform":"Flap.sh","status":"UNVERIFIED","research_priority":"P0"},
+    {"chain":"base","launchpad_id":"clanker","launchpad_name":"Clanker","protocol_family":"social_factory","canonical_platform":"Clanker","status":"UNVERIFIED","research_priority":"P0"},
+    {"chain":"base","launchpad_id":"doppler","launchpad_name":"Doppler","protocol_family":"auction","canonical_platform":"Doppler","status":"UNVERIFIED","research_priority":"P0"},
+    {"chain":"base","launchpad_id":"flaunch","launchpad_name":"Flaunch","protocol_family":"fee_buyback","canonical_platform":"Flaunch","status":"UNVERIFIED","research_priority":"P0"},
+    {"chain":"robinhood","launchpad_id":"hood_fun","launchpad_name":"hood.fun","protocol_family":"bonding_curve","canonical_platform":"hood.fun","status":"UNVERIFIED","research_priority":"P0"},
+    {"chain":"solana","launchpad_id":"pump_fun","launchpad_name":"Pump.fun","protocol_family":"solana_curve","canonical_platform":"Pump.fun","status":"UNVERIFIED","research_priority":"P0"},
+    {"chain":"robinhood","launchpad_id":"long","launchpad_name":"LONG()","protocol_family":"auction","canonical_platform":"LONG()","status":"UNVERIFIED","research_priority":"P1"},
+    {"chain":"bnb","launchpad_id":"four_meme","launchpad_name":"Four.meme","protocol_family":"bonding_curve","canonical_platform":"Four.meme","status":"UNVERIFIED","research_priority":"P1"},
+    {"chain":"base","launchpad_id":"zora","launchpad_name":"Zora Coins","protocol_family":"creator_coin","canonical_platform":"Zora","status":"UNVERIFIED","research_priority":"P1"},
+    {"chain":"base","launchpad_id":"bankr","launchpad_name":"Bankr","protocol_family":"agent_router","canonical_platform":"Bankr","status":"UNVERIFIED","research_priority":"P1"},
+    {"chain":"solana","launchpad_id":"bags","launchpad_name":"Bags.fm","protocol_family":"social_royalty","canonical_platform":"Bags.fm","status":"UNVERIFIED","research_priority":"P1"},
+    {"chain":"solana","launchpad_id":"raydium_launchlab","launchpad_name":"Raydium LaunchLab","protocol_family":"solana_curve","canonical_platform":"Raydium","status":"UNVERIFIED","research_priority":"P1"},
+    {"chain":"base","launchpad_id":"virtuals","launchpad_name":"Virtuals / Genesis","protocol_family":"agent_launch","canonical_platform":"Virtuals","status":"UNVERIFIED","research_priority":"P1"}
+  ]
+}
+

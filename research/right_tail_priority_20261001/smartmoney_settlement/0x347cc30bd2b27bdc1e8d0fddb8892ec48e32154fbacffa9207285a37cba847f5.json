@@ -1,0 +1,13 @@
+{
+  "delay_seconds": 10,
+  "exit_policy": "24h",
+  "input_eth_raw": "10000000000000000",
+  "modeled_net_eth_raw": null,
+  "net_profit_certified": false,
+  "platform_fee_status": "NOT_SPECIFIED_SEPARATE_FROM_ONCHAIN_MODEL",
+  "source_block": 51955861,
+  "source_tx": "0x347cc30bd2b27bdc1e8d0fddb8892ec48e32154fbacffa9207285a37cba847f5",
+  "status": "MIXED_PROTOCOL_ADAPTER_PENDING",
+  "token": "0x21c0df05c2c84fb04c7f3339968b0dc216dd8222",
+  "wallet": "0x347ffc6db9acc54ac2019795173b9599e8b82bd9"
+}

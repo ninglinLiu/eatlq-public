@@ -1,0 +1,36 @@
+{
+  "strategy_id": "F03_VOL_FAKE_BREAK_FADE",
+  "family": "F03",
+  "name": "Failed breakout fade",
+  "parameter_search_space": {
+    "n": [
+      30,
+      60,
+      120
+    ],
+    "m": [
+      3,
+      5,
+      10
+    ],
+    "hold": [
+      5,
+      15
+    ],
+    "stop_ret": [
+      0.08,
+      0.12
+    ],
+    "tp_ret": [
+      0.06,
+      0.12
+    ]
+  },
+  "param_combo_count": 72,
+  "access_flags": {
+    "database_access_enabled": false,
+    "rpc_access_enabled": false,
+    "large_file_access_enabled": false,
+    "backtest_enabled": false
+  }
+}

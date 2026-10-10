@@ -1,0 +1,23 @@
+{
+  "alpha_id": "S01",
+  "family": "survival",
+  "hypothesis": "activity collapse predicts future inactivity",
+  "mechanism": "vanishing transactions reveal pool death",
+  "venue": "Base V3",
+  "universe": "active observed pools",
+  "horizon": "24h",
+  "data_source": "future activity and price path",
+  "experiment": "survival classification",
+  "feature": "count_z",
+  "direction": 1,
+  "prediction_object": "future activity",
+  "falsifier": "future activity is unrelated",
+  "status": "NOT_YET_TESTED",
+  "sample_size": 0,
+  "gross_result": "pending",
+  "cost_adjusted_result": "pending",
+  "capacity": "pending",
+  "concentration": "pending",
+  "tail_risk": "pending",
+  "next_action": "run rapid screen"
+}

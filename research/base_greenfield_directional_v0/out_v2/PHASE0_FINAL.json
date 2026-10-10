@@ -1,0 +1,374 @@
+{
+  "created_utc": "2026-07-20T10:15:20Z",
+  "role": "Base Greenfield V2 Orthogonal Directional Research Agent",
+  "phase": "PHASE_0_UNIVERSE_VIABILITY_CENSUS",
+  "verdict": "NO_VIABLE_BASE_NEW_POOL_UNIVERSE",
+  "promoted_universe": null,
+  "stop_research": true,
+  "alpha_models_trained": false,
+  "old_line_inputs_used": false,
+  "deploy_allowed": false,
+  "freeze_sha256": "b0fa7b1b823fe28f1168e552e5b6ac6d5a87c880f1fc1edb4fda5bda807ca3e7",
+  "viability_checks": {
+    "1-3d": {
+      "min_independent_opportunities": false,
+      "min_opportunities_per_week": false,
+      "min_pool_breadth": false,
+      "min_token_breadth": false,
+      "min_deployer_breadth": true,
+      "min_deployer_coverage": true,
+      "min_canonical_metadata_coverage": true,
+      "min_atomic_buy_success": false,
+      "min_current_atomic_sell_success": false,
+      "max_future_permanent_unsellable_rate": false,
+      "max_infrastructure_unknown_rate": false,
+      "min_future_sell_resolution_rate": true,
+      "min_production_depth_pass_rate": false,
+      "eligible_for_promotion": false
+    },
+    "1-6h": {
+      "min_independent_opportunities": false,
+      "min_opportunities_per_week": false,
+      "min_pool_breadth": false,
+      "min_token_breadth": false,
+      "min_deployer_breadth": true,
+      "min_deployer_coverage": true,
+      "min_canonical_metadata_coverage": true,
+      "min_atomic_buy_success": false,
+      "min_current_atomic_sell_success": true,
+      "max_future_permanent_unsellable_rate": false,
+      "max_infrastructure_unknown_rate": false,
+      "min_future_sell_resolution_rate": true,
+      "min_production_depth_pass_rate": false,
+      "eligible_for_promotion": false
+    },
+    "15-60m_NEGATIVE_CONTROL": {
+      "eligible_for_promotion": false,
+      "reason": "CLOSED_NEGATIVE_CONTROL"
+    },
+    "3-7d": {
+      "min_independent_opportunities": false,
+      "min_opportunities_per_week": false,
+      "min_pool_breadth": false,
+      "min_token_breadth": false,
+      "min_deployer_breadth": true,
+      "min_deployer_coverage": true,
+      "min_canonical_metadata_coverage": true,
+      "min_atomic_buy_success": false,
+      "min_current_atomic_sell_success": false,
+      "max_future_permanent_unsellable_rate": false,
+      "max_infrastructure_unknown_rate": false,
+      "min_future_sell_resolution_rate": true,
+      "min_production_depth_pass_rate": false,
+      "eligible_for_promotion": false
+    },
+    "6-24h": {
+      "min_independent_opportunities": false,
+      "min_opportunities_per_week": false,
+      "min_pool_breadth": false,
+      "min_token_breadth": false,
+      "min_deployer_breadth": true,
+      "min_deployer_coverage": true,
+      "min_canonical_metadata_coverage": true,
+      "min_atomic_buy_success": false,
+      "min_current_atomic_sell_success": false,
+      "max_future_permanent_unsellable_rate": false,
+      "max_infrastructure_unknown_rate": false,
+      "min_future_sell_resolution_rate": true,
+      "min_production_depth_pass_rate": false,
+      "eligible_for_promotion": false
+    }
+  },
+  "distribution_details": {
+    "1-3d": {
+      "concurrent_candidate_count": {
+        "n": 238,
+        "q05": 6.850000000000001,
+        "q25": 23.0,
+        "q50": 32.0,
+        "q75": 42.0,
+        "q95": 58.0
+      },
+      "entry_slippage": {
+        "n": 143,
+        "q05": 0.004483386126199374,
+        "q25": 0.02636823312235792,
+        "q50": 0.02765386832654171,
+        "q75": 0.027654826334855387,
+        "q95": 0.996984296800928
+      },
+      "current_exit_slippage": {
+        "n": 112,
+        "q05": 0.012259262968086677,
+        "q25": 0.5017597666093947,
+        "q50": 0.9717440285298172,
+        "q75": 0.9995092579183604,
+        "q95": 0.9999999999999615
+      },
+      "future_exit_slippage": {
+        "n": 112,
+        "q05": 0.012489408875588942,
+        "q25": 0.5133093153801183,
+        "q50": 0.9717440285298172,
+        "q75": 0.9995092579183604,
+        "q95": 0.9999999999999615
+      },
+      "executable_depth_weth": {
+        "n": 238,
+        "q05": 0.0,
+        "q25": 0.0,
+        "q50": 0.06666666666666667,
+        "q75": 0.06666666666666667,
+        "q95": 0.13333333333333333
+      },
+      "mfe_6h": {
+        "n": 22,
+        "q05": -0.013374331294578516,
+        "q25": 0.0,
+        "q50": 0.007149642523830759,
+        "q75": 0.16864156806210595,
+        "q95": 2.1690165509796344
+      },
+      "mae_6h": {
+        "n": 22,
+        "q05": -0.5811659421871073,
+        "q25": -0.09964501783213078,
+        "q50": -0.014799260049328003,
+        "q75": 0.0,
+        "q95": -0.0
+      }
+    },
+    "1-6h": {
+      "concurrent_candidate_count": {
+        "n": 228,
+        "q05": 4.350000000000001,
+        "q25": 19.0,
+        "q50": 26.5,
+        "q75": 38.25,
+        "q95": 53.64999999999998
+      },
+      "entry_slippage": {
+        "n": 140,
+        "q05": 0.0029815637386000128,
+        "q25": 0.013104097634994455,
+        "q50": 0.027574153323759454,
+        "q75": 0.02765482632738883,
+        "q95": 0.0771950962225377
+      },
+      "current_exit_slippage": {
+        "n": 124,
+        "q05": 0.0032417870162057883,
+        "q25": 0.020395085052648948,
+        "q50": 0.6342877708713466,
+        "q75": 0.9757180700989921,
+        "q95": 0.9999999999943463
+      },
+      "future_exit_slippage": {
+        "n": 103,
+        "q05": 0.010978173701236027,
+        "q25": 0.03611215722226019,
+        "q50": 0.8002241486592804,
+        "q75": 0.9879740674099264,
+        "q95": 0.9999999999999754
+      },
+      "executable_depth_weth": {
+        "n": 228,
+        "q05": 0.0,
+        "q25": 0.0,
+        "q50": 0.06666666666666667,
+        "q75": 0.06666666666666667,
+        "q95": 0.13333333333333333
+      },
+      "mfe_6h": {
+        "n": 98,
+        "q05": -0.02656367183854043,
+        "q25": 0.0,
+        "q50": 0.0,
+        "q75": 0.030898455102988873,
+        "q95": 0.39942502908133937
+      },
+      "mae_6h": {
+        "n": 98,
+        "q05": -2.255987202519521,
+        "q25": -0.1738663068295207,
+        "q50": -0.0007999600026663786,
+        "q75": 0.0,
+        "q95": 0.0001299935004332848
+      }
+    },
+    "15-60m_NEGATIVE_CONTROL": {
+      "concurrent_candidate_count": {
+        "n": 181,
+        "q05": 4.0,
+        "q25": 14.0,
+        "q50": 19.0,
+        "q75": 25.0,
+        "q95": 31.0
+      },
+      "entry_slippage": {
+        "n": 148,
+        "q05": 0.0007110866461495614,
+        "q25": 0.0035342049981339496,
+        "q50": 0.010585636998938497,
+        "q75": 0.026193665085239792,
+        "q95": 0.04952997864803786
+      },
+      "current_exit_slippage": {
+        "n": 145,
+        "q05": 0.0007010210319216004,
+        "q25": 0.003505204182189914,
+        "q50": 0.010553445440474984,
+        "q75": 0.026655554091273403,
+        "q95": 0.9923535856656797
+      },
+      "future_exit_slippage": {
+        "n": 76,
+        "q05": 0.0034571447422871715,
+        "q25": 0.013673355678534255,
+        "q50": 0.048396652666563234,
+        "q75": 0.8997218818118493,
+        "q95": 0.9999999999746554
+      },
+      "executable_depth_weth": {
+        "n": 181,
+        "q05": 0.0,
+        "q25": 0.06666666666666667,
+        "q50": 0.13333333333333333,
+        "q75": 0.13333333333333333,
+        "q95": 0.13333333333333333
+      },
+      "mfe_6h": {
+        "n": 142,
+        "q05": -0.008789560529296836,
+        "q25": 0.0007499625024997298,
+        "q50": 0.2549372533497415,
+        "q75": 0.7820358988566349,
+        "q95": 2.1472076414069434
+      },
+      "mae_6h": {
+        "n": 142,
+        "q05": -2.585015751366219,
+        "q25": -0.7886355688786326,
+        "q50": -0.15779211052594316,
+        "q75": -0.01432428379774484,
+        "q95": 0.0
+      }
+    },
+    "3-7d": {
+      "concurrent_candidate_count": {
+        "n": 243,
+        "q05": 6.100000000000001,
+        "q25": 23.0,
+        "q50": 32.0,
+        "q75": 43.0,
+        "q95": 58.89999999999998
+      },
+      "entry_slippage": {
+        "n": 99,
+        "q05": 0.004645302047622391,
+        "q25": 0.02724471423358249,
+        "q50": 0.027654640778380646,
+        "q75": 0.027654826334855387,
+        "q95": 0.9980958293441154
+      },
+      "current_exit_slippage": {
+        "n": 76,
+        "q05": 0.012744438704417327,
+        "q25": 0.6837405955065794,
+        "q50": 0.9745272637818413,
+        "q75": 0.9998709708341479,
+        "q95": 0.9999999999999847
+      },
+      "future_exit_slippage": {
+        "n": 76,
+        "q05": 0.012607477034893733,
+        "q25": 0.5121302096514888,
+        "q50": 0.9745272637818413,
+        "q75": 0.9998936947663095,
+        "q95": 0.9999999999999847
+      },
+      "executable_depth_weth": {
+        "n": 243,
+        "q05": 0.0,
+        "q25": 0.0,
+        "q50": 0.0,
+        "q75": 0.06666666666666667,
+        "q95": 0.13333333333333333
+      },
+      "mfe_6h": {
+        "n": 25,
+        "q05": -0.011959402039862357,
+        "q25": -9.999500033329732e-05,
+        "q50": 0.0,
+        "q75": 0.04239788014131807,
+        "q95": 1.513584322044985
+      },
+      "mae_6h": {
+        "n": 25,
+        "q05": -0.2578871058595738,
+        "q25": -0.0670966452236425,
+        "q50": -0.0003999800013331893,
+        "q75": 0.0,
+        "q95": -0.0
+      }
+    },
+    "6-24h": {
+      "concurrent_candidate_count": {
+        "n": 229,
+        "q05": 6.4,
+        "q25": 22.0,
+        "q50": 30.0,
+        "q75": 42.0,
+        "q95": 57.599999999999994
+      },
+      "entry_slippage": {
+        "n": 120,
+        "q05": 0.004075613069370559,
+        "q25": 0.026291648555788444,
+        "q50": 0.02765006591677005,
+        "q75": 0.027654826334855387,
+        "q95": 0.7851079983736607
+      },
+      "current_exit_slippage": {
+        "n": 99,
+        "q05": 0.011597352250832804,
+        "q25": 0.23116691294081027,
+        "q50": 0.9190951084205606,
+        "q75": 0.9979840855081054,
+        "q95": 0.9999999999999818
+      },
+      "future_exit_slippage": {
+        "n": 100,
+        "q05": 0.012195194139146798,
+        "q25": 0.3966722295498281,
+        "q50": 0.9241976150385163,
+        "q75": 0.9983528106963884,
+        "q95": 0.9999999999999808
+      },
+      "executable_depth_weth": {
+        "n": 229,
+        "q05": 0.0,
+        "q25": 0.0,
+        "q50": 0.0,
+        "q75": 0.06666666666666667,
+        "q95": 0.13333333333333333
+      },
+      "mfe_6h": {
+        "n": 48,
+        "q05": -0.02159892007199222,
+        "q25": -0.00012499375041662164,
+        "q50": 0.0,
+        "q75": 0.020348982567826003,
+        "q95": 0.8214589277380371
+      },
+      "mae_6h": {
+        "n": 48,
+        "q05": -0.38555572253511117,
+        "q25": -0.04652267390506658,
+        "q50": -0.0019499025064992977,
+        "q75": 0.0,
+        "q95": 0.0005549722518497992
+      }
+    }
+  }
+}

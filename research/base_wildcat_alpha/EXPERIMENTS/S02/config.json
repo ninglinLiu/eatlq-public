@@ -1,0 +1,23 @@
+{
+  "alpha_id": "S02",
+  "family": "survival",
+  "hypothesis": "thin participant breadth predicts downside tails",
+  "mechanism": "concentrated participation increases abandonment risk",
+  "venue": "Base V3",
+  "universe": "active observed pools",
+  "horizon": "24h",
+  "data_source": "future activity and price path",
+  "experiment": "disaster-veto screen",
+  "feature": "unique_sender_ratio",
+  "direction": 1,
+  "prediction_object": "future worst move",
+  "falsifier": "leave-one-token-out kills effect",
+  "status": "NOT_YET_TESTED",
+  "sample_size": 0,
+  "gross_result": "pending",
+  "cost_adjusted_result": "pending",
+  "capacity": "pending",
+  "concentration": "pending",
+  "tail_risk": "pending",
+  "next_action": "run rapid screen"
+}

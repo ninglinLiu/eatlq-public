@@ -1,0 +1,84 @@
+{
+  "curves": {
+    "0": {
+      "delay_sec": 0,
+      "mean_delayed_return": -0.38871734685561227,
+      "mean_source_episode_pnl_weth": null,
+      "mean_tax_source_minus_delayed": null,
+      "median_delayed_return": -0.40929669662747625,
+      "n": 3,
+      "top1_removed_mean": -0.4279418564364005,
+      "unrealizable": true
+    },
+    "1": {
+      "delay_sec": 1,
+      "mean_delayed_return": -0.006252675531175885,
+      "mean_source_episode_pnl_weth": null,
+      "mean_tax_source_minus_delayed": null,
+      "median_delayed_return": 0.015924677462920034,
+      "n": 3,
+      "top1_removed_mean": -0.054170870707547225,
+      "unrealizable": false
+    },
+    "10": {
+      "delay_sec": 10,
+      "mean_delayed_return": -0.03810924587524689,
+      "mean_source_episode_pnl_weth": null,
+      "mean_tax_source_minus_delayed": null,
+      "median_delayed_return": -0.07964503356929298,
+      "n": 3,
+      "top1_removed_mean": -0.10195572622365373,
+      "unrealizable": false
+    },
+    "120": {
+      "delay_sec": 120,
+      "mean_delayed_return": -0.3882364431173402,
+      "mean_source_episode_pnl_weth": null,
+      "mean_tax_source_minus_delayed": null,
+      "median_delayed_return": -0.40929669662747625,
+      "n": 3,
+      "top1_removed_mean": -0.42722050082899243,
+      "unrealizable": false
+    },
+    "3": {
+      "delay_sec": 3,
+      "mean_delayed_return": -0.006218811375260517,
+      "mean_source_episode_pnl_weth": null,
+      "mean_tax_source_minus_delayed": null,
+      "median_delayed_return": 0.016026269930666137,
+      "n": 3,
+      "top1_removed_mean": -0.05412007447367417,
+      "unrealizable": false
+    },
+    "30": {
+      "delay_sec": 30,
+      "mean_delayed_return": -0.15564718900071786,
+      "mean_source_episode_pnl_weth": null,
+      "mean_tax_source_minus_delayed": null,
+      "median_delayed_return": -0.03690137705522123,
+      "n": 3,
+      "top1_removed_mean": -0.22232907452981915,
+      "unrealizable": false
+    },
+    "60": {
+      "delay_sec": 60,
+      "mean_delayed_return": -0.2516362746591756,
+      "mean_source_episode_pnl_weth": null,
+      "mean_tax_source_minus_delayed": null,
+      "median_delayed_return": -0.2840233723044072,
+      "n": 3,
+      "top1_removed_mean": -0.34589007215441214,
+      "unrealizable": false
+    }
+  },
+  "generated_at": "2026-09-17T06:25:38+00:00",
+  "inconclusive_no_rpc": true,
+  "n_board_addresses": 846,
+  "n_entries_considered": 3,
+  "n_vendor_overlap_entries": 3,
+  "note": "0s / instant labels are unrealizable upper bounds. Atomic sell-sim skipped: INCONCLUSIVE_NO_RPC.",
+  "primary_reachable_delay_sec": 10,
+  "rpc_used": false,
+  "same_direction_copy_arm": "INCONCLUSIVE_SMALL_N",
+  "subset": "vendor_overlap"
+}

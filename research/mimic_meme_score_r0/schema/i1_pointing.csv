@@ -1,0 +1,2 @@
+event_id,contract_id,source,url,dated,t_point_unix,notes
+# SCHEMA: public pointer rows. dated=1 only with parseable timestamp. Social URL alone is dated=0.

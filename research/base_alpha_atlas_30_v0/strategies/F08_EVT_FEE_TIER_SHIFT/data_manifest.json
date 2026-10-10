@@ -1,0 +1,25 @@
+{
+  "strategy_id": "F08_EVT_FEE_TIER_SHIFT",
+  "data_class": "D_DATA_UNAVAILABLE",
+  "required_tables_or_files": [
+    "pair\u2194fee tier registry",
+    "per-tier volumes"
+  ],
+  "required_columns": [
+    "token0",
+    "token1",
+    "fee",
+    "hour",
+    "volume"
+  ],
+  "required_time_resolution": "1h",
+  "point_in_time_requirements": "PIT",
+  "minimum_history": ">=60d",
+  "estimated_rows": "UNKNOWN",
+  "estimated_read_bytes": "UNKNOWN",
+  "whether_current_diagnostics_may_support_it": "no clean registry file found by name in atlas inventory",
+  "whether_production_database_would_be_required": true,
+  "missing_data": [
+    "canonical pair registry"
+  ]
+}

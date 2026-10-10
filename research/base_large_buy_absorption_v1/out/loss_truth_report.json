@@ -1,0 +1,34 @@
+{
+  "generated_at": "2026-07-21T06:23:27Z",
+  "stake_weth": 0.016666666666666666,
+  "floor_pnl_weth": -0.015,
+  "classes": {
+    "infra_no_fill": {
+      "n": 64,
+      "pnl_primary_sum": -0.96,
+      "pnl_optimistic_sum": 0.0,
+      "pnl_worst_sum": -1.0666666666666667
+    },
+    "infra_or_unknown_route": {
+      "n": 7077,
+      "pnl_primary_sum": -106.15500000000003,
+      "pnl_optimistic_sum": -6.001276981022876,
+      "pnl_worst_sum": -117.94999999999999
+    },
+    "no_fill": {
+      "n": 17095,
+      "pnl_primary_sum": -256.42500000000007,
+      "pnl_optimistic_sum": 0.0,
+      "pnl_worst_sum": -284.91666666666663
+    },
+    "ok": {
+      "n": 500021,
+      "pnl_primary_sum": 191.2409716762513,
+      "pnl_optimistic_sum": 191.2409716762513,
+      "pnl_worst_sum": -7520.938097517432
+    }
+  },
+  "n_scorable": 517116,
+  "n_excluded_infra": 7141,
+  "verdict": "LOSS_TRUTH_OK"
+}

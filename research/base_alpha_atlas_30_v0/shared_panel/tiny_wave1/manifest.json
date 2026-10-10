@@ -1,0 +1,42 @@
+{
+  "panel_path": "/root/base_alpha_atlas_30_v0/shared_panel/tiny_wave1/base_alpha_atlas_tiny_wave1_panel.jsonl",
+  "format": "jsonl+csv",
+  "n_bars": 8419,
+  "n_pools": 30,
+  "pools_sample": [
+    "0x015d332d4ac61b0988059aee8a3f4afcbc187bb2",
+    "0x0243507e9dc076b02ee5bb595c73ffa53a29cbe3",
+    "0x03077403285ac80b5ea918b9a1533c0fcdebd070",
+    "0x03ee2f10f2da9f3ead00d5e982d78f94ab460577",
+    "0x04b3c0b670245b76bb26331e400e8a5dd2dc4e86",
+    "0x04f5590fda9da182e778c86420156d0757303e62",
+    "0x09715a557a980ddb65da96df59904216b76cee39",
+    "0x0a423a23c97ce0e4296d13c2b846f8b8b66085d6",
+    "0x0ce747ddfc402d86913922d5a14421c7bde68a68",
+    "0x0f4c24d00267d58ec9fad43a9df5a8ffeed3d542",
+    "0x1070aeff810e4d9d5bf6b5e17def7d7c9ee582ee",
+    "0x1275c89bf72266611e847d44f8655b224462ce22",
+    "0x12c826eaa2609b59afb0d68d1d762d23aa63f99e",
+    "0x132878e1d9f19ac183c10326e02bead090a8d933",
+    "0x13bb8ac7d0aa9c9c02fb13fa9483d0463a803729",
+    "0x14792111d6bd84fd812d09c92ff3bfe81bc797cc",
+    "0x170e956b28014818115b49d5d22f09db124e8150",
+    "0x18d2b4aaa5ffe6d9b7e9ae0da740a635474c969d",
+    "0x1bd518b703f2418d22fb3c823d4e85cf5cfaa5b2",
+    "0x1c3b672b0e7bf4eb799ec636e8bbc2f2b25b045e"
+  ],
+  "source": "normalized/wave1_probe extracts only",
+  "pit_fields": [
+    "event_time",
+    "known_at",
+    "feature_available_at",
+    "bar_close_time"
+  ],
+  "notes": [
+    "price from tick via 1.0001**tick (token1/token0 raw); not USD",
+    "volume_proxy incomplete for b5-only rows",
+    "NOT a production panel; Wave1 tiny subset only",
+    "backtest_enabled still false until separate authorization"
+  ],
+  "sha256": "49937534aeee70fd7c2d35b23116ca205c5e3703aedf07f3aee0dc205ef987b5"
+}

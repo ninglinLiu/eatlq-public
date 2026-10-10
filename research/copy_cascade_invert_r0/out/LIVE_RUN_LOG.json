@@ -1,0 +1,27 @@
+{
+  "GO": false,
+  "finished_at": "2026-09-17T07:20:16+00:00",
+  "started_at": "2026-09-17T06:48:59+00:00",
+  "steps": [
+    {
+      "head": 51419202,
+      "n_fail": 25,
+      "n_ok": 353,
+      "name": "reconstruct_base",
+      "ok": true
+    },
+    {
+      "name": "compare_base",
+      "ok": true,
+      "sign_agree_rate_7d": 0.8583569405099151,
+      "status": "LIVE_RECONCILED_WITH_GAPS"
+    },
+    {
+      "n": 12,
+      "n_agree": 5,
+      "name": "rpc_verify_base",
+      "ok": true
+    }
+  ],
+  "verdict": "VENDOR_LEDGER_GAP"
+}

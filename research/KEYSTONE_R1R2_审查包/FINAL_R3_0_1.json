@@ -1,0 +1,66 @@
+{
+  "r3_version": "r3.0.1-shadow",
+  "created_utc": "2026-07-20T05:43:31Z",
+  "r2_1_0": "ACCEPTED",
+  "r3_0_0": "SUPERSEDED_DESIGN",
+  "r3_0_1": "R3_SPECS_CONSISTENT_AWAITING_HUMAN_ARM",
+  "hash_resolution": {
+    "status": "RESOLVED",
+    "explanation": "e1c68... is SHA256 of r2.0.0 wrapper file frozen_f10_hgb.pkl, NOT the inner estimator of r21_f10_fullfit_operational.pkl. r21 artifact wrapper SHA is 9cf8.... Inner pickle bytes differ across wrappers, but predict_proba scores match exactly (max_abs_diff=0.0) on golden fixture.",
+    "operational_artifact_path": "/root/keystone_r2_atomic/out/r21_f10_fullfit_operational.pkl",
+    "artifact_sha256_expected": "9cf8fa1977f2e1523307516612bb3100ccdd63c89e14ba2e1d395074d0322dc5",
+    "inner_estimator_sha256_expected": "080bc21137e2d80986a99432e13d0fb00504a8e7df6098153c54421c56f6c1a3",
+    "inner_estimator_sha_is_applicable_as_e1c68": false,
+    "r20_wrapper_sha256": "e1c68ae160004cd80711a7ae5461ee1d3d8e1f4359aebf1f890c25b74c277c5c",
+    "r20_inner_estimator_sha256": "211abb77e8c685d1ff92c22c49e6d429e07354bf03dbebf2314d8c01ab897f12",
+    "behavior_equivalent_to_r20_wrapper_clf": true,
+    "golden_score_fixture_sha256": "27b776fecb3b4fd71cd6c045106a79d8eff85ae797fb9ab5a38276e400ec5580",
+    "primary_threshold": 0.8624456161522396
+  },
+  "oof_primary": {
+    "n_oof_scored": 149,
+    "n_oof_labeled": 147,
+    "n_oof_unknown": 2,
+    "n_accepted": 61,
+    "accept_rate": 0.41496598639455784,
+    "ev_accepted": 1.466614651024219,
+    "median": 1.093396951587256,
+    "ev_per_signal_skip0": 0.6085951953229753
+  },
+  "oof_controls": {
+    "V0": {
+      "n_oof_scored": 149,
+      "n_oof_labeled": 147,
+      "n_oof_unknown": 2,
+      "n_accepted": 147,
+      "accept_rate": 1.0,
+      "ev_accepted": 1.2421646159868143,
+      "median": 0.5943010571262954,
+      "ev_per_signal_skip0": 1.2421646159868143
+    },
+    "V1": {
+      "n_oof_scored": 149,
+      "n_oof_labeled": 147,
+      "n_oof_unknown": 2,
+      "n_accepted": 61,
+      "accept_rate": 0.41496598639455784,
+      "ev_accepted": 0.7425339089356089,
+      "median": 0.4114545461907735,
+      "ev_per_signal_skip0": 0.3081263159528717
+    },
+    "C0": {
+      "n_oof_scored": 149,
+      "n_oof_labeled": 147,
+      "n_oof_unknown": 2,
+      "n_accepted": 61,
+      "accept_rate": 0.41496598639455784,
+      "ev_accepted": 1.467472135225925,
+      "median": 0.8241793434512654,
+      "ev_per_signal_skip0": 0.6089510221005539
+    }
+  },
+  "paths": {
+    "prereg": "/root/keystone_r3_shadow/r3.0.1/R3_PREREGISTRATION.json",
+    "dir": "/root/keystone_r3_shadow/r3.0.1"
+  }
+}

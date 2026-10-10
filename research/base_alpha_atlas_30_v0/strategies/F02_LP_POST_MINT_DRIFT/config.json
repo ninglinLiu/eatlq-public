@@ -1,0 +1,36 @@
+{
+  "strategy_id": "F02_LP_POST_MINT_DRIFT",
+  "family": "F02",
+  "name": "Post-mint short-horizon drift",
+  "parameter_search_space": {
+    "mint_z_min": [
+      1.0,
+      1.5,
+      2.0
+    ],
+    "h_bars": [
+      5,
+      15,
+      30
+    ],
+    "stop_ret": [
+      0.1,
+      0.2
+    ],
+    "tp_ret": [
+      0.08,
+      0.15
+    ],
+    "min_mint_eth": [
+      0.5,
+      2.0
+    ]
+  },
+  "param_combo_count": 72,
+  "access_flags": {
+    "database_access_enabled": false,
+    "rpc_access_enabled": false,
+    "large_file_access_enabled": false,
+    "backtest_enabled": false
+  }
+}

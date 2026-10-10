@@ -1,0 +1,466 @@
+{
+  "generated_at": "2026-10-01T13:23:18.902960+00:00",
+  "limits": [
+    "same entry quantity, original exit timestamp and caller; no alternate price-selected route",
+    "shorter calldata/route can change hook behavior; cannot identify an exact internal cause",
+    "original unresolved denominator and all cash accounting remain unchanged"
+  ],
+  "n_mature_unresolved_exits": 8,
+  "qualification": "CALL_PREFIX_DIAGNOSTIC_NOT_CAUSAL_TRACE_OR_UNSELLABILITY_PROOF",
+  "rows": [
+    {
+      "first_failing_prefix": 2,
+      "first_failing_prefix_last_pool": "0x853f5f1b92b16714fe6cda67caad0856b83c7ab9",
+      "not_a_replacement_exit_or_profit_result": true,
+      "original_status": "SELL_SIMULATION_UNRESOLVED",
+      "source_tx": "0x116acd3083d796eed52ca49cf3059ee827d42e14a1ddc8e7405427c58bf1ab01",
+      "steps": [
+        {
+          "last_pool": "0xb688d7bb7288b92da03599f95b1d1c37885ee13262006ed7ec3efcb6f1afcdf1",
+          "last_protocol": "V4",
+          "origin": "SHORTENED_ROUTE_DIAGNOSTIC_ONLY",
+          "prefix_length": 1,
+          "simulation": {
+            "amount_raw": "5523891594398816694049060",
+            "base_fee_header_evidence": null,
+            "base_fee_wei": 5000000,
+            "block": 51652553,
+            "direction": "sell",
+            "evidence": {
+              "http_status": 200,
+              "key": "6cd2df95076cae698d288931da2ed9db022db58bd63ebb2363073926afd4eb32",
+              "rpc_error": null
+            },
+            "gas_model_note": "measured internal execution + intrinsic calldata + explicit 5000 dispatcher/return buffer; not a mined receipt",
+            "gas_model_units": 250524,
+            "intrinsic_gas": 23260,
+            "measured_internal_gas": 222264,
+            "per_leg_unspent_input_raw": [
+              "5523891594398816694049052"
+            ],
+            "received_raw": "0",
+            "simulation_context": "hypothetical executor with empty hookData; no persistent state change",
+            "spent_raw": "8",
+            "status": "HISTORICAL_TRANSFER_SETTLED_SIMULATION",
+            "timestamp": 1790094453
+          }
+        },
+        {
+          "last_pool": "0x853f5f1b92b16714fe6cda67caad0856b83c7ab9",
+          "last_protocol": "V3",
+          "origin": "SHORTENED_ROUTE_DIAGNOSTIC_ONLY",
+          "prefix_length": 2,
+          "simulation": {
+            "amount_raw": "5523891594398816694049060",
+            "block": 51652553,
+            "direction": "sell",
+            "evidence": {
+              "http_status": 200,
+              "key": "231dbf9ffc2dcb0c0294052d3a7412ddb16efb29ae4524cd0029a9bab4ef123d",
+              "rpc_error": {
+                "code": 3,
+                "data": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000087175616e74697479000000000000000000000000000000000000000000000000",
+                "message": "execution reverted: quantity"
+              }
+            },
+            "status": "SIMULATION_UNAVAILABLE_OR_REVERT"
+          }
+        }
+      ],
+      "token": "0xb200000000000000000000fa585878d4d738c101"
+    },
+    {
+      "first_failing_prefix": 1,
+      "first_failing_prefix_last_pool": "0x7d2613d09017fa5f11c0653b1bec85ee18107a5d773565a9b7a0bb11c34091c7",
+      "not_a_replacement_exit_or_profit_result": true,
+      "original_status": "SELL_SIMULATION_UNRESOLVED",
+      "source_tx": "0x6551d8cdec6e0ab147d10199c8e1c675a5dab5396cccaf07a2dba15722165bb0",
+      "steps": [
+        {
+          "last_pool": "0x7d2613d09017fa5f11c0653b1bec85ee18107a5d773565a9b7a0bb11c34091c7",
+          "last_protocol": "V4",
+          "origin": "SHORTENED_ROUTE_DIAGNOSTIC_ONLY",
+          "prefix_length": 1,
+          "simulation": {
+            "amount_raw": "801697396413402100868467",
+            "block": 51656077,
+            "direction": "sell",
+            "evidence": {
+              "http_status": 200,
+              "key": "61ee73a8a367d4af62c8a55770ccce551d23d73e82ce31dc184e7eeb9a085df2",
+              "rpc_error": {
+                "code": 3,
+                "data": "0x7c9c6e8f000000000000000000000000fffd8963efd1fc6a506488495d951d5263988d25000000000000000000000000fffd8963efd1fc6a506488495d951d5263988d25",
+                "message": "execution reverted"
+              }
+            },
+            "status": "SIMULATION_UNAVAILABLE_OR_REVERT"
+          }
+        }
+      ],
+      "token": "0x46324147ce37f551faec752084f9b51e05a33425"
+    },
+    {
+      "first_failing_prefix": 3,
+      "first_failing_prefix_last_pool": "0xd0b53d9277642d899df5c87a3966a349a798f224",
+      "not_a_replacement_exit_or_profit_result": true,
+      "original_status": "SELL_SIMULATION_UNRESOLVED",
+      "source_tx": "0x97b082ffa59e30b22bba7e16d3b65116cd7d4a202592fb95cc0f55bc003da1e9",
+      "steps": [
+        {
+          "last_pool": "0x052a8bd4832d50cdd4f0f515fbfcc371b2d2f8e0f251e8e76ecb4b2d6fd965fb",
+          "last_protocol": "V4",
+          "origin": "SHORTENED_ROUTE_DIAGNOSTIC_ONLY",
+          "prefix_length": 1,
+          "simulation": {
+            "amount_raw": "3863318602510901877442339",
+            "base_fee_header_evidence": null,
+            "base_fee_wei": 5000000,
+            "block": 51791132,
+            "direction": "sell",
+            "evidence": {
+              "http_status": 200,
+              "key": "c51c55a3c22b122557a54004991cb1e53ec6f4c877fc61179691d0275cd28890",
+              "rpc_error": null
+            },
+            "gas_model_note": "measured internal execution + intrinsic calldata + explicit 5000 dispatcher/return buffer; not a mined receipt",
+            "gas_model_units": 242030,
+            "intrinsic_gas": 23536,
+            "measured_internal_gas": 213494,
+            "per_leg_unspent_input_raw": [
+              "0"
+            ],
+            "received_raw": "87021227210166830",
+            "simulation_context": "hypothetical executor with empty hookData; no persistent state change",
+            "spent_raw": "3863318602510901877442339",
+            "status": "HISTORICAL_TRANSFER_SETTLED_SIMULATION",
+            "timestamp": 1790371611
+          }
+        },
+        {
+          "last_pool": "0x833391b3d68b80477c97df818565f57cc4d91b38c4a20e9cbfbee5702f908fbe",
+          "last_protocol": "V4",
+          "origin": "SHORTENED_ROUTE_DIAGNOSTIC_ONLY",
+          "prefix_length": 2,
+          "simulation": {
+            "amount_raw": "3863318602510901877442339",
+            "base_fee_header_evidence": null,
+            "base_fee_wei": 5000000,
+            "block": 51791132,
+            "direction": "sell",
+            "evidence": {
+              "http_status": 200,
+              "key": "bb53ba3bbbd098cd9d7b5ec50750cb2d98577f53ca5e8dda97ff9cec71602e07",
+              "rpc_error": null
+            },
+            "gas_model_note": "measured internal execution + intrinsic calldata + explicit 5000 dispatcher/return buffer; not a mined receipt",
+            "gas_model_units": 1219182,
+            "intrinsic_gas": 25100,
+            "measured_internal_gas": 1189082,
+            "per_leg_unspent_input_raw": [
+              "0",
+              "87021227210166830"
+            ],
+            "received_raw": "0",
+            "simulation_context": "hypothetical executor with empty hookData; no persistent state change",
+            "spent_raw": "3863318602510901877442339",
+            "status": "HISTORICAL_TRANSFER_SETTLED_SIMULATION",
+            "timestamp": 1790371611
+          }
+        },
+        {
+          "last_pool": "0xd0b53d9277642d899df5c87a3966a349a798f224",
+          "last_protocol": "V3",
+          "origin": "REUSE_ORIGINAL_FULL_ROUTE",
+          "prefix_length": 3,
+          "simulation": {
+            "amount_raw": "3863318602510901877442339",
+            "block": 51791132,
+            "direction": "sell",
+            "evidence": {
+              "http_status": 200,
+              "key": "cf211eb330aa8aea7462e956443298eb38b1b9a3c16501ee4244e08a308d6549",
+              "rpc_error": {
+                "code": 3,
+                "data": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000087175616e74697479000000000000000000000000000000000000000000000000",
+                "message": "execution reverted: quantity"
+              }
+            },
+            "status": "SIMULATION_UNAVAILABLE_OR_REVERT"
+          }
+        }
+      ],
+      "token": "0x366b11937eff8dfa59e347310a2f86e88821d222"
+    },
+    {
+      "first_failing_prefix": 1,
+      "first_failing_prefix_last_pool": "0xbbe3491582dd226bb35c6bc14afb825941390f45",
+      "not_a_replacement_exit_or_profit_result": true,
+      "original_status": "SELL_SIMULATION_UNRESOLVED",
+      "source_tx": "0xc26d2e566724afb4f18957130f055ec8092cf83cb270b267f715f9e4a8ac73ab",
+      "steps": [
+        {
+          "last_pool": "0xbbe3491582dd226bb35c6bc14afb825941390f45",
+          "last_protocol": "V3",
+          "origin": "SHORTENED_ROUTE_DIAGNOSTIC_ONLY",
+          "prefix_length": 1,
+          "simulation": {
+            "amount_raw": "99343728",
+            "block": 52015088,
+            "direction": "sell",
+            "evidence": {
+              "http_status": 200,
+              "key": "df60ffce1d513223da19b9a4965901d9418a3da779e470e43a5d423dfed2cc12",
+              "rpc_error": {
+                "code": 3,
+                "message": "execution reverted"
+              }
+            },
+            "status": "SIMULATION_UNAVAILABLE_OR_REVERT"
+          }
+        }
+      ],
+      "token": "0xb2000000000000000000007790ed6e48e06ed935"
+    },
+    {
+      "first_failing_prefix": 2,
+      "first_failing_prefix_last_pool": "0xbbe3491582dd226bb35c6bc14afb825941390f45",
+      "not_a_replacement_exit_or_profit_result": true,
+      "original_status": "SELL_SIMULATION_UNRESOLVED",
+      "source_tx": "0xea12fcf0b914039383d07efd40b8a3ba04c27ea196c2491b69c72ad8557dcfea",
+      "steps": [
+        {
+          "last_pool": "0xfc5093bf98ffa91c453a2f7869150a14c7b430acfaacd61483ad519420c6e047",
+          "last_protocol": "V4",
+          "origin": "SHORTENED_ROUTE_DIAGNOSTIC_ONLY",
+          "prefix_length": 1,
+          "simulation": {
+            "amount_raw": "4889010093939900746288112",
+            "base_fee_header_evidence": null,
+            "base_fee_wei": 5000000,
+            "block": 52015129,
+            "direction": "sell",
+            "evidence": {
+              "http_status": 200,
+              "key": "871c5d6377fed25e41196ad02d42a0fe970b3e08cd4e46736506c38bf9b0b192",
+              "rpc_error": null
+            },
+            "gas_model_note": "measured internal execution + intrinsic calldata + explicit 5000 dispatcher/return buffer; not a mined receipt",
+            "gas_model_units": 259205,
+            "intrinsic_gas": 23260,
+            "measured_internal_gas": 230945,
+            "per_leg_unspent_input_raw": [
+              "0"
+            ],
+            "received_raw": "84129998",
+            "simulation_context": "hypothetical executor with empty hookData; no persistent state change",
+            "spent_raw": "4889010093939900746288112",
+            "status": "HISTORICAL_TRANSFER_SETTLED_SIMULATION",
+            "timestamp": 1790819605
+          }
+        },
+        {
+          "last_pool": "0xbbe3491582dd226bb35c6bc14afb825941390f45",
+          "last_protocol": "V3",
+          "origin": "SHORTENED_ROUTE_DIAGNOSTIC_ONLY",
+          "prefix_length": 2,
+          "simulation": {
+            "amount_raw": "4889010093939900746288112",
+            "block": 52015129,
+            "direction": "sell",
+            "evidence": {
+              "http_status": 200,
+              "key": "82d818356fa9088c43dec5c2661c781ed6919da3bb6ababd78b6ce23e171638d",
+              "rpc_error": {
+                "code": 3,
+                "message": "execution reverted"
+              }
+            },
+            "status": "SIMULATION_UNAVAILABLE_OR_REVERT"
+          }
+        }
+      ],
+      "token": "0xb2000000000000000000009e9869c7a065bf8d01"
+    },
+    {
+      "first_failing_prefix": 2,
+      "first_failing_prefix_last_pool": "0xbbe3491582dd226bb35c6bc14afb825941390f45",
+      "not_a_replacement_exit_or_profit_result": true,
+      "original_status": "SELL_SIMULATION_UNRESOLVED",
+      "source_tx": "0x970e5f4db51303acd563f9777cc2fce590107a2c1b61a411063b5564da4f5961",
+      "steps": [
+        {
+          "last_pool": "0xfc5093bf98ffa91c453a2f7869150a14c7b430acfaacd61483ad519420c6e047",
+          "last_protocol": "V4",
+          "origin": "SHORTENED_ROUTE_DIAGNOSTIC_ONLY",
+          "prefix_length": 1,
+          "simulation": {
+            "amount_raw": "4888977871782477533248671",
+            "base_fee_header_evidence": null,
+            "base_fee_wei": 5000000,
+            "block": 52015132,
+            "direction": "sell",
+            "evidence": {
+              "http_status": 200,
+              "key": "c653281c76d4ce09c482822be8e5d7792d39a5eb5ae6f41c80d93b6434cfd841",
+              "rpc_error": null
+            },
+            "gas_model_note": "measured internal execution + intrinsic calldata + explicit 5000 dispatcher/return buffer; not a mined receipt",
+            "gas_model_units": 259205,
+            "intrinsic_gas": 23260,
+            "measured_internal_gas": 230945,
+            "per_leg_unspent_input_raw": [
+              "0"
+            ],
+            "received_raw": "84129446",
+            "simulation_context": "hypothetical executor with empty hookData; no persistent state change",
+            "spent_raw": "4888977871782477533248671",
+            "status": "HISTORICAL_TRANSFER_SETTLED_SIMULATION",
+            "timestamp": 1790819611
+          }
+        },
+        {
+          "last_pool": "0xbbe3491582dd226bb35c6bc14afb825941390f45",
+          "last_protocol": "V3",
+          "origin": "SHORTENED_ROUTE_DIAGNOSTIC_ONLY",
+          "prefix_length": 2,
+          "simulation": {
+            "amount_raw": "4888977871782477533248671",
+            "block": 52015132,
+            "direction": "sell",
+            "evidence": {
+              "http_status": 200,
+              "key": "08362ac3d147a76f148bd066b372923125f75032c537c8feca65eeb170c62fda",
+              "rpc_error": {
+                "code": 3,
+                "message": "execution reverted"
+              }
+            },
+            "status": "SIMULATION_UNAVAILABLE_OR_REVERT"
+          }
+        }
+      ],
+      "token": "0xb2000000000000000000009e9869c7a065bf8d01"
+    },
+    {
+      "first_failing_prefix": 2,
+      "first_failing_prefix_last_pool": "0x169995adcf6fe3d5c2fda949c1dfeba29f41e106",
+      "not_a_replacement_exit_or_profit_result": true,
+      "original_status": "SELL_SIMULATION_UNRESOLVED",
+      "source_tx": "0xc4c9aa3d4bb3953ad6ea825e81be2cdbeca3e5373680373db162205efe70a1ab",
+      "steps": [
+        {
+          "last_pool": "0xc1a365507ef3b6b79da9544171d04d85fdcc0afe1e246421ae7007c9bb8e5bbb",
+          "last_protocol": "V4",
+          "origin": "SHORTENED_ROUTE_DIAGNOSTIC_ONLY",
+          "prefix_length": 1,
+          "simulation": {
+            "amount_raw": "229558869412163782281671",
+            "base_fee_header_evidence": null,
+            "base_fee_wei": 5000000,
+            "block": 52015551,
+            "direction": "sell",
+            "evidence": {
+              "http_status": 200,
+              "key": "25a6cf3aa2f104e66ae7339b7e01f2252f7ab99f5b1c50feccfa85cdd708a143",
+              "rpc_error": null
+            },
+            "gas_model_note": "measured internal execution + intrinsic calldata + explicit 5000 dispatcher/return buffer; not a mined receipt",
+            "gas_model_units": 259997,
+            "intrinsic_gas": 23260,
+            "measured_internal_gas": 231737,
+            "per_leg_unspent_input_raw": [
+              "0"
+            ],
+            "received_raw": "638649",
+            "simulation_context": "hypothetical executor with empty hookData; no persistent state change",
+            "spent_raw": "229558869412163782281671",
+            "status": "HISTORICAL_TRANSFER_SETTLED_SIMULATION",
+            "timestamp": 1790820449
+          }
+        },
+        {
+          "last_pool": "0x169995adcf6fe3d5c2fda949c1dfeba29f41e106",
+          "last_protocol": "V3",
+          "origin": "SHORTENED_ROUTE_DIAGNOSTIC_ONLY",
+          "prefix_length": 2,
+          "simulation": {
+            "amount_raw": "229558869412163782281671",
+            "block": 52015551,
+            "direction": "sell",
+            "evidence": {
+              "http_status": 200,
+              "key": "29a592540071a1cddca1ba6c7dfb942a938f5317e0d10ed1bc684f9fddf9d457",
+              "rpc_error": {
+                "code": 3,
+                "message": "execution reverted"
+              }
+            },
+            "status": "SIMULATION_UNAVAILABLE_OR_REVERT"
+          }
+        }
+      ],
+      "token": "0xb200000000000000000000874f97ee8ebf639701"
+    },
+    {
+      "first_failing_prefix": 2,
+      "first_failing_prefix_last_pool": "0x169995adcf6fe3d5c2fda949c1dfeba29f41e106",
+      "not_a_replacement_exit_or_profit_result": true,
+      "original_status": "SELL_SIMULATION_UNRESOLVED",
+      "source_tx": "0x9186eead26c3158f6edcf8f96c394f8a20cffe57d2c317030302b0124925faed",
+      "steps": [
+        {
+          "last_pool": "0xc1a365507ef3b6b79da9544171d04d85fdcc0afe1e246421ae7007c9bb8e5bbb",
+          "last_protocol": "V4",
+          "origin": "SHORTENED_ROUTE_DIAGNOSTIC_ONLY",
+          "prefix_length": 1,
+          "simulation": {
+            "amount_raw": "322911864433293737025474",
+            "base_fee_header_evidence": null,
+            "base_fee_wei": 5000000,
+            "block": 52015574,
+            "direction": "sell",
+            "evidence": {
+              "http_status": 200,
+              "key": "353d856d67e70e3c101b9e36e188747f333faea6d3b00aea1e3a304a8930f4ec",
+              "rpc_error": null
+            },
+            "gas_model_note": "measured internal execution + intrinsic calldata + explicit 5000 dispatcher/return buffer; not a mined receipt",
+            "gas_model_units": 259997,
+            "intrinsic_gas": 23260,
+            "measured_internal_gas": 231737,
+            "per_leg_unspent_input_raw": [
+              "0"
+            ],
+            "received_raw": "898278",
+            "simulation_context": "hypothetical executor with empty hookData; no persistent state change",
+            "spent_raw": "322911864433293737025474",
+            "status": "HISTORICAL_TRANSFER_SETTLED_SIMULATION",
+            "timestamp": 1790820495
+          }
+        },
+        {
+          "last_pool": "0x169995adcf6fe3d5c2fda949c1dfeba29f41e106",
+          "last_protocol": "V3",
+          "origin": "SHORTENED_ROUTE_DIAGNOSTIC_ONLY",
+          "prefix_length": 2,
+          "simulation": {
+            "amount_raw": "322911864433293737025474",
+            "block": 52015574,
+            "direction": "sell",
+            "evidence": {
+              "http_status": 200,
+              "key": "e3ab38222f0a474e728318a19e51a573ade460157bfa2ac80191ba9053fe9243",
+              "rpc_error": {
+                "code": 3,
+                "message": "execution reverted"
+              }
+            },
+            "status": "SIMULATION_UNAVAILABLE_OR_REVERT"
+          }
+        }
+      ],
+      "token": "0xb200000000000000000000874f97ee8ebf639701"
+    }
+  ]
+}

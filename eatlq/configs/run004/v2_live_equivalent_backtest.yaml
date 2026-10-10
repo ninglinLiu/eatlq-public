@@ -1,0 +1,108 @@
+scope:
+  patch: run-004-v2-live-equivalent-backtest
+  pool_type: v2
+  diagnostics_only: true
+  no_training_until_invariants_pass: true
+  no_h19: true
+  no_shadow: true
+  no_live: true
+  no_promote: true
+  no_production_model_write: true
+  no_active_model_overwrite: true
+
+rpc:
+  env_vars:
+    - LABEL_RPC_URL
+    - EVM_HTTP_URL
+  chain_id: 8453
+  timeout_sec: 60
+  max_retries: 4
+  retry_backoff_sec: 0.5
+  rate_limit_sleep_sec: 0.03
+
+universe:
+  method: uniswap_v2_factory_paircreated
+  factory: "0x8909Dc15e40173Ff4699343b6eB8132c65e18eC6"
+  pair_created_topic0: "0x0d3648bd0f6ba80134a33ba9275ac585d9d315f0ad8355cddefde31afa28d0e9"
+  fallback_known_pool_csv: mvp/diagnostics/run004_h1611_all_v2_decoded_backed_10k_dataset.csv
+  fallback_is_biased_baseline_only: true
+  full_factory_scan_required_for_formal_backtest: true
+
+factory_scan:
+  from_block: 0
+  to_block: latest
+  chunk_size: 9999
+  checkpoint_path: mvp/diagnostics/run004_v2_factory_paircreated_universe_checkpoint.json
+  resume: true
+  max_rpc_retries: 4
+  rate_limit_sleep_sec: 0.03
+  validation_sample_n: 50
+  deterministic_seed: 42
+
+swap_semantics:
+  swap_topic0: "0xd78ad95fa46c994b6551d0da85fc275fe613ce37657fb8d5e3d130840159d822"
+  weth: "0x4200000000000000000000000000000000000006"
+  positive_control_n: 20
+  deterministic_seed: 42
+
+horizon:
+  policy: timestamp_30m_first_block_at_or_after_target
+  exit_horizon_sec: 1800
+  entry_quote_block_policy: entry_block_minus_1
+  exit_quote_block_policy: exit_block
+  fixed_block_horizon_allowed_only_as_sensitivity: true
+
+execution:
+  notional_wei: 500000000000000
+  lp_fee_bps: 30
+  round_trip_cost: 0.006
+  slippage_stress_bps: 100
+  gas:
+    include_gas: true
+    gas_price_gwei_medium: 0.03
+    buy_units: 180000
+    sell_units: 160000
+    approval_units: 50000
+  sanity:
+    min_weth_reserve_wei: 100000000000000000
+    max_abs_net_return: 10.0
+    quarantine_abs_net_return_gt: 1.0
+
+features:
+  group: combined_microstructure_no_raw_vol
+  cutoff_policy: feature_max_timestamp_lte_entry_timestamp
+  windows_sec: [60, 180, 300, 900, 1800]
+  banned_columns:
+    - final_return_after_cost
+    - alpha_top20_after_gas
+    - gross_quote_return_30m
+    - fixed_cost_adjusted_return_30m
+    - gas_adjusted_return_30m_low
+    - gas_adjusted_return_30m_medium
+    - gas_adjusted_return_30m_high
+    - executable_label_after_gas
+    - executable_label_current
+    - final_return_rank
+    - within_pool_return_rank
+
+walk_forward:
+  minimum_oot_windows: 3
+  preferred_train_days: 30
+  preferred_test_days: 7
+  fallback_train_days: 7
+  fallback_test_days: 1
+  minimum_train_rows: 500
+  minimum_test_rows: 100
+  pool_caps: [0.10, 0.15, 0.20]
+
+outputs:
+  summary_json: mvp/diagnostics/run004_v2_live_equivalent_backtest_summary.json
+  markdown: mvp/runs/run-004-v2-live-equivalent-backtest.md
+  factory_universe_csv: mvp/diagnostics/run004_v2_factory_paircreated_universe.csv
+  factory_universe_summary_json: mvp/diagnostics/run004_v2_factory_paircreated_universe_summary.json
+  factory_universe_markdown: mvp/runs/run-004-v2-factory-paircreated-universe-scan.md
+  log_dir: logs/backtest
+  dashcam_csv: logs/backtest/run004_v2_live_equivalent_dashcam.csv
+  signals_jsonl: logs/backtest/run004_v2_live_equivalent_signals.jsonl
+  trades_csv: logs/backtest/run004_v2_live_equivalent_trades.csv
+

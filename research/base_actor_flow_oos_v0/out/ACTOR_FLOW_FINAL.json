@@ -1,0 +1,32 @@
+{
+  "phase": "ACTOR_FLOW_OOS_V0",
+  "information_verdict": "PROSPECTIVE_CONFIRMATION_REQUIRED",
+  "copy_verdict": "COPY_EDGE_GO",
+  "deploy_allowed": false,
+  "best_arm": "WHALE_EVENT",
+  "best_incremental_vs_pool_only_weth": 12.854891724712182,
+  "pool_only_pnl_weth": 25.395326166081354,
+  "gate": {
+    "passed": true,
+    "sampled_error_rate": 0.0,
+    "unresolved_coverage": 0.014613403716915774,
+    "resolvable_scorable_coverage": 0.9853865962830842,
+    "audit_mode": "debug_trace"
+  },
+  "scorecard_path": "/root/base_actor_flow_oos_v0/out/oos/scorecard.csv",
+  "generated_at": "2026-07-20T16:26:59Z",
+  "hypothesis": "Can resolvable Base V3 economic-actor behavior, after controlling for pool structure, add incremental, post-latency, capturable information?",
+  "hard_bans_honored": [
+    "abs_pnl_ranking",
+    "winrate_top_n",
+    "winner_only",
+    "eoa_only_force",
+    "trigger_price_trailing_as_proof",
+    "mfe_as_primary_target",
+    "top1_profit_share_lt_50_on_tiny_window",
+    "router_as_subject",
+    "n_addresses_as_n_people",
+    "KEYSTONE_scores",
+    "expand_search_after_failure"
+  ]
+}

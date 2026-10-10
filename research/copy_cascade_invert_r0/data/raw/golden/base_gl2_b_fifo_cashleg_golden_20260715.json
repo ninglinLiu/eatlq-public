@@ -1,0 +1,202 @@
+{
+  "alpha_id": "AR-GL2-B-SMARTMONEY",
+  "checks": [
+    {
+      "block_number": 46390759,
+      "integer_equal": true,
+      "log_index": 261,
+      "pool": "0x875b81f0e9907f764a99b22ae93ce666ccc4d6b7",
+      "receipt_pool_weth_transfer_net_raw_signed": -50999683630,
+      "swap_weth_raw_signed": -50999683630,
+      "tx_hash": "0x3735302cab49a5e8792c9f00af502ea4edf41e18de5ed21395222d54bf03691b"
+    },
+    {
+      "block_number": 46390829,
+      "integer_equal": true,
+      "log_index": 357,
+      "pool": "0x875b81f0e9907f764a99b22ae93ce666ccc4d6b7",
+      "receipt_pool_weth_transfer_net_raw_signed": 9950000000000,
+      "swap_weth_raw_signed": 9950000000000,
+      "tx_hash": "0xfc1fa3824fd063af5cb7544025238d05a17a91e1210975900613b746594775f4"
+    },
+    {
+      "block_number": 46391195,
+      "integer_equal": true,
+      "log_index": 49,
+      "pool": "0x875b81f0e9907f764a99b22ae93ce666ccc4d6b7",
+      "receipt_pool_weth_transfer_net_raw_signed": -10200819187,
+      "swap_weth_raw_signed": -10200819187,
+      "tx_hash": "0xcc64539f9ea170c19f63a0459de2177563b00460b17ee19818723a21fadd07b5"
+    },
+    {
+      "block_number": 46393198,
+      "integer_equal": true,
+      "log_index": 460,
+      "pool": "0xfad49a477dbe5ab16f7f2c9374c23a967d367952",
+      "receipt_pool_weth_transfer_net_raw_signed": 79900000000000000,
+      "swap_weth_raw_signed": 79900000000000000,
+      "tx_hash": "0x3c4beb9ce97ec2a510754873295a5ee1ea2dd1d2faca0434691674a2c58ddbbd"
+    },
+    {
+      "block_number": 46393747,
+      "integer_equal": true,
+      "log_index": 410,
+      "pool": "0xfad49a477dbe5ab16f7f2c9374c23a967d367952",
+      "receipt_pool_weth_transfer_net_raw_signed": 20000000000000000,
+      "swap_weth_raw_signed": 20000000000000000,
+      "tx_hash": "0x0ca088d1954fca24b0634e7f3dd5fc6ecab4c97ba9918d0c98f19104feae528f"
+    },
+    {
+      "block_number": 46397312,
+      "integer_equal": true,
+      "log_index": 418,
+      "pool": "0x875b81f0e9907f764a99b22ae93ce666ccc4d6b7",
+      "receipt_pool_weth_transfer_net_raw_signed": -536381797262,
+      "swap_weth_raw_signed": -536381797262,
+      "tx_hash": "0x091d2c626dcba485d0666f2ade839e3379862e4bd0fdd7c60e8b3318314aaa68"
+    },
+    {
+      "block_number": 46399803,
+      "integer_equal": true,
+      "log_index": 582,
+      "pool": "0xfad49a477dbe5ab16f7f2c9374c23a967d367952",
+      "receipt_pool_weth_transfer_net_raw_signed": 60200000000000000,
+      "swap_weth_raw_signed": 60200000000000000,
+      "tx_hash": "0xf6a9b564e8945be4cf6488b095ec1fe878ae7fc8167af9be9898b4280dfcac4d"
+    },
+    {
+      "block_number": 46399884,
+      "integer_equal": true,
+      "log_index": 202,
+      "pool": "0xfad49a477dbe5ab16f7f2c9374c23a967d367952",
+      "receipt_pool_weth_transfer_net_raw_signed": -17195778045996791,
+      "swap_weth_raw_signed": -17195778045996791,
+      "tx_hash": "0xc366bbc5035c494938eaa067d8d752ead357c77800a483ab8b116bf5e34d2488"
+    },
+    {
+      "block_number": 46400459,
+      "integer_equal": true,
+      "log_index": 352,
+      "pool": "0x875b81f0e9907f764a99b22ae93ce666ccc4d6b7",
+      "receipt_pool_weth_transfer_net_raw_signed": 497500000000,
+      "swap_weth_raw_signed": 497500000000,
+      "tx_hash": "0x143ee3f1fc2e78e2e099caae3905ac04f9dcd33c444b578b7343bf782efaad35"
+    },
+    {
+      "block_number": 46400800,
+      "integer_equal": true,
+      "log_index": 225,
+      "pool": "0xfad49a477dbe5ab16f7f2c9374c23a967d367952",
+      "receipt_pool_weth_transfer_net_raw_signed": -53988644653697725,
+      "swap_weth_raw_signed": -53988644653697725,
+      "tx_hash": "0xa322bc3c314a41f5e490663fde3869c583dce3930ed2081ac729b42ba0c88ed7"
+    },
+    {
+      "block_number": 46401383,
+      "integer_equal": true,
+      "log_index": 187,
+      "pool": "0xfad49a477dbe5ab16f7f2c9374c23a967d367952",
+      "receipt_pool_weth_transfer_net_raw_signed": 50000000000000000,
+      "swap_weth_raw_signed": 50000000000000000,
+      "tx_hash": "0xc73d10d4853a76941a088adee3ca62207920328f4157b7e04dd3669f08ed6a6d"
+    },
+    {
+      "block_number": 46402079,
+      "integer_equal": true,
+      "log_index": 903,
+      "pool": "0xfad49a477dbe5ab16f7f2c9374c23a967d367952",
+      "receipt_pool_weth_transfer_net_raw_signed": 69900000000000000,
+      "swap_weth_raw_signed": 69900000000000000,
+      "tx_hash": "0x7af1c7936eab2cc57c922624d10819d01ff0e39c2c3afe9517bf284dab891777"
+    },
+    {
+      "block_number": 46402880,
+      "integer_equal": true,
+      "log_index": 16,
+      "pool": "0x875b81f0e9907f764a99b22ae93ce666ccc4d6b7",
+      "receipt_pool_weth_transfer_net_raw_signed": 9950000000000,
+      "swap_weth_raw_signed": 9950000000000,
+      "tx_hash": "0x1885056cfbb5b4ffc80f47570f387739314c0995da6b9c6e36b8853a57a1cc29"
+    },
+    {
+      "block_number": 46405832,
+      "integer_equal": true,
+      "log_index": 493,
+      "pool": "0xfad49a477dbe5ab16f7f2c9374c23a967d367952",
+      "receipt_pool_weth_transfer_net_raw_signed": 75400000000000000,
+      "swap_weth_raw_signed": 75400000000000000,
+      "tx_hash": "0xcd31ef024b7790d5451eadda2aa17231863246d39caed016f2c586e6b2a64d5b"
+    },
+    {
+      "block_number": 46406259,
+      "integer_equal": true,
+      "log_index": 371,
+      "pool": "0xfad49a477dbe5ab16f7f2c9374c23a967d367952",
+      "receipt_pool_weth_transfer_net_raw_signed": -39403971285575259,
+      "swap_weth_raw_signed": -39403971285575259,
+      "tx_hash": "0x117f530d824e0e08a7669259530b8d34c8bb2852f9fbad097cac3fea1ba74e53"
+    },
+    {
+      "block_number": 46407556,
+      "integer_equal": true,
+      "log_index": 783,
+      "pool": "0x875b81f0e9907f764a99b22ae93ce666ccc4d6b7",
+      "receipt_pool_weth_transfer_net_raw_signed": 497500000000,
+      "swap_weth_raw_signed": 497500000000,
+      "tx_hash": "0x398aac0e760e23ad39dbc0a4b4315e030a5ae58d7040cf5057323e49c7862880"
+    },
+    {
+      "block_number": 46407967,
+      "integer_equal": true,
+      "log_index": 564,
+      "pool": "0x875b81f0e9907f764a99b22ae93ce666ccc4d6b7",
+      "receipt_pool_weth_transfer_net_raw_signed": 3980000000000,
+      "swap_weth_raw_signed": 3980000000000,
+      "tx_hash": "0x1d06f6da8c912f213f85c987d0025f66cdfbc14aeb8c3cb1a90203a0af6d4027"
+    },
+    {
+      "block_number": 46409580,
+      "integer_equal": true,
+      "log_index": 604,
+      "pool": "0xfad49a477dbe5ab16f7f2c9374c23a967d367952",
+      "receipt_pool_weth_transfer_net_raw_signed": 50000000000000000,
+      "swap_weth_raw_signed": 50000000000000000,
+      "tx_hash": "0xb8593effdf99bcbed7ccd049848cf9a43b70ede56e47b33acb845b68b23c341c"
+    },
+    {
+      "block_number": 46409601,
+      "integer_equal": true,
+      "log_index": 588,
+      "pool": "0xfad49a477dbe5ab16f7f2c9374c23a967d367952",
+      "receipt_pool_weth_transfer_net_raw_signed": -33591800632924923,
+      "swap_weth_raw_signed": -33591800632924923,
+      "tx_hash": "0x8fc619f87ce12840a077722cabbd89e5db6c0d058aa53b20c53cdfa891b89816"
+    },
+    {
+      "block_number": 46411327,
+      "integer_equal": true,
+      "log_index": 504,
+      "pool": "0xfad49a477dbe5ab16f7f2c9374c23a967d367952",
+      "receipt_pool_weth_transfer_net_raw_signed": 100000000000000000,
+      "swap_weth_raw_signed": 100000000000000000,
+      "tx_hash": "0x9698c870f47a48109088f5814e4d6adc6f9f4b373b5371c97444a20855a6a9a5"
+    }
+  ],
+  "frozen_stage1_sha256": "b80d466a71ea4ed1b9b4e4f59a56485e3b0e426fc0d503483e33bf6f315b8f7b",
+  "golden_wallets": 5,
+  "no_go": true,
+  "research_only": true,
+  "rpc_ledger": {
+    "endpoint_alias": "prettiest-blue-aura",
+    "methods": {
+      "eth_getTransactionReceipt": 20
+    },
+    "rpc_batch_calls": 1,
+    "secrets_recorded": false
+  },
+  "schema_version": 1,
+  "target_balance_checks": 20,
+  "weth_cash_leg_checks": 20,
+  "weth_cash_leg_gate": true,
+  "weth_cash_leg_integer_equal_n": 20
+}

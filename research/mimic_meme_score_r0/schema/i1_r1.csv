@@ -1,0 +1,2 @@
+event_id,contract_id,role,i1_create_order,i1_pointing,t_point_unix,t_attach_unix,point_before_attach,rationale
+# SCHEMA: I1 overlay. Does not rewrite R0 scores.csv. i1_pointing=高 only if dated and t_point < t_attach.

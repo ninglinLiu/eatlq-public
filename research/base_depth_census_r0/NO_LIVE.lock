@@ -1,0 +1,10 @@
+NO_LIVE
+research_only=true
+live_trading=FORBIDDEN
+signing=FORBIDDEN
+broadcast=FORBIDDEN
+eth_sendRawTransaction=FORBIDDEN
+approve/swap/LP/bridge=FORBIDDEN
+allowed=[read-only RPC, eth_call, state-override simulation, read-only ClickHouse]
+max_status=INSTRUMENT_FACT
+created=2026-08-17

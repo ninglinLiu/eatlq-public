@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="240" viewBox="0 0 960 240" fill="none">
+  <defs>
+    <style>
+      .bg { fill: #0B0E14; }
+      .track { stroke: #2A2F36; stroke-width: 3; }
+      .done { fill: #4CAF50; }
+      .active { fill: #F5A623; }
+      .t { fill: #FFF; font: 600 11px Inter, sans-serif; }
+      .s { fill: #9E9E9E; font: 400 10px Inter, sans-serif; }
+      .title { fill: #9E9E9E; font: 600 11px Inter, sans-serif; letter-spacing: 0.12em; }
+      .sub { fill: #D1D5DB; font: 500 12px Inter, sans-serif; }
+    </style>
+  </defs>
+  <rect width="960" height="240" class="bg" rx="10"/>
+  <text x="32" y="28" class="title">DELIVERY ROADMAP</text>
+  <line x1="64" y1="110" x2="896" y2="110" class="track"/>
+
+  <circle cx="80" cy="110" r="10" class="done"/><text x="58" y="78" class="t">P1</text><text x="48" y="142" class="s">Foundation</text>
+  <circle cx="220" cy="110" r="10" class="done"/><text x="198" y="78" class="t">P2</text><text x="192" y="142" class="s">Ingestion</text>
+  <circle cx="360" cy="110" r="10" class="done"/><text x="338" y="78" class="t">P3</text><text x="328" y="142" class="s">Strategy</text>
+  <circle cx="500" cy="110" r="10" class="done"/><text x="478" y="78" class="t">P4</text><text x="468" y="142" class="s">Execution</text>
+  <circle cx="640" cy="110" r="10" class="done"/><text x="618" y="78" class="t">P5</text><text x="608" y="142" class="s">Risk stack</text>
+  <circle cx="880" cy="110" r="12" class="active"/><text x="852" y="78" class="t">Now</text><text x="824" y="142" class="s">Alpha calibration</text>
+
+  <text x="32" y="196" class="sub">Shipped: end-to-end pipeline on Base L2 · In progress: model calibration under real market data</text>
+</svg>

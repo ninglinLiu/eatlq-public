@@ -1,0 +1,15 @@
+{
+  "n_rows": 2601,
+  "n_formal": 2057,
+  "split_counts": {
+    "DEV": 1709,
+    "LABEL_DESIGN": 504,
+    "UNTOUCHED": 198,
+    "INTERNAL_HOLDOUT": 190
+  },
+  "split_salt": "V4_RESEAL_20260720_ORTHOGONAL",
+  "v3_confirmation_ids_flagged": 521,
+  "n_burned_moved_to_dev": 426,
+  "parent_phase": "V3_NARROW_MARKET_RESCUE",
+  "source_feature_matrix": "out_v3/features/feature_matrix.parquet"
+}

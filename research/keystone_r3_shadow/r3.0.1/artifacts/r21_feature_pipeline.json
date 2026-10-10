@@ -1,0 +1,27 @@
+{
+  "name": "r21_f10_feature_pipeline",
+  "features_out": [
+    "impact_residual",
+    "ineffective_buying",
+    "liq_fragility_score",
+    "part_exhaust_score",
+    "accel"
+  ],
+  "residualizer_sha256": "f1bac1f2df92f8ac84279a1e669502a5b6740965751603a19c203c2563378133",
+  "residualizer_json_sha256": "e12ca23f8ec823948f9bad602c16571a2b26da95c3bcd103fc159b499ce56383",
+  "sequence_n": 6,
+  "sequence_window_seconds": 600,
+  "bar_sec": 100,
+  "market_control_lag_days": 1,
+  "day_boundary": "UTC",
+  "numpy_version": "2.4.4",
+  "pandas_version": "3.0.2",
+  "sklearn_version": "1.8.0",
+  "python_version": "3.12.3",
+  "code_refs": {
+    "r2_pipeline": "/root/keystone_r2_atomic/src/r2_pipeline.py",
+    "r2_pipeline_sha256": "d7ac693341099bfd87dbc8291607e4c6b1efd135f7602c25d265319a0e9b5dd0",
+    "build_r301": "/root/keystone_r2_atomic/src/build_r3_0_1_shadow.py",
+    "build_r301_sha256": "e4c09c14332951b6afaa13f7cea6e1291b81c0f2bcfc65d2a2ed2a2e132e5355"
+  }
+}

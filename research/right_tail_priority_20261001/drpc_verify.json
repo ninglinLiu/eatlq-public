@@ -1,0 +1,26 @@
+[
+  {
+    "bytes": 124,
+    "error": null,
+    "http_status": 429,
+    "key": "c2e0b12802d115d970d03ee167d789cddbe54d9578fffecdec41a4e763c690d6",
+    "label": "drpc_verify",
+    "response_head": "{'id': 1, 'jsonrpc': '2.0', 'error': {'message': 'You reached Public endpoint rate limit, please upgrade to paid plan', 'code': 15}}"
+  },
+  {
+    "bytes": 124,
+    "error": null,
+    "http_status": 429,
+    "key": "eb487724a207c9e9161b08060c6dafa5d561594b00a7c0bf44790a8c657764f1",
+    "label": "drpc_verify",
+    "response_head": "{'id': 1, 'jsonrpc': '2.0', 'error': {'message': 'You reached Public endpoint rate limit, please upgrade to paid plan', 'code': 15}}"
+  },
+  {
+    "bytes": 296,
+    "error": null,
+    "http_status": 200,
+    "key": "b4b85db9649d726b62e7605b15149a6f61f6617c914758402dd4f5abd6dd4acd",
+    "label": "drpc_verify",
+    "response_head": "{'id': 1, 'jsonrpc': '2.0', 'error': {'code': -32000, 'message': 'Your request has been rate-limited due to unusually high traffic on the Alchemy public API. Consider creating a free Alchemy account or upgrading to a paid plan for guaranteed throughput, even in times of extraordinary request traffic.'}}"
+  }
+]

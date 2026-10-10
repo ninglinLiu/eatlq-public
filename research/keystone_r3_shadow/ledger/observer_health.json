@@ -1,0 +1,31 @@
+{
+  "status": "RUNNING",
+  "utc": "2026-10-10T06:06:00Z",
+  "counts": {
+    "candidates": 0,
+    "wrote": 0,
+    "ks_fail": 0,
+    "fric_fail": 0,
+    "retry": 0,
+    "other": 0,
+    "process_failed": 0
+  },
+  "seen_n": 112,
+  "shadow": true,
+  "decision_impact": false,
+  "pid": 1459680,
+  "lifetime": {
+    "first_utc": "2026-09-13T08:53:18Z",
+    "wrote": 8,
+    "ks_fail": 80,
+    "fric_fail": 24,
+    "retry": 16227,
+    "other": 0,
+    "process_failed": 0,
+    "candidate_cycles": 11454,
+    "candidates_total": 17337,
+    "updated_utc": "2026-10-10T06:06:00Z"
+  },
+  "instrument_status": "OK",
+  "ledger_n": 8
+}

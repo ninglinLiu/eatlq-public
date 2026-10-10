@@ -1,0 +1,59 @@
+{
+  "adapter": "MIXED_REGISTERED_FACTORY_V1",
+  "buy": {
+    "amount_raw": "10000000000000000",
+    "base_fee_header_evidence": null,
+    "base_fee_wei": 35874923,
+    "block": 51993230,
+    "direction": "buy",
+    "evidence": {
+      "http_status": 200,
+      "key": "151510970a4ed8ef3a6461edfe25698e5fb6e14ecde1c93c8eae13bd27d9566c",
+      "rpc_error": null
+    },
+    "gas_model_note": "measured internal execution + intrinsic calldata + explicit 5000 dispatcher/return buffer; not a mined receipt",
+    "gas_model_units": 2269958,
+    "intrinsic_gas": 26796,
+    "measured_internal_gas": 2238162,
+    "per_leg_unspent_input_raw": [
+      "0",
+      "0",
+      "0"
+    ],
+    "received_raw": "1214081798502183711227249",
+    "simulation_context": "hypothetical executor with empty hookData; no persistent state change",
+    "spent_raw": "10000000000000000",
+    "status": "HISTORICAL_TRANSFER_SETTLED_SIMULATION",
+    "timestamp": 1790775807
+  },
+  "buy_fees": {
+    "assumptions": "historical base fee; 0.01 gwei tip; measured gas+intrinsic+5000; unsigned type-2 nonce 0 L1 fee estimate; excludes deployment and adverse transaction ordering",
+    "evidence": {
+      "http_status": 200,
+      "key": "7ed5eb8ff575b505d1c7c293878583dcd0e7c90c4dca31d64f4fbf0ce22b7a32",
+      "rpc_error": null
+    },
+    "gas_model_units": 2269958,
+    "l1_fee_model_raw": "28208239779",
+    "l2_fee_model_raw": "104134148463234",
+    "operator_fee_model_raw": "0",
+    "priority_fee_assumption_wei": 10000000,
+    "total_fee_model_raw": "104162356703013"
+  },
+  "delay_seconds": 10,
+  "execution_venue": "SELF_BUILT_DIRECT_EXECUTOR",
+  "exit_policy": "24h",
+  "input_eth_raw": "10000000000000000",
+  "modeled_net_eth_raw": null,
+  "net_profit_certified": false,
+  "observation_cutoff": 1790858863,
+  "operating_cost_status": "RPC_SERVER_DEPLOYMENT_NOT_AMORTIZED",
+  "platform_fee_model_raw": "0",
+  "platform_fee_status": "NO_THIRD_PARTY_ROUTER_COMMISSION_BY_DESIGN",
+  "scheduled_exit_timestamp": 1790862207.0,
+  "source_block": 51993225,
+  "source_tx": "0x95bbd56d9faeb6686a7ae1955b8750b89cd66aab7de8004ccac86dc61feaf406",
+  "status": "EXIT_HORIZON_NOT_YET_OBSERVED",
+  "token": "0x0051aa0caa461df303ca7a0e8da41fe680361222",
+  "wallet": "0x217946e128c1b9c7f8c3f16b33878a908713923a"
+}

@@ -1,0 +1,12 @@
+ABSOLUTE_NO_LIVE
+
+This workspace is permanently read-only with respect to chains, exchanges,
+wallets, protocols, and order-routing systems.
+
+LIVE_TRADING = FORBIDDEN
+REAL_ORDERS_SENT = 0
+REAL_TRANSACTIONS_SIGNED = 0
+REAL_CAPITAL_AT_RISK = 0
+HIGHEST_ALLOWED_STATE = SHADOW_CANDIDATE
+CREATED = 2026-08-17
+REASON = F03 atomic backtest is archive eth_call only. No signer, no broadcast, no executor, no modification of /opt/EATLQ live, wildcat, keystone, or greenfield conclusions.

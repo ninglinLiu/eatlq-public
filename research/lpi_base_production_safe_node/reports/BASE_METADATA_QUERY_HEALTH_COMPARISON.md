@@ -1,0 +1,247 @@
+# Base Metadata Query Health Comparison
+
+## Before
+```json
+{
+  "decision": {
+    "snapshot": {
+      "clickhouse_active_merges": 0,
+      "clickhouse_active_queries_excl_self": 0,
+      "containers": {
+        "eatlq-archiver-1": {
+          "restart_count": 0,
+          "restart_growth": false,
+          "state": "running"
+        },
+        "eatlq-clickhouse-1": {
+          "restart_count": 0,
+          "restart_growth": false,
+          "state": "running"
+        },
+        "eatlq-executor-1": {
+          "restart_count": 0,
+          "restart_growth": false,
+          "state": "running"
+        },
+        "eatlq-ingestor-1": {
+          "restart_count": 0,
+          "restart_growth": false,
+          "state": "running"
+        },
+        "eatlq-postgres-1": {
+          "restart_count": 0,
+          "restart_growth": false,
+          "state": "running"
+        },
+        "eatlq-redis-1": {
+          "restart_count": 0,
+          "restart_growth": false,
+          "state": "running"
+        },
+        "eatlq-signal-bridge-1": {
+          "restart_count": 0,
+          "restart_growth": false,
+          "state": "running"
+        },
+        "eatlq-swap-poller-1": {
+          "restart_count": 0,
+          "restart_growth": false,
+          "state": "running"
+        }
+      },
+      "disk_free_bytes": 115818754048,
+      "executor_pending": 0,
+      "load_1m": 5.85,
+      "mem_available_kb": 17418396,
+      "notes": [],
+      "nproc": 8,
+      "swap_used_kb": 2237468,
+      "timestamp_utc": "2026-07-17T14:13:27Z",
+      "unknown_fields": []
+    },
+    "status": "SAFE_TO_PROCEED",
+    "triggers": []
+  },
+  "snapshot": {
+    "clickhouse_active_merges": 0,
+    "clickhouse_active_queries_excl_self": 0,
+    "containers": {
+      "eatlq-archiver-1": {
+        "restart_count": 0,
+        "restart_growth": false,
+        "state": "running"
+      },
+      "eatlq-clickhouse-1": {
+        "restart_count": 0,
+        "restart_growth": false,
+        "state": "running"
+      },
+      "eatlq-executor-1": {
+        "restart_count": 0,
+        "restart_growth": false,
+        "state": "running"
+      },
+      "eatlq-ingestor-1": {
+        "restart_count": 0,
+        "restart_growth": false,
+        "state": "running"
+      },
+      "eatlq-postgres-1": {
+        "restart_count": 0,
+        "restart_growth": false,
+        "state": "running"
+      },
+      "eatlq-redis-1": {
+        "restart_count": 0,
+        "restart_growth": false,
+        "state": "running"
+      },
+      "eatlq-signal-bridge-1": {
+        "restart_count": 0,
+        "restart_growth": false,
+        "state": "running"
+      },
+      "eatlq-swap-poller-1": {
+        "restart_count": 0,
+        "restart_growth": false,
+        "state": "running"
+      }
+    },
+    "disk_free_bytes": 115818754048,
+    "executor_pending": 0,
+    "load_1m": 5.85,
+    "mem_available_kb": 17418396,
+    "notes": [],
+    "nproc": 8,
+    "swap_used_kb": 2237468,
+    "timestamp_utc": "2026-07-17T14:13:27Z",
+    "unknown_fields": []
+  }
+}
+```
+
+## After
+```json
+{
+  "decision": {
+    "snapshot": {
+      "clickhouse_active_merges": 1,
+      "clickhouse_active_queries_excl_self": 0,
+      "containers": {
+        "eatlq-archiver-1": {
+          "restart_count": 0,
+          "restart_growth": false,
+          "state": "running"
+        },
+        "eatlq-clickhouse-1": {
+          "restart_count": 0,
+          "restart_growth": false,
+          "state": "running"
+        },
+        "eatlq-executor-1": {
+          "restart_count": 0,
+          "restart_growth": false,
+          "state": "running"
+        },
+        "eatlq-ingestor-1": {
+          "restart_count": 0,
+          "restart_growth": false,
+          "state": "running"
+        },
+        "eatlq-postgres-1": {
+          "restart_count": 0,
+          "restart_growth": false,
+          "state": "running"
+        },
+        "eatlq-redis-1": {
+          "restart_count": 0,
+          "restart_growth": false,
+          "state": "running"
+        },
+        "eatlq-signal-bridge-1": {
+          "restart_count": 0,
+          "restart_growth": false,
+          "state": "running"
+        },
+        "eatlq-swap-poller-1": {
+          "restart_count": 0,
+          "restart_growth": false,
+          "state": "running"
+        }
+      },
+      "disk_free_bytes": 115819589632,
+      "executor_pending": 0,
+      "load_1m": 5.85,
+      "mem_available_kb": 17647556,
+      "notes": [],
+      "nproc": 8,
+      "swap_used_kb": 2236700,
+      "timestamp_utc": "2026-07-17T14:13:30Z",
+      "unknown_fields": []
+    },
+    "status": "BLOCKED_LIVE_PRIORITY",
+    "triggers": [
+      "clickhouse_active_merges=1"
+    ]
+  },
+  "snapshot": {
+    "clickhouse_active_merges": 1,
+    "clickhouse_active_queries_excl_self": 0,
+    "containers": {
+      "eatlq-archiver-1": {
+        "restart_count": 0,
+        "restart_growth": false,
+        "state": "running"
+      },
+      "eatlq-clickhouse-1": {
+        "restart_count": 0,
+        "restart_growth": false,
+        "state": "running"
+      },
+      "eatlq-executor-1": {
+        "restart_count": 0,
+        "restart_growth": false,
+        "state": "running"
+      },
+      "eatlq-ingestor-1": {
+        "restart_count": 0,
+        "restart_growth": false,
+        "state": "running"
+      },
+      "eatlq-postgres-1": {
+        "restart_count": 0,
+        "restart_growth": false,
+        "state": "running"
+      },
+      "eatlq-redis-1": {
+        "restart_count": 0,
+        "restart_growth": false,
+        "state": "running"
+      },
+      "eatlq-signal-bridge-1": {
+        "restart_count": 0,
+        "restart_growth": false,
+        "state": "running"
+      },
+      "eatlq-swap-poller-1": {
+        "restart_count": 0,
+        "restart_growth": false,
+        "state": "running"
+      }
+    },
+    "disk_free_bytes": 115819589632,
+    "executor_pending": 0,
+    "load_1m": 5.85,
+    "mem_available_kb": 17647556,
+    "notes": [],
+    "nproc": 8,
+    "swap_used_kb": 2236700,
+    "timestamp_utc": "2026-07-17T14:13:30Z",
+    "unknown_fields": []
+  }
+}
+```
+
+## Interpretation
+
+Pre-gate was SAFE (load had fallen). After schema inventory, `system.merges` showed 1 active merge → `BLOCKED_LIVE_PRIORITY`. No business-table probe was attempted. Restart counts unchanged in snapshots.

@@ -1,0 +1,15 @@
+{
+  "hypothesis_id": "H_HARD_FATAL_VETO",
+  "n_oof": 1101,
+  "n_selected": 306,
+  "feature_cols": [
+    "liq_drawdown",
+    "depth_proxy",
+    "buy_ok_proxy",
+    "infra_lag_s",
+    "executable_depth_weth",
+    "flow_persist_score",
+    "early_ret",
+    "pre_vol"
+  ]
+}

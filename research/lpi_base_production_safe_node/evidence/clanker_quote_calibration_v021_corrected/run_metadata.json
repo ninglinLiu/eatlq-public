@@ -1,0 +1,25 @@
+{
+  "backfill_gate_changed": false,
+  "combined_network_attempt_cap": 200,
+  "created_at_utc": "2026-07-17T18:44:27Z",
+  "database_probe_gate_changed": false,
+  "docker_accessed": false,
+  "network_boundary": "PUBLIC_BASE_RPC_ONLY",
+  "prior_run_network_attempts": 85,
+  "production_clickhouse_accessed": false,
+  "production_redis_accessed": false,
+  "rpc_endpoint": "https://mainnet.base.org",
+  "rpc_endpoint_class": "public_base_http",
+  "run_id": "clanker_quote_calibration_v021",
+  "source_commit": "cd4c31a52c2b0ac07895e6643f5f0d8f28fa2644",
+  "source_evidence_hashes": {
+    "labels.json": "6cb129ffe5173b4e02b876132257c59e663b3cf5ff8c884e4ff583487afe413b",
+    "launches.json": "f35335d150a0e0501d0ba9e198e4cbb1198820667a4898aef1b6796813709aac",
+    "rpc_journal.json": "c5cdac89b21295a84aaaa29d3c77619235a0634ee9621eebddcf6251c6c0ae76",
+    "swaps_by_pool.json": "fd62ea249ef2bdb50284564c4c8252ca4f35fc40814c987493c9f78510911a5e"
+  },
+  "source_v02_evidence_commit": "cf65a01",
+  "supersedes_incomplete_crosscheck_run": "evidence/clanker_quote_calibration_v021",
+  "transaction_submission_capability": false,
+  "wallet_or_signing_accessed": false
+}

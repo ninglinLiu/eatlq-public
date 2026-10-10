@@ -1,0 +1,190 @@
+{
+  "affected_source_txs": [
+    "0x2faeadd305a3ee7688bd7e2e8d93a30f4e60ab37550fdeb3ceabf2d83f8b903e",
+    "0x0275d05f4acbea125229243dfb247110963326310f78441438c6e660ac5d5637",
+    "0xa08a254ccdbb7491fd19096eabf3d9a433d4b0574ffaaaf479d209af1a394089",
+    "0xaf78038242de794bdd4b91b7f4bead8275c40bb55570b79b9847fbd8ed7be92c"
+  ],
+  "factory": "0x02a84c1b3bbd7401a5f7fa98a384ebc70bb5749e",
+  "factory_document_evidence": "e255ffd551ce907d32bb7b9c0c84d8b5e7683b5755a808cc9e446d939dd9844c",
+  "generated_at": "2026-10-01T13:22:18.850711+00:00",
+  "n_affected": 4,
+  "pool_metadata": [
+    {
+      "block": 51623701,
+      "canonical_pancake": false,
+      "evidence": {
+        "http_status": 200,
+        "key": "b55913d17fdba91dd8b3571a433da914967ae39cee5aad7de35836220c1b1add",
+        "rpc_error": {
+          "code": 3,
+          "message": "execution reverted"
+        }
+      },
+      "factory": null,
+      "pool": "0x04573631468b5cd09fcb397f165476f4075e01bb"
+    },
+    {
+      "block": 51623845,
+      "canonical_pancake": false,
+      "evidence": {
+        "http_status": 200,
+        "key": "7480e0880ea4743d1683e8eeb6cbd22423659bec77c0a39e1ff8ed1dd60b4a58",
+        "rpc_error": {
+          "code": 3,
+          "message": "execution reverted"
+        }
+      },
+      "factory": null,
+      "pool": "0x0497bb1b56184f6f0db94763805f347f2e9ad608"
+    },
+    {
+      "block": 51623944,
+      "canonical_pancake": true,
+      "evidence": {
+        "http_status": 200,
+        "key": "3c4ac04aa91cc141eef8ff61dc7446823c9dd57b2f9ee333cad914800aac2a60",
+        "rpc_error": null
+      },
+      "factory": "0x02a84c1b3bbd7401a5f7fa98a384ebc70bb5749e",
+      "pool": "0x0ca83c6816bba50add784a422ea54540e4ca3803"
+    },
+    {
+      "block": 51834281,
+      "canonical_pancake": false,
+      "evidence": {
+        "http_status": 200,
+        "key": "83292388feef0f42b3d06188c6124c808f440c4c4ad24b5f1e44a05977a79780",
+        "rpc_error": {
+          "code": 3,
+          "message": "execution reverted"
+        }
+      },
+      "factory": null,
+      "pool": "0x64db355dd853bca60ff2ddb84549559db609aee1"
+    },
+    {
+      "block": 51688363,
+      "canonical_pancake": false,
+      "evidence": {
+        "http_status": 200,
+        "key": "8911655fffa72f14d97d5f16970edd19552ad306285d0749efa4d3c1494d62dd",
+        "rpc_error": null
+      },
+      "factory": "0x8909dc15e40173ff4699343b6eb8132c65e18ec6",
+      "pool": "0x7bbd445f2a1948c8fce783efa5959800d17d947c"
+    },
+    {
+      "block": 51624025,
+      "canonical_pancake": false,
+      "evidence": {
+        "http_status": 200,
+        "key": "afc740acdcccfe6aa89ec22f168e5f9680aa310e7a0cac5db8375950a5d4bd85",
+        "rpc_error": {
+          "code": 3,
+          "message": "execution reverted"
+        }
+      },
+      "factory": null,
+      "pool": "0x7f8c4a302fab30467c48c42c3aec6be91a914f63"
+    },
+    {
+      "block": 51607363,
+      "canonical_pancake": false,
+      "evidence": {
+        "http_status": 200,
+        "key": "594cebf6e5caeb001079b7fd4c9f8b2cf0718fb1e76ad66721d7f00189b30a18",
+        "rpc_error": null
+      },
+      "factory": "0x8909dc15e40173ff4699343b6eb8132c65e18ec6",
+      "pool": "0x88a43bbdf9d098eec7bceda4e2494615dfd9bb9c"
+    },
+    {
+      "block": 51623718,
+      "canonical_pancake": false,
+      "evidence": {
+        "http_status": 200,
+        "key": "9791646832225a3265cd23baff463f7f495a0bf92bcc7698743538e3db97e07b",
+        "rpc_error": {
+          "code": 3,
+          "message": "execution reverted"
+        }
+      },
+      "factory": null,
+      "pool": "0x987e4a73b963af6cf3d8a311f82c4dba8aa7fbfc"
+    },
+    {
+      "block": 51623939,
+      "canonical_pancake": false,
+      "evidence": {
+        "http_status": 200,
+        "key": "a97477eea2b75b23e00fe871a316d98e2c9a833fe27d5799c43e759ba3593ccb",
+        "rpc_error": {
+          "code": 3,
+          "message": "execution reverted"
+        }
+      },
+      "factory": null,
+      "pool": "0x9df9f98e2b9916af38931019ad058120480ef0e8"
+    },
+    {
+      "block": 51659671,
+      "canonical_pancake": false,
+      "evidence": {
+        "http_status": 200,
+        "key": "06743e90004cd64c11706677a0ff65f80e53103da42e2a5e9e981a2f9dae7a8c",
+        "rpc_error": null
+      },
+      "factory": "0x8909dc15e40173ff4699343b6eb8132c65e18ec6",
+      "pool": "0xa02c88a496abc5c568fabcd0cf7fbb915f842ca0"
+    },
+    {
+      "block": 51784033,
+      "canonical_pancake": false,
+      "evidence": {
+        "http_status": 200,
+        "key": "35a32f7fd1357d5aea03e54aa0e47ecfc534993e9f1d3b9332245a742177c3a1",
+        "rpc_error": {
+          "code": 3,
+          "message": "execution reverted"
+        }
+      },
+      "factory": null,
+      "pool": "0xb5dbebc4a5815eca5166c70249782ce5fc597f6d"
+    },
+    {
+      "block": 51920166,
+      "canonical_pancake": false,
+      "evidence": {
+        "http_status": 200,
+        "key": "378a04ec543f5507826136fc662c3823de9c97b3917eda80d403d385d59b352c",
+        "rpc_error": {
+          "code": 3,
+          "message": "execution reverted"
+        }
+      },
+      "factory": null,
+      "pool": "0xd6c2d40d7747f8505086e3aac9d3f37a08fdcb9f"
+    },
+    {
+      "block": 51690668,
+      "canonical_pancake": false,
+      "evidence": {
+        "http_status": 200,
+        "key": "7b0c275da88b112cc71a571f6beacc812ba85fe117c4defb6a48ff538339c392",
+        "rpc_error": null
+      },
+      "factory": "0x8909dc15e40173ff4699343b6eb8132c65e18ec6",
+      "pool": "0xea8b7ed6170e0ea3703dde6b496b065a8ececd7b"
+    }
+  ],
+  "pools": [
+    "0x0ca83c6816bba50add784a422ea54540e4ca3803"
+  ],
+  "registered_fee": {
+    "denominator": 10000,
+    "numerator": 9975
+  },
+  "selection": "historical source-witnessed protocol identity, independent of model PnL",
+  "verified_pair_evidence": "7795691d8fe6cbf25545939e36171de71d25fd390f0c52349c71fd262d84b3c8"
+}

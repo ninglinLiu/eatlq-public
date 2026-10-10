@@ -1,0 +1,23 @@
+{
+  "strategy_id": "F05_REG_GAS_CONGESTION",
+  "data_class": "D_DATA_UNAVAILABLE",
+  "required_tables_or_files": [
+    "base fee L2 series",
+    "basket prices"
+  ],
+  "required_columns": [
+    "block_time",
+    "base_fee",
+    "pool prices"
+  ],
+  "required_time_resolution": "1h or block",
+  "point_in_time_requirements": "PIT",
+  "minimum_history": ">=30d",
+  "estimated_rows": "fee series small; basket larger",
+  "estimated_read_bytes": "UNKNOWN",
+  "whether_current_diagnostics_may_support_it": "no dedicated fee parquet found by name",
+  "whether_production_database_would_be_required": true,
+  "missing_data": [
+    "Base L2 base_fee historical archive in-project"
+  ]
+}

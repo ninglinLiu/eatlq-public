@@ -1,0 +1,46 @@
+{
+  "hypothesis_id": "H_FLOW_PERSIST",
+  "n_folds": 4,
+  "feature_cols": [
+    "flow_persist_score",
+    "active_minutes_pre_feat",
+    "n_swaps_pre",
+    "trade_count_imbalance",
+    "buys_10m",
+    "sells_10m",
+    "net_flow",
+    "age_s"
+  ],
+  "fold_stats": [
+    {
+      "fold": 1,
+      "n_test": 254,
+      "n_selected": 76,
+      "mean_utility": -0.23062931929896094,
+      "selected_pnl": -0.15427518368534043
+    },
+    {
+      "fold": 2,
+      "n_test": 255,
+      "n_selected": 78,
+      "mean_utility": -0.3000780740497142,
+      "selected_pnl": -0.3024159012456792
+    },
+    {
+      "fold": 3,
+      "n_test": 254,
+      "n_selected": 76,
+      "mean_utility": -0.23561096127450157,
+      "selected_pnl": -0.3937952521268204
+    },
+    {
+      "fold": 4,
+      "n_test": 254,
+      "n_selected": 76,
+      "mean_utility": -0.20661745462211556,
+      "selected_pnl": -0.22341378085897948
+    }
+  ],
+  "n_oof": 1017,
+  "n_selected": 306
+}

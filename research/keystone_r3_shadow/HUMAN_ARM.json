@@ -1,0 +1,17 @@
+{
+  "r3_version": "r3.0.1-shadow",
+  "clock_started": true,
+  "armed_by": "user",
+  "armed_utc": "2026-08-21T02:05:00Z",
+  "authorization": "User said 开 in chat 2026-08-20/21. Shadow only. capital=0. decision_impact=false. Does not emit Redis BUY. Does not call executor. Does not change production Keystone.",
+  "ack_hash_resolution": true,
+  "ack_no_grouped_outcome_peek": true,
+  "ack_evaluation_trigger_frozen": true,
+  "start_block_exclusive": 48868407,
+  "notes": [
+    "HASH_RESOLUTION.json: e1c68 is r2.0.0 wrapper; operational artifact is 9cf8 r21_f10_fullfit_operational.pkl; golden max_abs=0.0",
+    "No grouped pass/fail PnL, interim F10 delta, or significance until evaluation_trigger",
+    "Evaluate once at min_total_labeled=200, min_f10_pass=50, min_f10_fail=50, min_calendar_weeks=8, or hard_end 2026-12-31",
+    "July 20–ARM gap is not backfilled; LATE_BACKFILL excluded from confirmatory sample"
+  ]
+}

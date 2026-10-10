@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="280" viewBox="0 0 720 280" fill="none">
+  <defs>
+    <style>
+      .bg { fill: #0B0E14; }
+      .rust { fill: #11151C; stroke: #CE422B; stroke-opacity: 0.6; }
+      .py { fill: #11151C; stroke: #3776AB; stroke-opacity: 0.6; }
+      .redis { fill: #11151C; stroke: #DC382D; stroke-opacity: 0.6; }
+      .t { fill: #FFF; font: 700 16px Inter; }
+      .s { fill: #9E9E9E; font: 400 11px Inter; }
+      .title { fill: #9E9E9E; font: 600 11px Inter; letter-spacing: 0.12em; }
+      .core { fill: #F5A623; font: 700 13px Inter; }
+    </style>
+  </defs>
+  <rect width="720" height="280" class="bg" rx="10"/>
+  <text x="32" y="28" class="title">HYBRID ARCHITECTURE · RUST SHELL · PYTHON BRAIN · REDIS NERVE</text>
+
+  <rect x="32" y="72" width="200" height="160" rx="10" class="rust"/>
+  <text x="56" y="108" class="t">Rust</text>
+  <text x="56" y="132" class="s">Ingestor · Executor</text>
+  <text x="56" y="152" class="s">IO-bound · WS · swap</text>
+  <text x="56" y="172" class="s">Position Manager</text>
+
+  <rect x="260" y="72" width="200" height="160" rx="10" class="py"/>
+  <text x="284" y="108" class="t">Python</text>
+  <text x="284" y="132" class="s">Strategy engine</text>
+  <text x="284" y="152" class="s">XGBoost · features</text>
+  <text x="284" y="172" class="s">Dashcam · label jobs</text>
+
+  <rect x="488" y="72" width="200" height="160" rx="10" class="redis"/>
+  <text x="512" y="108" class="t">Redis</text>
+  <text x="512" y="132" class="s">Streams bus</text>
+  <text x="512" y="152" class="s">feat2 hash · state</text>
+  <text x="512" y="172" class="s">halt · positions</text>
+
+  <text x="240" y="260" class="core">Docker Compose · laszlo-net · single-node vertical scale</text>
+</svg>

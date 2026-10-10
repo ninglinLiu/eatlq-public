@@ -1,0 +1,19 @@
+{
+  "body_sha256": "1d82b3a35766d790d625edaba01d2f395f68b5342b92bcf1275ac8e3c48fdf14",
+  "bytes": 15953,
+  "finished": "2026-10-01T07:27:05.721531+00:00",
+  "http_status": 200,
+  "key": "ae7e976dadecfd462c43a0d04749bf2b020c07d054908c7ca07cf2dde072562e",
+  "label": "migration_block",
+  "payload": {
+    "id": 1,
+    "jsonrpc": "2.0",
+    "method": "eth_getBlockByNumber",
+    "params": [
+      "0x76b79de",
+      false
+    ]
+  },
+  "started": "2026-10-01T07:27:05.576125+00:00",
+  "url": "https://bsc-rpc.publicnode.com"
+}

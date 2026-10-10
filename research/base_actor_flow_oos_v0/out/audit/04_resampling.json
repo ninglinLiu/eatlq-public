@@ -1,0 +1,171 @@
+{
+  "task": "robust_resampling_battery",
+  "whale_absolute": {
+    "n": 19684,
+    "total_pnl": 38.250217890793536,
+    "token_cluster": {
+      "mean": 38.43589740518503,
+      "p05": 33.461302566450684,
+      "p50": 38.39400762139741,
+      "p95": 43.20298989078859,
+      "frac_positive": 1.0,
+      "n_clusters": 505
+    },
+    "day_block": {
+      "mean": 37.36919112245633,
+      "p05": 26.051422942376476,
+      "p50": 36.74681501502653,
+      "p95": 49.64280024366236,
+      "frac_positive": 1.0,
+      "n_clusters": 43
+    },
+    "week_block": {
+      "mean": 0.0,
+      "p05": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.0,
+      "n_clusters": 0
+    },
+    "actor_cluster": {
+      "mean": 38.28520329119047,
+      "p05": 36.92859689427968,
+      "p50": 38.2010375950307,
+      "p95": 39.81262202240766,
+      "frac_positive": 1.0,
+      "n_clusters": 14850
+    },
+    "loo_token": {
+      "n_units": 505,
+      "n_probed": 100,
+      "n_sign_flips": 0,
+      "flip_rate": 0.0,
+      "total_pnl": 38.250217890793536,
+      "worst_loo_total": 37.524585943922865
+    },
+    "loo_actor": {
+      "n_units": 14850,
+      "n_probed": 100,
+      "n_sign_flips": 0,
+      "flip_rate": 0.0,
+      "total_pnl": 38.250217890793536,
+      "worst_loo_total": 37.91046319361013
+    },
+    "fold_pnl": {
+      "0.0": 1.1645700661987004,
+      "1.0": 10.297745707934313,
+      "4.0": 9.732432458464043,
+      "7.0": 8.641750312714855,
+      "9.0": -0.20468505557810684,
+      "10.0": 5.378560327117304,
+      "13.0": 3.1349635679907037,
+      "14.0": 0.18755295531363098,
+      "15.0": -0.08267244936191215
+    },
+    "loo_fold": {
+      "n_folds": 9,
+      "n_sign_flips": 0,
+      "flip_rate": 0.0,
+      "n_positive_folds": 7
+    },
+    "passes": {
+      "token_bootstrap_p05_positive": true,
+      "day_bootstrap_p05_positive": true,
+      "week_bootstrap_p05_positive": false,
+      "actor_bootstrap_p05_positive": true,
+      "loo_token_stable": true,
+      "loo_actor_stable": true,
+      "majority_folds_positive": true
+    },
+    "all_absolute_robustness_pass": false
+  },
+  "pool_absolute": {
+    "n": 29194,
+    "total_pnl": 25.395326166081354,
+    "token_cluster": {
+      "mean": 26.060138415126733,
+      "p05": 7.921772231507398,
+      "p50": 25.068951839658357,
+      "p95": 45.37178657442911,
+      "frac_positive": 0.985,
+      "n_clusters": 197
+    },
+    "day_block": {
+      "mean": 24.198521176658616,
+      "p05": 5.943775147511666,
+      "p50": 23.812383700870072,
+      "p95": 45.30863802285715,
+      "frac_positive": 0.99,
+      "n_clusters": 31
+    },
+    "week_block": {
+      "mean": 0.0,
+      "p05": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.0,
+      "n_clusters": 0
+    },
+    "actor_cluster": {
+      "mean": 25.3234912758367,
+      "p05": 23.44946344960197,
+      "p50": 25.35798681891645,
+      "p95": 27.135302958358505,
+      "frac_positive": 1.0,
+      "n_clusters": 20134
+    },
+    "loo_token": {
+      "n_units": 197,
+      "n_probed": 100,
+      "n_sign_flips": 0,
+      "flip_rate": 0.0,
+      "total_pnl": 25.395326166081354,
+      "worst_loo_total": 20.64217263778687
+    },
+    "loo_actor": {
+      "n_units": 20134,
+      "n_probed": 100,
+      "n_sign_flips": 0,
+      "flip_rate": 0.0,
+      "total_pnl": 25.395326166081354,
+      "worst_loo_total": 25.500748918979205
+    },
+    "fold_pnl": {
+      "0.0": -0.5166221839653606,
+      "1.0": -4.630659294488001,
+      "4.0": 16.390315862511713,
+      "7.0": 5.2873351716814865,
+      "9.0": -0.1610408236209821,
+      "10.0": 8.694236472225446,
+      "13.0": 1.8470904992936297,
+      "14.0": -0.40041222700458,
+      "15.0": -1.1149173105520083
+    },
+    "loo_fold": {
+      "n_folds": 9,
+      "n_sign_flips": 0,
+      "flip_rate": 0.0,
+      "n_positive_folds": 4
+    },
+    "passes": {
+      "token_bootstrap_p05_positive": true,
+      "day_bootstrap_p05_positive": true,
+      "week_bootstrap_p05_positive": false,
+      "actor_bootstrap_p05_positive": true,
+      "loo_token_stable": true,
+      "loo_actor_stable": true,
+      "majority_folds_positive": false
+    },
+    "all_absolute_robustness_pass": false
+  },
+  "paired_incremental_summary": {
+    "overlay_token_p05": 30.686485768009092,
+    "overlay_day_p05": 30.241183580266895,
+    "overlay_passes": true,
+    "matched_token_p05": 35.22129256557226,
+    "matched_day_p05": 26.673504122402644,
+    "matched_passes": true
+  },
+  "primary_information_verdict": "PROSPECTIVE_CONFIRMATION_REQUIRED",
+  "note": "Absolute token-bootstrap p05>0 only shows the whale trade set's total is stable; it does not prove incremental edge vs POOL_ONLY. Paired \u0394 bootstraps are decisive."
+}

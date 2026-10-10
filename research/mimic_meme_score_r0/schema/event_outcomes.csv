@@ -1,0 +1,2 @@
+event_id,n_matched,n_score_set,n_chains,n_primary,attach_contract_id,attach_share,second_share,earliest_contract_id,earliest_equals_attach,m_high,i_status,m_high_i_collapse,notes
+# SCHEMA: one row per event. attach_share is primary-chain collect-time volume. i_status in {fragmented,unknown,no_contract,schelling_claimed,not_fragmented}. empty I1 is not collapse.

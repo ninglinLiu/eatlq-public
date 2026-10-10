@@ -1,0 +1,97 @@
+{
+  "ch_calls": 2,
+  "entries": [
+    {
+      "command_sanitized": {
+        "argv_sanitized": [
+          "timeout",
+          "5",
+          "docker",
+          "exec",
+          "eatlq-clickhouse-1",
+          "clickhouse-client",
+          "--readonly=2",
+          "--max_threads=1",
+          "--max_execution_time=3",
+          "--max_result_rows=5000",
+          "--max_result_bytes=2097152",
+          "--max_bytes_to_read=4194304",
+          "--format=TSVWithNames",
+          "--query_id=lpi_meta_q_health_processes_1784297491",
+          "--query=<hash:93fb2d9e58e498dd4f0e9d71aa1aa9c4758055a88abe50537be294e42b621e0e>"
+        ],
+        "query_hash": "93fb2d9e58e498dd4f0e9d71aa1aa9c4758055a88abe50537be294e42b621e0e",
+        "query_id": "lpi_meta_q_health_processes_1784297491",
+        "self_query_marker": "health_processes",
+        "settings": {
+          "max_bytes_to_read": 4194304,
+          "max_execution_time": 3,
+          "max_result_bytes": 2097152,
+          "max_result_rows": 5000,
+          "max_threads": 1,
+          "readonly": 2
+        },
+        "sql": "SELECT query_id, elapsed, read_rows, memory_usage FROM system.processes LIMIT 100"
+      },
+      "elapsed_sec": 1.116,
+      "ended_utc": "2026-07-17T14:11:32Z",
+      "exit_code": 0,
+      "hit_byte_cap": false,
+      "hit_row_cap": false,
+      "output_bytes": 92,
+      "query_hash": "93fb2d9e58e498dd4f0e9d71aa1aa9c4758055a88abe50537be294e42b621e0e",
+      "query_id_runtime": "lpi_meta_q_health_processes_1784297491",
+      "row_count": 1,
+      "started_utc": "2026-07-17T14:11:31Z",
+      "stderr": "",
+      "stdout_sha256": "170637317cf8d2c0ea0258498926a81df15d97601d1214bb285caf9c24cf01a4",
+      "timed_out": false
+    },
+    {
+      "command_sanitized": {
+        "argv_sanitized": [
+          "timeout",
+          "5",
+          "docker",
+          "exec",
+          "eatlq-clickhouse-1",
+          "clickhouse-client",
+          "--readonly=2",
+          "--max_threads=1",
+          "--max_execution_time=3",
+          "--max_result_rows=5000",
+          "--max_result_bytes=2097152",
+          "--max_bytes_to_read=4194304",
+          "--format=TSVWithNames",
+          "--query_id=lpi_meta_q_health_merges_1784297492",
+          "--query=<hash:77250609584c07b2b9425a6a20ce446be7009ff37205fb8e8e66e1656fa16a91>"
+        ],
+        "query_hash": "77250609584c07b2b9425a6a20ce446be7009ff37205fb8e8e66e1656fa16a91",
+        "query_id": "lpi_meta_q_health_merges_1784297492",
+        "self_query_marker": "health_merges",
+        "settings": {
+          "max_bytes_to_read": 4194304,
+          "max_execution_time": 3,
+          "max_result_bytes": 2097152,
+          "max_result_rows": 5000,
+          "max_threads": 1,
+          "readonly": 2
+        },
+        "sql": "SELECT database, table, elapsed, progress, num_parts FROM system.merges LIMIT 100"
+      },
+      "elapsed_sec": 0.3987,
+      "ended_utc": "2026-07-17T14:11:32Z",
+      "exit_code": 0,
+      "hit_byte_cap": false,
+      "hit_row_cap": false,
+      "output_bytes": 42,
+      "query_hash": "77250609584c07b2b9425a6a20ce446be7009ff37205fb8e8e66e1656fa16a91",
+      "query_id_runtime": "lpi_meta_q_health_merges_1784297492",
+      "row_count": 0,
+      "started_utc": "2026-07-17T14:11:32Z",
+      "stderr": "",
+      "stdout_sha256": "17d20e6c642ea03efe0bef2d66c63fcba4f99996911293f2466d9a956dbfe640",
+      "timed_out": false
+    }
+  ]
+}

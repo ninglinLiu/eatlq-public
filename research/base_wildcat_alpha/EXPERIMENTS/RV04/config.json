@@ -1,0 +1,23 @@
+{
+  "alpha_id": "RV04",
+  "family": "relative_value",
+  "hypothesis": "isolated pool moves are faded",
+  "mechanism": "moves without peer confirmation are fragile",
+  "venue": "Base V3",
+  "universe": "active observed pools",
+  "horizon": "4h",
+  "data_source": "same-token pools and pool returns",
+  "experiment": "peer-confirmation spread",
+  "feature": "peer_disagreement",
+  "direction": -1,
+  "prediction_object": "next return",
+  "falsifier": "no valid peers for most pools",
+  "status": "NOT_YET_TESTED",
+  "sample_size": 0,
+  "gross_result": "pending",
+  "cost_adjusted_result": "pending",
+  "capacity": "pending",
+  "concentration": "pending",
+  "tail_risk": "pending",
+  "next_action": "run rapid screen"
+}

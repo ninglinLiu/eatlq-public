@@ -1,0 +1,125 @@
+{
+  "actual_follower_route": [
+    {
+      "fee": 3000,
+      "from_token": "0x366b11937eff8dfa59e347310a2f86e88821d222",
+      "hooks": "0x7c672f3850afadcb8f83478e0a2a90d109fa6044",
+      "id": "0x052a8bd4832d50cdd4f0f515fbfcc371b2d2f8e0f251e8e76ecb4b2d6fd965fb",
+      "kind": "V4",
+      "to_token": "0x5cda0e1ca4ce2af96315f7f8963c85399c172204",
+      "token0": "0x366b11937eff8dfa59e347310a2f86e88821d222",
+      "token0_is_from": true,
+      "token1": "0x5cda0e1ca4ce2af96315f7f8963c85399c172204"
+    },
+    {
+      "fee": 1555,
+      "from_token": "0x5cda0e1ca4ce2af96315f7f8963c85399c172204",
+      "hooks": "0x0000000000000000000000000000000000000000",
+      "id": "0x833391b3d68b80477c97df818565f57cc4d91b38c4a20e9cbfbee5702f908fbe",
+      "kind": "V4",
+      "to_token": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+      "token0": "0x5cda0e1ca4ce2af96315f7f8963c85399c172204",
+      "token0_is_from": true,
+      "token1": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913"
+    },
+    {
+      "fee": 500,
+      "from_token": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+      "hooks": null,
+      "id": "0xd0b53d9277642d899df5c87a3966a349a798f224",
+      "kind": "V3",
+      "route_origin": "FIXED_SELF_BUILT_FUNDING_LEG_NOT_SOURCE_WITNESSED",
+      "to_token": "0x4200000000000000000000000000000000000006",
+      "token0": "0x4200000000000000000000000000000000000006",
+      "token0_is_from": false,
+      "token1": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913"
+    }
+  ],
+  "adapter": "MIXED_REGISTERED_FACTORY_V1",
+  "buy": {
+    "amount_raw": "10000000000000000",
+    "base_fee_header_evidence": null,
+    "base_fee_wei": 5000000,
+    "block": 51747932,
+    "direction": "buy",
+    "evidence": {
+      "http_status": 200,
+      "key": "0892d0f1da9fcf7b154028e22bc6834cb890643b816e632b577ddc47366004d3",
+      "rpc_error": null
+    },
+    "gas_model_note": "measured internal execution + intrinsic calldata + explicit 5000 dispatcher/return buffer; not a mined receipt",
+    "gas_model_units": 572896,
+    "intrinsic_gas": 26568,
+    "measured_internal_gas": 541328,
+    "per_leg_unspent_input_raw": [
+      "0",
+      "0",
+      "0"
+    ],
+    "received_raw": "3863318602510901877442339",
+    "simulation_context": "hypothetical executor with empty hookData; no persistent state change",
+    "spent_raw": "10000000000000000",
+    "status": "HISTORICAL_TRANSFER_SETTLED_SIMULATION",
+    "timestamp": 1790285211
+  },
+  "buy_fees": {
+    "assumptions": "historical base fee; 0.01 gwei tip; measured gas+intrinsic+5000; unsigned type-2 nonce 0 L1 fee estimate; excludes deployment and adverse transaction ordering",
+    "evidence": {
+      "http_status": 200,
+      "key": "21b38742f1154277917be4c070bcbb16b82d9a2fa0c5ac17c8bdc36c912dae93",
+      "rpc_error": null
+    },
+    "gas_model_units": 572896,
+    "l1_fee_model_raw": "5099447249",
+    "l2_fee_model_raw": "8593440000000",
+    "operator_fee_model_raw": "0",
+    "priority_fee_assumption_wei": 10000000,
+    "total_fee_model_raw": "8598539447249"
+  },
+  "delay_seconds": 10,
+  "exit_policy": "24h",
+  "input_eth_raw": "10000000000000000",
+  "modeled_net_eth_raw": null,
+  "net_profit_certified": false,
+  "route_origin": "SOURCE_USDC_PATH_PLUS_FIXED_SELF_BUILT_FUNDING_LEG",
+  "sell": {
+    "amount_raw": "3863318602510901877442339",
+    "block": 51791132,
+    "direction": "sell",
+    "evidence": {
+      "http_status": 200,
+      "key": "cf211eb330aa8aea7462e956443298eb38b1b9a3c16501ee4244e08a308d6549",
+      "rpc_error": {
+        "code": 3,
+        "data": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000087175616e74697479000000000000000000000000000000000000000000000000",
+        "message": "execution reverted: quantity"
+      }
+    },
+    "status": "SIMULATION_UNAVAILABLE_OR_REVERT"
+  },
+  "slot_evidence": {
+    "access_list_evidence": {
+      "http_status": 200,
+      "key": "6566b35eccc1df83b92f3e4faea905634c0d5ac4c854e7fe5738d4ef23b24f98",
+      "rpc_error": null
+    },
+    "attempts": [
+      {
+        "http_status": 200,
+        "key": "e6947c4d0dccbe8c6836eaf11fa2fcc15d7df7833210fc88e2b9ae3aaa1f377e",
+        "rpc_error": null
+      }
+    ],
+    "block": 51754800,
+    "detector_version": 2,
+    "layout_source": null,
+    "slot": "0x3d9c1636abd80c1e50f5e5c7b9d5579b35fce9ba1343b829acbbd0a3b8add1d9",
+    "token": "0x366b11937eff8dfa59e347310a2f86e88821d222"
+  },
+  "source_block": 51747927,
+  "source_route_unresolved": true,
+  "source_tx": "0x97b082ffa59e30b22bba7e16d3b65116cd7d4a202592fb95cc0f55bc003da1e9",
+  "status": "SELL_SIMULATION_UNRESOLVED",
+  "token": "0x366b11937eff8dfa59e347310a2f86e88821d222",
+  "wallet": "0x0b3edd0d0bf7c6281a7f8ae5a5630defb94ae78e"
+}

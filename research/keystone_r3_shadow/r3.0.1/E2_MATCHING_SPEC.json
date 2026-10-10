@@ -1,0 +1,48 @@
+{
+  "method": "strata_nearest_time_1to1_without_replacement",
+  "strata": {
+    "early_ret_decile_edges": [
+      -0.1898905056329312,
+      0.3851207442836616,
+      0.5986300689953169,
+      0.7766711670887538,
+      0.9613519332043201,
+      1.1178941062260979,
+      1.2841957912804034,
+      1.4628168603757743,
+      1.6701564935668665,
+      1.952562373508164,
+      2.6360681987863845
+    ],
+    "liquidity_log1p_quintile_edges": [
+      3.615260948068047,
+      3.9633926761423535,
+      3.978257419316101,
+      3.9878612431687386,
+      3.994895044239576,
+      4.038786431581247
+    ],
+    "ns_pre_quintile_edges_as_maturity_proxy": [
+      6.0,
+      105.0,
+      207.0,
+      257.8000000000002,
+      510.4000000000001,
+      4639.0
+    ],
+    "calendar_time": "same_UTC_isocalendar_week",
+    "regime": "frozen_categorical_placeholder_active_pools_l1_tercile_from_R2_core"
+  },
+  "active_pools_l1_tercile_edges": [
+    5.0,
+    18.0,
+    107.0,
+    263.0
+  ],
+  "caliper": null,
+  "ratio": "1:1",
+  "replacement": false,
+  "tie_break": "signal_id ascending",
+  "unmatched_policy": "mark_unmatched_report_coverage",
+  "edges_source": "R2 DEV core only; never recompute on R3"
+}

@@ -1,0 +1,73 @@
+{
+  "created_utc": "2026-07-20T12:37:03Z",
+  "universe": "DexScreener current mcap>=$1M on Base, exclude stables",
+  "n_tokens": 6,
+  "capital_usd": 1000.0,
+  "stake_usd": 150.0,
+  "friction": {
+    "slip_rt": 0.004,
+    "gas_usd": 0.5
+  },
+  "split": "70% IS / 30% OOS by time",
+  "oos_strategy_pnl": [
+    {
+      "strategy": "DIP10_168H",
+      "n_tokens": 1,
+      "n_trades": 0,
+      "total_pnl_usd": 0.0,
+      "median_token_pnl": 0.0,
+      "n_tokens_profitable": 0
+    },
+    {
+      "strategy": "DIP20_168H",
+      "n_tokens": 1,
+      "n_trades": 0,
+      "total_pnl_usd": 0.0,
+      "median_token_pnl": 0.0,
+      "n_tokens_profitable": 0
+    },
+    {
+      "strategy": "MA72_BELOW",
+      "n_tokens": 1,
+      "n_trades": 0,
+      "total_pnl_usd": 0.0,
+      "median_token_pnl": 0.0,
+      "n_tokens_profitable": 0
+    },
+    {
+      "strategy": "BH_ALWAYS",
+      "n_tokens": 1,
+      "n_trades": 1,
+      "total_pnl_usd": -0.8895047090760828,
+      "median_token_pnl": -0.8895047090760828,
+      "n_tokens_profitable": 0
+    },
+    {
+      "strategy": "Z72_BUY",
+      "n_tokens": 1,
+      "n_trades": 2,
+      "total_pnl_usd": -2.619115262723929,
+      "median_token_pnl": -2.619115262723929,
+      "n_tokens_profitable": 0
+    },
+    {
+      "strategy": "RSI_OS",
+      "n_tokens": 1,
+      "n_trades": 5,
+      "total_pnl_usd": -6.8622380214068635,
+      "median_token_pnl": -6.8622380214068635,
+      "n_tokens_profitable": 0
+    },
+    {
+      "strategy": "Z24_BUY",
+      "n_tokens": 1,
+      "n_trades": 7,
+      "total_pnl_usd": -9.406492499698976,
+      "median_token_pnl": -9.406492499698976,
+      "n_tokens_profitable": 0
+    }
+  ],
+  "any_oos_strategy_total_positive": false,
+  "deploy_allowed": false,
+  "note": "Simple mid-price backtest from UniV3 ticks; not atomic wallet execution. Diagnostic only."
+}

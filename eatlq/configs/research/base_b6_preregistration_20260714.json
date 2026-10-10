@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "frozen_before_b6_gate_results": true,
+  "seed": 20260714,
+  "universe": "B5 KEYSTONE pools whose signal_time falls in 2026-02-27T05:41:15Z..2026-06-08T18:29:40Z; execution and adverse policy exactly B5",
+  "signal_time": "KEYSTONE t0; every weather input uses timestamps strictly before t0",
+  "weather_inputs": {
+    "issuance_ratio": {
+      "definition": "count of Base WETH pools created in trailing 7d divided by 7, over count in preceding 28d divided by 28",
+      "threshold": "<=1.25",
+      "minimum_history_days": 28,
+      "missing": "gate_closed"
+    },
+    "honeypot_proxy": {
+      "definition": "among B4 fresh V3 probes created in trailing 7d and observable >=2m before signal, share with QuoterV2 sell recovery <10% of 0.001 WETH; absent/Atomic-unknown proxy rows count adverse",
+      "threshold": "<=0.20",
+      "minimum_observations": 20,
+      "missing": "gate_closed",
+      "truth_for_validation": "B4 severe_entry_adverse from AtomicRoundTrip",
+      "association_metrics": ["phi", "precision", "recall", "confusion_matrix"]
+    },
+    "eth_trend": {
+      "definition": "return from UTC daily close D-8 to D-1; current signal day close forbidden",
+      "threshold": ">=-0.05",
+      "missing": "gate_closed"
+    }
+  },
+  "gate_rule": "OPEN iff issuance_ratio<=1.25 AND honeypot_proxy_rate<=0.20 AND honeypot_proxy_n>=20 AND eth_trailing_7d_return>=-0.05; otherwise CLOSED",
+  "chronology": {
+    "calibration": "before 2026-04-15T00:00:00Z; thresholds remain the fixed values above",
+    "held_out_oos": "at or after 2026-04-15T00:00:00Z",
+    "rolling_window_days": 14,
+    "rolling_step_days": 7,
+    "rolling_anchor": "2026-02-27T05:41:15Z"
+  },
+  "random_gate": {
+    "draws": 10000,
+    "method": "sample calendar open-days without replacement from eligible days, preserving exactly the true gate open-day count; apply the same sampled days to all opportunities",
+    "comparison": "true gated mean must be strictly above random mean 95th percentile"
+  },
+  "cost_and_missing": {
+    "notional_weth": 0.001,
+    "gas_usd_per_attempted_leg": 0.075,
+    "execution": "B5 decoded real swap limit-fill model",
+    "missing": "adverse"
+  },
+  "capacity": "report absolute selected opportunities, open calendar days, opportunities per open day, total 0.001-WETH notional and maximum one-day notional",
+  "pass_gates": {
+    "pooled_mean_gt_0": true,
+    "top1_removed_mean_gt_0": true,
+    "every_powered_rolling_window_mean_floor": -0.10,
+    "powered_n_min": 20,
+    "min_powered_regimes_positive_mean_and_alpha": 2,
+    "true_mean_gt_random_p95": true,
+    "mc_terminal_p5_gt_R": 100,
+    "mc_mdd_p95_le_R": 20,
+    "heldout_oos_mean_gt_0": true
+  },
+  "decision": "all pass_gates true => PASS; any false => FAIL; never a GO decision"
+}

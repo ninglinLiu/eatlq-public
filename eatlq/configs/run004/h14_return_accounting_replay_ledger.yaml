@@ -1,0 +1,64 @@
+input_path: mvp/diagnostics/run004_h108_enriched_executable_dataset.csv
+h135_audit_json: mvp/diagnostics/run004_patch_h135_return_horizon_dataset_expansion_audit.json
+h12_json: mvp/diagnostics/run004_patch_h12_return_aware_alpha_target_construction.json
+h13_json: mvp/diagnostics/run004_patch_h13_return_aware_feature_ablation.json
+status_filter:
+  executable_status: success
+
+return_accounting:
+  label_notional_wei: 500000000000000
+  label_notional_weth: 0.0005
+  fixed_horizon_sec: 1800
+  round_trip_cost: 0.006
+  slippage_stress_bps: 100
+
+gas_model:
+  source: configured_conservative_estimate
+  gas_price_gwei:
+    low: 0.01
+    medium: 0.03
+    high: 0.10
+  default_scenario: medium
+  include_approval_gas: true
+  approval_gas_units: 50000
+  v2:
+    buy_gas_units: 180000
+    sell_gas_units: 160000
+  v3:
+    buy_gas_units: 260000
+    sell_gas_units: 240000
+
+exit_policy_runtime_defaults:
+  take_profit_pct: 15.0
+  stop_loss_pct: 10.0
+  trailing_stop_pct: 5.0
+  time_decay_min: 240.0
+  monitor_interval_sec: 30.0
+
+h15_10k_plan:
+  target_rows: 10000
+  batch_size: 250
+  target_top1_pool_share_lte: 0.08
+  target_top5_pool_share_lte: 0.30
+  target_non_top5_share_gte: 0.60
+  target_v2_share: 0.50
+  target_v3_share: 0.50
+
+outputs:
+  patch_json: mvp/diagnostics/run004_patch_h14_return_accounting_replay_ledger_repair.json
+  ledger_csv: mvp/diagnostics/run004_h14_replay_ledger.csv
+  return_accounting_spec_json: mvp/diagnostics/run004_h14_return_accounting_spec.json
+  gas_model_report_json: mvp/diagnostics/run004_h14_gas_model_report.json
+  exit_policy_audit_json: mvp/diagnostics/run004_h14_exit_policy_audit.json
+  outlier_replay_report_json: mvp/diagnostics/run004_h14_outlier_replay_report.json
+  h15_expansion_plan_json: mvp/diagnostics/run004_h14_h15_10k_expansion_plan.json
+  markdown: mvp/runs/run-004-patch-h14-return-accounting-replay-ledger-repair.md
+
+safety:
+  sanity_only_not_deploy_evidence: true
+  no_training: true
+  no_production_retrain: true
+  no_promote: true
+  no_live: true
+  no_production_model_write: true
+  no_active_model_overwrite: true

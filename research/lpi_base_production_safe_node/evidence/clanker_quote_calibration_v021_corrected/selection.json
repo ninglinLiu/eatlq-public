@@ -1,0 +1,125 @@
+{
+  "n": 12,
+  "rows": [
+    {
+      "cohort": "PRIOR_ENTRY_SUCCESS_NO_SWAP",
+      "index": 0,
+      "launch_block": 48713150,
+      "pool_id": "0x588b0d575847946043b3e2c252c2778de2b892f453f796efb5e9457c4a8acf84",
+      "prior_entry_ok": true,
+      "prior_status": "EXIT_QUOTE_UNAVAILABLE",
+      "prior_swap_count": 0,
+      "token": "0x78d2e86d6beca0cf6792addb420f8b55ded1ab07"
+    },
+    {
+      "cohort": "PRIOR_ENTRY_SUCCESS_NO_SWAP",
+      "index": 1,
+      "launch_block": 48713156,
+      "pool_id": "0x4e2608862bbd3f5f910624ef5b356d741a5be383a1109c79596fda408f9093c1",
+      "prior_entry_ok": true,
+      "prior_status": "EXIT_QUOTE_UNAVAILABLE",
+      "prior_swap_count": 0,
+      "token": "0x873462b68568efe776ad2d18bacbaecc11d74b07"
+    },
+    {
+      "cohort": "PRIOR_ENTRY_SUCCESS_NO_SWAP",
+      "index": 7,
+      "launch_block": 48713244,
+      "pool_id": "0x08b460d4b5e5b9ecf27ec3d0fca86629bf8b15353342d935796d28dc8219d181",
+      "prior_entry_ok": true,
+      "prior_status": "EXIT_QUOTE_UNAVAILABLE",
+      "prior_swap_count": 0,
+      "token": "0x6e73d4a7c9e3c87e7d5dc4f625f6228d17ee6b07"
+    },
+    {
+      "cohort": "PRIOR_ENTRY_SUCCESS_NO_SWAP",
+      "index": 10,
+      "launch_block": 48713329,
+      "pool_id": "0x3f782e091574ec7f5b4b8d7ddd3f0b953e1cda02bd0cb2b1bfd669326f0f0b8c",
+      "prior_entry_ok": true,
+      "prior_status": "EXIT_QUOTE_UNAVAILABLE",
+      "prior_swap_count": 0,
+      "token": "0x7bfffcc29b275cedfab8f52c477015f83f14bb07"
+    },
+    {
+      "cohort": "PRIOR_ENTRY_FAILURE_WITH_SWAP",
+      "index": 16,
+      "launch_block": 48713498,
+      "pool_id": "0x8f4b8d37a612cdc5387da4b699ed586c9f620630077633f70e501511fd45b1d6",
+      "prior_entry_ok": false,
+      "prior_status": "NO_TRADE_NO_QUOTE",
+      "prior_swap_count": 1,
+      "token": "0x7afcc580d57060dbe017ee776f3ce01c7a9dab07"
+    },
+    {
+      "cohort": "PRIOR_ENTRY_FAILURE_WITH_SWAP",
+      "index": 17,
+      "launch_block": 48713501,
+      "pool_id": "0xd8cc5c48ad26f7a2a354776b27f18654c6bb2ba9e2a76455874295905383c3fd",
+      "prior_entry_ok": false,
+      "prior_status": "NO_TRADE_NO_QUOTE",
+      "prior_swap_count": 1,
+      "token": "0x5f5ff9dda4ca17790819a0543270ef6a73bf1b07"
+    },
+    {
+      "cohort": "PRIOR_ENTRY_FAILURE_WITH_SWAP",
+      "index": 18,
+      "launch_block": 48713505,
+      "pool_id": "0xd350ba8b08f17ee9391e92f71b5f9c9f518940aae12f1364c9d59c90665584ef",
+      "prior_entry_ok": false,
+      "prior_status": "NO_TRADE_NO_QUOTE",
+      "prior_swap_count": 1,
+      "token": "0xb45022d5ddfc546b0ab3e0ec4bdfdefe97a9fb07"
+    },
+    {
+      "cohort": "PRIOR_ENTRY_FAILURE_WITH_SWAP",
+      "index": 19,
+      "launch_block": 48713508,
+      "pool_id": "0x4d3234832d14732003ef1b4d0b55221461b09d3fa5752f47db90cd54af3228a8",
+      "prior_entry_ok": false,
+      "prior_status": "NO_TRADE_NO_QUOTE",
+      "prior_swap_count": 1,
+      "token": "0x1808122c22d398b9722936a5bf11912274d37b07"
+    },
+    {
+      "cohort": "PRIOR_ENTRY_SUCCESS_WITH_SWAP",
+      "index": 21,
+      "launch_block": 48713552,
+      "pool_id": "0xdac765e6067128f453bb7d8e6ad85bfae2eef344d881db3f775028ea009a732d",
+      "prior_entry_ok": true,
+      "prior_status": "EXIT_QUOTE_UNAVAILABLE",
+      "prior_swap_count": 2,
+      "token": "0x80b8991af0b05e6cadc29088ad920d0c09479b07"
+    },
+    {
+      "cohort": "PRIOR_ENTRY_SUCCESS_WITH_SWAP",
+      "index": 75,
+      "launch_block": 48714731,
+      "pool_id": "0xf5592764a01a7e94be4e79c18d6f9b609afad5a69cc4f27620795079a35e5253",
+      "prior_entry_ok": true,
+      "prior_status": "EXIT_QUOTE_UNAVAILABLE",
+      "prior_swap_count": 2,
+      "token": "0xa16206cf592de73197f23ba9866f81cff7e78b07"
+    },
+    {
+      "cohort": "PRIOR_ENTRY_SUCCESS_WITH_SWAP",
+      "index": 86,
+      "launch_block": 48715138,
+      "pool_id": "0xb57755b367ea64b0dd06e94dd308b939f531c40e92d77503de5a6a1398f71def",
+      "prior_entry_ok": true,
+      "prior_status": "EXIT_QUOTE_UNAVAILABLE",
+      "prior_swap_count": 16,
+      "token": "0x36d6f486e789e511e145ed2899644e224d9b6b07"
+    },
+    {
+      "cohort": "PRIOR_ENTRY_SUCCESS_WITH_SWAP",
+      "index": 180,
+      "launch_block": 48716281,
+      "pool_id": "0x275b12c8374bde2ee088703ca1418c3a9183662051d1e30ff6389e1853885bf6",
+      "prior_entry_ok": true,
+      "prior_status": "EXIT_QUOTE_UNAVAILABLE",
+      "prior_swap_count": 39,
+      "token": "0x7e84588b6997bbfddcd50beac0ca0f9582547b07"
+    }
+  ]
+}

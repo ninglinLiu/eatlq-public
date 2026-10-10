@@ -1,0 +1,16 @@
+{
+  "delay_seconds": 10,
+  "execution_venue": "SELF_BUILT_DIRECT_EXECUTOR",
+  "exit_policy": "24h",
+  "input_eth_raw": "10000000000000000",
+  "modeled_net_eth_raw": null,
+  "net_profit_certified": false,
+  "operating_cost_status": "RPC_SERVER_DEPLOYMENT_NOT_AMORTIZED",
+  "platform_fee_model_raw": "0",
+  "platform_fee_status": "NO_THIRD_PARTY_ROUTER_COMMISSION_BY_DESIGN",
+  "source_block": 51650634,
+  "source_tx": "0x9dcf0a5c7b7af3ff1db18e27a6c2a0fbbbc7f6328af480d0e2e5bc494ea144eb",
+  "status": "ROUTE_UNRESOLVED",
+  "token": "0xb2000000000000000000003729f57da496686101",
+  "wallet": "0x2ce9d43d1cba6ae31d7f07bfe0098dfa2d833373"
+}

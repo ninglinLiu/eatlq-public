@@ -1,0 +1,10 @@
+{
+  "created_utc": "2026-07-20T12:23:38Z",
+  "n_candidates": 556,
+  "n_dex_ok": 31,
+  "n_hit_dex_mcap": 6,
+  "n_hit_onchain_q999_and_vol1m": 36,
+  "n_hit_1m_conservative_v2": 40,
+  "excluded_stables_from_hits": true,
+  "peak_method": "quantileExact(0.999) tick price * current totalSupply, FDV<=1e11"
+}

@@ -1,0 +1,38 @@
+{
+  "action": {
+    "action": 6,
+    "action_name": "SWAP_EXACT_IN_SINGLE",
+    "action_order": 0,
+    "actions_bytes_hex": "0x060c0f",
+    "ambiguity": null,
+    "amount_in": 1479200,
+    "amount_out_minimum": 7022366957552776707889675,
+    "hook_data_hex": "0x",
+    "notes": [
+      "execute_embedded_in_wrapper",
+      "entrypoint_or_ur_path"
+    ],
+    "pool_key": {
+      "currency0": "0x36d6f486e789e511e145ed2899644e224d9b6b07",
+      "currency1": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+      "fee": 8388608,
+      "fee_mode": "DYNAMIC_FLAG",
+      "hooks": "0xd60d6b218116cfd801e28f78d011a203d2b068cc",
+      "tick_spacing": 200
+    },
+    "status": "MAPPED",
+    "to_address": "0x0000000071727de22e5e9d8baf0edac6f37da032",
+    "top_level_selector": "0x765e827f",
+    "zero_for_one": false
+  },
+  "expected_side": "BUY_TOKEN",
+  "observed_side": "BUY_TOKEN",
+  "old_incorrect_would_call_buy": false,
+  "synthetic_event": {
+    "amount0": 7022366957552776707889675,
+    "amount1": -1479200,
+    "paired": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+    "token": "0x36d6f486e789e511e145ed2899644e224d9b6b07"
+  },
+  "transaction_hash": "0x327f5f7435eef677572d16b3db9aab1fd68b07211577f1a6a50e9df47f864248"
+}

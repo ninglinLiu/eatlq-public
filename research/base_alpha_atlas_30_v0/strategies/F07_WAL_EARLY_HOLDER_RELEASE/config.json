@@ -1,0 +1,35 @@
+{
+  "strategy_id": "F07_WAL_EARLY_HOLDER_RELEASE",
+  "family": "F07",
+  "name": "Early-holder inventory release",
+  "parameter_search_space": {
+    "A_min": [
+      5,
+      10,
+      15
+    ],
+    "W_min": [
+      10,
+      30
+    ],
+    "sell_eth_min": [
+      1.0,
+      3.0
+    ],
+    "hold": [
+      10,
+      30
+    ],
+    "mode": [
+      0,
+      1
+    ]
+  },
+  "param_combo_count": 48,
+  "access_flags": {
+    "database_access_enabled": false,
+    "rpc_access_enabled": false,
+    "large_file_access_enabled": false,
+    "backtest_enabled": false
+  }
+}

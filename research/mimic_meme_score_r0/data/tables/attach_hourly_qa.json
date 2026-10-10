@@ -1,0 +1,261 @@
+{
+  "events": [
+    {
+      "event_id": "E01_niulai",
+      "status": "left_censored",
+      "n_selected": "8",
+      "n_series": "6",
+      "selected_ids": [
+        "E01_niulai__bsc__0xbeea1d61",
+        "E01_niulai__bsc__0x3604b5c3",
+        "E01_niulai__bsc__0xdd17635c",
+        "E01_niulai__bsc__0x3db61d06",
+        "E01_niulai__bsc__0x708b9a23",
+        "E01_niulai__bsc__0x7761169a",
+        "E01_niulai__bsc__0x6d2db6a8",
+        "E01_niulai__bsc__0x1dd5a19d"
+      ]
+    },
+    {
+      "event_id": "E02_moodeng",
+      "status": "left_censored",
+      "n_selected": "6",
+      "n_series": "6",
+      "selected_ids": [
+        "E02_moodeng__solana__ed5nyywezp",
+        "E02_moodeng__solana__5u2qp4pbvq",
+        "E02_moodeng__solana__g4jpb7fe5i",
+        "E02_moodeng__solana__ckpskb4emw",
+        "E02_moodeng__solana__ccsttkajax",
+        "E02_moodeng__solana__8jffdjcsmq"
+      ]
+    },
+    {
+      "event_id": "E03_chillguy",
+      "status": "left_censored",
+      "n_selected": "3",
+      "n_series": "3",
+      "selected_ids": [
+        "E03_chillguy__solana__df6yfrkc8k",
+        "E03_chillguy__solana__bthoivev3r",
+        "E03_chillguy__solana__cssfzz9xm8"
+      ]
+    },
+    {
+      "event_id": "E04_fartcoin",
+      "status": "left_censored",
+      "n_selected": "8",
+      "n_series": "8",
+      "selected_ids": [
+        "E04_fartcoin__solana__9bb6nfecjb",
+        "E04_fartcoin__solana__fqnucgayn5",
+        "E04_fartcoin__solana__apjua1v2rg",
+        "E04_fartcoin__solana__3src8ksb2e",
+        "E04_fartcoin__solana__9hiyfxkdmv",
+        "E04_fartcoin__solana__4uw1pjlhrt",
+        "E04_fartcoin__solana__bgqbutqitk",
+        "E04_fartcoin__solana__3mvgwvlf4u"
+      ]
+    },
+    {
+      "event_id": "E05_neiro",
+      "status": "left_censored",
+      "n_selected": "4",
+      "n_series": "4",
+      "selected_ids": [
+        "E05_neiro__ethereum__0x812ba41e",
+        "E05_neiro__ethereum__0xa6180029",
+        "E05_neiro__ethereum__0x2aef74e8",
+        "E05_neiro__ethereum__0xf210c4b5"
+      ]
+    },
+    {
+      "event_id": "E06_pnutt",
+      "status": "left_censored",
+      "n_selected": "8",
+      "n_series": "8",
+      "selected_ids": [
+        "E06_pnutt__solana__2qehjdldlb",
+        "E06_pnutt__solana__f4wwkgbjkp",
+        "E06_pnutt__solana__hwxbz2bm8s",
+        "E06_pnutt__solana__ascgakewqv",
+        "E06_pnutt__solana__8jpfpa63yp",
+        "E06_pnutt__solana__7tmhxhuvmx",
+        "E06_pnutt__solana__6yn35vzdox",
+        "E06_pnutt__solana__7scptzkhjz"
+      ]
+    },
+    {
+      "event_id": "E07_clanker",
+      "status": "single_series",
+      "n_selected": "1",
+      "n_series": "1",
+      "selected_ids": [
+        "E07_clanker__base__0x1bc0c422"
+      ]
+    },
+    {
+      "event_id": "E08_virtuals",
+      "status": "single_series",
+      "n_selected": "1",
+      "n_series": "1",
+      "selected_ids": [
+        "E08_virtuals__base__0xa4a2e2ca"
+      ]
+    },
+    {
+      "event_id": "E09_pumpfun",
+      "status": "left_censored",
+      "n_selected": "8",
+      "n_series": "8",
+      "selected_ids": [
+        "E09_pumpfun__solana__9593dfjslk",
+        "E09_pumpfun__solana__e3eq9egzy7",
+        "E09_pumpfun__solana__hhyd17aexp",
+        "E09_pumpfun__solana__fp5efwp3g2",
+        "E09_pumpfun__solana__4vm5td1og9",
+        "E09_pumpfun__solana__7g4rxx818x",
+        "E09_pumpfun__solana__cfsgbe4xo9",
+        "E09_pumpfun__solana__5ngy33drvn"
+      ]
+    },
+    {
+      "event_id": "E10_bonk",
+      "status": "left_censored",
+      "n_selected": "7",
+      "n_series": "7",
+      "selected_ids": [
+        "E10_bonk__solana__dezxaz8z7p",
+        "E10_bonk__solana__bonkug9t46",
+        "E10_bonk__solana__arqrnvdu9q",
+        "E10_bonk__solana__9tpeuw6haw",
+        "E10_bonk__solana__4l9ftxitfu",
+        "E10_bonk__solana__56lc5by6bb",
+        "E10_bonk__solana__6mctggvn8s"
+      ]
+    },
+    {
+      "event_id": "E11_brett",
+      "status": "single_series",
+      "n_selected": "1",
+      "n_series": "1",
+      "selected_ids": [
+        "E11_brett__base__0x532f2710"
+      ]
+    },
+    {
+      "event_id": "E12_toshi",
+      "status": "single_series",
+      "n_selected": "1",
+      "n_series": "1",
+      "selected_ids": [
+        "E12_toshi__base__0xac1bd248"
+      ]
+    },
+    {
+      "event_id": "E13_trump_fragment",
+      "status": "left_censored",
+      "n_selected": "4",
+      "n_series": "4",
+      "selected_ids": [
+        "E13_trump_fragment__solana__6p6xghyf7a",
+        "E13_trump_fragment__solana__tmpkzjfnth",
+        "E13_trump_fragment__solana__5m8k6jhhyf",
+        "E13_trump_fragment__solana__5snu6g1qvj"
+      ]
+    },
+    {
+      "event_id": "E14_harris",
+      "status": "left_censored",
+      "n_selected": "5",
+      "n_series": "5",
+      "selected_ids": [
+        "E14_harris__solana__47qqicyyu8",
+        "E14_harris__solana__7chzt3mgyh",
+        "E14_harris__solana__9xvbkrteyd",
+        "E14_harris__solana__6kvnnyvdzz",
+        "E14_harris__solana__3lt2dbbd5b"
+      ]
+    },
+    {
+      "event_id": "E15_maga",
+      "status": "observed",
+      "n_selected": "5",
+      "n_series": "5",
+      "selected_ids": [
+        "E15_maga__ethereum__0x6aa56e1d",
+        "E15_maga__ethereum__0x576e2bed",
+        "E15_maga__ethereum__0xd29da236",
+        "E15_maga__ethereum__0x3da91def",
+        "E15_maga__ethereum__0x7d051bdf"
+      ]
+    },
+    {
+      "event_id": "E16_biden",
+      "status": "left_censored",
+      "n_selected": "2",
+      "n_series": "2",
+      "selected_ids": [
+        "E16_biden__ethereum__0x80999b02",
+        "E16_biden__ethereum__0xc548e905"
+      ]
+    },
+    {
+      "event_id": "E17_goatseus",
+      "status": "left_censored",
+      "n_selected": "7",
+      "n_series": "7",
+      "selected_ids": [
+        "E17_goatseus__solana__czlsujwblf",
+        "E17_goatseus__solana__f1ualcoddp",
+        "E17_goatseus__solana__e31mtjg5ff",
+        "E17_goatseus__solana__f4alcmxqy6",
+        "E17_goatseus__solana__7tgwufayv3",
+        "E17_goatseus__solana__bvowbvt8ee",
+        "E17_goatseus__solana__dhuv2ryup9"
+      ]
+    },
+    {
+      "event_id": "E18_hawktuah",
+      "status": "left_censored",
+      "n_selected": "2",
+      "n_series": "2",
+      "selected_ids": [
+        "E18_hawktuah__solana__hawkthxrcn",
+        "E18_hawktuah__solana__4gfe6mbdor"
+      ]
+    },
+    {
+      "event_id": "E19_luguan",
+      "status": "no_primary",
+      "n_selected": "0",
+      "n_series": "0",
+      "selected_ids": []
+    },
+    {
+      "event_id": "E20_shandong",
+      "status": "single_series",
+      "n_selected": "1",
+      "n_series": "1",
+      "selected_ids": [
+        "E20_shandong__bsc__0x1fd39fca"
+      ]
+    },
+    {
+      "event_id": "E21_夫妻文学",
+      "status": "no_primary",
+      "n_selected": "0",
+      "n_series": "0",
+      "selected_ids": []
+    },
+    {
+      "event_id": "E22_wen",
+      "status": "single_series",
+      "n_selected": "1",
+      "n_series": "1",
+      "selected_ids": [
+        "E22_wen__solana__wenwenvqqn"
+      ]
+    }
+  ]
+}

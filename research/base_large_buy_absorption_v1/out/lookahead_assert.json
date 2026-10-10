@@ -1,0 +1,28 @@
+{
+  "pass": true,
+  "verdict": "LOOKAHEAD_FREE_PASS",
+  "checks": [
+    {
+      "name": "decision_time_equals_signal_t",
+      "pass": true
+    },
+    {
+      "name": "entry_after_signal_plus_latency",
+      "pass": true
+    },
+    {
+      "name": "absorption_wait_complete",
+      "pass": true
+    },
+    {
+      "name": "no_entry_before_absorbed_known",
+      "pass": true
+    },
+    {
+      "name": "not_v0_buy_time_decision",
+      "pass": true
+    }
+  ],
+  "n_rows": 524257,
+  "n_wait_absorption": 524257
+}

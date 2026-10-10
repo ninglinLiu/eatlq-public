@@ -1,0 +1,23 @@
+{
+  "alpha_id": "LP02",
+  "family": "lp_state",
+  "hypothesis": "mint-minus-burn imbalance predicts stability",
+  "mechanism": "net depth provision absorbs subsequent flow",
+  "venue": "Base V3",
+  "universe": "active observed pools",
+  "horizon": "4h",
+  "data_source": "mint/burn/collect events",
+  "experiment": "LP-event panel",
+  "feature": "lp_net_flow",
+  "direction": -1,
+  "prediction_object": "future absolute return",
+  "falsifier": "raw units make cross-pool result invalid",
+  "status": "NOT_YET_TESTED",
+  "sample_size": 0,
+  "gross_result": "pending",
+  "cost_adjusted_result": "pending",
+  "capacity": "pending",
+  "concentration": "pending",
+  "tail_risk": "pending",
+  "next_action": "run rapid screen"
+}

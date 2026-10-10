@@ -1,0 +1,72 @@
+{
+  "name": "DEV_PARTIAL_WALK_FORWARD_OOF",
+  "note": "Only folds with sufficient train history (historically folds 2\u20133); NOT full 306-row OOF",
+  "folds": [
+    {
+      "fold": 2,
+      "train_start": "2025-10-01 02:07:57+00:00",
+      "train_end": "2026-01-04 08:30:51+00:00",
+      "test_start": "2026-01-05 08:41:43+00:00",
+      "test_end": "2026-02-03 21:38:41+00:00",
+      "embargo_days": 1,
+      "embargo_end": "2026-01-04 08:41:33+00:00",
+      "train_n_labeled": 150,
+      "test_n": 89,
+      "f10_thr_q50": 0.7949251922847386,
+      "n_f10_accept_test": 37
+    },
+    {
+      "fold": 3,
+      "train_start": "2025-10-01 02:07:57+00:00",
+      "train_end": "2026-02-02 20:18:25+00:00",
+      "test_start": "2026-02-03 22:53:27+00:00",
+      "test_end": "2026-03-03 05:30:07+00:00",
+      "embargo_days": 1,
+      "embargo_end": "2026-02-02 22:36:05+00:00",
+      "train_n_labeled": 232,
+      "test_n": 60,
+      "f10_thr_q50": 0.839225668550745,
+      "n_f10_accept_test": 24
+    }
+  ],
+  "V0_KEYSTONE": {
+    "n_oof_scored": 149,
+    "n_oof_labeled": 147,
+    "n_oof_unknown": 2,
+    "n_accepted": 147,
+    "accept_rate": 1.0,
+    "ev_accepted": 1.2421646159868143,
+    "median": 0.5943010571262954,
+    "ev_per_signal_skip0": 1.2421646159868143
+  },
+  "V1_EARLY_RET_TOPK": {
+    "n_oof_scored": 149,
+    "n_oof_labeled": 147,
+    "n_oof_unknown": 2,
+    "n_accepted": 61,
+    "accept_rate": 0.41496598639455784,
+    "ev_accepted": 0.7425339089356089,
+    "median": 0.4114545461907735,
+    "ev_per_signal_skip0": 0.3081263159528717
+  },
+  "C0_PRICE_ONLY_HGB_TOPK": {
+    "n_oof_scored": 149,
+    "n_oof_labeled": 147,
+    "n_oof_unknown": 2,
+    "n_accepted": 61,
+    "accept_rate": 0.41496598639455784,
+    "ev_accepted": 1.467472135225925,
+    "median": 0.8241793434512654,
+    "ev_per_signal_skip0": 0.6089510221005539
+  },
+  "F10_OOF": {
+    "n_oof_scored": 149,
+    "n_oof_labeled": 147,
+    "n_oof_unknown": 2,
+    "n_accepted": 61,
+    "accept_rate": 0.41496598639455784,
+    "ev_accepted": 1.466614651024219,
+    "median": 1.093396951587256,
+    "ev_per_signal_skip0": 0.6085951953229753
+  }
+}

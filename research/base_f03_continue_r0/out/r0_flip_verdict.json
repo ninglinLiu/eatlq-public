@@ -1,0 +1,8 @@
+{
+  "automated_label": "FLIP_SPREAD_ONLY_NO_R2",
+  "scientific_reading": "FLIP_ADDS_NOTHING",
+  "why": "Raw scarcity quintile spread is -86 bps (wrong sign vs the written story) and day p=0.68. Holdout R2 increment after |persistence| is -0.016. Observed flip_rate 0.216 vs shuffled 0.343 shows real runs, but corr(flip_rate, |flow|)=-0.69 so the runs are mostly the same fact as imbalance.",
+  "sample_n": 400,
+  "holdout_n": 120,
+  "caveat": "Holdout linear R2 is largely negative; fat tails. Still enough to say the written switch-count falsifier does not identify extra tick alpha beyond |imbalance|."
+}

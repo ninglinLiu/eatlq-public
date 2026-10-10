@@ -1,0 +1,89 @@
+{
+  "created_utc": "2026-07-20T07:00:59Z",
+  "role": "Base Greenfield V1 Profit Validation",
+  "oof_audit": "OOF_PROVENANCE_OK",
+  "calibration_pass": true,
+  "calibration_summary": {
+    "n_success_cases": 3,
+    "n_rug_cases": 5,
+    "n_thin_probes": 15,
+    "false_sellable_rate": 0.0,
+    "false_unsellable_rate": 0.0,
+    "unknown_rate": 0.2608695652173913,
+    "weth_out_error_median": 2.1034659463412633e-07,
+    "fatal_detection_delay": "retry_blocks=[0,5,30,150] on INFRASTRUCTURE_UNKNOWN only",
+    "recover_after_temp_fail_coverage": "NOT_IN_CALIBRATION_SET",
+    "success_only": false,
+    "calibration_pass": true,
+    "rpc_calls": 0
+  },
+  "dev_primary_selection": {
+    "primary_policy": "P1_G2_COMPETING",
+    "ranked": [
+      "P1_G2_COMPETING",
+      "P2_C3_G2_VETO",
+      "P0_C3_MOMENTUM"
+    ],
+    "kill_g2": false,
+    "kill_g2_reasons": [],
+    "secondary_policies": [
+      "P0_C3_MOMENTUM",
+      "P2_C3_G2_VETO"
+    ]
+  },
+  "primary_policy": "P1_G2_COMPETING",
+  "kill_g2": false,
+  "holdout_verdict": "HOLDOUT_FAIL_ALL",
+  "holdout_primary_metrics": {
+    "policy": "P1_G2_COMPETING",
+    "mode": "raw_production",
+    "n_opportunities": 480,
+    "n_accepted_labeled": 122,
+    "acceptance_rate": 0.25416666666666665,
+    "total_net_weth_pnl": -114.6326156508845,
+    "ev_per_accepted": -0.9396116036957746,
+    "ev_per_opportunity": -0.23881794927267602,
+    "pnl_per_capital_hour": -14.329076956360563,
+    "max_drawdown": -114.94642425289271,
+    "expected_shortfall_5pct": -1.0,
+    "fatal_rate": 0.9508196721311475,
+    "sell_failure_rate": 0.9508196721311475,
+    "median": -1.0,
+    "trimmed_mean": -1.0,
+    "top1_share": -0.004728560061156588,
+    "top5_share": -0.012996869347078081,
+    "pnl_ex_top5": -116.12248077941285,
+    "worst_week": -18.0,
+    "independent_positions": true,
+    "rank_ic": null,
+    "wallet_constrained_pnl": null,
+    "unknown_rate": 0.0,
+    "atomic_label_failure": false
+  },
+  "dev_comparison_path": "/root/base_greenfield_directional_v0/out_v1/DEV_POLICY_COMPARISON.csv",
+  "manifest_path": "/root/base_greenfield_directional_v0/out_v1/PROFIT_VALIDATION_MANIFEST.json",
+  "deploy_allowed": false,
+  "discovery_artifacts_modified": false,
+  "outputs": [
+    "ATOMIC_LABEL_SPEC.md",
+    "ATOMIC_CALIBRATION.csv",
+    "OOF_PROVENANCE.csv",
+    "DEV_POLICY_COMPARISON.csv",
+    "PROFIT_VALIDATION_MANIFEST.json",
+    "SEALED_HOLDOUT_RESULT.json",
+    "SHADOW_SPEC.md",
+    "FINAL_PROFIT_VALIDATION.json"
+  ],
+  "notes": {
+    "dev_atomic_raw": {
+      "P0_C3_total_net_weth_pnl": -13.375234,
+      "P1_G2_total_net_weth_pnl": 4.537633,
+      "P2_VETO_total_net_weth_pnl": -0.194125
+    },
+    "primary_rationale": "P1_G2 maximized DEV atomic total WETH PnL and pnl/capital-hour vs C3/P2; kill_g2=false",
+    "holdout": "HOLDOUT_FAIL_ALL \u2014 primary total_net_weth_pnl < 0; buy DETERMINISTIC_REVERT dominant on holdout slice",
+    "data_quality_observation": "labels.fee contains invalid UniV3 fee=1 rows (discovery artifact, not modified in V1)",
+    "recover_after_temp_fail": "NOT_IN_CALIBRATION_SET (documented gap; calibration still passed via success+rug)",
+    "deploy_allowed": false
+  }
+}

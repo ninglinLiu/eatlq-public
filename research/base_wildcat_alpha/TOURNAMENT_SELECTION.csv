@@ -1,0 +1,9 @@
+alpha_id,family,rapid_status,selection_reason
+F03,flow,GROSS_STRUCTURE,strongest cost-tolerant directional gross structure
+F01,flow,GROSS_STRUCTURE,related flow signal with a shorter horizon; tests independence/decay
+H01,path,GROSS_STRUCTURE,path acceptance candidate with positive conservative net proxy
+S02,survival,GROSS_STRUCTURE,disaster-avoidance candidate with positive conservative net proxy
+RV01,relative_value,GROSS_STRUCTURE,very significant relative-value microstructure but likely killed by costs
+C03,lifecycle,GROSS_STRUCTURE,non-price reactivation/survival mechanism
+A01,anomaly,GROSS_STRUCTURE,nontraditional breadth/activity mismatch anomaly
+R02,regime,DISCOVERY_ONLY,meta-regime candidate retained despite temporal instability

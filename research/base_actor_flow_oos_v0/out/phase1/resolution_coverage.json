@@ -1,0 +1,24 @@
+{
+  "n_rows": 1818168,
+  "n_buys": 1074493,
+  "resolved_rate": 0.920202643540091,
+  "tier_counts": {
+    "C": 1673076,
+    "UNRESOLVED": 139500,
+    "D": 5585,
+    "B": 7
+  },
+  "route_counts": {
+    "universal_router": 1290657,
+    "uniswap_router": 287897,
+    "unknown": 215762,
+    "shared_infra": 23672,
+    "solver_settlement": 147,
+    "unknown_contract_or_route": 26,
+    "erc4337_entrypoint": 7
+  },
+  "unique_tx": 1807852,
+  "rpc_enriched_n": 40,
+  "unique_actors": 272336,
+  "generated_at": "2026-07-20T16:01:43Z"
+}

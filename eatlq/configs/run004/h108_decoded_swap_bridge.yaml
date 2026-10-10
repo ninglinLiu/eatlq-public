@@ -1,0 +1,62 @@
+input_executable_dataset: mvp/diagnostics/run004_h8_executable_dataset.csv
+active_model_path: models/signal_model_realtime_v2.json
+
+clickhouse:
+  url: http://clickhouse:8123
+  database: eatlq
+  transport: docker_exec_fallback_if_needed
+  read_only: true
+  query_timeout_sec: 30
+  max_rows_per_query: 100000
+  docker_container: eatlq-clickhouse-1
+
+decoded_sources:
+  v2:
+    table: uniswap_v2_swaps_decoded
+    pool_key: pair_address
+  v3:
+    table: uniswap_v3_swaps_decoded
+    pool_key: pool_address
+  metadata:
+    table: discovered_pools
+    pool_key: pool_address
+
+outputs:
+  patch_json: mvp/diagnostics/run004_patch_h108_decoded_swap_bridge.json
+  bridge_schema_json: mvp/diagnostics/run004_h108_decoded_bridge_schema.json
+  join_coverage_json: mvp/diagnostics/run004_h108_bridge_join_coverage.json
+  enriched_dataset_csv: mvp/diagnostics/run004_h108_enriched_executable_dataset.csv
+  feature_coverage_json: mvp/diagnostics/run004_h108_feature_coverage.json
+  feature_quality_json: mvp/diagnostics/run004_h108_feature_quality_report.json
+  leakage_guard_json: mvp/diagnostics/run004_h108_leakage_guard.json
+  markdown: mvp/runs/run-004-patch-h108-decoded-swap-bridge.md
+
+windows_sec:
+  - 60
+  - 180
+  - 300
+  - 900
+  - 1800
+
+backfill:
+  max_input_rows: 752
+  batch_size: 100
+  use_pool_address_timestamp_window: true
+  only_pre_entry_events: true
+  no_future_data: true
+  allow_partial_features: true
+  missing_source_behavior: mark_unavailable_not_zero
+
+feature_families:
+  buyer_concentration: true
+  flow_quality: true
+  temporal_regime: true
+  protocol_metadata: true
+
+safety:
+  no_training: true
+  no_promote: true
+  no_production_model_write: true
+  no_redis_signals: true
+  no_live: true
+  sanity_only_not_deploy_evidence: true

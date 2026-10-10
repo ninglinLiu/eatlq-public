@@ -1,0 +1,19 @@
+{
+  "body_sha256": "b62aa3dc4c8e5cd280c01ec1a07981286e40ede370e66147e9122652c51b0c90",
+  "bytes": 10608,
+  "finished": "2026-10-01T11:59:53.418675+00:00",
+  "http_status": 200,
+  "key": "e724365a17e50c03c8eeb08db25a4cd4bbf8a8cf58918009cdfbdc687a505ae0",
+  "label": "pilot_source_receipt",
+  "payload": {
+    "id": 1,
+    "jsonrpc": "2.0",
+    "method": "eth_getTransactionReceipt",
+    "params": [
+      "0x1f350632e15daa2d6e36b40d69915490d0049e7775646bc39c0e94cefdef162c"
+    ]
+  },
+  "retry_after": null,
+  "started": "2026-10-01T11:59:46.829259+00:00",
+  "url": "https://mainnet.base.org"
+}

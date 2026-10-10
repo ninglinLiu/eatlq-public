@@ -1,0 +1,64 @@
+input_paths:
+  h165_patch_json: mvp/diagnostics/run004_patch_h165_rpc_candidate_repair_labeling_pilot.json
+  h165_pilot_dataset_csv: mvp/diagnostics/run004_h165_pilot_labeled_dataset.csv
+  h165_repaired_candidate_csv: mvp/diagnostics/run004_h165_repaired_candidate_selection.csv
+
+clickhouse:
+  database: eatlq
+  docker_container: eatlq-clickhouse-1
+  query_timeout_sec: 60
+  decoded_sources:
+    v3_table: uniswap_v3_swaps_decoded
+    metadata_table: discovered_pools
+
+labeling:
+  notional_wei: 500000000000000
+  fixed_horizon_sec: 1800
+  round_trip_cost: 0.006
+  max_abs_net: 10.0
+  gas_price_gwei:
+    low: 0.01
+    medium: 0.03
+    high: 0.10
+  include_approval_gas: true
+  approval_gas_units: 50000
+  gas_units:
+    v3:
+      buy: 260000
+      sell: 240000
+  slippage_stress_bps: 100
+
+pilot:
+  first_size: 100
+  larger_size: 300
+  larger_gate_success_rate: 0.60
+  prefer_decoded_backed_candidates: true
+  standard_fee_params:
+    - 100
+    - 500
+    - 3000
+    - 10000
+
+outputs:
+  forensic_csv: mvp/diagnostics/run004_v3r1_h165_failure_forensic.csv
+  forensic_json: mvp/diagnostics/run004_v3r1_h165_failure_forensic.json
+  quote_path_audit_json: mvp/diagnostics/run004_v3r1_quote_path_audit.json
+  bridge_coverage_json: mvp/diagnostics/run004_v3r1_decoded_bridge_coverage.json
+  pilot_100_csv: mvp/diagnostics/run004_v3r1_v3_only_pilot_100.csv
+  pilot_100_json: mvp/diagnostics/run004_v3r1_v3_only_pilot_100.json
+  pilot_300_csv: mvp/diagnostics/run004_v3r1_v3_only_pilot_300.csv
+  pilot_300_json: mvp/diagnostics/run004_v3r1_v3_only_pilot_300.json
+  patch_json: mvp/diagnostics/run004_patch_v3r1_executable_labeler_repair.json
+  markdown: mvp/runs/run-004-patch-v3r1-executable-labeler-repair.md
+
+safety:
+  diagnostics_only: true
+  v3_only: true
+  no_v2_only_h166_outputs_modified: true
+  no_mixed_v2_v3_dataset: true
+  no_training: true
+  no_production_retrain: true
+  no_promote: true
+  no_live: true
+  no_production_model_write: true
+  no_active_model_overwrite: true

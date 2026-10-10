@@ -1,0 +1,3430 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>EATLQ 项目工作成果 · 时间线总清单</title>
+<style>
+:root {
+  --bg: #f7f6f3;
+  --fg: #1a1a1a;
+  --muted: #5c5c5c;
+  --border: #d8d4cc;
+  --th: #ebe7df;
+  --code-bg: #eeebe4;
+  --link: #0b5cab;
+  --accent: #8a5a2b;
+}
+* { box-sizing: border-box; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 2rem 1.5rem 4rem;
+  font-family: "PingFang SC", "Noto Sans CJK SC", "Source Han Sans SC",
+    "Microsoft YaHei", "Segoe UI", sans-serif;
+  line-height: 1.65;
+  color: var(--fg);
+  background: var(--bg);
+}
+h1, h2, h3, h4 {
+  line-height: 1.3;
+  font-weight: 650;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+h1 { font-size: 1.75rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+h2 { font-size: 1.35rem; color: var(--accent); border-bottom: 1px solid var(--border); padding-bottom: 0.35rem; }
+h3 { font-size: 1.12rem; }
+p, li { max-width: 75ch; }
+blockquote {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  border-left: 4px solid var(--accent);
+  background: #fff;
+  color: var(--muted);
+}
+code {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.9em;
+  background: var(--code-bg);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+}
+pre {
+  background: #fff;
+  border: 1px solid var(--border);
+  padding: 0.9rem 1rem;
+  overflow-x: auto;
+  border-radius: 6px;
+}
+pre code { background: none; padding: 0; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.92rem;
+  background: #fff;
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+}
+thead { background: var(--th); }
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.45rem 0.6rem;
+  text-align: left;
+  vertical-align: top;
+}
+th { font-weight: 600; white-space: nowrap; }
+tr:nth-child(even) td { background: #faf9f6; }
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+ul, ol { padding-left: 1.4rem; }
+strong { font-weight: 650; }
+.meta {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin-bottom: 1.5rem;
+}
+</style>
+</head>
+<body>
+<h1 id="eatlq-项目工作成果-时间线总清单">EATLQ 项目工作成果 ·
+时间线总清单</h1>
+<blockquote>
+<p>生成：2026-07-20<br />
+范围：<code>/opt/EATLQ</code> 主仓库 + <code>/root/KEYSTONE_*</code> /
+<code>quant_research_os</code> 中明确归属 EATLQ/KEYSTONE 的归档<br />
+原则：<strong>失败/证伪/WONTFIX
+一律收录</strong>（它们也是工作成果）；日期优先取文件名/报告头/git，其次
+mtime<br />
+仓库规模快照：<code>mvp/audits</code> 顶层约 253 项 ·
+<code>mvp/runs</code> 251 文件 · <code>reports</code> 130 ·
+<code>mvp/diagnostics</code> ~1027 · alpha_registry <strong>65</strong>
+行 · Run-004 单独 <strong>180</strong> 文件</p>
+</blockquote>
+<hr />
+<h2 id="主线叙事先读-30-秒">0. 主线叙事（先读 30 秒）</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>阶段</th>
+<th>约时间</th>
+<th>一句话</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>地基工程</td>
+<td>2026-03</td>
+<td>LASZLO→EATLQ：ingestor/archiver/CH/strategy/executor/dashboard</td>
+</tr>
+<tr class="even">
+<td>硬化 + meme 层</td>
+<td>2026-04 上</td>
+<td>dry-run/shadow/风控；meme_sniper 加了又拆</td>
+</tr>
+<tr class="odd">
+<td>Phase6 / Run-004</td>
+<td>2026-04 下–05-02</td>
+<td>周训与可执行标签；经济上挂 <code>FAILED_NO_7D_ALPHA</code></td>
+</tr>
+<tr class="even">
+<td>Alpha 工厂</td>
+<td>2026-05</td>
+<td>Sprint028–101：young-pool / fee100 / paper shadow / 0x6ff5；大量
+FAIL/ECHO</td>
+</tr>
+<tr class="odd">
+<td>钱包线终结</td>
+<td>2026-05 末</td>
+<td>sender-gated <strong>DEAD</strong>；聪明钱跟单反复证伪 →
+WONTFIX</td>
+</tr>
+<tr class="even">
+<td>KEYSTONE</td>
+<td>2026-06-18 起</td>
+<td>左尾过滤 pivot；出场/蜜罐/实盘</td>
+</tr>
+<tr class="odd">
+<td>真金与封账</td>
+<td>2026-06–07</td>
+<td>真金亏~94%（rug/卖不掉）；GL1–GL12；<strong>NO_GO</strong></td>
+</tr>
+<tr class="even">
+<td>归因与聪明钱复盘</td>
+<td>2026-07-14–20</td>
+<td>B1–B8 / RH1 / 聪明钱总汇</td>
+</tr>
+</tbody>
+</table>
+<p><strong>当前总态势（截至 2026-07-16/20）：</strong><br />
+<code>training_allowed=false</code> · <code>live_allowed=false</code> ·
+<code>FAILED_NO_7D_ALPHA</code> 仍 ACTIVE · 真金尺度 GL1-02
+<strong>PINNED/FAIL</strong> · 历史报价型 alpha 可 IRON 但 ≠ 真钱可赚 ·
+<strong>不自判 GO</strong>。</p>
+<hr />
+<h2 id="重大系统组件按出现时间">1. 重大系统组件（按出现时间）</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>约日期</th>
+<th>组件</th>
+<th>说明</th>
+<th>证据</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2026-03-14</td>
+<td><code>services/ingestor</code> (Rust)</td>
+<td>WS→Redis market_ticks</td>
+<td>git <code>59fc076</code></td>
+</tr>
+<tr class="even">
+<td>2026-03-14</td>
+<td><code>services/archiver</code> + CH raw</td>
+<td>Redis→ClickHouse</td>
+<td><code>6a99e76</code>, <code>001_*.sql</code></td>
+</tr>
+<tr class="odd">
+<td>2026-03-15</td>
+<td>Phase2 backfill/gap/checkpoint</td>
+<td>历史补齐与缺口</td>
+<td><code>c033a94</code></td>
+</tr>
+<tr class="even">
+<td>2026-03-16</td>
+<td>Token/Pool registry + 富视图</td>
+<td>静态注册与生命周期</td>
+<td><code>006</code>–<code>008_*.sql</code></td>
+</tr>
+<tr class="odd">
+<td>2026-03-16</td>
+<td>运维 healthcheck/alerts/cron</td>
+<td>告警闭环</td>
+<td><code>010</code>–<code>011_*.sql</code></td>
+</tr>
+<tr class="even">
+<td>2026-03-17</td>
+<td>Wallet FS / training / inference 视图</td>
+<td>特征→标签→训练→推理</td>
+<td><code>016</code>–<code>024_*.sql</code></td>
+</tr>
+<tr class="odd">
+<td>2026-03-17</td>
+<td><code>services/strategy</code> 基线</td>
+<td>Phase3 bridge-to-action</td>
+<td><code>c49ae85</code></td>
+</tr>
+<tr class="even">
+<td>2026-03-17</td>
+<td>Base <code>chain_id=8453</code></td>
+<td>主战场切 Base</td>
+<td><code>d8e7e20</code></td>
+</tr>
+<tr class="odd">
+<td>2026-03-25</td>
+<td>Aerodrome vAMM 摄入</td>
+<td>多 DEX</td>
+<td><code>63fd8dc</code></td>
+</tr>
+<tr class="even">
+<td>2026-03-28</td>
+<td><code>services/executor</code></td>
+<td>Phase4 自动买卖</td>
+<td><code>2c69f26</code></td>
+</tr>
+<tr class="odd">
+<td>2026-03-28</td>
+<td>FeatureStore realtime views</td>
+<td>实盘特征</td>
+<td><code>025_*.sql</code></td>
+</tr>
+<tr class="even">
+<td>2026-03-29</td>
+<td><code>services/dashboard</code> + Telegram</td>
+<td>驾驶舱/告警</td>
+<td><code>cb3660e</code></td>
+</tr>
+<tr class="odd">
+<td>2026-03-31</td>
+<td>Smart-money follow + <code>pool_discovery</code></td>
+<td>战略 pivot（后大量证伪）</td>
+<td><code>677e766</code></td>
+</tr>
+<tr class="even">
+<td>2026-04-03~06</td>
+<td>Shadow/dry-run/SM/risk hardening</td>
+<td>P0–P6 硬化</td>
+<td><code>23e499a</code> 等</td>
+</tr>
+<tr class="odd">
+<td>2026-04-17~22</td>
+<td>meme_sniper 层（后删除）</td>
+<td>EATLQ 叠加→对齐 LASZLO 拆除</td>
+<td><code>69746bc</code>→<code>5254937</code></td>
+</tr>
+<tr class="even">
+<td>2026-04-20~21</td>
+<td><code>block_ts_map</code>/dict + backfill</td>
+<td>时间戳关键基建</td>
+<td><code>035</code>/<code>036_*.sql</code></td>
+</tr>
+<tr class="odd">
+<td>2026-05-03</td>
+<td>Whitepaper v2 静态契约 + paper observation</td>
+<td>Sprint001–007/013</td>
+<td><code>ac020cf</code></td>
+</tr>
+<tr class="even">
+<td>2026-05-10</td>
+<td>Paper shadow cron（fee100）</td>
+<td>Sprint055 前向</td>
+<td><code>c6bfb94</code></td>
+</tr>
+<tr class="odd">
+<td>2026-05 中</td>
+<td>Multi-alpha paper factory</td>
+<td>Sprint068–071</td>
+<td><code>sprint068*</code></td>
+</tr>
+<tr class="even">
+<td>2026-06-18</td>
+<td>KEYSTONE 左尾策略 + <code>signal_bridge</code></td>
+<td><code>p_fatal</code> 主线</td>
+<td><code>keystone_origin_search_*</code></td>
+</tr>
+<tr class="odd">
+<td>2026-06-19</td>
+<td>Live-canary hardening + secret scrub</td>
+<td>备份提交</td>
+<td><code>90077ef</code></td>
+</tr>
+<tr class="even">
+<td>2026-07-14</td>
+<td>Base 归因 CH <code>041</code>/<code>042</code>/<code>043</code></td>
+<td>B1/CHA/B3</td>
+<td><code>infra/clickhouse/init/</code></td>
+</tr>
+<tr class="odd">
+<td>2026-07-15~16</td>
+<td>GL/RM 研究脚本与 diagnostics</td>
+<td>真相账本机器 JSON</td>
+<td><code>mvp/diagnostics/base_gl*</code></td>
+</tr>
+</tbody>
+</table>
+<p>原作者文档边界（非 EATLQ sprint，但仓库内）：<code>Home.md</code>,
+<code>Architecture.md</code>, <code>Operations.md</code>,
+<code>whitepaper-v2.md</code>, <code>Whitepaper-v*-continued.md</code>,
+<code>Code-Review.md</code>, <code>docs/author-whitepapers/</code>。</p>
+<hr />
+<h2 id="地基与-phase-14">2. 2026-03 · 地基与 Phase 1–4</h2>
+<table>
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">#</th>
+<th>日期</th>
+<th>名称</th>
+<th>做了什么</th>
+<th>裁决</th>
+<th>主产物</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td>03-14</td>
+<td>Bootstrap Phase 1</td>
+<td>仓库/compose/ingestor 起步</td>
+<td>工程 PASS</td>
+<td>git <code>59fc076</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td>03-14</td>
+<td>Archiver + raw CH</td>
+<td>日志落库</td>
+<td>工程 PASS</td>
+<td><code>services/archiver</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td>03-14</td>
+<td>ingestor TLS / WS / TTL 修复</td>
+<td>启动与 schema 硬化</td>
+<td>PASS</td>
+<td>同日 commits</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td>03-15</td>
+<td>Phase2 backfill/gap</td>
+<td>历史补齐与实时头</td>
+<td>PASS</td>
+<td><code>docs/phase2-*-design.md</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td>03-15</td>
+<td>Normalized events/views</td>
+<td>去重/活动摘要/mint-burn</td>
+<td>PASS</td>
+<td><code>003</code>–<code>005_*.sql</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td>03-15</td>
+<td>Phase1 session summary</td>
+<td>Phase1 收口</td>
+<td>—</td>
+<td><code>docs/phase1-session-summary.md</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">7</td>
+<td>03-16</td>
+<td>Registry + lifecycle promote</td>
+<td>池/代币注册晋升</td>
+<td>PASS</td>
+<td><code>006</code>–<code>008_*.sql</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+<td>03-16</td>
+<td>Healthcheck/alerts/cron</td>
+<td>运维告警</td>
+<td>PASS</td>
+<td>scripts + SQL</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">9</td>
+<td>03-16</td>
+<td>Decoded views</td>
+<td>Phase3 入口只读解码</td>
+<td>PASS</td>
+<td><code>013_decoded_views.sql</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10</td>
+<td>03-17</td>
+<td>Wallet FS/training/inference</td>
+<td>特征训练推理视图</td>
+<td>工程 PASS</td>
+<td><code>016</code>–<code>024_*.sql</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">11</td>
+<td>03-17</td>
+<td>Phase3 bridge-to-action</td>
+<td>strategy 运行时基线</td>
+<td>PASS</td>
+<td><code>c49ae85</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">12</td>
+<td>03-17</td>
+<td>Base registry</td>
+<td>切 Base 8453</td>
+<td>PASS</td>
+<td><code>d8e7e20</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">13</td>
+<td>03-17</td>
+<td>原作者白皮书 v2 外宣初版</td>
+<td>LASZLO 外宣存档（≠EATLQ 现状）</td>
+<td>REFERENCE</td>
+<td><code>原作者白皮书 2 外宣版.txt</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">14</td>
+<td>03-21</td>
+<td>CH query-plan / split 修复</td>
+<td>深视图可训</td>
+<td>PASS</td>
+<td><code>fc4b4a3</code> 等</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">15</td>
+<td>03-25</td>
+<td>Aerodrome + multi-chain training</td>
+<td>vAMM topic/注册</td>
+<td>工程 PASS</td>
+<td><code>f1ac384</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">16</td>
+<td>03-26</td>
+<td>model-feature-gap / dashcam 降阈</td>
+<td>攒 Phase3.5 数据</td>
+<td>OPEN</td>
+<td><code>docs/model-feature-gap.md</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">17</td>
+<td>03-28</td>
+<td>Phase4 executor</td>
+<td>自动买卖</td>
+<td>工程 PASS</td>
+<td><code>services/executor</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">18</td>
+<td>03-28</td>
+<td>FeatureStore decode + realtime</td>
+<td>实盘特征</td>
+<td>PASS</td>
+<td><code>68a231a</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">19</td>
+<td>03-29</td>
+<td>Dashboard + Telegram + PnL bugfix</td>
+<td>可见性/记账</td>
+<td>PASS</td>
+<td><code>services/dashboard</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">20</td>
+<td>03-31</td>
+<td>Smart-money + pool_discovery pivot</td>
+<td>跟单/发现池战略转向</td>
+<td>OPEN→后证伪</td>
+<td><code>677e766</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="硬化memephase6run-004aero">3. 2026-04 ·
+硬化、meme、Phase6、Run-004、Aero</h2>
+<h3 id="运行时硬化与-meme后拆除">3.1 运行时硬化与 meme（后拆除）</h3>
+<table>
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">#</th>
+<th>日期</th>
+<th>名称</th>
+<th>做了什么</th>
+<th>裁决</th>
+<th>主产物</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">21</td>
+<td>04-03</td>
+<td>P0 dry-run/shadow/SM/risk</td>
+<td>影子管道与防火墙</td>
+<td>工程 PASS</td>
+<td><code>23e499a</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">22</td>
+<td>04-06</td>
+<td>P1–P6 freeze pool_score / cooldown / A-B</td>
+<td>信号与风控硬化</td>
+<td>工程 PASS</td>
+<td><code>afc616a</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">23</td>
+<td>04-06</td>
+<td>verify_eatlq / export_trading_evidence</td>
+<td>VPS 体检与证据包</td>
+<td>PASS</td>
+<td><code>scripts/verify_eatlq.sh</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">24</td>
+<td>04-15</td>
+<td>Dashboard cockpit + wallet scorer 门槛</td>
+<td>驾驶舱/SM 门槛</td>
+<td>PASS</td>
+<td><code>7cc277e</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">25</td>
+<td>04-16~17</td>
+<td>swap-poller 429 / meme_sniper / SM 补池</td>
+<td>信号空转修复 + meme 分类器</td>
+<td>后 <strong>REMOVED</strong></td>
+<td><code>69746bc</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">26</td>
+<td>04-20</td>
+<td>meme profile M1–M3 + executable relabel</td>
+<td>EATLQ 叠加 RFC</td>
+<td>后拆除</td>
+<td><code>95c6577</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">27</td>
+<td>04-20</td>
+<td>Align LASZLO phases A–F</td>
+<td>蓝图对齐</td>
+<td>方向 PASS</td>
+<td><code>32bfe8b</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">28</td>
+<td>04-21</td>
+<td>block_ts backfill</td>
+<td>时间戳字典/回填</td>
+<td>PASS</td>
+<td><code>8b66453</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">29</td>
+<td>04-22</td>
+<td><strong>Remove meme_sniper layer</strong></td>
+<td>拆除 meme 层，回 LASZLO</td>
+<td>纠偏 PASS</td>
+<td><code>5254937</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="phase6-周训-runs">3.2 Phase6 周训 runs</h3>
+<table>
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">#</th>
+<th>日期</th>
+<th>名称</th>
+<th>做了什么</th>
+<th>裁决</th>
+<th>主产物</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">30</td>
+<td>04-23</td>
+<td>Phase6 Run-001</td>
+<td>周训循环首跑</td>
+<td>—</td>
+<td><code>mvp/runs/phase6-run-001.md</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">31</td>
+<td>04-24</td>
+<td>Phase6 Run-002</td>
+<td>V2-only 基线</td>
+<td>—</td>
+<td><code>phase6-run-002.md</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">32</td>
+<td>04-24</td>
+<td>Phase6 Run-003A/B</td>
+<td>underpowered 试验</td>
+<td>UNDERPOWERED</td>
+<td><code>phase6-run-003*.md</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">33</td>
+<td>04-25</td>
+<td>Phase6 readiness/prep</td>
+<td>就绪复核</td>
+<td>closed（文档）</td>
+<td><code>phase6-run-003*-readiness.md</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">34</td>
+<td>04-25</td>
+<td>Phase2 coverage audit</td>
+<td>覆盖审计</td>
+<td>—</td>
+<td><code>mvp/runs/phase2-coverage-audit.md</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="run-004-主线v2可执行影子经济-fail">3.3 Run-004
+主线（V2→可执行→影子→经济 FAIL）</h3>
+<p>Run-004 是 4 月最密工作包：<strong>180 个 md
+文件</strong>（完整文件名见附录 A）。按族压缩如下：</p>
+<table>
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">#</th>
+<th>约日期</th>
+<th>Patch 族</th>
+<th>做了什么</th>
+<th>裁决</th>
+<th>路径模式</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">35</td>
+<td>04-25</td>
+<td>Patch A–C2</td>
+<td>runtime/label 语义/swap-only/diversity</td>
+<td>多 GO/HOLD</td>
+<td><code>run-004-patch-{a,b,c*}*.md</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">36</td>
+<td>04-25~26</td>
+<td>Patch D–G4b</td>
+<td>executable label / v2-only / retrain / calibration</td>
+<td>多 PAUSED_HOLD</td>
+<td><code>run-004-patch-{d,e,f,g}*</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">37</td>
+<td>04-26~29</td>
+<td>Patch G1–G3.5 / H-shadow</td>
+<td>pool breadth / feature / shadow</td>
+<td>研究</td>
+<td><code>run-004-patch-g*</code> / <code>h*</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">38</td>
+<td>04-26~28</td>
+<td>Aero vAMM adapter→S5</td>
+<td>Aerodrome 小样本/成本/可训性</td>
+<td>RESEARCH_ONLY；可训性弱</td>
+<td><code>mvp/runs/aero-vamm-*.md</code>（22 文件，附录 B）</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">39</td>
+<td>04-27~05-02</td>
+<td>Patch H0–H18…</td>
+<td>影子评估、特征重算、V2 return-aware、OOT</td>
+<td>多研究/部分 FAILED</td>
+<td><code>run-004-patch-h*</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">40</td>
+<td>04-29</td>
+<td>Phase6 failure postmortem</td>
+<td>给原作者的失败复盘</td>
+<td>FAIL 叙事</td>
+<td><code>run-004-phase6-failure-postmortem-for-original-author.md</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">41</td>
+<td>05-01~02</td>
+<td>V3R-1…V3R-31F / V3S</td>
+<td>V3 候选/QuoterV2/时间戳/小模型</td>
+<td>末段 <strong>FAILED</strong></td>
+<td><code>run-004-patch-v3r*</code> / <code>v3s*</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">42</td>
+<td><strong>05-02</strong></td>
+<td><strong>V2 7d alpha readout</strong></td>
+<td>限定 7 日经济读数</td>
+<td><strong>FAILED_NO_7D_ALPHA</strong></td>
+<td><code>run-004-v2-7d-alpha-readout.md</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">43</td>
+<td><strong>05-02</strong></td>
+<td><strong>FAILED_NO_7D_ALPHA guard</strong></td>
+<td>经济硬闸：禁训/禁上线宣称</td>
+<td><strong>ACTIVE_GUARD</strong></td>
+<td><code>mvp/audits/failed_no_7d_alpha_guard.md</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">44</td>
+<td>05-02</td>
+<td>V2 live-equivalent pilots</td>
+<td>1d/7d 历史仿真</td>
+<td>PILOT；semantics uncertain</td>
+<td><code>run-004-v2-live-equivalent-*.md</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">45</td>
+<td>05-02</td>
+<td>Phase1–5 foundation review</td>
+<td>F 就绪审查</td>
+<td><strong>HOLD</strong></td>
+<td><code>phase1-5-foundation-review.md</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="白皮书契约-sprint-001007-01305-03">3.4 白皮书契约 Sprint 001–007
+/ 013（~05-03）</h3>
+<table>
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">#</th>
+<th>日期</th>
+<th>名称</th>
+<th>做了什么</th>
+<th>裁决</th>
+<th>主产物</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">46</td>
+<td>~05-03</td>
+<td>Sprint001 whitepaper contract full</td>
+<td>契约补全</td>
+<td>—</td>
+<td><code>whitepaper_contract_full_completion_sprint_001.md</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">47</td>
+<td>~05-03</td>
+<td>Sprint002 firewall-safe</td>
+<td>防火墙安全实现</td>
+<td>—</td>
+<td><code>whitepaper_contract_firewall_safe_sprint_002.md</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">48</td>
+<td>~05-03</td>
+<td>Sprint003 runtime-safe</td>
+<td>运行时安全</td>
+<td>—</td>
+<td><code>runtime_safe_engineering_completion_sprint_003.md</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">49</td>
+<td>~05-03</td>
+<td>Sprint004 pending-sell lock</td>
+<td>挂单卖锁</td>
+<td>—</td>
+<td><code>pending_sell_runtime_lock_sprint_004.md</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">50</td>
+<td>~05-03</td>
+<td>Sprint005 signal contract</td>
+<td>信号契约</td>
+<td>CONTRACT</td>
+<td><code>signal_contract_completion_sprint_005.md</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">51</td>
+<td>~05-03</td>
+<td>Sprint006 market tick contract</td>
+<td>行情 tick 契约</td>
+<td>—</td>
+<td><code>market_tick_contract_completion_sprint_006.md</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52</td>
+<td>~05-03</td>
+<td>Sprint007 observability</td>
+<td>可观测契约</td>
+<td>—</td>
+<td><code>observability_contract_completion_sprint_007.md</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">53</td>
+<td>05-03</td>
+<td>Sprint013 paper observation infra</td>
+<td>纸面观察与安全门</td>
+<td>工程 PASS</td>
+<td><code>sprint_013_paper_observation_infra.md</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">54</td>
+<td>05-03</td>
+<td>Whitepaper v2 contract audit/gaps</td>
+<td>契约审计与缺口</td>
+<td>静态 PASS / 选择性 blocked</td>
+<td><code>whitepaper_v2_contract_*.md</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="sprint-工厂钱包线社交线真实成本打脸">4. 2026-05 · Sprint
+工厂、钱包线、社交线、真实成本打脸</h2>
+<h3 id="月初复盘">4.1 月初复盘</h3>
+<table>
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">#</th>
+<th>日期</th>
+<th>名称</th>
+<th>做了什么</th>
+<th>裁决</th>
+<th>主产物</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">55</td>
+<td>05-09</td>
+<td>两个月复盘（中文）</td>
+<td>工程收敛 + 经济闸解释</td>
+<td>FAILED_NO_7D_ALPHA 仍生效</td>
+<td><code>docs/retrospectives/2026-05-09_two_month_retrospective_plain_cn.md</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">56</td>
+<td>05-09</td>
+<td>复盘 evidence index</td>
+<td>证据索引</td>
+<td>—</td>
+<td><code>docs/retrospectives/2026-05-09_*</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">57</td>
+<td>05-09</td>
+<td>定现 Alpha LASZLO 复盘 docx</td>
+<td>项目复盘</td>
+<td>—</td>
+<td><code>/opt/EATLQ/定现Alpha_LASZLO_两个月项目复盘_20260509.docx</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="sprint028039scoped-validation-young_pool_onset">4.2
+Sprint028–039（scoped validation → young_pool_onset）</h3>
+<table>
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">#</th>
+<th>日期</th>
+<th>名称</th>
+<th>做了什么</th>
+<th>裁决</th>
+<th>主产物</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">58</td>
+<td>05-05</td>
+<td>Sprint028a–d / closeout</td>
+<td>label freeze、V3 universe、micro-alpha 政策、wallet 特征清单</td>
+<td>PASS（设计/采矿门）</td>
+<td><code>sprint028*.md</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">59</td>
+<td>05-05</td>
+<td>Sprint029a–d / closeout</td>
+<td>scoped 验证设计、wallet sidecar、retrain guard、label auth</td>
+<td>设计完成</td>
+<td><code>sprint029*.md</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">60</td>
+<td>05-05</td>
+<td>Sprint030a–h</td>
+<td>smoke/dryrun/经济读数/时间分层</td>
+<td>经济弱；030H 稳定性 fails</td>
+<td><code>sprint030*.md</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">61</td>
+<td>05-05</td>
+<td>Sprint031a–c</td>
+<td>新宇宙 lineage dryrun/再平衡</td>
+<td>031C pass（reuse）</td>
+<td><code>sprint031*.md</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">62</td>
+<td>05-05</td>
+<td>Sprint032a–d</td>
+<td>hard-quota / 标签语义 / viability / sanity clip</td>
+<td>修复向</td>
+<td><code>sprint032*.md</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">63</td>
+<td>05-06</td>
+<td>Sprint033a</td>
+<td>CH-backed hard-quota smoke</td>
+<td>—</td>
+<td><code>sprint033a_*.md</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">64</td>
+<td>05-06</td>
+<td>Sprint034a–d</td>
+<td>few/same-pool temporal paper + additive labels</td>
+<td>INCONCLUSIVE / superseded</td>
+<td><code>sprint034*.md</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">65</td>
+<td>05-06</td>
+<td>Sprint035a–f</td>
+<td>live-active/momentum/OHLCV/breakout 发现</td>
+<td>诊断</td>
+<td><code>sprint035*.md</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">66</td>
+<td>05-06</td>
+<td>Sprint036a</td>
+<td>toxic-flow paper watchlist</td>
+<td>—</td>
+<td><code>sprint036a_*.md</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">67</td>
+<td>05-06~07</td>
+<td>Sprint037A–G / BF180</td>
+<td>regime mining、FeatureStore replay、RPC labels、lifecycle、onset
+grid</td>
+<td><strong>037D supersession DENIED</strong>；037G holdout floor</td>
+<td><code>sprint037*</code> / <code>run-037*</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">68</td>
+<td>05-07</td>
+<td>Sprint038A–E</td>
+<td>regime 归因/routing/scorecard/LOOCV</td>
+<td>研究；归因 False</td>
+<td><code>sprint038*</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">69</td>
+<td>05-07~08</td>
+<td>Sprint039A–G</td>
+<td>R5 扩展、scorecard v2、OOS guards</td>
+<td>OOS 覆盖不足 / inconclusive</td>
+<td><code>sprint039*</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">70</td>
+<td>05-07~08</td>
+<td>Sprint039a–b whitepaper filter</td>
+<td>链上归因过滤审查</td>
+<td><strong>FILTER_REVIEW_FAIL</strong> / INCONCLUSIVE</td>
+<td><code>sprint039a/b_*</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="sprint040049钱包归因-聪明钱跟单">4.3 Sprint040–049（钱包归因 /
+聪明钱跟单）</h3>
+<table>
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">#</th>
+<th>日期</th>
+<th>名称</th>
+<th>做了什么</th>
+<th>裁决</th>
+<th>主产物</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">71</td>
+<td>~05-08</td>
+<td>Sprint040</td>
+<td>单钱包归因探针</td>
+<td>OOS_INCONCLUSIVE</td>
+<td><code>sprint040_*.md</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">72</td>
+<td></td>
+<td>Sprint041</td>
+<td>evidence bundle + matched-control FIFO</td>
+<td>—</td>
+<td><code>sprint041_*.md</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">73</td>
+<td></td>
+<td>Sprint042</td>
+<td>operator re-key 归因</td>
+<td>—</td>
+<td><code>sprint042_*.md</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">74</td>
+<td></td>
+<td>Sprint043</td>
+<td>author stealth 归因审查</td>
+<td>—</td>
+<td><code>sprint043_*.md</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">75</td>
+<td></td>
+<td>Sprint044</td>
+<td>全球 author-scale operator 再发现</td>
+<td>—</td>
+<td><code>sprint044_*.md</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">76</td>
+<td></td>
+<td>Sprint045–045F2</td>
+<td>controller / funding graph / broad-sea</td>
+<td>分清共享合约 vs 资金簇</td>
+<td><code>sprint045*.md</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">77</td>
+<td></td>
+<td>Sprint046</td>
+<td>watchlist→alpha 可行性</td>
+<td>整体未过（报价/时间戳）</td>
+<td><code>sprint046_*.md</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">78</td>
+<td></td>
+<td>Sprint047A</td>
+<td>时间扩展 group-wise paper-follow</td>
+<td>—</td>
+<td><code>sprint047a_*.md</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">79</td>
+<td></td>
+<td>Sprint048A/B</td>
+<td>public-executable SM / 去集中 realized PnL</td>
+<td>中长期持仓 alpha；非可跟</td>
+<td><code>sprint048*.md</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">80</td>
+<td></td>
+<td>Sprint049A–C</td>
+<td>copy-follow sidecar 设计/纸面/影子</td>
+<td>只观察不上线</td>
+<td><code>sprint049*.md</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="sprint050066v3-新大陆-fee100-paper-shadow">4.4 Sprint050–066（V3
+新大陆 / fee100 / paper shadow）</h3>
+<table>
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">#</th>
+<th>日期</th>
+<th>名称</th>
+<th>做了什么</th>
+<th>裁决</th>
+<th>主产物</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">81</td>
+<td>05-10</td>
+<td>Sprint050–052</td>
+<td>V3 OOS 扩展 + fee regime shift</td>
+<td>FOUND / OOS 确认信号</td>
+<td><code>sprint050</code>–<code>052</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">82</td>
+<td>05-10</td>
+<td>Sprint053–054</td>
+<td>fee_100bps OOS + QuoterV2 real-label</td>
+<td><strong>PASS（研究确认）</strong></td>
+<td><code>sprint053</code>–<code>054</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">83</td>
+<td>05-10</td>
+<td>Sprint055</td>
+<td>fee100 portfolio replay + paper shadow</td>
+<td>portfolio <strong>PASS</strong>；TrackA WEAK_PASS；TrackB
+INCONCLUSIVE；<strong>live=false</strong></td>
+<td><code>sprint055/</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">84</td>
+<td>05-10</td>
+<td>Sprint056</td>
+<td>4-track 并行验证</td>
+<td><strong>INCONCLUSIVE</strong></td>
+<td><code>sprint056/</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">85</td>
+<td>05-10</td>
+<td>Sprint057 / 057R / 057S</td>
+<td>horizon sweep / evidence review / paper→live hardening</td>
+<td>FOUNDATION；PAPER_READY；HARDENING；<strong>HUMAN
+blockers</strong></td>
+<td><code>sprint057*</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">86</td>
+<td>05-10</td>
+<td>Sprint058–060</td>
+<td>执行层/ingestor/0x501e 等</td>
+<td>059 crash-loop；060 INCONCLUSIVE</td>
+<td><code>sprint058</code>–<code>060</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">87</td>
+<td>05-10~11</td>
+<td>Sprint061</td>
+<td>live readiness 闭环</td>
+<td>HARDENING；HUMAN_REQUIRED</td>
+<td><code>sprint061/</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">88</td>
+<td>05-11</td>
+<td>Sprint062–064c</td>
+<td>OOS week / detox / null_bt cron</td>
+<td>修复向</td>
+<td><code>sprint062</code>–<code>064c</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">89</td>
+<td>05-11</td>
+<td>Sprint065</td>
+<td>paper shadow 健康 + feature tier registry</td>
+<td>NO_SIGNALS_BUT_HEALTHY；Tier 登记</td>
+<td><code>sprint065/</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">90</td>
+<td>05-11</td>
+<td>Sprint066 / 066b</td>
+<td>secondary feature mining + 30m Quoter labels</td>
+<td><strong>INCONCLUSIVE_NO_ACTIONABLE_EDGE</strong> / OVERFIT_RISK</td>
+<td><code>sprint066/</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">91</td>
+<td>05-10</td>
+<td>OOS DuckDB / OSS preflight / gitleaks / VPS backup</td>
+<td>运维与工具</td>
+<td>PASS（工具）</td>
+<td><code>oos_*</code>, <code>oss_*</code>, <code>gitleaks_*</code>,
+<code>vps_*</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">92</td>
+<td>05-11</td>
+<td>multichain_scout</td>
+<td>多链侦察 + governance blockers</td>
+<td>scout-only；BASE-ONLY</td>
+<td><code>multichain_scout/</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="sprint067090多-alpha-工厂-真实成本打脸">4.5 Sprint067–090（多
+alpha 工厂 → 真实成本打脸）</h3>
+<table>
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">#</th>
+<th>日期</th>
+<th>名称</th>
+<th>做了什么</th>
+<th>裁决</th>
+<th>主产物</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">93</td>
+<td>05-14</td>
+<td>Sprint067</td>
+<td>paper shadow 100U 反事实</td>
+<td>DIAGNOSTIC</td>
+<td><code>sprint067_*</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">94</td>
+<td>05-14</td>
+<td>Sprint068</td>
+<td>multi-alpha paper shadow factory</td>
+<td>ACTIVE_SHADOW；alpha_001 正 PF 但极集中</td>
+<td><code>sprint068/</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">95</td>
+<td>05-14</td>
+<td>Sprint068 reconciliation / dryrun proposals</td>
+<td>cooldown 锚点 bug；策略提案</td>
+<td>REFERENCE / RESEARCH_ONLY</td>
+<td><code>sprint068_reconciliation/</code>,
+<code>sprint068_dryrun_*</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">96</td>
+<td>05-14</td>
+<td>Sprint069</td>
+<td>alpha_001 尸检 + 100-candidate 工厂</td>
+<td><strong>SENDER_SPECIFIC_ALPHA</strong>；alpha_009 ACTIVE_SHADOW</td>
+<td><code>sprint069/</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">97</td>
+<td>05-14</td>
+<td>Sprint069 CH OOM repair</td>
+<td>discover_candidates OOM→有界查询</td>
+<td>MITIGATED</td>
+<td><code>sprint069_ch_oom_repair/</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">98</td>
+<td>05-14~15</td>
+<td>Sprint069 forward dryrun</td>
+<td>前向虚拟账本</td>
+<td>DRY_RUN</td>
+<td><code>sprint069_forward_dryrun/</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">99</td>
+<td>05-14</td>
+<td>Sprint070</td>
+<td>SM 模块恢复；0x6ff5=做市商</td>
+<td>RouteA <strong>NOT_COPYABLE</strong>；RouteB CONTINUE</td>
+<td><code>sprint070/</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">100</td>
+<td>05-14</td>
+<td>Sprint070 research training</td>
+<td>泄漏优先训练沙箱</td>
+<td>TRAINING_SMOKE_PASS；禁晋升</td>
+<td><code>sprint070_research_training/</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">101</td>
+<td>05-14</td>
+<td>Sprint071</td>
+<td>sidecar + 成本单位修复</td>
+<td>CALIBRATED；成本敏感</td>
+<td><code>sprint071/</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">102</td>
+<td>05-15</td>
+<td>Sprint071 forward checkpoint</td>
+<td>Day1 前向</td>
+<td>PROFITABLE but POOL_CONCENTRATED</td>
+<td><code>sprint071_forward_checkpoint/</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">103</td>
+<td>05-15~16</td>
+<td>Sprint072–079</td>
+<td>waterfall / fee expand / forward race / batch25</td>
+<td>NO_PROMOTION_NO_CANARY</td>
+<td><code>sprint072*</code>–<code>079*</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">104</td>
+<td>05-17~19</td>
+<td>Sprint083 fee500 + smart-wallet</td>
+<td>聪明钱包数据集；copy 线关闭</td>
+<td><strong>REJECTED_SUPERSEDED</strong>（copy）</td>
+<td><code>sprint083_fee500_paper_shadow/</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">105</td>
+<td>05-20</td>
+<td>Sprint084 pool entry quality / handoff</td>
+<td>onset regime handoff</td>
+<td>—</td>
+<td><code>sprint084_*</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">106</td>
+<td>05-20</td>
+<td>Sprint085 wallet-conditional entry</td>
+<td>Route C 重启</td>
+<td>Phase1 PASS / Phase2 <strong>NOT_COPYABLE</strong></td>
+<td><code>sprint085_*</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">107</td>
+<td>05-20</td>
+<td>Sprint086 real-cost / batched exit / weathervane / first-signal</td>
+<td>真实成本叠加</td>
+<td>weathervane <strong>REJECTED</strong>；first-signal
+<strong>REJECTED_ECHO_ALPHA</strong>；batched RESEARCH_POSITIVE</td>
+<td><code>sprint086_real_cost_overlay/</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">108</td>
+<td>05-20~22</td>
+<td>Sprint087 expanded / variants / lag repair</td>
+<td>扩宇宙 + first-signal forward</td>
+<td>ACTIVE_FORWARD；禁 live</td>
+<td><code>sprint087_*</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">109</td>
+<td>05-20~21</td>
+<td>Sprint088 historical backtest（多窗口）</td>
+<td>历史回测</td>
+<td><strong>FAIL</strong> / 30d <strong>PASS</strong> / 14d
+<strong>FAIL</strong></td>
+<td><code>sprint088_*</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">110</td>
+<td>05-21~22</td>
+<td>Sprint089 pipeline recovery</td>
+<td>P0 管道恢复</td>
+<td>blocked/active</td>
+<td><code>sprint089_pipeline_recovery/</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">111</td>
+<td>05-21</td>
+<td>Sprint090 alpha search Day1</td>
+<td>宽宇宙快验</td>
+<td><strong>FAIL_ROBUST</strong>；H1/H6 REJECTED_FAST</td>
+<td><code>sprint090_alpha_search/</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">112</td>
+<td>05-17~18</td>
+<td>Social Catalyst S001–S005 + report</td>
+<td>KOL/社交催化</td>
+<td><strong>REJECTED</strong>（综合）</td>
+<td><code>social_catalyst_s00*</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">113</td>
+<td>05-19~22</td>
+<td>execution_readiness / tiny_live / path_b LP</td>
+<td>执行层就绪 / 微实盘 / LP 扫描</td>
+<td>DRYRUN_READY；tiny 观察</td>
+<td><code>execution_readiness/</code>, <code>tiny_live/</code>,
+<code>path_b_lp_candidates/</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">114</td>
+<td>05-21</td>
+<td>SOP promotion inventory</td>
+<td>晋升清单</td>
+<td>Blocked</td>
+<td><code>sop_promotion_inventory/</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">115</td>
+<td>05-26</td>
+<td>rpc_reduction note</td>
+<td>RPC 削减笔记</td>
+<td>—</td>
+<td><code>rpc_reduction_20260526.md</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">116</td>
+<td>05-27</td>
+<td>RPC burn diagnostic</td>
+<td>RPC 日烧诊断</td>
+<td>open / 纠正版</td>
+<td><code>rpc_burn_diagnostic_20260527/</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="wallet-profile-sprint091095钱包线终结">4.6 Wallet Profile /
+Sprint091–095（钱包线终结）</h3>
+<table>
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">#</th>
+<th>日期</th>
+<th>名称</th>
+<th>做了什么</th>
+<th>裁决</th>
+<th>主产物</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">117</td>
+<td>05-22~27</td>
+<td>Wallet Profile v0 holdout</td>
+<td>hold-out 失败读数</td>
+<td>fail</td>
+<td><code>wallet_profile_v0/holdout/</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">118</td>
+<td>05-22~27</td>
+<td>Sender-gated v0/v1/v2（Sprint091）</td>
+<td>sender-bridge 再对齐</td>
+<td><strong>DEAD</strong>（pivot pool-centric）</td>
+<td><code>wallet_profile_v0/sender_gated/FINAL_VERDICT.md</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">119</td>
+<td>05-26</td>
+<td>Sprint092 null-EATLQ-overlay</td>
+<td>白皮书忠实空对照</td>
+<td>INCONCLUSIVE</td>
+<td><code>wallet_profile_v0/sprint092_*</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">120</td>
+<td>05-26~27</td>
+<td>Sprint093A/B</td>
+<td>Mode-A 恢复 / Phase6 label loop</td>
+<td>INCONCLUSIVE</td>
+<td><code>sprint093*</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">121</td>
+<td>05-27</td>
+<td>Sprint094 / 094A / audit v2</td>
+<td>SM 预检与联席 readout</td>
+<td>PASS（预检）/ 审计暴露裂隙</td>
+<td><code>sprint094*</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">122</td>
+<td>05-27</td>
+<td>Pivot Route readout</td>
+<td>pool-centric fusion</td>
+<td><strong>DEAD</strong></td>
+<td><code>wallet_profile_v0/pivot/PIVOT_READOUT.md</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">123</td>
+<td>05-27</td>
+<td>Strategy review「下一步」</td>
+<td>$100k 巨鲸冻结后诚实重定向</td>
+<td>DEAD 路线盘点</td>
+<td><code>strategy_review_20260527/</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">124</td>
+<td>05-27</td>
+<td>Alpha Foundry v0</td>
+<td>15 困难工程化</td>
+<td>ECHO_ALPHA 护栏</td>
+<td><code>alpha_foundry_v0/readout_cn.md</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">125</td>
+<td>05-27</td>
+<td>Sprint095 parallel + PRE D_entry</td>
+<td>D_entry 复试</td>
+<td><strong>FAIL</strong>；smart-money 写入
+<strong>WONTFIX</strong></td>
+<td><code>sprint095_*</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="右尾证伪keystone实盘蜜罐">5. 2026-06 ·
+右尾证伪、KEYSTONE、实盘、蜜罐</h2>
+<h3 id="p0p1-修复与右尾框架06-12-起">5.1 P0/P1 修复与右尾框架（06-12
+起）</h3>
+<table>
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">#</th>
+<th>日期</th>
+<th>名称</th>
+<th>做了什么</th>
+<th>裁决</th>
+<th>主产物</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">126</td>
+<td>06-12</td>
+<td>P0/P1 fix readout</td>
+<td>管道/策略修复</td>
+<td>—</td>
+<td><code>p0_fix_20260612/</code>, <code>p1_fix_20260612/</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">127</td>
+<td>06-13</td>
+<td>righttail P0/P1/P2</td>
+<td>右尾框架验证</td>
+<td>P2 <strong>负 EV 不可上</strong></td>
+<td><code>p0_fix_20260612/righttail_*.md</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">128</td>
+<td>06-13</td>
+<td>forced_seller A/B</td>
+<td>强制卖家均值回归</td>
+<td><strong>REJECT</strong></td>
+<td><code>forced_seller_AB_verdict_cn.md</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">129</td>
+<td>06-13</td>
+<td>universe-first OOS</td>
+<td>信号有信息但清不掉成本</td>
+<td><strong>不可交易</strong></td>
+<td><code>universe_first_oos_verdict_cn.md</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">130</td>
+<td>06-13</td>
+<td>P3 / P3 OOS / P3A</td>
+<td>聪明钱跟单 lift vs 执行 EV</td>
+<td>纸面有 lift；P3A <strong>死路</strong></td>
+<td><code>P3*_verdict_cn.md</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">131</td>
+<td>06-13</td>
+<td>live eligibility + 0x6ff5</td>
+<td>三分层</td>
+<td>B/C wash bot；<strong>无 live-eligible driver</strong></td>
+<td><code>live_eligibility_and_0x6ff5_verdict_cn.md</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">132</td>
+<td>06-13</td>
+<td>grand_backtest / meta_reexam</td>
+<td>全量真实成本 + 元审查</td>
+<td>过早死路部分被测量缺陷误导</td>
+<td><code>grand_backtest_*</code>, <code>meta_reexam_*</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">133</td>
+<td>06-13</td>
+<td>Sprint097 expanded realcost</td>
+<td>证伪「零 onset」；336 onset 真实成本</td>
+<td><strong>结构负 EV（FAIL）</strong></td>
+<td><code>sprint097_expanded_realcost/</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">134</td>
+<td>06-16</td>
+<td>Sprint098 pivot feasibility</td>
+<td>主线转移侦察</td>
+<td>多选项；右尾仪器错配</td>
+<td><code>sprint098_pivot_feasibility/</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">135</td>
+<td>06-16~17</td>
+<td>Sprint099 Solana pump.fun 右尾</td>
+<td>可选择≠可执行时点后 +EV</td>
+<td><strong>FAIL / 不可捕获</strong></td>
+<td><code>sprint099_solana_righttail/</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">136</td>
+<td>06-17</td>
+<td>Sprint100 speed-insensitive</td>
+<td>大盘均值回归/动量月化 15%</td>
+<td>recon + monthly15 裁决</td>
+<td><code>sprint100_speed_insensitive/</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">137</td>
+<td>06-18</td>
+<td>Sprint101 speed thesis</td>
+<td>延迟衰减/创建指纹/deployer 声誉</td>
+<td>Stage0 证伪；Stage1 PASS；Stage2 fail</td>
+<td><code>sprint101_speed_thesis/</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="keystone-诞生与出场研究">5.2 KEYSTONE 诞生与出场研究</h3>
+<table>
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">#</th>
+<th>日期</th>
+<th>名称</th>
+<th>做了什么</th>
+<th>裁决</th>
+<th>主产物</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">138</td>
+<td><strong>06-18</strong></td>
+<td><strong>KEYSTONE 命名与左尾 pivot</strong></td>
+<td>同会话完成 pivot→写码</td>
+<td>HIGH 置信溯源</td>
+<td><code>keystone_origin_search_20260625/</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">139</td>
+<td><sub>06-19</sub>20</td>
+<td>keystone_exit_upgrade</td>
+<td>出场规则 walk-forward</td>
+<td><strong>无一可上 live</strong></td>
+<td><code>keystone_exit_upgrade/</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">140</td>
+<td>06-19</td>
+<td>live-canary hardening backup</td>
+<td>密钥卫生+硬化</td>
+<td>—</td>
+<td>git <code>90077ef</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">141</td>
+<td>06-20</td>
+<td>multi_chain_feasibility</td>
+<td>多链验证方案（未执行）</td>
+<td>设计稿</td>
+<td><code>multi_chain_feasibility/</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">142</td>
+<td>—</td>
+<td><code>docs/keystone-go-live.md</code> 等</td>
+<td>上线叙事文档</td>
+<td>历史主张；后被 GL 修订</td>
+<td><code>docs/keystone-*.md</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="实盘期证据审计06-2207-01">5.3
+实盘期证据审计（06-22～07-01）</h3>
+<table>
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">#</th>
+<th>日期</th>
+<th>名称</th>
+<th>做了什么</th>
+<th>裁决</th>
+<th>主产物</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">143</td>
+<td>06-22</td>
+<td>disaster_left_tail_audit</td>
+<td>−100% 路径/配置/链上真相</td>
+<td>多 <strong>FAIL</strong>（live≠回测 alpha）</td>
+<td><code>disaster_left_tail_audit_20260622/</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">144</td>
+<td>06-22</td>
+<td>execution_mev_latency_audit</td>
+<td>执行真实性/MEV/延迟</td>
+<td><strong>FAIL</strong></td>
+<td><code>execution_mev_latency_audit_20260622/</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">145</td>
+<td>06-22</td>
+<td>alert_and_position_stress</td>
+<td>告警覆盖+仓位前视</td>
+<td>B/D <strong>PASS</strong>；修复 changelog</td>
+<td><code>alert_and_position_stress_20260622/</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">146</td>
+<td>06-23</td>
+<td>honeypot_defense P0/v2/EF</td>
+<td>蜜罐防线设计/实现</td>
+<td>工程</td>
+<td><code>honeypot_defense_*.md</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">147</td>
+<td>06-23</td>
+<td>honeypot_rootcause</td>
+<td>根因：state-override 绕授权 + honeypot.is schema 错</td>
+<td>代码缺陷确认；SYSTEM_PANIC</td>
+<td><code>honeypot_rootcause_20260623/</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">148</td>
+<td>06-23</td>
+<td>fastrug_survivorship</td>
+<td>秒级死亡率/幸存者偏差</td>
+<td>6 月抬头</td>
+<td><code>fastrug_survivorship_20260623.md</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">149</td>
+<td>06-23</td>
+<td>backtest_recompute</td>
+<td>回测身份/MDD 分母核实</td>
+<td>小数字被 equity 稀释</td>
+<td><code>backtest_recompute_20260623/</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">150</td>
+<td>06-24</td>
+<td>go_live_session</td>
+<td>上线会话全记录</td>
+<td>fail-CLOSED / 混合</td>
+<td><code>go_live_session_20260624/</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">151</td>
+<td>06-24</td>
+<td>live_config_rebacktest</td>
+<td>当前 live+$50 双维回测</td>
+<td>—</td>
+<td><code>live_config_rebacktest_20260624/</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">152</td>
+<td>06-24</td>
+<td>exit_logic_lookahead</td>
+<td>出场甜点/TRAIL</td>
+<td>维持 TRAIL0.35</td>
+<td><code>exit_logic_lookahead_20260624/</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">153</td>
+<td>06-24</td>
+<td>funding_cluster_poc</td>
+<td>deployer 资金聚类</td>
+<td><strong>基础设施阻塞</strong></td>
+<td><code>funding_cluster_poc_20260624/</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">154</td>
+<td>06-24</td>
+<td>cluster_blacklist_fp</td>
+<td>F 黑名单骨架误杀</td>
+<td>—</td>
+<td><code>cluster_blacklist_fp_validation_20260624/</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">155</td>
+<td>06-24</td>
+<td>dimension_reconcile</td>
+<td>QV2 vs fork 对账</td>
+<td>—</td>
+<td><code>dimension_reconcile_20260624/</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">156</td>
+<td>06-24</td>
+<td>stress167</td>
+<td>167 笔 F-blocked rug 压力</td>
+<td>blocked/fail</td>
+<td><code>stress167_20260624/</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">157</td>
+<td>06-25</td>
+<td>golive_aggressive</td>
+<td>「适当激进版」上线+影子</td>
+<td>执行回报；后被 GL4 重判</td>
+<td><code>golive_aggressive_20260625/</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">158</td>
+<td>06-25</td>
+<td>aggressive_live_rebacktest</td>
+<td>激进配置历史回测+衰减</td>
+<td>—</td>
+<td><code>aggressive_live_rebacktest_20260625/</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">159</td>
+<td>06-25</td>
+<td>keystone_origin_search</td>
+<td>第一次发现溯源</td>
+<td>HIGH</td>
+<td><code>keystone_origin_search_20260625/</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">160</td>
+<td>06-27</td>
+<td>outage_missed</td>
+<td>停机漏信号反事实</td>
+<td>—</td>
+<td><code>outage_missed_20260627/</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">161</td>
+<td>06-29</td>
+<td>blacklist_framework_recompare</td>
+<td>黑名单框架再比</td>
+<td>—</td>
+<td><code>blacklist_framework_recompare_20260629/</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">162</td>
+<td>06-29</td>
+<td>deployer_vs_trader_ev</td>
+<td>部署者 vs 交易者 EV</td>
+<td>—</td>
+<td><code>deployer_vs_trader_ev_20260629/</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">163</td>
+<td>07-01</td>
+<td>min_weth_pre_backtest</td>
+<td>最小 WETH 前测</td>
+<td>—</td>
+<td><code>min_weth_pre_backtest_20260701/</code></td>
+</tr>
+</tbody>
+</table>
+<p>镜像：<code>/root/KEYSTONE_证伪档案/02_实盘期6月_证据审计/</code>。</p>
+<hr />
+<h2 id="证伪主线-bglrm-阅读包-聪明钱总汇">6. 2026-07 · 证伪主线 B/GL/RM
++ 阅读包 + 聪明钱总汇</h2>
+<h3 id="b-系列与家底07-14">6.1 B 系列与家底（07-14）</h3>
+<table>
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">#</th>
+<th>日期</th>
+<th>名称</th>
+<th>做了什么</th>
+<th>裁决</th>
+<th>主产物</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">164</td>
+<td>07-14</td>
+<td>家底调研报告</td>
+<td>项目家底</td>
+<td>—</td>
+<td><code>quant_research_os/reports/家底调研报告_EATLQ_20260714.md</code>；阅读包
+<code>15_*</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">165</td>
+<td>07-14</td>
+<td>keystone_history_and_alpha_claims_audit</td>
+<td>历史主张审计</td>
+<td>—</td>
+<td><code>reports/</code> + qros</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">166</td>
+<td>07-14</td>
+<td>B1 resolved-EOA</td>
+<td>Base V3 解析 EOA 归因地基</td>
+<td>ATTRIBUTION_FOUNDATION</td>
+<td><code>reports/base_v3_resolved_eoa_b1_20260714.md</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">167</td>
+<td>07-14</td>
+<td>B2 transfer-net</td>
+<td>holder 口径归因</td>
+<td><strong>覆盖率坍缩 / NEEDS_REVIEW</strong></td>
+<td><code>base_transfer_net_*</code>；qros
+<code>B2_结案裁决_*</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">168</td>
+<td>07-14</td>
+<td>B3 2min accel</td>
+<td>真储备/真 holder 加速证伪</td>
+<td>RESULT_NEEDS_REVIEW；W1=17</td>
+<td><code>base_2min_accel_b3_*</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">169</td>
+<td>07-14</td>
+<td>B3 account-entity</td>
+<td>实体归因可行性</td>
+<td>LOCAL_FEASIBILITY_PASS；RH1 仍 UNTESTED</td>
+<td><code>base_b3_account_entity_*</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">170</td>
+<td>07-14</td>
+<td>B4 QV2 vs atomic sellsim</td>
+<td>报价 vs 原子往返</td>
+<td>H0a INCONCLUSIVE 等</td>
+<td><code>B4_*</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">171</td>
+<td>07-14</td>
+<td>B5 KEYSTONE CHA reverify</td>
+<td>30m 口径再验</td>
+<td><strong>FAIL</strong>（pooled -4.61%；W1 有条件+）</td>
+<td><code>B5_*</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">172</td>
+<td>07-14</td>
+<td>B6 regime gate revival</td>
+<td>天气门复活尝试</td>
+<td>后被 GL1-17 PINNED 否决随机对照</td>
+<td>任务稿 + diagnostics</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">173</td>
+<td>07-14</td>
+<td>B8 honest execution</td>
+<td>诚实执行再验</td>
+<td><strong>RESULT_FAIL_RESEARCH_ONLY</strong></td>
+<td><code>B8_keystone_honest_execution_20260714.md</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">174</td>
+<td>07-14</td>
+<td>B_series_verdict_synthesis</td>
+<td>跨项目综合</td>
+<td>KEYSTONE regime 依赖；独立多头 <strong>FAIL</strong>；不 GO</td>
+<td>qros <code>B_series_verdict_synthesis_*</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">175</td>
+<td>07-14</td>
+<td>RH1 draft/review</td>
+<td>Base 复现 RH 聪明钱</td>
+<td><strong>UNTESTED</strong>（归因墙）</td>
+<td>qros <code>RH1_*</code>；<code>reports/base_rh1_*</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">176</td>
+<td>07-14</td>
+<td>CHA_F reaudit B1–B3</td>
+<td>CHA 侧复核</td>
+<td>—</td>
+<td>qros <code>CHA_F_reaudit_*</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">177</td>
+<td>07-14</td>
+<td>keystone revival / data repair / rpc preflight</td>
+<td>复活叙事/数据修复/RPC 预检</td>
+<td>后被秒级口径重写</td>
+<td><code>reports/keystone_*_20260714.md</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">178</td>
+<td>07-14</td>
+<td>指挥简报_Base聪明钱归因</td>
+<td>弃单钱包跟单建议</td>
+<td>—</td>
+<td>qros <code>指挥简报_*</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">179</td>
+<td>07-14</td>
+<td>reaudit_10 任务稿</td>
+<td>十条可疑结论任务</td>
+<td>→ 07-15 结果</td>
+<td>qros <code>reaudit_10_*</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="reaudit10-rm1rm207-15">6.2 Reaudit10 + RM1/RM2（07-15）</h3>
+<table>
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">#</th>
+<th>日期</th>
+<th>名称</th>
+<th>做了什么</th>
+<th>裁决</th>
+<th>主产物</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">180</td>
+<td>07-15</td>
+<td>reaudit_10 结果</td>
+<td>秒级重审十条</td>
+<td>KEYSTONE 历史报价 edge 存活；形式
+INCONCLUSIVE；<strong>NO_GO</strong></td>
+<td><code>reports/reaudit_10_suspect_conclusions_result_20260715.md</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">181</td>
+<td>07-15</td>
+<td>RM1 v2 dryrun</td>
+<td>真钱校准干跑（禁广播）</td>
+<td>DRYRUN_COMPLETE；HUMAN_ARM_NOT_MADE</td>
+<td><code>reports/RM1_v2_*</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">182</td>
+<td>07-15</td>
+<td>RM2 capstone + guarded adapter</td>
+<td>封账+禁广播适配器证明</td>
+<td>INDEPENDENT_REVIEW_PASS_DISABLED_ONLY；<strong>NO_GO</strong></td>
+<td><code>reports/RM2_*</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="gl1gl12-真相账本07-1516">6.3 GL1–GL12 真相账本（07-15～16）</h3>
+<table>
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">#</th>
+<th>日期</th>
+<th>名称</th>
+<th>做了什么</th>
+<th>裁决</th>
+<th>主产物</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">183</td>
+<td>07-15</td>
+<td>GL1 golden truth ledger</td>
+<td>23 条主张分级</td>
+<td>多 IRON/PINNED；若干 OPEN；<strong>GO=NOT_MADE</strong></td>
+<td><code>GL1_golden_truth_ledger_20260715.md</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">184</td>
+<td>07-15</td>
+<td>GL1 open questions / rules / conflict / plain / doc_index</td>
+<td>未验证清单与铁律与全库索引</td>
+<td>OPEN 排序见文</td>
+<td><code>GL1_*</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">185</td>
+<td>07-15</td>
+<td>GL2 A/B/C</td>
+<td>关 GL1-12/18/19 三 OPEN</td>
+<td>审查完成仍多 OPEN；B
+<strong>UNTESTED_ELIGIBILITY_CONTAMINATED</strong></td>
+<td><code>GL2_*</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">186</td>
+<td>07-15</td>
+<td>GL3 close GL1-12 α/β</td>
+<td>全区间恢复钉 alpha</td>
+<td><strong>GL1-12 IRON</strong>；历史有界；<strong>NO_GO</strong></td>
+<td><code>GL3_*</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">187</td>
+<td>07-16</td>
+<td>GL4 live track-record</td>
+<td>真金对账</td>
+<td><strong>GL1-02 PINNED/FAIL</strong>（亏~94% rug）；激进版≠+56%
+保守版</td>
+<td><code>GL4_*</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">188</td>
+<td>07-16</td>
+<td>GL5 / v2 / v3</td>
+<td>可实现出场重定价；F-on 644 档案</td>
+<td>GL5 STOP 对象错；v2 INCONCLUSIVE；<strong>v3 强烈支持 edge 幸存但仍
+INCONCLUSIVE/NO_GO</strong></td>
+<td><code>GL5*</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">189</td>
+<td>07-16</td>
+<td>GL6 Fon forward</td>
+<td>前瞻时效</td>
+<td>INSUFFICIENT_N；方向负</td>
+<td><code>GL6_*</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">190</td>
+<td>07-16</td>
+<td>GL7 / GL7v2</td>
+<td>钱包/尺寸可卖性；出场安全尽调</td>
+<td>GL7 SUPERSEDED；GL7v2 UNRESOLVED</td>
+<td><code>GL7*</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">191</td>
+<td>07-16</td>
+<td>GL8 PIT three-arm</td>
+<td>黑名单后视贡献</td>
+<td>FORWARD_EDGE_SUPPORTED；黑名单增量未识别</td>
+<td><code>GL8_*</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">192</td>
+<td>07-16</td>
+<td>GL9 structural sellability</td>
+<td>结构可卖门叠 edge 成本</td>
+<td><strong>CLEAN_FILTER_KILLS_EDGE</strong></td>
+<td><code>GL9_*</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">193</td>
+<td>07-16</td>
+<td>GL10 reactive exit</td>
+<td>储备 onset 反应出场</td>
+<td><strong>REACTIVE_EXIT_INEFFECTIVE</strong></td>
+<td><code>GL10_*</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">194</td>
+<td>07-16</td>
+<td>GL11 bankroll/capacity</td>
+<td>破产/容量描述点</td>
+<td>SURVIVABLE_OPERATING_POINT_DESCRIPTIVE；非 GO</td>
+<td><code>GL11_*</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">195</td>
+<td>07-16</td>
+<td>GL12 funding provenance</td>
+<td>资金来源+骨架门保险</td>
+<td>OFFLINE_REPLAY_REPRODUCED；<strong>LIVE_BLOCKED</strong></td>
+<td><code>GL12_*</code></td>
+</tr>
+</tbody>
+</table>
+<p>Ledger
+演进文件：<code>GL1_golden_truth_ledger_GL2/GL3/GL4_*.md</code> +
+<code>mvp/diagnostics/base_gl1_golden_truth_ledger_*.json</code>。</p>
+<h3 id="阅读包-证伪档案-根目录汇总">6.4 阅读包 / 证伪档案 /
+根目录汇总</h3>
+<table>
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">#</th>
+<th>日期</th>
+<th>名称</th>
+<th>做了什么</th>
+<th>裁决</th>
+<th>主产物</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">196</td>
+<td>07-16~17</td>
+<td>KEYSTONE 阅读包 00–16</td>
+<td>给人读的封账包（含 GL4/GL5 修订）</td>
+<td>真金 FAIL；历史 α IRON（报价口径）</td>
+<td><code>/root/KEYSTONE_阅读包/</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">197</td>
+<td>07-16</td>
+<td>KEYSTONE 证伪档案 00 总索引</td>
+<td>按序审索引</td>
+<td>—</td>
+<td><code>/root/KEYSTONE_证伪档案/00_总索引_按顺序审.md</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">198</td>
+<td>07-16</td>
+<td>证伪档案 01 近三天主线</td>
+<td>GL/RM/B 副本集</td>
+<td>—</td>
+<td><code>.../01_近三天_证明证伪主线/</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">199</td>
+<td>07-16</td>
+<td>证伪档案 02 实盘期 6 月</td>
+<td>6 月证据审计副本</td>
+<td>—</td>
+<td><code>.../02_实盘期6月_证据审计/</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">200</td>
+<td>07-19</td>
+<td>EATLQ vs LASZLO 白皮书对照</td>
+<td>边界对照</td>
+<td>REFERENCE</td>
+<td><code>/root/laszlo_whitepaper_v2_mirror/.../EATLQ_vs_LASZLO_full_comparison_20260719.md</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">201</td>
+<td>07-20</td>
+<td>聪明钱寻找历史总汇总</td>
+<td>全线聪明钱终局</td>
+<td><strong>无一路径可投真钱</strong></td>
+<td><code>quant_research_os/reports/聪明钱寻找_历史总汇总报告_20260720.md</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">202</td>
+<td>—</td>
+<td>EATLQ 三对话汇编 / Total Report</td>
+<td>对话与总报告</td>
+<td>—</td>
+<td><code>/root/EATLQ_三对话内容汇编.md</code>,
+<code>EATLQ_LASZLO_Project_Total_Report_CORRECTED.md</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">203</td>
+<td>07-11</td>
+<td>quant_research_os PRODUCTION_STATUS</td>
+<td>OS 窗口权威分级（非交易 GO）</td>
+<td>QA 窗口状态</td>
+<td><code>/root/quant_research_os/PRODUCTION_STATUS.md</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">204</td>
+<td>07-20</td>
+<td><strong>本文件</strong></td>
+<td>EATLQ 全工作成果时间线总清单</td>
+<td>ARCHIVE</td>
+<td>本路径</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="持续生效的护栏-合约跨月">7. 持续生效的护栏 / 合约（跨月）</h2>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 23%" />
+<col style="width: 23%" />
+<col style="width: 23%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">#</th>
+<th>名称</th>
+<th>裁决</th>
+<th>路径</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">G1</td>
+<td>FAILED_NO_7D_ALPHA</td>
+<td><strong>ACTIVE</strong></td>
+<td><code>mvp/audits/failed_no_7d_alpha_guard.md</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">G2</td>
+<td>Label semantics freeze</td>
+<td>CONTRACT</td>
+<td><code>docs/label-semantics-freeze.md</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">G3</td>
+<td>ML training / inference gates</td>
+<td>CONTRACT；需 RETRAIN_ALLOWED</td>
+<td><code>docs/ml-training-gate.md</code>,
+<code>ml-inference-authorization.md</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">G4</td>
+<td>Signal / executor / market-ticks / observability contracts</td>
+<td>CONTRACT</td>
+<td><code>docs/*-contract.md</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">G5</td>
+<td>Phase6 resolution criteria</td>
+<td>与 7d guard 联动</td>
+<td><code>docs/phase6-resolution-criteria.md</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">G6</td>
+<td>Alpha SOP decision tree</td>
+<td>流程</td>
+<td><code>docs/alpha-sop-decision-tree.md</code>,
+<code>alpha-search-sprint-sop.md</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">G7</td>
+<td>Alpha registry（65 行）</td>
+<td>索引；live_allowed=false</td>
+<td><code>mvp/audits/alpha_registry.md</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">G8</td>
+<td>SYSTEM_PANIC（实盘后）</td>
+<td>多次 active</td>
+<td>Redis + executor</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="alpha-registry-全表65-行机器人维护">8. Alpha Registry 全表（65
+行，机器+人维护）</h2>
+<p>权威源：<code>/opt/EATLQ/mvp/audits/alpha_registry.md</code>。摘要：</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>alpha_id</th>
+<th>name</th>
+<th>status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AR-GUARD-FN7D</td>
+<td>FAILED_NO_7D_ALPHA guard</td>
+<td>ACTIVE_GUARD</td>
+</tr>
+<tr class="even">
+<td>AR-SPC-028C</td>
+<td>Scoped micro-alpha policy</td>
+<td>REFERENCE</td>
+</tr>
+<tr class="odd">
+<td>AR-SPC-028C-ML</td>
+<td>Micro-live calibration charter</td>
+<td>CHARTER_ONLY</td>
+</tr>
+<tr class="even">
+<td>AR-SIG-PATH</td>
+<td>smart_money vs pool_score boundary</td>
+<td>CONTRACT</td>
+</tr>
+<tr class="odd">
+<td>AR-LBL-FRZ</td>
+<td>Label semantics freeze</td>
+<td>CONTRACT</td>
+</tr>
+<tr class="even">
+<td>AR-ML-GATE</td>
+<td>ML training preconditions</td>
+<td>CONTRACT</td>
+</tr>
+<tr class="odd">
+<td>AR-EXE-MM07</td>
+<td>Executor payload / dead-letter</td>
+<td>CONTRACT</td>
+</tr>
+<tr class="even">
+<td>AR-RUN055</td>
+<td>Fee100 paper shadow</td>
+<td>ACTIVE_SHADOW</td>
+</tr>
+<tr class="odd">
+<td>AR-RUN056</td>
+<td>Parallel tracks paper</td>
+<td>REVIEW</td>
+</tr>
+<tr class="even">
+<td>AR-RUN057</td>
+<td>Fee100 horizon sweep</td>
+<td>RESEARCH</td>
+</tr>
+<tr class="odd">
+<td>AR-RUN057R</td>
+<td>Fee100 evidence review</td>
+<td>REVIEW</td>
+</tr>
+<tr class="even">
+<td>AR-RUN057S</td>
+<td>Paper-to-live hardening</td>
+<td>READINESS_DOC</td>
+</tr>
+<tr class="odd">
+<td>AR-RUN037G</td>
+<td>Young-pool onset supersession</td>
+<td>REVIEW_READOUT</td>
+</tr>
+<tr class="even">
+<td>AR-SP068-J</td>
+<td>Sprint068 alpha registry JSON</td>
+<td>ACTIVE_SHADOW</td>
+</tr>
+<tr class="odd">
+<td>AR-SP069-FW</td>
+<td>Forward dry-run virtual ledger</td>
+<td>DRY_RUN</td>
+</tr>
+<tr class="even">
+<td>AR-SP069-OOM</td>
+<td>CH OOM repair</td>
+<td>MITIGATED</td>
+</tr>
+<tr class="odd">
+<td>AR-SP068-DP</td>
+<td>Dry-run strategy proposals</td>
+<td>RESEARCH_ONLY</td>
+</tr>
+<tr class="even">
+<td>AR-SP067-CF</td>
+<td>Paper shadow counterfactual</td>
+<td>DIAGNOSTIC</td>
+</tr>
+<tr class="odd">
+<td>AR-SP070-RT</td>
+<td>Research training sandbox</td>
+<td>RESEARCH_ONLY</td>
+</tr>
+<tr class="even">
+<td>AR-SP069-100C</td>
+<td>100-candidate factory / alpha_009</td>
+<td>ACTIVE_SHADOW</td>
+</tr>
+<tr class="odd">
+<td>AR-SP069-EX</td>
+<td>Sender exclusion track（0x6ff5 负对照）</td>
+<td>ATTRIBUTION_CONFIRMED</td>
+</tr>
+<tr class="even">
+<td>AR-SP070-SM</td>
+<td>SM recovery；0x6ff5=MM；RouteA NOT_COPYABLE</td>
+<td>WATCH_ONLY_BOT</td>
+</tr>
+<tr class="odd">
+<td>AR-SP071-COST</td>
+<td>Cost unit calibration</td>
+<td>CALIBRATED</td>
+</tr>
+<tr class="even">
+<td>AR-SP066-OFT</td>
+<td>Secondary features OVERFIT</td>
+<td>WATCH</td>
+</tr>
+<tr class="odd">
+<td>AR-SP065-FT</td>
+<td>Feature Tier Registry</td>
+<td>REFERENCE</td>
+</tr>
+<tr class="even">
+<td>AR-SP068-RC</td>
+<td>Cooldown anchor reconciliation</td>
+<td>REFERENCE</td>
+</tr>
+<tr class="odd">
+<td>AR-SP061-LR</td>
+<td>Live readiness closure</td>
+<td>HUMAN_BLOCKERS</td>
+</tr>
+<tr class="even">
+<td>AR-SP083-V3-SMART-WALLET-RT</td>
+<td>Smart wallet RT dataset builder</td>
+<td>OFFLINE_DATASET_BUILDER</td>
+</tr>
+<tr class="odd">
+<td>AR-SP083-SM-COPY-CLOSED</td>
+<td>Direct SM copy closed</td>
+<td>REJECTED_SUPERSEDED</td>
+</tr>
+<tr class="even">
+<td>AR-SP085-WALLET-COND-POOL-ENTRY-V0</td>
+<td>Wallet-conditioned pool entry</td>
+<td>RESEARCH_ONLY</td>
+</tr>
+<tr class="odd">
+<td>AR-SP086-REAL-COST-OVERLAY</td>
+<td>Real-cost overlay</td>
+<td>OVERLAY_DONE</td>
+</tr>
+<tr class="even">
+<td>AR-SP086-BATCHED-EXIT</td>
+<td>Batched exit trailing</td>
+<td>RESEARCH_POSITIVE</td>
+</tr>
+<tr class="odd">
+<td>AR-SP086-WEATHERVANE-0X6FF5</td>
+<td>0x6ff5 weathervane</td>
+<td>REJECTED_SAMPLE_NEGATIVE</td>
+</tr>
+<tr class="even">
+<td>AR-SP086-FIRST-SIGNAL-ONLY</td>
+<td>First-signal-only echo</td>
+<td>REJECTED_ECHO_ALPHA</td>
+</tr>
+<tr class="odd">
+<td>AR-SP086-SPRINT055-INLINE-COST</td>
+<td>Inline real-cost</td>
+<td>ACTIVE_INLINE</td>
+</tr>
+<tr class="even">
+<td>AR-SP087-EXPANDED-FIRST-SIGNAL</td>
+<td>Expanded first-signal forward</td>
+<td>ACTIVE_FORWARD</td>
+</tr>
+<tr class="odd">
+<td>AR-SP090-ALPHA-SPRINT</td>
+<td>Alpha search SOP</td>
+<td>ACTIVE_SOP</td>
+</tr>
+<tr class="even">
+<td>AR-SP090-H2-SLOW30M</td>
+<td>Slow 30m onset</td>
+<td>RUNNING_BACKTEST</td>
+</tr>
+<tr class="odd">
+<td>AR-SP090-H3-MULTIFEE</td>
+<td>Multi-fee onset</td>
+<td>RUNNING_BACKTEST</td>
+</tr>
+<tr class="even">
+<td>AR-SP090-H1-H6-EXCL</td>
+<td>0x6ff5 exclusion post-filters</td>
+<td>REJECTED_FAST</td>
+</tr>
+<tr class="odd">
+<td>AR-B1-RESOLVED-EOA</td>
+<td>Resolved EOA attribution</td>
+<td>ATTRIBUTION_FOUNDATION</td>
+</tr>
+<tr class="even">
+<td>AR-B2-TRANSFER-NET</td>
+<td>Transfer-net attribution</td>
+<td>NEEDS_REVIEW_HOLDER_COLLAPSE…</td>
+</tr>
+<tr class="odd">
+<td>AR-B3-ACCOUNT-ENTITY-ATTRIBUTION</td>
+<td>Account/entity feasibility</td>
+<td>LOCAL_FEASIBILITY_PASS…</td>
+</tr>
+<tr class="even">
+<td>AR-B3-BASE-2MIN-ACCEL</td>
+<td>2min accel falsification</td>
+<td>RESULT_NEEDS_REVIEW_INCONCLUSIVE</td>
+</tr>
+<tr class="odd">
+<td>AR-B4-QV2-ATOMIC-SELLSIM</td>
+<td>QuoterV2 vs atomic</td>
+<td>REPLAY_READY_RESEARCH_ONLY</td>
+</tr>
+<tr class="even">
+<td>AR-B8-KEYSTONE-HONEST-EXEC</td>
+<td>Honest execution</td>
+<td>RESULT_FAIL_RESEARCH_ONLY</td>
+</tr>
+<tr class="odd">
+<td>AR-REAUDIT10-SECONDS</td>
+<td>Ten-conclusion seconds re-audit</td>
+<td>RESULT_REVIEW…</td>
+</tr>
+<tr class="even">
+<td>AR-KEYSTONE-RM-CALIB</td>
+<td>RM1 v2 dryrun</td>
+<td>DRYRUN_COMPLETE…</td>
+</tr>
+<tr class="odd">
+<td>AR-RH1-BASE-SMARTMONEY</td>
+<td>RH smartmoney on Base</td>
+<td>UNTESTED…</td>
+</tr>
+<tr class="even">
+<td>AR-GOLDEN-TRUTH-LEDGER</td>
+<td>GL1 ledger</td>
+<td>REVIEW_GRADES_PROVISIONAL</td>
+</tr>
+<tr class="odd">
+<td>AR-GL2-THREE-OPENS</td>
+<td>GL2 three opens</td>
+<td>INDEPENDENT_REVIEW…ALL_OPEN</td>
+</tr>
+<tr class="even">
+<td>AR-GL3-CLOSE-GL12</td>
+<td>GL3 alpha/beta</td>
+<td>GL1_12_IRON_NO_GO</td>
+</tr>
+<tr class="odd">
+<td>AR-RM2-CAPSTONE-ADAPTER</td>
+<td>RM2 capstone adapter</td>
+<td>DISABLED_ONLY_NO_GO</td>
+</tr>
+<tr class="even">
+<td>AR-GL4-LIVE-RECON</td>
+<td>GL4 live recon</td>
+<td>GL1_02_PINNED_FAIL…NO_GO</td>
+</tr>
+<tr class="odd">
+<td>AR-GL5-REALIZABLE-EXIT</td>
+<td>GL5 realizable exit</td>
+<td>STOP_OBJECT_IDENTITY_MISMATCH</td>
+</tr>
+<tr class="even">
+<td>AR-GL5V2-FON644-REALIZABLE</td>
+<td>GL5v2 F-on 644</td>
+<td>INCONCLUSIVE…</td>
+</tr>
+<tr class="odd">
+<td>AR-GL5V3-FON644-ARCHIVE</td>
+<td>GL5v3 archive resolve</td>
+<td>EDGE_SURVIVAL_STRONGLY_SUPPORTED…NO_GO</td>
+</tr>
+<tr class="even">
+<td>AR-GL6-FON-FORWARD</td>
+<td>GL6 forward recency</td>
+<td>INSUFFICIENT_FORWARD_N…</td>
+</tr>
+<tr class="odd">
+<td>AR-GL7-WALLET-SIZE-FALSIFICATION</td>
+<td>GL7 wallet/size</td>
+<td>SUPERSEDED_REVIEW_FAIL…</td>
+</tr>
+<tr class="even">
+<td>AR-GL7V2-EXIT-SAFETY</td>
+<td>GL7v2 exit safety</td>
+<td>UNRESOLVED…</td>
+</tr>
+<tr class="odd">
+<td>AR-GL8-PIT-F-HINDSIGHT</td>
+<td>GL8 PIT three-arm</td>
+<td>FORWARD_EDGE_SUPPORTED…</td>
+</tr>
+<tr class="even">
+<td>AR-GL9-STRUCTURAL-SELLABILITY</td>
+<td>GL9 structural gates</td>
+<td>CLEAN_FILTER_KILLS_EDGE</td>
+</tr>
+<tr class="odd">
+<td>AR-GL10-REACTIVE-EXIT</td>
+<td>GL10 reactive exit</td>
+<td>REACTIVE_EXIT_INEFFECTIVE</td>
+</tr>
+<tr class="even">
+<td>AR-GL11-BANKROLL-VARIANCE-CAPACITY</td>
+<td>GL11 bankroll</td>
+<td>SURVIVABLE_OPERATING_POINT_DESCRIPTIVE</td>
+</tr>
+<tr class="odd">
+<td>AR-GL12-FUNDING-PROVENANCE</td>
+<td>GL12 funding gate</td>
+<td>OFFLINE_REPLAY…LIVE_BLOCKED</td>
+</tr>
+</tbody>
+</table>
+<p>全部行 <code>training_allowed=false</code> ·
+<code>live_allowed=false</code>。</p>
+<hr />
+<h2 id="gl1-真相账本-23-条主张分级对象">9. GL1 真相账本 23
+条主张（分级对象）</h2>
+<p>权威：<code>reports/GL1_golden_truth_ledger_20260715.md</code>（后经
+GL2/GL3/GL4 演进）。主张编号形如 <code>GL1-01</code>…（约 23
+条），覆盖：</p>
+<ul>
+<li>历史报价型 KEYSTONE edge / alpha / beta<br />
+</li>
+<li>真金 track-record（GL4 后 <strong>PINNED/FAIL</strong>）<br />
+</li>
+<li>QuoterV2 ≠ 可卖性<br />
+</li>
+<li>rug / 蜜罐 / F 黑名单后视<br />
+</li>
+<li>天气门 / 聪明钱可复制（多 OPEN/UNTESTED）<br />
+</li>
+<li>容量 / 频率 / 衰减等 OPEN</li>
+</ul>
+<p>详表与 IRON/PINNED/OPEN 以 ledger
+文件为准；人话入口：<code>/root/KEYSTONE_阅读包/08_真相账本_完整总表23条.md</code>。</p>
+<hr />
+<h2 id="按月条目规模粗计">10. 按月条目规模粗计</h2>
+<table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 40%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>月</th>
+<th style="text-align: right;">粗估工作产物（审计/run/报告级）</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2026-03</td>
+<td style="text-align: right;">~40–60</td>
+<td>组件+git 里程碑</td>
+</tr>
+<tr class="even">
+<td>2026-04</td>
+<td style="text-align: right;">~180+</td>
+<td>Run-004/Aero/Phase6 极密</td>
+</tr>
+<tr class="odd">
+<td>2026-05</td>
+<td style="text-align: right;">~250+</td>
+<td>Sprint028–095 + 契约 + social</td>
+</tr>
+<tr class="even">
+<td>2026-06</td>
+<td style="text-align: right;">~80+</td>
+<td>KEYSTONE/实盘/Solana/右尾</td>
+</tr>
+<tr class="odd">
+<td>2026-07</td>
+<td style="text-align: right;">~120+</td>
+<td>B/GL/RM + 阅读包 + 聪明钱总汇</td>
+</tr>
+<tr class="even">
+<td><strong>本清单编号行</strong></td>
+<td style="text-align: right;"><strong>~204 主条目 + 65 AR + 180 Run-004
+文件 + 22 Aero</strong></td>
+<td>见附录</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="终局备忘给指挥">11. 终局备忘（给指挥）</h2>
+<ol type="1">
+<li><strong>工程上做成了完整 Base
+交易研究/执行栈</strong>（ingest→CH→特征→策略→executor→dashboard），这是实打实成果。<br />
+</li>
+<li><strong>经济上</strong>：Phase6/<code>FAILED_NO_7D_ALPHA</code>
+早早挂闸；5 月 paper shadow 大量是 echo/集中/真实成本打脸；聪明钱线
+DEAD/WONTFIX。<br />
+</li>
+<li><strong>KEYSTONE</strong>：历史报价口径可钉出正 alpha（IRON
+级算术），但真金跑的是激进版并亏在 rug/卖不掉（GL4）；保守 F-on
+版历史上强、<strong>从没干净上过真钱</strong>（GL5v3）。<br />
+</li>
+<li><strong>一律 NO_GO / 不自判 live</strong>，直到护栏显式 supersede +
+人类 ARM。</li>
+</ol>
+<hr />
+<h2 id="附录-a-run-004-全部-180-个文件名">附录 A · Run-004 全部 180
+个文件名</h2>
+<p>路径前缀：<code>/opt/EATLQ/mvp/runs/</code></p>
+<ul>
+<li><code>run-004-H-series.md</code></li>
+<li><code>run-004-g35-postmortem-feature-score-audit.md</code></li>
+<li><code>run-004-patch-a-runtime-activation.md</code></li>
+<li><code>run-004-patch-b-label-semantics.md</code></li>
+<li><code>run-004-patch-b-verify.md</code></li>
+<li><code>run-004-patch-c-swaponly-dataset.md</code></li>
+<li><code>run-004-patch-c1-gate-semantics.md</code></li>
+<li><code>run-004-patch-c2-full-diversity-scan.md</code></li>
+<li><code>run-004-patch-d-executable-label-validation.md</code></li>
+<li><code>run-004-patch-d2-label-failure-forensics.md</code></li>
+<li><code>run-004-patch-d3-v3-quoter-audit.md</code></li>
+<li><code>run-004-patch-d4-v2only-executable-gate.md</code></li>
+<li><code>run-004-patch-e-v2only-label-dryrun.md</code></li>
+<li><code>run-004-patch-e2-v2only-label-dryrun-full.md</code></li>
+<li><code>run-004-patch-f-e2-reconciliation.md</code></li>
+<li><code>run-004-patch-f-v2only-prepare-dryrun.md</code></li>
+<li><code>run-004-patch-f0-duplicate-reconciliation.md</code></li>
+<li><code>run-004-patch-f1-canonical-prepare.md</code></li>
+<li><code>run-004-patch-f1-conflict-relabel.md</code></li>
+<li><code>run-004-patch-f1-duplicate-conflict-triage.md</code></li>
+<li><code>run-004-patch-f1-sensitivity.md</code></li>
+<li><code>run-004-patch-f1-v2only-prepare-dryrun.md</code></li>
+<li><code>run-004-patch-g-v2only-retrain-dryrun.md</code></li>
+<li><code>run-004-patch-g0-final-score-retrain-dryrun.md</code></li>
+<li><code>run-004-patch-g1-1-pool-balanced-alpha-attribution.md</code></li>
+<li><code>run-004-patch-g1-2-pool-quality-ranking.md</code></li>
+<li><code>run-004-patch-g1-3-pool-capped-policy.md</code></li>
+<li><code>run-004-patch-g1-4-score-band-frontier.md</code></li>
+<li><code>run-004-patch-g1-5-pool-breadth-feasibility.md</code></li>
+<li><code>run-004-patch-g1-6-pool-breadth-aware-scoring.md</code></li>
+<li><code>run-004-patch-g1-feature-recovery-audit.md</code></li>
+<li><code>run-004-patch-g1-pool-agnostic-ablation.md</code></li>
+<li><code>run-004-patch-g2-breadth-aware-candidate-validation.md</code></li>
+<li><code>run-004-patch-g2-pool-invariant-feature-redesign.md</code></li>
+<li><code>run-004-patch-g3-1-shadow-score-once.md</code></li>
+<li><code>run-004-patch-g3-3-smoke-a-20260429_095431.md</code></li>
+<li><code>run-004-patch-g3-3-smoke-a-20260429_095502.md</code></li>
+<li><code>run-004-patch-g3-3-smoke-a-20260429_095513.md</code></li>
+<li><code>run-004-patch-g3-3-smoke-b-20260429_095431.md</code></li>
+<li><code>run-004-patch-g3-3-smoke-b-20260429_095502.md</code></li>
+<li><code>run-004-patch-g3-3-smoke-b-20260429_095513.md</code></li>
+<li><code>run-004-patch-g3-4-pilot-g34_start_20260429_101357.md</code></li>
+<li><code>run-004-patch-g3-4-pilot-g34_start_20260429_101432.md</code></li>
+<li><code>run-004-patch-g3-5-fresh-shadow-input-readiness.md</code></li>
+<li><code>run-004-patch-g3-feature-enriched-dataset.md</code></li>
+<li><code>run-004-patch-g3-feature-source-audit.md</code></li>
+<li><code>run-004-patch-g3-rpc-feature-full.md</code></li>
+<li><code>run-004-patch-g3-rpc-feature-pilot.md</code></li>
+<li><code>run-004-patch-g3-rpc-feature-plan.md</code></li>
+<li><code>run-004-patch-g3-shadow-dryrun-design.md</code></li>
+<li><code>run-004-patch-g4-feature-enriched-retrain-dryrun.md</code></li>
+<li><code>run-004-patch-g4b-calibration-diversification.md</code></li>
+<li><code>run-004-patch-h-shadow-eval.md</code></li>
+<li><code>run-004-patch-h-shadow-setup-audit.md</code></li>
+<li><code>run-004-patch-h0-schema-repair-dryrun.md</code></li>
+<li><code>run-004-patch-h1-candidate-isolation.md</code></li>
+<li><code>run-004-patch-h1-metric-reconciliation.md</code></li>
+<li><code>run-004-patch-h1-repaired-label-replay.md</code></li>
+<li><code>run-004-patch-h10-feature-recompute.md</code></li>
+<li><code>run-004-patch-h106-clickhouse-backfill-source-recovery.md</code></li>
+<li><code>run-004-patch-h107-address-semantics-audit.md</code></li>
+<li><code>run-004-patch-h108-decoded-swap-bridge.md</code></li>
+<li><code>run-004-patch-h11-enriched-feature-sanity-ablation.md</code></li>
+<li><code>run-004-patch-h12-return-aware-alpha-target-construction.md</code></li>
+<li><code>run-004-patch-h13-return-aware-feature-ablation.md</code></li>
+<li><code>run-004-patch-h135-return-horizon-dataset-expansion-audit.md</code></li>
+<li><code>run-004-patch-h14-return-accounting-replay-ledger-repair.md</code></li>
+<li><code>run-004-patch-h15-live-like-exit-replay-bad-pool-pilot.md</code></li>
+<li><code>run-004-patch-h16-fixed-horizon-gas-adjusted-10k.md</code></li>
+<li><code>run-004-patch-h1610r-v2-decoded-backed-candidate-repair-rpc-metadata-backfill.md</code></li>
+<li><code>run-004-patch-h1610s-v2-candidate-sampler-expansion-rpc-backfill-resume.md</code></li>
+<li><code>run-004-patch-h1611-v2-decoded-backed-full-10k-labeling.md</code></li>
+<li><code>run-004-patch-h165-rpc-candidate-repair-labeling-pilot.md</code></li>
+<li><code>run-004-patch-h166-split-v2-mainline-v3-repair.md</code></li>
+<li><code>run-004-patch-h167-v2-only-10k-fixed-horizon-gas-adjusted.md</code></li>
+<li><code>run-004-patch-h168-v2-decoded-feature-enrichment-repair.md</code></li>
+<li><code>run-004-patch-h169-p0-lineage-postmortem.md</code></li>
+<li><code>run-004-patch-h169-v2-decoded-backed-rebuild.md</code></li>
+<li><code>run-004-patch-h17-v2-return-aware-feature-ablation.md</code></li>
+<li><code>run-004-patch-h18-6-v2-oot-expansion-validation.md</code></li>
+<li><code>run-004-patch-h18-7-v2-large-oot-validation.md</code></li>
+<li><code>run-004-patch-h18-8-v2-fresh-oot-return-aware-target.md</code></li>
+<li><code>run-004-patch-h18-v2-candidate-model-dryrun.md</code></li>
+<li><code>run-004-patch-h2-repaired-retrain-dryrun.md</code></li>
+<li><code>run-004-patch-h2-shadow-bootstrap.md</code></li>
+<li><code>run-004-patch-h3-24h-shadow-summary-corrected.md</code></li>
+<li><code>run-004-patch-h3-24h-shadow-summary.md</code></li>
+<li><code>run-004-patch-h3-shadow-round-20260427T035228Z.md</code></li>
+<li><code>run-004-patch-h3-shadow-round-20260427T035249Z.md</code></li>
+<li><code>run-004-patch-h3-shadow-round-20260427T035444Z.md</code></li>
+<li><code>run-004-patch-h3-shadow-round-20260427T035729Z.md</code></li>
+<li><code>run-004-patch-h3-shadow-round-20260427T035944Z.md</code></li>
+<li><code>run-004-patch-h3-shadow-round-20260427T040044Z.md</code></li>
+<li><code>run-004-patch-h4-72h-shadow-summary.md</code></li>
+<li><code>run-004-patch-h4-shadow-round-20260427T042332Z.md</code></li>
+<li><code>run-004-patch-h4-shadow-round-20260427T042403Z.md</code></li>
+<li><code>run-004-patch-h4-shadow-round-20260427T042438Z.md</code></li>
+<li><code>run-004-patch-h4-shadow-round-20260427T042513Z.md</code></li>
+<li><code>run-004-patch-h4-shadow-round-20260427T042548Z.md</code></li>
+<li><code>run-004-patch-h4-shadow-round-20260427T042620Z.md</code></li>
+<li><code>run-004-patch-h4-shadow-round-20260427T042650Z.md</code></li>
+<li><code>run-004-patch-h4-shadow-round-20260427T042720Z.md</code></li>
+<li><code>run-004-patch-h4-shadow-round-20260427T042756Z.md</code></li>
+<li><code>run-004-patch-h4-shadow-round-20260427T042827Z.md</code></li>
+<li><code>run-004-patch-h4-shadow-round-20260427T042857Z.md</code></li>
+<li><code>run-004-patch-h4-shadow-round-20260427T042945Z.md</code></li>
+<li><code>run-004-patch-h4-shadow-round-20260427T043046Z.md</code></li>
+<li><code>run-004-patch-h4-shadow-round-20260427T043213Z.md</code></li>
+<li><code>run-004-patch-h4-shadow-round-20260427T043254Z.md</code></li>
+<li><code>run-004-patch-h4-shadow-round-20260427T043408Z.md</code></li>
+<li><code>run-004-patch-h4-shadow-round-20260427T043547Z.md</code></li>
+<li><code>run-004-patch-h4-shadow-round-20260427T043731Z.md</code></li>
+<li><code>run-004-patch-h4-window-feature-ablation.md</code></li>
+<li><code>run-004-patch-h6-larger-executable-label-evaluation.md</code></li>
+<li><code>run-004-patch-h6-paper-round-20260427T074331Z.md</code></li>
+<li><code>run-004-patch-h6-paper-round-20260427T074826Z.md</code></li>
+<li><code>run-004-patch-h6-paper-summary.md</code></li>
+<li><code>run-004-patch-h7-7d-paper-summary.md</code></li>
+<li><code>run-004-patch-h7-executable-retrain-dryrun.md</code></li>
+<li><code>run-004-patch-h7-paper-day-20260428.md</code></li>
+<li><code>run-004-patch-h7-paper-round-20260428T114322Z.md</code></li>
+<li><code>run-004-patch-h7-paper-round-20260428T114418Z.md</code></li>
+<li><code>run-004-patch-h7-paper-round-20260428T114457Z.md</code></li>
+<li><code>run-004-patch-h8-larger-executable-dataset-feature-revision.md</code></li>
+<li><code>run-004-patch-h85-top-pool-specialized-alpha.md</code></li>
+<li><code>run-004-patch-v3r1-executable-labeler-repair.md</code></li>
+<li><code>run-004-patch-v3r10-v3-candidate-pool-heldout-dryrun.md</code></li>
+<li><code>run-004-patch-v3r11-return-aware-v3-research.md</code></li>
+<li><code>run-004-patch-v3r12-v3-data-supply.md</code></li>
+<li><code>run-004-patch-v3r13a-fixed-notional-quote-sanity.md</code></li>
+<li><code>run-004-patch-v3r13b-h18-16-targeted-v3-local-expansion-precheck.md</code></li>
+<li><code>run-004-patch-v3r13b-v3-tradability-falsification-audit.md</code></li>
+<li><code>run-004-patch-v3r13c-quoter-v2-abi-rerun.md</code></li>
+<li><code>run-004-patch-v3r13c-quoterv2-struct-fix-405-rerun.md</code></li>
+<li><code>run-004-patch-v3r14-v3-labeler-bridge.md</code></li>
+<li><code>run-004-patch-v3r15-bounded-v3-dataset-expansion.md</code></li>
+<li><code>run-004-patch-v3r15-external-decode-oracle-audit.md</code></li>
+<li><code>run-004-patch-v3r16-v3-label-quality-audit.md</code></li>
+<li><code>run-004-patch-v3r17-v3-future-horizon-labeler.md</code></li>
+<li><code>run-004-patch-v3r18-v3-pool-route-forensic.md</code></li>
+<li><code>run-004-patch-v3r19-v3-label-policy-repair.md</code></li>
+<li><code>run-004-patch-v3r2-decoded-backed-candidate-reconstruction.md</code></li>
+<li><code>run-004-patch-v3r20-v3-candidate-source-repair.md</code></li>
+<li><code>run-004-patch-v3r21-v3-buy-source-label-quality-validation.md</code></li>
+<li><code>run-004-patch-v3r22-clean-buy-diversity-repair.md</code></li>
+<li><code>run-004-patch-v3r23-new-v3-candidate-builder-design.md</code></li>
+<li><code>run-004-patch-v3r24-new-v3-candidate-builder-prototype.md</code></li>
+<li><code>run-004-patch-v3r24r-v3-candidate-source-diversity-repair.md</code></li>
+<li><code>run-004-patch-v3r25-clean-prototype-validation.md</code></li>
+<li><code>run-004-patch-v3r26-timestamp-block-mapping-repair.md</code></li>
+<li><code>run-004-patch-v3r27-bounded-timestamp-horizon-validation.md</code></li>
+<li><code>run-004-patch-v3r28-timestamp-horizon-leakage-holdout-audit.md</code></li>
+<li><code>run-004-patch-v3r29-small-timestamp-dataset-expansion.md</code></li>
+<li><code>run-004-patch-v3r29b-small-timestamp-dataset-rebalance.md</code></li>
+<li><code>run-004-patch-v3r3-larger-v3-repair-pilot.md</code></li>
+<li><code>run-004-patch-v3r30-pre-model-dataset-audit.md</code></li>
+<li><code>run-004-patch-v3r31-very-small-model-dryrun.md</code></li>
+<li><code>run-004-patch-v3r31f-failure-consolidation.md</code></li>
+<li><code>run-004-patch-v3r4-shared-labeler-patch-regression.md</code></li>
+<li><code>run-004-patch-v3r5-integration-planning.md</code></li>
+<li><code>run-004-patch-v3r6-v3-only-5k-dataset-build.md</code></li>
+<li><code>run-004-patch-v3r7-return-aware-feature-ablation.md</code></li>
+<li><code>run-004-patch-v3r8-v3-only-larger-decoded-backed-dataset.md</code></li>
+<li><code>run-004-patch-v3r9-v3-only-return-aware-feature-ablation.md</code></li>
+<li><code>run-004-phase6-failure-postmortem-for-original-author.md</code></li>
+<li><code>run-004-prep-semantic-coverage-fix-plan.md</code></li>
+<li><code>run-004-v2-7d-alpha-readout.md</code></li>
+<li><code>run-004-v2-audit-ab-pre-30d.md</code></li>
+<li><code>run-004-v2-factory-paircreated-universe-scan.md</code></li>
+<li><code>run-004-v2-fresh-availability-probe.md</code></li>
+<li><code>run-004-v2-live-equivalent-1d-pilot.md</code></li>
+<li><code>run-004-v2-live-equivalent-7d-pilot.md</code></li>
+<li><code>run-004-v2-live-equivalent-backtest.md</code></li>
+<li><code>run-004-v2-pilot-consolidation-and-30d-preflight.md</code></li>
+<li><code>run-004-v3s1-scoped-5m-feasibility.md</code></li>
+<li><code>run-004-v3s2-scoped-expansion-cost-preflight.md</code></li>
+<li><code>run-004-v3s3a-staged-scoped-5m-expansion.md</code></li>
+<li><code>run-004-v3s3b-scoped-outlier-return-sanity.md</code></li>
+<li><code>run-004-v3s3c-outlier-policy-repair.md</code></li>
+<li><code>run-004-v3s4-tiny-scoped-5m-feasibility.md</code></li>
+</ul>
+<hr />
+<h2 id="附录-b-aerodrome-runs22">附录 B · Aerodrome runs（22）</h2>
+<ul>
+<li><code>aero-api-spike-01-external-data-feasibility.md</code></li>
+<li><code>aero-vamm-2000-duplicate-metric-audit.md</code></li>
+<li><code>aero-vamm-2000-low-positive-rate-audit.md</code></li>
+<li><code>aero-vamm-60m-cost-sensitivity-2000-plan.md</code></li>
+<li><code>aero-vamm-60m-cost-sensitivity-2000.md</code></li>
+<li><code>aero-vamm-60m-cost-sensitivity-5000.md</code></li>
+<li><code>aero-vamm-adapter-1000-dryrun.md</code></li>
+<li><code>aero-vamm-adapter-pilot.md</code></li>
+<li><code>aero-vamm-canonical-label-design.md</code></li>
+<li><code>aero-vamm-canonical-label-dryrun-2000-corrected.md</code></li>
+<li><code>aero-vamm-canonical-label-dryrun-2000.md</code></li>
+<li><code>aero-vamm-cost-accounting-audit.md</code></li>
+<li><code>aero-vamm-cost-horizon-sensitivity-design.md</code></li>
+<li><code>aero-vamm-horizon-cost-pilot-500.md</code></li>
+<li><code>aero-vamm-s3-cost-regime-policy.md</code></li>
+<li><code>aero-vamm-s4-target-trainability-audit.md</code></li>
+<li><code>aero-vamm-s5-1-feature-definition-revision.md</code></li>
+<li><code>aero-vamm-s5-2-regime-aware-offline-design.md</code></li>
+<li><code>aero-vamm-s5-entry-feature-fetch-pilot.md</code></li>
+<li><code>aero-vamm-s5-feature-source-audit.md</code></li>
+<li><code>aero-vamm-s5-trainability-recheck.md</code></li>
+<li><code>aero-vamm-small-sample-research.md</code></li>
+</ul>
+<hr />
+<h2 id="附录-c-mvpaudits-顶层目录文件名完整">附录 C ·
+<code>mvp/audits</code> 顶层目录/文件名（完整）</h2>
+<p>共 253 项：</p>
+<ul>
+<li><code>aggressive_live_rebacktest_20260625</code></li>
+<li><code>alert_and_position_stress_20260622</code></li>
+<li><code>alpha_foundry_v0</code></li>
+<li><code>alpha_health</code></li>
+<li><code>alpha_registry.md</code></li>
+<li><code>archive_only_backup_review</code></li>
+<li><code>backtest_recompute_20260623</code></li>
+<li><code>blacklist_framework_recompare_20260629</code></li>
+<li><code>cluster_blacklist_fp_validation_20260624</code></li>
+<li><code>deployer_vs_trader_ev_20260629</code></li>
+<li><code>dimension_reconcile_20260624</code></li>
+<li><code>disaster_left_tail_audit_20260622</code></li>
+<li><code>documentation_path_map.md</code></li>
+<li><code>documentation_source_map_repair_sprint.md</code></li>
+<li><code>downstream_wiki_contrast_audit.md</code></li>
+<li><code>downstream_wiki_contrast_audit_high_confidence_only.md</code></li>
+<li><code>execution_mev_latency_audit_20260622</code></li>
+<li><code>execution_readiness</code></li>
+<li><code>exit_logic_lookahead_20260624</code></li>
+<li><code>failed_no_7d_alpha_guard.md</code></li>
+<li><code>fastrug_survivorship_20260623.md</code></li>
+<li><code>fee500_live_track</code></li>
+<li><code>funding_cluster_poc_20260624</code></li>
+<li><code>gitleaks_triage</code></li>
+<li><code>go_live_session_20260624</code></li>
+<li><code>golive_aggressive_20260625</code></li>
+<li><code>high_confidence_wiki_minimal_patch_summary.md</code></li>
+<li><code>honeypot_defense_P0_20260623.md</code></li>
+<li><code>honeypot_defense_impl_EFdepth_20260623.md</code></li>
+<li><code>honeypot_defense_v2_BC_20260623.md</code></li>
+<li><code>honeypot_rootcause_20260623</code></li>
+<li><code>keystone_eth_usd_pnl.json</code></li>
+<li><code>keystone_exit_upgrade</code></li>
+<li><code>keystone_origin_search_20260625</code></li>
+<li><code>live_config_rebacktest_20260624</code></li>
+<li><code>market_tick_contract_completion_sprint_006.md</code></li>
+<li><code>min_weth_pre_backtest_20260701</code></li>
+<li><code>multi_chain_feasibility</code></li>
+<li><code>multichain_scout</code></li>
+<li><code>observability_contract_completion_sprint_007.md</code></li>
+<li><code>oos_duckdb_inventory</code></li>
+<li><code>oss_three_tool_preflight</code></li>
+<li><code>outage_missed_20260627</code></li>
+<li><code>p0_fix_20260612</code></li>
+<li><code>p1_fix_20260612</code></li>
+<li><code>path_b_lp_candidates</code></li>
+<li><code>pending_sell_runtime_lock_sprint_004.md</code></li>
+<li><code>restore_and_offvps_backup</code></li>
+<li><code>rpc_burn_diagnostic_20260527</code></li>
+<li><code>rpc_reduction_20260526.md</code></li>
+<li><code>runtime_safe_engineering_completion_sprint_003.md</code></li>
+<li><code>signal_contract_completion_sprint_005.md</code></li>
+<li><code>sip07_to_sip10_plan_only_review.md</code></li>
+<li><code>sip07_to_sip10_plan_only_review_summary.json</code></li>
+<li><code>sip10_code_review_checklist_charter.md</code></li>
+<li><code>social_catalyst_report</code></li>
+<li><code>social_catalyst_s001</code></li>
+<li><code>social_catalyst_s002</code></li>
+<li><code>social_catalyst_s003</code></li>
+<li><code>social_catalyst_s004</code></li>
+<li><code>social_catalyst_s005</code></li>
+<li><code>sop_promotion_inventory</code></li>
+<li><code>sprint028_active_universe_mining_charter.md</code></li>
+<li><code>sprint028_closeout_summary.md</code></li>
+<li><code>sprint028b_v3_universe_mining_report.md</code></li>
+<li><code>sprint028c_micro_live_calibration_charter.md</code></li>
+<li><code>sprint028c_scoped_candidate_ranking.md</code></li>
+<li><code>sprint028c_scoped_micro_alpha_policy.md</code></li>
+<li><code>sprint028d_wallet_feature_inventory.md</code></li>
+<li><code>sprint029_closeout_summary.md</code></li>
+<li><code>sprint029a_scoped_validation_design.md</code></li>
+<li><code>sprint029b_wallet_sidecar_design.md</code></li>
+<li><code>sprint029b_wallet_sidecar_schema.json</code></li>
+<li><code>sprint029c_retrain_guard_design.md</code></li>
+<li><code>sprint029d_label_authorization_preflight.md</code></li>
+<li><code>sprint030a_scoped_validation_prototype_preflight.md</code></li>
+<li><code>sprint030b_dashcam_cohort_intersection_feasibility.md</code></li>
+<li><code>sprint030c_bounded_smoke_authorization_charter.md</code></li>
+<li><code>sprint030d_bounded_smoke_label_execution_report.md</code></li>
+<li><code>sprint030e_top10_scoped_dryrun_label_report.md</code></li>
+<li><code>sprint030f_scoped_economic_readout.md</code></li>
+<li><code>sprint030g_time_stratified_cohort_triage.md</code></li>
+<li><code>sprint030h_retimed_manifest_readout.md</code></li>
+<li><code>sprint031a_return_to_universe_mining_report.md</code></li>
+<li><code>sprint031b_new_lineage_dryrun_report.md</code></li>
+<li><code>sprint031c_rebalanced_lineage_readout.md</code></li>
+<li><code>sprint032a_hard_quota_universe_smoke_report.md</code></li>
+<li><code>sprint032b_label_semantics_repair_report.md</code></li>
+<li><code>sprint032c_historical_viability_repair_report.md</code></li>
+<li><code>sprint032d_residual_sanity_clip_and_robustness_report.md</code></li>
+<li><code>sprint033a_ch_backed_hard_quota_smoke_report.md</code></li>
+<li><code>sprint034a_few_pool_scoped_temporal_paper_readout.md</code></li>
+<li><code>sprint034b_same_pool_stress_paper_readout.md</code></li>
+<li><code>sprint034c_additive_label_rpc_readout.md</code></li>
+<li><code>sprint034d_same_pool_coverage_repair_report.md</code></li>
+<li><code>sprint035a_live_active_pool_mining_report.md</code></li>
+<li><code>sprint035b_three_pool_live_active_smoke_report.md</code></li>
+<li><code>sprint035c_external_live_active_pool_discovery_report.md</code></li>
+<li><code>sprint035c_external_live_active_smoke_label_report.md</code></li>
+<li><code>sprint035d_momentum_filtered_pool_discovery_report.md</code></li>
+<li><code>sprint035d_momentum_filtered_smoke_label_report.md</code></li>
+<li><code>sprint035e_ohlcv_anchored_pool_discovery_report.md</code></li>
+<li><code>sprint035e_ohlcv_anchored_smoke_label_report.md</code></li>
+<li><code>sprint035f_short_horizon_breakout_diagnostic_report.md</code></li>
+<li><code>sprint036a_toxic_flow_paper_watchlist_report.md</code></li>
+<li><code>sprint037a_bf_cohort_diagnosis_report.md</code></li>
+<li><code>sprint037a_bf_historical_backfill_plan.md</code></li>
+<li><code>sprint037a_bf_rpc_pilot_report.md</code></li>
+<li><code>sprint037a_historical_regime_mining_report.md</code></li>
+<li><code>sprint037a_regime_windows.csv</code></li>
+<li><code>sprint037b_economic_readout.json</code></li>
+<li><code>sprint037b_featurestore_replay_report.md</code></li>
+<li><code>sprint037b_r2</code></li>
+<li><code>sprint037b_r3</code></li>
+<li><code>sprint037b_r4</code></li>
+<li><code>sprint037b_r5</code></li>
+<li><code>sprint037b_replay_candidates.csv</code></li>
+<li><code>sprint037bf180_overnight_runbook.md</code></li>
+<li><code>sprint037c</code></li>
+<li><code>sprint037d</code></li>
+<li><code>sprint037e</code></li>
+<li><code>sprint037f</code></li>
+<li><code>sprint037g</code></li>
+<li><code>sprint038a</code></li>
+<li><code>sprint038a_recipient_lasl_fingerprint.md</code></li>
+<li><code>sprint038b</code></li>
+<li><code>sprint038b_recipient_cohort_backtest.md</code></li>
+<li><code>sprint038c</code></li>
+<li><code>sprint038c_oos_recipient_cohort.md</code></li>
+<li><code>sprint038d</code></li>
+<li><code>sprint038e</code></li>
+<li><code>sprint039a</code></li>
+<li><code>sprint039a_whitepaper_to_chain_attribution_filter_review.md</code></li>
+<li><code>sprint039b_whitepaper_filter_patch.md</code></li>
+<li><code>sprint039c</code></li>
+<li><code>sprint039d</code></li>
+<li><code>sprint039e</code></li>
+<li><code>sprint039f</code></li>
+<li><code>sprint039g</code></li>
+<li><code>sprint040_single_wallet_attribution_probe.md</code></li>
+<li><code>sprint041_evidence_bundle_matched_control.md</code></li>
+<li><code>sprint042_operator_rekey_attribution.md</code></li>
+<li><code>sprint043_author_stealth_attribution_review.md</code></li>
+<li><code>sprint044_global_author_scale_operator_rediscovery.md</code></li>
+<li><code>sprint045_controller_keyed_rediscovery_preflight.md</code></li>
+<li><code>sprint045b_controller_enumeration_readout.md</code></li>
+<li><code>sprint045c_author_wallet_screening_review.md</code></li>
+<li><code>sprint045c_broad_sea_expansion_and_probe_readout.md</code></li>
+<li><code>sprint045c_next_source_finding_plan.md</code></li>
+<li><code>sprint045d_author_likeness_review.md</code></li>
+<li><code>sprint045d_next_source_finding_report.md</code></li>
+<li><code>sprint045e_shared_contract_and_funding_graph_readout.md</code></li>
+<li><code>sprint045f2_anchor_funding_readout.md</code></li>
+<li><code>sprint045f_controller_topic_readout.md</code></li>
+<li><code>sprint045f_slim_funding_graph_readout.md</code></li>
+<li><code>sprint046_watchlist_to_alpha_readout.md</code></li>
+<li><code>sprint047a_time_expanded_groupwise_readout.md</code></li>
+<li><code>sprint048a_public_executable_smart_money_readout.md</code></li>
+<li><code>sprint048b_deconc_realized_readout.md</code></li>
+<li><code>sprint049a_smart_money_follow_sidecar_design.md</code></li>
+<li><code>sprint049b_return_normalized_copy_follow_readout.md</code></li>
+<li><code>sprint049c_copy_follow_shadow_readout.md</code></li>
+<li><code>sprint050</code></li>
+<li><code>sprint051</code></li>
+<li><code>sprint052</code></li>
+<li><code>sprint053</code></li>
+<li><code>sprint054</code></li>
+<li><code>sprint055</code></li>
+<li><code>sprint056</code></li>
+<li><code>sprint057</code></li>
+<li><code>sprint057r</code></li>
+<li><code>sprint057s</code></li>
+<li><code>sprint058</code></li>
+<li><code>sprint059</code></li>
+<li><code>sprint060</code></li>
+<li><code>sprint061</code></li>
+<li><code>sprint061_human_closure</code></li>
+<li><code>sprint062</code></li>
+<li><code>sprint063</code></li>
+<li><code>sprint064</code></li>
+<li><code>sprint064b</code></li>
+<li><code>sprint064c</code></li>
+<li><code>sprint065</code></li>
+<li><code>sprint066</code></li>
+<li><code>sprint067_paper_shadow_counterfactual</code></li>
+<li><code>sprint068</code></li>
+<li><code>sprint068_dryrun_strategy_proposals</code></li>
+<li><code>sprint068_reconciliation</code></li>
+<li><code>sprint069</code></li>
+<li><code>sprint069_ch_oom_repair</code></li>
+<li><code>sprint069_forward_dryrun</code></li>
+<li><code>sprint070</code></li>
+<li><code>sprint070_research_training</code></li>
+<li><code>sprint071</code></li>
+<li><code>sprint071_forward_checkpoint</code></li>
+<li><code>sprint072_alpha_waterfall</code></li>
+<li><code>sprint073_a6_dryrun</code></li>
+<li><code>sprint073_fee_expanded</code></li>
+<li><code>sprint073_live_review</code></li>
+<li><code>sprint074_alpha_factory</code></li>
+<li><code>sprint075_forward_harness</code></li>
+<li><code>sprint076_forward_race</code></li>
+<li><code>sprint077_forward_expansion</code></li>
+<li><code>sprint078_pipeline_batch25</code></li>
+<li><code>sprint079_forward_harness</code></li>
+<li><code>sprint083_fee500_paper_shadow</code></li>
+<li><code>sprint084_base_v3_onset_pool_regime_handoff.md</code></li>
+<li><code>sprint084_base_v3_onset_pool_regime_handoff_flags.json</code></li>
+<li><code>sprint084_pool_entry_quality</code></li>
+<li><code>sprint085_wallet_conditional_entry</code></li>
+<li><code>sprint086_engineering_shadow</code></li>
+<li><code>sprint086_real_cost_overlay</code></li>
+<li><code>sprint087_alpha_variants</code></li>
+<li><code>sprint087_executor_lag_repair</code></li>
+<li><code>sprint087_expanded</code></li>
+<li><code>sprint087_research_sandbox</code></li>
+<li><code>sprint088_historical_backtest</code></li>
+<li><code>sprint088_historical_backtest_30d</code></li>
+<li><code>sprint088_historical_backtest_rerun</code></li>
+<li><code>sprint089_pipeline_recovery</code></li>
+<li><code>sprint090_alpha_search</code></li>
+<li><code>sprint094_session_readout_cn.md</code></li>
+<li><code>sprint095_parallel_readout</code></li>
+<li><code>sprint095_pre_dentry_retest</code></li>
+<li><code>sprint097_expanded_realcost</code></li>
+<li><code>sprint098_pivot_feasibility</code></li>
+<li><code>sprint099_solana_righttail</code></li>
+<li><code>sprint100_speed_insensitive</code></li>
+<li><code>sprint101_speed_thesis</code></li>
+<li><code>sprint_013_paper_observation_infra.md</code></li>
+<li><code>strategy_review_20260527</code></li>
+<li><code>stress167_20260624</code></li>
+<li><code>tiny_live</code></li>
+<li><code>vps_backup_cleanup_inventory</code></li>
+<li><code>wallet_profile_v0</code></li>
+<li><code>whitepaper_contract_allowed_implementation_preflight.md</code></li>
+<li><code>whitepaper_contract_firewall_safe_sprint_002.md</code></li>
+<li><code>whitepaper_contract_full_completion_sprint_001.md</code></li>
+<li><code>whitepaper_v2_contract_audit.md</code></li>
+<li><code>whitepaper_v2_contract_audit_summary.json</code></li>
+<li><code>whitepaper_v2_contract_index.md</code></li>
+<li><code>whitepaper_v2_contract_repair_closure.md</code></li>
+<li><code>whitepaper_v2_engineering_gap_backlog.md</code></li>
+<li><code>whitepaper_v2_engineering_gap_backlog_summary.json</code></li>
+<li><code>whitepaper_v2_firewall_static_sweep_report.md</code></li>
+<li><code>whitepaper_v2_firewall_static_sweep_summary.json</code></li>
+<li><code>whitepaper_v2_minimal_patch_contracts.json</code></li>
+<li><code>whitepaper_v2_minimal_patch_queue.md</code></li>
+<li><code>whitepaper_v2_missing_modules_plan.md</code></li>
+<li><code>whitepaper_v2_missing_modules_plan_summary.json</code></li>
+<li><code>whitepaper_v2_selective_implementation_plan.md</code></li>
+<li><code>whitepaper_v2_selective_implementation_plan_summary.json</code></li>
+<li><code>wiki_source_path_mapping_audit.md</code></li>
+</ul>
+<hr />
+<h2 id="附录-d-资料来源">附录 D · 资料来源</h2>
+<ol type="1">
+<li><code>/opt/EATLQ/mvp/audits/</code> — 顶层全部目录与 sprint
+文件</li>
+<li><code>/opt/EATLQ/mvp/runs/</code> — Phase6 / Run-004 / Aero /
+Sprint050+ runs</li>
+<li><code>/opt/EATLQ/reports/</code> — GL/RM/B/Base 报告</li>
+<li><code>/opt/EATLQ/mvp/diagnostics/</code> — JSON 诊断与 ledger</li>
+<li><code>/opt/EATLQ/docs/</code> —
+契约、SOP、retrospectives、author-whitepapers</li>
+<li><code>/opt/EATLQ/mvp/audits/alpha_registry.md</code> — 65 行 alpha
+索引</li>
+<li><code>git -C /opt/EATLQ log</code> — 组件出现时间</li>
+<li><code>/root/KEYSTONE_证伪档案/</code> ·
+<code>/root/KEYSTONE_阅读包/</code></li>
+<li><code>/root/quant_research_os/reports/</code> —
+家底/B系列/聪明钱/RH1</li>
+<li><code>/root/.cursor/skills/eatlq-authorship/SKILL.md</code> —
+原作者边界</li>
+</ol>
+<p><strong>未展开为主产物</strong>：<code>/root/base_greenfield_directional_v0</code>、<code>/root/base_alpha_atlas_30_v0</code>
+等独立 greenfield（除非交叉引用）。</p>
+<hr />
+<p><em>冲突以较新 GL/独立审查为准。例如 06 月「KEYSTONE +56%/可上」已被
+GL4/GL5 口径拆穿；B5「FAIL」与 reaudit10「秒级历史正
+edge」可并存——regime/口径不同。</em></p>
+
+</body>
+</html>

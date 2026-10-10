@@ -1,0 +1,308 @@
+{
+  "task": "dedup_and_capital_scheduling",
+  "arms": {
+    "POOL_ONLY": {
+      "arm": "POOL_ONLY",
+      "breadth": {
+        "n_trades": 29194,
+        "unique_token": 197,
+        "unique_actor": 20134,
+        "unique_actor_token": 25786,
+        "unique_entity_cluster": 20134,
+        "unique_day": 31,
+        "unique_month": 6,
+        "trades_per_token_p50": 86.0,
+        "trades_per_token_p95": 627.0,
+        "trades_per_token_max": 1589,
+        "max_token_pnl_share": 0.18716646902700218,
+        "top_token_by_trades": "0x355166fa774f0eef9d27c342f5ac06474a6beeb1",
+        "top_token_n_trades": 1589,
+        "mean_pnl_per_trade": 0.0008698816937069725,
+        "unconstrained_total_pnl_weth": 25.395326166081354
+      },
+      "overlap": {
+        "max_concurrent_all": 1652,
+        "max_concurrent_per_token": 1589,
+        "implied_unconstrained_capital_slots": 1652
+      },
+      "unconstrained_opportunity_pnl_weth": 25.395326166081354,
+      "fixed_1000_scheduled_wallet": {
+        "cum_withdrawn_usd": 1385.020676628084,
+        "pct_months_hit_1000_usd": 0.0,
+        "median_monthly_withdraw_usd": 277.9907805840067,
+        "monthly_withdraw_p5_usd": 30.37935202641452,
+        "monthly_withdraw_p25_usd": 149.76915246764267,
+        "monthly_trading_pnl_median_usd": 277.9907805840044,
+        "monthly_trading_pnl_p5_usd": 30.37935202641406,
+        "monthly_trading_pnl_p25_usd": 149.76915246764116,
+        "n_fills": 234,
+        "n_skipped_capital": 28960,
+        "skip_rate": 0.9919846543810372,
+        "ruin": false,
+        "max_drawdown_wallet_weth": -0.14286884846539766
+      },
+      "why_38_weth_vs_target_miss": {
+        "explanation": "total_wallet_pnl_weth on the scorecard is the unconstrained sum of per-trade opportunity PnL. The $1,000 fixed-capital wallet with max_concurrent slots skips most signals; monthly withdraw target hit rate can be 0% even when unconstrained sum is large.",
+        "unconstrained_pnl_weth": 25.395326166081354,
+        "scheduled_cum_withdrawn_usd": 1385.020676628084,
+        "pct_months_hit_1000_usd": 0.0,
+        "max_concurrent_cap": 3,
+        "implied_unconstrained_slots_needed": 1652
+      }
+    },
+    "DIAMOND": {
+      "arm": "DIAMOND",
+      "breadth": {
+        "n_trades": 86,
+        "unique_token": 19,
+        "unique_actor": 6,
+        "unique_actor_token": 20,
+        "unique_entity_cluster": 6,
+        "unique_day": 11,
+        "unique_month": 4,
+        "trades_per_token_p50": 2.0,
+        "trades_per_token_p95": 12.89999999999996,
+        "trades_per_token_max": 30,
+        "max_token_pnl_share": 3.852163053455308,
+        "top_token_by_trades": "0xa1f72459dfa10bad200ac160ecd78c6b77a747be",
+        "top_token_n_trades": 30,
+        "mean_pnl_per_trade": -0.00023108633109697777,
+        "unconstrained_total_pnl_weth": -0.01987342447434009
+      },
+      "overlap": {
+        "max_concurrent_all": 11,
+        "max_concurrent_per_token": 10,
+        "implied_unconstrained_capital_slots": 11
+      },
+      "unconstrained_opportunity_pnl_weth": -0.01987342447434009,
+      "fixed_1000_scheduled_wallet": {
+        "cum_withdrawn_usd": 0.0,
+        "pct_months_hit_1000_usd": 0.0,
+        "median_monthly_withdraw_usd": 0.0,
+        "monthly_withdraw_p5_usd": 0.0,
+        "monthly_withdraw_p25_usd": 0.0,
+        "monthly_trading_pnl_median_usd": -5.903009790781408,
+        "monthly_trading_pnl_p5_usd": -99.67327562234146,
+        "monthly_trading_pnl_p25_usd": -33.85283607576167,
+        "n_fills": 47,
+        "n_skipped_capital": 39,
+        "skip_rate": 0.45348837209302323,
+        "ruin": false,
+        "max_drawdown_wallet_weth": -0.06530849260947874
+      },
+      "why_38_weth_vs_target_miss": {
+        "explanation": "total_wallet_pnl_weth on the scorecard is the unconstrained sum of per-trade opportunity PnL. The $1,000 fixed-capital wallet with max_concurrent slots skips most signals; monthly withdraw target hit rate can be 0% even when unconstrained sum is large.",
+        "unconstrained_pnl_weth": -0.01987342447434009,
+        "scheduled_cum_withdrawn_usd": 0.0,
+        "pct_months_hit_1000_usd": 0.0,
+        "max_concurrent_cap": 3,
+        "implied_unconstrained_slots_needed": 11
+      }
+    },
+    "WHALE_EVENT": {
+      "arm": "WHALE_EVENT",
+      "breadth": {
+        "n_trades": 19684,
+        "unique_token": 505,
+        "unique_actor": 14850,
+        "unique_actor_token": 17830,
+        "unique_entity_cluster": 14850,
+        "unique_day": 43,
+        "unique_month": 6,
+        "trades_per_token_p50": 25.0,
+        "trades_per_token_p95": 122.59999999999991,
+        "trades_per_token_max": 519,
+        "max_token_pnl_share": 0.018970661786617427,
+        "top_token_by_trades": "0x60b0c26ea34be7d8625526a6b18b3ad4c6b9f694",
+        "top_token_n_trades": 519,
+        "mean_pnl_per_trade": 0.001943213670534116,
+        "unconstrained_total_pnl_weth": 38.250217890793536
+      },
+      "overlap": {
+        "max_concurrent_all": 574,
+        "max_concurrent_per_token": 179,
+        "implied_unconstrained_capital_slots": 574
+      },
+      "unconstrained_opportunity_pnl_weth": 38.250217890793536,
+      "fixed_1000_scheduled_wallet": {
+        "cum_withdrawn_usd": 1594.9429649629276,
+        "pct_months_hit_1000_usd": 0.0,
+        "median_monthly_withdraw_usd": 282.19851880735234,
+        "monthly_withdraw_p5_usd": 30.040489341198683,
+        "monthly_withdraw_p25_usd": 134.4021920408796,
+        "monthly_trading_pnl_median_usd": 285.85992042223216,
+        "monthly_trading_pnl_p5_usd": 24.54838691887383,
+        "monthly_trading_pnl_p25_usd": 136.23289284831876,
+        "n_fills": 486,
+        "n_skipped_capital": 19198,
+        "skip_rate": 0.975309896362528,
+        "ruin": false,
+        "max_drawdown_wallet_weth": -0.15182440827358862
+      },
+      "why_38_weth_vs_target_miss": {
+        "explanation": "total_wallet_pnl_weth on the scorecard is the unconstrained sum of per-trade opportunity PnL. The $1,000 fixed-capital wallet with max_concurrent slots skips most signals; monthly withdraw target hit rate can be 0% even when unconstrained sum is large.",
+        "unconstrained_pnl_weth": 38.250217890793536,
+        "scheduled_cum_withdrawn_usd": 1594.9429649629276,
+        "pct_months_hit_1000_usd": 0.0,
+        "max_concurrent_cap": 3,
+        "implied_unconstrained_slots_needed": 574
+      }
+    },
+    "SMART_ALPHA": {
+      "arm": "SMART_ALPHA",
+      "breadth": {
+        "n_trades": 69,
+        "unique_token": 12,
+        "unique_actor": 3,
+        "unique_actor_token": 13,
+        "unique_entity_cluster": 3,
+        "unique_day": 5,
+        "unique_month": 2,
+        "trades_per_token_p50": 3.0,
+        "trades_per_token_p95": 17.349999999999984,
+        "trades_per_token_max": 30,
+        "max_token_pnl_share": 3.0111653091110444,
+        "top_token_by_trades": "0xa1f72459dfa10bad200ac160ecd78c6b77a747be",
+        "top_token_n_trades": 30,
+        "mean_pnl_per_trade": 0.00036846282807277,
+        "unconstrained_total_pnl_weth": 0.02542393513702113
+      },
+      "overlap": {
+        "max_concurrent_all": 11,
+        "max_concurrent_per_token": 10,
+        "implied_unconstrained_capital_slots": 11
+      },
+      "unconstrained_opportunity_pnl_weth": 0.02542393513702113,
+      "fixed_1000_scheduled_wallet": {
+        "cum_withdrawn_usd": 6.218685234273491,
+        "pct_months_hit_1000_usd": 0.0,
+        "median_monthly_withdraw_usd": 3.1093426171367455,
+        "monthly_withdraw_p5_usd": 0.31093426171367455,
+        "monthly_withdraw_p25_usd": 1.5546713085683728,
+        "monthly_trading_pnl_median_usd": 0.018721262005655603,
+        "monthly_trading_pnl_p5_usd": -5.561246313034497,
+        "monthly_trading_pnl_p25_usd": -3.0812607241277625,
+        "n_fills": 32,
+        "n_skipped_capital": 37,
+        "skip_rate": 0.5362318840579711,
+        "ruin": false,
+        "max_drawdown_wallet_weth": -0.04639484404058741
+      },
+      "why_38_weth_vs_target_miss": {
+        "explanation": "total_wallet_pnl_weth on the scorecard is the unconstrained sum of per-trade opportunity PnL. The $1,000 fixed-capital wallet with max_concurrent slots skips most signals; monthly withdraw target hit rate can be 0% even when unconstrained sum is large.",
+        "unconstrained_pnl_weth": 0.02542393513702113,
+        "scheduled_cum_withdrawn_usd": 6.218685234273491,
+        "pct_months_hit_1000_usd": 0.0,
+        "max_concurrent_cap": 3,
+        "implied_unconstrained_slots_needed": 11
+      }
+    },
+    "BOT_REGIME": {
+      "arm": "BOT_REGIME",
+      "breadth": {
+        "n_trades": 143915,
+        "unique_token": 577,
+        "unique_actor": 64083,
+        "unique_actor_token": 117650,
+        "unique_entity_cluster": 64083,
+        "unique_day": 46,
+        "unique_month": 6,
+        "trades_per_token_p50": 141.0,
+        "trades_per_token_p95": 951.5999999999995,
+        "trades_per_token_max": 2884,
+        "max_token_pnl_share": 0.059176268312751294,
+        "top_token_by_trades": "0xafb15901f357d19046362ec740d447c90ac9645e",
+        "top_token_n_trades": 2884,
+        "mean_pnl_per_trade": 0.0008291576784740134,
+        "unconstrained_total_pnl_weth": 119.32822729758763
+      },
+      "overlap": {
+        "max_concurrent_all": 4332,
+        "max_concurrent_per_token": 1870,
+        "implied_unconstrained_capital_slots": 4332
+      },
+      "unconstrained_opportunity_pnl_weth": 119.32822729758763,
+      "fixed_1000_scheduled_wallet": {
+        "cum_withdrawn_usd": 960.5366537526513,
+        "pct_months_hit_1000_usd": 0.0,
+        "median_monthly_withdraw_usd": 154.4598965822609,
+        "monthly_withdraw_p5_usd": 8.977554476027633,
+        "monthly_withdraw_p25_usd": 49.97859544574371,
+        "monthly_trading_pnl_median_usd": 255.74325870145762,
+        "monthly_trading_pnl_p5_usd": -157.4839637800215,
+        "monthly_trading_pnl_p25_usd": 81.11667970155095,
+        "n_fills": 533,
+        "n_skipped_capital": 143382,
+        "skip_rate": 0.9962964249730744,
+        "ruin": false,
+        "max_drawdown_wallet_weth": -0.2128519953946817
+      },
+      "why_38_weth_vs_target_miss": {
+        "explanation": "total_wallet_pnl_weth on the scorecard is the unconstrained sum of per-trade opportunity PnL. The $1,000 fixed-capital wallet with max_concurrent slots skips most signals; monthly withdraw target hit rate can be 0% even when unconstrained sum is large.",
+        "unconstrained_pnl_weth": 119.32822729758763,
+        "scheduled_cum_withdrawn_usd": 960.5366537526513,
+        "pct_months_hit_1000_usd": 0.0,
+        "max_concurrent_cap": 3,
+        "implied_unconstrained_slots_needed": 4332
+      }
+    },
+    "INDEPENDENT_CONSENSUS": {
+      "arm": "INDEPENDENT_CONSENSUS",
+      "breadth": {
+        "n_trades": 30103,
+        "unique_token": 140,
+        "unique_actor": 21199,
+        "unique_actor_token": 26233,
+        "unique_entity_cluster": 21199,
+        "unique_day": 26,
+        "unique_month": 6,
+        "trades_per_token_p50": 128.5,
+        "trades_per_token_p95": 801.3499999999999,
+        "trades_per_token_max": 1860,
+        "max_token_pnl_share": 0.1693817174791568,
+        "top_token_by_trades": "0x3d7fd48d4484b9b1065a458e4356fdedfec88a58",
+        "top_token_n_trades": 1860,
+        "mean_pnl_per_trade": 0.0009721656880764092,
+        "unconstrained_total_pnl_weth": 29.265103708164148
+      },
+      "overlap": {
+        "max_concurrent_all": 2191,
+        "max_concurrent_per_token": 1840,
+        "implied_unconstrained_capital_slots": 2191
+      },
+      "unconstrained_opportunity_pnl_weth": 29.265103708164148,
+      "fixed_1000_scheduled_wallet": {
+        "cum_withdrawn_usd": 924.7961542807141,
+        "pct_months_hit_1000_usd": 0.0,
+        "median_monthly_withdraw_usd": 139.42240869520515,
+        "monthly_withdraw_p5_usd": 10.665000000000049,
+        "monthly_withdraw_p25_usd": 66.8234845971956,
+        "monthly_trading_pnl_median_usd": 140.1116365741239,
+        "monthly_trading_pnl_p5_usd": -131.44106396240807,
+        "monthly_trading_pnl_p25_usd": 66.82348459719505,
+        "n_fills": 202,
+        "n_skipped_capital": 29901,
+        "skip_rate": 0.9932897053449822,
+        "ruin": false,
+        "max_drawdown_wallet_weth": -0.12754353483878772
+      },
+      "why_38_weth_vs_target_miss": {
+        "explanation": "total_wallet_pnl_weth on the scorecard is the unconstrained sum of per-trade opportunity PnL. The $1,000 fixed-capital wallet with max_concurrent slots skips most signals; monthly withdraw target hit rate can be 0% even when unconstrained sum is large.",
+        "unconstrained_pnl_weth": 29.265103708164148,
+        "scheduled_cum_withdrawn_usd": 924.7961542807141,
+        "pct_months_hit_1000_usd": 0.0,
+        "max_concurrent_cap": 3,
+        "implied_unconstrained_slots_needed": 2191
+      }
+    }
+  },
+  "whale_vs_pool_coverage": {
+    "whale_n": 19684,
+    "pool_n": 29194,
+    "whale_over_pool": 0.6742481331780503,
+    "whale_unique_token": 505,
+    "pool_unique_token": 197
+  },
+  "target_verdict": "TARGET_NO_GO",
+  "target_reason": "pct_months_hit_1000_usd == 0 for WHALE_EVENT under fixed-$1000 wallet."
+}

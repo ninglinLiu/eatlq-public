@@ -1,0 +1,82 @@
+{
+  "artifacts": [
+    {
+      "path": "reports/CLANKER_ALPHA_HYPOTHESES_V01.md",
+      "sha256": "08a825289dd2eb2af2179e38b262787b72f3663f792380155cbdba680127483f",
+      "bytes": 4977,
+      "missing": false
+    },
+    {
+      "path": "reports/CLANKER_ALPHA_FEASIBILITY_V01.md",
+      "sha256": "4b0038af43b96bdfb907bb2d8344db41b27ef5d690501c9efb1b0c2118af6872",
+      "bytes": 3436,
+      "missing": false
+    },
+    {
+      "path": "reports/CLANKER_ALPHA_HOLDOUT_RESULTS_V01.md",
+      "sha256": "fa8200e444694d1a6eeab3de46214df2f41aea42c5c6f6eccd380470cedd372f",
+      "bytes": 1491,
+      "missing": false
+    },
+    {
+      "path": "reports/CLANKER_CONTRACT_SOURCE_DOSSIER.md",
+      "sha256": "585fe851e091c784b03fb995348b8125291430d06c22ff6963b017f2bd8e7d3e",
+      "bytes": 2953,
+      "missing": false
+    },
+    {
+      "path": "config/clanker_verified_registry.v0.1.json",
+      "sha256": "aff806ebbcb3a55b60861c5dbbbe011e07e41bb044067d26b2442524319a016e",
+      "bytes": 4075,
+      "missing": false
+    },
+    {
+      "path": "export/CODEX_HANDOFF_CLANKER_ALPHA_V01.md",
+      "sha256": "b41395084b54f368f9073427c45130c664089f9dd51b427c3b6555b0eb7d36d0",
+      "bytes": 2396,
+      "missing": false
+    },
+    {
+      "path": "evidence/clanker_alpha_v01/launches.json",
+      "sha256": "68ead4b829f165627be322d5442fbedf582ba9b337c88d62f2ab6188a19ce7ac",
+      "bytes": 561655,
+      "missing": false
+    },
+    {
+      "path": "evidence/clanker_alpha_v01/features.json",
+      "sha256": "ed1bb5249d5ac32632d661ebb6d44a917023fbdca65dcf7bba9dbdd2effd250a",
+      "bytes": 62012,
+      "missing": false
+    },
+    {
+      "path": "evidence/clanker_alpha_v01/labels_primary_grid.json",
+      "sha256": "9995cbe2b998d633eead41d98e9be442f8e3245bad91cfb15272eafef62c1abe",
+      "bytes": 7672338,
+      "missing": false
+    },
+    {
+      "path": "evidence/clanker_alpha_v01/swaps_by_token.json",
+      "sha256": "82a82b43319cdfcf66e0c34637be98d7d6fabde6f8a7f5f8020613968c945188",
+      "bytes": 42302,
+      "missing": false
+    },
+    {
+      "path": "evidence/clanker_alpha_v01/cohort_results.json",
+      "sha256": "18dad8b99360213e6897773ac3db5221c5f31122f259874fae41755c248e7556",
+      "bytes": 68216,
+      "missing": false
+    },
+    {
+      "path": "evidence/clanker_alpha_v01/rpc_journal.json",
+      "sha256": "f8813d7ffb08d97ca5114279fd23829705709961c3d5e7984d06ed873cfcec46",
+      "bytes": 247674,
+      "missing": false
+    },
+    {
+      "path": "evidence/clanker_alpha_v01/discovery_thresholds.json",
+      "sha256": "f3f429df1b0d326b363a51181450a2b7dd32f04a4938be8d80e87297f2ca9b9a",
+      "bytes": 157,
+      "missing": false
+    }
+  ]
+}

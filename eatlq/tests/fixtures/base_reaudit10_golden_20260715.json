@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "healthy_roundtrip": {
+    "pool": "0x0019ed71f9eab03ce728738ff2381b92f6143092",
+    "token": "0x2bdcd40bab1ac0b8e124fbf9913032acc5e2584d",
+    "block": 42702284,
+    "block_hash": "0xe05eca8302eba1c3acf2dd968ed0b5ef04f12d87ceb3fb39690a89a9c04abff7",
+    "received_target": "146462276972241751765",
+    "recovered_weth": "994009174828413",
+    "atomic_response_sha256": "1ff6b21b1eaa6e94b69981e391351f335439e9d3d568dacb8f37b147f11bb366"
+  },
+  "confirmed_lp_rug_boundary": {
+    "pool": "0x000ad52ef4973405383530283f6f8ddca909ae92",
+    "token": "0x28bebfa5db1d6093b74ff4102cb5834076dc9226",
+    "cause_tx": "0xa47164f45040f5b5c0cf7e59f5dd52837ff62ff06450d7c28713c3d2ce3e9100",
+    "pre_block": 41613806,
+    "pre_block_hash": "0xed8692556c4465e5552a8bd3c593459f2cb97e4a7c025175e92ca798365a6cc2",
+    "pre_pool_weth": "21491583582991800762",
+    "pre_recovered_weth": "994009089101736",
+    "post_block": 41613807,
+    "post_block_hash": "0xbb17368a44b2f101e2290cd02dbc296e9bdb81c62cc344ce8d2263109b2eb0f6",
+    "post_pool_weth": "560",
+    "post_recovered_weth": "0"
+  },
+  "transfer_toggle_boundary": {
+    "pool": "0x1070aeff810e4d9d5bf6b5e17def7d7c9ee582ee",
+    "token": "0xbf6b7bafaf84c7899f9926dd0e6a807b3045ea8c",
+    "first_bad_block": 46693930,
+    "pre_block_hash": "0xa9bdbaaa0f72585c4eff69d5a6af79a987e4eaab6519d67c4961b719adfac7a2",
+    "post_block_hash": "0x6c715262980193f774f246a9b1dcafe9b4bd26b70e64c04bd573d26e916acaa7"
+  }
+}

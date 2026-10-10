@@ -1,0 +1,12 @@
+{
+  "independent_round_trip_launches_30m": 6,
+  "launches_with_any_buy": 16,
+  "launches_with_any_sell": 16,
+  "n_launches": 200,
+  "pnl_authorized": false,
+  "round_trip_window_blocks": 900,
+  "source_launches_sha256": "f35335d150a0e0501d0ba9e198e4cbb1198820667a4898aef1b6796813709aac",
+  "source_swaps_sha256": "fd62ea249ef2bdb50284564c4c8252ca4f35fc40814c987493c9f78510911a5e",
+  "threshold": 30,
+  "verdict": "INSUFFICIENT_ROUND_TRIP_MARKET_DATA"
+}

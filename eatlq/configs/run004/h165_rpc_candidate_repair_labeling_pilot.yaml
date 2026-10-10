@@ -1,0 +1,84 @@
+input_paths:
+  h16_patch_json: mvp/diagnostics/run004_patch_h16_fixed_horizon_gas_adjusted_10k.json
+  h16_candidate_selection_csv: mvp/diagnostics/run004_h16_candidate_selection_10k.csv
+  h16_candidate_selection_report_json: mvp/diagnostics/run004_h16_candidate_selection_report.json
+  h16_checkpoint_report_json: mvp/diagnostics/run004_h16_checkpoint_report.json
+  h16_dataset_quality_report_json: mvp/diagnostics/run004_h16_dataset_quality_report.json
+  h16_risk_severity_report_json: mvp/diagnostics/run004_h16_risk_severity_report.json
+  h15_return_schema_v2_json: mvp/diagnostics/run004_h15_return_schema_v2.json
+  h15_h16_readiness_plan_json: mvp/diagnostics/run004_h15_h16_readiness_plan.json
+  h15_bad_pool_forensic_json: mvp/diagnostics/run004_h15_bad_pool_forensic.json
+
+clickhouse:
+  url: http://clickhouse:8123
+  database: eatlq
+  docker_container: eatlq-clickhouse-1
+  query_timeout_sec: 60
+  decoded_sources:
+    v2_table: uniswap_v2_swaps_decoded
+    v3_table: uniswap_v3_swaps_decoded
+    metadata_table: discovered_pools
+
+candidate_repair:
+  target_candidates: 10000
+  target_candidate_pool: 20000
+  v2_target: 5000
+  v3_target: 5000
+  max_per_pool: 3
+  focus_pool_cap: 20
+  time_offsets_sec:
+    - 1800
+    - 7200
+    - 21600
+  focus_pools:
+    - "0x3e118916cd67cc9bfeb0fc44ae3dde8bc33c2d4a"
+    - "0x54219bce730d2727d91d8dcdf1465c7d299dee45"
+    - "0xc2476883d28d40b6c057f242fce2e8bda674faa0"
+
+labeling_pilot:
+  pilot_size: 120
+  v2_target: 60
+  v3_target: 60
+  fixed_horizon_sec: 1800
+  notional_wei: 500000000000000
+  round_trip_cost: 0.006
+  gas_price_gwei:
+    low: 0.01
+    medium: 0.03
+    high: 0.10
+  include_approval_gas: true
+  approval_gas_units: 50000
+  gas_units:
+    v2:
+      buy: 180000
+      sell: 160000
+    v3:
+      buy: 260000
+      sell: 240000
+  slippage_stress_bps: 100
+  rpc_env_vars:
+    - LABEL_RPC_URL
+    - EVM_HTTP_URL
+    - LIVE_BASE_RPC_URL
+  workers: 1
+
+outputs:
+  patch_json: mvp/diagnostics/run004_patch_h165_rpc_candidate_repair_labeling_pilot.json
+  rpc_readiness_report_json: mvp/diagnostics/run004_h165_rpc_readiness_report.json
+  candidate_selection_audit_json: mvp/diagnostics/run004_h165_candidate_selection_audit.json
+  repaired_candidate_csv: mvp/diagnostics/run004_h165_repaired_candidate_selection.csv
+  repaired_candidate_report_json: mvp/diagnostics/run004_h165_repaired_candidate_report.json
+  pilot_checkpoint_report_json: mvp/diagnostics/run004_h165_pilot_checkpoint_report.json
+  pilot_dataset_csv: mvp/diagnostics/run004_h165_pilot_labeled_dataset.csv
+  markdown: mvp/runs/run-004-patch-h165-rpc-candidate-repair-labeling-pilot.md
+
+safety:
+  diagnostics_only: true
+  no_training: true
+  no_10k_labeling: true
+  no_production_retrain: true
+  no_promote: true
+  no_live: true
+  no_production_model_write: true
+  no_active_model_overwrite: true
+  not_full_strategy_backtest: true

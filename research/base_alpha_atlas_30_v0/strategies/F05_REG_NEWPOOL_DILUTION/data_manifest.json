@@ -1,0 +1,27 @@
+{
+  "strategy_id": "F05_REG_NEWPOOL_DILUTION",
+  "data_class": "B_SMALL_BOUNDED_EXPORT_REQUIRED",
+  "required_tables_or_files": [
+    "new pool hourly counts"
+  ],
+  "required_columns": [
+    "hour",
+    "new_pool_count"
+  ],
+  "required_time_resolution": "1h",
+  "point_in_time_requirements": "PIT",
+  "minimum_history": ">=30d",
+  "estimated_rows": "small if aggregated",
+  "estimated_read_bytes": "<100MB aggregated",
+  "whether_current_diagnostics_may_support_it": "maybe",
+  "whether_production_database_would_be_required": true,
+  "missing_data": [
+    "pool creation feed completeness"
+  ],
+  "feasibility": "PARTIAL",
+  "evidence": [
+    "normalized/wave1_probe/run004_v3r6_candidate_pool_head20k.csv"
+  ],
+  "notes": "approx first-seen from swaps; incomplete",
+  "data_class_revised": "B_DERIVE_OR_SMALL_EXPORT"
+}

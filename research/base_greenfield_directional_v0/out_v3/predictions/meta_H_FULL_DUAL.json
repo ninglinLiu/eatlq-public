@@ -1,0 +1,79 @@
+{
+  "hypothesis_id": "H_FULL_DUAL",
+  "n_folds": 4,
+  "feature_cols": [
+    "flow_persist_score",
+    "active_minutes_pre_feat",
+    "n_swaps_pre",
+    "ns_pre",
+    "trade_count_imbalance",
+    "buys_10m",
+    "sells_10m",
+    "net_flow",
+    "buyers_pre",
+    "sellers_pre",
+    "senders_pre",
+    "buyer_sender_ratio",
+    "buyer_growth",
+    "seller_growth",
+    "part_concentration",
+    "liq_log",
+    "liq_trend",
+    "liq_drawdown",
+    "liq_accel",
+    "depth_proxy",
+    "entry_slip_proxy",
+    "buy_ok_proxy",
+    "early_ret",
+    "pre_vol",
+    "pre_pullback",
+    "pre_runup_from_lo",
+    "range_location",
+    "mom_h1",
+    "mom_h2",
+    "accel",
+    "vol_depth",
+    "xs_early_ret_rank",
+    "deployer_prior_pools",
+    "deployer_prior_fatal_rate",
+    "deployer_prior_right_tail_rate",
+    "deployer_age_hours",
+    "infra_lag_s",
+    "executable_depth_weth",
+    "age_s",
+    "base_breadth_1h",
+    "opportunity_supply"
+  ],
+  "fold_stats": [
+    {
+      "fold": 1,
+      "n_test": 254,
+      "n_selected": 76,
+      "mean_utility": -0.2313334896443758,
+      "selected_pnl": -0.09255912287314333
+    },
+    {
+      "fold": 2,
+      "n_test": 255,
+      "n_selected": 77,
+      "mean_utility": -0.30778766275013536,
+      "selected_pnl": -0.2225098776022491
+    },
+    {
+      "fold": 3,
+      "n_test": 254,
+      "n_selected": 76,
+      "mean_utility": -0.2349460542656381,
+      "selected_pnl": -0.331685109327204
+    },
+    {
+      "fold": 4,
+      "n_test": 254,
+      "n_selected": 76,
+      "mean_utility": -0.17217647143475914,
+      "selected_pnl": -0.20397168901846413
+    }
+  ],
+  "n_oof": 1017,
+  "n_selected": 305
+}

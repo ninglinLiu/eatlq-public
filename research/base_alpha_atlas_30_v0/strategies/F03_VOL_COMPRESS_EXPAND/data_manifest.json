@@ -1,0 +1,23 @@
+{
+  "strategy_id": "F03_VOL_COMPRESS_EXPAND",
+  "data_class": "A_OFFLINE_DATA_LIKELY_AVAILABLE",
+  "required_tables_or_files": [
+    "OHLCV diagnostics or swap-derived 1m"
+  ],
+  "required_columns": [
+    "pool",
+    "bar_time",
+    "close",
+    "volume"
+  ],
+  "required_time_resolution": "1m",
+  "point_in_time_requirements": "PIT",
+  "minimum_history": ">=14d",
+  "estimated_rows": "bars ~1e6",
+  "estimated_read_bytes": "50-500MB",
+  "whether_current_diagnostics_may_support_it": "yes: sprint035e/f ohlcv* filenames",
+  "whether_production_database_would_be_required": false,
+  "missing_data": [
+    "uniform OHLCV coverage across pools"
+  ]
+}

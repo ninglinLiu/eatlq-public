@@ -1,0 +1,11 @@
+{
+  "body_sha256": "fe01ad53fdd7d0cfad305454076eac66eb2621cb75eea3d52130e35f2b7a2542",
+  "bytes": 272,
+  "finished": "2026-10-01T07:29:56.997407+00:00",
+  "http_status": 429,
+  "key": "a4c3939ef96f132577c2f05e302cc5eae09888162a94e227735875ca05118931",
+  "label": "narrative_locked_pool_ohlcv",
+  "payload": null,
+  "started": "2026-10-01T07:29:52.796857+00:00",
+  "url": "https://api.geckoterminal.com/api/v2/networks/bsc/pools/0x5D7EcC8cff0E2D268B20D3023AEDd8C5421d1ABA/ohlcv/hour?aggregate=1&limit=1000&currency=usd&before_timestamp=1727801213"
+}

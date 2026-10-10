@@ -1,0 +1,26 @@
+{
+  "strategy_id": "F10_PLP_FEE_VS_IL",
+  "data_class": "C_PRODUCTION_DB_HEAVY",
+  "required_tables_or_files": [
+    "swaps",
+    "mints",
+    "burns",
+    "fee tier meta"
+  ],
+  "required_columns": [
+    "price",
+    "volume",
+    "liquidity",
+    "fees"
+  ],
+  "required_time_resolution": "1m",
+  "point_in_time_requirements": "PIT",
+  "minimum_history": ">=60d",
+  "estimated_rows": "large",
+  "estimated_read_bytes": ">2GB for accurate fees",
+  "whether_current_diagnostics_may_support_it": "no complete fee capture dataset by name",
+  "whether_production_database_would_be_required": true,
+  "missing_data": [
+    "actual fee growth series per position"
+  ]
+}

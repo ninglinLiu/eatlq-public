@@ -1,0 +1,36 @@
+{
+  "strategy_id": "F01_OFS_SIZE_SEQUENCE",
+  "family": "F01",
+  "name": "Large-then-small size sequence toxicity",
+  "parameter_search_space": {
+    "p_large": [
+      0.9,
+      0.95
+    ],
+    "k_small": [
+      3,
+      5,
+      8
+    ],
+    "dt_sec": [
+      30,
+      60,
+      120
+    ],
+    "max_opp_fade": [
+      0,
+      1
+    ],
+    "hold_sec": [
+      120,
+      300
+    ]
+  },
+  "param_combo_count": 72,
+  "access_flags": {
+    "database_access_enabled": false,
+    "rpc_access_enabled": false,
+    "large_file_access_enabled": false,
+    "backtest_enabled": false
+  }
+}

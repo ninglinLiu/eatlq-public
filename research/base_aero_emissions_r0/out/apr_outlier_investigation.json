@@ -1,0 +1,35 @@
+[
+  {
+    "pool": "0x6ee714d6d8df7662bca805f58cc1d5a8886d78eb",
+    "alt": "RECALL",
+    "epoch": "2026-05-14 00:00:00",
+    "apr_lb_4sample_pct": 1522506.8407030855,
+    "dense_points": 168,
+    "frac_hours_zero_staked": 0.0,
+    "mean_staked_dense": 1.2222521885497904e+20,
+    "mean_staked_4sample": 1.4946163108877696e+17,
+    "apr_lb_dense_pct": 1861.7790819855345
+  },
+  {
+    "pool": "0xb98185d088c7f3b035cf1384eb9eff4312bf734d",
+    "alt": "TOWNS",
+    "epoch": "2026-05-14 00:00:00",
+    "apr_lb_4sample_pct": 2790.501268884114,
+    "dense_points": 168,
+    "frac_hours_zero_staked": 0.0,
+    "mean_staked_dense": 2.0001516089645285e+21,
+    "mean_staked_4sample": 4.812241386738196e+20,
+    "apr_lb_dense_pct": 671.3773913779219
+  },
+  {
+    "pool": "0x531a13a588c4188fdae818d56cb91ecc4f6bdeaf",
+    "alt": "MEM",
+    "epoch": "2026-06-25 00:00:00",
+    "apr_lb_4sample_pct": 679.2293895413561,
+    "dense_points": 168,
+    "frac_hours_zero_staked": 0.0,
+    "mean_staked_dense": 8.935363989574892e+21,
+    "mean_staked_4sample": 8.920168137639508e+18,
+    "apr_lb_dense_pct": 0.6780742637685645
+  }
+]

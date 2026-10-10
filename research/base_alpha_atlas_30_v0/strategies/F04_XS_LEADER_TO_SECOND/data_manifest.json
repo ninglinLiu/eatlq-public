@@ -1,0 +1,23 @@
+{
+  "strategy_id": "F04_XS_LEADER_TO_SECOND",
+  "data_class": "B_SMALL_BOUNDED_EXPORT_REQUIRED",
+  "required_tables_or_files": [
+    "multi-pool OHLCV panel"
+  ],
+  "required_columns": [
+    "pool",
+    "hour",
+    "close",
+    "volume"
+  ],
+  "required_time_resolution": "1h",
+  "point_in_time_requirements": "PIT ranks",
+  "minimum_history": ">=30d",
+  "estimated_rows": "panel hours * pools",
+  "estimated_read_bytes": "100MB-1GB",
+  "whether_current_diagnostics_may_support_it": "partial if OHLCV multihorizon exists",
+  "whether_production_database_would_be_required": true,
+  "missing_data": [
+    "aligned multi-pool clock"
+  ]
+}

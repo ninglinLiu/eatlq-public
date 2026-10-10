@@ -1,0 +1,23 @@
+{
+  "alpha_id": "B04",
+  "family": "block_time",
+  "hypothesis": "late log-index clusters precede volatility",
+  "mechanism": "complex late-transaction routing signals congestion",
+  "venue": "Base V3",
+  "universe": "active observed pools",
+  "horizon": "4h",
+  "data_source": "V3 event timestamps and ordering",
+  "experiment": "volatility quintile spread",
+  "feature": "mean_log_index",
+  "direction": 1,
+  "prediction_object": "future absolute return",
+  "falsifier": "placebo ordering has equal effect",
+  "status": "NOT_YET_TESTED",
+  "sample_size": 0,
+  "gross_result": "pending",
+  "cost_adjusted_result": "pending",
+  "capacity": "pending",
+  "concentration": "pending",
+  "tail_risk": "pending",
+  "next_action": "run rapid screen"
+}

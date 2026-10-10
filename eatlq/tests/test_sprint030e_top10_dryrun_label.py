@@ -1,0 +1,67 @@
+"""Acceptance checks for Sprint030E top10 scoped dry-run label artifacts."""
+
+from __future__ import annotations
+
+import csv
+import json
+import unittest
+from pathlib import Path
+
+
+_FORBIDDEN_IMPORTS = ("redis", "web3", "requests", "clickhouse_driver")
+
+
+class TestSprint030eTop10DryrunLabel(unittest.TestCase):
+    def test_forbidden_imports_not_present(self) -> None:
+        src = Path(__file__).read_text(encoding="utf-8")
+        for mod in _FORBIDDEN_IMPORTS:
+            self.assertNotIn(f"import {mod}", src)
+            self.assertNotIn(f"from {mod}", src)
+
+    def test_dryrun_artifacts(self) -> None:
+        root = Path(__file__).resolve().parents[1]
+        manifest = root / "mvp" / "diagnostics" / "sprint030e_top10_dryrun_manifest.json"
+        summary_p = root / "mvp" / "diagnostics" / "sprint030e_top10_scoped_dryrun_label_summary.json"
+        csv_path = root / "mvp" / "diagnostics" / "sprint030e_top10_scoped_dryrun_labels.csv"
+        md = root / "mvp" / "audits" / "sprint030e_top10_scoped_dryrun_label_report.md"
+
+        self.assertTrue(manifest.is_file())
+        self.assertTrue(summary_p.is_file())
+        self.assertTrue(csv_path.is_file())
+        self.assertTrue(md.is_file())
+
+        mj = json.loads(manifest.read_text(encoding="utf-8"))
+        self.assertEqual(mj.get("kind"), "bounded_top10_scoped_dryrun_manifest")
+        self.assertTrue(mj.get("created_before_quote") is True)
+        self.assertGreaterEqual(int(mj.get("selected_rows_count", 0)), 300)
+        self.assertLessEqual(int(mj.get("selected_rows_count", 9999)), 1000)
+        self.assertLessEqual(int(mj.get("selected_pool_count", 999)), 10)
+
+        sj = json.loads(summary_p.read_text(encoding="utf-8"))
+        self.assertEqual(sj.get("kind"), "bounded_top10_scoped_dryrun_label_execution")
+        self.assertIn(sj.get("status"), ("PASS", "PASS_WITH_RPC_OPTIMIZATION_NEEDED"))
+        at = int(sj.get("attempted_rows", 0))
+        self.assertGreaterEqual(at, 300)
+        self.assertLessEqual(at, 1000)
+        self.assertLessEqual(int(sj.get("conceptual_quote_pairs", 99999)), 2300)
+        self.assertLessEqual(float(sj.get("failure_rate", 1.0)), 0.05)
+        self.assertGreaterEqual(float(sj.get("clean_rate", 0.0)), 0.95)
+        rpc_tot = int(sj.get("approx_eth_rpc_round_trips_total", 0))
+        if sj.get("status") == "PASS":
+            self.assertLessEqual(rpc_tot, 75000)
+
+        with csv_path.open(encoding="utf-8") as f:
+            rows = list(csv.DictReader(f))
+        self.assertLessEqual(len(rows), 1000)
+        for row in rows:
+            self.assertIn(row["label"], ("0", "1"))
+
+        body = md.read_text(encoding="utf-8")
+        self.assertIn("Sprint030D smoke readout", body)
+        self.assertIn("FAILED_NO_7D_ALPHA_ACTIVE=true", body)
+        self.assertIn("SCOPED_DRYRUN_LABEL_EXECUTION_ALLOWED=true", body)
+        self.assertIn("not alpha proof", body.lower())
+
+
+if __name__ == "__main__":
+    unittest.main()

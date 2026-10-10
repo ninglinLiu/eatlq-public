@@ -1,0 +1,143 @@
+{
+  "status": "FROZEN_FOR_PROSPECTIVE_SHADOW",
+  "role": "Base V3 Large-Buy Absorption Research Agent",
+  "phase": "LARGE_BUY_ABSORPTION_V1",
+  "legacy_alias": "WHALE_EVENT",
+  "narrative": "order_flow_not_smart_money",
+  "deploy_allowed": false,
+  "historical_label": "DIAGNOSTIC_REPLAY",
+  "inherits_v0_oos": false,
+  "universe": {
+    "chain": "base",
+    "chain_id": 8453,
+    "dex": "uniswap_v3",
+    "quote_leg": "WETH",
+    "weth": "0x4200000000000000000000000000000000000006",
+    "pool_age_min_s": 900,
+    "pool_age_max_s": 86400,
+    "min_quote_weth": 0.001,
+    "full_universe_no_downsample": true
+  },
+  "calendar": {
+    "decision_start": "2025-10-01T00:00:00Z",
+    "decision_end": "2026-07-01T00:00:00Z",
+    "note": "Same window as v0 for comparability; monthly target only over covered days"
+  },
+  "walk_forward": {
+    "train_days": 49,
+    "embargo_seconds": 86400,
+    "test_days": 10,
+    "sealed_frac": 0.2,
+    "min_folds": 3,
+    "by": "decision_time_calendar"
+  },
+  "signal_timing": {
+    "absorption_window_seconds": 300,
+    "ingestion_lag_seconds": 0,
+    "measured_latency_seconds": 30,
+    "decision_time_equals": "signal_t",
+    "absorption_arms_signal_t": "whale_buy_t + absorption_window + ingestion_lag",
+    "large_buy_only_signal_t": "whale_buy_t",
+    "entry_t": "signal_t + measured_latency",
+    "pit_features_cutoff": "whale_buy_t"
+  },
+  "identity": {
+    "whale_volume_lookback_seconds": 1800,
+    "whale_non_reversal_horizons_seconds": [
+      300
+    ],
+    "relative_size_min_for_large_buy": 0.0,
+    "note": "Thresholds frozen from v0 quantile selection; no retune"
+  },
+  "depth": {
+    "use_v3_tick_liquidity": true,
+    "clips_usd": [
+      25,
+      100
+    ],
+    "price_move_for_depth_weth": 0.01,
+    "prior_30m_volume_is_not_depth": true
+  },
+  "loss_truth": {
+    "economic_unsellable_recovery_floor": 0.1,
+    "permanent_unsellable_default": -1.0,
+    "infra_tiers_excluded_from_primary": [
+      "D"
+    ],
+    "infra_routes_excluded_from_primary": [
+      "shared_infra",
+      "solver_settlement"
+    ],
+    "censored_forbids_future_path_pnl": true,
+    "no_fill_charges_floor": true
+  },
+  "capital": {
+    "initial_capital_usd": 1000.0,
+    "eth_usd_freeze": 3000.0,
+    "initial_weth": 0.3333333333333333,
+    "monthly_withdraw_target_usd": 1000.0,
+    "compound_profits": false,
+    "max_concurrent": 3,
+    "one_position_per_token": true,
+    "leverage_forbidden": true
+  },
+  "execution": {
+    "sizes_usd": [
+      10,
+      25,
+      50,
+      100
+    ],
+    "primary_size_usd": 50,
+    "gas_weth_per_leg": 8e-05,
+    "measured_latency_seconds": 30,
+    "depth_slippage_ceiling": 0.1
+  },
+  "targets": {
+    "horizons_seconds": [
+      1800,
+      14400,
+      86400
+    ],
+    "primary_horizon_seconds": 14400,
+    "tp_ladder": [
+      0.3,
+      0.6,
+      1.2
+    ],
+    "use_trailing_as_failure_control_only": true,
+    "forbid_mfe_as_primary": true
+  },
+  "scheduler": {
+    "primary_estimand": "scheduled_wallet",
+    "unconstrained_is_diagnostic_only": true,
+    "priority": "score_desc_then_signal_t_asc",
+    "skip_while_holding_same_token": true,
+    "skip_when_at_max_concurrent": true
+  },
+  "selection": {
+    "top_k_per_decision_window": 2,
+    "score_quantile": 0.8
+  },
+  "arms": [
+    "POOL_ONLY",
+    "LARGE_BUY_ONLY",
+    "ABSORPTION_ONLY",
+    "LARGE_BUY_ABSORPTION"
+  ],
+  "controls": [
+    "CAPACITY_MATCHED_RANDOM",
+    "SIZE_PERMUTATION"
+  ],
+  "hard_bans": [
+    "live_trading_before_prospective",
+    "inherit_v0_oos",
+    "retune_after_replay",
+    "smart_money_narrative",
+    "unconstrained_as_primary",
+    "lookahead_features_after_signal_t",
+    "entry_before_signal_plus_latency"
+  ],
+  "code_hash_at_freeze": "0822f5e82542cf1b8cdc079735458be528968241439ede0e7c8f36a5242c971f",
+  "prospective_t0": "2026-07-21T06:24:51Z"
+}

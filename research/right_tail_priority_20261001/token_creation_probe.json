@@ -1,0 +1,53 @@
+{
+  "data": {
+    "block_number_balance_updated_at": 51703808,
+    "coin_balance": "0",
+    "creation_status": "success",
+    "creation_transaction_hash": "0x2a0bb4a5ccd48e5224dd10a6cd8ce2bae0faaa61506072ac1dc36c0adb08a8c4",
+    "creator_address_hash": "0x89C261C05B5F9b6BcBA07C199b8DeE7cFaD45292",
+    "ens_domain_name": null,
+    "exchange_rate": "2686.63",
+    "has_beacon_chain_withdrawals": false,
+    "has_logs": true,
+    "has_token_transfers": true,
+    "has_tokens": false,
+    "has_validated_blocks": false,
+    "hash": "0x6666dD8d0a8889e41418141760753B69aB319Ba3",
+    "implementations": [
+      {
+        "address_hash": "0xDB7B520bb5C3a2C5d4871198081911359f93be87",
+        "name": "DopplerERC20V1"
+      }
+    ],
+    "is_contract": true,
+    "is_scam": false,
+    "is_verified": true,
+    "metadata": null,
+    "name": "dead",
+    "private_tags": [],
+    "proxy_type": "eip1167",
+    "public_tags": [],
+    "reputation": "ok",
+    "token": {
+      "address_hash": "0x6666dD8d0a8889e41418141760753B69aB319Ba3",
+      "circulating_market_cap": null,
+      "circulating_supply": null,
+      "decimals": "18",
+      "exchange_rate": null,
+      "holders_count": "9",
+      "icon_url": null,
+      "name": "dead",
+      "new_ui_multiplier": null,
+      "reputation": "ok",
+      "symbol": "DEAD",
+      "total_supply": "100000000000000000000000000000",
+      "type": "ERC-20",
+      "ui_multiplier": null,
+      "ui_multiplier_effective_at": null,
+      "volume_24h": null
+    },
+    "watchlist_address_id": null,
+    "watchlist_names": []
+  },
+  "key": "3d571d611ae72ab16e27ed73d063025b74d0dec73301989976e81f2b39394e0b"
+}

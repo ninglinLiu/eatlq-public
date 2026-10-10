@@ -1,0 +1,57 @@
+{
+ "0x33128a8fc17869897dce68ed026d694621f6fdfd": {
+  "router": "0x2626664c2603336E57B271c5C0b26F421741e481",
+  "pools": 374,
+  "how": "seed_verified"
+ },
+ "0x5e7bb104d84c7cb9b682aac2f3d509f5f406809a": {
+  "router": "0xBE6D8f0d05cC4be24d5167a3eF062215bE6D18a5",
+  "pools": 137,
+  "how": "seed_verified"
+ },
+ "0xf8f2eb4940cfe7d13603dddd87f123820fc061ef": {
+  "router": "0x698Cb2b6dd822994581fEa6eA4Fc755d1363A92F",
+  "pools": 24,
+  "how": "seed_verified"
+ },
+ "0xade65c38cd4849adba595a4323a8c7ddfe89716a": {
+  "router": "0xcbBb8035cAc7D4B3Ca7aBb74cF7BdF900215Ce0D",
+  "pools": 24,
+  "how": "seed_verified"
+ },
+ "0xc35dadb65012ec5796536bd9864ed8773abc74c4": {
+  "router": "0xFB7eF66a7e61224DD6FcD0D7d9C3be5C8B049b9f",
+  "pools": 16,
+  "how": "discovered_from_swap_senders"
+ },
+ "0x6e606cf94a4ddc01aeed2fce16d1b4f5b33e0a31": {
+  "router": "0x309959994fc3fC6F789796923408f27748879b01",
+  "pools": 10,
+  "how": "discovered_from_swap_senders"
+ },
+ "0x07aced5690e09935b1c0e6e88b772d9440f64718": {
+  "router": "0x99AEC509174Cbf06F8F7E15dDEeB7bcC32363827",
+  "pools": 4,
+  "how": "discovered_from_swap_senders"
+ },
+ "0xa37359e63d1aa44c0acb2a4605d3b45785c97ee3": {
+  "router": "0x2dD788D8B399caa4eE92B5492A6A238Fdf2437de",
+  "pools": 2,
+  "how": "discovered_from_swap_senders"
+ },
+ "0x2f0d41f94d5d1550b79a83d2fe85c82d68c5a3ca": {
+  "router": "0x44447789719A1fAE137b385fB7326Cdcd3f49c49",
+  "pools": 1,
+  "how": "discovered_from_swap_senders"
+ },
+ "0xc207628e5e2b59e9c690071e68c7c1c4193b0252": {
+  "router": "0xD58f563A7D6150a2575C74065CB18f53EC2e9D07",
+  "pools": 1,
+  "how": "discovered_from_swap_senders"
+ },
+ "0xb5e5a9e628fef819150a6e5127ab481cee5d6ca9": {
+  "router": "0x8814575bBFf6F7F8084A34b6776660CBC7344c3c",
+  "pools": 1,
+  "how": "discovered_from_swap_senders"
+ }
+}

@@ -1,0 +1,51 @@
+{
+  "created_utc": "2026-07-20T11:21:58Z",
+  "role": "Base Uniswap New-Pool Narrow-Market Rescue Research Agent",
+  "phase": "V4_ORTHOGONAL_HYPOTHESIS_ROUND",
+  "parent_phase": "V3_NARROW_MARKET_RESCUE",
+  "parent_verdict": "LOTTERY_DEPENDENT_REJECT",
+  "verdict": "LOTTERY_DEPENDENT_REJECT",
+  "deploy_allowed": false,
+  "venue_rejection": false,
+  "stop_research": false,
+  "expand_search_after_failure": false,
+  "one_shot_round_complete": true,
+  "honest_closeout_if_failed": true,
+  "old_line_inputs_used": false,
+  "v3_hypotheses_reused": false,
+  "latchpi_used": false,
+  "latchpi_status": "DATA_LINEAGE_INSUFFICIENT",
+  "panel_meta": {
+    "n_rows": 2601,
+    "n_formal": 2057,
+    "split_counts": {
+      "DEV": 1709,
+      "LABEL_DESIGN": 504,
+      "UNTOUCHED": 198,
+      "INTERNAL_HOLDOUT": 190
+    },
+    "split_salt": "V4_RESEAL_20260720_ORTHOGONAL",
+    "v3_confirmation_ids_flagged": 521,
+    "n_burned_moved_to_dev": 426,
+    "parent_phase": "V3_NARROW_MARKET_RESCUE",
+    "source_feature_matrix": "out_v3/features/feature_matrix.parquet"
+  },
+  "best_oof_policy": "H_EXIT_BARRIER_SHORT",
+  "confirmation": {
+    "holdout_executed": true,
+    "untouched_executed": false,
+    "final_confirmation_verdict": "LOTTERY_DEPENDENT_REJECT",
+    "holdout_verdict": "LOTTERY_DEPENDENT_REJECT",
+    "untouched_verdict": null,
+    "untouched_skip_reason": "holdout_not_eligible_or_insufficient_rows",
+    "resealed": true
+  },
+  "closing_statement": "V4 \u6b63\u4ea4\u5047\u8bbe\u4e00\u8f6e\u5df2\u5b8c\u6210\u4e14\u672a\u786e\u8ba4\u53ef\u91cd\u590d\u5c0f\u5bb9\u91cf\u4f18\u52bf\u3002\u5728\u73b0\u6709\u6570\u636e\u3001\u73b0\u6709\u7279\u5f81\u4e0e V3+V4 \u5df2\u68c0\u9a8c\u5047\u8bbe\u8303\u56f4\u5185\u5982\u5b9e\u7ed3\u6848\uff1b\u7981\u6b62\u7ee7\u7eed\u6269\u5927\u641c\u7d22\u786c\u51d1\u8d62\u5bb6\uff1b\u7981\u6b62\u5efa\u8bae\u6362\u5e02\u573a\u3002",
+  "forbidden_next_step": "Do not launch V5 solely to fish until positive OOF; new round requires new pre-registered orthogonal mechanisms and fresh seal.",
+  "freeze_sha256": "3dced50e718169b8a7c920284ef4eedda87e56494c2f26186397cd3b33413d9f",
+  "registry_sha256": "c53b830d63ac9473c5fb28ef33ed8da76e1fbcb72aa461fb240dbc5a6f2f683d",
+  "hashes": {
+    "OOF_SCORECARD.csv": "80a4c666ce105aa81ba9a2da005ebf93ce1967703427571b1d92334bca843d74",
+    "HYPOTHESIS_LEDGER.csv": "425752e0df942ea839a6cd6df692d0fc1c7edeac9de0bdc8f9fb0c982620bdb0"
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "chain_id": 8453,
+  "window": {
+    "start_block": 46389458,
+    "balance_start_block": 46389457,
+    "end_block": 46417105
+  },
+  "golden_accounts": [
+    {
+      "case_id": "universal_router_eoa",
+      "account": "0xd756b1f3a6e074ee2d562c0057679beb2cc65264",
+      "account_code_class": "eoa",
+      "target_token": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+      "balance_start_raw": "194746318",
+      "balance_end_raw": "94746318",
+      "view_net_delta_raw": "-100000000",
+      "expected_swap_rows": 1,
+      "tx_hash": "0x6cbf5baa66d86c2022b5fd7a079ad440c53ca51db8601cce7ba2924a5efde80e",
+      "block_number": 46401894,
+      "outer_to": "0x6ff5693b99212da76ad316178a184ab56d299b43",
+      "basescan_url": "https://basescan.org/tx/0x6cbf5baa66d86c2022b5fd7a079ad440c53ca51db8601cce7ba2924a5efde80e"
+    },
+    {
+      "case_id": "eip7702_smart_account",
+      "account": "0xdd78e83b8d9265cb86085ba764610b68e00018af",
+      "account_code_class": "eip7702",
+      "target_token": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+      "balance_start_raw": "481202226",
+      "balance_end_raw": "626184992",
+      "view_net_delta_raw": "144982766",
+      "expected_swap_rows": 1,
+      "tx_hash": "0x44bcd9cb660c06da2e17b055a45dc418141f85356ea0469517e376a1857382ee",
+      "block_number": 46398726,
+      "code_prefix": "0xef0100",
+      "basescan_url": "https://basescan.org/tx/0x44bcd9cb660c06da2e17b055a45dc418141f85356ea0469517e376a1857382ee"
+    },
+    {
+      "case_id": "two_pool_multihop_eoa",
+      "account": "0x1b76978fab3de7e7b6729de3f0752455036293b0",
+      "account_code_class": "eoa",
+      "target_token": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+      "balance_start_raw": "287567119",
+      "balance_end_raw": "187567119",
+      "view_net_delta_raw": "-100000000",
+      "expected_swap_rows": 2,
+      "expected_distinct_pools": 2,
+      "tx_hash": "0xbd9ffadaf968045f84fe740bc341015a7a1511dfba6cb5f716364491559ae6e2",
+      "block_number": 46397508,
+      "basescan_url": "https://basescan.org/tx/0xbd9ffadaf968045f84fe740bc341015a7a1511dfba6cb5f716364491559ae6e2"
+    }
+  ],
+  "ambiguous_case": {
+    "tx_hash": "0x982e220049ab300927a668c49133cbfce80497adc9a9d8a84df05d224617ef76",
+    "block_number": 46410317,
+    "side": "sell",
+    "pool_address": "0xd0b53d9277642d899df5c87a3966a349a798f224",
+    "target_token": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+    "expected_source": "ambiguous",
+    "expected_candidate_count": 2,
+    "transfers": [
+      {"sender": "0x6cdcb1c4a4d1c3c6d054b27ac5b77e89eafb971d", "recipient": "0xcdac0d6c6c59727a65f871236188350531885c43", "amount": "166552"},
+      {"sender": "0xcdac0d6c6c59727a65f871236188350531885c43", "recipient": "0x0cff5f2f4171db0b187ad99f05dcca08b0eebdd6", "amount": "499"},
+      {"sender": "0xd0b53d9277642d899df5c87a3966a349a798f224", "recipient": "0x2240fcc034d5690e8a2cee6a2b8d02dd64ea1ac1", "amount": "594906"},
+      {"sender": "0xd7d11e2d4e8e7b65e905aa9d16e488c37195ca62", "recipient": "0xfe5814fbd3c160acb7c02c23eaaf0ebc9d92b1bb", "amount": "1282369"},
+      {"sender": "0xfe5814fbd3c160acb7c02c23eaaf0ebc9d92b1bb", "recipient": "0x96116c5c5c760bffc0d06017f96dbbbf25621ada", "amount": "1282369"},
+      {"sender": "0x96116c5c5c760bffc0d06017f96dbbbf25621ada", "recipient": "0xd0b53d9277642d899df5c87a3966a349a798f224", "amount": "1282369"}
+    ]
+  },
+  "materialized_ambiguous_case": {
+    "tx_hash": "0x006e5238aa78a9de1df7295bf249de280f124aaa24a4033d3a9425c684a5ab00",
+    "side": "buy",
+    "pool_address": "0x43636e294a8503b08f05db18003fff9983ee16e5",
+    "target_token": "0x8b7dde054be9d180c1be7fae0874697374a49832",
+    "log_index": 57,
+    "expected_candidate_count": 2
+  },
+  "transfer_subgraph_golden_audit": [
+    {
+      "case_id": "subgraph_uniform_q1_contract_wallet",
+      "tx_hash": "0xe44a4b282f4cd55def01e75d61ab1314c07c8bbc48e71aa99a709954d561eca8",
+      "block_number": 46389591,
+      "account": "0x614b73e0c56946c0c1ef278f68480ef908ed9904",
+      "account_code_class": "contract_wallet",
+      "target_token": "0x940181a94a35a4569e4529a3cdfb74e38fd98631",
+      "balance_start_raw": "8859126255908166216301",
+      "balance_end_raw": "6033051054788513394353",
+      "balance_delta_raw": "-2826075201119652821948",
+      "materialized_net_delta_raw": "-3352416525939703922388",
+      "matches_materialized": false,
+      "expected_post_rollback_source": "ambiguous",
+      "expected_post_rollback_rows": 2,
+      "expected_post_rollback_ambiguous_rows": 2
+    },
+    {
+      "case_id": "subgraph_uniform_q2_contract_wallet",
+      "tx_hash": "0x28f3b4f535c0e69f5fd7cd01e96f626ea14ee22b6591d6fc56ec99e9dfe06194",
+      "block_number": 46389748,
+      "account": "0xe301ca0e15446d7f2eea46e8d158c5bda1f760f2",
+      "account_code_class": "contract_wallet",
+      "target_token": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+      "balance_start_raw": "126379782",
+      "balance_end_raw": "127516489",
+      "balance_delta_raw": "1136707",
+      "materialized_net_delta_raw": "1137452",
+      "matches_materialized": false,
+      "expected_post_rollback_source": "ambiguous",
+      "expected_post_rollback_rows": 7,
+      "expected_post_rollback_ambiguous_rows": 7
+    },
+    {
+      "case_id": "subgraph_uniform_q3_contract_wallet",
+      "tx_hash": "0xb1d8168f2527917531b55b5414cfd2fdc867b16d5e72bbe6902e56c46dd5bd14",
+      "block_number": 46390740,
+      "account": "0x8408c2a9f28b9a9471dc423f3cd4868629b555c8",
+      "account_code_class": "contract_wallet",
+      "target_token": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+      "balance_start_raw": "95660287",
+      "balance_end_raw": "109746148",
+      "balance_delta_raw": "14085861",
+      "materialized_net_delta_raw": "-8691",
+      "matches_materialized": false,
+      "expected_post_rollback_source": "ambiguous",
+      "expected_post_rollback_rows": 2,
+      "expected_post_rollback_ambiguous_rows": 2
+    },
+    {
+      "case_id": "subgraph_uniform_q4_contract_wallet",
+      "tx_hash": "0x518cd24d0962f9315b7c06210c16040110fd3ae3c8c0afa748a8ca1467c8b198",
+      "block_number": 46396989,
+      "account": "0x12146c8e7469be19ec6c7f58b80246548144f8b8",
+      "account_code_class": "contract_wallet",
+      "target_token": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+      "balance_start_raw": "462833437185",
+      "balance_end_raw": "462739863710",
+      "balance_delta_raw": "-93573475",
+      "materialized_net_delta_raw": "-45178922",
+      "matches_materialized": false,
+      "expected_post_rollback_source": "ambiguous",
+      "expected_post_rollback_rows": 8,
+      "expected_post_rollback_ambiguous_rows": 8
+    },
+    {
+      "case_id": "subgraph_uniform_q5_contract_wallet",
+      "tx_hash": "0x145f0ed9a3a686f168f5d1d00e6effc0f64da2d03d7883cb82adaba3e407ec16",
+      "block_number": 46408506,
+      "account": "0xf6d9fcb6cb7ebdf852fd70f11c9ccfe24f4ad1bc",
+      "account_code_class": "contract_wallet",
+      "target_token": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+      "balance_start_raw": "1678119",
+      "balance_end_raw": "1744879",
+      "balance_delta_raw": "66760",
+      "materialized_net_delta_raw": "66760",
+      "matches_materialized": true,
+      "expected_post_rollback_source": "ambiguous",
+      "expected_post_rollback_rows": 3,
+      "expected_post_rollback_ambiguous_rows": 2
+    }
+  ]
+}

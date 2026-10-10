@@ -1,0 +1,23 @@
+{
+  "alpha_id": "P04",
+  "family": "participation",
+  "hypothesis": "sender-recipient breadth divergence predicts stress",
+  "mechanism": "routing concentration changes faster than trader count",
+  "venue": "Base V3",
+  "universe": "active observed pools",
+  "horizon": "4h",
+  "data_source": "swap sender/recipient facts",
+  "experiment": "volatility screen",
+  "feature": "breadth_gap",
+  "direction": 1,
+  "prediction_object": "future absolute return",
+  "falsifier": "stable across venue subset",
+  "status": "NOT_YET_TESTED",
+  "sample_size": 0,
+  "gross_result": "pending",
+  "cost_adjusted_result": "pending",
+  "capacity": "pending",
+  "concentration": "pending",
+  "tail_risk": "pending",
+  "next_action": "run rapid screen"
+}

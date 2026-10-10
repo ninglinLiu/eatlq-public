@@ -1,0 +1,69 @@
+{
+  "DEV_IN_SAMPLE_fullfit": {
+    "n_base": 306,
+    "n_accepted": 154,
+    "accept_rate": 0.5032679738562091,
+    "ev_accepted": 1.5883079419947448,
+    "median": 0.9741442112545985,
+    "ev_per_signal_skip0": 0.7993445198274205
+  },
+  "DEV_WALK_FORWARD_OOF": {
+    "n_base": 147,
+    "n_accepted": 61,
+    "accept_rate": 0.41496598639455784,
+    "ev_accepted": 1.466614651024219,
+    "median": 1.093396951587256,
+    "ev_per_signal_skip0": 0.6085951953229753
+  },
+  "BURNED_HOLDOUT_fullfit_supportive": {
+    "n_base": 93,
+    "n_accepted": 15,
+    "accept_rate": 0.16129032258064516,
+    "ev_accepted": 1.2477273383427723,
+    "median": 1.1610784956038969,
+    "ev_per_signal_skip0": 0.20124634489399557
+  },
+  "V0_DEV": {
+    "n_base": 306,
+    "n_accepted": 306,
+    "accept_rate": 1.0,
+    "ev_accepted": 1.1515489856823393,
+    "median": 0.5559640063114821,
+    "ev_per_signal_skip0": 1.1515489856823393
+  },
+  "V1_note": "early_ret control not rebuilt here; see r2 comparison for DEV_IN_SAMPLE only",
+  "fold_models": [
+    {
+      "model_id": "oof_fold_2",
+      "fold": 2,
+      "train_n": 150,
+      "test_n": 89,
+      "threshold_q50": 0.7949251922847386,
+      "train_start": "2025-10-01 02:07:57+00:00",
+      "train_end": "2026-01-04 08:30:51+00:00",
+      "model_sha256": "d3ba5456a0c305859f2fe0e8741d720df1e1b4c09d33a7d26afab4c4bc2ba476"
+    },
+    {
+      "model_id": "oof_fold_3",
+      "fold": 3,
+      "train_n": 232,
+      "test_n": 60,
+      "threshold_q50": 0.839225668550745,
+      "train_start": "2025-10-01 02:07:57+00:00",
+      "train_end": "2026-02-02 20:18:25+00:00",
+      "model_sha256": "fccef791f9e644896cdd5e15bfb148fbffcbdd002624af413c9a99151a7d3ee1"
+    }
+  ],
+  "fullfit_thresholds": {
+    "train_q40": 0.8284417809694159,
+    "train_q50": 0.8624456161522396,
+    "train_q60": 0.8886893755257821
+  },
+  "primary_threshold_frozen": 0.8624456161522396,
+  "fullfit_thr_q50_recomputed": 0.8624456161522396,
+  "threshold_match_r20": true,
+  "operational_model_sha256": "9cf8fa1977f2e1523307516612bb3100ccdd63c89e14ba2e1d395074d0322dc5",
+  "expected_model_sha256": "e1c68ae160004cd80711a7ae5461ee1d3d8e1f4359aebf1f890c25b74c277c5c",
+  "r20_model_sha256": "e1c68ae160004cd80711a7ae5461ee1d3d8e1f4359aebf1f890c25b74c277c5c",
+  "r21_operational_model_sha256": "9cf8fa1977f2e1523307516612bb3100ccdd63c89e14ba2e1d395074d0322dc5"
+}

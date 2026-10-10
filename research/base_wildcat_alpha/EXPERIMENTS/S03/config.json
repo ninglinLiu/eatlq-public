@@ -1,0 +1,23 @@
+{
+  "alpha_id": "S03",
+  "family": "survival",
+  "hypothesis": "liquidity collapse predicts sellability loss",
+  "mechanism": "active depth withdrawal precedes dormant intervals",
+  "venue": "Base V3",
+  "universe": "active observed pools",
+  "horizon": "24h",
+  "data_source": "future activity and price path",
+  "experiment": "survival classification",
+  "feature": "liq_change",
+  "direction": 1,
+  "prediction_object": "future activity",
+  "falsifier": "no timing precedence",
+  "status": "NOT_YET_TESTED",
+  "sample_size": 0,
+  "gross_result": "pending",
+  "cost_adjusted_result": "pending",
+  "capacity": "pending",
+  "concentration": "pending",
+  "tail_risk": "pending",
+  "next_action": "run rapid screen"
+}

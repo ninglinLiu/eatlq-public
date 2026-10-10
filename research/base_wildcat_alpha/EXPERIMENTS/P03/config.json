@@ -1,0 +1,23 @@
+{
+  "alpha_id": "P03",
+  "family": "participation",
+  "hypothesis": "recipient fragmentation predicts persistence",
+  "mechanism": "distribution across recipients reflects organic routing",
+  "venue": "Base V3",
+  "universe": "active observed pools",
+  "horizon": "4h",
+  "data_source": "swap sender/recipient facts",
+  "experiment": "signed quintile spread",
+  "feature": "unique_recipient_ratio",
+  "direction": 1,
+  "prediction_object": "next return",
+  "falsifier": "recipient is merely router identity",
+  "status": "NOT_YET_TESTED",
+  "sample_size": 0,
+  "gross_result": "pending",
+  "cost_adjusted_result": "pending",
+  "capacity": "pending",
+  "concentration": "pending",
+  "tail_risk": "pending",
+  "next_action": "run rapid screen"
+}

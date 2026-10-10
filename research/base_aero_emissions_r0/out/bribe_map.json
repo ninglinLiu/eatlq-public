@@ -1,0 +1,898 @@
+[
+  {
+    "pool": "0x3fe04a59ebd38cf06080a6f60a98d124eb59392a",
+    "gauge": "0xa0b61fdb9f1fb9b917fe38b49427fd4d87472d28",
+    "symbol": "USDC",
+    "em_usd": 1326140.74771357,
+    "bribe": "0x70324e074de47a2dbefe31c63afb242b4529d9fa"
+  },
+  {
+    "pool": "0x42d4a22cad0f5a49681a5715ce994af73a43b76b",
+    "gauge": "0x61e0b10423a0009c3f83ab4313813d29437d0817",
+    "symbol": "cbBTC",
+    "em_usd": 860877.6087226016,
+    "bribe": "0x88a3cbf7a5c83fccc951de020a6ef2ab92b837bc"
+  },
+  {
+    "pool": "0x70acdf2ad0bf2402c957154f944c19ef4e1cbae1",
+    "gauge": "0x41b2126661c673c2bedd208cc72e85dc51a5320a",
+    "symbol": "cbBTC",
+    "em_usd": 678068.0736123596,
+    "bribe": "0x96366092938770315cee0aa285d7b51fc1006c50"
+  },
+  {
+    "pool": "0x4e506648d493c8870f55e870480f92f2f33ece51",
+    "gauge": "0x956495c06ba757cdf85f73b5f6d5ccb505d288f1",
+    "symbol": "AERO",
+    "em_usd": 618208.0305067914,
+    "bribe": "0x7da5d6c40d87c223ffffae4b74d0da31708e3cf5"
+  },
+  {
+    "pool": "0xb2cc224c1c9fee385f8ad6a55b4d94e92359dc59",
+    "gauge": "0xf33a96b5932d9e9b9a0eda447abd8c9d48d2e0c8",
+    "symbol": "USDC",
+    "em_usd": 574254.7826137774,
+    "bribe": "0x685b5173e002b2ec55a8cd02c74d5ee77043eb1e"
+  },
+  {
+    "pool": "0xa135b59fe221c0c8d441294f97f96fbc37bc9fbe",
+    "gauge": "0xca9740affedf731f95b3fbab8d40835781c7ae4d",
+    "symbol": "VVV",
+    "em_usd": 303156.27527480933,
+    "bribe": "0xf02bb28517926328bf5f19a98b3a4d02e70a0f8b"
+  },
+  {
+    "pool": "0x74f72788f4814d7ff3c49b44684aa98eee140c0e",
+    "gauge": "0x4f665e05d23a5ab1d1a581e8040b585fb4d0453d",
+    "symbol": "msETH",
+    "em_usd": 295783.9318547968,
+    "bribe": "0x5b1876353cd63cbdd49e03b36b7d4e68c4f2f507"
+  },
+  {
+    "pool": "0xaa5fe7dcc07dcb8b7afcd1b93874e7cb1e0ab50b",
+    "gauge": "0x9d025c59d53fa74a4eacd62a709fac2dfffbc150",
+    "symbol": "EURC",
+    "em_usd": 173858.4475149225,
+    "bribe": "0xc9e5ceef1a1a59a72fb7b5cee4f53589ef86c3c0"
+  },
+  {
+    "pool": "0xb5f0b4ae66c14f7efaa9aa1468e8fc536a3e288c",
+    "gauge": "0xf008577bfbb3b8eaaac22c1933c9a8cd876fcfd2",
+    "symbol": "MORPHO",
+    "em_usd": 137437.5768162642,
+    "bribe": "0x38c80d0f8bb690aae71a85d2a34c984bcaa2e7b2"
+  },
+  {
+    "pool": "0x9785ef59e2b499fb741674ecf6faf912df7b3c1b",
+    "gauge": "0x2c0cbf25bb64687d11ea2e4a3dc893d56ca39c10",
+    "symbol": "USDT",
+    "em_usd": 105599.97134479601,
+    "bribe": "0x3b5498b1cd986b5b53e29e83b31a024bc908cb78"
+  },
+  {
+    "pool": "0x46d398a5b33709877f50c8918a7ee96f1be1d7dd",
+    "gauge": "0x6831125a82af7417e0cde3a214c03fe248ff6aa8",
+    "symbol": "VVV",
+    "em_usd": 84929.04929790203,
+    "bribe": "0x9c9122c5f7106c32f787d124c55b47c9cf1b3269"
+  },
+  {
+    "pool": "0x717e174d5dae280802d1a2c15c1c0976561a3f61",
+    "gauge": "0x27461e3bd492f7d8c08f21aab9c817ee00154eef",
+    "symbol": "ZRO",
+    "em_usd": 67030.93183008075,
+    "bribe": "0xaede55618fb27476ff9efd33cd0a172066cb58bc"
+  },
+  {
+    "pool": "0x4a79b0168296c0ef7b8f314973b82ad406a29f1b",
+    "gauge": "0x28047b764d603a25146a0b8a8d414740dc1e650e",
+    "symbol": "AAVE",
+    "em_usd": 67010.11973467459,
+    "bribe": "0xe29f3843695e0bba6a4c04e098f925d2c6a8ff7e"
+  },
+  {
+    "pool": "0x9520e1a3bfd86da6c1e9e5ee4b9c2f11c413358f",
+    "gauge": "0xf0b0f3d39baa91fce3e97a08e30975ce1f365f31",
+    "symbol": "VIRTUAL",
+    "em_usd": 65610.87315141632,
+    "bribe": "0x53b4b862cbb04524cc32fba673201e1ed00a4af6"
+  },
+  {
+    "pool": "0xef7e596aef9e4c6301b4d1f1e88f8ffe8c306222",
+    "gauge": "0xa9bfeb96bc114cf7523bdd3065e5561f2a074a89",
+    "symbol": "DRV",
+    "em_usd": 59043.60405119707,
+    "bribe": "0xfb2f2a9e0728e0a6e97611ec04c5ed3f03544a4a"
+  },
+  {
+    "pool": "0x0392b12a1ceb0cd13af5ea448cf5586ea609852d",
+    "gauge": "0x828622c92977a372be19f24bc5c4b5021b4b06ec",
+    "symbol": "ZEN",
+    "em_usd": 58602.00575760058,
+    "bribe": "0xf58d23e41d56b3f179325fcde44398943b171f9f"
+  },
+  {
+    "pool": "0xcdd442e2de893c07146b2f1072f8e077559f9aa4",
+    "gauge": "0x28dcf4abc65a3e0971602bdbaa95f14ceec09a2a",
+    "symbol": "BNKR",
+    "em_usd": 58402.30524120587,
+    "bribe": "0x000597fb3ee650f7a1db9c9b74c8b9f45e7edd9f"
+  },
+  {
+    "pool": "0x0e4409f7a8eba3213f336daf608985302e79328c",
+    "gauge": "0x5e0f61e5238cf493eae763797ea7aebbc19f2ad3",
+    "symbol": "TIBBIR",
+    "em_usd": 47119.56965549532,
+    "bribe": "0xd9f98183c4089ae0585482ad8f2fb0141c39aaeb"
+  },
+  {
+    "pool": "0x7c7420dd105e2779316423ba3e973f434315efa9",
+    "gauge": "0xe3ae44a6cd6cf1b47295209539b7bb675f500873",
+    "symbol": "cbBTC",
+    "em_usd": 45725.94060266784,
+    "bribe": "0x83867b1decc1268075ac377ea7db266a3c5c7852"
+  },
+  {
+    "pool": "0x4e829f8a5213c42535ab84aa40bd4adcce9cba02",
+    "gauge": "0xfd73ab1100a60ba64686ef9dcde36d0209773f6a",
+    "symbol": "BRETT",
+    "em_usd": 41218.532441772135,
+    "bribe": "0x83b8b379b84890bb4d289cadd31fe0dfa2eac791"
+  },
+  {
+    "pool": "0xb90fe999be6869af0afc557dccfbe169ea3403d6",
+    "gauge": "0x847a399203c63b03af1c2fc6fc7ccf4e1386fe63",
+    "symbol": "cbXRP",
+    "em_usd": 40655.1599006131,
+    "bribe": "0x8c9a3527aec6e1dab1176117b31ccfbf3dd8ccba"
+  },
+  {
+    "pool": "0x3f0296bf652e19bca772ec3df08b32732f93014a",
+    "gauge": "0x5013ea8783bfeaa8c4850a54eacd54d7a3b7f889",
+    "symbol": "VIRTUAL",
+    "em_usd": 40161.54421704508,
+    "bribe": "0x4e4327ee57491079ac518b4cfc5a3682dcd7743b"
+  },
+  {
+    "pool": "0x222ccbe78890a4d9ef8d22d7fc1b968be0f2c653",
+    "gauge": "0x6f29b7b27e2043849a21e1e6ea9ed6d2678e11f3",
+    "symbol": "BIO",
+    "em_usd": 37432.497086163756,
+    "bribe": "0x0f122174614254acbd1fb3fe086f9a9228a80b0b"
+  },
+  {
+    "pool": "0x0225ba893d5f8ecd6d2022f9dec59b34f61098a1",
+    "gauge": "0xcb1137e326b8c48a5b8b29a5ccc19b6e8b9782d2",
+    "symbol": "uSOL",
+    "em_usd": 36121.774082268734,
+    "bribe": "0x3193fbaf676581b04801dc50d5c6606dab234402"
+  },
+  {
+    "pool": "0x71fe33676773df7cf9ce14f640cae06823f083cc",
+    "gauge": "0x456979e89917f4dc1e86662fcdfd4c9766c6684d",
+    "symbol": "REPPO",
+    "em_usd": 34620.43890620686,
+    "bribe": "0x0f15aaccbd1cf5dc7ac16b7822eb71a3b41ec596"
+  },
+  {
+    "pool": "0x9e48d016ee76cf53e2de8dc8058c7549c8c202df",
+    "gauge": "0x9495e37f2dd9b54f6b473a46ede1f1641459868e",
+    "symbol": "HYPE",
+    "em_usd": 32670.801949441004,
+    "bribe": "0xdbbb5304a1ebd872f10dc59441b43c1f424b0ea9"
+  },
+  {
+    "pool": "0x6cca90e732942d73c276f73b805ca2948f6b3018",
+    "gauge": "0xe3d65bd2df47b6b39d9f58ee7368259412326a19",
+    "symbol": "RSC",
+    "em_usd": 31689.59526102125,
+    "bribe": "0x17892399a2e3305e9eed697e3fb4df1991a9928c"
+  },
+  {
+    "pool": "0x47ca96ea59c13f72745928887f84c9f52c3d7348",
+    "gauge": "0xf5550f8f0331b8caa165046667f4e6628e9e3aac",
+    "symbol": "cbETH",
+    "em_usd": 25038.55283881213,
+    "bribe": "0xb6c45d084f705f1a875bd8b9559c37643261aad1"
+  },
+  {
+    "pool": "0xd23fe2db317e1a96454a2d1c7e8fc0dbf19bb000",
+    "gauge": "0xee096fdd7fe7a759f3e8b0855b02976cf0fd25f9",
+    "symbol": "CLANKER",
+    "em_usd": 24045.1024020642,
+    "bribe": "0x5fc030051102781f64d2a46a57f5a178aa461faf"
+  },
+  {
+    "pool": "0xb862f23ba38c8c65e256782b31e8c08c9aefd612",
+    "gauge": "0x0c8b92c57af0105c5b027da4645a24f3144ad6f4",
+    "symbol": "cbADA",
+    "em_usd": 23065.86197293474,
+    "bribe": "0xdb039d0cb39cf6b3d1741427f8fcd046f78c4137"
+  },
+  {
+    "pool": "0xc200f21efe67c7f41b81a854c26f9cda80593065",
+    "gauge": "0xbda319bc7cc8f0829df39ec0fff5d1e061ffadf7",
+    "symbol": "VIRTUAL",
+    "em_usd": 22787.760132037303,
+    "bribe": "0x9ff1b5faa578c40112a7f23f47228d31383f4ceb"
+  },
+  {
+    "pool": "0x48be08d21fccf3f793783c23c33555f5e0c2b7cd",
+    "gauge": "0xa69d26311035b324dba7f4e97f43298d470086d5",
+    "symbol": "TOWNS",
+    "em_usd": 20395.498440333493,
+    "bribe": "0x72ca5412f2e890ce7c64a22a4e68ce906c880c16"
+  },
+  {
+    "pool": "0xadb8fb846dbd3bd6a23335cee65bb610c1cf0ea3",
+    "gauge": "0x6b82714e0e4964595a97fe2b1c3ad03dbb246fdf",
+    "symbol": "ZORA",
+    "em_usd": 18295.367545407902,
+    "bribe": "0x0ebca066132fec283204d9169faeb36343935b18"
+  },
+  {
+    "pool": "0x861a2922be165a5bd41b1e482b49216b465e1b5f",
+    "gauge": "0x2a1f7bf46bd975b5004b61c6040597e1b6117040",
+    "symbol": "wstETH",
+    "em_usd": 17754.60813091088,
+    "bribe": "0x1cc250df279278e21b35ea55626f05dd39a5df3a"
+  },
+  {
+    "pool": "0x46d710c35bdfb800a18a820712310048ef8b5256",
+    "gauge": "0x6bf4d7e9cc3bf9fea7ee88ba7cfde9626e77efd4",
+    "symbol": "KTA",
+    "em_usd": 15533.25506466633,
+    "bribe": "0x73aee67b7ffd8742c43015bbf4e3581dfb45fe2a"
+  },
+  {
+    "pool": "0xb099c658e784b41ee435d48a8eb67e8f27285c93",
+    "gauge": "0x3b86ca918e7c114cf8ddf69609e53bb4e7727237",
+    "symbol": "B3",
+    "em_usd": 15165.575628013947,
+    "bribe": "0x937c0bf97495342ba290c6ab43a6ae9b29a6db68"
+  },
+  {
+    "pool": "0x098a4de96305bafaea0c0ce07cf6456e2c64982a",
+    "gauge": "0xf9f42a321e3a07820081d9d54e3f614e34b9ae0e",
+    "symbol": "HOME",
+    "em_usd": 13364.854543872356,
+    "bribe": "0x9ddb16cfb7d5db03438c4f93fbe968f2143e7d0b"
+  },
+  {
+    "pool": "0xa69cdf524d072c366fd050957880552916d29405",
+    "gauge": "0xc77386d4b892e6e4d36d43d6a59eeaca770e4295",
+    "symbol": "SAND",
+    "em_usd": 12362.634023822611,
+    "bribe": "0x75a99a34cb016de4740e136ac8342f8f558e8094"
+  },
+  {
+    "pool": "0x2ae9df02539887d4ebce0230168a302d34784c82",
+    "gauge": "0x0b537ac41400433f09d97cd370c1ea9ce78d8a74",
+    "symbol": "bsdETH",
+    "em_usd": 12272.001604051246,
+    "bribe": "0x2c04c2aa2b49ddede8d261d4ffb83e4d8dc79ed7"
+  },
+  {
+    "pool": "0x74e4c08bb50619b70550733d32b7e60424e9628e",
+    "gauge": "0x527b83782b2ef0c5506e79333ca709d81644952f",
+    "symbol": "TOSHI",
+    "em_usd": 10960.15514487985,
+    "bribe": "0xec4d02b6eba9558528bcfed923c0af60739dcb1a"
+  },
+  {
+    "pool": "0x28a9ec9928a689410e82e579fd9418fbbf6452f3",
+    "gauge": "0x093b5fa753c6a4c94b0ae98326919a5e241901a0",
+    "symbol": "FAI",
+    "em_usd": 10545.762066679665,
+    "bribe": "0x4fc29906345bc21979ab6947b1f28843997a8076"
+  },
+  {
+    "pool": "0x93617b2909a7c207e4180de0e667ea80c9bdfe9e",
+    "gauge": "0x3d7981a71dee2e73656566f3003d3c6a19c45ee6",
+    "symbol": "oUSDT",
+    "em_usd": 9433.832155780745,
+    "bribe": "0x1dc69b4e0e7fd32041fc9dd79821d1688f324cab"
+  },
+  {
+    "pool": "0x3a88ef38879efb900c2d7b6199d21c139cef5fa7",
+    "gauge": "0x48c36c950a7471b82295e0901c465851a860d687",
+    "symbol": "LCAP",
+    "em_usd": 9332.53783777801,
+    "bribe": "0x0d192af7ec5482f241dd265e62b5eb68a3ed451d"
+  },
+  {
+    "pool": "0x50f8f7ffbd70c6c87b1668eee4e03f5ac057de3f",
+    "gauge": "0xc2e94b700ada596bf431fc10558ba7ab0c639914",
+    "symbol": "SYND",
+    "em_usd": 8659.188040161696,
+    "bribe": "0xb7699e22ece5178c7abd3f1d2e2661bf75cfb316"
+  },
+  {
+    "pool": "0x0040559f59e2391ec57162826df354b1bbb05c12",
+    "gauge": "0x2e60483407832d535f235bedbb0624a5536a52d2",
+    "symbol": "RED",
+    "em_usd": 8154.356811769858,
+    "bribe": "0xe4a30a4385dfcde142ea4fb53214a6257064d67d"
+  },
+  {
+    "pool": "0x200681425b0c8d78c6a467512c5d49fa56bac88a",
+    "gauge": "0x88040de1f5811090b638fa70633b24a3e319d06f",
+    "symbol": "cbLTC",
+    "em_usd": 7655.196567580754,
+    "bribe": "0xc98141224a1c1bcc3b01af429d62e57d43d95d9f"
+  },
+  {
+    "pool": "0x4e392fbfe4d0557c82d2f97f02ec39daa31516dd",
+    "gauge": "0x6bfdc817fd78c72a0e330e3d958108fac96201f4",
+    "symbol": "USDC",
+    "em_usd": 7107.010941445786,
+    "bribe": "0x633dd6ba6f3e8750a7f517ba2173abb9ce6eabbe"
+  },
+  {
+    "pool": "0xbe762d548f8ca86a78e9da6e3ddc87f91457e398",
+    "gauge": "0x7140e2ee393c885fda93a4a6b0a05564c6adedfc",
+    "symbol": "ICP",
+    "em_usd": 6173.83252511858,
+    "bribe": "0x44dc5ac7d429aed65aa2280e74aba30d1a976b13"
+  },
+  {
+    "pool": "0xbd3cd0d9d429b41f0a2e1c026552bd598294d5e0",
+    "gauge": "0xfcfee5f453728baa5ffda151f25a0e53b8c5a01c",
+    "symbol": "weETH",
+    "em_usd": 6065.279334804499,
+    "bribe": "0xf888ff1645b681593ca6d0f861ac2eb761bc380c"
+  },
+  {
+    "pool": "0x45df01efa0de71725d4d8fc1165b102bc2e989fb",
+    "gauge": "0xb716cb1e4c8b6c1dc78c9e72ea47d99562e52657",
+    "symbol": "COMMON",
+    "em_usd": 5489.597502222868,
+    "bribe": "0x71817459456b4665e5f50ec40275255d620b10a3"
+  },
+  {
+    "pool": "0xf579b16f9b1a4acc872d34a8141fbbd36c0ce10c",
+    "gauge": "0xbab42f222012fea2d1bc17ca9db82031e84511d2",
+    "symbol": "VELVET",
+    "em_usd": 5083.167190633146,
+    "bribe": "0x1ca0216c5b945387f2d9115ab197c2cdfa0cea5f"
+  },
+  {
+    "pool": "0x6cda37ddb9e099bb49495a9ca7df9cd445a6965f",
+    "gauge": "0xb5032ea9afbed3bd359e13760e6042fee3c5f6ca",
+    "symbol": "RSC",
+    "em_usd": 4638.023834750804,
+    "bribe": "0x36ee6b0ef6cf18a9463387fd6fc2c48c540952ac"
+  },
+  {
+    "pool": "0x7432aab631b801a10bef7d70c1507a32755595fa",
+    "gauge": "0x152cf5b5fa1a41d00140a83e39328d8c5f0cddb8",
+    "symbol": "SYRUP",
+    "em_usd": 4547.886307509857,
+    "bribe": "0xb54d83f64b7bba0261c6b0a1f50ae1cd1b493af8"
+  },
+  {
+    "pool": "0x56b92e5b391dbfb8b8028ac95a4b97f52ffeb416",
+    "gauge": "0x6205dfbe68444cff504a20a712cea794c6b6cf04",
+    "symbol": "KAITO",
+    "em_usd": 4056.487351096831,
+    "bribe": "0x047fe3094b0e7cc90ea47bae19c47a7bcfeeff76"
+  },
+  {
+    "pool": "0x72be417afb0abea66913141c605d313bb389b59c",
+    "gauge": "0xd66c27ec3c0dfcd20678ff5f5c3cbb6ede033b92",
+    "symbol": "LINK",
+    "em_usd": 3843.960432246333,
+    "bribe": "0x212bbb6f40c2e7cc14db9fb413b4cf3181e5677f"
+  },
+  {
+    "pool": "0xfebeebaa6c9585fd97aa9157e3b7aace804b688c",
+    "gauge": "0xf3fa5d26f7385d415d31310b715ba09892ae373f",
+    "symbol": "XSGD",
+    "em_usd": 2875.0951857636423,
+    "bribe": "0x0f66ac2f664ade47692d0b76b89cade7f59607ce"
+  },
+  {
+    "pool": "0x4ba1e3e9280facbacafa7baf4ae0b78bea60beca",
+    "gauge": "0x9d312ed8646ce9a4ec2a44279c07cfccfefab012",
+    "symbol": "SPX",
+    "em_usd": 2777.840248385401,
+    "bribe": "0x8acd003b533d1bacb375ddf5252652d1a188974f"
+  },
+  {
+    "pool": "0x016df91005f30039c9f1a89b44db5e8c60613603",
+    "gauge": "0xb2025a9813914b7a0eb85a2b87848028fbe4d203",
+    "symbol": "PENDLE",
+    "em_usd": 2758.3671599856125,
+    "bribe": "0x03acb47f3695c8b3533ac092a6bfeac359c1361a"
+  },
+  {
+    "pool": "0xad06a870fc2198398c18a6f2ca035bf795edeefe",
+    "gauge": "0xe75880892cc7b8f7d64614345c5422c3cc4fa41a",
+    "symbol": "WOO",
+    "em_usd": 2140.461599587003,
+    "bribe": "0x0e1415762cf2068b4ee0b6ff0c510dbd37b39047"
+  },
+  {
+    "pool": "0xa33f162da19c7273ba1205bfd9d4340da2446e3a",
+    "gauge": "0x996802075582af2ee133fb30cc5a9e8a671d3c3a",
+    "symbol": "tBTC",
+    "em_usd": 1961.567701400446,
+    "bribe": "0x6bb83da072cb035d8c65bfd84c8a08269c0de1d4"
+  },
+  {
+    "pool": "0x3054f64e28140ee00428be94eac4ad6f7241712a",
+    "gauge": "0x76e017276e8861968a86a56919b2235c505b6438",
+    "symbol": "uZEC",
+    "em_usd": 1918.8630519697515,
+    "bribe": "0x7ddc04d1fa96d17ca992b7788d87b2a480a3d063"
+  },
+  {
+    "pool": "0xafb62448929664bfccb0aae22f232520e765ba88",
+    "gauge": "0x319e23d38d8ee58783ff5331507b808709bd00b0",
+    "symbol": "DEGEN",
+    "em_usd": 1806.8222535753666,
+    "bribe": "0x57438b9db6e5165555ecdf9094d4f3f8a498e018"
+  },
+  {
+    "pool": "0x22a52bb644f855ebd5ca2edb643ff70222d70c31",
+    "gauge": "0xc23924a846eca931ec3014253e94f15b038bd0c8",
+    "symbol": "AIXBT",
+    "em_usd": 1707.0958366217105,
+    "bribe": "0x6ad3c898791f319ca2d9914836bc42e06f816543"
+  },
+  {
+    "pool": "0x3c5428b3d6e07f6de38b0c7f84ea9d30b3b27231",
+    "gauge": "0xbf53d46947ced25cefb63a2b09c7a99c1ab96830",
+    "symbol": "EIGEN",
+    "em_usd": 1632.6327630365054,
+    "bribe": "0xc9b2df71cb1fa43b7b7d5a7f0edc35eb3a205863"
+  },
+  {
+    "pool": "0x088c39ee29fc30df8adc394e9f7dea33e3a26507",
+    "gauge": "0x42d80fdf14f13ca7019fd5a77fd53f1c1f4099a6",
+    "symbol": "doginme",
+    "em_usd": 1425.9941121138968,
+    "bribe": "0x6cdede453d68ba9350553fb6fdcc0461bd662c72"
+  },
+  {
+    "pool": "0xcd1f9777571493aeacb7eae45cd30a226d3e612d",
+    "gauge": "0x413112e5434c7d3b00cad0948d89dca460f6fb46",
+    "symbol": "LITKEY",
+    "em_usd": 1281.1769962776202,
+    "bribe": "0x0fe99d5a9adea52bc8a03037a4d13574de0e484f"
+  },
+  {
+    "pool": "0x54cdd0222df6b3bc17754c2c1b3d7d4203fe3d89",
+    "gauge": "0xa4a7e0dae53e9de540ddef4bb7214499dfdea07d",
+    "symbol": "REI",
+    "em_usd": 1227.81759793047,
+    "bribe": "0xad92da7aa1bd2fc26bacd48a1bb8c0771ba841d8"
+  },
+  {
+    "pool": "0x32bb4ad5fed77f7abf97d1435f8d6aaae59aa64e",
+    "gauge": "0x470cb18f662bb91b972c81fdb385412d5509442a",
+    "symbol": "POKT",
+    "em_usd": 1213.9347284821974,
+    "bribe": "0xc0b92dc540ab411534ab05d0ee0f337672a1cb35"
+  },
+  {
+    "pool": "0xf1eef36d55978edfd427e95c3d0c9b9359ef0aef",
+    "gauge": "0xa2292a26d33117f52fd511aafd98a73c2172a990",
+    "symbol": "W",
+    "em_usd": 1165.6015120919367,
+    "bribe": "0x86f58549bcfa0fc45b16fd0981e2b6fd28ddb42d"
+  },
+  {
+    "pool": "0x6446021f4e396da3df4235c62537431372195d38",
+    "gauge": "0xdd234dbe2eff53bed9e8fc0e427ebcd74ed4f429",
+    "symbol": "superOETHb",
+    "em_usd": 1142.250474566381,
+    "bribe": "0x685ce0e36ca4b81f13b7551c76143d962568f6dd"
+  },
+  {
+    "pool": "0x3ba9ce0f19cf3ccb631b973c83712c7e6e9585ae",
+    "gauge": "0xe871a267a418c200f8b92ae21397221122b79808",
+    "symbol": "WELL",
+    "em_usd": 1135.3377001474005,
+    "bribe": "0x73db586afb0181efd91384ffbc3464cecc7cbdd5"
+  },
+  {
+    "pool": "0xfefe4e80f2d747a484154f7ae18b20d478e49d40",
+    "gauge": "0xd33e1ccbd216cb3e2d63b114e119862002442196",
+    "symbol": "ETHFI",
+    "em_usd": 1069.8126694672792,
+    "bribe": "0x26d89862ec8908e6117b952210849afca3c56d95"
+  },
+  {
+    "pool": "0x5c45b0f48c326f79b56709d8f63ce2bee7697106",
+    "gauge": "0xed5355807fb4e7a04a7ff8bbc20cf65d425cb868",
+    "symbol": "uSUI",
+    "em_usd": 982.1991476616198,
+    "bribe": "0x590ef055934a82e1851c35b4f331d27e0899d024"
+  },
+  {
+    "pool": "0x61c6e9e93592e535efc1bee07f491a517e98f6d0",
+    "gauge": "0x4b9c4828a512ed379b8f2b656acc839a62265adb",
+    "symbol": "uXRP",
+    "em_usd": 968.7651916807654,
+    "bribe": "0x5f1a3050b928848be8b1e0f6b292e4c39e5029e2"
+  },
+  {
+    "pool": "0x4d69971ccd4a636c403a3c1b00c85e99bb9b5606",
+    "gauge": "0xcc2714bf50f3c7174a868bec8f4d4d284a0b07cc",
+    "symbol": "USD+",
+    "em_usd": 901.9077989223235,
+    "bribe": "0xee54feb29ac27b0730d4f030dafeeca20ab197e8"
+  },
+  {
+    "pool": "0x3debc1a83ede28e30baaa43f9fa110e052d4ccdd",
+    "gauge": "0xf4533d9632ad33983a39f3dde529fdffd5b0ad88",
+    "symbol": "CADC",
+    "em_usd": 863.2843756309219,
+    "bribe": "0xe4b751665cdade61c5a79a314f792998cd8a9e13"
+  },
+  {
+    "pool": "0xc422bfb18f9fc217f955d759d3753f31137ccefd",
+    "gauge": "0x11ec04a8ad5df5c187470ec941ef26dea7f9ebd1",
+    "symbol": "ENA",
+    "em_usd": 862.321161650122,
+    "bribe": "0xe88d4887f6f1dfdbbbae275f03f9394a2032e0fb"
+  },
+  {
+    "pool": "0x385b47e56b73eb6549378f78f7c7cbc42c56c9e0",
+    "gauge": "0x7a53fd90c6fb9ffd8eebc668300fe42e151cfa02",
+    "symbol": "DRB",
+    "em_usd": 793.3926547884879,
+    "bribe": "0x22260296aba8202ddfb3e331bbbdd3bb8c0db475"
+  },
+  {
+    "pool": "0x2a36148a416cba81699b555120bd65f4682bdfd2",
+    "gauge": "0x6366138fd616df7e5906d7b00250634da342ee20",
+    "symbol": "GAME",
+    "em_usd": 761.0637825157758,
+    "bribe": "0x0c058cbb1f48df55b75e49a2bd40446ef9abc201"
+  },
+  {
+    "pool": "0x4e40ff3be6bda5b131c91520fa73515076eee098",
+    "gauge": "0x474716f0164cbe5d2f55336492c51fe0bf04373e",
+    "symbol": "jesse",
+    "em_usd": 687.2571382885201,
+    "bribe": "0xf156ccefb5f0573181b575a0c029ce9aa045ff1c"
+  },
+  {
+    "pool": "0x5d28f920c9d23100e4a38b2ba2d8ae617c3b2615",
+    "gauge": "0xcc049dfa700197b49db9e8bec3af462d22b68621",
+    "symbol": "PING",
+    "em_usd": 619.4979341532743,
+    "bribe": "0xb0e3fc7f5b76f743be94e493c708450298616c77"
+  },
+  {
+    "pool": "0x681d6e4b0b020656ca04956ddaf76add7ef022f6",
+    "gauge": "0x82f40418147828bcc8f0f1f551685fc2f6768176",
+    "symbol": "SEDA",
+    "em_usd": 547.9123437383915,
+    "bribe": "0x34e446011a8ccd7445eed70322d5934030b5da53"
+  },
+  {
+    "pool": "0xb211a9ddff3a10806c8fdb92dbc4c34596a23f84",
+    "gauge": "0xa9edd05f8d82f4050d4649fef30bec9378f499e7",
+    "symbol": "KEYCAT",
+    "em_usd": 543.5931795222752,
+    "bribe": "0xd138c6607e3ff45a621699e186ad7fe36f7ef250"
+  },
+  {
+    "pool": "0xcf88b8bf7ccce2d836878e538197eb20fc673bce",
+    "gauge": "0x549690894f61bf0d3a5799d03fded6e775a424aa",
+    "symbol": "USDz",
+    "em_usd": 538.134212345917,
+    "bribe": "0x7ef3cdf2f7ea708739ac31eef440e74516f78e66"
+  },
+  {
+    "pool": "0x5a1401c002f67ca00557e7179d34c3fe6d753b28",
+    "gauge": "0x283a6ffdd95f1145988e324f01663ff95247cce0",
+    "symbol": "EXTRA",
+    "em_usd": 527.2087246774774,
+    "bribe": "0xfbcb3b018d16e713cf0fe2914cbfe60fa40f7799"
+  },
+  {
+    "pool": "0x1024c20c048ea6087293f46d4a1c042cb6705924",
+    "gauge": "0x57676415de17e1c684d1028b8a39d1acf8d6a63d",
+    "symbol": "BID",
+    "em_usd": 507.104986165706,
+    "bribe": "0xd9c69060a548e0ea0b74b4d74245c2a5590432a9"
+  },
+  {
+    "pool": "0xebd2eeab20cefa41c94343f506ac506bfc3f681e",
+    "gauge": "0xc5135bcc045dc47fc2a79483e3ad8e7b9c6512ef",
+    "symbol": "WCT",
+    "em_usd": 477.77718235571706,
+    "bribe": "0x57c5dda10e4e8aa9f52b9ce88505cd3cdffe6f34"
+  },
+  {
+    "pool": "0xe782b72a1157b7bea1a9452835cce214962ad43b",
+    "gauge": "0x1dd8e44b202fe7d3e85ce7788311374e2e9df950",
+    "symbol": "SKI",
+    "em_usd": 470.41592566829047,
+    "bribe": "0x8cbe1113ca6032c8d1ce77a36f8450d085b7fb40"
+  },
+  {
+    "pool": "0xaa067f08fef60420d050a92e7800e588748b7d67",
+    "gauge": "0x6165ceee2df1cb4811698be5bfef218aa6414868",
+    "symbol": "MAMO",
+    "em_usd": 455.13504431317796,
+    "bribe": "0x59d6058e272cf18b2dfe2a5eef3d8ef42f6d0940"
+  },
+  {
+    "pool": "0x8a7b72f8ff5299e493317d4430293894107af859",
+    "gauge": "0x3b23c56d4e0aa528fac0446e17a4b6ff575fc057",
+    "symbol": "SIGN",
+    "em_usd": 416.78868502298525,
+    "bribe": "0x67f341f4eb5bc682497bcb1f3d294cb6a800dd5b"
+  },
+  {
+    "pool": "0x326841efd63340767e02ec88e583f18a82af4a48",
+    "gauge": "0xafabcbbab5e4261b1d655c906738176191819164",
+    "symbol": "MIGGLES",
+    "em_usd": 355.9791850554593,
+    "bribe": "0xd8c5f479afd0d31be6981a82102772fe9649b593"
+  },
+  {
+    "pool": "0x9ea86aa9f7203da077371bb2f82ec555e6e22f81",
+    "gauge": "0x3e2b0d294bee08c601483b97f758824a81f81d25",
+    "symbol": "noice",
+    "em_usd": 345.3921384969963,
+    "bribe": "0x3468049d093ba4ecaff10f40291b1a4b486aec99"
+  },
+  {
+    "pool": "0x27bd426ec343845995c527d634c4e07f0608aacd",
+    "gauge": "0x6ea5161e3f223de6ab0e079f0977aef1056c4b3e",
+    "symbol": "ORDER",
+    "em_usd": 306.7412044130731,
+    "bribe": "0xb75edd4e7e38108de2b79434e115d9977c287439"
+  },
+  {
+    "pool": "0x864cc817099761c7b7f8228822f2bde0b74a6588",
+    "gauge": "0xb95276137089404ed801c65d5fba51bdf2c084df",
+    "symbol": "uNEAR",
+    "em_usd": 265.5063926696423,
+    "bribe": "0x735dd46ad15b034a70f241b7bb19ebff8e2909fe"
+  },
+  {
+    "pool": "0x85fb468a5e65a537c5ac767776599708a3d41046",
+    "gauge": "0x83c20ba54325741fe1d84632e423d187c8b4f3c2",
+    "symbol": "MOLT",
+    "em_usd": 252.05549590259338,
+    "bribe": "0xe363a5fb8582c0fbafd88904a2c19d94cafca137"
+  },
+  {
+    "pool": "0x87cd18069b6547a0e88b6155dd657e71779500ea",
+    "gauge": "0xf9f8138150f67a469fa5437e75ad16eaaab8c09e",
+    "symbol": "PRIME",
+    "em_usd": 241.9473649219626,
+    "bribe": "0xca239768797cb592c25a854d30dc72ae3b143dd3"
+  },
+  {
+    "pool": "0xfd22d75b2fb405ee185155d57b0277b9db2f8e29",
+    "gauge": "0x4d046a24da2b4c01b89df7eae9b4794586489769",
+    "symbol": "BITCOIN",
+    "em_usd": 214.8955165432892,
+    "bribe": "0xc88349db255d6d000825cf52ff827c8db81be326"
+  },
+  {
+    "pool": "0x1807af3897aa6419e770d4642df7b8b06e542c02",
+    "gauge": "0xeca59a0fbd6498b4d3d6e4143a30c2e8d8f68686",
+    "symbol": "Anon",
+    "em_usd": 174.59526353895697,
+    "bribe": "0x323b0e83c7edacc7abe7c99ad3b3335a1a73510c"
+  },
+  {
+    "pool": "0x9aa26b650357bf9cc5439123bcd7e0c0200d90e6",
+    "gauge": "0x78495d7753540ebeac1fb45a27fb790868cb811e",
+    "symbol": "Base is for everyone",
+    "em_usd": 157.4835014535412,
+    "bribe": "0x1ea362c9456e2902b3b873465efae5a00f048b36"
+  },
+  {
+    "pool": "0x29af315b3bd7566005f14d81c582b59e1c632ffd",
+    "gauge": "0x29c4ff5cfb44a14974ccc2447e9555f753b3489d",
+    "symbol": "HYPER",
+    "em_usd": 156.02698418944237,
+    "bribe": "0x8b6e1f0b8269f4e60c444183e1d379bce5d8c73b"
+  },
+  {
+    "pool": "0xc36eaa38e17b0270a374969dd301af981f50b2b2",
+    "gauge": "0xb8fa634ab603b4cf2217dc0f71522feaee64aeef",
+    "symbol": "RSR",
+    "em_usd": 131.91060168808207,
+    "bribe": "0xc470f2d6fc99b20626322e457b3da93651471c5f"
+  },
+  {
+    "pool": "0x346edb1aaa704df6ddbfc604724aafcdc12b2fed",
+    "gauge": "0x37c1eb7f00cd43a1e52f4e93b55ed324ce60359d",
+    "symbol": "TALENT",
+    "em_usd": 120.23565874287785,
+    "bribe": "0xfb451c527f0878a2e97ccdf7150980c9cc1fd6e7"
+  },
+  {
+    "pool": "0x035d6b8ac7fe438f8b3b52eac81e346377f7509f",
+    "gauge": "0x688da366bfe09a22f2af5f54fc463c4e0c137a0f",
+    "symbol": "A0X",
+    "em_usd": 104.41933305804298,
+    "bribe": "0xe80533ad022cf6eeaab11819db503ebf097b72c6"
+  },
+  {
+    "pool": "0xb6b777577a05d85ffca7d9ebc7476fb344b92445",
+    "gauge": "0x9c590e540b6d2b602565d00eb47023a2ea66f4e0",
+    "symbol": "LUNA",
+    "em_usd": 89.75437878206098,
+    "bribe": "0x9a03f2c049040d5c92c77e7dbbd81c0d47db83dd"
+  },
+  {
+    "pool": "0x0652202c4b2d09cb93aedefadc14b36869483a98",
+    "gauge": "0x9017bdde03d36636113a55aa97cf159048843498",
+    "symbol": "USDC",
+    "em_usd": 68.36939382889877,
+    "bribe": "0x904ea685b14c1a6ec5cf34d9b2e6e5bb83e9b1ac"
+  },
+  {
+    "pool": "0x2229b66a40ece21d0b5d4e061cb35bc44cd623b5",
+    "gauge": "0x03b16ecd57519243ba821196bfe019350c88835c",
+    "symbol": "WFRAX",
+    "em_usd": 65.81992255491515,
+    "bribe": "0x14c5bbfd06607312f1815e38d7e28b80fb0d67a3"
+  },
+  {
+    "pool": "0xbdb6f998176b2766befb2037033dfb3f8e368d52",
+    "gauge": "0x0cac405deb53494d37158f70e46cd98a275d69f2",
+    "symbol": "AUDD",
+    "em_usd": 55.26216117586312,
+    "bribe": "0x1922f5d77a8915f44f1336e783f88330654fd3d6"
+  },
+  {
+    "pool": "0x275be3a43b66516e532bcaa36ee453edd47614ea",
+    "gauge": "0x90f6ef29a0915cd33dbf0ce779b46923db5cbb22",
+    "symbol": "LSK",
+    "em_usd": 27.029966872651986,
+    "bribe": "0x3139115b482658c0f31abe4db284cb633d50366d"
+  },
+  {
+    "pool": "0x2092f4acbb18bb1649595df59b9cb601bba1ebb7",
+    "gauge": "0x8d88c541f22de965536bd1849013caee6ce90e11",
+    "symbol": "RDNT",
+    "em_usd": 25.972736274841118,
+    "bribe": "0x9a9fffd234eeead74e8ee3e0cd5ebba2dbfc7355"
+  },
+  {
+    "pool": "0xfd4f716cb3c493afddd40c67d3f42426aeb2d902",
+    "gauge": "0xfd4fbaf8b074e7c275b9fca2de88a912caeea9c3",
+    "symbol": "uLINK",
+    "em_usd": 23.269876048744813,
+    "bribe": "0x24f85fefc83ba73f09fb900af67eb1f58d7f47d6"
+  },
+  {
+    "pool": "0x266f421f80016d670c9de757d561a5c4a6a9ffac",
+    "gauge": "0x41513004596b32b5483620f55774e3a2a5cb9052",
+    "symbol": "stTAO",
+    "em_usd": 22.981870168382326,
+    "bribe": "0x31712a2cd9ae205f8dbcf04f28c0f1f3e15c156d"
+  },
+  {
+    "pool": "0x531a13a588c4188fdae818d56cb91ecc4f6bdeaf",
+    "gauge": "0x5f57a113ed5529a14b08006bf788c3fe0cbfbfa4",
+    "symbol": "MEM",
+    "em_usd": 19.83422272269136,
+    "bribe": "0xf7b704c7fa280b349c081a030eb47401930f36f6"
+  },
+  {
+    "pool": "0x3c589883d42d5d45b50b9fff4f07d990a1242a3f",
+    "gauge": "0x1b5dd992cbd0de7a9b44a8736866214d093d2942",
+    "symbol": "GIZA",
+    "em_usd": 18.6607719382255,
+    "bribe": "0xa85efe0bf043906bb856b17657415745ea766c4f"
+  },
+  {
+    "pool": "0xc75a16d7e685eae65ba0ab6cf596f73f6edf170d",
+    "gauge": "0xfaec1df3e83fa614b960520d5e3518dbaa4be163",
+    "symbol": "SOON",
+    "em_usd": 14.135696529288406,
+    "bribe": "0x88a09beac8dfebd194bdb180916f90716a755bae"
+  },
+  {
+    "pool": "0xa88c07bd10813cf9b4111deab984c4026f2c83bf",
+    "gauge": "0x27149e8aef0331487b97d2d80ef88d7eab9e026e",
+    "symbol": "uAPT",
+    "em_usd": 8.68531622462829,
+    "bribe": "0x08d5990a27ef97f0b87e0aec227e103520c88185"
+  },
+  {
+    "pool": "0xee43f28bf16abaa17d5874e57b3a8ffdc99ecbba",
+    "gauge": "0xec465874335285521e8a9d97959c8b799862f107",
+    "symbol": "AAA",
+    "em_usd": 5.473612064110334,
+    "bribe": "0x131fc62efbaaa5ccc4d4bfa78811db308993195b"
+  },
+  {
+    "pool": "0x859c91f9fe1ec10e38a7ccad0b87f0aae0b88cfe",
+    "gauge": "0x4c74464a878947af6fb4c2afdd10799529cae732",
+    "symbol": "uSEI",
+    "em_usd": 3.7513824209966824,
+    "bribe": "0x41a5d38b2210a37ab9f0186064307438ec41ca0e"
+  },
+  {
+    "pool": "0x04f8375dad560480d6639b9600cd88ca594e2293",
+    "gauge": "0x0fe62690cd3b234e1f1e206621e84b57f3b219a1",
+    "symbol": "LsETH",
+    "em_usd": 2.1468029562786795,
+    "bribe": "0xd11780931cca413d7ae56d711bc1f67eff9a2d3b"
+  },
+  {
+    "pool": "0x4289a0666397f517c2a761652aaebaf6a4f7a693",
+    "gauge": "0x0c8a0ba64139c17eb90a9fe63158498be41467eb",
+    "symbol": "USDS",
+    "em_usd": 2.1315736518760025,
+    "bribe": "0xdb58ca7f97706ae8160cc10a3a3e35d75b4d2a2c"
+  },
+  {
+    "pool": "0x7c42dd1556754be827e187ce0870e70c5e571f35",
+    "gauge": "0x54a9d2003b547e54c4cf6ddcf1588032c4386687",
+    "symbol": "HEU",
+    "em_usd": 1.4827555325073036,
+    "bribe": "0xe7af7d43e7b33920e27a614ea2427ce608406591"
+  },
+  {
+    "pool": "0x89ab78d42ba0d381fe3c02666abb4276e21e5a13",
+    "gauge": "0x18fb83982a84cd4c75c59fae8a342b8c1b58a132",
+    "symbol": "VCHF",
+    "em_usd": 0.8016277804778448,
+    "bribe": "0x00d7852273953b84218a7955f13234fa598578cc"
+  },
+  {
+    "pool": "0xdc7ead706795eda3feda08ad519d9452badf2c0d",
+    "gauge": "0xc6b4fe83fb284bdde1f1d19f0b5beb31011b280a",
+    "symbol": "ezETH",
+    "em_usd": 0.48054803714394145,
+    "bribe": "0x36e2747c9760c974d980282e6d8f1b58724d163a"
+  },
+  {
+    "pool": "0xdc9279ce30a5044bbc345bf50030d44f45f0e768",
+    "gauge": "0x588d8f2024016604d087bd99668757f1c66b9c03",
+    "symbol": "YGG",
+    "em_usd": 0.20394530414124942,
+    "bribe": "0xd11e50611ba51beb8b441ff5964d97ad58c0501b"
+  },
+  {
+    "pool": "0xf935fa2e4ae1593953263f4c1674ea21dae64169",
+    "gauge": "0x6936f0a25e723925c765eb1424cd5b3a7d0d7039",
+    "symbol": "VGBP",
+    "em_usd": 0.10315428070244144,
+    "bribe": "0x55d6646f6c86163b80e586be13b6120d47dc4feb"
+  },
+  {
+    "pool": "0xac858b9d917442411a5c9fc1d02ce05ba96eae5c",
+    "gauge": "0xe03a45dd0909e1bb7545c6475186e8ae2604f0a8",
+    "symbol": "PHI",
+    "em_usd": 0.04073309924847623,
+    "bribe": "0xdc7a515ea7299192a58bcd84609fd29d37c2a6f5"
+  },
+  {
+    "pool": "0xcdf927c0f7b81b146c0c9e9323eb5a28d1bfa183",
+    "gauge": "0x7d90e903936dad918fac797913925c7598d233f8",
+    "symbol": "xPufETH",
+    "em_usd": 0.03379629951668445,
+    "bribe": "0x119eade7cb83f3caad839c7266c6a8733bbeaf15"
+  },
+  {
+    "pool": "0x30e8b965852ffb425aac5b265dd985ab43123c3d",
+    "gauge": "0x473a8a08738ad2c04b4b2b3a7eee2a3124ae79b6",
+    "symbol": "JKL",
+    "em_usd": 0.0001642251475341353,
+    "bribe": "0xef84514a396d2687c440c5995e99d6ef5aa20342"
+  },
+  {
+    "pool": "0x4ba79157c6e7ab14bce06a869af2d14c51c8e269",
+    "gauge": "0x93ee62191632cdb63710f6dbe497dbc6640242f4",
+    "symbol": "LINKS",
+    "em_usd": 3.0351331822211704e-05,
+    "bribe": "0x0872c9be19eaa1d247764f2eb44de043117b72ca"
+  }
+]

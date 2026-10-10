@@ -1,0 +1,2 @@
+event_id,contract_id,layer,dim_id,score,clock,evidence_class,scored_at,observer,rationale,frozen
+# SCHEMA: M and E and S2 are EVENT-level. I/S4/S1/S3 are contract-level on score set. clock in {t0_narrative,pit_create_order,observer_constant,empty_no_evidence}. Empty is NOT collapse. Freeze before outcomes.

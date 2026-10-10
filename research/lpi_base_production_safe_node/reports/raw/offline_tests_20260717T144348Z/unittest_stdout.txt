@@ -1,0 +1,135 @@
+{
+  "status": "PREFLIGHT_READY_NOT_EXECUTED",
+  "plan_hash": "4d1d00bbb658704a499f02de536d2afecb3150f74d201675c35c401cf3451fff",
+  "candidate_table": "logical.base_logs_candidate",
+  "required_fields": [
+    "block_number",
+    "transaction_hash",
+    "log_index",
+    "address",
+    "topic0",
+    "data"
+  ],
+  "partition_key": "block_number",
+  "start_block": 20000000,
+  "end_block": 20000999,
+  "limit": 1000,
+  "estimated_read_bytes": 4096000,
+  "estimated_read_bytes_kind": "offline_unverified_heuristic",
+  "query_timeout_sec": 10,
+  "max_threads": 1,
+  "max_bytes_to_read": 8388608,
+  "stop_conditions": [
+    "statement_timeout",
+    "max_bytes_to_read",
+    "limit_reached",
+    "health_guard_trip",
+    "access_defaults_closed"
+  ],
+  "full_scan_prevention": [
+    "strict_identifier_syntax",
+    "explicit_column_projection",
+    "partition_predicate_on_block_number",
+    "bounded_block_range_20000000_20000999",
+    "LIMIT_1000",
+    "max_threads=1",
+    "max_bytes_to_read=8388608",
+    "statement_timeout_sec=10",
+    "readonly=true",
+    "dry_run_and_explain_only_this_stage",
+    "no_select_star"
+  ],
+  "offline_enforced_constraints": [
+    "identifier_whitelist_syntax",
+    "block_span_hard_max_1000",
+    "limit_hard_max_1000",
+    "timeout_range_1_to_10",
+    "max_bytes_range_1_to_8388608",
+    "max_threads_eq_1",
+    "dry_run_explain_only_forced",
+    "execution_authorized_false"
+  ],
+  "future_db_side_enforced_settings": [
+    "readonly=2_or_equivalent",
+    "max_threads_session_setting",
+    "max_execution_time_session_setting",
+    "max_bytes_to_read_session_setting",
+    "server_side_cancel_on_timeout"
+  ],
+  "sql_skeleton": "SELECT block_number, transaction_hash, log_index, address, topic0, data FROM logical.base_logs_candidate WHERE block_number >= 20000000 AND block_number <= 20000999 LIMIT 1000",
+  "dry_run": true,
+  "explain_only": true,
+  "checkpoint_path": null,
+  "execution_authorized": false,
+  "notes": [
+    "Candidate table name is logical and unbound to production until owner approval.",
+    "estimated_read_bytes is offline_unverified_heuristic, not a ClickHouse measurement.",
+    "This report does not authorize business-table queries."
+  ]
+}
+{
+  "status": "PREFLIGHT_READY_NOT_EXECUTED",
+  "plan_hash": "6ddd7da2207934aa777d2c9e55603b7c38c182ca5364a9fe700dc5141b5132ff",
+  "candidate_table": "logical.t",
+  "required_fields": [
+    "block_number"
+  ],
+  "partition_key": "block_number",
+  "start_block": 1,
+  "end_block": 2,
+  "limit": 1000,
+  "estimated_read_bytes": 8192,
+  "estimated_read_bytes_kind": "offline_unverified_heuristic",
+  "query_timeout_sec": 10,
+  "max_threads": 1,
+  "max_bytes_to_read": 8388608,
+  "stop_conditions": [
+    "statement_timeout",
+    "max_bytes_to_read",
+    "limit_reached",
+    "health_guard_trip",
+    "access_defaults_closed"
+  ],
+  "full_scan_prevention": [
+    "strict_identifier_syntax",
+    "explicit_column_projection",
+    "partition_predicate_on_block_number",
+    "bounded_block_range_1_2",
+    "LIMIT_1000",
+    "max_threads=1",
+    "max_bytes_to_read=8388608",
+    "statement_timeout_sec=10",
+    "readonly=true",
+    "dry_run_and_explain_only_this_stage",
+    "no_select_star"
+  ],
+  "offline_enforced_constraints": [
+    "identifier_whitelist_syntax",
+    "block_span_hard_max_1000",
+    "limit_hard_max_1000",
+    "timeout_range_1_to_10",
+    "max_bytes_range_1_to_8388608",
+    "max_threads_eq_1",
+    "dry_run_explain_only_forced",
+    "execution_authorized_false"
+  ],
+  "future_db_side_enforced_settings": [
+    "readonly=2_or_equivalent",
+    "max_threads_session_setting",
+    "max_execution_time_session_setting",
+    "max_bytes_to_read_session_setting",
+    "server_side_cancel_on_timeout"
+  ],
+  "sql_skeleton": "SELECT block_number FROM logical.t WHERE block_number >= 1 AND block_number <= 2 LIMIT 1000",
+  "dry_run": true,
+  "explain_only": true,
+  "checkpoint_path": null,
+  "execution_authorized": false,
+  "notes": [
+    "Candidate table name is logical and unbound to production until owner approval.",
+    "estimated_read_bytes is offline_unverified_heuristic, not a ClickHouse measurement.",
+    "This report does not authorize business-table queries."
+  ],
+  "execute_attempt": "DENIED",
+  "error": "database_access_enabled=false (fail-closed)"
+}

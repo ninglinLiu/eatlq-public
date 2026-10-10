@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #faf7f2;
+  --foreground: #2c2419;
+  --accent: #c4704a;
+  --border: #e8e0d6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-cream text-ink antialiased;
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+@layer components {
+  .prose-reader {
+    @apply max-w-prose text-[17px] leading-[1.75] text-ink;
+  }
+
+  .prose-reader h1 {
+    @apply mb-6 mt-10 text-2xl font-semibold tracking-tight text-ink first:mt-0;
+  }
+
+  .prose-reader h2 {
+    @apply mb-4 mt-8 text-xl font-semibold text-ink;
+  }
+
+  .prose-reader h3 {
+    @apply mb-3 mt-6 text-lg font-medium text-ink;
+  }
+
+  .prose-reader p {
+    @apply mb-4;
+  }
+
+  .prose-reader ul,
+  .prose-reader ol {
+    @apply mb-4 ml-5 list-outside space-y-1;
+  }
+
+  .prose-reader ul {
+    @apply list-disc;
+  }
+
+  .prose-reader ol {
+    @apply list-decimal;
+  }
+
+  .prose-reader li {
+    @apply text-ink-muted;
+  }
+
+  .prose-reader strong {
+    @apply font-semibold text-ink;
+  }
+
+  .prose-reader code {
+    @apply rounded bg-cream-dark px-1.5 py-0.5 text-[0.9em] text-ink;
+  }
+
+  .prose-reader pre {
+    @apply mb-4 overflow-x-auto rounded-lg border border-border-warm bg-white p-4 text-sm;
+  }
+
+  .prose-reader pre code {
+    @apply bg-transparent p-0;
+  }
+
+  .prose-reader blockquote {
+    @apply mb-4 border-l-2 border-accent-muted pl-4 italic text-ink-muted;
+  }
+
+  .prose-reader table {
+    @apply mb-4 block w-full overflow-x-auto text-sm;
+  }
+
+  .prose-reader th,
+  .prose-reader td {
+    @apply border border-border-warm px-3 py-2 text-left;
+  }
+
+  .prose-reader th {
+    @apply bg-cream-dark font-medium;
+  }
+
+  .prose-reader hr {
+    @apply my-8 border-border-warm;
+  }
+
+  .prose-reader a {
+    @apply text-accent underline-offset-2 hover:underline;
+  }
+}

@@ -1,0 +1,2 @@
+event_id,status,n_primary_all,n_selected,n_series,path_attach_contract_id,t_attach_unix,attach_share,second_share,earliest_primary_contract_id,earliest_equals_path_attach,broke,hours_from_earliest_to_attach,notes
+# SCHEMA: R1 path attach on primary chain. status in {observed,left_censored,never,single_series,no_ohlcv,unsupported_network,no_primary}. Does not overwrite R0 outcomes.

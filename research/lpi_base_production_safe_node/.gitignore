@@ -1,0 +1,12 @@
+runtime/venv/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+var/tmp/
+var/cache/
+var/auth_tokens/*.authorized
+*.tar.gz
+*.tar.zst
+.DS_Store
+reports/raw/LATEST_OFFLINE_TEST_DIR.txt
+var/loop/

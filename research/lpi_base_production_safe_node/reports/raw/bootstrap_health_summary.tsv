@@ -1,0 +1,6 @@
+snapshot	samples	idle_avg_pct	idle_min_pct	idle_final_pct	iowait_avg_pct	iowait_max_pct	swap_first_kb	swap_last_kb	swap_delta_kb	mem_min_kb	ingestor_max_age_sec	archiver_max_age_sec	guard
+bootstrap_health_pre_20260717	6	46.24	3.65	66.39	0.452	0.97	2255388	2255388	0	15765132	1	24	GUARD_NOT_TRIGGERED
+venv_health_pre_20260717	6	50.52	4.38	27.55	0.363	0.63	2255388	2255132	-256	15284508	1	19	GUARD_NOT_TRIGGERED
+venv_health_post_20260717	6	50.11	19.57	37.03	0.208	0.26	2254620	2254620	0	15689964	1	20	GUARD_NOT_TRIGGERED
+offline_test_health_pre_20260717	6	56.88	22.85	26.74	0.337	0.79	2254620	2254620	0	15692088	1	11	GUARD_NOT_TRIGGERED
+offline_test_health_post_20260717	6	40.24	9.45	9.45	0.475	1.38	2254620	2254108	-512	13850172	1	20	GUARD_NOT_TRIGGERED

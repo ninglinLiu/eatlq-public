@@ -1,0 +1,91 @@
+{
+  "task": "EXIT_ALPHA_V0_FINAL",
+  "generated_at": "2026-07-21T12:13:02Z",
+  "baseline": "FIXED_TP_4H",
+  "exits": {
+    "FIXED_TP_4H": {
+      "verdict": "BASELINE"
+    },
+    "TIME_30M": {
+      "verdict": "UNCONFIRMED",
+      "test_ok": false,
+      "sealed_ok": false,
+      "bh_reject": false,
+      "test_sum_delta": 0.326387887757004,
+      "test_p05_day": -0.03536013540441,
+      "test_mean_daily_delta": 0.0326387887757004,
+      "sealed_sum_delta": 0.0013131596612576367,
+      "sealed_p05_day": -0.2812117897341993,
+      "sealed_mean_daily_delta": 4.528136762957368e-05,
+      "test_sched_pnl": 0.172632479221155,
+      "sealed_sched_pnl": -0.3179647070844993
+    },
+    "TIME_4H": {
+      "verdict": "UNCONFIRMED",
+      "test_ok": true,
+      "sealed_ok": false,
+      "bh_reject": false,
+      "test_sum_delta": 1.4974382076089023,
+      "test_p05_day": 0.4453356686717604,
+      "test_mean_daily_delta": 0.04278394878882578,
+      "sealed_sum_delta": 0.00039266231450177337,
+      "sealed_p05_day": -0.1786951101877214,
+      "sealed_mean_daily_delta": 1.121892327147924e-05,
+      "test_sched_pnl": 1.3436827990730524,
+      "sealed_sched_pnl": -0.3188852044312552
+    },
+    "TRAIL_20_FROM_PEAK": {
+      "verdict": "REFUTED",
+      "test_ok": false,
+      "sealed_ok": false,
+      "bh_reject": false,
+      "test_sum_delta": -0.1635139213876095,
+      "test_p05_day": -0.6695599692419919,
+      "test_mean_daily_delta": -0.01635139213876095,
+      "sealed_sum_delta": 0.0012318931920434137,
+      "sealed_p05_day": -0.2488526165604568,
+      "sealed_mean_daily_delta": 3.849666225135668e-05,
+      "test_sched_pnl": -0.3172693299234587,
+      "sealed_sched_pnl": -0.3180459735537136
+    },
+    "MOMENTUM_HOLD": {
+      "verdict": "REFUTED",
+      "test_ok": false,
+      "sealed_ok": false,
+      "bh_reject": false,
+      "test_sum_delta": -0.16329607813745,
+      "test_p05_day": -0.9402192147220391,
+      "test_mean_daily_delta": -0.016329607813745,
+      "sealed_sum_delta": 0.00017224917202636122,
+      "sealed_p05_day": -0.19317159040432125,
+      "sealed_mean_daily_delta": 5.939626621598663e-06,
+      "test_sched_pnl": -0.31705148667329913,
+      "sealed_sched_pnl": -0.3191056175737307
+    }
+  },
+  "bh": {
+    "method": "benjamini_hochberg",
+    "alpha": 0.05,
+    "pvals": {
+      "TIME_30M": 0.06999999999999995,
+      "TIME_4H": 0.015000000000000013,
+      "TRAIL_20_FROM_PEAK": 0.6975,
+      "MOMENTUM_HOLD": 0.63
+    },
+    "reject": {
+      "TIME_30M": false,
+      "TIME_4H": false,
+      "TRAIL_20_FROM_PEAK": false,
+      "MOMENTUM_HOLD": false
+    }
+  },
+  "any_proven": false,
+  "propose_observer_shadow": false,
+  "live": "NO_GO",
+  "t0": null,
+  "code_hash_bakeoff": "c5bf47f97dad5b69801f5e4fdb554fcc5c4df36577406ec4d21ccfb8ceddfe16",
+  "stop_rule": "If TRAIL_20_FROM_PEAK and MOMENTUM_HOLD both fail vs FIXED_TP_4H under sealed+net-of-cost, seal exit-alpha line closed for this universe \u2014 do not keep adding exit variants.",
+  "stop_rule_fired": true,
+  "line_closed": true,
+  "success_bar": "net-of-real-cost scheduled incremental PnL of exit X over FIXED_TP_4H on same random entry priority, TEST day-p05>0, BH-corrected, replicated on sealed"
+}

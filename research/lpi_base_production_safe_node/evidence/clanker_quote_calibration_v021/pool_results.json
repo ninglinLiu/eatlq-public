@@ -1,0 +1,1749 @@
+{
+  "n": 12,
+  "rows": [
+    {
+      "cohort": "PRIOR_ENTRY_SUCCESS_NO_SWAP",
+      "entry_quote": {
+        "amount_in": 250000000,
+        "amount_out": 716380832241260415581580174,
+        "block": 48713153,
+        "calldata_sha256": "395bdbf6c19edc5c20c5cd53f46bfcf15c471abb0454e6bd252befa115a13cd0",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": 374004,
+        "ok": true,
+        "pool_id": "0x588b0d575847946043b3e2c252c2778de2b892f453f796efb5e9457c4a8acf84",
+        "rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 6,
+          "ok": true,
+          "result": "0x00000000000000000000000000000000000000000250938abb6e03469f9a6b8e000000000000000000000000000000000000000000000000000000000005b4f4",
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "side": "ENTRY_PAIRED_TO_TOKEN",
+        "token": "0x78d2e86d6beca0cf6792addb420f8b55ded1ab07",
+        "zero_for_one": false
+      },
+      "entry_state": {
+        "block": 48713153,
+        "liquidity": 1795125268484819020,
+        "liquidity_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 5,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "lp_fee": 0,
+        "ok": true,
+        "phase": "entry",
+        "protocol_fee": 0,
+        "slot0_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 4,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "sqrt_price_x96": 35398664311015649511,
+        "tick": -430600
+      },
+      "exit_reverse_quote": {
+        "amount_in": 716380832241260415581580174,
+        "amount_out": null,
+        "block": 48714053,
+        "calldata_sha256": "a47d81d5b8b6843bb0d4efa362dde1b723646812348a6319f047d33130cbb470",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": null,
+        "ok": false,
+        "pool_id": "0x588b0d575847946043b3e2c252c2778de2b892f453f796efb5e9457c4a8acf84",
+        "rpc": {
+          "error_class": "UNKNOWN_REVERT",
+          "error_message": "{'code': 3, 'message': 'execution reverted', 'data': '0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed734588b0d575847946043b3e2c252c2778de2b892f453f796efb5e9457c4a8acf8400000000000000000000000000000000000000000000000000000000'}",
+          "final_attempt_id": 10,
+          "ok": false,
+          "result": null,
+          "revert_data": "0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed734588b0d575847946043b3e2c252c2778de2b892f453f796efb5e9457c4a8acf8400000000000000000000000000000000000000000000000000000000",
+          "revert_selectors": [
+            "0x6190b2b0",
+            "0x7a5ed734",
+            "0x4a8acf84"
+          ]
+        },
+        "side": "EXIT_REVERSE_TOKEN_TO_PAIRED",
+        "token": "0x78d2e86d6beca0cf6792addb420f8b55ded1ab07",
+        "zero_for_one": true
+      },
+      "exit_state": {
+        "block": 48714053,
+        "liquidity": 1795125268484819020,
+        "liquidity_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 9,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "lp_fee": 0,
+        "ok": true,
+        "phase": "exit",
+        "protocol_fee": 0,
+        "slot0_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 8,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "sqrt_price_x96": 35398664311015649511,
+        "tick": -430600
+      },
+      "immediate_reverse_quote": {
+        "amount_in": 716380832241260415581580174,
+        "amount_out": null,
+        "block": 48713153,
+        "calldata_sha256": "a47d81d5b8b6843bb0d4efa362dde1b723646812348a6319f047d33130cbb470",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": null,
+        "ok": false,
+        "pool_id": "0x588b0d575847946043b3e2c252c2778de2b892f453f796efb5e9457c4a8acf84",
+        "rpc": {
+          "error_class": "UNKNOWN_REVERT",
+          "error_message": "{'code': 3, 'message': 'execution reverted', 'data': '0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed734588b0d575847946043b3e2c252c2778de2b892f453f796efb5e9457c4a8acf8400000000000000000000000000000000000000000000000000000000'}",
+          "final_attempt_id": 7,
+          "ok": false,
+          "result": null,
+          "revert_data": "0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed734588b0d575847946043b3e2c252c2778de2b892f453f796efb5e9457c4a8acf8400000000000000000000000000000000000000000000000000000000",
+          "revert_selectors": [
+            "0x6190b2b0",
+            "0x7a5ed734",
+            "0x4a8acf84"
+          ]
+        },
+        "side": "IMMEDIATE_REVERSE_TOKEN_TO_PAIRED",
+        "token": "0x78d2e86d6beca0cf6792addb420f8b55ded1ab07",
+        "zero_for_one": true
+      },
+      "index": 0,
+      "intended_entry_block": 48713153,
+      "intended_exit_block": 48714053,
+      "launch_block": 48713150,
+      "launch_transaction_hash": "0x3345405ff3a852bfb37570acda23d1bb089ac2d27f2d8a32a1ba172b1340bb7c",
+      "paired": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+      "pool_id": "0x588b0d575847946043b3e2c252c2778de2b892f453f796efb5e9457c4a8acf84",
+      "pool_key_verification": {
+        "computed_pool_id": "0x588b0d575847946043b3e2c252c2778de2b892f453f796efb5e9457c4a8acf84",
+        "expected_pool_id": "0x588b0d575847946043b3e2c252c2778de2b892f453f796efb5e9457c4a8acf84",
+        "initialize_log_index": 401,
+        "initialize_sqrt_price_x96": 35398664311015649511,
+        "initialize_tick": -430600,
+        "pool_key": {
+          "currency0": "0x78d2e86d6beca0cf6792addb420f8b55ded1ab07",
+          "currency1": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+          "fee": 8388608,
+          "hooks": "0xd60d6b218116cfd801e28f78d011a203d2b068cc",
+          "tick_spacing": 200
+        },
+        "status": "OK"
+      },
+      "receipt_rpc": {
+        "error_class": null,
+        "error_message": null,
+        "final_attempt_id": 3,
+        "ok": true,
+        "revert_data": null,
+        "revert_selectors": []
+      },
+      "sizing": {
+        "amount_in": 250000000,
+        "economic_inference_authorized": false,
+        "eth_usd_for_size_only": null,
+        "notional_usd": 250.0,
+        "unit": "USDC"
+      },
+      "token": "0x78d2e86d6beca0cf6792addb420f8b55ded1ab07"
+    },
+    {
+      "cohort": "PRIOR_ENTRY_SUCCESS_NO_SWAP",
+      "entry_quote": {
+        "amount_in": 135677846521220032,
+        "amount_out": 947851808484518639873433265,
+        "block": 48713159,
+        "calldata_sha256": "2178daa29c6fb40d31a3c94d20a8526017c5ecbe3cd25dc90142a92814c180dc",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": 238883,
+        "ok": true,
+        "pool_id": "0x4e2608862bbd3f5f910624ef5b356d741a5be383a1109c79596fda408f9093c1",
+        "rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 14,
+          "ok": true,
+          "result": "0x000000000000000000000000000000000000000003100b6d7f66bdf8bd361eb1000000000000000000000000000000000000000000000000000000000003a523",
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "side": "ENTRY_PAIRED_TO_TOKEN",
+        "token": "0x873462b68568efe776ad2d18bacbaecc11d74b07",
+        "zero_for_one": true
+      },
+      "entry_state": {
+        "block": 48713159,
+        "liquidity": 0,
+        "liquidity_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 13,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "lp_fee": 0,
+        "ok": true,
+        "phase": "entry",
+        "protocol_fee": 0,
+        "slot0_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 12,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "sqrt_price_x96": 7974470913604094264140738513890252,
+        "tick": 230400
+      },
+      "exit_reverse_quote": {
+        "amount_in": 947851808484518639873433265,
+        "amount_out": null,
+        "block": 48714059,
+        "calldata_sha256": "a4aa4c053730dd3adde00f5e30bfeea6435c2e558907d7ce8d4030887023c462",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": null,
+        "ok": false,
+        "pool_id": "0x4e2608862bbd3f5f910624ef5b356d741a5be383a1109c79596fda408f9093c1",
+        "rpc": {
+          "error_class": "UNKNOWN_REVERT",
+          "error_message": "{'code': 3, 'message': 'execution reverted', 'data': '0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed7344e2608862bbd3f5f910624ef5b356d741a5be383a1109c79596fda408f9093c100000000000000000000000000000000000000000000000000000000'}",
+          "final_attempt_id": 18,
+          "ok": false,
+          "result": null,
+          "revert_data": "0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed7344e2608862bbd3f5f910624ef5b356d741a5be383a1109c79596fda408f9093c100000000000000000000000000000000000000000000000000000000",
+          "revert_selectors": [
+            "0x6190b2b0",
+            "0x7a5ed734",
+            "0x8f9093c1"
+          ]
+        },
+        "side": "EXIT_REVERSE_TOKEN_TO_PAIRED",
+        "token": "0x873462b68568efe776ad2d18bacbaecc11d74b07",
+        "zero_for_one": false
+      },
+      "exit_state": {
+        "block": 48714059,
+        "liquidity": 0,
+        "liquidity_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 17,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "lp_fee": 0,
+        "ok": true,
+        "phase": "exit",
+        "protocol_fee": 0,
+        "slot0_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 16,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "sqrt_price_x96": 7974470913604094264140738513890252,
+        "tick": 230400
+      },
+      "immediate_reverse_quote": {
+        "amount_in": 947851808484518639873433265,
+        "amount_out": null,
+        "block": 48713159,
+        "calldata_sha256": "a4aa4c053730dd3adde00f5e30bfeea6435c2e558907d7ce8d4030887023c462",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": null,
+        "ok": false,
+        "pool_id": "0x4e2608862bbd3f5f910624ef5b356d741a5be383a1109c79596fda408f9093c1",
+        "rpc": {
+          "error_class": "UNKNOWN_REVERT",
+          "error_message": "{'code': 3, 'message': 'execution reverted', 'data': '0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed7344e2608862bbd3f5f910624ef5b356d741a5be383a1109c79596fda408f9093c100000000000000000000000000000000000000000000000000000000'}",
+          "final_attempt_id": 15,
+          "ok": false,
+          "result": null,
+          "revert_data": "0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed7344e2608862bbd3f5f910624ef5b356d741a5be383a1109c79596fda408f9093c100000000000000000000000000000000000000000000000000000000",
+          "revert_selectors": [
+            "0x6190b2b0",
+            "0x7a5ed734",
+            "0x8f9093c1"
+          ]
+        },
+        "side": "IMMEDIATE_REVERSE_TOKEN_TO_PAIRED",
+        "token": "0x873462b68568efe776ad2d18bacbaecc11d74b07",
+        "zero_for_one": false
+      },
+      "index": 1,
+      "intended_entry_block": 48713159,
+      "intended_exit_block": 48714059,
+      "launch_block": 48713156,
+      "launch_transaction_hash": "0x53a5fb4c5e1f33c0eaa0659855e354d0503b83510785ae736d9ce26a801a74f5",
+      "paired": "0x4200000000000000000000000000000000000006",
+      "pool_id": "0x4e2608862bbd3f5f910624ef5b356d741a5be383a1109c79596fda408f9093c1",
+      "pool_key_verification": {
+        "computed_pool_id": "0x4e2608862bbd3f5f910624ef5b356d741a5be383a1109c79596fda408f9093c1",
+        "expected_pool_id": "0x4e2608862bbd3f5f910624ef5b356d741a5be383a1109c79596fda408f9093c1",
+        "initialize_log_index": 330,
+        "initialize_sqrt_price_x96": 7974470913604094264140738513890252,
+        "initialize_tick": 230400,
+        "pool_key": {
+          "currency0": "0x4200000000000000000000000000000000000006",
+          "currency1": "0x873462b68568efe776ad2d18bacbaecc11d74b07",
+          "fee": 8388608,
+          "hooks": "0xb429d62f8f3bffb98cdb9569533ea23bf0ba28cc",
+          "tick_spacing": 200
+        },
+        "status": "OK"
+      },
+      "receipt_rpc": {
+        "error_class": null,
+        "error_message": null,
+        "final_attempt_id": 11,
+        "ok": true,
+        "revert_data": null,
+        "revert_selectors": []
+      },
+      "sizing": {
+        "amount_in": 135677846521220032,
+        "economic_inference_authorized": false,
+        "eth_usd_for_size_only": 1842.6,
+        "notional_usd": 250.0,
+        "unit": "WETH"
+      },
+      "token": "0x873462b68568efe776ad2d18bacbaecc11d74b07"
+    },
+    {
+      "cohort": "PRIOR_ENTRY_SUCCESS_NO_SWAP",
+      "entry_quote": {
+        "amount_in": 250000000,
+        "amount_out": 716380832241260415581580174,
+        "block": 48713247,
+        "calldata_sha256": "6ef954cb5de74c1883aaa99fd7de1cb4f13708f604f94ce90c8632f40cd44f93",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": 374004,
+        "ok": true,
+        "pool_id": "0x08b460d4b5e5b9ecf27ec3d0fca86629bf8b15353342d935796d28dc8219d181",
+        "rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 22,
+          "ok": true,
+          "result": "0x00000000000000000000000000000000000000000250938abb6e03469f9a6b8e000000000000000000000000000000000000000000000000000000000005b4f4",
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "side": "ENTRY_PAIRED_TO_TOKEN",
+        "token": "0x6e73d4a7c9e3c87e7d5dc4f625f6228d17ee6b07",
+        "zero_for_one": false
+      },
+      "entry_state": {
+        "block": 48713247,
+        "liquidity": 1795125268484819020,
+        "liquidity_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 21,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "lp_fee": 0,
+        "ok": true,
+        "phase": "entry",
+        "protocol_fee": 0,
+        "slot0_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 20,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "sqrt_price_x96": 35398664311015649511,
+        "tick": -430600
+      },
+      "exit_reverse_quote": {
+        "amount_in": 716380832241260415581580174,
+        "amount_out": null,
+        "block": 48714147,
+        "calldata_sha256": "6bfac854ce3aca25183a024f2e49fd34c7b55ee951811e97e0b229a29ed152a5",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": null,
+        "ok": false,
+        "pool_id": "0x08b460d4b5e5b9ecf27ec3d0fca86629bf8b15353342d935796d28dc8219d181",
+        "rpc": {
+          "error_class": "UNKNOWN_REVERT",
+          "error_message": "{'code': 3, 'message': 'execution reverted', 'data': '0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed73408b460d4b5e5b9ecf27ec3d0fca86629bf8b15353342d935796d28dc8219d18100000000000000000000000000000000000000000000000000000000'}",
+          "final_attempt_id": 26,
+          "ok": false,
+          "result": null,
+          "revert_data": "0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed73408b460d4b5e5b9ecf27ec3d0fca86629bf8b15353342d935796d28dc8219d18100000000000000000000000000000000000000000000000000000000",
+          "revert_selectors": [
+            "0x6190b2b0",
+            "0x7a5ed734",
+            "0x8219d181"
+          ]
+        },
+        "side": "EXIT_REVERSE_TOKEN_TO_PAIRED",
+        "token": "0x6e73d4a7c9e3c87e7d5dc4f625f6228d17ee6b07",
+        "zero_for_one": true
+      },
+      "exit_state": {
+        "block": 48714147,
+        "liquidity": 1795125268484819020,
+        "liquidity_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 25,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "lp_fee": 0,
+        "ok": true,
+        "phase": "exit",
+        "protocol_fee": 0,
+        "slot0_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 24,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "sqrt_price_x96": 35398664311015649511,
+        "tick": -430600
+      },
+      "immediate_reverse_quote": {
+        "amount_in": 716380832241260415581580174,
+        "amount_out": null,
+        "block": 48713247,
+        "calldata_sha256": "6bfac854ce3aca25183a024f2e49fd34c7b55ee951811e97e0b229a29ed152a5",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": null,
+        "ok": false,
+        "pool_id": "0x08b460d4b5e5b9ecf27ec3d0fca86629bf8b15353342d935796d28dc8219d181",
+        "rpc": {
+          "error_class": "UNKNOWN_REVERT",
+          "error_message": "{'code': 3, 'message': 'execution reverted', 'data': '0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed73408b460d4b5e5b9ecf27ec3d0fca86629bf8b15353342d935796d28dc8219d18100000000000000000000000000000000000000000000000000000000'}",
+          "final_attempt_id": 23,
+          "ok": false,
+          "result": null,
+          "revert_data": "0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed73408b460d4b5e5b9ecf27ec3d0fca86629bf8b15353342d935796d28dc8219d18100000000000000000000000000000000000000000000000000000000",
+          "revert_selectors": [
+            "0x6190b2b0",
+            "0x7a5ed734",
+            "0x8219d181"
+          ]
+        },
+        "side": "IMMEDIATE_REVERSE_TOKEN_TO_PAIRED",
+        "token": "0x6e73d4a7c9e3c87e7d5dc4f625f6228d17ee6b07",
+        "zero_for_one": true
+      },
+      "index": 7,
+      "intended_entry_block": 48713247,
+      "intended_exit_block": 48714147,
+      "launch_block": 48713244,
+      "launch_transaction_hash": "0x2aa45f83ade6243923f3d3c38610f8298198eeb21032ee1c23d375eee3656d5e",
+      "paired": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+      "pool_id": "0x08b460d4b5e5b9ecf27ec3d0fca86629bf8b15353342d935796d28dc8219d181",
+      "pool_key_verification": {
+        "computed_pool_id": "0x08b460d4b5e5b9ecf27ec3d0fca86629bf8b15353342d935796d28dc8219d181",
+        "expected_pool_id": "0x08b460d4b5e5b9ecf27ec3d0fca86629bf8b15353342d935796d28dc8219d181",
+        "initialize_log_index": 314,
+        "initialize_sqrt_price_x96": 35398664311015649511,
+        "initialize_tick": -430600,
+        "pool_key": {
+          "currency0": "0x6e73d4a7c9e3c87e7d5dc4f625f6228d17ee6b07",
+          "currency1": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+          "fee": 8388608,
+          "hooks": "0xd60d6b218116cfd801e28f78d011a203d2b068cc",
+          "tick_spacing": 200
+        },
+        "status": "OK"
+      },
+      "receipt_rpc": {
+        "error_class": null,
+        "error_message": null,
+        "final_attempt_id": 19,
+        "ok": true,
+        "revert_data": null,
+        "revert_selectors": []
+      },
+      "sizing": {
+        "amount_in": 250000000,
+        "economic_inference_authorized": false,
+        "eth_usd_for_size_only": null,
+        "notional_usd": 250.0,
+        "unit": "USDC"
+      },
+      "token": "0x6e73d4a7c9e3c87e7d5dc4f625f6228d17ee6b07"
+    },
+    {
+      "cohort": "PRIOR_ENTRY_SUCCESS_NO_SWAP",
+      "entry_quote": {
+        "amount_in": 250000000,
+        "amount_out": 716380832241260415581580174,
+        "block": 48713332,
+        "calldata_sha256": "50a9861209d503c261235e161ae07844c4d53c67092151cf4caf6139d176ce1d",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": 374004,
+        "ok": true,
+        "pool_id": "0x3f782e091574ec7f5b4b8d7ddd3f0b953e1cda02bd0cb2b1bfd669326f0f0b8c",
+        "rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 30,
+          "ok": true,
+          "result": "0x00000000000000000000000000000000000000000250938abb6e03469f9a6b8e000000000000000000000000000000000000000000000000000000000005b4f4",
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "side": "ENTRY_PAIRED_TO_TOKEN",
+        "token": "0x7bfffcc29b275cedfab8f52c477015f83f14bb07",
+        "zero_for_one": false
+      },
+      "entry_state": {
+        "block": 48713332,
+        "liquidity": 1795125268484819020,
+        "liquidity_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 29,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "lp_fee": 0,
+        "ok": true,
+        "phase": "entry",
+        "protocol_fee": 0,
+        "slot0_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 28,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "sqrt_price_x96": 35398664311015649511,
+        "tick": -430600
+      },
+      "exit_reverse_quote": {
+        "amount_in": 716380832241260415581580174,
+        "amount_out": null,
+        "block": 48714232,
+        "calldata_sha256": "a94759c3262bd0125e0f5129396a6064fb2531d8ce38a160380eb6e1bdf3e3e4",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": null,
+        "ok": false,
+        "pool_id": "0x3f782e091574ec7f5b4b8d7ddd3f0b953e1cda02bd0cb2b1bfd669326f0f0b8c",
+        "rpc": {
+          "error_class": "UNKNOWN_REVERT",
+          "error_message": "{'code': 3, 'message': 'execution reverted', 'data': '0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed7343f782e091574ec7f5b4b8d7ddd3f0b953e1cda02bd0cb2b1bfd669326f0f0b8c00000000000000000000000000000000000000000000000000000000'}",
+          "final_attempt_id": 34,
+          "ok": false,
+          "result": null,
+          "revert_data": "0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed7343f782e091574ec7f5b4b8d7ddd3f0b953e1cda02bd0cb2b1bfd669326f0f0b8c00000000000000000000000000000000000000000000000000000000",
+          "revert_selectors": [
+            "0x6190b2b0",
+            "0x7a5ed734",
+            "0x6f0f0b8c"
+          ]
+        },
+        "side": "EXIT_REVERSE_TOKEN_TO_PAIRED",
+        "token": "0x7bfffcc29b275cedfab8f52c477015f83f14bb07",
+        "zero_for_one": true
+      },
+      "exit_state": {
+        "block": 48714232,
+        "liquidity": 1795125268484819020,
+        "liquidity_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 33,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "lp_fee": 0,
+        "ok": true,
+        "phase": "exit",
+        "protocol_fee": 0,
+        "slot0_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 32,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "sqrt_price_x96": 35398664311015649511,
+        "tick": -430600
+      },
+      "immediate_reverse_quote": {
+        "amount_in": 716380832241260415581580174,
+        "amount_out": null,
+        "block": 48713332,
+        "calldata_sha256": "a94759c3262bd0125e0f5129396a6064fb2531d8ce38a160380eb6e1bdf3e3e4",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": null,
+        "ok": false,
+        "pool_id": "0x3f782e091574ec7f5b4b8d7ddd3f0b953e1cda02bd0cb2b1bfd669326f0f0b8c",
+        "rpc": {
+          "error_class": "UNKNOWN_REVERT",
+          "error_message": "{'code': 3, 'message': 'execution reverted', 'data': '0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed7343f782e091574ec7f5b4b8d7ddd3f0b953e1cda02bd0cb2b1bfd669326f0f0b8c00000000000000000000000000000000000000000000000000000000'}",
+          "final_attempt_id": 31,
+          "ok": false,
+          "result": null,
+          "revert_data": "0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed7343f782e091574ec7f5b4b8d7ddd3f0b953e1cda02bd0cb2b1bfd669326f0f0b8c00000000000000000000000000000000000000000000000000000000",
+          "revert_selectors": [
+            "0x6190b2b0",
+            "0x7a5ed734",
+            "0x6f0f0b8c"
+          ]
+        },
+        "side": "IMMEDIATE_REVERSE_TOKEN_TO_PAIRED",
+        "token": "0x7bfffcc29b275cedfab8f52c477015f83f14bb07",
+        "zero_for_one": true
+      },
+      "index": 10,
+      "intended_entry_block": 48713332,
+      "intended_exit_block": 48714232,
+      "launch_block": 48713329,
+      "launch_transaction_hash": "0xe0ac6a0a2cf6d875784a63d14724b5eff76c842d5c221c7a0c1a3b1f71da3af9",
+      "paired": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+      "pool_id": "0x3f782e091574ec7f5b4b8d7ddd3f0b953e1cda02bd0cb2b1bfd669326f0f0b8c",
+      "pool_key_verification": {
+        "computed_pool_id": "0x3f782e091574ec7f5b4b8d7ddd3f0b953e1cda02bd0cb2b1bfd669326f0f0b8c",
+        "expected_pool_id": "0x3f782e091574ec7f5b4b8d7ddd3f0b953e1cda02bd0cb2b1bfd669326f0f0b8c",
+        "initialize_log_index": 389,
+        "initialize_sqrt_price_x96": 35398664311015649511,
+        "initialize_tick": -430600,
+        "pool_key": {
+          "currency0": "0x7bfffcc29b275cedfab8f52c477015f83f14bb07",
+          "currency1": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+          "fee": 8388608,
+          "hooks": "0xd60d6b218116cfd801e28f78d011a203d2b068cc",
+          "tick_spacing": 200
+        },
+        "status": "OK"
+      },
+      "receipt_rpc": {
+        "error_class": null,
+        "error_message": null,
+        "final_attempt_id": 27,
+        "ok": true,
+        "revert_data": null,
+        "revert_selectors": []
+      },
+      "sizing": {
+        "amount_in": 250000000,
+        "economic_inference_authorized": false,
+        "eth_usd_for_size_only": null,
+        "notional_usd": 250.0,
+        "unit": "USDC"
+      },
+      "token": "0x7bfffcc29b275cedfab8f52c477015f83f14bb07"
+    },
+    {
+      "cohort": "PRIOR_ENTRY_FAILURE_WITH_SWAP",
+      "entry_quote": {
+        "amount_in": 135677846521220032,
+        "amount_out": null,
+        "block": 48713501,
+        "calldata_sha256": "7c9c3afbb9257aeda9788fc31457f23b3a7bd01ac0aaf309811c8e94b157864c",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": null,
+        "ok": false,
+        "pool_id": "0x8f4b8d37a612cdc5387da4b699ed586c9f620630077633f70e501511fd45b1d6",
+        "rpc": {
+          "error_class": "UNKNOWN_REVERT",
+          "error_message": "{'code': 3, 'message': 'execution reverted', 'data': '0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000447c9c6e8f00000000000000000000000000000000000000000000000000000001000276a400000000000000000000000000000000000000000000000000000001000276a400000000000000000000000000000000000000000000000000000000'}",
+          "final_attempt_id": 38,
+          "ok": false,
+          "result": null,
+          "revert_data": "0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000447c9c6e8f00000000000000000000000000000000000000000000000000000001000276a400000000000000000000000000000000000000000000000000000001000276a400000000000000000000000000000000000000000000000000000000",
+          "revert_selectors": [
+            "0x6190b2b0",
+            "0x7c9c6e8f",
+            "0x000276a4"
+          ]
+        },
+        "side": "ENTRY_PAIRED_TO_TOKEN",
+        "token": "0x7afcc580d57060dbe017ee776f3ce01c7a9dab07",
+        "zero_for_one": true
+      },
+      "entry_state": {
+        "block": 48713501,
+        "liquidity": 0,
+        "liquidity_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 37,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "lp_fee": 10000,
+        "ok": true,
+        "phase": "entry",
+        "protocol_fee": 0,
+        "slot0_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 36,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "sqrt_price_x96": 4295128740,
+        "tick": -887272
+      },
+      "exit_reverse_quote": null,
+      "exit_state": null,
+      "immediate_reverse_quote": null,
+      "index": 16,
+      "intended_entry_block": 48713501,
+      "intended_exit_block": 48714401,
+      "launch_block": 48713498,
+      "launch_transaction_hash": "0x5526efc6f68ec338e0541d8ebc21fd98d64bbb27a98a591ccb344dae646a606d",
+      "paired": "0x4200000000000000000000000000000000000006",
+      "pool_id": "0x8f4b8d37a612cdc5387da4b699ed586c9f620630077633f70e501511fd45b1d6",
+      "pool_key_verification": {
+        "computed_pool_id": "0x8f4b8d37a612cdc5387da4b699ed586c9f620630077633f70e501511fd45b1d6",
+        "expected_pool_id": "0x8f4b8d37a612cdc5387da4b699ed586c9f620630077633f70e501511fd45b1d6",
+        "initialize_log_index": 162,
+        "initialize_sqrt_price_x96": 79680871846404160720201234303411693634,
+        "initialize_tick": 414600,
+        "pool_key": {
+          "currency0": "0x4200000000000000000000000000000000000006",
+          "currency1": "0x7afcc580d57060dbe017ee776f3ce01c7a9dab07",
+          "fee": 8388608,
+          "hooks": "0xb429d62f8f3bffb98cdb9569533ea23bf0ba28cc",
+          "tick_spacing": 200
+        },
+        "status": "OK"
+      },
+      "receipt_rpc": {
+        "error_class": null,
+        "error_message": null,
+        "final_attempt_id": 35,
+        "ok": true,
+        "revert_data": null,
+        "revert_selectors": []
+      },
+      "sizing": {
+        "amount_in": 135677846521220032,
+        "economic_inference_authorized": false,
+        "eth_usd_for_size_only": 1842.6,
+        "notional_usd": 250.0,
+        "unit": "WETH"
+      },
+      "token": "0x7afcc580d57060dbe017ee776f3ce01c7a9dab07"
+    },
+    {
+      "cohort": "PRIOR_ENTRY_FAILURE_WITH_SWAP",
+      "entry_quote": {
+        "amount_in": 135677846521220032,
+        "amount_out": null,
+        "block": 48713504,
+        "calldata_sha256": "0da94edc3bca0ea0d705dca58ee639d638e860ca9e04aa18e9dfdd1d5d60bf94",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": null,
+        "ok": false,
+        "pool_id": "0xd8cc5c48ad26f7a2a354776b27f18654c6bb2ba9e2a76455874295905383c3fd",
+        "rpc": {
+          "error_class": "UNKNOWN_REVERT",
+          "error_message": "{'code': 3, 'message': 'execution reverted', 'data': '0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000447c9c6e8f00000000000000000000000000000000000000000000000000000001000276a400000000000000000000000000000000000000000000000000000001000276a400000000000000000000000000000000000000000000000000000000'}",
+          "final_attempt_id": 42,
+          "ok": false,
+          "result": null,
+          "revert_data": "0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000447c9c6e8f00000000000000000000000000000000000000000000000000000001000276a400000000000000000000000000000000000000000000000000000001000276a400000000000000000000000000000000000000000000000000000000",
+          "revert_selectors": [
+            "0x6190b2b0",
+            "0x7c9c6e8f",
+            "0x000276a4"
+          ]
+        },
+        "side": "ENTRY_PAIRED_TO_TOKEN",
+        "token": "0x5f5ff9dda4ca17790819a0543270ef6a73bf1b07",
+        "zero_for_one": true
+      },
+      "entry_state": {
+        "block": 48713504,
+        "liquidity": 0,
+        "liquidity_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 41,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "lp_fee": 10000,
+        "ok": true,
+        "phase": "entry",
+        "protocol_fee": 0,
+        "slot0_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 40,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "sqrt_price_x96": 4295128740,
+        "tick": -887272
+      },
+      "exit_reverse_quote": null,
+      "exit_state": null,
+      "immediate_reverse_quote": null,
+      "index": 17,
+      "intended_entry_block": 48713504,
+      "intended_exit_block": 48714404,
+      "launch_block": 48713501,
+      "launch_transaction_hash": "0x3bf31231d089b1c33057c5bd1ca8da2883e3d63ccd6496777d00a7d21fb5bce3",
+      "paired": "0x4200000000000000000000000000000000000006",
+      "pool_id": "0xd8cc5c48ad26f7a2a354776b27f18654c6bb2ba9e2a76455874295905383c3fd",
+      "pool_key_verification": {
+        "computed_pool_id": "0xd8cc5c48ad26f7a2a354776b27f18654c6bb2ba9e2a76455874295905383c3fd",
+        "expected_pool_id": "0xd8cc5c48ad26f7a2a354776b27f18654c6bb2ba9e2a76455874295905383c3fd",
+        "initialize_log_index": 397,
+        "initialize_sqrt_price_x96": 79680871846404160720201234303411693634,
+        "initialize_tick": 414600,
+        "pool_key": {
+          "currency0": "0x4200000000000000000000000000000000000006",
+          "currency1": "0x5f5ff9dda4ca17790819a0543270ef6a73bf1b07",
+          "fee": 8388608,
+          "hooks": "0xb429d62f8f3bffb98cdb9569533ea23bf0ba28cc",
+          "tick_spacing": 200
+        },
+        "status": "OK"
+      },
+      "receipt_rpc": {
+        "error_class": null,
+        "error_message": null,
+        "final_attempt_id": 39,
+        "ok": true,
+        "revert_data": null,
+        "revert_selectors": []
+      },
+      "sizing": {
+        "amount_in": 135677846521220032,
+        "economic_inference_authorized": false,
+        "eth_usd_for_size_only": 1842.6,
+        "notional_usd": 250.0,
+        "unit": "WETH"
+      },
+      "token": "0x5f5ff9dda4ca17790819a0543270ef6a73bf1b07"
+    },
+    {
+      "cohort": "PRIOR_ENTRY_FAILURE_WITH_SWAP",
+      "entry_quote": {
+        "amount_in": 135677846521220032,
+        "amount_out": null,
+        "block": 48713508,
+        "calldata_sha256": "179d40a1a74d04fc314cef9996148ce04f90d996642da7dc22be02f25604fca9",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": null,
+        "ok": false,
+        "pool_id": "0xd350ba8b08f17ee9391e92f71b5f9c9f518940aae12f1364c9d59c90665584ef",
+        "rpc": {
+          "error_class": "UNKNOWN_REVERT",
+          "error_message": "{'code': 3, 'message': 'execution reverted', 'data': '0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000447c9c6e8f00000000000000000000000000000000000000000000000000000001000276a400000000000000000000000000000000000000000000000000000001000276a400000000000000000000000000000000000000000000000000000000'}",
+          "final_attempt_id": 46,
+          "ok": false,
+          "result": null,
+          "revert_data": "0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000447c9c6e8f00000000000000000000000000000000000000000000000000000001000276a400000000000000000000000000000000000000000000000000000001000276a400000000000000000000000000000000000000000000000000000000",
+          "revert_selectors": [
+            "0x6190b2b0",
+            "0x7c9c6e8f",
+            "0x000276a4"
+          ]
+        },
+        "side": "ENTRY_PAIRED_TO_TOKEN",
+        "token": "0xb45022d5ddfc546b0ab3e0ec4bdfdefe97a9fb07",
+        "zero_for_one": true
+      },
+      "entry_state": {
+        "block": 48713508,
+        "liquidity": 0,
+        "liquidity_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 45,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "lp_fee": 10000,
+        "ok": true,
+        "phase": "entry",
+        "protocol_fee": 0,
+        "slot0_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 44,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "sqrt_price_x96": 4295128740,
+        "tick": -887272
+      },
+      "exit_reverse_quote": null,
+      "exit_state": null,
+      "immediate_reverse_quote": null,
+      "index": 18,
+      "intended_entry_block": 48713508,
+      "intended_exit_block": 48714408,
+      "launch_block": 48713505,
+      "launch_transaction_hash": "0x6996455577016f1217238c35a2425fefce11f89b581fa1cae998103c1ca65787",
+      "paired": "0x4200000000000000000000000000000000000006",
+      "pool_id": "0xd350ba8b08f17ee9391e92f71b5f9c9f518940aae12f1364c9d59c90665584ef",
+      "pool_key_verification": {
+        "computed_pool_id": "0xd350ba8b08f17ee9391e92f71b5f9c9f518940aae12f1364c9d59c90665584ef",
+        "expected_pool_id": "0xd350ba8b08f17ee9391e92f71b5f9c9f518940aae12f1364c9d59c90665584ef",
+        "initialize_log_index": 220,
+        "initialize_sqrt_price_x96": 79680871846404160720201234303411693634,
+        "initialize_tick": 414600,
+        "pool_key": {
+          "currency0": "0x4200000000000000000000000000000000000006",
+          "currency1": "0xb45022d5ddfc546b0ab3e0ec4bdfdefe97a9fb07",
+          "fee": 8388608,
+          "hooks": "0xb429d62f8f3bffb98cdb9569533ea23bf0ba28cc",
+          "tick_spacing": 200
+        },
+        "status": "OK"
+      },
+      "receipt_rpc": {
+        "error_class": null,
+        "error_message": null,
+        "final_attempt_id": 43,
+        "ok": true,
+        "revert_data": null,
+        "revert_selectors": []
+      },
+      "sizing": {
+        "amount_in": 135677846521220032,
+        "economic_inference_authorized": false,
+        "eth_usd_for_size_only": 1842.6,
+        "notional_usd": 250.0,
+        "unit": "WETH"
+      },
+      "token": "0xb45022d5ddfc546b0ab3e0ec4bdfdefe97a9fb07"
+    },
+    {
+      "cohort": "PRIOR_ENTRY_FAILURE_WITH_SWAP",
+      "entry_quote": {
+        "amount_in": 135677846521220032,
+        "amount_out": null,
+        "block": 48713511,
+        "calldata_sha256": "0b5f69b0dda23155c253dd9a05ceead800ae18661a4ba04ac0a2769a5b6cc27f",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": null,
+        "ok": false,
+        "pool_id": "0x4d3234832d14732003ef1b4d0b55221461b09d3fa5752f47db90cd54af3228a8",
+        "rpc": {
+          "error_class": "UNKNOWN_REVERT",
+          "error_message": "{'code': 3, 'message': 'execution reverted', 'data': '0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000447c9c6e8f000000000000000000000000fffd8963efd1fc6a506488495d951d5263988d25000000000000000000000000fffd8963efd1fc6a506488495d951d5263988d2500000000000000000000000000000000000000000000000000000000'}",
+          "final_attempt_id": 50,
+          "ok": false,
+          "result": null,
+          "revert_data": "0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000447c9c6e8f000000000000000000000000fffd8963efd1fc6a506488495d951d5263988d25000000000000000000000000fffd8963efd1fc6a506488495d951d5263988d2500000000000000000000000000000000000000000000000000000000",
+          "revert_selectors": [
+            "0x6190b2b0",
+            "0x7c9c6e8f",
+            "0x63988d25"
+          ]
+        },
+        "side": "ENTRY_PAIRED_TO_TOKEN",
+        "token": "0x1808122c22d398b9722936a5bf11912274d37b07",
+        "zero_for_one": false
+      },
+      "entry_state": {
+        "block": 48713511,
+        "liquidity": 0,
+        "liquidity_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 49,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "lp_fee": 10000,
+        "ok": true,
+        "phase": "entry",
+        "protocol_fee": 0,
+        "slot0_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 48,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "sqrt_price_x96": 1461446703485210103287273052203988822378723970341,
+        "tick": 887271
+      },
+      "exit_reverse_quote": null,
+      "exit_state": null,
+      "immediate_reverse_quote": null,
+      "index": 19,
+      "intended_entry_block": 48713511,
+      "intended_exit_block": 48714411,
+      "launch_block": 48713508,
+      "launch_transaction_hash": "0x31dad1e9fd2390acf86da991fbf543efaffce7f83ab033b7857b04fdc5491e1a",
+      "paired": "0x4200000000000000000000000000000000000006",
+      "pool_id": "0x4d3234832d14732003ef1b4d0b55221461b09d3fa5752f47db90cd54af3228a8",
+      "pool_key_verification": {
+        "computed_pool_id": "0x4d3234832d14732003ef1b4d0b55221461b09d3fa5752f47db90cd54af3228a8",
+        "expected_pool_id": "0x4d3234832d14732003ef1b4d0b55221461b09d3fa5752f47db90cd54af3228a8",
+        "initialize_log_index": 579,
+        "initialize_sqrt_price_x96": 78778025264164499494,
+        "initialize_tick": -414600,
+        "pool_key": {
+          "currency0": "0x1808122c22d398b9722936a5bf11912274d37b07",
+          "currency1": "0x4200000000000000000000000000000000000006",
+          "fee": 8388608,
+          "hooks": "0xb429d62f8f3bffb98cdb9569533ea23bf0ba28cc",
+          "tick_spacing": 200
+        },
+        "status": "OK"
+      },
+      "receipt_rpc": {
+        "error_class": null,
+        "error_message": null,
+        "final_attempt_id": 47,
+        "ok": true,
+        "revert_data": null,
+        "revert_selectors": []
+      },
+      "sizing": {
+        "amount_in": 135677846521220032,
+        "economic_inference_authorized": false,
+        "eth_usd_for_size_only": 1842.6,
+        "notional_usd": 250.0,
+        "unit": "WETH"
+      },
+      "token": "0x1808122c22d398b9722936a5bf11912274d37b07"
+    },
+    {
+      "cohort": "PRIOR_ENTRY_SUCCESS_WITH_SWAP",
+      "entry_quote": {
+        "amount_in": 135677846521220032,
+        "amount_out": 947851808484518639873433265,
+        "block": 48713555,
+        "calldata_sha256": "0987ee597ca6bd952cd6d6464f4841d39899d6d11156dce0bde78d1fdfa9f008",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": 238883,
+        "ok": true,
+        "pool_id": "0xdac765e6067128f453bb7d8e6ad85bfae2eef344d881db3f775028ea009a732d",
+        "rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 54,
+          "ok": true,
+          "result": "0x000000000000000000000000000000000000000003100b6d7f66bdf8bd361eb1000000000000000000000000000000000000000000000000000000000003a523",
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "side": "ENTRY_PAIRED_TO_TOKEN",
+        "token": "0x80b8991af0b05e6cadc29088ad920d0c09479b07",
+        "zero_for_one": true
+      },
+      "entry_state": {
+        "block": 48713555,
+        "liquidity": 0,
+        "liquidity_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 53,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "lp_fee": 0,
+        "ok": true,
+        "phase": "entry",
+        "protocol_fee": 0,
+        "slot0_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 52,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "sqrt_price_x96": 7974470913604094264140738513890252,
+        "tick": 230400
+      },
+      "exit_reverse_quote": {
+        "amount_in": 947851808484518639873433265,
+        "amount_out": null,
+        "block": 48714455,
+        "calldata_sha256": "fd327285c471692e9de41d5ca16506c24a991bfe2d4bef9b93172a480dada069",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": null,
+        "ok": false,
+        "pool_id": "0xdac765e6067128f453bb7d8e6ad85bfae2eef344d881db3f775028ea009a732d",
+        "rpc": {
+          "error_class": "UNKNOWN_REVERT",
+          "error_message": "{'code': 3, 'message': 'execution reverted', 'data': '0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed734dac765e6067128f453bb7d8e6ad85bfae2eef344d881db3f775028ea009a732d00000000000000000000000000000000000000000000000000000000'}",
+          "final_attempt_id": 58,
+          "ok": false,
+          "result": null,
+          "revert_data": "0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed734dac765e6067128f453bb7d8e6ad85bfae2eef344d881db3f775028ea009a732d00000000000000000000000000000000000000000000000000000000",
+          "revert_selectors": [
+            "0x6190b2b0",
+            "0x7a5ed734",
+            "0x009a732d"
+          ]
+        },
+        "side": "EXIT_REVERSE_TOKEN_TO_PAIRED",
+        "token": "0x80b8991af0b05e6cadc29088ad920d0c09479b07",
+        "zero_for_one": false
+      },
+      "exit_state": {
+        "block": 48714455,
+        "liquidity": 997519511065749950282714,
+        "liquidity_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 57,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "lp_fee": 10000,
+        "ok": true,
+        "phase": "exit",
+        "protocol_fee": 0,
+        "slot0_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 56,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "sqrt_price_x96": 7974392285642357368930245837353904,
+        "tick": 230399
+      },
+      "immediate_reverse_quote": {
+        "amount_in": 947851808484518639873433265,
+        "amount_out": null,
+        "block": 48713555,
+        "calldata_sha256": "fd327285c471692e9de41d5ca16506c24a991bfe2d4bef9b93172a480dada069",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": null,
+        "ok": false,
+        "pool_id": "0xdac765e6067128f453bb7d8e6ad85bfae2eef344d881db3f775028ea009a732d",
+        "rpc": {
+          "error_class": "UNKNOWN_REVERT",
+          "error_message": "{'code': 3, 'message': 'execution reverted', 'data': '0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed734dac765e6067128f453bb7d8e6ad85bfae2eef344d881db3f775028ea009a732d00000000000000000000000000000000000000000000000000000000'}",
+          "final_attempt_id": 55,
+          "ok": false,
+          "result": null,
+          "revert_data": "0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed734dac765e6067128f453bb7d8e6ad85bfae2eef344d881db3f775028ea009a732d00000000000000000000000000000000000000000000000000000000",
+          "revert_selectors": [
+            "0x6190b2b0",
+            "0x7a5ed734",
+            "0x009a732d"
+          ]
+        },
+        "side": "IMMEDIATE_REVERSE_TOKEN_TO_PAIRED",
+        "token": "0x80b8991af0b05e6cadc29088ad920d0c09479b07",
+        "zero_for_one": false
+      },
+      "index": 21,
+      "intended_entry_block": 48713555,
+      "intended_exit_block": 48714455,
+      "launch_block": 48713552,
+      "launch_transaction_hash": "0xe5db36b55fa53c089ea70110be80a24b64b05d9ecb4566b89284fc132d706884",
+      "paired": "0x4200000000000000000000000000000000000006",
+      "pool_id": "0xdac765e6067128f453bb7d8e6ad85bfae2eef344d881db3f775028ea009a732d",
+      "pool_key_verification": {
+        "computed_pool_id": "0xdac765e6067128f453bb7d8e6ad85bfae2eef344d881db3f775028ea009a732d",
+        "expected_pool_id": "0xdac765e6067128f453bb7d8e6ad85bfae2eef344d881db3f775028ea009a732d",
+        "initialize_log_index": 134,
+        "initialize_sqrt_price_x96": 7974470913604094264140738513890252,
+        "initialize_tick": 230400,
+        "pool_key": {
+          "currency0": "0x4200000000000000000000000000000000000006",
+          "currency1": "0x80b8991af0b05e6cadc29088ad920d0c09479b07",
+          "fee": 8388608,
+          "hooks": "0xb429d62f8f3bffb98cdb9569533ea23bf0ba28cc",
+          "tick_spacing": 200
+        },
+        "status": "OK"
+      },
+      "receipt_rpc": {
+        "error_class": null,
+        "error_message": null,
+        "final_attempt_id": 51,
+        "ok": true,
+        "revert_data": null,
+        "revert_selectors": []
+      },
+      "sizing": {
+        "amount_in": 135677846521220032,
+        "economic_inference_authorized": false,
+        "eth_usd_for_size_only": 1842.6,
+        "notional_usd": 250.0,
+        "unit": "WETH"
+      },
+      "token": "0x80b8991af0b05e6cadc29088ad920d0c09479b07"
+    },
+    {
+      "cohort": "PRIOR_ENTRY_SUCCESS_WITH_SWAP",
+      "entry_quote": {
+        "amount_in": 250000000,
+        "amount_out": 764514490845258176591711509,
+        "block": 48714734,
+        "calldata_sha256": "ada52fb3f79920e85b2647e1f20cf181e4c82d0ba8484c50bd3a0d31b579c101",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": 250333,
+        "ok": true,
+        "pool_id": "0xf5592764a01a7e94be4e79c18d6f9b609afad5a69cc4f27620795079a35e5253",
+        "rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 62,
+          "ok": true,
+          "result": "0x00000000000000000000000000000000000000000278643d97f326292de64d15000000000000000000000000000000000000000000000000000000000003d1dd",
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "side": "ENTRY_PAIRED_TO_TOKEN",
+        "token": "0xa16206cf592de73197f23ba9866f81cff7e78b07",
+        "zero_for_one": true
+      },
+      "entry_state": {
+        "block": 48714734,
+        "liquidity": 0,
+        "liquidity_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 61,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "lp_fee": 0,
+        "ok": true,
+        "phase": "entry",
+        "protocol_fee": 0,
+        "slot0_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 60,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "sqrt_price_x96": 170373239623099972349699932690865038896,
+        "tick": 429800
+      },
+      "exit_reverse_quote": {
+        "amount_in": 764514490845258176591711509,
+        "amount_out": null,
+        "block": 48715634,
+        "calldata_sha256": "502ba3f4ba03ce904a7e0cbd7fff0f8462eee7b2f28db92345e0c3a7ed8f353c",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": null,
+        "ok": false,
+        "pool_id": "0xf5592764a01a7e94be4e79c18d6f9b609afad5a69cc4f27620795079a35e5253",
+        "rpc": {
+          "error_class": "UNKNOWN_REVERT",
+          "error_message": "{'code': 3, 'message': 'execution reverted', 'data': '0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed734f5592764a01a7e94be4e79c18d6f9b609afad5a69cc4f27620795079a35e525300000000000000000000000000000000000000000000000000000000'}",
+          "final_attempt_id": 66,
+          "ok": false,
+          "result": null,
+          "revert_data": "0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed734f5592764a01a7e94be4e79c18d6f9b609afad5a69cc4f27620795079a35e525300000000000000000000000000000000000000000000000000000000",
+          "revert_selectors": [
+            "0x6190b2b0",
+            "0x7a5ed734",
+            "0xa35e5253"
+          ]
+        },
+        "side": "EXIT_REVERSE_TOKEN_TO_PAIRED",
+        "token": "0xa16206cf592de73197f23ba9866f81cff7e78b07",
+        "zero_for_one": false
+      },
+      "exit_state": {
+        "block": 48715634,
+        "liquidity": 7101745898021841329,
+        "liquidity_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 65,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "lp_fee": 30000,
+        "ok": true,
+        "phase": "exit",
+        "protocol_fee": 0,
+        "slot0_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 64,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "sqrt_price_x96": 170321532129014412529014251126491740306,
+        "tick": 429793
+      },
+      "immediate_reverse_quote": {
+        "amount_in": 764514490845258176591711509,
+        "amount_out": null,
+        "block": 48714734,
+        "calldata_sha256": "502ba3f4ba03ce904a7e0cbd7fff0f8462eee7b2f28db92345e0c3a7ed8f353c",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": null,
+        "ok": false,
+        "pool_id": "0xf5592764a01a7e94be4e79c18d6f9b609afad5a69cc4f27620795079a35e5253",
+        "rpc": {
+          "error_class": "UNKNOWN_REVERT",
+          "error_message": "{'code': 3, 'message': 'execution reverted', 'data': '0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed734f5592764a01a7e94be4e79c18d6f9b609afad5a69cc4f27620795079a35e525300000000000000000000000000000000000000000000000000000000'}",
+          "final_attempt_id": 63,
+          "ok": false,
+          "result": null,
+          "revert_data": "0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed734f5592764a01a7e94be4e79c18d6f9b609afad5a69cc4f27620795079a35e525300000000000000000000000000000000000000000000000000000000",
+          "revert_selectors": [
+            "0x6190b2b0",
+            "0x7a5ed734",
+            "0xa35e5253"
+          ]
+        },
+        "side": "IMMEDIATE_REVERSE_TOKEN_TO_PAIRED",
+        "token": "0xa16206cf592de73197f23ba9866f81cff7e78b07",
+        "zero_for_one": false
+      },
+      "index": 75,
+      "intended_entry_block": 48714734,
+      "intended_exit_block": 48715634,
+      "launch_block": 48714731,
+      "launch_transaction_hash": "0x2a79fd2f92cab1344c061fd7b784561607b0efa3f2ab4988a8b14b1f1261ed9c",
+      "paired": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+      "pool_id": "0xf5592764a01a7e94be4e79c18d6f9b609afad5a69cc4f27620795079a35e5253",
+      "pool_key_verification": {
+        "computed_pool_id": "0xf5592764a01a7e94be4e79c18d6f9b609afad5a69cc4f27620795079a35e5253",
+        "expected_pool_id": "0xf5592764a01a7e94be4e79c18d6f9b609afad5a69cc4f27620795079a35e5253",
+        "initialize_log_index": 419,
+        "initialize_sqrt_price_x96": 170373239623099972349699932690865038896,
+        "initialize_tick": 429800,
+        "pool_key": {
+          "currency0": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+          "currency1": "0xa16206cf592de73197f23ba9866f81cff7e78b07",
+          "fee": 8388608,
+          "hooks": "0xb429d62f8f3bffb98cdb9569533ea23bf0ba28cc",
+          "tick_spacing": 200
+        },
+        "status": "OK"
+      },
+      "receipt_rpc": {
+        "error_class": null,
+        "error_message": null,
+        "final_attempt_id": 59,
+        "ok": true,
+        "revert_data": null,
+        "revert_selectors": []
+      },
+      "sizing": {
+        "amount_in": 250000000,
+        "economic_inference_authorized": false,
+        "eth_usd_for_size_only": null,
+        "notional_usd": 250.0,
+        "unit": "USDC"
+      },
+      "token": "0xa16206cf592de73197f23ba9866f81cff7e78b07"
+    },
+    {
+      "cohort": "PRIOR_ENTRY_SUCCESS_WITH_SWAP",
+      "entry_quote": {
+        "amount_in": 250000000,
+        "amount_out": 716380832241260415581580174,
+        "block": 48715141,
+        "calldata_sha256": "ad887837b05ee60d1d802d73d6bd9af50d1db03d546a95c9d22ac83516aef39b",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": 374004,
+        "ok": true,
+        "pool_id": "0xb57755b367ea64b0dd06e94dd308b939f531c40e92d77503de5a6a1398f71def",
+        "rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 70,
+          "ok": true,
+          "result": "0x00000000000000000000000000000000000000000250938abb6e03469f9a6b8e000000000000000000000000000000000000000000000000000000000005b4f4",
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "side": "ENTRY_PAIRED_TO_TOKEN",
+        "token": "0x36d6f486e789e511e145ed2899644e224d9b6b07",
+        "zero_for_one": false
+      },
+      "entry_state": {
+        "block": 48715141,
+        "liquidity": 1795125268484819020,
+        "liquidity_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 69,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "lp_fee": 0,
+        "ok": true,
+        "phase": "entry",
+        "protocol_fee": 0,
+        "slot0_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 68,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "sqrt_price_x96": 35398664311015649511,
+        "tick": -430600
+      },
+      "exit_reverse_quote": {
+        "amount_in": 716380832241260415581580174,
+        "amount_out": null,
+        "block": 48716041,
+        "calldata_sha256": "1bd008b5b4b541c6d54ce20e365cf83cce7f82667d03038fdbea08e0c5b072d6",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": null,
+        "ok": false,
+        "pool_id": "0xb57755b367ea64b0dd06e94dd308b939f531c40e92d77503de5a6a1398f71def",
+        "rpc": {
+          "error_class": "UNKNOWN_REVERT",
+          "error_message": "{'code': 3, 'message': 'execution reverted', 'data': '0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed734b57755b367ea64b0dd06e94dd308b939f531c40e92d77503de5a6a1398f71def00000000000000000000000000000000000000000000000000000000'}",
+          "final_attempt_id": 74,
+          "ok": false,
+          "result": null,
+          "revert_data": "0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed734b57755b367ea64b0dd06e94dd308b939f531c40e92d77503de5a6a1398f71def00000000000000000000000000000000000000000000000000000000",
+          "revert_selectors": [
+            "0x6190b2b0",
+            "0x7a5ed734",
+            "0x98f71def"
+          ]
+        },
+        "side": "EXIT_REVERSE_TOKEN_TO_PAIRED",
+        "token": "0x36d6f486e789e511e145ed2899644e224d9b6b07",
+        "zero_for_one": true
+      },
+      "exit_state": {
+        "block": 48716041,
+        "liquidity": 1795125268484819020,
+        "liquidity_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 73,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "lp_fee": 0,
+        "ok": true,
+        "phase": "exit",
+        "protocol_fee": 0,
+        "slot0_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 72,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "sqrt_price_x96": 35398664311015649511,
+        "tick": -430600
+      },
+      "immediate_reverse_quote": {
+        "amount_in": 716380832241260415581580174,
+        "amount_out": null,
+        "block": 48715141,
+        "calldata_sha256": "1bd008b5b4b541c6d54ce20e365cf83cce7f82667d03038fdbea08e0c5b072d6",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": null,
+        "ok": false,
+        "pool_id": "0xb57755b367ea64b0dd06e94dd308b939f531c40e92d77503de5a6a1398f71def",
+        "rpc": {
+          "error_class": "UNKNOWN_REVERT",
+          "error_message": "{'code': 3, 'message': 'execution reverted', 'data': '0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed734b57755b367ea64b0dd06e94dd308b939f531c40e92d77503de5a6a1398f71def00000000000000000000000000000000000000000000000000000000'}",
+          "final_attempt_id": 71,
+          "ok": false,
+          "result": null,
+          "revert_data": "0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed734b57755b367ea64b0dd06e94dd308b939f531c40e92d77503de5a6a1398f71def00000000000000000000000000000000000000000000000000000000",
+          "revert_selectors": [
+            "0x6190b2b0",
+            "0x7a5ed734",
+            "0x98f71def"
+          ]
+        },
+        "side": "IMMEDIATE_REVERSE_TOKEN_TO_PAIRED",
+        "token": "0x36d6f486e789e511e145ed2899644e224d9b6b07",
+        "zero_for_one": true
+      },
+      "index": 86,
+      "intended_entry_block": 48715141,
+      "intended_exit_block": 48716041,
+      "launch_block": 48715138,
+      "launch_transaction_hash": "0xf65b62268e34adf90a3b45b6c03d0f5e501fd39c09ad391cb013b01b3b7773a1",
+      "paired": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+      "pool_id": "0xb57755b367ea64b0dd06e94dd308b939f531c40e92d77503de5a6a1398f71def",
+      "pool_key_verification": {
+        "computed_pool_id": "0xb57755b367ea64b0dd06e94dd308b939f531c40e92d77503de5a6a1398f71def",
+        "expected_pool_id": "0xb57755b367ea64b0dd06e94dd308b939f531c40e92d77503de5a6a1398f71def",
+        "initialize_log_index": 216,
+        "initialize_sqrt_price_x96": 35398664311015649511,
+        "initialize_tick": -430600,
+        "pool_key": {
+          "currency0": "0x36d6f486e789e511e145ed2899644e224d9b6b07",
+          "currency1": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+          "fee": 8388608,
+          "hooks": "0xd60d6b218116cfd801e28f78d011a203d2b068cc",
+          "tick_spacing": 200
+        },
+        "status": "OK"
+      },
+      "receipt_rpc": {
+        "error_class": null,
+        "error_message": null,
+        "final_attempt_id": 67,
+        "ok": true,
+        "revert_data": null,
+        "revert_selectors": []
+      },
+      "sizing": {
+        "amount_in": 250000000,
+        "economic_inference_authorized": false,
+        "eth_usd_for_size_only": null,
+        "notional_usd": 250.0,
+        "unit": "USDC"
+      },
+      "token": "0x36d6f486e789e511e145ed2899644e224d9b6b07"
+    },
+    {
+      "cohort": "PRIOR_ENTRY_SUCCESS_WITH_SWAP",
+      "entry_quote": {
+        "amount_in": 135677846521220032,
+        "amount_out": 775985135983058137526570326,
+        "block": 48716284,
+        "calldata_sha256": "5c61e2c17b0db0858928f0623cdb6d4abe1a41c4fd7b0848450a3580eecd1723",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": 189735,
+        "ok": true,
+        "pool_id": "0x275b12c8374bde2ee088703ca1418c3a9183662051d1e30ff6389e1853885bf6",
+        "rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 78,
+          "ok": true,
+          "result": "0x00000000000000000000000000000000000000000281e13e8330e0a02b300d56000000000000000000000000000000000000000000000000000000000002e527",
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "side": "ENTRY_PAIRED_TO_TOKEN",
+        "token": "0x7e84588b6997bbfddcd50beac0ca0f9582547b07",
+        "zero_for_one": true
+      },
+      "entry_state": {
+        "block": 48716284,
+        "liquidity": 177557320016371022708535,
+        "liquidity_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 77,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "lp_fee": 10000,
+        "ok": true,
+        "phase": "entry",
+        "protocol_fee": 0,
+        "slot0_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 76,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "sqrt_price_x96": 7356440073894413279754429250694445,
+        "tick": 228786
+      },
+      "exit_reverse_quote": {
+        "amount_in": 775985135983058137526570326,
+        "amount_out": null,
+        "block": 48717184,
+        "calldata_sha256": "f2865821927ab33ce812d58e910900589a3c63111fd215f6fb059b44e92c9a19",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": null,
+        "ok": false,
+        "pool_id": "0x275b12c8374bde2ee088703ca1418c3a9183662051d1e30ff6389e1853885bf6",
+        "rpc": {
+          "error_class": "UNKNOWN_REVERT",
+          "error_message": "{'code': 3, 'message': 'execution reverted', 'data': '0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed734275b12c8374bde2ee088703ca1418c3a9183662051d1e30ff6389e1853885bf600000000000000000000000000000000000000000000000000000000'}",
+          "final_attempt_id": 82,
+          "ok": false,
+          "result": null,
+          "revert_data": "0x6190b2b0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000247a5ed734275b12c8374bde2ee088703ca1418c3a9183662051d1e30ff6389e1853885bf600000000000000000000000000000000000000000000000000000000",
+          "revert_selectors": [
+            "0x6190b2b0",
+            "0x7a5ed734",
+            "0x53885bf6"
+          ]
+        },
+        "side": "EXIT_REVERSE_TOKEN_TO_PAIRED",
+        "token": "0x7e84588b6997bbfddcd50beac0ca0f9582547b07",
+        "zero_for_one": false
+      },
+      "exit_state": {
+        "block": 48717184,
+        "liquidity": 177557320016371022708535,
+        "liquidity_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 81,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "lp_fee": 10000,
+        "ok": true,
+        "phase": "exit",
+        "protocol_fee": 0,
+        "slot0_rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 80,
+          "ok": true,
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "sqrt_price_x96": 7973041861276513123482731816009214,
+        "tick": 230396
+      },
+      "immediate_reverse_quote": {
+        "amount_in": 775985135983058137526570326,
+        "amount_out": 60396173931509586,
+        "block": 48716284,
+        "calldata_sha256": "f2865821927ab33ce812d58e910900589a3c63111fd215f6fb059b44e92c9a19",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": 204426,
+        "ok": true,
+        "pool_id": "0x275b12c8374bde2ee088703ca1418c3a9183662051d1e30ff6389e1853885bf6",
+        "rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 79,
+          "ok": true,
+          "result": "0x00000000000000000000000000000000000000000000000000d692000cfaf7520000000000000000000000000000000000000000000000000000000000031e8a",
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "side": "IMMEDIATE_REVERSE_TOKEN_TO_PAIRED",
+        "token": "0x7e84588b6997bbfddcd50beac0ca0f9582547b07",
+        "zero_for_one": false
+      },
+      "index": 180,
+      "intended_entry_block": 48716284,
+      "intended_exit_block": 48717184,
+      "launch_block": 48716281,
+      "launch_transaction_hash": "0xa9b4dd3693b4d8b00c9b14b501b15c8f439a6fab9d43db818d2e0e31d58f5b6c",
+      "paired": "0x4200000000000000000000000000000000000006",
+      "pool_id": "0x275b12c8374bde2ee088703ca1418c3a9183662051d1e30ff6389e1853885bf6",
+      "pool_key_verification": {
+        "computed_pool_id": "0x275b12c8374bde2ee088703ca1418c3a9183662051d1e30ff6389e1853885bf6",
+        "expected_pool_id": "0x275b12c8374bde2ee088703ca1418c3a9183662051d1e30ff6389e1853885bf6",
+        "initialize_log_index": 609,
+        "initialize_sqrt_price_x96": 7974470913604094264140738513890252,
+        "initialize_tick": 230400,
+        "pool_key": {
+          "currency0": "0x4200000000000000000000000000000000000006",
+          "currency1": "0x7e84588b6997bbfddcd50beac0ca0f9582547b07",
+          "fee": 8388608,
+          "hooks": "0xb429d62f8f3bffb98cdb9569533ea23bf0ba28cc",
+          "tick_spacing": 200
+        },
+        "status": "OK"
+      },
+      "receipt_rpc": {
+        "error_class": null,
+        "error_message": null,
+        "final_attempt_id": 75,
+        "ok": true,
+        "revert_data": null,
+        "revert_selectors": []
+      },
+      "sizing": {
+        "amount_in": 135677846521220032,
+        "economic_inference_authorized": false,
+        "eth_usd_for_size_only": 1842.6,
+        "notional_usd": 250.0,
+        "unit": "WETH"
+      },
+      "token": "0x7e84588b6997bbfddcd50beac0ca0f9582547b07"
+    }
+  ]
+}

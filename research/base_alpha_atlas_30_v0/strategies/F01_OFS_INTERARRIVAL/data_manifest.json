@@ -1,0 +1,23 @@
+{
+  "strategy_id": "F01_OFS_INTERARRIVAL",
+  "data_class": "B_SMALL_BOUNDED_EXPORT_REQUIRED",
+  "required_tables_or_files": [
+    "uniswap_v3_swaps_decoded"
+  ],
+  "required_columns": [
+    "pool_address",
+    "block_time",
+    "amount0",
+    "amount1"
+  ],
+  "required_time_resolution": "1m from swaps",
+  "point_in_time_requirements": "PIT bar_close",
+  "minimum_history": ">=14d",
+  "estimated_rows": "~1e6+",
+  "estimated_read_bytes": "200MB+",
+  "whether_current_diagnostics_may_support_it": "maybe",
+  "whether_production_database_would_be_required": true,
+  "missing_data": [
+    "stable 1m builder"
+  ]
+}

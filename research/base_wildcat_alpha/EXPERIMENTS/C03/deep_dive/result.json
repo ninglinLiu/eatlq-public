@@ -1,0 +1,91 @@
+{
+  "alpha_id": "C03",
+  "status": "MECHANISM_PLAUSIBLE",
+  "n_replay": 6690,
+  "calibration_cutoff": "2026-06-01 00:00:00+00:00",
+  "gross_spread": 0.08877866488761266,
+  "gross_bps": NaN,
+  "net_bps_60_each_leg": NaN,
+  "day_t": 9.991772207814495,
+  "day_p": 9.20670408336883e-15,
+  "q_bh_48": 1.6928068923809603e-05,
+  "bootstrap_ci95": [
+    0.07441634182213966,
+    0.10889207080204037
+  ],
+  "placebo_p": 0.004975124378109453,
+  "positive_month_share": 1.0,
+  "monthly": [
+    {
+      "month": "2026-06",
+      "spread": 0.07872526526444013,
+      "n": 2132
+    },
+    {
+      "month": "2026-07",
+      "spread": 0.09489064442981499,
+      "n": 3325
+    },
+    {
+      "month": "2026-08",
+      "spread": 0.09318996415770608,
+      "n": 1233
+    }
+  ],
+  "parameter_perturbation": {
+    "0.1": 0.10180550654289067,
+    "0.2": 0.08877866488761266,
+    "0.3": 0.0801984805507322
+  },
+  "cost_stress_bps": {},
+  "delay_stress_bps": {},
+  "pool_concentration": 0.21953578336557059,
+  "leave_top_pools_out": {
+    "0xb4cb800910b228ed3d0834cf79d697127bbb00e5": 0.08758905931011762,
+    "0xd0b53d9277642d899df5c87a3966a349a798f224": 0.08764171398321985,
+    "0x10648ba41b8565907cfa1496765fa4d95390aa0d": 0.09947652610643054,
+    "0x82321f3beb69f503380d6b233857d5c43562e2d0": 0.08883978076576227,
+    "0xdfe5f275020def30993f042174fc2d335678b626": 0.08891915001907669,
+    "0xbe00ff35af70e8415d0eb605a286d8a45466a4c1": 0.0924811872999376,
+    "0x4c36388be6f416a29c8d8eee81c771ce6be14b18": 0.08879575008073204,
+    "0xab079fd6cfcb69c38fa8a9306ca2f39fd05283f5": 0.09013753965917648,
+    "0x16d970d970c25814b03468040b5c7fdd097d56c3": 0.08958336889454621,
+    "0x8398af786b8177cd9e6069ccfb760dee1ad87083": 0.0895254202317215
+  },
+  "loo_min_spread": 0.08758905931011762,
+  "without_top_1pct_outcomes": 0.08877866488761266,
+  "duplicate_clean_spread": 0.08877866488761266,
+  "first_half_spread": 0.08349138034382719,
+  "second_half_spread": 0.09530900967982125,
+  "shadow_gate": "FAIL",
+  "shadow_gate_reason": "historical executable quotes, failed-fill/sellability outcomes, USD depth, MEV and price impact are absent",
+  "kill_checks": {
+    "lookahead": "PASS: feature timestamps do not exceed signal hour; close-anchor delay tested where directional",
+    "label_leakage": "PASS_BY_CODE_AUDIT: future columns never used as features",
+    "survivorship_bias": "PASS_FOR_OBSERVED_V3: all observed pools included; inactive/unobserved market still unknown",
+    "universe_contamination": "PASS: no outcome-based or full-period top-N filter",
+    "failed_fills_omitted": "UNRESOLVED_GATE",
+    "unsellable_outcomes": "UNRESOLVED_GATE",
+    "duplicate_events": "SENSITIVITY spread=0.0887787 on duplicate_pressure=1 rows",
+    "signal_overlap": "MITIGATED: inference clustered by UTC day",
+    "wallet_concentration": "DATA_INSUFFICIENT: only aggregate sender counts retained",
+    "pool_concentration": "top pool=0.220; LOO min=0.0875891",
+    "single_period_concentration": "positive months=100.0%",
+    "endpoint_selection": "tail perturbations={'0.1': 0.10180550654289067, '0.2': 0.08877866488761266, '0.3': 0.0801984805507322}",
+    "parameter_selection": "fixed 40% calibration and 10/20/30% tails={'0.1': 0.10180550654289067, '0.2': 0.08877866488761266, '0.3': 0.0801984805507322}",
+    "multiple_testing": "BH q across 48=1.69281e-05",
+    "execution_delay": "NOT_APPLICABLE_OR_NOT_IDENTIFIED",
+    "gas_fee": "NOT_DIRECTLY_MONETIZED",
+    "slippage": "UNRESOLVED_GATE",
+    "mev": "UNRESOLVED_GATE",
+    "price_impact": "UNRESOLVED_GATE",
+    "capacity": "UNRESOLVED_GATE even at $1,000",
+    "quote_vs_fill": "UNRESOLVED_GATE",
+    "data_interruption": "CONCERN: exact-horizon joins only; missing hours excluded",
+    "future_generated_fields": "PASS_BY_SCHEMA_AUDIT: raw event-time fields only",
+    "regime_dependence": "monthly=[{'month': '2026-06', 'spread': 0.07872526526444013, 'n': 2132}, {'month': '2026-07', 'spread': 0.09489064442981499, 'n': 3325}, {'month': '2026-08', 'spread': 0.09318996415770608, 'n': 1233}]",
+    "alpha_decay": "first=0.0834914; second=0.095309",
+    "right_tail_dependence": "without largest 1% absolute outcomes=0.0887787",
+    "permanent_unsellable": "UNRESOLVED_GATE"
+  }
+}

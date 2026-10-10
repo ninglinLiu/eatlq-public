@@ -1,0 +1,44 @@
+{
+  "after_snapshot": true,
+  "block_number": 51689697,
+  "cash_reconciliation": "INTERNAL_INDEX_INCOMPLETE",
+  "index_complete": false,
+  "native_net_raw": "-100000000000000000",
+  "quote": "ETH",
+  "quote_net_raw": "-100000000000000000",
+  "receipt_evidence": {
+    "http_status": 200,
+    "key": "0667c3523b275c1e4a120ea92ce027a0a31d04ca133a3c39592bdcc5ab147fcd",
+    "rpc_error": null
+  },
+  "receipt_from_matches_wallet": true,
+  "receipt_status": "CONFIRMED_SUCCESS",
+  "receipt_token_net_matches_index": true,
+  "receipt_token_net_raw": "63746646747580430195018291",
+  "side": "buy",
+  "source_fee_raw": "28486259461098",
+  "source_fee_receipt_raw": "28486259461098",
+  "status": "SINGLE_TARGET_OPPOSITE_ACCOUNT_CASH",
+  "swap_logs": [
+    {
+      "data": "0xfffffffffffffffffffffffffffffffffffffffffffffffffea3cc6c9d90600000000000000000000000000000000000000000000034bae0a505cade8266ca330000000000000000000000000000000000006064e023bb878cd68e15c0b8be31000000000000000000000000000000000000000000000808c268ac91460a32f9000000000000000000000000000000000000000000000000000000000003162a0000000000000000000000000000000000000000000000000000000000000000",
+      "kind": "V4",
+      "log_index": 2,
+      "pool": "0x498581ff718922c3f8e6a244956af099b2652b2b",
+      "topics": [
+        "0x40e9cecb9f5f1f1c5b9c97dec2917b7ee92e57ba5563708daca94dd84ad7112f",
+        "0x1906d4337db6299b1934bea8224695292e24f0b7a514dcabecf9c048e1c74457",
+        "0x000000000000000000000000c7827556424769df987a55464f22e0390e70b29a"
+      ]
+    }
+  ],
+  "timestamp": 1790168741.0,
+  "token": "0xb20000000000000000000056da6b5ff705ba0701",
+  "token_net_raw": "63746646747580430195018291",
+  "token_nets": {
+    "0xb20000000000000000000056da6b5ff705ba0701": "63746646747580430195018291"
+  },
+  "tx_hash": "0x548a2897d044a631d8ee885c25a7ef34d0e19d224b10e671a125c42f6991887b",
+  "validation_layer": "ACCOUNT_RECEIPT_AND_LOGS; PROTOCOL/ROUTE MUST BE VERIFIED SEPARATELY",
+  "wallet": "0x347ffc6db9acc54ac2019795173b9599e8b82bd9"
+}

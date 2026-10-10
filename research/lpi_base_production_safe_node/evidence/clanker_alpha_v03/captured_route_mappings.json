@@ -1,0 +1,499 @@
+{
+  "n": 15,
+  "rows": [
+    {
+      "block_number": 48716287,
+      "mapping": {
+        "action": null,
+        "action_name": "CUSTOM_EFFBEC13_SINGLE_HOP",
+        "action_order": 0,
+        "actions_bytes_hex": null,
+        "ambiguity": null,
+        "amount_in": 1000000000000000000,
+        "amount_out_minimum": 2641396673719898026607478114,
+        "hook_data_hex": null,
+        "notes": [
+          "effbec13_template_parse",
+          "hookData_not_fully_typed"
+        ],
+        "pool_key": {
+          "currency0": "0x4200000000000000000000000000000000000006",
+          "currency1": "0x7e84588b6997bbfddcd50beac0ca0f9582547b07",
+          "fee": 8388608,
+          "fee_mode": "DYNAMIC_FLAG",
+          "hooks": "0xb429d62f8f3bffb98cdb9569533ea23bf0ba28cc",
+          "path_order": [
+            "0x4200000000000000000000000000000000000006",
+            "0x7e84588b6997bbfddcd50beac0ca0f9582547b07"
+          ],
+          "tick_spacing": 200
+        },
+        "status": "MAPPED_CUSTOM_ROUTER",
+        "to_address": "0xd8ba9d1a99fc21f0eca24e9b85737c28a194a4e2",
+        "top_level_selector": "0xeffbec13",
+        "zero_for_one": true
+      },
+      "source_file": "evidence/clanker_sell_route_capture_v021/transactions.json",
+      "transaction_hash": "0x4a9bddac1670b2fe6f50b1d7abbf05ffeda871d30d806a4892755461a3b7b0f2"
+    },
+    {
+      "block_number": 48725557,
+      "mapping": {
+        "action": 6,
+        "action_name": "SWAP_EXACT_IN_SINGLE",
+        "action_order": 0,
+        "actions_bytes_hex": "0x060c0f",
+        "ambiguity": null,
+        "amount_in": 404100,
+        "amount_out_minimum": 1925031670753541570711502,
+        "hook_data_hex": "0x",
+        "notes": [
+          "execute_embedded_in_wrapper",
+          "entrypoint_or_ur_path"
+        ],
+        "pool_key": {
+          "currency0": "0x36d6f486e789e511e145ed2899644e224d9b6b07",
+          "currency1": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+          "fee": 8388608,
+          "fee_mode": "DYNAMIC_FLAG",
+          "hooks": "0xd60d6b218116cfd801e28f78d011a203d2b068cc",
+          "tick_spacing": 200
+        },
+        "status": "MAPPED",
+        "to_address": "0x0000000071727de22e5e9d8baf0edac6f37da032",
+        "top_level_selector": "0x765e827f",
+        "zero_for_one": false
+      },
+      "source_file": "evidence/clanker_sell_route_capture_v021/transactions.json",
+      "transaction_hash": "0x1667deded06f602646ca13ca7aa1539d6f9982430a0488497d87fcb708aeb395"
+    },
+    {
+      "block_number": 48713597,
+      "mapping": {
+        "action": null,
+        "action_name": "CUSTOM_EFFBEC13_SINGLE_HOP",
+        "action_order": 0,
+        "actions_bytes_hex": null,
+        "ambiguity": null,
+        "amount_in": 10000000000000000,
+        "amount_out_minimum": 87116717899031771928225660,
+        "hook_data_hex": null,
+        "notes": [
+          "effbec13_template_parse",
+          "hookData_not_fully_typed"
+        ],
+        "pool_key": {
+          "currency0": "0x4200000000000000000000000000000000000006",
+          "currency1": "0x80b8991af0b05e6cadc29088ad920d0c09479b07",
+          "fee": 8388608,
+          "fee_mode": "DYNAMIC_FLAG",
+          "hooks": "0xb429d62f8f3bffb98cdb9569533ea23bf0ba28cc",
+          "path_order": [
+            "0x4200000000000000000000000000000000000006",
+            "0x80b8991af0b05e6cadc29088ad920d0c09479b07"
+          ],
+          "tick_spacing": 200
+        },
+        "status": "MAPPED_CUSTOM_ROUTER",
+        "to_address": "0xd8ba9d1a99fc21f0eca24e9b85737c28a194a4e2",
+        "top_level_selector": "0xeffbec13",
+        "zero_for_one": true
+      },
+      "source_file": "evidence/clanker_sell_route_capture_v021/transactions.json",
+      "transaction_hash": "0x79275506f574ac934df9777f7f5fe3d76731895746a265907ef99b5dc2404669"
+    },
+    {
+      "block_number": 48714765,
+      "mapping": {
+        "action": null,
+        "action_name": null,
+        "action_order": null,
+        "actions_bytes_hex": null,
+        "ambiguity": "MULTICALL_WRAPPER",
+        "amount_in": null,
+        "amount_out_minimum": null,
+        "hook_data_hex": null,
+        "notes": [
+          "multicall_or_aggregator_not_fully_expanded"
+        ],
+        "pool_key": null,
+        "status": "AMBIGUOUS_MULTI_LEG",
+        "to_address": "0xca11bde05977b3631167028862be2a173976ca11",
+        "top_level_selector": "0x174dea71",
+        "zero_for_one": null
+      },
+      "source_file": "evidence/clanker_sell_route_capture_v021/transactions.json",
+      "transaction_hash": "0xdcba363953a2b0c2cfa986d27ad1c0eda68068ee91506515c3e18623f3362a7a"
+    },
+    {
+      "block_number": 48716289,
+      "mapping": {
+        "action": null,
+        "action_name": "CUSTOM_EFFBEC13_SINGLE_HOP",
+        "action_order": 0,
+        "actions_bytes_hex": null,
+        "ambiguity": null,
+        "amount_in": 50000000000000000,
+        "amount_out_minimum": 124148707744634270440342788,
+        "hook_data_hex": null,
+        "notes": [
+          "effbec13_template_parse",
+          "hookData_not_fully_typed"
+        ],
+        "pool_key": {
+          "currency0": "0x4200000000000000000000000000000000000006",
+          "currency1": "0x7e84588b6997bbfddcd50beac0ca0f9582547b07",
+          "fee": 8388608,
+          "fee_mode": "DYNAMIC_FLAG",
+          "hooks": "0xb429d62f8f3bffb98cdb9569533ea23bf0ba28cc",
+          "path_order": [
+            "0x4200000000000000000000000000000000000006",
+            "0x7e84588b6997bbfddcd50beac0ca0f9582547b07"
+          ],
+          "tick_spacing": 200
+        },
+        "status": "MAPPED_CUSTOM_ROUTER",
+        "to_address": "0xd8ba9d1a99fc21f0eca24e9b85737c28a194a4e2",
+        "top_level_selector": "0xeffbec13",
+        "zero_for_one": true
+      },
+      "source_file": "evidence/clanker_sell_route_capture_v021/transactions.json",
+      "transaction_hash": "0x944af7a7e8fe99d8ec758185f34624f6a889049a5ec675faa677e985b71f3acf"
+    },
+    {
+      "block_number": 48744108,
+      "mapping": {
+        "action": 6,
+        "action_name": "SWAP_EXACT_IN_SINGLE",
+        "action_order": 0,
+        "actions_bytes_hex": "0x060c0f",
+        "ambiguity": null,
+        "amount_in": 815100,
+        "amount_out_minimum": 3880469151042948180824965,
+        "hook_data_hex": "0x",
+        "notes": [
+          "execute_embedded_in_wrapper",
+          "entrypoint_or_ur_path"
+        ],
+        "pool_key": {
+          "currency0": "0x36d6f486e789e511e145ed2899644e224d9b6b07",
+          "currency1": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+          "fee": 8388608,
+          "fee_mode": "DYNAMIC_FLAG",
+          "hooks": "0xd60d6b218116cfd801e28f78d011a203d2b068cc",
+          "tick_spacing": 200
+        },
+        "status": "MAPPED",
+        "to_address": "0x0000000071727de22e5e9d8baf0edac6f37da032",
+        "top_level_selector": "0x765e827f",
+        "zero_for_one": false
+      },
+      "source_file": "evidence/clanker_sell_route_capture_v021/transactions.json",
+      "transaction_hash": "0xdee930270990e0b8467426150cef37d4f7728c44cd29c91175a8bbea944318f9"
+    },
+    {
+      "block_number": 48716290,
+      "mapping": {
+        "action": null,
+        "action_name": "CUSTOM_EFFBEC13_SINGLE_HOP",
+        "action_order": 0,
+        "actions_bytes_hex": null,
+        "ambiguity": null,
+        "amount_in": 250000000000000000,
+        "amount_out_minimum": 598917722881022097368751671,
+        "hook_data_hex": null,
+        "notes": [
+          "effbec13_template_parse",
+          "hookData_not_fully_typed"
+        ],
+        "pool_key": {
+          "currency0": "0x4200000000000000000000000000000000000006",
+          "currency1": "0x7e84588b6997bbfddcd50beac0ca0f9582547b07",
+          "fee": 8388608,
+          "fee_mode": "DYNAMIC_FLAG",
+          "hooks": "0xb429d62f8f3bffb98cdb9569533ea23bf0ba28cc",
+          "path_order": [
+            "0x4200000000000000000000000000000000000006",
+            "0x7e84588b6997bbfddcd50beac0ca0f9582547b07"
+          ],
+          "tick_spacing": 200
+        },
+        "status": "MAPPED_CUSTOM_ROUTER",
+        "to_address": "0xd8ba9d1a99fc21f0eca24e9b85737c28a194a4e2",
+        "top_level_selector": "0xeffbec13",
+        "zero_for_one": true
+      },
+      "source_file": "evidence/clanker_sell_route_capture_v021/transactions.json",
+      "transaction_hash": "0x87fd25ee9eb9c3349a2d2f0105eb48fe582b07c77ee1ef7569de3f335c06988f"
+    },
+    {
+      "block_number": 48745797,
+      "mapping": {
+        "action": 6,
+        "action_name": "SWAP_EXACT_IN_SINGLE",
+        "action_order": 0,
+        "actions_bytes_hex": "0x060c0f",
+        "ambiguity": null,
+        "amount_in": 1479200,
+        "amount_out_minimum": 7022366957552776707889675,
+        "hook_data_hex": "0x",
+        "notes": [
+          "execute_embedded_in_wrapper",
+          "entrypoint_or_ur_path"
+        ],
+        "pool_key": {
+          "currency0": "0x36d6f486e789e511e145ed2899644e224d9b6b07",
+          "currency1": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+          "fee": 8388608,
+          "fee_mode": "DYNAMIC_FLAG",
+          "hooks": "0xd60d6b218116cfd801e28f78d011a203d2b068cc",
+          "tick_spacing": 200
+        },
+        "status": "MAPPED",
+        "to_address": "0x0000000071727de22e5e9d8baf0edac6f37da032",
+        "top_level_selector": "0x765e827f",
+        "zero_for_one": false
+      },
+      "source_file": "evidence/clanker_sell_route_capture_v021/transactions.json",
+      "transaction_hash": "0x327f5f7435eef677572d16b3db9aab1fd68b07211577f1a6a50e9df47f864248"
+    },
+    {
+      "block_number": 48713858,
+      "mapping": {
+        "action": null,
+        "action_name": "CUSTOM_EFFBEC13_SINGLE_HOP",
+        "action_order": 0,
+        "actions_bytes_hex": null,
+        "ambiguity": null,
+        "amount_in": 98996270339808831736620068,
+        "amount_out_minimum": 6697395103770285,
+        "hook_data_hex": null,
+        "notes": [
+          "effbec13_template_parse",
+          "hookData_not_fully_typed"
+        ],
+        "pool_key": {
+          "currency0": "0x4200000000000000000000000000000000000006",
+          "currency1": "0x80b8991af0b05e6cadc29088ad920d0c09479b07",
+          "fee": 8388608,
+          "fee_mode": "DYNAMIC_FLAG",
+          "hooks": "0xb429d62f8f3bffb98cdb9569533ea23bf0ba28cc",
+          "path_order": [
+            "0x80b8991af0b05e6cadc29088ad920d0c09479b07",
+            "0x4200000000000000000000000000000000000006"
+          ],
+          "tick_spacing": 200
+        },
+        "status": "MAPPED_CUSTOM_ROUTER",
+        "to_address": "0xd8ba9d1a99fc21f0eca24e9b85737c28a194a4e2",
+        "top_level_selector": "0xeffbec13",
+        "zero_for_one": false
+      },
+      "source_file": "evidence/clanker_actual_sell_route_capture_v021/transactions.json",
+      "transaction_hash": "0x76099f9f529c2f5950429c81eef2ee241625fd4d688d242f0be3c28c69d41a66"
+    },
+    {
+      "block_number": 48715761,
+      "mapping": {
+        "action": null,
+        "action_name": null,
+        "action_order": null,
+        "actions_bytes_hex": null,
+        "ambiguity": "MULTICALL_WRAPPER",
+        "amount_in": null,
+        "amount_out_minimum": null,
+        "hook_data_hex": null,
+        "notes": [
+          "multicall_or_aggregator_not_fully_expanded"
+        ],
+        "pool_key": null,
+        "status": "AMBIGUOUS_MULTI_LEG",
+        "to_address": "0xca11bde05977b3631167028862be2a173976ca11",
+        "top_level_selector": "0x174dea71",
+        "zero_for_one": null
+      },
+      "source_file": "evidence/clanker_actual_sell_route_capture_v021/transactions.json",
+      "transaction_hash": "0xc21918c9bf40dcd8809f7facc9d14d7848a952ec0508b7150f73a337f940a5cd"
+    },
+    {
+      "block_number": 48716290,
+      "mapping": {
+        "action": null,
+        "action_name": "CUSTOM_EFFBEC13_SINGLE_HOP",
+        "action_order": 0,
+        "actions_bytes_hex": null,
+        "ambiguity": null,
+        "amount_in": 1385061777326482130320239606,
+        "amount_out_minimum": 205590974027852833,
+        "hook_data_hex": null,
+        "notes": [
+          "effbec13_template_parse",
+          "hookData_not_fully_typed"
+        ],
+        "pool_key": {
+          "currency0": "0x4200000000000000000000000000000000000006",
+          "currency1": "0x7e84588b6997bbfddcd50beac0ca0f9582547b07",
+          "fee": 8388608,
+          "fee_mode": "DYNAMIC_FLAG",
+          "hooks": "0xb429d62f8f3bffb98cdb9569533ea23bf0ba28cc",
+          "path_order": [
+            "0x7e84588b6997bbfddcd50beac0ca0f9582547b07",
+            "0x4200000000000000000000000000000000000006"
+          ],
+          "tick_spacing": 200
+        },
+        "status": "MAPPED_CUSTOM_ROUTER",
+        "to_address": "0xd8ba9d1a99fc21f0eca24e9b85737c28a194a4e2",
+        "top_level_selector": "0xeffbec13",
+        "zero_for_one": false
+      },
+      "source_file": "evidence/clanker_actual_sell_route_capture_v021/transactions.json",
+      "transaction_hash": "0x8b7ace170e0b771daba31228e7f1118e5ba2fcff6ee8da2b3073bb728da18cdf"
+    },
+    {
+      "block_number": 48716291,
+      "mapping": {
+        "action": null,
+        "action_name": "CUSTOM_EFFBEC13_SINGLE_HOP",
+        "action_order": 0,
+        "actions_bytes_hex": null,
+        "ambiguity": null,
+        "amount_in": 20000000000000000,
+        "amount_out_minimum": 57013340470267332738041274,
+        "hook_data_hex": null,
+        "notes": [
+          "effbec13_template_parse",
+          "hookData_not_fully_typed"
+        ],
+        "pool_key": {
+          "currency0": "0x4200000000000000000000000000000000000006",
+          "currency1": "0x7e84588b6997bbfddcd50beac0ca0f9582547b07",
+          "fee": 8388608,
+          "fee_mode": "DYNAMIC_FLAG",
+          "hooks": "0xb429d62f8f3bffb98cdb9569533ea23bf0ba28cc",
+          "path_order": [
+            "0x4200000000000000000000000000000000000006",
+            "0x7e84588b6997bbfddcd50beac0ca0f9582547b07"
+          ],
+          "tick_spacing": 200
+        },
+        "status": "MAPPED_CUSTOM_ROUTER",
+        "to_address": "0xd8ba9d1a99fc21f0eca24e9b85737c28a194a4e2",
+        "top_level_selector": "0xeffbec13",
+        "zero_for_one": true
+      },
+      "source_file": "evidence/clanker_actual_sell_route_capture_v021/transactions.json",
+      "transaction_hash": "0x3a65ba5bbedfadba8787af3a5d0f3eba447b2f2ec33da54781b31f03ec5e8715"
+    },
+    {
+      "block_number": 48716292,
+      "mapping": {
+        "action": null,
+        "action_name": "CUSTOM_EFFBEC13_SINGLE_HOP",
+        "action_order": 0,
+        "actions_bytes_hex": null,
+        "ambiguity": null,
+        "amount_in": 150000000,
+        "amount_out_minimum": 204781568130005902846808734,
+        "hook_data_hex": null,
+        "notes": [
+          "effbec13_template_parse",
+          "hookData_not_fully_typed"
+        ],
+        "pool_key": {
+          "currency0": "0x4200000000000000000000000000000000000006",
+          "currency1": "0x7e84588b6997bbfddcd50beac0ca0f9582547b07",
+          "fee": 8388608,
+          "fee_mode": "DYNAMIC_FLAG",
+          "hooks": "0xb429d62f8f3bffb98cdb9569533ea23bf0ba28cc",
+          "path_order": [
+            "0x4200000000000000000000000000000000000006",
+            "0x7e84588b6997bbfddcd50beac0ca0f9582547b07"
+          ],
+          "tick_spacing": 200
+        },
+        "status": "MAPPED_CUSTOM_ROUTER",
+        "to_address": "0xd8ba9d1a99fc21f0eca24e9b85737c28a194a4e2",
+        "top_level_selector": "0xeffbec13",
+        "zero_for_one": true
+      },
+      "source_file": "evidence/clanker_actual_sell_route_capture_v021/transactions.json",
+      "transaction_hash": "0x3f505d6620c3422cfd3818bbc0a48844f41f2180b8136a421cd49115b7a02462"
+    },
+    {
+      "block_number": 48716292,
+      "mapping": {
+        "action": null,
+        "action_name": "CUSTOM_EFFBEC13_SINGLE_HOP",
+        "action_order": 0,
+        "actions_bytes_hex": null,
+        "ambiguity": null,
+        "amount_in": 20000000000000000,
+        "amount_out_minimum": 56212612736410150495533960,
+        "hook_data_hex": null,
+        "notes": [
+          "effbec13_template_parse",
+          "hookData_not_fully_typed"
+        ],
+        "pool_key": {
+          "currency0": "0x4200000000000000000000000000000000000006",
+          "currency1": "0x7e84588b6997bbfddcd50beac0ca0f9582547b07",
+          "fee": 8388608,
+          "fee_mode": "DYNAMIC_FLAG",
+          "hooks": "0xb429d62f8f3bffb98cdb9569533ea23bf0ba28cc",
+          "path_order": [
+            "0x4200000000000000000000000000000000000006",
+            "0x7e84588b6997bbfddcd50beac0ca0f9582547b07"
+          ],
+          "tick_spacing": 200
+        },
+        "status": "MAPPED_CUSTOM_ROUTER",
+        "to_address": "0xd8ba9d1a99fc21f0eca24e9b85737c28a194a4e2",
+        "top_level_selector": "0xeffbec13",
+        "zero_for_one": true
+      },
+      "source_file": "evidence/clanker_actual_sell_route_capture_v021/transactions.json",
+      "transaction_hash": "0xd8039f0e0bf9ddb6a733738174aea135e7e1fd4d36c3f6d54448c020fc684316"
+    },
+    {
+      "block_number": 48716293,
+      "mapping": {
+        "action": null,
+        "action_name": "CUSTOM_EFFBEC13_SINGLE_HOP",
+        "action_order": 0,
+        "actions_bytes_hex": null,
+        "ambiguity": null,
+        "amount_in": 1330760282891478470872743952,
+        "amount_out_minimum": 0,
+        "hook_data_hex": null,
+        "notes": [
+          "effbec13_template_parse",
+          "hookData_not_fully_typed"
+        ],
+        "pool_key": {
+          "currency0": "0x4200000000000000000000000000000000000006",
+          "currency1": "0x7e84588b6997bbfddcd50beac0ca0f9582547b07",
+          "fee": 8388608,
+          "fee_mode": "DYNAMIC_FLAG",
+          "hooks": "0xb429d62f8f3bffb98cdb9569533ea23bf0ba28cc",
+          "path_order": [
+            "0x7e84588b6997bbfddcd50beac0ca0f9582547b07",
+            "0x4200000000000000000000000000000000000006"
+          ],
+          "tick_spacing": 200
+        },
+        "status": "MAPPED_CUSTOM_ROUTER",
+        "to_address": "0xd8ba9d1a99fc21f0eca24e9b85737c28a194a4e2",
+        "top_level_selector": "0xeffbec13",
+        "zero_for_one": false
+      },
+      "source_file": "evidence/clanker_actual_sell_route_capture_v021/transactions.json",
+      "transaction_hash": "0xeb35f217ee1baab3a7d8246d656b1a63e111a194c7f880821204baa6c4bba88b"
+    }
+  ],
+  "status_counts": {
+    "AMBIGUOUS_MULTI_LEG": 2,
+    "MAPPED": 3,
+    "MAPPED_CUSTOM_ROUTER": 10
+  }
+}

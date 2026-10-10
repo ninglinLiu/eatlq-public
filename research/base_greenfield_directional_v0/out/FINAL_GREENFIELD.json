@@ -1,0 +1,93 @@
+{
+  "created_utc": "2026-07-20T05:40:02Z",
+  "result": "CANDIDATES",
+  "n_candidates": 1,
+  "candidates": [
+    {
+      "candidate_id": "G2_HGB_COMPETING",
+      "market_gate": "opportunity_supply_median_fold",
+      "universe": "base_univ3_weth_pit_eligible",
+      "age_bucket": "15-60m",
+      "features": "PRICE_PATH+FLOW+PARTICIPATION+LIQUIDITY+MARKET",
+      "model": "G2_HGB_COMPETING",
+      "target": "xs_return_pctile + competing barriers",
+      "entry_policy": "top-k=3 per decision_time after L1/L2/L3 gates",
+      "fixed_exit_policy": {
+        "horizon_s": 3600,
+        "barrier": "TB_A",
+        "params": {
+          "tp": 0.5,
+          "sl": 0.35
+        }
+      },
+      "oof_predictions_path": "/root/base_greenfield_directional_v0/out/predictions/oof_G2_HGB_COMPETING.parquet",
+      "independent_positions": true,
+      "weeks": {
+        "by_week": {
+          "2922": -0.06150942458001951,
+          "2926": 0.1615446256060184,
+          "2929": -0.0059497025198311905,
+          "2930": 0.05229738517431451,
+          "2934": 0.13735313245781716,
+          "2935": 0.16814159306043946
+        },
+        "worst_week": -0.06150942458001951,
+        "best_week": 0.16814159306043946
+      },
+      "tokens": 166,
+      "regimes": {
+        "low": 0.12669366542228772,
+        "mid": -0.12786087978981456,
+        "high": 0.21494577462948783
+      },
+      "oof_ev": 0.0671673003735786,
+      "price_only_oof_ev": -0.1502355652699869,
+      "incremental_ev": 0.2174028656435655,
+      "rank_ic": null,
+      "fatal_rate": 0.0179640718562874,
+      "atomic_failure_rate": 0.0,
+      "capital_hour_return": 0.0671673003735786,
+      "worst_fold": -0.0897548873304156,
+      "top5_dependency": 1.4739826164475132,
+      "decay_profile": {
+        "modes": {
+          "expanding_early_vs_late": {
+            "early_ev": -0.13940347770345723,
+            "late_ev": 0.17312467724371544
+          },
+          "rolling_90d": {
+            "n": 1054,
+            "n_accepted": 156,
+            "acceptance_rate": 0.14800759013282733,
+            "ev_accepted": 0.06585439964257886,
+            "ev_per_opp": 0.009746950990742223,
+            "capital_hour_return": 0.06585439964257886,
+            "rank_ic": null,
+            "tp_first_rate": 0.358974358974359,
+            "sl_first_rate": 0.3076923076923077,
+            "fatal_first_rate": 0.019230769230769232,
+            "atomic_failure_rate": 0.0,
+            "median_return": 0.024948752583157683,
+            "trimmed_mean": 0.07718833922891075,
+            "expected_shortfall": -0.36758943098473323,
+            "top5_dependency": 1.6093753041717775
+          },
+          "recency_halflife_30d_ev": 0.09708749396688643
+        },
+        "decay_status": "ACTIVE"
+      },
+      "failure_modes": [
+        "does_not_beat_C3_SIMPLE_MOMENTUM"
+      ],
+      "verdict": "DISCOVERY_LEAD",
+      "notes": {
+        "c3_momentum_oof_ev": 0.097086926556481,
+        "beats_c3": false
+      }
+    }
+  ],
+  "c1_price_only_oof_ev": -0.1502355652699869,
+  "deploy_allowed": false,
+  "sealed_holdout_untouched_for_tuning": true,
+  "promotion_cap": 2
+}

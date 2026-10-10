@@ -1,0 +1,21 @@
+{
+  "labels": {"clean": 378, "dead": 4, "delayed_rug": 262},
+  "entry_rows": {
+    "instant_hp": [0, 0, 0],
+    "delayed_rug": [262, 262, 0],
+    "clean": [378, 374, 4],
+    "dead": [4, 1, 1]
+  },
+  "flip_offset_blocks": {"30": 3, "300": 19, "1800": 111, "7200": 129},
+  "flip_timing": {"before_or_at_exit_real_loss": 4, "after_exit": 240, "unknown_no_exit_block": 18},
+  "survivorship_counts": {
+    "traded_survivor": [384, 384, 240],
+    "hidden_by_quoterv2_friction": [260, 256, 22],
+    "full_candidate": [644, 640, 262]
+  },
+  "exit_replay": {
+    "set217": [217, 206, 1],
+    "set131": [131, 126, 1],
+    "deduplicated_union": [224, 212, 1]
+  }
+}

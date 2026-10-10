@@ -1,0 +1,11 @@
+{
+  "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "bytes": 0,
+  "error": "HTTPSConnectionPool(host='base.blockscout.com', port=443): Read timed out. (read timeout=22)",
+  "finished": "2026-10-01T07:35:00.665209+00:00",
+  "key": "466747bbc450ce2bad6309a8aa3a8de663af3a2b931ea6aab7ec46298382a092",
+  "label": "v4_initialization_probe",
+  "payload": null,
+  "started": "2026-10-01T07:34:38.573164+00:00",
+  "url": "https://base.blockscout.com/api?module=logs&action=getLogs&fromBlock=0&toBlock=51429946&address=0x498581ff718922c3f8e6a244956af099b2652b2b&topic0=0xdd466e674ea557f56295e2d0218a125ea4b4f0f6f3307b95f85e6110838d6438&topic1=0x1f601b26422ccad68cd4d0f0c9de8bed20914a5bc752325b9714583d0eeb9db5&topic0_1_opr=and"
+}

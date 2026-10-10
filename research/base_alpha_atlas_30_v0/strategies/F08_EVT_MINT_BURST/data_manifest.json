@@ -1,0 +1,23 @@
+{
+  "strategy_id": "F08_EVT_MINT_BURST",
+  "data_class": "B_SMALL_BOUNDED_EXPORT_REQUIRED",
+  "required_tables_or_files": [
+    "mints_decoded"
+  ],
+  "required_columns": [
+    "pool",
+    "owner",
+    "time",
+    "amounts"
+  ],
+  "required_time_resolution": "event",
+  "point_in_time_requirements": "PIT",
+  "minimum_history": ">=30d",
+  "estimated_rows": "mints medium",
+  "estimated_read_bytes": "50-500MB",
+  "whether_current_diagnostics_may_support_it": "uncertain",
+  "whether_production_database_would_be_required": true,
+  "missing_data": [
+    "owner field presence"
+  ]
+}

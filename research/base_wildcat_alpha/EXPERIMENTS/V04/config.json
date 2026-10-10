@@ -1,0 +1,23 @@
+{
+  "alpha_id": "V04",
+  "family": "venue",
+  "hypothesis": "low-fee pools dominate calm regimes",
+  "mechanism": "fee segmentation contains a market-selection edge",
+  "venue": "Base V3",
+  "universe": "active observed pools",
+  "horizon": "4h",
+  "data_source": "V2/V3 and fee-tier metadata",
+  "experiment": "regime interaction",
+  "feature": "low_fee_calm",
+  "direction": 1,
+  "prediction_object": "cost-adjusted return",
+  "falsifier": "no net benefit after fee/slippage proxy",
+  "status": "NOT_YET_TESTED",
+  "sample_size": 0,
+  "gross_result": "pending",
+  "cost_adjusted_result": "pending",
+  "capacity": "pending",
+  "concentration": "pending",
+  "tail_risk": "pending",
+  "next_action": "run rapid screen"
+}

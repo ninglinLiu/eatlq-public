@@ -1,0 +1,24 @@
+{
+  "strategy_id": "F02_LP_POST_BURN_PRESSURE",
+  "data_class": "B_SMALL_BOUNDED_EXPORT_REQUIRED",
+  "required_tables_or_files": [
+    "uniswap_v3_burns_decoded",
+    "swaps"
+  ],
+  "required_columns": [
+    "pool_address",
+    "block_time",
+    "amount0",
+    "amount1"
+  ],
+  "required_time_resolution": "event+1m",
+  "point_in_time_requirements": "PIT",
+  "minimum_history": ">=30d",
+  "estimated_rows": "~1e5-1e6",
+  "estimated_read_bytes": "100MB-1GB",
+  "whether_current_diagnostics_may_support_it": "uncertain",
+  "whether_production_database_would_be_required": true,
+  "missing_data": [
+    "short execution path not in live executor buy-focused"
+  ]
+}

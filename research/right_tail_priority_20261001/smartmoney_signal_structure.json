@@ -1,0 +1,1155 @@
+{
+  "generated_at": "2026-10-01T12:49:33.611557+00:00",
+  "maximum_scheduled_concurrent_positions": 93,
+  "multiple_signal_tokens": 95,
+  "multiple_wallet_tokens": 44,
+  "n_signals": 441,
+  "n_tokens": 187,
+  "n_wallets": 11,
+  "not_claimed": [
+    "not actual capital required after fees, cash recycling and incomplete fills",
+    "not independent-event count",
+    "not cumulative-impact or portfolio PnL simulation"
+  ],
+  "peak_scheduled_gross_allocation_eth_raw": "930000000000000000",
+  "peak_scheduled_timestamp": 1790190155,
+  "qualification": "descriptive frozen 24h schedule only; assumes all signals open until fixed exit",
+  "single_signal_tokens": 92,
+  "token_signal_counts": [
+    {
+      "distinct_wallets": 3,
+      "maximum_scheduled_concurrent_positions": 19,
+      "signals": 24,
+      "token": "0xca7a1e31b36779cf32acb18714ab26982cf36b05"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 11,
+      "signals": 11,
+      "token": "0x60555ab88a0caaf893ab284c1332c9d0a05af222"
+    },
+    {
+      "distinct_wallets": 2,
+      "maximum_scheduled_concurrent_positions": 10,
+      "signals": 10,
+      "token": "0xb462a5039a540883508ee37b5cf3999647557ba3"
+    },
+    {
+      "distinct_wallets": 2,
+      "maximum_scheduled_concurrent_positions": 9,
+      "signals": 9,
+      "token": "0x346465a301078fbd45727c4c925e1c94be2e6520"
+    },
+    {
+      "distinct_wallets": 3,
+      "maximum_scheduled_concurrent_positions": 7,
+      "signals": 7,
+      "token": "0x2f5ab61870c9c5254eebd3e6361d3eb40181ac8e"
+    },
+    {
+      "distinct_wallets": 2,
+      "maximum_scheduled_concurrent_positions": 7,
+      "signals": 7,
+      "token": "0x5a3392371432da2fc0de18263b1fa2ffab8a5a01"
+    },
+    {
+      "distinct_wallets": 2,
+      "maximum_scheduled_concurrent_positions": 7,
+      "signals": 7,
+      "token": "0x882c8e35504d58979b1280fe76d6553f717029f8"
+    },
+    {
+      "distinct_wallets": 2,
+      "maximum_scheduled_concurrent_positions": 6,
+      "signals": 7,
+      "token": "0xb2000000000000000000004f6d4210eb5dee1c01"
+    },
+    {
+      "distinct_wallets": 3,
+      "maximum_scheduled_concurrent_positions": 6,
+      "signals": 6,
+      "token": "0x80210081479359b512f464058b2699cebe998579"
+    },
+    {
+      "distinct_wallets": 4,
+      "maximum_scheduled_concurrent_positions": 6,
+      "signals": 6,
+      "token": "0xb2000000000000000000001eb03f58a18f2add01"
+    },
+    {
+      "distinct_wallets": 2,
+      "maximum_scheduled_concurrent_positions": 6,
+      "signals": 6,
+      "token": "0xb2000000000000000000007294d401751e50af01"
+    },
+    {
+      "distinct_wallets": 4,
+      "maximum_scheduled_concurrent_positions": 6,
+      "signals": 6,
+      "token": "0xc830cae27d086334c791fbd456a4aea89628b301"
+    },
+    {
+      "distinct_wallets": 3,
+      "maximum_scheduled_concurrent_positions": 6,
+      "signals": 6,
+      "token": "0xe8ffba43711f1018aebb6d77cfd1ba52610a5ba3"
+    },
+    {
+      "distinct_wallets": 2,
+      "maximum_scheduled_concurrent_positions": 5,
+      "signals": 5,
+      "token": "0x798b24ba106188002ea1349654be2b0d515c7777"
+    },
+    {
+      "distinct_wallets": 2,
+      "maximum_scheduled_concurrent_positions": 5,
+      "signals": 5,
+      "token": "0x9e00fc92493451eba1c63dd3880d68b622037ba3"
+    },
+    {
+      "distinct_wallets": 3,
+      "maximum_scheduled_concurrent_positions": 5,
+      "signals": 5,
+      "token": "0xb20000000000000000000032988daaf97a007601"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 5,
+      "signals": 5,
+      "token": "0xb20000000000000000000075c458c031755df501"
+    },
+    {
+      "distinct_wallets": 3,
+      "maximum_scheduled_concurrent_positions": 5,
+      "signals": 5,
+      "token": "0xb200000000000000000000ad822dc9282ebe66ed"
+    },
+    {
+      "distinct_wallets": 2,
+      "maximum_scheduled_concurrent_positions": 5,
+      "signals": 5,
+      "token": "0xe3f4b833512f0bcb1467ee55e25804bbb8304ba3"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 5,
+      "signals": 5,
+      "token": "0xf1cdf5830d7e8f8c9d124413d50924b587214ba3"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 4,
+      "signals": 4,
+      "token": "0x07e61d8a4e197dfc269e90d7ece1df0d26702ba3"
+    },
+    {
+      "distinct_wallets": 3,
+      "maximum_scheduled_concurrent_positions": 4,
+      "signals": 4,
+      "token": "0x1685981068dc0ec45ee1d5a28ef051059e42a0f3"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 4,
+      "signals": 4,
+      "token": "0x2a7c66a4196d8a303bb9cfcec37ca7f60b0e75a4"
+    },
+    {
+      "distinct_wallets": 2,
+      "maximum_scheduled_concurrent_positions": 4,
+      "signals": 4,
+      "token": "0x4a6bab7dd66f72b92f8aed9caa18424f188566e7"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 4,
+      "signals": 4,
+      "token": "0x660f5d192e7eaf69ed3d202fee16516dbaf42ba3"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 4,
+      "signals": 4,
+      "token": "0x84b693350f768a91edf427fd898b109805689d01"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 4,
+      "signals": 4,
+      "token": "0x9f48a915db18df075d404adca210a7b50b647ba3"
+    },
+    {
+      "distinct_wallets": 2,
+      "maximum_scheduled_concurrent_positions": 4,
+      "signals": 4,
+      "token": "0xadd034ee7420c90ff3114088de419c521a43da1f"
+    },
+    {
+      "distinct_wallets": 4,
+      "maximum_scheduled_concurrent_positions": 4,
+      "signals": 4,
+      "token": "0xb2000000000000000000003729f57da496686101"
+    },
+    {
+      "distinct_wallets": 4,
+      "maximum_scheduled_concurrent_positions": 3,
+      "signals": 4,
+      "token": "0xb2000000000000000000003a867ccafc43fe4401"
+    },
+    {
+      "distinct_wallets": 2,
+      "maximum_scheduled_concurrent_positions": 4,
+      "signals": 4,
+      "token": "0xb2000000000000000000004edfbbf0b931852f23"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 4,
+      "signals": 4,
+      "token": "0xb20000000000000000000062c325b612d0e72a01"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 4,
+      "signals": 4,
+      "token": "0xb2000000000000000000006878ea987365043101"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 4,
+      "signals": 4,
+      "token": "0xb2000000000000000000008ee54d63459aa97f01"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 4,
+      "signals": 4,
+      "token": "0xb200000000000000000000f906830ca4ebd15701"
+    },
+    {
+      "distinct_wallets": 2,
+      "maximum_scheduled_concurrent_positions": 4,
+      "signals": 4,
+      "token": "0xde86c93e8bdf5d5c196957a6710e61f79451cba3"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 3,
+      "signals": 3,
+      "token": "0x03734ce416abf9387eb155bbf6b96fc650a79222"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 3,
+      "token": "0x0f61edbfe6cd86024c0f210c0695b08df55fdfc9"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 3,
+      "signals": 3,
+      "token": "0x366b11937eff8dfa59e347310a2f86e88821d222"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 3,
+      "signals": 3,
+      "token": "0x3f409e1c3ff63ebbb48fdcfabdfbca3f5a301819"
+    },
+    {
+      "distinct_wallets": 3,
+      "maximum_scheduled_concurrent_positions": 3,
+      "signals": 3,
+      "token": "0xb20000000000000000000002105014ef13e57401"
+    },
+    {
+      "distinct_wallets": 3,
+      "maximum_scheduled_concurrent_positions": 2,
+      "signals": 3,
+      "token": "0xb20000000000000000000007601dae8e778f5a01"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 3,
+      "signals": 3,
+      "token": "0xb2000000000000000000002ccf69e15d9a1b0d01"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 3,
+      "signals": 3,
+      "token": "0xb2000000000000000000002fccbcf79f4f42bc01"
+    },
+    {
+      "distinct_wallets": 2,
+      "maximum_scheduled_concurrent_positions": 3,
+      "signals": 3,
+      "token": "0xb20000000000000000000074e4706e56b073f001"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 3,
+      "signals": 3,
+      "token": "0xb2000000000000000000008aa7d3d9a63cc4eb01"
+    },
+    {
+      "distinct_wallets": 2,
+      "maximum_scheduled_concurrent_positions": 3,
+      "signals": 3,
+      "token": "0xb2000000000000000000008f22c09e8629873001"
+    },
+    {
+      "distinct_wallets": 2,
+      "maximum_scheduled_concurrent_positions": 3,
+      "signals": 3,
+      "token": "0xb200000000000000000000a6de88da913b1e9801"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 3,
+      "signals": 3,
+      "token": "0xb200000000000000000000c908d27d65cb10c501"
+    },
+    {
+      "distinct_wallets": 3,
+      "maximum_scheduled_concurrent_positions": 3,
+      "signals": 3,
+      "token": "0xb200000000000000000000cbfc2ed49379b17001"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 3,
+      "signals": 3,
+      "token": "0xb200000000000000000000da33c054fb496dc101"
+    },
+    {
+      "distinct_wallets": 2,
+      "maximum_scheduled_concurrent_positions": 3,
+      "signals": 3,
+      "token": "0xb200000000000000000000e0a273796a9a1aab01"
+    },
+    {
+      "distinct_wallets": 3,
+      "maximum_scheduled_concurrent_positions": 3,
+      "signals": 3,
+      "token": "0xb200000000000000000000e6a331992bd9eace01"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 3,
+      "signals": 3,
+      "token": "0xb200000000000000000000eed7fe31823dda0b20"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 3,
+      "signals": 3,
+      "token": "0xf1d41281eddd4cd2d3e3f7014f73b2a0c144fff1"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 2,
+      "signals": 3,
+      "token": "0xfc28f881426a2931ec01b7392fe7bd87de220222"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 2,
+      "signals": 2,
+      "token": "0x00000e7efa313f4e11bfff432471ed9423ac6b30"
+    },
+    {
+      "distinct_wallets": 2,
+      "maximum_scheduled_concurrent_positions": 2,
+      "signals": 2,
+      "token": "0x00859e4cf6141746376aab8b90b2eb65d38e0222"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 2,
+      "signals": 2,
+      "token": "0x08a9da206c41d2a79a0cb047c28c56d9b6787de0"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 2,
+      "signals": 2,
+      "token": "0x0cbf291ba052174879d90bf781df1a5f2bc5bb07"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 2,
+      "signals": 2,
+      "token": "0x17ccdc9f23c38dd392decb9872bcd423e751934c"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 2,
+      "signals": 2,
+      "token": "0x22ff60cde59273f6e373586d1c5168d464e39ba3"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 2,
+      "signals": 2,
+      "token": "0x243d1a5f47d352b667b90e03986700778a42f222"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 2,
+      "signals": 2,
+      "token": "0x2c1aa6957e45c7c1d87a626af6edc6fa19d96d19"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 2,
+      "signals": 2,
+      "token": "0x38b0f2c827808fc5ad1f9e1ba78388d55a342ba3"
+    },
+    {
+      "distinct_wallets": 2,
+      "maximum_scheduled_concurrent_positions": 2,
+      "signals": 2,
+      "token": "0x491c748d44b29b4a81145591de5a4f52617abba3"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 2,
+      "token": "0x4dcdf3451dfc114991283c2e5b72823d69882ba3"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 2,
+      "signals": 2,
+      "token": "0x57092eed9ebc3abb0dcdc48f53a412712ecdb38d"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 2,
+      "signals": 2,
+      "token": "0x65f8152809dd1fc0d5d8a345c9008d37b95f9ba3"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 2,
+      "signals": 2,
+      "token": "0x6666dd8d0a8889e41418141760753b69ab319ba3"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 2,
+      "signals": 2,
+      "token": "0x702b052a21ebb32a82475f406a21f8855032bba3"
+    },
+    {
+      "distinct_wallets": 2,
+      "maximum_scheduled_concurrent_positions": 2,
+      "signals": 2,
+      "token": "0x7e298d798656c03ec80f2a7843d0805103749ba3"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 2,
+      "signals": 2,
+      "token": "0x81aadbea7ef54d9b9f1cfaa3ee5be0782738e86c"
+    },
+    {
+      "distinct_wallets": 2,
+      "maximum_scheduled_concurrent_positions": 2,
+      "signals": 2,
+      "token": "0x86a706cd0288966b7004efe0f26cdb40ec367777"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 2,
+      "signals": 2,
+      "token": "0xb20000000000000000000000f3df8aafb42a7501"
+    },
+    {
+      "distinct_wallets": 2,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 2,
+      "token": "0xb20000000000000000000009cdb12aefd9830b01"
+    },
+    {
+      "distinct_wallets": 2,
+      "maximum_scheduled_concurrent_positions": 2,
+      "signals": 2,
+      "token": "0xb2000000000000000000003bbe817b71af004e01"
+    },
+    {
+      "distinct_wallets": 2,
+      "maximum_scheduled_concurrent_positions": 2,
+      "signals": 2,
+      "token": "0xb2000000000000000000003f17eb7e35a9f90601"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 2,
+      "signals": 2,
+      "token": "0xb20000000000000000000044ae9c51bf7a0e1c01"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 2,
+      "signals": 2,
+      "token": "0xb20000000000000000000046012e90119e505b01"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 2,
+      "signals": 2,
+      "token": "0xb20000000000000000000056da6b5ff705ba0701"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 2,
+      "signals": 2,
+      "token": "0xb20000000000000000000058f9f953d2dfff4201"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 2,
+      "signals": 2,
+      "token": "0xb2000000000000000000006fa33fedb16efe3501"
+    },
+    {
+      "distinct_wallets": 2,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 2,
+      "token": "0xb20000000000000000000070f6c1a66d7c1e4d01"
+    },
+    {
+      "distinct_wallets": 2,
+      "maximum_scheduled_concurrent_positions": 2,
+      "signals": 2,
+      "token": "0xb200000000000000000000874f97ee8ebf639701"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 2,
+      "signals": 2,
+      "token": "0xb2000000000000000000009e9869c7a065bf8d01"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 2,
+      "signals": 2,
+      "token": "0xb200000000000000000000e2c2f05b671c0b7f01"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 2,
+      "signals": 2,
+      "token": "0xb200000000000000000000e2f2fe8a3e7280d801"
+    },
+    {
+      "distinct_wallets": 2,
+      "maximum_scheduled_concurrent_positions": 2,
+      "signals": 2,
+      "token": "0xb200000000000000000000ee45d6cd5497e66501"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 2,
+      "signals": 2,
+      "token": "0xb200000000000000000000f9d3d1bb17b6201401"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 2,
+      "signals": 2,
+      "token": "0xb200000000000000000000fac1a85ab57681d601"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 2,
+      "signals": 2,
+      "token": "0xd34764827c5b725534611e5353adc522544d7777"
+    },
+    {
+      "distinct_wallets": 2,
+      "maximum_scheduled_concurrent_positions": 2,
+      "signals": 2,
+      "token": "0xe0a3487070bcafedae6cc9f54f2a78009b81f62d"
+    },
+    {
+      "distinct_wallets": 2,
+      "maximum_scheduled_concurrent_positions": 2,
+      "signals": 2,
+      "token": "0xeb148dedecf90ed4c824efa3f6ce486d15afcba3"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 2,
+      "signals": 2,
+      "token": "0xfca0f45092183e68b52cb2fcbd764735d28a7ba3"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0x0051aa0caa461df303ca7a0e8da41fe680361222"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0x0326ff7703ffc480e97305bfc0aeb5d31b477777"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0x0510ba6d2fa2836982a75ecb77f0ad8ce759d101"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0x187ca26376e8c4f7d9b2e0e1159436dccb5f8222"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0x21c0df05c2c84fb04c7f3339968b0dc216dd8222"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0x28c959b032de0657ac230a569ecdbba326731dd2"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0x28fc5012320c93b9a26f3cc7cc1dec0eb4ffdcec"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0x29e078514cdd107fdd640b4269dc987ec5117777"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0x2d196cc3618b4826a6730716afa29ca97815cd27"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0x2e1b965530cbe3d11c678e09359374ac12af9638"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0x30d0bdc3b62a19f9244172064e446cfc67007777"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0x3493401b7fce756dc0573bf216d3f20bb0aa54b8"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0x35f846fc802c0d51d24814891b9b05c566a25996"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0x387a5a64d2a756ee2e865ea2036481d138aae222"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0x387b7418b967fdc35f0e4bf2f994fb81562fe202"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0x3c573bdd88008c94f025e5023212f28e5f39744c"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0x3fb675d3facf5162503d4db8932830de3ef1fee1"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0x40dc7e4e018152fc25407c6b8fe5bc50d920fee1"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0x42c0d5c7e5a14e0cfec71de83c22efe28e5f5136"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0x46324147ce37f551faec752084f9b51e05a33425"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0x5012a910c4e9ef55ac20e21cdb2c0fb4acfe2e60"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0x519848b982c61d387a73366c9f2de43f62514907"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0x546be663eae68591f4bf9eb561b8f4236053fee1"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0x54a6f8c03632cecf96ec1de200513e05f7ef7301"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0x5c2435a2927a947b4b3eb38d870798435b84e905"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0x5dbcffbe9a8d2be5510c88bb4302fce3cf03ffb6"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0x667f5be66c0ad32da1470966c884f645ccc23ba3"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0x6ebaf6e1eed341249ee7c3d24efded86e2a8cda6"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0x8ca1c4cea1ded38269b18fa2d92e20cb719a3ba3"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0x984886be424cf698e95a2f84d013784a546ffb54"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0x9d9ffad38fcd670b0f7dc021bec9b084918526e6"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0x9f62b62cf8cc3aea56a3ce8808cf13503d1131e7"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0x9f8b110a1d599043a94a7ef09f128286a4ce1ba3"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xa03a8ed1492a9d3b507830f186ca417c84805307"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xa0afcb212001596fe073224f01c37615ac8a8b07"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xa2e492926e84ab13138db4acd8893a5b378111a1"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xa3b37c57bf6d95a2d19b5956c17017c8315187c0"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xa474be8f2c404a3dbbaa4e703d679aa188aa6757"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xa99b8a231a1ea9b9e636eaec679de85a0378aba3"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb20000000000000000000000c6f9024862c6fb01"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb2000000000000000000000859cfdeeb14aa4e01"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb20000000000000000000009836d02e61cc5ef01"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb2000000000000000000000b0a815fd8838d9f01"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb2000000000000000000000bd5fa1768c4c0ef01"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb20000000000000000000017b366767d3d8ff801"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb2000000000000000000002663002ba77f9e6f01"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb2000000000000000000003166b74ff9a5a6e001"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb200000000000000000000364e143be89dfc7001"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb20000000000000000000036a7bcf440a9e46901"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb20000000000000000000038e9bfc199d7e32301"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb200000000000000000000395f43892aeb8f2d01"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb2000000000000000000003eccc49433386b9a01"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb200000000000000000000497546f7c893f37401"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb200000000000000000000532befc89f02c9f301"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb2000000000000000000005c3130457551052401"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb20000000000000000000065ab7a516d7bb49d01"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb2000000000000000000006bb1f360f796576e01"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb20000000000000000000074f6cec5cd48891a01"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb2000000000000000000007790ed6e48e06ed935"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb2000000000000000000007ab5bf182b1f897401"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb200000000000000000000874ff75c5ebc653c01"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb2000000000000000000008be2aea2fd5d1bed01"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb2000000000000000000008be937d1978afc1201"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb2000000000000000000008cbe5a9bc5b6035801"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb2000000000000000000008fc7debd14e0029a01"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb2000000000000000000009b58ad4f11efabbae5"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb2000000000000000000009c08e92398e24ba501"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb2000000000000000000009fc0e6e7fd3823a701"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb200000000000000000000a38a08ad8dfbbdea01"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb200000000000000000000a4e3d33b7c9a174801"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb200000000000000000000ab49d2d33ceeb64301"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb200000000000000000000b1c85db99d1de6ef2a"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb200000000000000000000b44f0818672e0a7a01"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb200000000000000000000b892b1b627a7c1e18b"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb200000000000000000000bbdbefac1ee7ed7e01"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb200000000000000000000bed68cee2ae022df01"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb200000000000000000000c33bc9882d1b16e601"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb200000000000000000000cf9445581b367b1001"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb200000000000000000000e14c758b64972af601"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb200000000000000000000edb59a6e1e37285e01"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb200000000000000000000f99e5a1778a48d3801"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb200000000000000000000fa585878d4d738c101"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb200000000000000000000fca0ffdcd7cdcf3f01"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xb7f49a4555e6149f02a638c49a0b15fc57132ba3"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xbf93a042588c008c0488795790d9a19e479d260a"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xc119f2019deb838f57fb8e4e852777a6fcea76ef"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xcbd80c5d51567bac0fc6cb1bbf961461b8a62222"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xccfbe618dc28f3ede2cf1f84d77f67dda5727777"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xdedf1983105a1b3eb74d85240e9f1ea54298bba3"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xe24a0facc48f1d4543bcc32a0d0e11ec49ad4ba3"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xe72a0c42b584a3e7a4503a82d1337deb52ade885"
+    },
+    {
+      "distinct_wallets": 1,
+      "maximum_scheduled_concurrent_positions": 1,
+      "signals": 1,
+      "token": "0xf5eb51b827ad88160464ff669199842afc1d7777"
+    }
+  ],
+  "wallet_signal_counts": {
+    "0x0b3edd0d0bf7c6281a7f8ae5a5630defb94ae78e": 7,
+    "0x217946e128c1b9c7f8c3f16b33878a908713923a": 21,
+    "0x2ce9d43d1cba6ae31d7f07bfe0098dfa2d833373": 31,
+    "0x347ffc6db9acc54ac2019795173b9599e8b82bd9": 166,
+    "0x371903abb32f5f69b536b77495e92adedfea25da": 67,
+    "0x9631335762e3603d2a7507d84838aa3236d52745": 12,
+    "0xa05ec35f7d1eba823cff2ed26aeaed419683742f": 24,
+    "0xd569e570b94265e5ebc7df1990f99ee68d3f60a1": 7,
+    "0xdd6f338b91f40e5a02c468b7cb49cccc569a3134": 9,
+    "0xe28601398a5448d1147e6e8b0e0c6d686f0d216d": 43,
+    "0xfd7e55a555555c2f25053a38ec744de1afea4fa4": 54
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "buy": {
+    "amount_raw": "10000000000000000",
+    "base_fee_header_evidence": null,
+    "base_fee_wei": 5000000,
+    "block": 51955185,
+    "direction": "buy",
+    "evidence": {
+      "http_status": 200,
+      "key": "2f7827fee40414b964b1596be07829abf4a27e8c57a5472eb29c3efff823a4a7",
+      "rpc_error": null
+    },
+    "gas_model_note": "measured internal execution + intrinsic calldata + explicit 5000 dispatcher/return buffer; not a mined receipt",
+    "gas_model_units": 879126,
+    "intrinsic_gas": 23272,
+    "measured_internal_gas": 850854,
+    "received_raw": "81726220196031573974277483",
+    "simulation_context": "hypothetical executor with empty hookData; no persistent state change",
+    "spent_raw": "10000000000000000",
+    "status": "HISTORICAL_TRANSFER_SETTLED_SIMULATION",
+    "timestamp": 1790699717
+  },
+  "buy_fees": {
+    "assumptions": "historical base fee; 0.01 gwei tip; measured gas+intrinsic+5000; unsigned type-2 nonce 0 L1 fee estimate; excludes deployment and adverse transaction ordering",
+    "evidence": {
+      "http_status": 200,
+      "key": "41362487c2a8f2d4a03a856f2951006a5084b3821587b9ac8b68a4b9a869cb76",
+      "rpc_error": null
+    },
+    "gas_model_units": 879126,
+    "l1_fee_model_raw": "27046231821",
+    "l2_fee_model_raw": "13186890000000",
+    "operator_fee_model_raw": "0",
+    "priority_fee_assumption_wei": 10000000,
+    "total_fee_model_raw": "13213936231821"
+  },
+  "delay_seconds": 10,
+  "entry_delay_seconds_observed": 10.0,
+  "exit_policy": "24h",
+  "horizon_seconds_observed": 86400,
+  "input_eth_raw": "10000000000000000",
+  "modeled_net_eth_raw": "-6412083502955319",
+  "net_profit_certified": false,
+  "platform_fee_status": "NOT_SPECIFIED_SEPARATE_FROM_ONCHAIN_MODEL",
+  "sell": {
+    "amount_raw": "81726220196031573974277483",
+    "base_fee_header_evidence": null,
+    "base_fee_wei": 5000000,
+    "block": 51998385,
+    "direction": "sell",
+    "evidence": {
+      "http_status": 200,
+      "key": "0bb6aa62ff6036e548f81bb441087da7e966a02b2ead2c91c4777486e3da0bf8",
+      "rpc_error": null
+    },
+    "gas_model_note": "measured internal execution + intrinsic calldata + explicit 5000 dispatcher/return buffer; not a mined receipt",
+    "gas_model_units": 749047,
+    "intrinsic_gas": 23320,
+    "measured_internal_gas": 720727,
+    "received_raw": "3612374911123635",
+    "simulation_context": "hypothetical executor with empty hookData; no persistent state change",
+    "spent_raw": "81726220196031573974277483",
+    "status": "HISTORICAL_TRANSFER_SETTLED_SIMULATION",
+    "timestamp": 1790786117
+  },
+  "sell_fees": {
+    "assumptions": "historical base fee; 0.01 gwei tip; measured gas+intrinsic+5000; unsigned type-2 nonce 0 L1 fee estimate; excludes deployment and adverse transaction ordering",
+    "evidence": {
+      "http_status": 200,
+      "key": "2976a40b6f105e0074aa7de2eccfb7a4bfd978b2f75bc72366b961efaf358bd4",
+      "rpc_error": null
+    },
+    "gas_model_units": 749047,
+    "l1_fee_model_raw": "8772847133",
+    "l2_fee_model_raw": "11235705000000",
+    "operator_fee_model_raw": "0",
+    "priority_fee_assumption_wei": 10000000,
+    "total_fee_model_raw": "11244477847133"
+  },
+  "settled_before_gas_pnl_raw": "-6387625088876365",
+  "slot_evidence": {
+    "access_list_evidence": {
+      "http_status": 200,
+      "key": "100b89968e33d75061c24634fb32d0acf31ad196d630df4130b9b0bb0b3e2b34",
+      "rpc_error": null
+    },
+    "attempts": [
+      {
+        "http_status": 200,
+        "key": "8ebaf7190f7e7e70b75f3ba7f8d8ca9e139b02ad25074f6705a39f96f731c3b0",
+        "rpc_error": null
+      }
+    ],
+    "block": 51998327,
+    "detector_version": 2,
+    "layout_source": null,
+    "slot": "0xd00ced045bcf2bfe38b645f793d68b62752e786bd6033ecd330ac868ff4b88cb",
+    "token": "0xf1cdf5830d7e8f8c9d124413d50924b587214ba3"
+  },
+  "source_block": 51955180,
+  "source_tx": "0x5a8ce911be3b0768ca5df81183409da5c701d99d07112b4974e3a9d5aaaeb7e7",
+  "status": "CONDITIONAL_EXECUTION_COST_MODEL",
+  "token": "0xf1cdf5830d7e8f8c9d124413d50924b587214ba3",
+  "wallet": "0x347ffc6db9acc54ac2019795173b9599e8b82bd9"
+}

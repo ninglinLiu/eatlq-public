@@ -1,0 +1,8 @@
+from __future__ import annotations
+
+import math
+
+WETH = "0x4200000000000000000000000000000000000006"
+SPEND_ETH = 0.02
+SPEND_WEI = int(SPEND_ETH * 1e18)
+FRIC_FLOOR = -0.10

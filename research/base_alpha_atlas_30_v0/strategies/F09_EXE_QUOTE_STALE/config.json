@@ -1,0 +1,36 @@
+{
+  "strategy_id": "F09_EXE_QUOTE_STALE",
+  "family": "F09",
+  "name": "Stale quote recovery",
+  "parameter_search_space": {
+    "g_sec": [
+      15,
+      30,
+      60
+    ],
+    "x": [
+      0.01,
+      0.02,
+      0.05
+    ],
+    "hold_sec": [
+      30,
+      120
+    ],
+    "stop_ret": [
+      0.05,
+      0.1
+    ],
+    "tp_ret": [
+      0.005,
+      0.02
+    ]
+  },
+  "param_combo_count": 72,
+  "access_flags": {
+    "database_access_enabled": false,
+    "rpc_access_enabled": false,
+    "large_file_access_enabled": false,
+    "backtest_enabled": false
+  }
+}

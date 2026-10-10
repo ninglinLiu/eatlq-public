@@ -1,0 +1,270 @@
+{
+  "generated_at": "2026-10-01T12:48:00.107362+00:00",
+  "limits": "no copier authorisation acquired, no signature reuse, no gate modified, no alternative entry timing searched",
+  "n": 7,
+  "n_active_gate": 3,
+  "official_abi_evidence": "6a080856f8470dd9b460c2788bbb09a2a1d0752f97b915a347b8edbe04982b45",
+  "official_deployment_evidence": "f151c012f258217044444eaf15a83dc856172ddfa96defc3fec6e87ca88ad4ca",
+  "official_sources": [
+    "https://raw.githubusercontent.com/flayerlabs/flaunchgg-contracts/main/abi/SpendGatedSignerFeeCalculator.json",
+    "https://raw.githubusercontent.com/flayerlabs/flaunchgg-contracts/main/README.md"
+  ],
+  "rows": [
+    {
+      "calculator": "0x91938a66323725252043c03ad3066542ac793057",
+      "classification": "AUTHORIZATION_CONTEXT_REQUIRED_NOT_AVAILABLE_TO_THIS_EXECUTOR",
+      "enabled": true,
+      "ends_at": 1790179510,
+      "entry_block": 51695023,
+      "evidence": {
+        "http_status": 200,
+        "key": "559f32c3c840c5f6e167a4e3510adc21907e0f145f928b6d52739ec1cf37a0c5",
+        "rpc_error": null
+      },
+      "gate_active_at_modeled_entry": true,
+      "pool_id": "0x326d5a955eaa2973a4ab7b7582f15959c3aa4d355c6f81c466494655e6cac5c3",
+      "research_executor_approved": false,
+      "settler": "0xb0fb28d808a7604c446623a6ccaf04f839f2a750",
+      "source_authorization": {
+        "buyer": "0xe28601398a5448d1147e6e8b0e0c6d686f0d216d",
+        "buyer_matches_source_wallet": true,
+        "copier_signature_available": false,
+        "deadline": 1790179810,
+        "pool_id": "0x326d5a955eaa2973a4ab7b7582f15959c3aa4d355c6f81c466494655e6cac5c3",
+        "pool_id_matches_route": true,
+        "signature_bytes": 65,
+        "signature_validity": "source transaction succeeded; not independently cryptographically verified",
+        "spend_ceiling_raw": "26366666666661657",
+        "status": "DECODED_SOURCE_AUTHORIZATION_FIELDS"
+      },
+      "source_block": 51695018,
+      "source_router_approved": true,
+      "source_spend_recorded_events": [
+        {
+          "buyer": "0xe28601398a5448d1147e6e8b0e0c6d686f0d216d",
+          "data": "0x326d5a955eaa2973a4ab7b7582f15959c3aa4d355c6f81c466494655e6cac5c3000000000000000000000000000000000000000000000000005dac57f893d719",
+          "emitter": "0x91938a66323725252043c03ad3066542ac793057"
+        }
+      ],
+      "source_tx": "0xbcc3af9ddbcdb8a00e7e1f70e05d21f833de3fecc9d04876828c588876f8ebc0",
+      "token": "0x2f5ab61870c9c5254eebd3e6361d3eb40181ac8e",
+      "trusted_signer": "0xb0fb28d808a7604c446623a6ccaf04f839f2a750",
+      "trusted_signer_enabled": true,
+      "wallet": "0xe28601398a5448d1147e6e8b0e0c6d686f0d216d",
+      "wallet_cap_raw": "150000000000000000"
+    },
+    {
+      "calculator": "0x91938a66323725252043c03ad3066542ac793057",
+      "classification": "AUTHORIZATION_CONTEXT_REQUIRED_NOT_AVAILABLE_TO_THIS_EXECUTOR",
+      "enabled": true,
+      "ends_at": 1790179510,
+      "entry_block": 51695066,
+      "evidence": {
+        "http_status": 200,
+        "key": "adaec201334f800280959d1474c8db775db09e597f2d8eb30891a0f4bd67a905",
+        "rpc_error": null
+      },
+      "gate_active_at_modeled_entry": true,
+      "pool_id": "0x326d5a955eaa2973a4ab7b7582f15959c3aa4d355c6f81c466494655e6cac5c3",
+      "research_executor_approved": false,
+      "settler": "0xb0fb28d808a7604c446623a6ccaf04f839f2a750",
+      "source_authorization": {
+        "buyer": "0xe28601398a5448d1147e6e8b0e0c6d686f0d216d",
+        "buyer_matches_source_wallet": true,
+        "copier_signature_available": false,
+        "deadline": 1790179810,
+        "pool_id": "0x326d5a955eaa2973a4ab7b7582f15959c3aa4d355c6f81c466494655e6cac5c3",
+        "pool_id_matches_route": true,
+        "signature_bytes": 65,
+        "signature_validity": "source transaction succeeded; not independently cryptographically verified",
+        "spend_ceiling_raw": "41014814814807022",
+        "status": "DECODED_SOURCE_AUTHORIZATION_FIELDS"
+      },
+      "source_block": 51695061,
+      "source_router_approved": true,
+      "source_spend_recorded_events": [
+        {
+          "buyer": "0xe28601398a5448d1147e6e8b0e0c6d686f0d216d",
+          "data": "0x326d5a955eaa2973a4ab7b7582f15959c3aa4d355c6f81c466494655e6cac5c300000000000000000000000000000000000000000000000000340a69c2fcccd5",
+          "emitter": "0x91938a66323725252043c03ad3066542ac793057"
+        }
+      ],
+      "source_tx": "0xc6b08b267f5df8bc6df0009f09c339c6bbaa491af98b834f17aeefad1d47b3f5",
+      "token": "0x2f5ab61870c9c5254eebd3e6361d3eb40181ac8e",
+      "trusted_signer": "0xb0fb28d808a7604c446623a6ccaf04f839f2a750",
+      "trusted_signer_enabled": true,
+      "wallet": "0xe28601398a5448d1147e6e8b0e0c6d686f0d216d",
+      "wallet_cap_raw": "150000000000000000"
+    },
+    {
+      "calculator": "0x91938a66323725252043c03ad3066542ac793057",
+      "classification": "AUTHORIZATION_CONTEXT_REQUIRED_NOT_AVAILABLE_TO_THIS_EXECUTOR",
+      "enabled": true,
+      "ends_at": 1790179510,
+      "entry_block": 51695076,
+      "evidence": {
+        "http_status": 200,
+        "key": "2d3a6065a1c1a4320f3ccc5607db81b4100c0821b7fb1ec2766c9a5566e775d9",
+        "rpc_error": null
+      },
+      "gate_active_at_modeled_entry": true,
+      "pool_id": "0x326d5a955eaa2973a4ab7b7582f15959c3aa4d355c6f81c466494655e6cac5c3",
+      "research_executor_approved": false,
+      "settler": "0xb0fb28d808a7604c446623a6ccaf04f839f2a750",
+      "source_authorization": {
+        "buyer": "0x371903abb32f5f69b536b77495e92adedfea25da",
+        "buyer_matches_source_wallet": true,
+        "copier_signature_available": false,
+        "deadline": 1790179810,
+        "pool_id": "0x326d5a955eaa2973a4ab7b7582f15959c3aa4d355c6f81c466494655e6cac5c3",
+        "pool_id_matches_route": true,
+        "signature_bytes": 65,
+        "signature_validity": "source transaction succeeded; not independently cryptographically verified",
+        "spend_ceiling_raw": "104288888888869074",
+        "status": "DECODED_SOURCE_AUTHORIZATION_FIELDS"
+      },
+      "source_block": 51695071,
+      "source_router_approved": true,
+      "source_spend_recorded_events": [
+        {
+          "buyer": "0x371903abb32f5f69b536b77495e92adedfea25da",
+          "data": "0x326d5a955eaa2973a4ab7b7582f15959c3aa4d355c6f81c466494655e6cac5c300000000000000000000000000000000000000000000000001728231203dc0d2",
+          "emitter": "0x91938a66323725252043c03ad3066542ac793057"
+        }
+      ],
+      "source_tx": "0xa08953e1ac5ccfd8faa5dc21ec7f5bec4d2909f16cae44289d7f4fc452ceecc2",
+      "token": "0x2f5ab61870c9c5254eebd3e6361d3eb40181ac8e",
+      "trusted_signer": "0xb0fb28d808a7604c446623a6ccaf04f839f2a750",
+      "trusted_signer_enabled": true,
+      "wallet": "0x371903abb32f5f69b536b77495e92adedfea25da",
+      "wallet_cap_raw": "150000000000000000"
+    },
+    {
+      "calculator": "0x91938a66323725252043c03ad3066542ac793057",
+      "classification": "GATE_NOT_ACTIVE_OR_VIEW_UNRESOLVED",
+      "enabled": true,
+      "ends_at": 1790179510,
+      "entry_block": 51695085,
+      "evidence": {
+        "http_status": 200,
+        "key": "039ed0cabe16222b1e0e9e91c6c9511c6b877920b78ed8e6127cb50d6ad4f4bd",
+        "rpc_error": null
+      },
+      "gate_active_at_modeled_entry": false,
+      "pool_id": "0x326d5a955eaa2973a4ab7b7582f15959c3aa4d355c6f81c466494655e6cac5c3",
+      "research_executor_approved": false,
+      "settler": "0xb0fb28d808a7604c446623a6ccaf04f839f2a750",
+      "source_authorization": {
+        "buyer": "0xe28601398a5448d1147e6e8b0e0c6d686f0d216d",
+        "buyer_matches_source_wallet": true,
+        "copier_signature_available": false,
+        "deadline": 1790179810,
+        "pool_id": "0x326d5a955eaa2973a4ab7b7582f15959c3aa4d355c6f81c466494655e6cac5c3",
+        "pool_id_matches_route": true,
+        "signature_bytes": 65,
+        "signature_validity": "source transaction succeeded; not independently cryptographically verified",
+        "spend_ceiling_raw": "55662962962952387",
+        "status": "DECODED_SOURCE_AUTHORIZATION_FIELDS"
+      },
+      "source_block": 51695080,
+      "source_router_approved": true,
+      "source_spend_recorded_events": [
+        {
+          "buyer": "0xe28601398a5448d1147e6e8b0e0c6d686f0d216d",
+          "data": "0x326d5a955eaa2973a4ab7b7582f15959c3aa4d355c6f81c466494655e6cac5c300000000000000000000000000000000000000000000000000340a69c2fcccd5",
+          "emitter": "0x91938a66323725252043c03ad3066542ac793057"
+        }
+      ],
+      "source_tx": "0xa4dbeedf8c645274dc37ca8d1f8051dd8def4b6f1099ea87f2fc83312b31f371",
+      "token": "0x2f5ab61870c9c5254eebd3e6361d3eb40181ac8e",
+      "trusted_signer": "0xb0fb28d808a7604c446623a6ccaf04f839f2a750",
+      "trusted_signer_enabled": true,
+      "wallet": "0xe28601398a5448d1147e6e8b0e0c6d686f0d216d",
+      "wallet_cap_raw": "150000000000000000"
+    },
+    {
+      "calculator": "0x91938a66323725252043c03ad3066542ac793057",
+      "classification": "GATE_NOT_ACTIVE_OR_VIEW_UNRESOLVED",
+      "enabled": true,
+      "ends_at": 1790179510,
+      "entry_block": 51695087,
+      "evidence": {
+        "http_status": 200,
+        "key": "48610b495acc238babb982993d3d60829f1d007ce7f70f376211b186e2f3f21c",
+        "rpc_error": null
+      },
+      "gate_active_at_modeled_entry": false,
+      "pool_id": "0x326d5a955eaa2973a4ab7b7582f15959c3aa4d355c6f81c466494655e6cac5c3",
+      "research_executor_approved": false,
+      "settler": "0xb0fb28d808a7604c446623a6ccaf04f839f2a750",
+      "source_authorization": {
+        "status": "UNSUPPORTED_SOURCE_CALL_ENCODING"
+      },
+      "source_block": 51695082,
+      "source_router_approved": false,
+      "source_spend_recorded_events": [],
+      "source_tx": "0x5c0d93678c9b8f9016991833f77129909804640878c87732ca332e32f437dc1a",
+      "token": "0x2f5ab61870c9c5254eebd3e6361d3eb40181ac8e",
+      "trusted_signer": "0xb0fb28d808a7604c446623a6ccaf04f839f2a750",
+      "trusted_signer_enabled": true,
+      "wallet": "0xe28601398a5448d1147e6e8b0e0c6d686f0d216d",
+      "wallet_cap_raw": "150000000000000000"
+    },
+    {
+      "calculator": "0x91938a66323725252043c03ad3066542ac793057",
+      "classification": "GATE_NOT_ACTIVE_OR_VIEW_UNRESOLVED",
+      "enabled": true,
+      "ends_at": 1790179510,
+      "entry_block": 51695100,
+      "evidence": {
+        "http_status": 200,
+        "key": "d27ea9a7ee2752dd15f5bdb8fe6a15db3c98aaea24e2814673f593e88ae110ed",
+        "rpc_error": null
+      },
+      "gate_active_at_modeled_entry": false,
+      "pool_id": "0x326d5a955eaa2973a4ab7b7582f15959c3aa4d355c6f81c466494655e6cac5c3",
+      "research_executor_approved": false,
+      "settler": "0xb0fb28d808a7604c446623a6ccaf04f839f2a750",
+      "source_authorization": {
+        "status": "UNSUPPORTED_SOURCE_CALL_ENCODING"
+      },
+      "source_block": 51695095,
+      "source_router_approved": false,
+      "source_spend_recorded_events": [],
+      "source_tx": "0xe9544046415eeee56287fa2911fbe03add9a96ac318f7aaf8ec534044d30b5ae",
+      "token": "0x2f5ab61870c9c5254eebd3e6361d3eb40181ac8e",
+      "trusted_signer": "0xb0fb28d808a7604c446623a6ccaf04f839f2a750",
+      "trusted_signer_enabled": true,
+      "wallet": "0x347ffc6db9acc54ac2019795173b9599e8b82bd9",
+      "wallet_cap_raw": "150000000000000000"
+    },
+    {
+      "calculator": "0x91938a66323725252043c03ad3066542ac793057",
+      "classification": "GATE_NOT_ACTIVE_OR_VIEW_UNRESOLVED",
+      "enabled": true,
+      "ends_at": 1790179510,
+      "entry_block": 51705275,
+      "evidence": {
+        "http_status": 200,
+        "key": "3fd6b99576bd733e3e83f385f8a0dc96c0c4f127db20731168e51b82fe71b0e2",
+        "rpc_error": null
+      },
+      "gate_active_at_modeled_entry": false,
+      "pool_id": "0x326d5a955eaa2973a4ab7b7582f15959c3aa4d355c6f81c466494655e6cac5c3",
+      "research_executor_approved": false,
+      "settler": "0xb0fb28d808a7604c446623a6ccaf04f839f2a750",
+      "source_authorization": {
+        "status": "UNSUPPORTED_SOURCE_CALL_ENCODING"
+      },
+      "source_block": 51705270,
+      "source_router_approved": false,
+      "source_spend_recorded_events": [],
+      "source_tx": "0xba587e8a28817d79c784e5acc13c3d7eed02a86423afab628718448ad4cf084c",
+      "token": "0x2f5ab61870c9c5254eebd3e6361d3eb40181ac8e",
+      "trusted_signer": "0xb0fb28d808a7604c446623a6ccaf04f839f2a750",
+      "trusted_signer_enabled": true,
+      "wallet": "0x371903abb32f5f69b536b77495e92adedfea25da",
+      "wallet_cap_raw": "150000000000000000"
+    }
+  ]
+}

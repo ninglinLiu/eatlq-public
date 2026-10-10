@@ -1,0 +1,41 @@
+{
+  "created_utc": "2026-07-20T05:30:27Z",
+  "primary_bucket": "15-60m",
+  "n_pools_universe": 4332,
+  "n_early_swaps": 1393965,
+  "panel_path": "/root/base_greenfield_directional_v0/out/panel/greenfield_panel_15-60m.parquet",
+  "n_panel_rows": 2399,
+  "eligibility": "PIT: pool exists, age in bucket, >=6 pre minutes, buy&sell in prior 10m, liq>0",
+  "forbidden": "No future quote/priced_ok/survival filters",
+  "sample_supply": {
+    "5-15m": {
+      "n_rows": 3838,
+      "n_pools": 1306
+    },
+    "15-60m": {
+      "n_rows": 2399,
+      "n_pools": 764,
+      "n_decision_times": 2393,
+      "split_counts": {
+        "DEV": 1440,
+        "SEALED_HOLDOUT": 480,
+        "LABEL_DESIGN": 479
+      }
+    },
+    "1-6h": {
+      "n_rows": 4936,
+      "n_pools": 1704
+    },
+    "6-24h": {
+      "n_rows": 5248,
+      "n_pools": 1751,
+      "coverage_note": "early_swap_export_9h_insufficient; counts are lower bound / incomplete"
+    },
+    "1-7d": {
+      "n_rows": 5253,
+      "n_pools": 1751,
+      "coverage_note": "early_swap_export_9h_insufficient; counts are lower bound / incomplete"
+    }
+  },
+  "keystone_universe_used": false
+}

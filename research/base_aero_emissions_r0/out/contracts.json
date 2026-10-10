@@ -1,0 +1,296 @@
+{
+  "chain": {
+    "name": "Base mainnet",
+    "chain_id": 8453,
+    "verified_by": "eth_chainId via the archive RPC returned 0x2105 (8453)"
+  },
+  "core_contracts": {
+    "Voter": {
+      "address": "0x16613524e02ad97eDfeF371bC883F2F5d6C480A5",
+      "role": "pool -> gauge registry (gauges/poolForGauge), vote tallying, weekly emission routing to gauges",
+      "sources": [
+        "https://github.com/aerodrome-finance/docs/blob/main/content/security.mdx",
+        "https://basescan.org/address/0x16613524e02ad97eDfeF371bC883F2F5d6C480A5"
+      ],
+      "onchain_verification": {
+        "minter()": "0xeb018363f0a9af8f91f06fee6613a751b2a33fe5",
+        "ve()": "0xebf418fe2512e7e6bd9b87a8f0f294acdc67e6b4",
+        "factoryRegistry()": "0x5c3f18f06cc09ca1910767a34a20f771039e37c0"
+      }
+    },
+    "Minter": {
+      "address": "0xeB018363F0a9Af8f91F06FEe6613a751b2A33FE5",
+      "role": "weekly AERO emission schedule (updatePeriod, weekly(), Mint event)",
+      "sources": [
+        "https://github.com/aerodrome-finance/docs/blob/main/content/security.mdx",
+        "https://github.com/aerodrome-finance/contracts/blob/main/contracts/interfaces/IMinter.sol"
+      ],
+      "onchain_verification": {
+        "aero()": "0x940181a94a35a4569e4529a3cdfb74e38fd98631",
+        "voter()": "0x16613524e02ad97edfef371bc883f2f5d6c480a5",
+        "ve()": "0xebf418fe2512e7e6bd9b87a8f0f294acdc67e6b4"
+      }
+    },
+    "AERO": {
+      "address": "0x940181a94A35A4569E4529A3CDfB74e38FD98631",
+      "decimals": 18,
+      "symbol": "AERO",
+      "sources": [
+        "https://github.com/aerodrome-finance/docs/blob/main/content/security.mdx"
+      ],
+      "onchain_verification": {
+        "minter()": "0xeb018363f0a9af8f91f06fee6613a751b2a33fe5"
+      }
+    },
+    "VotingEscrow (veAERO)": {
+      "address": "0xeBf418Fe2512e7E6bd9b87a8F0f294aCDC67e6B4",
+      "sources": [
+        "https://github.com/aerodrome-finance/docs/blob/main/content/security.mdx"
+      ],
+      "onchain_verification": {
+        "token()": "0x940181a94a35a4569e4529a3cdfb74e38fd98631",
+        "voter()": "0x16613524e02ad97edfef371bc883f2f5d6c480a5"
+      }
+    },
+    "FactoryRegistry": {
+      "address": "0x5C3F18F06CC09CA1910767A34a20F771039E37C0",
+      "sources": [
+        "https://github.com/aerodrome-finance/docs/blob/main/content/security.mdx"
+      ]
+    }
+  },
+  "verification_method": "Addresses were taken from the Aerodrome docs repo (security.mdx) and the Slipstream README, then confirmed by reciprocal on-chain eth_call: every contract points back at the others (Voter.minter()==Minter, Voter.ve()==VE, Minter.aero()==AERO, Minter.voter()==Voter, VE.token()==AERO, VE.voter()==Voter, AERO.minter()==Minter). A set of addresses that all reference each other cannot be a copied-from-a-blog mistake.",
+  "slipstream_cl_deployments": [
+    {
+      "CLGaugeFactory": "0xd30677bd8dd15132f251cb54cbda552d2a05fb08",
+      "CLGaugeImplementation": "0xf5601f95708256a118ef5971820327f362442d2d",
+      "CLFactory_pool_factory": "0x5e7bb104d84c7cb9b682aac2f3d509f5f406809a",
+      "NonfungiblePositionManager": "0x827922686190790b37229fd06084350e74485b72",
+      "voter_on_factory": "0x16613524e02ad97edfef371bc883f2f5d6c480a5",
+      "gauges_in_our_panel": 132
+    },
+    {
+      "CLGaugeFactory": "0x385293cae378c813f16f0c1334d774adddf56abb",
+      "CLGaugeImplementation": "0x434bccab043311a20b16021c137ea81702790f7b",
+      "CLFactory_pool_factory": "0xf8f2eb4940cfe7d13603dddd87f123820fc061ef",
+      "NonfungiblePositionManager": "0xe1f8cd9ac4e4a65f54f38a5cdafca44f6dd68b53",
+      "voter_on_factory": "0x16613524e02ad97edfef371bc883f2f5d6c480a5",
+      "gauges_in_our_panel": 15
+    },
+    {
+      "CLGaugeFactory": "0xb630227a79707d517320b6c0f885806389dfcbb3",
+      "CLGaugeImplementation": "0xc0d2086b6f70c0c40423626167096c6196cfa0c8",
+      "CLFactory_pool_factory": "0xade65c38cd4849adba595a4323a8c7ddfe89716a",
+      "NonfungiblePositionManager": "0xa990c6a764b73bf43cee5bb40339c3322fb9d55f",
+      "voter_on_factory": "0x16613524e02ad97edfef371bc883f2f5d6c480a5",
+      "gauges_in_our_panel": 10
+    }
+  ],
+  "emission_redistributors": {
+    "note": "CL gauges receive AERO from more than just the Voter. These contracts call CLGauge.notifyRewardWithoutClaim and are the reason Voter.DistributeReward != gauge NotifyReward for some gauges.",
+    "0xee5b3c7b333e2870b746b3b2b168ef0958e55e15": {
+      "label": "Redistributor for CLGaugeFactory 0x385293Ca...",
+      "onchain": {
+        "voter()": "0x16613524e02ad97edfef371bc883f2f5d6c480a5",
+        "minter()": "0xeb018363f0a9af8f91f06fee6613a751b2a33fe5",
+        "rewardToken()": "0x940181a94a35a4569e4529a3cdfb74e38fd98631",
+        "gaugeFactory()": "0x385293cae378c813f16f0c1334d774adddf56abb",
+        "owner()": "0xe6a41fe61e7a1996b59d508661e3f524d6a32075"
+      },
+      "source": "https://github.com/aerodrome-finance/slipstream/blob/main/README.md"
+    },
+    "0x11a53f31bf406de59fcf9613e1922bd3e283a4b4": {
+      "label": "Redistributor for CLGaugeFactory 0xB630227a...",
+      "onchain": {
+        "voter()": "0x16613524e02ad97edfef371bc883f2f5d6c480a5",
+        "minter()": "0xeb018363f0a9af8f91f06fee6613a751b2a33fe5",
+        "rewardToken()": "0x940181a94a35a4569e4529a3cdfb74e38fd98631",
+        "gaugeFactory()": "0xb630227a79707d517320b6c0f885806389dfcbb3",
+        "owner()": "0xe6a41fe61e7a1996b59d508661e3f524d6a32075"
+      },
+      "source": "discovered from NotifyReward log senders; identity confirmed on-chain"
+    },
+    "0xe6a41fe61e7a1996b59d508661e3f524d6a32075": {
+      "label": "owner of both Redistributors; directly notified 2 gauges in panel",
+      "source": "discovered from NotifyReward log senders"
+    }
+  },
+  "event_topics": {
+    "how_computed": "topic0 = keccak256(canonical signature string). Each value was computed TWICE and required to agree: (1) `cast keccak '<sig>'` from Foundry, and (2) a from-scratch pure-Python Keccak-f[1600] implementation written for this task, self-tested against the known vector keccak256('') = 0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470. Canonical signatures were read from the Solidity interfaces in the Aerodrome repos, NOT from blog posts -- this caught a real error: GaugeCreated takes 8 address args (trailing `creator`), and the 7-arg hash returns zero logs.",
+    "signatures": [
+      {
+        "contract": "CLGauge",
+        "signature": "NotifyReward(address,uint256)",
+        "topic0": "0x095667752957714306e1a6ad83495404412df6fdb932fca6dc849a7ee910d4c1",
+        "indexed": [
+          "from"
+        ],
+        "data": [
+          "amount (uint256, 18dp AERO)"
+        ],
+        "abi_source": "https://github.com/aerodrome-finance/slipstream/blob/main/contracts/gauge/interfaces/ICLGauge.sol",
+        "used_for": "primary emissions source (census.aero_emissions)"
+      },
+      {
+        "contract": "CLGauge",
+        "signature": "Deposit(address,uint256,uint128)",
+        "topic0": "0x1c8ab8c7f45390d58f58f1d655213a82cca5d12179761a87c16f098813b8f211",
+        "indexed": [
+          "user",
+          "tokenId",
+          "liquidityToStake"
+        ],
+        "data": [],
+        "abi_source": "https://github.com/aerodrome-finance/slipstream/blob/main/contracts/gauge/interfaces/ICLGauge.sol",
+        "used_for": "NFT position staked into gauge (stake flow)"
+      },
+      {
+        "contract": "CLGauge",
+        "signature": "Withdraw(address,uint256,uint128)",
+        "topic0": "0x8903a5b5d08a841e7f68438387f1da20c84dea756379ed37e633ff3854b99b84",
+        "indexed": [
+          "user",
+          "tokenId",
+          "liquidityToStake"
+        ],
+        "data": [],
+        "abi_source": "https://github.com/aerodrome-finance/slipstream/blob/main/contracts/gauge/interfaces/ICLGauge.sol",
+        "used_for": "NFT position unstaked (stake flow)"
+      },
+      {
+        "contract": "CLGauge",
+        "signature": "ClaimRewards(address,uint256)",
+        "topic0": "0x1f89f96333d3133000ee447473151fa9606543368f02271c9d95ae14f13bcc67",
+        "indexed": [
+          "from"
+        ],
+        "data": [
+          "amount"
+        ],
+        "abi_source": "https://github.com/aerodrome-finance/slipstream/blob/main/contracts/gauge/interfaces/ICLGauge.sol",
+        "used_for": "AERO actually claimed by LPs"
+      },
+      {
+        "contract": "CLGauge",
+        "signature": "ClaimFees(address,uint256,uint256)",
+        "topic0": "0xbc567d6cbad26368064baa0ab5a757be46aae4d70f707f9203d9d9b6c8ccbfa3",
+        "indexed": [
+          "from"
+        ],
+        "abi_source": "https://github.com/aerodrome-finance/slipstream/blob/main/contracts/gauge/interfaces/ICLGauge.sol"
+      },
+      {
+        "contract": "Voter",
+        "signature": "DistributeReward(address,address,uint256)",
+        "topic0": "0x4fa9693cae526341d334e2862ca2413b2e503f1266255f9e0869fb36e6d89b17",
+        "indexed": [
+          "sender",
+          "gauge"
+        ],
+        "data": [
+          "amount"
+        ],
+        "abi_source": "https://github.com/aerodrome-finance/contracts/blob/main/contracts/interfaces/IVoter.sol",
+        "used_for": "protocol-wide weekly emission total across ALL gauges"
+      },
+      {
+        "contract": "Voter",
+        "signature": "GaugeCreated(address,address,address,address,address,address,address,address)",
+        "topic0": "0xef9f7d1ffff3b249c6b9bf2528499e935f7d96bb6d6ec4e7da504d1d3c6279e1",
+        "indexed": [
+          "poolFactory",
+          "votingRewardsFactory",
+          "gaugeFactory"
+        ],
+        "data": [
+          "pool",
+          "bribeVotingReward",
+          "feeVotingReward",
+          "gauge",
+          "creator"
+        ],
+        "abi_source": "https://github.com/aerodrome-finance/contracts/blob/main/contracts/interfaces/IVoter.sol",
+        "used_for": "independent verification of the pool->gauge map"
+      },
+      {
+        "contract": "Voter",
+        "signature": "Voted(address,address,uint256,uint256,uint256,uint256)",
+        "topic0": "0x452d440efc30dfa14a0ef803ccb55936af860ec6a6960ed27f129bef913f296a",
+        "indexed": [
+          "voter",
+          "pool",
+          "tokenId"
+        ],
+        "abi_source": "https://github.com/aerodrome-finance/contracts/blob/main/contracts/interfaces/IVoter.sol",
+        "used_for": "not ingested in this task"
+      },
+      {
+        "contract": "Voter",
+        "signature": "GaugeKilled(address)",
+        "topic0": "0x04a5d3f5d80d22d9345acc80618f4a4e7e663cf9e1aed23b57d975acec002ba7",
+        "abi_source": "https://github.com/aerodrome-finance/contracts/blob/main/contracts/interfaces/IVoter.sol"
+      },
+      {
+        "contract": "Voter",
+        "signature": "GaugeRevived(address)",
+        "topic0": "0xed18e9faa3dccfd8aa45f69c4de40546b2ca9cccc4538a2323531656516db1aa",
+        "abi_source": "https://github.com/aerodrome-finance/contracts/blob/main/contracts/interfaces/IVoter.sol"
+      },
+      {
+        "contract": "Minter",
+        "signature": "Mint(address,uint256,uint256,bool)",
+        "topic0": "0xcd2127828092f586df56003faf212897e901bb47f89a227e1acd3a0738f1fe5f",
+        "indexed": [
+          "_sender",
+          "_tail"
+        ],
+        "data": [
+          "_weekly (uint256)",
+          "_circulating_supply (uint256)"
+        ],
+        "abi_source": "https://github.com/aerodrome-finance/contracts/blob/main/contracts/interfaces/IMinter.sol",
+        "used_for": "published weekly emission schedule (sanity check a)"
+      }
+    ]
+  },
+  "function_selectors_used": {
+    "gauges(address)": "0xb9a09fd5",
+    "poolForGauge(address)": "0x06d6a1b2",
+    "isAlive(address)": "0x1703e5f9",
+    "weights(address)": "0xa7cac846",
+    "totalWeight()": "0x96c82e57",
+    "rewardsByEpoch(uint256)": "0x06dd86c8",
+    "rewardRateByEpoch(uint256)": "0x94af5b63",
+    "pool()": "0x16f0115b",
+    "gaugeFactory()": "0x0d52333c",
+    "rewardToken()": "0xf7c618c1",
+    "nft()": "0x47ccca02",
+    "periodFinish()": "0xebe2b12b",
+    "stakedLiquidity()": "0x3ab04b20",
+    "liquidity()": "0x1a686502",
+    "tickSpacing()": "0xd0c93a7c",
+    "token0()": "0x0dfe1681",
+    "token1()": "0xd21220a7",
+    "slot0()": "0x3850c7bd",
+    "gauge()": "0xa6f19c84",
+    "weekly()": "0x26cfc17b",
+    "activePeriod()": "0x0a441f7b",
+    "totalSupply()": "0x18160ddd",
+    "balanceOf(address)": "0x70a08231",
+    "decimals()": "0x313ce567",
+    "symbol()": "0x95d89b41",
+    "implementation()": "0x5c60da1b",
+    "minter()": "0x07546172",
+    "ve()": "0x1f850716",
+    "factoryRegistry()": "0x3bf0c9fb",
+    "aero()": "0x26837eda",
+    "voter()": "0x46c96aac",
+    "token()": "0xfc0c546a",
+    "owner()": "0x8da5cb5b",
+    "notifyAdmin()": "0x447595b4"
+  },
+  "epoch_definition": {
+    "rule": "epoch_start = floor(unix_ts / 604800) * 604800",
+    "why_thursday": "unix ts 0 (1970-01-01) was a Thursday, so week-flooring unix seconds lands on Thursday 00:00:00 UTC"
+  }
+}

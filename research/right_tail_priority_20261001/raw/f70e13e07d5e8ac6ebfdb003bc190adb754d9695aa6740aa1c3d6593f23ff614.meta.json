@@ -1,0 +1,11 @@
+{
+  "body_sha256": "8359be2f643b13ee5b0894b345d780450bd0163be3210dafe96dad56514fc36e",
+  "bytes": 73021,
+  "finished": "2026-10-01T07:26:16.472835+00:00",
+  "http_status": 200,
+  "key": "f70e13e07d5e8ac6ebfdb003bc190adb754d9695aa6740aa1c3d6593f23ff614",
+  "label": "gt_bsc_hour",
+  "payload": null,
+  "started": "2026-10-01T07:26:16.055092+00:00",
+  "url": "https://api.geckoterminal.com/api/v2/networks/bsc/pools/0xc91d0280d92e2c89f2c6a984ddafa6cca39c7643/ohlcv/hour?aggregate=1&limit=1000&currency=usd"
+}

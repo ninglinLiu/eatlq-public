@@ -1,0 +1,20 @@
+{
+  "budget_exhausted": false,
+  "captured_transactions": 7,
+  "combined_network_attempt_cap": 200,
+  "combined_network_attempts": 198,
+  "destination_counts": {
+    "0xca11bde05977b3631167028862be2a173976ca11": 1,
+    "0xd8ba9d1a99fc21f0eca24e9b85737c28a194a4e2": 6
+  },
+  "economic_edge_conclusion": "NOT_AUTHORIZED",
+  "network_attempts": 7,
+  "prior_calibration_attempts": 191,
+  "requested_transactions": 7,
+  "stopped_reason": null,
+  "top_level_selectors": {
+    "0x174dea71": 1,
+    "0xeffbec13": 6
+  },
+  "universal_router_command_type_counts": {}
+}

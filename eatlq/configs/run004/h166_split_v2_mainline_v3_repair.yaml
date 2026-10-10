@@ -1,0 +1,82 @@
+input_paths:
+  h165_patch_json: mvp/diagnostics/run004_patch_h165_rpc_candidate_repair_labeling_pilot.json
+  h165_pilot_checkpoint_report_json: mvp/diagnostics/run004_h165_pilot_checkpoint_report.json
+  h165_repaired_candidate_report_json: mvp/diagnostics/run004_h165_repaired_candidate_report.json
+  h15_bad_pool_forensic_json: mvp/diagnostics/run004_h15_bad_pool_forensic.json
+  h15_return_schema_v2_json: mvp/diagnostics/run004_h15_return_schema_v2.json
+
+clickhouse:
+  url: http://clickhouse:8123
+  database: eatlq
+  docker_container: eatlq-clickhouse-1
+  query_timeout_sec: 60
+  decoded_sources:
+    v2_table: uniswap_v2_swaps_decoded
+    v3_table: uniswap_v3_swaps_decoded
+    metadata_table: discovered_pools
+
+candidate_repair:
+  target_candidates: 15000
+  target_candidate_pool: 15000
+  v2_target: 15000
+  v3_target: 0
+  max_per_pool: 2
+  focus_pool_cap: 10
+  time_offsets_sec:
+    - 1800
+    - 7200
+  focus_pools:
+    - "0x3e118916cd67cc9bfeb0fc44ae3dde8bc33c2d4a"
+    - "0x54219bce730d2727d91d8dcdf1465c7d299dee45"
+    - "0xc2476883d28d40b6c057f242fce2e8bda674faa0"
+
+labeling_pilot:
+  pilot_size: 240
+  v2_target: 240
+  v3_target: 0
+  fixed_horizon_sec: 1800
+  notional_wei: 500000000000000
+  round_trip_cost: 0.006
+  gas_price_gwei:
+    low: 0.01
+    medium: 0.03
+    high: 0.10
+  include_approval_gas: true
+  approval_gas_units: 50000
+  gas_units:
+    v2:
+      buy: 180000
+      sell: 160000
+    v3:
+      buy: 260000
+      sell: 240000
+  slippage_stress_bps: 100
+  success_rate_gate: 0.90
+  rpc_env_vars:
+    - LABEL_RPC_URL
+    - EVM_HTTP_URL
+    - LIVE_BASE_RPC_URL
+  workers: 1
+
+outputs:
+  patch_json: mvp/diagnostics/run004_patch_h166_split_v2_mainline_v3_repair.json
+  v2_candidate_csv: mvp/diagnostics/run004_h166_v2_candidate_selection.csv
+  v2_candidate_report_json: mvp/diagnostics/run004_h166_v2_candidate_report.json
+  v2_pilot_checkpoint_report_json: mvp/diagnostics/run004_h166_v2_pilot_checkpoint_report.json
+  v2_pilot_dataset_csv: mvp/diagnostics/run004_h166_v2_pilot_labeled_dataset.csv
+  v2_readiness_report_json: mvp/diagnostics/run004_h166_v2_readiness_report.json
+  v3_repair_branch_plan_json: mvp/diagnostics/run004_h166_v3_repair_branch_plan.json
+  markdown: mvp/runs/run-004-patch-h166-split-v2-mainline-v3-repair.md
+
+safety:
+  diagnostics_only: true
+  no_training: true
+  no_10k_labeling: true
+  no_mixed_v2_v3_resume: true
+  no_v3_mainline: true
+  no_production_retrain: true
+  no_promote: true
+  no_live: true
+  no_production_model_write: true
+  no_active_model_overwrite: true
+  not_full_strategy_backtest: true

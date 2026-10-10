@@ -1,0 +1,22 @@
+{
+  "strategy_id": "F03_VOL_FAKE_BREAK_FADE",
+  "data_class": "A_OFFLINE_DATA_LIKELY_AVAILABLE",
+  "required_tables_or_files": [
+    "OHLCV"
+  ],
+  "required_columns": [
+    "open",
+    "high",
+    "low",
+    "close",
+    "time"
+  ],
+  "required_time_resolution": "1m",
+  "point_in_time_requirements": "confirm uses only <=t+m",
+  "minimum_history": ">=14d",
+  "estimated_rows": "~1e6",
+  "estimated_read_bytes": "50-500MB",
+  "whether_current_diagnostics_may_support_it": "yes",
+  "whether_production_database_would_be_required": false,
+  "missing_data": []
+}

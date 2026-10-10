@@ -1,0 +1,22 @@
+{
+  "block_number": 51477330,
+  "fee": 90,
+  "fee_evidence": {
+    "http_status": 200,
+    "key": "5917a94e38f7ab90d9420906bc4e6d6a19510e77005dcfe7aa5963a00d79a4c0",
+    "rpc_error": null
+  },
+  "pool": "0x861a2922be165a5bd41b1e482b49216b465e1b5f",
+  "token0": "0x4200000000000000000000000000000000000006",
+  "token0_evidence": {
+    "http_status": 200,
+    "key": "aafb3367943b3ff9b159c91d70bb6123d5800bc851427dba33d179b4ef9fdf8c",
+    "rpc_error": null
+  },
+  "token1": "0xc1cba3fcea344f92d9239c08c0568f6f2f0ee452",
+  "token1_evidence": {
+    "http_status": 200,
+    "key": "3e4ec169a8a88438900a49831ed03155c43bca847fd12e699548a08b0b560331",
+    "rpc_error": null
+  }
+}

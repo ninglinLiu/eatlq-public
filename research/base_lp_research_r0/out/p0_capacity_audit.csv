@@ -1,0 +1,4 @@
+pool_address,pair,date,capital_usd,band_half_width_pct,in_range_swaps,implied_share_p50,implied_share_p99,capacity_violation_pct,status,pricing_note
+0xd0b53d9277642d899df5c87a3966a349a798f224,WETH/USDC,2026-03-14,500.0,15.0,23174,5.072510834294055e-05,6.034594827675449e-05,0.0,OK,USDC is USD quote
+0x82321f3beb69f503380d6b233857d5c43562e2d0,WETH/AERO,2026-03-14,500.0,15.0,944,0.00048157024151912356,0.0006315037799157463,0.0,OK,AERO quote value cross-converted through simultaneous WETH/USDC
+0xb4cb800910b228ed3d0834cf79d697127bbb00e5,WETH/USDC,2026-03-14,500.0,15.0,24956,0.0028353953691032654,0.0034515794541448174,0.0,OK,USDC is USD quote

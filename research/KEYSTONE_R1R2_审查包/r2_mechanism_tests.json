@@ -1,0 +1,329 @@
+{
+  "uplift": {
+    "by_decile": [
+      {
+        "decile": 0,
+        "n_base": 29,
+        "base_ev": 1.3765400892507946,
+        "n_f10": 3,
+        "f10_ev": 4.969607497118497,
+        "uplift": 3.5930674078677027
+      },
+      {
+        "decile": 1,
+        "n_base": 31,
+        "base_ev": 1.4849576477578936,
+        "n_f10": 14,
+        "f10_ev": 1.8092802047087029,
+        "uplift": 0.32432255695080925
+      },
+      {
+        "decile": 2,
+        "n_base": 31,
+        "base_ev": 1.599949992900203,
+        "n_f10": 19,
+        "f10_ev": 1.963931740176675,
+        "uplift": 0.3639817472764719
+      },
+      {
+        "decile": 3,
+        "n_base": 30,
+        "base_ev": 1.3370272694305916,
+        "n_f10": 20,
+        "f10_ev": 1.611887522397976,
+        "uplift": 0.2748602529673845
+      },
+      {
+        "decile": 4,
+        "n_base": 31,
+        "base_ev": 1.0995087898393663,
+        "n_f10": 17,
+        "f10_ev": 1.497655584157826,
+        "uplift": 0.3981467943184598
+      },
+      {
+        "decile": 5,
+        "n_base": 31,
+        "base_ev": 1.2865760225331344,
+        "n_f10": 19,
+        "f10_ev": 1.8179447660519503,
+        "uplift": 0.5313687435188159
+      },
+      {
+        "decile": 6,
+        "n_base": 30,
+        "base_ev": 0.7535369483178813,
+        "n_f10": 15,
+        "f10_ev": 0.8663692354071433,
+        "uplift": 0.11283228708926196
+      },
+      {
+        "decile": 7,
+        "n_base": 31,
+        "base_ev": 0.7137855327139945,
+        "n_f10": 14,
+        "f10_ev": 1.1840360977378899,
+        "uplift": 0.4702505650238954
+      },
+      {
+        "decile": 8,
+        "n_base": 31,
+        "base_ev": 0.7461718466899279,
+        "n_f10": 17,
+        "f10_ev": 1.215050250935402,
+        "uplift": 0.4688784042454741
+      },
+      {
+        "decile": 9,
+        "n_base": 31,
+        "base_ev": 1.125095344922531,
+        "n_f10": 16,
+        "f10_ev": 1.5362019092242154,
+        "uplift": 0.41110656430168446
+      }
+    ]
+  },
+  "nested": {
+    "M0_early_ret": {
+      "n_sel": 78,
+      "ev": 1.1610922126308019,
+      "acc": 0.7973856209150327
+    },
+    "M1_f10": {
+      "n_sel": 76,
+      "ev": 1.2194695042250203,
+      "acc": 0.8169934640522876
+    },
+    "M2_early_ret_plus_f10": {
+      "n_sel": 67,
+      "ev": 1.3037969057634569,
+      "acc": 0.803921568627451
+    }
+  },
+  "shuffle": {
+    "real_ev": 1.5883079419947448,
+    "null_mean": 1.125515284096779,
+    "null_p95": 1.2858133023359832,
+    "beat_null": true
+  },
+  "sens": [
+    {
+      "variant": "V2_F10_Q40",
+      "n_base_signals": 308,
+      "n_accepted": 185,
+      "n_accepted_labeled": 184,
+      "accept_rate": 0.6006493506493507,
+      "ev_per_accepted": 1.4928449431619548,
+      "ev_per_signal_skip0": 0.8947344284749176,
+      "median": 0.8015988103156023,
+      "trimmed_mean_10": 1.1287020288867902,
+      "tp_first_rate": 0.6467391304347826,
+      "sl_first_rate": 0.005434782608695652,
+      "fatal_first_rate": 0.0,
+      "atomic_sell_failure_rate": 0.0,
+      "cond_return_sellable": 1.4928449431619548,
+      "max_drawdown_cumsum": -0.3721160174376763,
+      "top1_share": 0.04460728350985661,
+      "top5_share": 0.16883832305012236,
+      "loto_min_ev": 1.4337103751586722,
+      "lowo_min_ev": 1.3884721273202372,
+      "bootstrap_ci95": [
+        1.2425960141835168,
+        1.7546205564550252
+      ],
+      "pnl_per_capital_hour": 0.3732112357904887
+    },
+    {
+      "variant": "V2_F10_Q50",
+      "n_base_signals": 308,
+      "n_accepted": 154,
+      "n_accepted_labeled": 154,
+      "accept_rate": 0.5,
+      "ev_per_accepted": 1.5883079419947448,
+      "ev_per_signal_skip0": 0.7941539709973723,
+      "median": 0.9741442112545985,
+      "trimmed_mean_10": 1.1947823470314787,
+      "tp_first_rate": 0.6623376623376623,
+      "sl_first_rate": 0.006493506493506494,
+      "fatal_first_rate": 0.0,
+      "atomic_sell_failure_rate": 0.0,
+      "cond_return_sellable": 1.5883079419947448,
+      "max_drawdown_cumsum": -0.3721160174376763,
+      "top1_share": 0.05013712447052209,
+      "top5_share": 0.18976874070997235,
+      "loto_min_ev": 1.5182023018263267,
+      "lowo_min_ev": 1.4901165893851949,
+      "bootstrap_ci95": [
+        1.3246523686034657,
+        1.8949368198620713
+      ],
+      "pnl_per_capital_hour": 0.3970769854986862
+    },
+    {
+      "variant": "V2_F10_Q60",
+      "n_base_signals": 308,
+      "n_accepted": 123,
+      "n_accepted_labeled": 123,
+      "accept_rate": 0.39935064935064934,
+      "ev_per_accepted": 1.5117733570617935,
+      "ev_per_signal_skip0": 0.6037276718136382,
+      "median": 0.9822637276542798,
+      "trimmed_mean_10": 1.1899038370577153,
+      "tp_first_rate": 0.6991869918699187,
+      "sl_first_rate": 0.0,
+      "fatal_first_rate": 0.0,
+      "atomic_sell_failure_rate": 0.0,
+      "cond_return_sellable": 1.5117733570617935,
+      "max_drawdown_cumsum": -0.04574371426689394,
+      "top1_share": 0.06407204590029221,
+      "top5_share": 0.1987331953749955,
+      "loto_min_ev": 1.426460528403004,
+      "lowo_min_ev": 1.4024835499335633,
+      "bootstrap_ci95": [
+        1.2285452516689774,
+        1.841495912738591
+      ],
+      "pnl_per_capital_hour": 0.3779433392654484
+    }
+  ],
+  "sellable_only": {
+    "V0": {
+      "variant": "V0_SELLABLE_ONLY",
+      "n_base_signals": 299,
+      "n_accepted": 299,
+      "n_accepted_labeled": 299,
+      "accept_rate": 1.0,
+      "ev_per_accepted": 1.201919697721725,
+      "ev_per_signal_skip0": 1.201919697721725,
+      "median": 0.5698872369091121,
+      "trimmed_mean_10": 0.8498673137205565,
+      "tp_first_rate": 0.5418060200668896,
+      "sl_first_rate": 0.04013377926421405,
+      "fatal_first_rate": 0.0,
+      "atomic_sell_failure_rate": 0.0,
+      "cond_return_sellable": 1.201919697721725,
+      "max_drawdown_cumsum": -0.8114777110638869,
+      "top1_share": 0.0409387171120852,
+      "top5_share": 0.14649005333486387,
+      "loto_min_ev": 1.153775190120797,
+      "lowo_min_ev": 1.1011950941037987,
+      "bootstrap_ci95": [
+        0.9822765853137991,
+        1.4168005994728967
+      ],
+      "pnl_per_capital_hour": 0.30047992443043126
+    },
+    "V1": {
+      "variant": "V1_SELLABLE_ONLY",
+      "n_base_signals": 299,
+      "n_accepted": 153,
+      "n_accepted_labeled": 153,
+      "accept_rate": 0.5117056856187291,
+      "ev_per_accepted": 0.9387359451123115,
+      "ev_per_signal_skip0": 0.480356520408641,
+      "median": 0.46975420172732374,
+      "trimmed_mean_10": 0.662565500686554,
+      "tp_first_rate": 0.46405228758169936,
+      "sl_first_rate": 0.032679738562091505,
+      "fatal_first_rate": 0.0,
+      "atomic_sell_failure_rate": 0.0,
+      "cond_return_sellable": 0.9387359451123115,
+      "max_drawdown_cumsum": -0.919769293606457,
+      "top1_share": 0.07852928490396434,
+      "top5_share": 0.21078518480224775,
+      "loto_min_ev": 0.8664911917680894,
+      "lowo_min_ev": 0.8663727289646439,
+      "bootstrap_ci95": [
+        0.7216854818788143,
+        1.1905457958365868
+      ],
+      "pnl_per_capital_hour": 0.23468398627807788
+    },
+    "V2": {
+      "variant": "V2_SELLABLE_ONLY",
+      "n_base_signals": 299,
+      "n_accepted": 154,
+      "n_accepted_labeled": 154,
+      "accept_rate": 0.5150501672240803,
+      "ev_per_accepted": 1.5883079419947448,
+      "ev_per_signal_skip0": 0.818058271127728,
+      "median": 0.9741442112545985,
+      "trimmed_mean_10": 1.1947823470314787,
+      "tp_first_rate": 0.6623376623376623,
+      "sl_first_rate": 0.006493506493506494,
+      "fatal_first_rate": 0.0,
+      "atomic_sell_failure_rate": 0.0,
+      "cond_return_sellable": 1.5883079419947448,
+      "max_drawdown_cumsum": -0.3721160174376763,
+      "top1_share": 0.05013712447052209,
+      "top5_share": 0.18976874070997235,
+      "loto_min_ev": 1.5182023018263267,
+      "lowo_min_ev": 1.4901165893851949,
+      "bootstrap_ci95": [
+        1.3246523686034657,
+        1.8949368198620713
+      ],
+      "pnl_per_capital_hour": 0.3970769854986862
+    }
+  },
+  "burned_holdout": {
+    "V0": {
+      "variant": "V0_BURNED_HOLDOUT",
+      "n_base_signals": 96,
+      "n_accepted": 96,
+      "n_accepted_labeled": 93,
+      "accept_rate": 1.0,
+      "ev_per_accepted": 0.5055948041826801,
+      "ev_per_signal_skip0": 0.5055948041826801,
+      "median": 0.23970898521019568,
+      "trimmed_mean_10": 0.3524603083561985,
+      "tp_first_rate": 0.3978494623655914,
+      "sl_first_rate": 0.010752688172043012,
+      "fatal_first_rate": 0.010752688172043012,
+      "atomic_sell_failure_rate": 0.010752688172043012,
+      "cond_return_sellable": 0.5219599650977093,
+      "max_drawdown_cumsum": -1.0753353481952317,
+      "top1_share": 0.08240175128390939,
+      "top5_share": 0.27367218131950877,
+      "loto_min_ev": 0.46006939629159344,
+      "lowo_min_ev": 0.3175414964919609,
+      "bootstrap_ci95": [
+        0.33109844041151404,
+        0.6625263284043925
+      ],
+      "pnl_per_capital_hour": 0.12639870104567003
+    },
+    "V2": {
+      "variant": "V2_F10_Q50_BURNED_HOLDOUT",
+      "n_base_signals": 96,
+      "n_accepted": 15,
+      "n_accepted_labeled": 15,
+      "accept_rate": 0.15625,
+      "ev_per_accepted": 1.2477273383427723,
+      "ev_per_signal_skip0": 0.19495739661605815,
+      "median": 1.1610784956038969,
+      "trimmed_mean_10": 1.0730606887187903,
+      "tp_first_rate": 0.8666666666666667,
+      "sl_first_rate": 0.0,
+      "fatal_first_rate": 0.0,
+      "atomic_sell_failure_rate": 0.0,
+      "cond_return_sellable": 1.2477273383427723,
+      "max_drawdown_cumsum": 0.0,
+      "top1_share": 0.1967158299247594,
+      "top5_share": 0.5753566142758283,
+      "loto_min_ev": 1.0738710208509241,
+      "lowo_min_ev": 0.7690007024216523,
+      "bootstrap_ci95": [
+        0.8516091144784712,
+        1.726489584032618
+      ],
+      "pnl_per_capital_hour": 0.31193183458569307
+    }
+  },
+  "confirmation": {
+    "status": "INSUFFICIENT_ATOMIC_SAMPLE",
+    "reason": "post_2026-06-01 pools exist but full KEYSTONE feature+p_fatal+F10 score pipeline not frozen for prospective window; no untouched confirmation applied",
+    "n_pools_seen_cap50": 50,
+    "forward_eligible": false
+  }
+}

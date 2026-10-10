@@ -1,0 +1,137 @@
+{
+  "phase": "ACTOR_FLOW_OOS_V0_DIAGNOSTIC_AUDIT",
+  "mutates_scored_outputs": false,
+  "overall": "HISTORICAL_COPY_SIM_PASS__INCREMENTAL_EDGE_PAIRED_POSITIVE",
+  "spec_decision": "SPEC_SURVIVES_STATISTICS_ONLY__SHADOW_ALLOWED_AFTER_FREEZE",
+  "spec_must_change_reasons": [],
+  "verdict_table": [
+    {
+      "item": "Actor resolution",
+      "verdict": "PASS_PENDING_STRATIFIED_CI_AUDIT"
+    },
+    {
+      "item": "WHALE_EVENT historical absolute return",
+      "verdict": "BACKTEST_POSITIVE"
+    },
+    {
+      "item": "WHALE vs POOL_ONLY incremental",
+      "verdict": "INCREMENTAL_EDGE_CONFIRMED_PAIRED"
+    },
+    {
+      "item": "Copy execution constraints",
+      "verdict": "COPYABILITY_BACKTEST_PASS"
+    },
+    {
+      "item": "Copyable edge",
+      "verdict": "PROSPECTIVE_CONFIRMATION_REQUIRED"
+    },
+    {
+      "item": "Live deployment",
+      "verdict": "NO_GO"
+    },
+    {
+      "item": "Observer-only shadow",
+      "verdict": "ALLOWED_IF_SPEC_FROZEN"
+    },
+    {
+      "item": "Monthly earn $1000 target",
+      "verdict": "TARGET_NO_GO"
+    },
+    {
+      "item": "Whale label integrity",
+      "verdict": "KEEP_WHALE_EVENT_LABEL_PENDING"
+    },
+    {
+      "item": "Loss handling",
+      "verdict": "LOSS_HANDLING_GAPS_FOUND"
+    },
+    {
+      "item": "Overall WHALE_EVENT",
+      "verdict": "HISTORICAL_COPY_SIM_PASS__INCREMENTAL_EDGE_PAIRED_POSITIVE"
+    },
+    {
+      "item": "Spec decision",
+      "verdict": "SPEC_SURVIVES_STATISTICS_ONLY__SHADOW_ALLOWED_AFTER_FREEZE"
+    }
+  ],
+  "renamed_from_scorecard": {
+    "COPY_EDGE_GO": "COPYABILITY_BACKTEST_PASS",
+    "incremental_vs_pool_only_weth": "INVALID_LEGACY_ARITHMETIC_DIFF"
+  },
+  "key_numbers": {
+    "legacy_arithmetic_diff_weth": 12.854891724712182,
+    "overlay_paired_delta_p05_token": 30.686485768009092,
+    "matched_paired_delta_p05_token": 35.22129256557226,
+    "whale_share_of_pool_selected": 0.6198533945331233,
+    "whale_unique_token": 505,
+    "whale_n_trades": 19684,
+    "unconstrained_pnl_weth": 38.250217890793536,
+    "scheduled_cum_withdrawn_usd": 1594.9429649629276,
+    "pct_months_hit_1000_usd": 0.0,
+    "gate_wilson_95_upper": 0.13319649395317873,
+    "proxy_jaccard_vs_lbi": 0.6187071214610107,
+    "size_explains_effect": false
+  },
+  "generated_at": "2026-07-20T16:53:53Z",
+  "modules": {
+    "incremental": {
+      "incremental_verdict": "INCREMENTAL_EDGE_CONFIRMED_PAIRED",
+      "legacy_arithmetic_diff_weth": 12.854891724712182,
+      "legacy_valid": false,
+      "overlay_paired_delta_p05_token": 30.686485768009092,
+      "matched_paired_delta_p05_token": 35.22129256557226,
+      "overlay_passes": true,
+      "matched_passes": true,
+      "note": "Legacy scorecard incremental_vs_pool_only_weth is an invalid estimand. Decision uses token/day-clustered paired \u0394PnL p05."
+    },
+    "dedup_capital_whale": {
+      "n_trades": 19684,
+      "unique_token": 505,
+      "unique_actor": 14850,
+      "unique_actor_token": 17830,
+      "unique_entity_cluster": 14850,
+      "unique_day": 43,
+      "unique_month": 6,
+      "trades_per_token_p50": 25.0,
+      "trades_per_token_p95": 122.59999999999991,
+      "trades_per_token_max": 519,
+      "max_token_pnl_share": 0.018970661786617427,
+      "top_token_by_trades": "0x60b0c26ea34be7d8625526a6b18b3ad4c6b9f694",
+      "top_token_n_trades": 519,
+      "mean_pnl_per_trade": 0.001943213670534116,
+      "unconstrained_total_pnl_weth": 38.250217890793536
+    },
+    "coverage_verdict": "PASS_PENDING_STRATIFIED_CI_AUDIT",
+    "resampling_primary": "PROSPECTIVE_CONFIRMATION_REQUIRED",
+    "proxy_recommendation": {
+      "size_explains_effect": false,
+      "recommended_label": "KEEP_WHALE_EVENT_LABEL_PENDING",
+      "rationale": "Absorbed/non-reversal filter or selection mass differs enough that a pure size label is not yet forced; still not an identity trait.",
+      "identity_component_present": false,
+      "feature_decomposition": {
+        "whale_impact": "quote_weth / prior_30m_pool_volume (PIT)",
+        "whale_absorbed": "5m price non-reversal after buy",
+        "whale_score": "clip(impact,0,5) * (0.5 + 0.5*absorbed)",
+        "actor_fields_used": []
+      }
+    },
+    "loss_summary": {
+      "n_checks": 4,
+      "n_failures": 3,
+      "verdict": "LOSS_HANDLING_GAPS_FOUND",
+      "materiality_for_whale_scorecard": "Selection requires buy_status==SUCCESS, so NO_FILL NaNs do not enter WHALE totals. Main residual risk: censored transfer-out buys that still receive optimistic price-path PnL in wallet_pnl_weth, and recovery_floor never applied."
+    }
+  },
+  "decision_gate_caveats": [
+    "Paired delta positive but size imbalance and depth_proxy=0 weaken matched control; prefer overlay estimand.",
+    "WHALE_EVENT has no actor identity; absorbed filter differentiates from pure LARGE_BUY_IMPACT but label is still order-flow.",
+    "Fixed-capital skip_rate~97.5%; TARGET_NO_GO.",
+    "Actor resolution Wilson upper~13% on n=25; PASS_PENDING_STRATIFIED_CI_AUDIT.",
+    "Loss handling gaps: recovery_floor unused; infra SUCCESS rows present."
+  ],
+  "recommendation": {
+    "live": "NO_GO",
+    "shadow": "ALLOWED_IF_SPEC_FROZEN",
+    "next": "If accepting caveats as statistics-only, freeze v0 code hash + start observer-only shadow at fresh T0. If requiring better depth matching / recovery_floor / infra exclusion in the scored path, declare WHALE_EVENT_v1 and re-lock T0."
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "strategy_id": "F05_REG_GAS_CONGESTION",
+  "family": "F05",
+  "name": "Gas congestion entry filter",
+  "parameter_search_space": {
+    "z_max": [
+      -0.5,
+      0.0,
+      0.5
+    ],
+    "basket_k": [
+      5,
+      10
+    ],
+    "hold_h": [
+      1,
+      2
+    ],
+    "stop_ret": [
+      0.2,
+      0.3
+    ],
+    "tp_ret": [
+      0.1,
+      0.2
+    ]
+  },
+  "param_combo_count": 48,
+  "access_flags": {
+    "database_access_enabled": false,
+    "rpc_access_enabled": false,
+    "large_file_access_enabled": false,
+    "backtest_enabled": false
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "status": "FROZEN_BEFORE_PHASE0_RESULTS",
+  "role": "Base Greenfield V2 Orthogonal Directional Research",
+  "label_design_start_utc": "2025-10-01T00:00:00Z",
+  "label_design_end_utc": "2025-12-01T14:30:00Z",
+  "universe": "Base canonical Uniswap V3 WETH new pools",
+  "independent_opportunity_definition": "one fixed-age decision per pool per bucket",
+  "age_anchors_seconds": {
+    "15-60m_NEGATIVE_CONTROL": 1800,
+    "1-6h": 10800,
+    "6-24h": 43200,
+    "1-3d": 172800,
+    "3-7d": 432000
+  },
+  "census_future_horizon_seconds": 21600,
+  "amount_in_wei": "16666666666666666",
+  "depth_multiples": [1, 2, 4, 8],
+  "depth_slippage_ceiling": 0.10,
+  "economic_unsellable_recovery_floor": 0.10,
+  "pit_history": {
+    "min_swaps": 12,
+    "min_active_minutes": 6
+  },
+  "block_mapping": {
+    "method": "latest observed canonical-candidate swap block at or before wall-clock decision",
+    "max_lag_seconds": 120
+  },
+  "viability_gates": {
+    "min_independent_opportunities": 300,
+    "min_opportunities_per_week": 30.0,
+    "min_pool_breadth": 300,
+    "min_token_breadth": 250,
+    "min_deployer_breadth": 50,
+    "min_deployer_coverage": 0.80,
+    "min_canonical_metadata_coverage": 0.98,
+    "min_atomic_buy_success": 0.90,
+    "min_current_atomic_sell_success": 0.85,
+    "max_future_permanent_unsellable_rate": 0.10,
+    "max_infrastructure_unknown_rate": 0.05,
+    "min_future_sell_resolution_rate": 0.85,
+    "min_production_depth_pass_rate": 0.80
+  },
+  "single_promotion_tiebreak": [
+    "current_atomic_sell_success_desc",
+    "future_sell_resolution_rate_desc",
+    "future_permanent_unsellable_rate_asc",
+    "independent_opportunities_desc",
+    "age_bucket_lexical"
+  ],
+  "selection_prohibitions": [
+    "no alpha model",
+    "no predicted return",
+    "no realized return or MFE/MAE in universe promotion",
+    "no KEYSTONE/F10/G2/C3/P2 pass score threshold or model input"
+  ],
+  "closed_negative_control": "15-60m only",
+  "deploy_allowed": false
+}

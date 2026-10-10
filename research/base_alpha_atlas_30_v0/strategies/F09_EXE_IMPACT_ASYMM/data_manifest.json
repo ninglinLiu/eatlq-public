@@ -1,0 +1,23 @@
+{
+  "strategy_id": "F09_EXE_IMPACT_ASYMM",
+  "data_class": "B_SMALL_BOUNDED_EXPORT_REQUIRED",
+  "required_tables_or_files": [
+    "swaps"
+  ],
+  "required_columns": [
+    "pool",
+    "time",
+    "amounts",
+    "tick"
+  ],
+  "required_time_resolution": "event\u21925m",
+  "point_in_time_requirements": "PIT",
+  "minimum_history": ">=30d",
+  "estimated_rows": "medium-large",
+  "estimated_read_bytes": "200MB-2GB",
+  "whether_current_diagnostics_may_support_it": "maybe",
+  "whether_production_database_would_be_required": true,
+  "missing_data": [
+    "clean mid price"
+  ]
+}

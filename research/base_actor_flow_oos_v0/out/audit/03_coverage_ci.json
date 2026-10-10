@@ -1,0 +1,226 @@
+{
+  "task": "stratified_actor_coverage_ci",
+  "decomposition": {
+    "n_buys": 1074493,
+    "resolved_rate": 0.9853865962830842,
+    "resolvable_scorable_coverage": 0.9853865962830842,
+    "unresolved_coverage": 0.014613403716915791,
+    "tier_counts": {
+      "C": 1058788,
+      "UNRESOLVED": 10140,
+      "D": 5562,
+      "B": 3
+    },
+    "route_counts": {
+      "universal_router": 737184,
+      "uniswap_router": 218253,
+      "unknown": 110053,
+      "shared_infra": 8918,
+      "solver_settlement": 68,
+      "unknown_contract_or_route": 14,
+      "erc4337_entrypoint": 3
+    },
+    "route_family_x_tier": [
+      {
+        "route_family": "erc4337_entrypoint",
+        "tier": "B",
+        "n": 3,
+        "resolved_rate": 1.0,
+        "share_of_buys": 2.792014466357622e-06
+      },
+      {
+        "route_family": "shared_infra",
+        "tier": "C",
+        "n": 2188,
+        "resolved_rate": 1.0,
+        "share_of_buys": 0.002036309217463492
+      },
+      {
+        "route_family": "shared_infra",
+        "tier": "UNRESOLVED",
+        "n": 6730,
+        "resolved_rate": 0.0,
+        "share_of_buys": 0.006263419119528931
+      },
+      {
+        "route_family": "solver_settlement",
+        "tier": "UNRESOLVED",
+        "n": 68,
+        "resolved_rate": 0.0,
+        "share_of_buys": 6.328566123743942e-05
+      },
+      {
+        "route_family": "uniswap_router",
+        "tier": "C",
+        "n": 218153,
+        "resolved_rate": 1.0,
+        "share_of_buys": 0.20302877729310476
+      },
+      {
+        "route_family": "uniswap_router",
+        "tier": "UNRESOLVED",
+        "n": 100,
+        "resolved_rate": 0.0,
+        "share_of_buys": 9.306714887858739e-05
+      },
+      {
+        "route_family": "universal_router",
+        "tier": "C",
+        "n": 733948,
+        "resolved_rate": 1.0,
+        "share_of_buys": 0.6830644778514146
+      },
+      {
+        "route_family": "universal_router",
+        "tier": "UNRESOLVED",
+        "n": 3236,
+        "resolved_rate": 0.0,
+        "share_of_buys": 0.003011652937711088
+      },
+      {
+        "route_family": "unknown",
+        "tier": "C",
+        "n": 104492,
+        "resolved_rate": 1.0,
+        "share_of_buys": 0.09724772520621354
+      },
+      {
+        "route_family": "unknown",
+        "tier": "D",
+        "n": 5561,
+        "resolved_rate": 0.0,
+        "share_of_buys": 0.005175464149138245
+      },
+      {
+        "route_family": "unknown_contract_or_route",
+        "tier": "C",
+        "n": 7,
+        "resolved_rate": 1.0,
+        "share_of_buys": 6.514700421501118e-06
+      },
+      {
+        "route_family": "unknown_contract_or_route",
+        "tier": "D",
+        "n": 1,
+        "resolved_rate": 0.0,
+        "share_of_buys": 9.306714887858739e-07
+      },
+      {
+        "route_family": "unknown_contract_or_route",
+        "tier": "UNRESOLVED",
+        "n": 6,
+        "resolved_rate": 0.0,
+        "share_of_buys": 5.584028932715244e-06
+      }
+    ],
+    "route_scorable": [
+      {
+        "route_family": "erc4337_entrypoint",
+        "n": 3,
+        "scorable_n": 3,
+        "scorable_rate": 1.0
+      },
+      {
+        "route_family": "shared_infra",
+        "n": 8918,
+        "scorable_n": 2188,
+        "scorable_rate": 0.24534649024444943
+      },
+      {
+        "route_family": "solver_settlement",
+        "n": 68,
+        "scorable_n": 0,
+        "scorable_rate": 0.0
+      },
+      {
+        "route_family": "uniswap_router",
+        "n": 218253,
+        "scorable_n": 218153,
+        "scorable_rate": 0.999541816149148
+      },
+      {
+        "route_family": "universal_router",
+        "n": 737184,
+        "scorable_n": 733948,
+        "scorable_rate": 0.9956103225246343
+      },
+      {
+        "route_family": "unknown",
+        "n": 110053,
+        "scorable_n": 104492,
+        "scorable_rate": 0.949469800914105
+      },
+      {
+        "route_family": "unknown_contract_or_route",
+        "n": 14,
+        "scorable_n": 7,
+        "scorable_rate": 0.5
+      }
+    ],
+    "attribution_source_among_scorable": {
+      "recipient": 1058788,
+      "erc4337_userop_sender_log_boundary": 3
+    },
+    "coverage_jump_explanation": {
+      "old_pipeline_eoa_coverage_claimed": 0.0065,
+      "new_resolvable_scorable_coverage": 0.9853865962830842,
+      "delta_pp": 97.88865962830843,
+      "primary_recovery_channels": [
+        {
+          "channel": "universal_router_recipient_as_economic_actor",
+          "route_family": "universal_router",
+          "n_resolved_buys": 733948,
+          "note": "Tier C: recipient/sender offline resolution \u2014 not requiring tx.from EOA."
+        },
+        {
+          "channel": "uniswap_router_direct",
+          "route_family": "uniswap_router",
+          "n_resolved_buys": 218153
+        },
+        {
+          "channel": "erc4337_userop_sender",
+          "route_family": "erc4337_entrypoint",
+          "n_resolved_buys": 3,
+          "note": "Tier B: UserOperationEvent sender; rare in this universe."
+        },
+        {
+          "channel": "unknown_or_contract_fallback",
+          "route_family": "unknown*",
+          "n_resolved_buys": 104499
+        }
+      ],
+      "caveat": "Coverage jump is largely definitional: scorable subject = resolved economic actor appearing as recipient/sender/UserOp, not exclusive EOA tx.from. Whether that subject is the true economic decision-maker still requires stratified trace CI."
+    }
+  },
+  "existing_gate_ci": {
+    "source": "phase1/RESOLUTION_GATE.json",
+    "n_audited_traces": 25,
+    "n_golden_sampled": 80,
+    "observed_error_rate": 0.0,
+    "observed_errors": 0,
+    "wilson_95_upper": 0.13319649395317873,
+    "rule_of_three_95_upper_if_zero": 0.12,
+    "route_family_sample_counts": {
+      "universal_router": 46,
+      "uniswap_router": 15,
+      "unknown": 9,
+      "unknown_contract_or_route": 7,
+      "erc4337_entrypoint": 3
+    },
+    "tier_sample_counts": {
+      "C": 77,
+      "B": 3
+    },
+    "passes_lt_2pct_upper": false,
+    "n_required_for_rule_of_three_lt_2pct": 150,
+    "verdict": "PASS_PENDING_STRATIFIED_CI_AUDIT"
+  },
+  "expanded_traces": {
+    "ran": false,
+    "skipped": true,
+    "reason": "RPC skipped by default (set AUDIT_RUN_RPC=1 to expand golden traces).",
+    "target_traces": 160,
+    "n_required_for_rule_of_three_lt_2pct": 150
+  },
+  "actor_resolution_verdict": "PASS_PENDING_STRATIFIED_CI_AUDIT"
+}

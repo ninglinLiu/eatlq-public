@@ -1,0 +1,53 @@
+{
+  "n_events": 22,
+  "n_score_rows": 1682,
+  "empty_score_rate": 0.614,
+  "n_m_high": 12,
+  "n_fragmented": 19,
+  "fragmented_events": [
+    "E01_niulai",
+    "E02_moodeng",
+    "E03_chillguy",
+    "E04_fartcoin",
+    "E05_neiro",
+    "E06_pnutt",
+    "E07_clanker",
+    "E08_virtuals",
+    "E09_pumpfun",
+    "E10_bonk",
+    "E11_brett",
+    "E12_toshi",
+    "E13_trump_fragment",
+    "E14_harris",
+    "E15_maga",
+    "E16_biden",
+    "E17_goatseus",
+    "E18_hawktuah",
+    "E22_wen"
+  ],
+  "n_i_unknown": 1,
+  "i_unknown_events": [
+    "E20_shandong"
+  ],
+  "n_m_high_i_collapse": 12,
+  "m_high_i_collapse_events": [
+    "E01_niulai",
+    "E02_moodeng",
+    "E03_chillguy",
+    "E05_neiro",
+    "E06_pnutt",
+    "E10_bonk",
+    "E13_trump_fragment",
+    "E14_harris",
+    "E15_maga",
+    "E16_biden",
+    "E18_hawktuah",
+    "E22_wen"
+  ],
+  "n_events_with_attach": 19,
+  "n_earliest_equals_attach": 8,
+  "definition": {
+    "m_high": "M1/M4/M7 至少两维为高",
+    "i_collapse": "i_status=fragmented：同名>=3 且存在I1=否 且无I1=高。空分不算塌。"
+  }
+}

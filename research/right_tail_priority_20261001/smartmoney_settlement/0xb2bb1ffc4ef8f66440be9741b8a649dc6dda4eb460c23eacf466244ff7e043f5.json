@@ -1,0 +1,100 @@
+{
+  "buy": {
+    "amount_raw": "10000000000000000",
+    "base_fee_header_evidence": null,
+    "base_fee_wei": 5073873,
+    "block": 51995175,
+    "direction": "buy",
+    "evidence": {
+      "http_status": 200,
+      "key": "08def8c5d4b1ae07b95b2904f297ffa0c6b899716e1e34ef107b01f256182230",
+      "rpc_error": null
+    },
+    "gas_model_note": "measured internal execution + intrinsic calldata + explicit 5000 dispatcher/return buffer; not a mined receipt",
+    "gas_model_units": 859555,
+    "intrinsic_gas": 23272,
+    "measured_internal_gas": 831283,
+    "received_raw": "45426244287829143921001340",
+    "simulation_context": "hypothetical executor with empty hookData; no persistent state change",
+    "spent_raw": "10000000000000000",
+    "status": "HISTORICAL_TRANSFER_SETTLED_SIMULATION",
+    "timestamp": 1790779697
+  },
+  "buy_fees": {
+    "assumptions": "historical base fee; 0.01 gwei tip; measured gas+intrinsic+5000; unsigned type-2 nonce 0 L1 fee estimate; excludes deployment and adverse transaction ordering",
+    "evidence": {
+      "http_status": 200,
+      "key": "32cbe8047a6138898b53bcc1565aa7e1abbfa9bca445dee4fd712b0942c36bb2",
+      "rpc_error": null
+    },
+    "gas_model_units": 859555,
+    "l1_fee_model_raw": "20018313423",
+    "l2_fee_model_raw": "12956822906515",
+    "operator_fee_model_raw": "0",
+    "priority_fee_assumption_wei": 10000000,
+    "total_fee_model_raw": "12976841219938"
+  },
+  "delay_seconds": 10,
+  "exit_policy": "24h",
+  "input_eth_raw": "10000000000000000",
+  "modeled_net_eth_raw": null,
+  "net_profit_certified": false,
+  "platform_fee_status": "NOT_SPECIFIED_SEPARATE_FROM_ONCHAIN_MODEL",
+  "sell": {
+    "status": "TOKEN_BALANCE_SLOT_UNRESOLVED"
+  },
+  "slot_evidence": {
+    "access_list_evidence": {
+      "http_status": 200,
+      "key": "330772865d3f46222e597ecec78157eba778c45ead67b756d1f934558bf99d3a",
+      "rpc_error": {
+        "code": -32001,
+        "message": "block not found: 0x31a0ae7"
+      }
+    },
+    "attempts": [
+      {
+        "http_status": 200,
+        "key": "db08499241fa53efa39ac1a205868f15c0603ddecb341922c2c44eafab20bd92",
+        "rpc_error": {
+          "code": -32001,
+          "message": "block not found: 0x31a0ae7"
+        }
+      },
+      {
+        "http_status": 200,
+        "key": "18f6148f574e96cc97e0b5e94c85cff46f2aa6d4aa973795285edbd15c8f1c55",
+        "rpc_error": {
+          "code": -32001,
+          "message": "block not found: 0x31a0ae7"
+        }
+      },
+      {
+        "http_status": 200,
+        "key": "63f93d6c5a58938489f1d75516dae297134c15008c805ebd637226cedc3a15fd",
+        "rpc_error": {
+          "code": -32001,
+          "message": "block not found: 0x31a0ae7"
+        }
+      },
+      {
+        "http_status": 200,
+        "key": "c4505674e698ed2df5ce95798435ef601e062149a8191dfcfd41701b8b231ed0",
+        "rpc_error": {
+          "code": -32001,
+          "message": "block not found: 0x31a0ae7"
+        }
+      }
+    ],
+    "block": 52038375,
+    "detector_version": 2,
+    "layout_source": null,
+    "slot": null,
+    "token": "0xb7f49a4555e6149f02a638c49a0b15fc57132ba3"
+  },
+  "source_block": 51995170,
+  "source_tx": "0xb2bb1ffc4ef8f66440be9741b8a649dc6dda4eb460c23eacf466244ff7e043f5",
+  "status": "SELL_SIMULATION_UNRESOLVED",
+  "token": "0xb7f49a4555e6149f02a638c49a0b15fc57132ba3",
+  "wallet": "0xa05ec35f7d1eba823cff2ed26aeaed419683742f"
+}

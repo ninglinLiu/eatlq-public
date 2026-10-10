@@ -1,0 +1,52 @@
+{
+  "distinct_registered_pool_paths": 2,
+  "entry_block": 51698957,
+  "generated_at": "2026-10-02T05:53:22.433407+00:00",
+  "meaning": "one buy of 0.19 ETH at the first overlapping signal, same registered path and block; not 19 sequential fills and not a new exit",
+  "open_independent_positions": 19,
+  "peak_timestamp": 1790188077,
+  "probed_source_tx": "0xb6d5b366069ea51eb3bbbff861fdef861e153107317b87b0cf561b7c88b11667",
+  "profitability_certified": false,
+  "received_per_eth_versus_0_01": 0.998033361562621,
+  "recorded_0_01_eth_tokens_raw": "56457118686951007627",
+  "same_path_as_the_probed_signal": 13,
+  "simultaneous_0_19_eth": {
+    "amount_raw": "190000000000000000",
+    "base_fee_header_evidence": null,
+    "base_fee_wei": 5000000,
+    "block": 51698957,
+    "direction": "buy",
+    "evidence": {
+      "http_status": 200,
+      "key": "0ae06056c7c7b07e453f2005f59bcb695db0dae2a44a96aae58efd8d471006b2",
+      "rpc_error": null
+    },
+    "gas_model_note": "measured internal execution + intrinsic calldata + explicit 5000 dispatcher/return buffer; not a mined receipt",
+    "gas_model_units": 427946,
+    "intrinsic_gas": 25016,
+    "measured_internal_gas": 397930,
+    "per_leg_unspent_input_raw": [
+      "0",
+      "0"
+    ],
+    "received_raw": "1070575670998274114164",
+    "simulation_context": "hypothetical executor with empty hookData; no persistent state change",
+    "spent_raw": "190000000000000000",
+    "status": "HISTORICAL_TRANSFER_SETTLED_SIMULATION",
+    "timestamp": 1790187261
+  },
+  "simultaneous_exit": {
+    "block": 51742157,
+    "eth_per_token_versus_0_01": 0.9993622225150711,
+    "eth_received_raw": "673779426107469059",
+    "eth_shortfall_versus_linear_raw": "429995589285173",
+    "meaning": "one sell of 19 times the recorded token amount into the historical pool at the first signal exit block; the pool state does not contain the earlier buys",
+    "nineteen_times_recorded_0_01_exit_raw": "674209421696754232",
+    "status": "HISTORICAL_TRANSFER_SETTLED_SIMULATION",
+    "token_qty_raw": "1072685255052069144913"
+  },
+  "simultaneous_tokens_raw": "1070575670998274114164",
+  "token": "0xca7a1e31b36779cf32acb18714ab26982cf36b05",
+  "tokens_if_nineteen_independent_fills_raw": "1072685255052069144913",
+  "tokens_shortfall_versus_linear_raw": "2109584053795030749"
+}

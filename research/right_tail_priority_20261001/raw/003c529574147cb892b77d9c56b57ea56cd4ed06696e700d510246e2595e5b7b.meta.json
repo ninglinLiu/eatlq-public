@@ -1,0 +1,11 @@
+{
+  "body_sha256": "33a76772eab4e0f41718481d87cfa09fdd5b4bed15edfe453b373f8aa9f62c10",
+  "bytes": 4551,
+  "finished": "2026-10-01T07:26:15.871108+00:00",
+  "http_status": 403,
+  "key": "003c529574147cb892b77d9c56b57ea56cd4ed06696e700d510246e2595e5b7b",
+  "label": "bsc_gmgn_activity",
+  "payload": null,
+  "started": "2026-10-01T07:26:15.736343+00:00",
+  "url": "https://gmgn.ai/vas/api/v1/wallet_activity/bsc?wallet=0xbac453b9b7f53b35ac906b641925b2f5f2567a89&limit=50&type=buy,sell"
+}

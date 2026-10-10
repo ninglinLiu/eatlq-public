@@ -1,0 +1,266 @@
+{
+  "status": "QUOTE_SMOKE",
+  "rpc_hint": "https://prettiest-blue-a\u2026",
+  "quoter": "0x3d4e44Eb1374240CE5F1B871ab261CD16335B76a",
+  "eth_usd_probe": {
+    "close_tick": -201000,
+    "raw_price_t1_per_t0": 1.8668840729699757e-09,
+    "pool": "0xd0b53d9277642d899df5c87a3966a349a798f224"
+  },
+  "rows": [
+    {
+      "pool": "0xe49b3f5614a926b5f468c9ee340343d1bb59c507",
+      "pair": "WETH/TSLA",
+      "side": "LOW",
+      "signal_last_block": 49962634,
+      "plus4h_last_block": 49969139,
+      "onchain_fee": 100,
+      "slot0_ok": true,
+      "quotes": [
+        {
+          "usd": "UNSIZED_0.1_WETH",
+          "buy_at_signal_block": {
+            "ok": true,
+            "amount_out": 10611274512695277400075169,
+            "ticks_crossed": 0,
+            "gas_estimate": 141418
+          },
+          "note": "ETHUSD mapping not trusted this round"
+        },
+        {
+          "usd": "UNSIZED_0.1_WETH",
+          "buy_at_signal_block": {
+            "ok": true,
+            "amount_out": 10611274512695277400075169,
+            "ticks_crossed": 0,
+            "gas_estimate": 141418
+          },
+          "note": "ETHUSD mapping not trusted this round"
+        },
+        {
+          "usd": "UNSIZED_0.1_WETH",
+          "buy_at_signal_block": {
+            "ok": true,
+            "amount_out": 10611274512695277400075169,
+            "ticks_crossed": 0,
+            "gas_estimate": 141418
+          },
+          "note": "ETHUSD mapping not trusted this round"
+        },
+        {
+          "usd": "UNSIZED_0.1_WETH",
+          "buy_at_signal_block": {
+            "ok": true,
+            "amount_out": 10611274512695277400075169,
+            "ticks_crossed": 0,
+            "gas_estimate": 141418
+          },
+          "note": "ETHUSD mapping not trusted this round"
+        }
+      ]
+    },
+    {
+      "pool": "0xbe00ff35af70e8415d0eb605a286d8a45466a4c1",
+      "pair": "USDC/AERO",
+      "side": "HIGH",
+      "signal_last_block": 49963159,
+      "plus4h_last_block": 49970489,
+      "onchain_fee": 10000,
+      "slot0_ok": true,
+      "quotes": [
+        {
+          "usd": 250,
+          "buy_at_signal_block": {
+            "ok": true,
+            "amount_out": 531879072801978920314,
+            "ticks_crossed": 3,
+            "gas_estimate": 174225
+          },
+          "sell_at_plus4h_or_same": {
+            "ok": true,
+            "amount_out": 172082146,
+            "ticks_crossed": 2,
+            "gas_estimate": 169252
+          },
+          "buy_delay_1_block": {
+            "ok": true,
+            "amount_out": 531879072801978920314,
+            "ticks_crossed": 3,
+            "gas_estimate": 174225
+          },
+          "buy_delay_2_block": {
+            "ok": true,
+            "amount_out": 531879072801978920314,
+            "ticks_crossed": 3,
+            "gas_estimate": 174225
+          },
+          "roundtrip_bps_vs_usdc_in": -3116.7141600000004
+        },
+        {
+          "usd": 500,
+          "buy_at_signal_block": {
+            "ok": true,
+            "amount_out": 826541833233628650836,
+            "ticks_crossed": 5,
+            "gas_estimate": 222210
+          },
+          "sell_at_plus4h_or_same": {
+            "ok": true,
+            "amount_out": 191743050,
+            "ticks_crossed": 2,
+            "gas_estimate": 177971
+          },
+          "buy_delay_1_block": {
+            "ok": true,
+            "amount_out": 826541833233628650836,
+            "ticks_crossed": 5,
+            "gas_estimate": 222210
+          },
+          "buy_delay_2_block": {
+            "ok": true,
+            "amount_out": 826541833233628650836,
+            "ticks_crossed": 5,
+            "gas_estimate": 222210
+          },
+          "roundtrip_bps_vs_usdc_in": -6165.138999999999
+        },
+        {
+          "usd": 1000,
+          "buy_at_signal_block": {
+            "ok": true,
+            "amount_out": 1142173755317914771187,
+            "ticks_crossed": 8,
+            "gas_estimate": 301401
+          },
+          "sell_at_plus4h_or_same": {
+            "ok": true,
+            "amount_out": 199314817,
+            "ticks_crossed": 2,
+            "gas_estimate": 178017
+          },
+          "buy_delay_1_block": {
+            "ok": true,
+            "amount_out": 1142173755317914771187,
+            "ticks_crossed": 8,
+            "gas_estimate": 301401
+          },
+          "buy_delay_2_block": {
+            "ok": true,
+            "amount_out": 1142173755317914771187,
+            "ticks_crossed": 8,
+            "gas_estimate": 301401
+          },
+          "roundtrip_bps_vs_usdc_in": -8006.8518300000005
+        },
+        {
+          "usd": 2000,
+          "buy_at_signal_block": {
+            "ok": true,
+            "amount_out": 1172617956296507190755,
+            "ticks_crossed": 10,
+            "gas_estimate": 348228
+          },
+          "sell_at_plus4h_or_same": {
+            "ok": true,
+            "amount_out": 199788115,
+            "ticks_crossed": 2,
+            "gas_estimate": 176989
+          },
+          "buy_delay_1_block": {
+            "ok": true,
+            "amount_out": 1172617956296507190755,
+            "ticks_crossed": 10,
+            "gas_estimate": 348228
+          },
+          "buy_delay_2_block": {
+            "ok": true,
+            "amount_out": 1172617956296507190755,
+            "ticks_crossed": 10,
+            "gas_estimate": 348228
+          },
+          "roundtrip_bps_vs_usdc_in": -9001.059425
+        }
+      ]
+    },
+    {
+      "pool": "0x82321f3beb69f503380d6b233857d5c43562e2d0",
+      "pair": "WETH/AERO",
+      "side": "HIGH",
+      "signal_last_block": 49963290,
+      "plus4h_last_block": 49970478,
+      "onchain_fee": 3000,
+      "slot0_ok": true,
+      "quotes": [
+        {
+          "usd": "UNSIZED_0.1_WETH",
+          "buy_at_signal_block": {
+            "ok": true,
+            "amount_out": 466699206230318010846,
+            "ticks_crossed": 1,
+            "gas_estimate": 88754
+          },
+          "note": "ETHUSD mapping not trusted this round"
+        },
+        {
+          "usd": "UNSIZED_0.1_WETH",
+          "buy_at_signal_block": {
+            "ok": true,
+            "amount_out": 466699206230318010846,
+            "ticks_crossed": 1,
+            "gas_estimate": 88754
+          },
+          "note": "ETHUSD mapping not trusted this round"
+        },
+        {
+          "usd": "UNSIZED_0.1_WETH",
+          "buy_at_signal_block": {
+            "ok": true,
+            "amount_out": 466699206230318010846,
+            "ticks_crossed": 1,
+            "gas_estimate": 88754
+          },
+          "note": "ETHUSD mapping not trusted this round"
+        },
+        {
+          "usd": "UNSIZED_0.1_WETH",
+          "buy_at_signal_block": {
+            "ok": true,
+            "amount_out": 466699206230318010846,
+            "ticks_crossed": 1,
+            "gas_estimate": 88754
+          },
+          "note": "ETHUSD mapping not trusted this round"
+        }
+      ]
+    },
+    {
+      "pool": "0xdfe5f275020def30993f042174fc2d335678b626",
+      "pair": "AERO/cbBTC",
+      "side": "HIGH",
+      "signal_last_block": 49963281,
+      "plus4h_last_block": 49970510,
+      "onchain_fee": 2700,
+      "slot0_ok": true,
+      "quotes": [
+        {
+          "usd": 250,
+          "status": "UNSUPPORTED_NO_STABLE_LEG"
+        },
+        {
+          "usd": 500,
+          "status": "UNSUPPORTED_NO_STABLE_LEG"
+        },
+        {
+          "usd": 1000,
+          "status": "UNSUPPORTED_NO_STABLE_LEG"
+        },
+        {
+          "usd": 2000,
+          "status": "UNSUPPORTED_NO_STABLE_LEG"
+        }
+      ]
+    }
+  ],
+  "usd_capacity": "UNVERIFIED",
+  "note": "eth_call only. Not a fill. AERO/cbBTC has no stable leg so USD size was not forced. WETH legs left unsized if ETHUSD tick mapping is ambiguous."
+}

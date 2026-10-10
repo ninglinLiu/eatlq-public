@@ -1,0 +1,67 @@
+input_path: mvp/diagnostics/run004_h108_enriched_executable_dataset.csv
+target_column: executable_label
+net_return_column: executable_net_return
+status_filter:
+  executable_status: success
+
+h11_inputs:
+  metrics_json: mvp/diagnostics/run004_h11_feature_group_metrics.json
+  interpretation_json: mvp/diagnostics/run004_h11_feature_interpretation.json
+  summary_csv: mvp/diagnostics/run004_h11_feature_group_summary.csv
+  markdown: mvp/runs/run-004-patch-h11-enriched-feature-sanity-ablation.md
+
+outputs:
+  json: mvp/diagnostics/run004_patch_h12_return_aware_alpha_target_construction.json
+  markdown: mvp/runs/run-004-patch-h12-return-aware-alpha-target-construction.md
+
+return_thresholds:
+  alpha_ret_gt_0: 0.0
+  alpha_ret_gt_2pct: 0.02
+  alpha_ret_gt_5pct: 0.05
+  alpha_ret_gt_10pct: 0.10
+  alpha_ret_gt_20pct: 0.20
+
+top_quantile_targets:
+  alpha_top_40pct_return: 0.40
+  alpha_top_30pct_return: 0.30
+  alpha_top_20pct_return: 0.20
+  alpha_top_10pct_return: 0.10
+
+ternary_regime:
+  loss_lt: -0.05
+  win_gt: 0.05
+
+regression_targets:
+  clipped_return:
+    min: -0.20
+    max: 0.50
+  winsorized_return:
+    lower_quantile: 0.01
+    upper_quantile: 0.99
+  within_pool_rank: true
+  within_pool_time_bucket_rank:
+    bucket_ms: 300000
+
+target_rules:
+  min_positive_rate: 0.10
+  max_positive_rate: 0.60
+  min_top_class_rows: 75
+  prefer_return_separation: true
+  avoid_overly_coarse_zero_threshold: true
+
+h13_recommendation:
+  primary_target: alpha_top_20pct_return
+  secondary_targets:
+    - alpha_ret_gt_5pct
+    - alpha_ret_gt_10pct
+    - clipped_executable_net_return_regression
+    - winsorized_executable_net_return_regression
+    - within_pool_return_rank
+  executable_label_role: feasibility_gate_and_coarse_auxiliary_label
+
+safety:
+  sanity_only_not_deploy_evidence: true
+  no_promote: true
+  no_live: true
+  no_production_model_write: true
+  no_production_training: true

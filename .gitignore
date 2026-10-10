@@ -1,0 +1,10 @@
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+id_rsa
+id_ed25519
+auth.json
+.token_seed

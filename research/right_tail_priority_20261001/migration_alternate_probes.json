@@ -1,0 +1,38 @@
+[
+  {
+    "bytes": 75,
+    "error": null,
+    "http_status": 200,
+    "key": "f9899ada29833a72767ece1f36899c691875914ed00f21c83169aee78665b3c8",
+    "label": "migration_alternate_probe",
+    "response_head": "{'jsonrpc': '2.0', 'id': 1, 'error': {'code': -32005, 'message': 'limit exceeded'}}",
+    "url": "https://bsc-dataseed.binance.org"
+  },
+  {
+    "bytes": 75,
+    "error": null,
+    "http_status": 200,
+    "key": "8f07392ec2feb8a97dd42342c43e5610138605d08a3978444b5f6de6b30e3afe",
+    "label": "migration_alternate_probe",
+    "response_head": "{'jsonrpc': '2.0', 'id': 1, 'error': {'code': -32005, 'message': 'limit exceeded'}}",
+    "url": "https://bsc-dataseed.bnbchain.org"
+  },
+  {
+    "bytes": 106,
+    "error": null,
+    "http_status": 200,
+    "key": "35688ad4cb12460ca73f067dd8ff939b23193872f75ae8c43047ba1a329d547b",
+    "label": "migration_alternate_probe",
+    "response_head": "{'jsonrpc': '2.0', 'error': {'code': -32602, 'message': 'eth_getLogs is limited to 0 - 50 blocks range'}, 'id': 1}",
+    "url": "https://1rpc.io/bnb"
+  },
+  {
+    "bytes": 296,
+    "error": null,
+    "http_status": 429,
+    "key": "63b2f24a0441556b17b684749f37dd166b3353ef7036938a80f7bbe8b32fd3d3",
+    "label": "migration_alternate_probe",
+    "response_head": "{'jsonrpc': '2.0', 'id': 1, 'error': {'code': -32000, 'message': 'Your request has been rate-limited due to unusually high traffic on the Alchemy public API. Consider creating a free Alchemy account or upgrading to a paid plan for guaranteed throughput, even in times of extraordinary request traffic.'}}",
+    "url": "https://bsc-mainnet.public.blastapi.io"
+  }
+]

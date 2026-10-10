@@ -1,0 +1,23 @@
+{
+  "alpha_id": "H04",
+  "family": "path",
+  "hypothesis": "path inefficiency predicts reversal",
+  "mechanism": "large travel with small net move reflects two-sided absorption",
+  "venue": "Base V3",
+  "universe": "active observed pools",
+  "horizon": "1h",
+  "data_source": "V3 ticks in event order",
+  "experiment": "signed/volatility screen",
+  "feature": "path_inefficiency",
+  "direction": -1,
+  "prediction_object": "future absolute return",
+  "falsifier": "tick measurement errors explain it",
+  "status": "NOT_YET_TESTED",
+  "sample_size": 0,
+  "gross_result": "pending",
+  "cost_adjusted_result": "pending",
+  "capacity": "pending",
+  "concentration": "pending",
+  "tail_risk": "pending",
+  "next_action": "run rapid screen"
+}

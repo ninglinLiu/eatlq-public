@@ -1,0 +1,148 @@
+{
+  "status": "FROZEN_AFTER_LABEL_DESIGN",
+  "created_utc": "2026-07-20T05:21:00Z",
+  "universe": {
+    "chain": "base",
+    "dex": "uniswap_v3",
+    "quote_leg": "WETH",
+    "discovered_pools_filter": "pool_type='v3' AND has_weth_leg=1"
+  },
+  "calendar": {
+    "decision_start": "2025-10-01T00:00:00Z",
+    "decision_end": "2026-07-01T00:00:00Z"
+  },
+  "decision_grid": {
+    "wall_clock_minutes": 5,
+    "wave1_age_anchors_minutes": [
+      20,
+      30,
+      40,
+      50
+    ],
+    "note": "Anchors are a PIT subset of the 5m grid inside the 15-60m bucket"
+  },
+  "age_buckets": {
+    "primary_modeling": "15-60m",
+    "all": [
+      "5-15m",
+      "15-60m",
+      "1-6h",
+      "6-24h",
+      "1-7d"
+    ],
+    "mix_training": false,
+    "secondary_model_min_tokens": 100,
+    "secondary_model_min_rows": 500
+  },
+  "splits": {
+    "label_design_frac": 0.2,
+    "dev_frac": 0.6,
+    "sealed_holdout_frac": 0.2,
+    "by": "decision_time",
+    "embargo_days": 1
+  },
+  "sizing": {
+    "nominal_usd": 100.0,
+    "eth_usd_research": 3000.0,
+    "research_amt_in_wei": 33333333333333332,
+    "executor_max_position_usd": 50.0,
+    "executor_max_position_eth": 0.02
+  },
+  "eligibility_thresholds": {
+    "min_pre_1m_bars_primary": 6,
+    "max_buy_impact": 0.08,
+    "min_roundtrip_friction_proxy": -0.1
+  },
+  "label_design_candidates": {
+    "horizons_seconds": [
+      1800,
+      3600,
+      7200
+    ],
+    "barriers": {
+      "TB_A": {
+        "tp": 0.5,
+        "sl": 0.35
+      },
+      "TB_B": {
+        "tp": 1.0,
+        "sl": 0.5
+      }
+    }
+  },
+  "primary_horizon_seconds": 3600,
+  "primary_barrier": "TB_A",
+  "g3_sequence": {
+    "ns": [
+      3,
+      6,
+      12
+    ],
+    "model": "HMM"
+  },
+  "decay": {
+    "modes": [
+      "expanding",
+      "rolling_90d",
+      "recency_halflife_30d"
+    ]
+  },
+  "promotion_cap": 2,
+  "deploy_allowed": false,
+  "primary_barrier_params": {
+    "tp": 0.5,
+    "sl": 0.35
+  },
+  "label_design_report": {
+    "n_label_design": 479,
+    "horizon_scores": {
+      "1800": {
+        "n": 423,
+        "mean_xs_ic_price_vs_fwd": 0.0,
+        "n_xs_slices": 0,
+        "score": 0.06047372179046278
+      },
+      "3600": {
+        "n": 425,
+        "mean_xs_ic_price_vs_fwd": 0.0,
+        "n_xs_slices": 0,
+        "score": 0.060520891689244176
+      },
+      "7200": {
+        "n": 425,
+        "mean_xs_ic_price_vs_fwd": 0.0,
+        "n_xs_slices": 0,
+        "score": 0.060520891689244176
+      }
+    },
+    "barrier_scores": {
+      "TB_A": {
+        "dist": {
+          "SL_FIRST": 0.4342379958246347,
+          "TIMEOUT": 0.3883089770354906,
+          "TP_FIRST": 0.1732776617954071,
+          "FATAL_FIRST": 0.0041753653444676405
+        },
+        "score": 1.0561539028416396,
+        "params": {
+          "tp": 0.5,
+          "sl": 0.35
+        }
+      },
+      "TB_B": {
+        "dist": {
+          "TIMEOUT": 0.524008350730689,
+          "SL_FIRST": 0.38413361169102295,
+          "TP_FIRST": 0.08768267223382047,
+          "FATAL_FIRST": 0.0041753653444676405
+        },
+        "score": 0.9424620056508558,
+        "params": {
+          "tp": 1.0,
+          "sl": 0.5
+        }
+      }
+    }
+  },
+  "frozen_utc": "2026-07-20T05:31:01Z"
+}

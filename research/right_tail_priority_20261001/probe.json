@@ -1,0 +1,82 @@
+[
+  {
+    "bytes": 46,
+    "error": null,
+    "http_status": 200,
+    "key": "7796469b880d83953dc2eb0fa928dbb804f45cd6a3bed7263f26017fa8932698",
+    "label": "bsc_head",
+    "response_head": "{'jsonrpc': '2.0', 'result': '0x774448a', 'id': 1}"
+  },
+  {
+    "bytes": 45,
+    "error": null,
+    "http_status": 200,
+    "key": "1fafb380fcbb9596bcd9033e96dd5152193dbe26720a8e01e267162b81066ecd",
+    "label": "bsc_head",
+    "response_head": "{'jsonrpc': '2.0', 'id': 1, 'result': '0x774448a'}"
+  },
+  {
+    "bytes": 4551,
+    "error": null,
+    "http_status": 403,
+    "key": "003c529574147cb892b77d9c56b57ea56cd4ed06696e700d510246e2595e5b7b",
+    "label": "bsc_gmgn_activity",
+    "response_head": "None"
+  },
+  {
+    "bytes": 46,
+    "error": null,
+    "http_status": 200,
+    "key": "aeae0ebfed509b31ae411b3cbf9ceda0b0b0637ed00315a355cac3dd999bf57d",
+    "label": "base_head",
+    "response_head": "{'jsonrpc': '2.0', 'result': '0x319d71a', 'id': 1}"
+  },
+  {
+    "bytes": 46,
+    "error": null,
+    "http_status": 200,
+    "key": "58db05c4ee3f49e2164db73fa2046f9925e4f813ff0599e1fbe839ca7783a448",
+    "label": "base_head",
+    "response_head": "{'jsonrpc': '2.0', 'result': '0x319d71a', 'id': 1}"
+  },
+  {
+    "bytes": 4551,
+    "error": null,
+    "http_status": 403,
+    "key": "a1701cae193f4e259a8b53b272edd9567c399a57d591031ab74450cdea43e121",
+    "label": "base_gmgn_activity",
+    "response_head": "None"
+  },
+  {
+    "bytes": 80896,
+    "error": null,
+    "http_status": 200,
+    "key": "2f317b5c632f98535a60ac8197ba327b6908dc63c413fc0a16ba0564602f864a",
+    "label": "base_blockscout_transfers",
+    "response_head": "{'items': [{'block_hash': '0x098ec3f8d95e3e2546d1baab8f2fdd64c93c3b3c2bccbae81b3a54a8c16e9d37', 'block_number': 52006834, 'from': {'ens_domain_name': None, 'hash': '0x617573225eea06e56c454471d049FA239d9B07a4', 'implementations': [{'address_hash': '0x63c0c19a282a1B52b07dD5a65b58948A07DAE32B', 'name': 'EIP7702StatelessDeleGator'}], 'is_contract': True, 'is_scam': False, 'is_verified': True, 'metadata': None, 'name': None, 'private_tags': [], 'proxy_type': 'eip7702', 'public_tags': [], 'reputation': 'ok', 'watchlist_names': []}, 'log_index': 402, 'method': '0xac9650d8', 'timestamp': '2026-09-30T21:16:55.000000Z', 'to': {'ens_domain_name': None, 'hash': '0xCBc04B6607e7ebe0373C3Ee361BA396b8eCb721c', 'implementations': [], 'is_contract': False, 'is_scam': False, 'is_verified': False, 'metadata':"
+  },
+  {
+    "bytes": 27532,
+    "error": null,
+    "http_status": 200,
+    "key": "289f33820a6361eeda606ab661727f59c9e686428cf46634d286439419079ef2",
+    "label": "official_abi/TokenManager2.lite.json",
+    "response_head": "[{'anonymous': False, 'inputs': [{'indexed': False, 'internalType': 'address', 'name': 'base', 'type': 'address'}, {'indexed': False, 'internalType': 'uint256', 'name': 'offers', 'type': 'uint256'}, {'indexed': False, 'internalType': 'address', 'name': 'quote', 'type': 'address'}, {'indexed': False, 'internalType': 'uint256', 'name': 'funds', 'type': 'uint256'}], 'name': 'LiquidityAdded', 'type': 'event'}, {'anonymous': False, 'inputs': [{'indexed': False, 'internalType': 'address', 'name': 'creator', 'type': 'address'}, {'indexed': False, 'internalType': 'address', 'name': 'token', 'type': 'address'}, {'indexed': False, 'internalType': 'uint256', 'name': 'requestId', 'type': 'uint256'}, {'indexed': False, 'internalType': 'string', 'name': 'name', 'type': 'string'}, {'indexed': False, 'int"
+  },
+  {
+    "bytes": 12244,
+    "error": null,
+    "http_status": 200,
+    "key": "79672593bb765391baad58292b6f2365c462ae96fad4169b32e7450c1ebc4900",
+    "label": "official_docs/trade-guide.md",
+    "response_head": "None"
+  },
+  {
+    "bytes": 73021,
+    "error": null,
+    "http_status": 200,
+    "key": "f70e13e07d5e8ac6ebfdb003bc190adb754d9695aa6740aa1c3d6593f23ff614",
+    "label": "gt_bsc_hour",
+    "response_head": "{'data': {'id': '84d7e39d-5e0a-4561-96ba-32f713176e7e', 'type': 'ohlcv_request_response', 'attributes': {'ohlcv_list': [[1790816400, 0.000135106510695852, 0.000135184174982548, 0.000135106510695852, 0.000135184174982548, 0.114483644703941], [1790776800, 0.000135091241970937, 0.000135106510695852, 0.000135091241970937, 0.000135106510695852, 0.0738168045411179], [1790773200, 0.000133959714372785, 0.000135091241970937, 0.000133959714372785, 0.000135091241970937, 0.244853902988435], [1790740800, 0.000134178983113779, 0.000134178983113779, 0.000133959714372785, 0.000133959714372785, 0.150213610522103], [1790730000, 0.00013391949610577, 0.000134252593427601, 0.00013391949610577, 0.000134178983113779, 0.4162871904397475], [1790726400, 0.000133229164414381, 0.00013391949610577, 0.00013322916441438"
+  }
+]

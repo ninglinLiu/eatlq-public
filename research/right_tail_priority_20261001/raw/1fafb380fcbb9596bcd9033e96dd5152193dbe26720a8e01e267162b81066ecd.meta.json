@@ -1,0 +1,16 @@
+{
+  "body_sha256": "5468eca415719f5f5891393d37c55afdffd14f9809c21c41eff499ca1cff78f0",
+  "bytes": 45,
+  "finished": "2026-10-01T07:26:15.947413+00:00",
+  "http_status": 200,
+  "key": "1fafb380fcbb9596bcd9033e96dd5152193dbe26720a8e01e267162b81066ecd",
+  "label": "bsc_head",
+  "payload": {
+    "id": 1,
+    "jsonrpc": "2.0",
+    "method": "eth_blockNumber",
+    "params": []
+  },
+  "started": "2026-10-01T07:26:15.740638+00:00",
+  "url": "https://bsc-dataseed.binance.org"
+}

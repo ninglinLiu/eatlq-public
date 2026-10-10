@@ -1,0 +1,68 @@
+input_paths:
+  h14_ledger_csv: mvp/diagnostics/run004_h14_replay_ledger.csv
+  h14_return_accounting_spec_json: mvp/diagnostics/run004_h14_return_accounting_spec.json
+  h14_gas_model_report_json: mvp/diagnostics/run004_h14_gas_model_report.json
+  h14_exit_policy_audit_json: mvp/diagnostics/run004_h14_exit_policy_audit.json
+  h14_outlier_replay_report_json: mvp/diagnostics/run004_h14_outlier_replay_report.json
+  enriched_dataset_csv: mvp/diagnostics/run004_h108_enriched_executable_dataset.csv
+
+runtime_sources:
+  strategy_main: services/strategy/src/main.py
+  executor_main: services/executor/src/main.py
+  executor_swap: services/executor/src/swap.py
+  whitepaper_current: docs/whitepaper-v2-current.md
+
+exit_policy_runtime_defaults:
+  take_profit_pct: 15.0
+  stop_loss_pct: 10.0
+  trailing_stop_pct: 5.0
+  time_decay_min: 240.0
+  monitor_interval_sec: 30.0
+  pool_cooldown_sec: 1800
+  daily_loss_pct: 20.0
+  max_gas_usd: 2.0
+
+live_like_replay:
+  fixed_fallback_horizon_sec: 1800
+  slippage_stress_bps: 100
+  failed_exit_cost_return_assumption: 0.0
+  dynamic_exit_required_fields:
+    - entry_amount_out_token
+    - exit_amount_in_token
+    - intra_window_quote_path
+    - trigger_block
+    - sell_quote_at_trigger_block
+    - historical_gas_price_at_trigger
+    - token0_token1_decimals
+
+quarantine_rules:
+  bad_pool_bottom50_share_gte: 0.50
+  bad_pool_after_gas_positive_rate_lte: 0.20
+  quote_suspicious_return_abs_gte: 0.20
+  scale_risk_raw_abs_gt: 1000000000000000000
+  gas_cost_dominates: true
+
+focus_pools:
+  - "0x3e118916cd67cc9bfeb0fc44ae3dde8bc33c2d4a"
+  - "0x54219bce730d2727d91d8dcdf1465c7d299dee45"
+  - "0xc2476883d28d40b6c057f242fce2e8bda674faa0"
+
+outputs:
+  patch_json: mvp/diagnostics/run004_patch_h15_live_like_exit_replay_bad_pool_pilot.json
+  live_like_ledger_csv: mvp/diagnostics/run004_h15_live_like_replay_ledger.csv
+  exit_policy_truth_table_json: mvp/diagnostics/run004_h15_exit_policy_truth_table.json
+  bad_pool_forensic_json: mvp/diagnostics/run004_h15_bad_pool_forensic.json
+  clean_risk_subset_report_json: mvp/diagnostics/run004_h15_clean_risk_subset_report.json
+  return_schema_v2_json: mvp/diagnostics/run004_h15_return_schema_v2.json
+  h16_readiness_plan_json: mvp/diagnostics/run004_h15_h16_readiness_plan.json
+  markdown: mvp/runs/run-004-patch-h15-live-like-exit-replay-bad-pool-pilot.md
+
+safety:
+  diagnostics_only: true
+  no_training: true
+  no_10k_run: true
+  no_production_retrain: true
+  no_promote: true
+  no_live: true
+  no_production_model_write: true
+  no_active_model_overwrite: true

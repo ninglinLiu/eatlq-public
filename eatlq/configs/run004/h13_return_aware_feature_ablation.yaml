@@ -1,0 +1,168 @@
+input_path: mvp/diagnostics/run004_h108_enriched_executable_dataset.csv
+h12_json: mvp/diagnostics/run004_patch_h12_return_aware_alpha_target_construction.json
+h11_patch_json: mvp/diagnostics/run004_patch_h11_enriched_feature_sanity_ablation.json
+h11_metrics_json: mvp/diagnostics/run004_h11_feature_group_metrics.json
+h11_interpretation_json: mvp/diagnostics/run004_h11_feature_interpretation.json
+active_model_path: models/signal_model_realtime_v2.json
+status_filter:
+  executable_status: success
+net_return_column: executable_net_return
+primary_target: alpha_top_20pct_return
+primary_target_top_share: 0.20
+
+outputs:
+  patch_json: mvp/diagnostics/run004_patch_h13_return_aware_feature_ablation.json
+  metrics_json: mvp/diagnostics/run004_h13_feature_group_metrics.json
+  stress_json: mvp/diagnostics/run004_h13_stress_tests.json
+  summary_csv: mvp/diagnostics/run004_h13_feature_group_summary.csv
+  interpretation_json: mvp/diagnostics/run004_h13_interpretation.json
+  markdown: mvp/runs/run-004-patch-h13-return-aware-feature-ablation.md
+  candidate_model_dir: mvp/diagnostics/run004_h13_candidate_models
+
+secondary_targets:
+  alpha_ret_gt_5pct: 0.05
+  alpha_ret_gt_10pct: 0.10
+  alpha_top_30pct_return: 0.30
+  alpha_top_10pct_return: 0.10
+  clipped_net_return:
+    min: -0.20
+    max: 0.50
+  winsorized_net_return:
+    lower_quantile: 0.01
+    upper_quantile: 0.99
+  within_pool_return_rank: true
+
+feature_groups:
+  old_baseline_4f:
+    - price_velocity_5m
+    - buy_pressure_ratio
+    - token_volatility_5m
+    - activity_heat
+
+  old_baseline_plus_entropy:
+    - price_velocity_5m
+    - buy_pressure_ratio
+    - token_volatility_5m
+    - activity_heat
+    - unique_buyer_entropy_5m
+
+  sender_concentration_5m:
+    - unique_swap_senders_300
+    - top1_sender_share_300
+    - top3_sender_share_300
+    - sender_gini_300
+    - sender_entropy_300
+
+  buyer_concentration_5m:
+    - unique_buyers_300
+    - unique_sellers_300
+    - buyer_trade_count_300
+    - seller_trade_count_300
+    - top1_buyer_share_300
+    - top3_buyer_share_300
+    - buyer_gini_300
+    - repeat_buyer_ratio_300
+    - new_buyer_ratio_300
+    - buy_wallet_entropy_300
+
+  flow_count_5m:
+    - buy_count_300
+    - sell_count_300
+    - buy_sell_count_ratio_300
+    - decoded_event_count_5m
+
+  flow_raw_5m:
+    - buy_volume_raw_300
+    - sell_volume_raw_300
+    - net_flow_raw_300
+    - abs_flow_raw_300
+    - median_trade_size_raw_300
+    - trade_size_cv_300
+
+  temporal_regime:
+    - event_count_60
+    - event_count_300
+    - event_count_900
+    - event_count_1800
+    - activity_acceleration_1m_vs_5m
+    - activity_acceleration_3m_vs_15m
+    - buy_pressure_acceleration_1m_vs_5m
+    - sender_entropy_change_1m_vs_5m
+    - volatility_change_1m_vs_5m
+
+  microstructure_combo_no_raw_volume:
+    - unique_swap_senders_300
+    - top1_sender_share_300
+    - top3_sender_share_300
+    - sender_gini_300
+    - sender_entropy_300
+    - buy_count_300
+    - sell_count_300
+    - buy_sell_count_ratio_300
+    - decoded_event_count_5m
+    - activity_acceleration_1m_vs_5m
+    - sender_entropy_change_1m_vs_5m
+
+  microstructure_combo_with_old:
+    - price_velocity_5m
+    - buy_pressure_ratio
+    - token_volatility_5m
+    - activity_heat
+    - unique_swap_senders_300
+    - top1_sender_share_300
+    - top3_sender_share_300
+    - sender_gini_300
+    - sender_entropy_300
+    - buy_count_300
+    - sell_count_300
+    - buy_sell_count_ratio_300
+    - decoded_event_count_5m
+    - activity_acceleration_1m_vs_5m
+    - sender_entropy_change_1m_vs_5m
+
+  old_plus_buyer_flow_no_raw:
+    - price_velocity_5m
+    - buy_pressure_ratio
+    - token_volatility_5m
+    - activity_heat
+    - unique_buyers_300
+    - unique_sellers_300
+    - top1_buyer_share_300
+    - top3_buyer_share_300
+    - buyer_gini_300
+    - buy_count_300
+    - sell_count_300
+    - buy_sell_count_ratio_300
+
+training:
+  model_type: xgboost
+  max_depth: 2
+  n_estimators: 40
+  learning_rate: 0.08
+  subsample: 0.9
+  colsample_bytree: 0.9
+  random_state: 45
+  split: chronological_70_30
+  min_rows: 250
+  min_positive_labels: 30
+  min_negative_labels: 50
+
+stress_tests:
+  - uncapped
+  - exclude_top1_pool
+  - exclude_top5_pools
+  - top5_only
+  - non_top5_only
+  - v2_only
+  - v3_only
+  - chronological_70_30
+  - shuffled_5fold_sanity_only
+  - within_pool_rank_sanity
+
+safety:
+  sanity_only_not_deploy_evidence: true
+  no_promote: true
+  no_live: true
+  no_production_model_write: true
+  no_active_model_overwrite: true
+  no_production_training: true

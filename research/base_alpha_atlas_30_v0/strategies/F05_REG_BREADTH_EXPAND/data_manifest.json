@@ -1,0 +1,24 @@
+{
+  "strategy_id": "F05_REG_BREADTH_EXPAND",
+  "data_class": "B_SMALL_BOUNDED_EXPORT_REQUIRED",
+  "required_tables_or_files": [
+    "hourly unique pool counts",
+    "volumes"
+  ],
+  "required_columns": [
+    "hour",
+    "pool",
+    "swap_count",
+    "volume_eth"
+  ],
+  "required_time_resolution": "1h",
+  "point_in_time_requirements": "PIT",
+  "minimum_history": ">=30d",
+  "estimated_rows": "hours*pools",
+  "estimated_read_bytes": "50-500MB if aggregated offline",
+  "whether_current_diagnostics_may_support_it": "partial from diagnostics aggregates maybe",
+  "whether_production_database_would_be_required": true,
+  "missing_data": [
+    "preaggregated breadth table"
+  ]
+}

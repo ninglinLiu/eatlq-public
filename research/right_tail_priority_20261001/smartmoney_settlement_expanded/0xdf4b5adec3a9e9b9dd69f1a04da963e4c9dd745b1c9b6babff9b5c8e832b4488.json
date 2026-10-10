@@ -1,0 +1,124 @@
+{
+  "adapter": "MIXED_REGISTERED_FACTORY_V1",
+  "buy": {
+    "amount_raw": "10000000000000000",
+    "base_fee_header_evidence": null,
+    "base_fee_wei": 5000000,
+    "block": 51790016,
+    "direction": "buy",
+    "evidence": {
+      "http_status": 200,
+      "key": "84b7d809b33858e5dec6b1e8da8546623d1a1777fc1aa7cd1f871b9b06b10087",
+      "rpc_error": null
+    },
+    "gas_model_note": "measured internal execution + intrinsic calldata + explicit 5000 dispatcher/return buffer; not a mined receipt",
+    "gas_model_units": 1826286,
+    "intrinsic_gas": 26700,
+    "measured_internal_gas": 1794586,
+    "per_leg_unspent_input_raw": [
+      "0",
+      "0",
+      "0"
+    ],
+    "received_raw": "8216160787397354940992333",
+    "simulation_context": "hypothetical executor with empty hookData; no persistent state change",
+    "spent_raw": "10000000000000000",
+    "status": "HISTORICAL_TRANSFER_SETTLED_SIMULATION",
+    "timestamp": 1790369379
+  },
+  "buy_fees": {
+    "assumptions": "historical base fee; 0.01 gwei tip; measured gas+intrinsic+5000; unsigned type-2 nonce 0 L1 fee estimate; excludes deployment and adverse transaction ordering",
+    "evidence": {
+      "http_status": 200,
+      "key": "ecfed0ce00b8d636f5c04ad52edbc5708fa10a9e4981de9cfb587a5ac61282a0",
+      "rpc_error": null
+    },
+    "gas_model_units": 1826286,
+    "l1_fee_model_raw": "2733480787",
+    "l2_fee_model_raw": "27394290000000",
+    "operator_fee_model_raw": "0",
+    "priority_fee_assumption_wei": 10000000,
+    "total_fee_model_raw": "27397023480787"
+  },
+  "cash_recovered_after_modeled_chain_fees_less_entry_raw": "-4496038872872858",
+  "delay_seconds": 10,
+  "entry_delay_seconds_observed": 10.0,
+  "execution_venue": "SELF_BUILT_DIRECT_EXECUTOR",
+  "exit_policy": "24h",
+  "horizon_seconds_observed": 86400,
+  "input_eth_raw": "10000000000000000",
+  "intermediate_inventory_status": "MEASURED_NO_LEFTOVER",
+  "modeled_net_eth_raw": "-4496038872872858",
+  "net_profit_certified": false,
+  "operating_cost_status": "RPC_SERVER_DEPLOYMENT_NOT_AMORTIZED",
+  "platform_fee_model_raw": "0",
+  "platform_fee_status": "NO_THIRD_PARTY_ROUTER_COMMISSION_BY_DESIGN",
+  "residual_inventory_value_raw": "0",
+  "residual_note": "cash deficit is not total loss: unsold inventory is not valued at zero",
+  "sell": {
+    "amount_raw": "8216160787397354940992333",
+    "base_fee_header_evidence": null,
+    "base_fee_wei": 5000000,
+    "block": 51833216,
+    "direction": "sell",
+    "evidence": {
+      "http_status": 200,
+      "key": "111a743c57a58f61dc3023cb1c72081c6de9a24e9da70fcfe5c5ea8c393de3ed",
+      "rpc_error": null
+    },
+    "gas_model_note": "measured internal execution + intrinsic calldata + explicit 5000 dispatcher/return buffer; not a mined receipt",
+    "gas_model_units": 2608031,
+    "intrinsic_gas": 26736,
+    "measured_internal_gas": 2576295,
+    "per_leg_unspent_input_raw": [
+      "0",
+      "0",
+      "0"
+    ],
+    "received_raw": "5570480613050242",
+    "simulation_context": "hypothetical executor with empty hookData; no persistent state change",
+    "spent_raw": "8216160787397354940992333",
+    "status": "HISTORICAL_TRANSFER_SETTLED_SIMULATION",
+    "timestamp": 1790455779
+  },
+  "sell_fees": {
+    "assumptions": "historical base fee; 0.01 gwei tip; measured gas+intrinsic+5000; unsigned type-2 nonce 0 L1 fee estimate; excludes deployment and adverse transaction ordering",
+    "evidence": {
+      "http_status": 200,
+      "key": "ec0681df7a0f6f8f61e73e12776c791225be2f810631ed2d3f2700dcbf1a6008",
+      "rpc_error": null
+    },
+    "gas_model_units": 2608031,
+    "l1_fee_model_raw": "1997442313",
+    "l2_fee_model_raw": "39120465000000",
+    "operator_fee_model_raw": "0",
+    "priority_fee_assumption_wei": 10000000,
+    "total_fee_model_raw": "39122462442313"
+  },
+  "settled_before_gas_pnl_raw": "-4429519386949758",
+  "slot_evidence": {
+    "access_list_evidence": {
+      "http_status": 200,
+      "key": "dc279a8fbde0c228f0537bcdd526722c6285cbc6ace45be15fb4bc786cff4838",
+      "rpc_error": null
+    },
+    "attempts": [
+      {
+        "http_status": 200,
+        "key": "107f5ad70b8372a72644ec9c75acc2eb33a951a7bf34addba8fa6e5b0e9e0e19",
+        "rpc_error": null
+      }
+    ],
+    "block": 51833216,
+    "detector_version": 2,
+    "layout_source": null,
+    "slot": "0x3d9c1636abd80c1e50f5e5c7b9d5579b35fce9ba1343b829acbbd0a3b8add1d9",
+    "token": "0x5dbcffbe9a8d2be5510c88bb4302fce3cf03ffb6"
+  },
+  "source_block": 51790011,
+  "source_tx": "0xdf4b5adec3a9e9b9dd69f1a04da963e4c9dd745b1c9b6babff9b5c8e832b4488",
+  "status": "CONDITIONAL_EXECUTION_COST_MODEL",
+  "target_inventory_remaining_raw": "0",
+  "token": "0x5dbcffbe9a8d2be5510c88bb4302fce3cf03ffb6",
+  "wallet": "0xfd7e55a555555c2f25053a38ec744de1afea4fa4"
+}

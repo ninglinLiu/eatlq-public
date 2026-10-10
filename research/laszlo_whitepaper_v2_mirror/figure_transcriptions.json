@@ -1,0 +1,82 @@
+{
+  "laszlo-whitepaper-v2/alpha-beta-split.png": {
+    "method": "tesseract",
+    "path": "www.wisdomechoes.net/images/blog/laszlo-whitepaper-v2/alpha-beta-split.png",
+    "text": "人   see.       四 =e        :           |     il\n11 labial of    [二  eA”    /   a      pas     ii y\nbadd FT ee ae  eo              ‘        yr\nNI A= as aos           ni itt\nee piss ca he   iyi ty  a\n       a     全 | ——     :"
+  },
+  "laszlo-whitepaper-v2/base-l2-execution-isometric.png": {
+    "method": "tesseract",
+    "path": "www.wisdomechoes.net/images/blog/laszlo-whitepaper-v2/base-l2-execution-isometric.png",
+    "text": "oe           2     ee         =                   | OA Zp: =      ||     xe              as a 1 Ce yeti\n[四          a               =      er Fe    a.\n。                  ¢.       y>.       Goa,         本                 PP                   ie i\ntes.         <i   =        FI    Le                    “a aed  ic\nPP        人              5    ss   BO eS            a if S.  east\nSa   va baias                :    < cote ge Me       *\n二二    SEE                               Se   emcee\n.            \"=            ee                      eB,\ni                    i    a           :      roe)                   oe     gw\ny 4   :  > a              Cx.      .        =  Py.   1                         iB\na SST        at                      ae              8\n      as    |     xO.                 Ss Ea oo       ame\nle)         ~~ far        > ae  co Se     e\nTian                      ¢                \"    aaa ar"
+  },
+  "laszlo-whitepaper-v2/buy-sell-asymmetry.svg": {
+    "method": "svg_text",
+    "path": "www.wisdomechoes.net/images/blog/laszlo-whitepaper-v2/buy-sell-asymmetry.svg",
+    "text": "EXECUTION ASYMMETRY · BUY CONSERVATIVE / SELL FAIL-OPEN\nBUY path\nstale RPC head\ndaily drawdown breach\nfire_thr < max(model, 0.68)\nbalance RPC failure\nsingle on-chain exit: rust_executor only\nSELL path\nintent_id dedup (SET NX)\nentry_token_amount cap\nnot blocked by stale head\npending_sell TTL self-heal\nPM emits signal → executor swaps"
+  },
+  "laszlo-whitepaper-v2/hybrid-architecture.svg": {
+    "method": "svg_text",
+    "path": "www.wisdomechoes.net/images/blog/laszlo-whitepaper-v2/hybrid-architecture.svg",
+    "text": "HYBRID ARCHITECTURE · RUST SHELL · PYTHON BRAIN · REDIS NERVE\nRust\nIngestor · Executor\nIO-bound · WS · swap\nPosition Manager\nPython\nStrategy engine\nXGBoost · features\nDashcam · label jobs\nRedis\nStreams bus\nfeat2 hash · state\nhalt · positions\nDocker Compose · laszlo-net · single-node vertical scale"
+  },
+  "laszlo-whitepaper-v2/infra-stack-layers.svg": {
+    "method": "svg_text",
+    "path": "www.wisdomechoes.net/images/blog/laszlo-whitepaper-v2/infra-stack-layers.svg",
+    "text": "INFRASTRUCTURE STACK · V2\nLayer 4 · Brain & Hand\nPython Strategy · Rust Executor · PM · Streamlit\nXGBoost · exactInputSingle · slot0() stops\nLayer 3 · Vault\nPostgres wallet profiles · ClickHouse paused\nDashcam CSV for offline label / retrain\nLayer 2 · Synapse\nRedis Streams · market_ticks · signals\nfeat2:{symbol} · positions:* · halt keys\nLayer 1 · Interceptor\nRust Ingestor · eth_subscribe logs\nV3 Swap decode · MsgPack · WsPool RPC"
+  },
+  "laszlo-whitepaper-v2/ml-pipeline-loop-public.svg": {
+    "method": "svg_text",
+    "path": "www.wisdomechoes.net/images/blog/laszlo-whitepaper-v2/ml-pipeline-loop-public.svg",
+    "text": "ML LOOP · SIGNAL TO DEPLOYMENT\nCollect\nlive signals\nPrepare\nclean dataset\nLabel\noutcome verify\nTrain\nout-of-sample\nDeploy\ngated release\nMonitor\nreview loop\nModels graduate only after independent validation  never by lowering standards."
+  },
+  "laszlo-whitepaper-v2/phase-roadmap-public.svg": {
+    "method": "svg_text",
+    "path": "www.wisdomechoes.net/images/blog/laszlo-whitepaper-v2/phase-roadmap-public.svg",
+    "text": "DELIVERY ROADMAP\nP1\nFoundation\nP2\nIngestion\nP3\nStrategy\nP4\nExecution\nP5\nRisk stack\nNow\nAlpha calibration\nShipped: end-to-end pipeline on Base L2 · In progress: model calibration under real market data"
+  },
+  "laszlo-whitepaper-v2/pipeline-flow.svg": {
+    "method": "svg_text",
+    "path": "www.wisdomechoes.net/images/blog/laszlo-whitepaper-v2/pipeline-flow.svg",
+    "text": "LASZLO DATA PIPELINE\nBase L2\nAlchemy WS/HTTP\nIngestor\nmarket_ticks\nRedis\nStreams\nStrategy\nXGBoost v3\nExecutor\nswap + ledger\nLedger\ntrade_ledger.jsonl\ndashcam.csv\nPhase 6 label → train → holdout Pe72%\nRisk gates\nstale head · drawdown · SELL_ONLY · fire_thr=max(model,0.68)"
+  },
+  "laszlo-whitepaper-v2/pulse-channel-whitepaper.png": {
+    "method": "tesseract",
+    "path": "www.wisdomechoes.net/images/blog/laszlo-whitepaper-v2/pulse-channel-whitepaper.png",
+    "text": ",\n区\n*                     2) =.\n)  =  Put  =\ni)                    sng            =\n           ;          is            WA       =一\n    oN       3   ,                  ‘\ny            \"           iS  a          1\nAi    yj       i  ji\n人N  \\\\, NN N\nAWS         oe\n,      NNNNNN    ac    G\na     .. ASS\n-          3          at OOS            watt\n司      — Sear SSS =       ，\nee         aS    ———\n.       Se        =           i SS —\ns 2.    ;        wz          NSS 二\n.     a                              aa:            =\n3          F        ae   1\n*"
+  },
+  "laszlo-whitepaper-v2/research-discipline-tri-public.svg": {
+    "method": "svg_text",
+    "path": "www.wisdomechoes.net/images/blog/laszlo-whitepaper-v2/research-discipline-tri-public.svg",
+    "text": "RESEARCH DISCIPLINE\n01\nTraceable Signals\nEvery decision auditable\nReplay before scale\n02\nModel Restraint\nSimulate when uncertain\nNo confidence without data\n03\nRisk First\nPre-trade checks\nAutomatic de-risking"
+  },
+  "laszlo-whitepaper-v2/retail-vs-institutional.svg": {
+    "method": "svg_text",
+    "path": "www.wisdomechoes.net/images/blog/laszlo-whitepaper-v2/retail-vs-institutional.svg",
+    "text": "RETAIL STATUS QUO vs LASZLO INSTITUTIONAL STANDARD\nRETAIL\nNoisy transfers · 15s polling\nNansen + TV + Uniswap tabs\nPublic mempool · MEV sandwich\nManual stop · forgot positions\nFragmented tools · context loss\nLASZLO\nBlacklist + whale USD filter\nWS ingest · Redis Streams · <20ms\nIngest → Strategy → Executor loop\nBase L2 gas · 3% slippage hard cap\nTrailing · Time · Hard stop (chain)\nSingle-tenant weapon system"
+  },
+  "laszlo-whitepaper-v2/rl-iteration-loop.svg": {
+    "method": "svg_text",
+    "path": "www.wisdomechoes.net/images/blog/laszlo-whitepaper-v2/rl-iteration-loop.svg",
+    "text": "PHASE 6 - RL-STYLE ITERATION\nEDGE\n72% P\nIngest\nsoak / dashcam\nLabel\ntri / QC\nTrain\nholdout gate\nPaper\nno BUY if below thr\nLedger\nreplay / audit\nDiagnose\nedge / worst"
+  },
+  "laszlo-whitepaper-v2/tick-lifecycle-timeline.svg": {
+    "method": "svg_text",
+    "path": "www.wisdomechoes.net/images/blog/laszlo-whitepaper-v2/tick-lifecycle-timeline.svg",
+    "text": "TICK LIFECYCLE · BASE L2 MEASURED PATH\nT+0\nSwap on-chain\n+6ms\nRedis XADD\n+15ms\nSignal out\n+20ms\nTx submit\n+2s\nSequencer confirm\nopen_position\nslot0() monitor"
+  },
+  "laszlo-whitepaper-v2/triple-stop-loss.svg": {
+    "method": "svg_text",
+    "path": "www.wisdomechoes.net/images/blog/laszlo-whitepaper-v2/triple-stop-loss.svg",
+    "text": "POSITION MANAGER · TRIPLE STOP\nTrailing Stop\n5%\nfrom peak · while in profit\n→ auto SELL signal\nTime Stop\n30m\nflat ±2% range\nHard Stop\n15%\nunconditional loss cap"
+  },
+  "laszlo-whitepaper-v2/v1-v2-evolution.svg": {
+    "method": "svg_text",
+    "path": "www.wisdomechoes.net/images/blog/laszlo-whitepaper-v2/v1-v2-evolution.svg",
+    "text": "V1 BLUEPRINT → V2 BATTLE-TESTED\nDIMENSION\nV1.0\nV2.0\nChain\nEthereum Mainnet\nBase L2 (OP Stack)\nMEV\nFlashbots Bundle\nEIP-1559 Gas + 3% slippage cap\nHoneypot\nConcept only\nQuoter V2 eth_call simulate\nStops\nslot0() every 2s · triple stop\nML\nSynthetic XGBoost\nv1 synth → v2 labeled auto-switch\nIngest\npendingTransactions\neth_subscribe logs · V3 Swap ABI\nFeatures\nClickHouse / Redis ZSET\nfeat2:{symbol} Redis Hash buckets\nDrawdown\nManual kill switch\nAuto 10% daily halt (UTC reset)"
+  },
+  "laszlo-whitepaper-v1/cover.png": {
+    "method": "tesseract",
+    "path": "www.wisdomechoes.net/images/blog/laszlo-whitepaper-v1/cover.png",
+    "text": "“ae\ni         —   i —\n;    @  Zs        “a\nSs .    6一一          四\n:    eno   =) |\n   ;      \\ settee    oo gi).\nle EE eee     ;\n本\n=       ee SSA eee    :\nMewesess = 2 6G a ee\nSe     =  SS  :   到\ns  ‘x  = =  —    eee\nss              3               -\n°               »     .     '    —."
+  }
+}

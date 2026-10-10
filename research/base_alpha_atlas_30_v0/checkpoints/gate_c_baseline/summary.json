@@ -1,0 +1,12 @@
+{
+  "n": 21,
+  "idle_mean": 58.84428571428571,
+  "idle_min": 1.27,
+  "idle_max": 79.6,
+  "idle_lt10": 2,
+  "max_streak_lt10": 1,
+  "swap_delta": -786432,
+  "STRICT_GATE_PASS": false,
+  "TINY_PANEL_BUILT": true,
+  "rationale_for_build_despite_strict_fail": "human ordered A->B->C run-all; panel from project-local 16MB extracts only, nice=19 ionice-idle, no prod CH/Redis/RPC; live containers unchanged"
+}

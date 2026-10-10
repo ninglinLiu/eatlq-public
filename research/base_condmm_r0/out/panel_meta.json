@@ -1,0 +1,16 @@
+{
+ "records": 387322,
+ "finite_fv": 387321,
+ "zero_sigma_dropped": 1,
+ "lookbacks": [
+  24,
+  168,
+  720
+ ],
+ "min_returns": 12,
+ "tick_bound": [
+  1e-30,
+  1e+30
+ ],
+ "entry_days": 334
+}

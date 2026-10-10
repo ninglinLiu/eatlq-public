@@ -1,0 +1,23 @@
+{
+  "alpha_id": "V03",
+  "family": "venue",
+  "hypothesis": "protocol activity migration predicts price discovery venue",
+  "mechanism": "flow moves to the venue with fresher price",
+  "venue": "Base V3",
+  "universe": "active observed pools",
+  "horizon": "1h",
+  "data_source": "V2/V3 and fee-tier metadata",
+  "experiment": "lead-lag comparison",
+  "feature": "venue_migration",
+  "direction": 1,
+  "prediction_object": "next return",
+  "falsifier": "timestamps or token mapping fail",
+  "status": "NOT_YET_TESTED",
+  "sample_size": 0,
+  "gross_result": "pending",
+  "cost_adjusted_result": "pending",
+  "capacity": "pending",
+  "concentration": "pending",
+  "tail_risk": "pending",
+  "next_action": "run rapid screen"
+}

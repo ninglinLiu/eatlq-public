@@ -1,0 +1,26 @@
+{
+  "arm": "A_CROWD_FADE",
+  "fame_now_captured_at": "2026-09-17T06:24:38+00:00",
+  "gates": {
+    "mean_gt_0": false,
+    "not_using_fame_now_as_history": true,
+    "permute_weaker": true,
+    "top1_removed_gt_0": false,
+    "two_windows": false
+  },
+  "generated_at": "2026-09-17T06:24:55+00:00",
+  "mean": -0.010480924952352621,
+  "median": -0.0,
+  "n_signals": 281,
+  "note": "PIT fame from our closed FIFO before T. Vendor snapshot is fame_now only.",
+  "passed": false,
+  "permute_mean": -0.33575108453994,
+  "permute_n": 120,
+  "prospective_on_this_tape": "INCONCLUSIVE_NO_FORWARD_TAPE",
+  "same_direction_forbidden_for_board_wallets": true,
+  "top1_removed_mean": -0.01075214510776651,
+  "window_means": [
+    -0.006530317598898992,
+    -0.023609097080752383
+  ]
+}

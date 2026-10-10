@@ -1,0 +1,23 @@
+event_id,status,n_primary_all,n_selected,n_series,path_attach_contract_id,t_attach_unix,attach_share,second_share,earliest_primary_contract_id,earliest_equals_path_attach,broke,hours_from_earliest_to_attach,notes
+E01_niulai,left_censored,28,8,6,E01_niulai__bsc__0xbeea1d61,1786723200,0.7982,0.2018,E01_niulai__bsc__0xbeea1d61,1,0,-0.31,gt_hourly_usd;dust=500;cap=8
+E02_moodeng,left_censored,6,6,6,E02_moodeng__solana__ed5nyywezp,1768892400,1.0000,0.0000,E02_moodeng__solana__ed5nyywezp,1,0,11916.11,gt_hourly_usd;dust=500;cap=8
+E03_chillguy,left_censored,3,3,3,E03_chillguy__solana__df6yfrkc8k,1768892400,1.0000,0.0000,E03_chillguy__solana__df6yfrkc8k,1,0,10330.86,gt_hourly_usd;dust=500;cap=8
+E04_fartcoin,left_censored,9,8,8,E04_fartcoin__solana__9bb6nfecjb,1768892400,1.0000,0.0000,E04_fartcoin__solana__9bb6nfecjb,1,0,11016.84,gt_hourly_usd;dust=500;cap=8
+E05_neiro,left_censored,4,4,4,E05_neiro__ethereum__0x812ba41e,1767898800,1.0000,0.0000,E05_neiro__ethereum__0x812ba41e,1,0,12717.74,gt_hourly_usd;dust=500;cap=8
+E06_pnutt,left_censored,27,8,8,E06_pnutt__solana__2qehjdldlb,1768896000,1.0000,0.0000,E06_pnutt__solana__2qehjdldlb,1,0,10696.89,gt_hourly_usd;dust=500;cap=8
+E07_clanker,single_series,1,1,1,E07_clanker__base__0x1bc0c422,,,,E07_clanker__base__0x1bc0c422,,,,only one ohlcv series
+E08_virtuals,single_series,1,1,1,E08_virtuals__base__0xa4a2e2ca,,,,E08_virtuals__base__0xa4a2e2ca,,,,only one ohlcv series
+E09_pumpfun,left_censored,19,8,8,E09_pumpfun__solana__5ngy33drvn,1783861200,1.0000,0.0000,E09_pumpfun__solana__4vm5td1og9,0,0,12829.67,gt_hourly_usd;dust=500;cap=8
+E10_bonk,left_censored,7,7,7,E10_bonk__solana__dezxaz8z7p,1769004000,1.0000,0.0000,E10_bonk__solana__dezxaz8z7p,1,0,27064.82,gt_hourly_usd;dust=500;cap=8
+E11_brett,single_series,1,1,1,E11_brett__base__0x532f2710,,,,E11_brett__base__0x532f2710,,,,only one ohlcv series
+E12_toshi,single_series,1,1,1,E12_toshi__base__0xac1bd248,,,,E12_toshi__base__0xac1bd248,,,,only one ohlcv series
+E13_trump_fragment,left_censored,4,4,4,E13_trump_fragment__solana__6p6xghyf7a,1768744800,1.0000,0.0000,E13_trump_fragment__solana__5snu6g1qvj,0,0,8957.41,gt_hourly_usd;dust=500;cap=8
+E14_harris,left_censored,5,5,5,E14_harris__solana__3lt2dbbd5b,1783893600,1.0000,0.0000,E14_harris__solana__6kvnnyvdzz,0,0,17253.64,gt_hourly_usd;dust=500;cap=8
+E15_maga,observed,5,5,5,E15_maga__ethereum__0x576e2bed,1767384000,0.9962,0.0038,E15_maga__ethereum__0x576e2bed,1,0,20997.52,gt_hourly_usd;dust=500;cap=8
+E16_biden,left_censored,2,2,2,E16_biden__ethereum__0xc548e905,1783263600,0.5906,0.4094,E16_biden__ethereum__0xc548e905,1,0,21484.74,gt_hourly_usd;dust=500;cap=8
+E17_goatseus,left_censored,7,7,7,E17_goatseus__solana__czlsujwblf,1768888800,1.0000,0.0000,E17_goatseus__solana__czlsujwblf,1,0,11192.68,gt_hourly_usd;dust=500;cap=8
+E18_hawktuah,left_censored,2,2,2,E18_hawktuah__solana__hawkthxrcn,1767434400,1.0000,0.0000,E18_hawktuah__solana__4gfe6mbdor,0,0,13502.92,gt_hourly_usd;dust=500;cap=8
+E19_luguan,no_primary,0,0,0,,,,,,,,,no primary-chain tokens
+E20_shandong,single_series,1,1,1,E20_shandong__bsc__0x1fd39fca,,,,E20_shandong__bsc__0x1fd39fca,,,,only one ohlcv series
+E21_夫妻文学,no_primary,0,0,0,,,,,,,,,no primary-chain tokens
+E22_wen,single_series,1,1,1,E22_wen__solana__wenwenvqqn,,,,E22_wen__solana__wenwenvqqn,,,,only one ohlcv series

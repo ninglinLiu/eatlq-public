@@ -1,0 +1,14 @@
+{
+  "status": "FREEZE_READY",
+  "code_hash": "41fd647e7f5f68dda6bf1f831544112eb1e24a632a2f0c0d385ea31361e61c16",
+  "config_hash": "bc21de6467be4ad65235e87e0e04b5f878431d028db793ad15cb0984919e93c7",
+  "data_hash": "075b801d092368034462d4027b765e87e59c31002f31e3d07caa11836e1ef6f9",
+  "schema_version": "lba_v2_0",
+  "historical_label": "DIAGNOSTIC_REPLAY",
+  "primary_timing": {
+    "absorption_window_seconds": 5,
+    "measured_latency_seconds": 0
+  },
+  "shadow_upgrade_armed": false,
+  "generated_at": "2026-07-21T07:29:29Z"
+}

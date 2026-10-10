@@ -1,0 +1,74 @@
+{
+  "reference": {
+    "chunks": 1579,
+    "rows": 424433536,
+    "gb": 378.28000000000003,
+    "minutes": 300.2,
+    "credits": 31560,
+    "disk_bytes_per_row": 117.5,
+    "download_bytes_per_log": 891.8153846509462
+  },
+  "chunks_needed": 1579,
+  "measured_chunks": [
+    {
+      "from": 34300000,
+      "to": 34309999,
+      "n_logs": 79752,
+      "bytes": 85996994,
+      "seconds": 6.086379289627075
+    },
+    {
+      "from": 36930000,
+      "to": 36939999,
+      "n_logs": 24146,
+      "bytes": 19985297,
+      "seconds": 3.526628017425537
+    },
+    {
+      "from": 39560000,
+      "to": 39569999,
+      "n_logs": 18736,
+      "bytes": 101509324,
+      "seconds": 8.125621795654297
+    },
+    {
+      "from": 42190000,
+      "to": 42199999,
+      "n_logs": 24536,
+      "bytes": 144009312,
+      "seconds": 9.186012029647827
+    },
+    {
+      "from": 44820000,
+      "to": 44829999,
+      "n_logs": 26802,
+      "bytes": 103713241,
+      "seconds": 5.035081148147583
+    },
+    {
+      "from": 47450000,
+      "to": 47459999,
+      "n_logs": 27487,
+      "bytes": 80766417,
+      "seconds": 5.245213985443115
+    }
+  ],
+  "bytes_per_log": 2660.494616770658,
+  "wall_per_chunk_s": 1.9175195296605427,
+  "estimates": {
+    "rows_mid": 45956819.72568776,
+    "rows_lo": 38911388.22337551,
+    "rows_hi": 53002251.228,
+    "probe_bias_vs_cl_truth": 0.9884259235679246,
+    "credits": 31580,
+    "download_gb": 122.26787148409187,
+    "disk_gb": 5.399926317768312,
+    "wall_min_download_bound": 97.03081056234637,
+    "wall_min_latency_bound": 50.46272228889995
+  },
+  "rpc_stats": {
+    "calls": 6,
+    "bytes": 166763411,
+    "errors": 0
+  }
+}

@@ -1,0 +1,449 @@
+{
+  "frozen_at": "2026-10-01T07:33:10.845020+00:00",
+  "qualification": "SUPPLIER_CLAIM_ONLY",
+  "rows": [
+    {
+      "after_snapshot": true,
+      "block_number": 51429946,
+      "index_complete": true,
+      "native_net_raw": "-300000000000000000",
+      "pilot_order_in_wallet": 1,
+      "quote": "ETH",
+      "quote_net_raw": "-300000000000000000",
+      "side": "buy",
+      "source_fee_raw": "12642892814458",
+      "status": "SINGLE_TARGET_OPPOSITE_ACCOUNT_CASH",
+      "timestamp": 1789649239.0,
+      "token": "0x6666dd8d0a8889e41418141760753b69ab319ba3",
+      "token_net_raw": "1691497773302795660602958043",
+      "token_nets": {
+        "0x6666dd8d0a8889e41418141760753b69ab319ba3": "1691497773302795660602958043"
+      },
+      "tx_hash": "0xc1272de959e567564ef4901708bdb2c13b24c3d7fa75a6b3ae586af42fa6f67e",
+      "wallet": "0xa05ec35f7d1eba823cff2ed26aeaed419683742f"
+    },
+    {
+      "after_snapshot": true,
+      "block_number": 51564648,
+      "index_complete": true,
+      "native_net_raw": "-300000000000000000",
+      "pilot_order_in_wallet": 2,
+      "quote": "ETH",
+      "quote_net_raw": "-300000000000000000",
+      "side": "buy",
+      "source_fee_raw": "12168016898531",
+      "status": "SINGLE_TARGET_OPPOSITE_ACCOUNT_CASH",
+      "timestamp": 1789918643.0,
+      "token": "0x9e00fc92493451eba1c63dd3880d68b622037ba3",
+      "token_net_raw": "50375408315885694100540656",
+      "token_nets": {
+        "0x9e00fc92493451eba1c63dd3880d68b622037ba3": "50375408315885694100540656"
+      },
+      "tx_hash": "0xc704147d839c37ffd2ac97fc6afebee7f1442ac8e2436242b94a0eed495440a5",
+      "wallet": "0xa05ec35f7d1eba823cff2ed26aeaed419683742f"
+    },
+    {
+      "after_snapshot": true,
+      "block_number": 51592959,
+      "index_complete": true,
+      "native_net_raw": "-1000000000000000000",
+      "pilot_order_in_wallet": 1,
+      "quote": "ETH",
+      "quote_net_raw": "-1000000000000000000",
+      "side": "buy",
+      "source_fee_raw": "12466470675204",
+      "status": "SINGLE_TARGET_OPPOSITE_ACCOUNT_CASH",
+      "timestamp": 1789975265.0,
+      "token": "0x9e00fc92493451eba1c63dd3880d68b622037ba3",
+      "token_net_raw": "165380796349218992258402982",
+      "token_nets": {
+        "0x9e00fc92493451eba1c63dd3880d68b622037ba3": "165380796349218992258402982"
+      },
+      "tx_hash": "0xefa7da961e655c5f793a681a7aae53722379087f5f3a94db80dc2cbe7630d795",
+      "wallet": "0x9631335762e3603d2a7507d84838aa3236d52745"
+    },
+    {
+      "after_snapshot": true,
+      "block_number": 51623944,
+      "index_complete": true,
+      "native_net_raw": "-500000000000000000",
+      "pilot_order_in_wallet": 2,
+      "quote": "ETH",
+      "quote_net_raw": "-500000000000000000",
+      "side": "buy",
+      "source_fee_raw": "41116307289916",
+      "status": "SINGLE_TARGET_OPPOSITE_ACCOUNT_CASH",
+      "timestamp": 1790037235.0,
+      "token": "0x798b24ba106188002ea1349654be2b0d515c7777",
+      "token_net_raw": "5553464607181456179853925",
+      "token_nets": {
+        "0x798b24ba106188002ea1349654be2b0d515c7777": "5553464607181456179853925"
+      },
+      "tx_hash": "0x2faeadd305a3ee7688bd7e2e8d93a30f4e60ab37550fdeb3ceabf2d83f8b903e",
+      "wallet": "0x9631335762e3603d2a7507d84838aa3236d52745"
+    },
+    {
+      "after_snapshot": true,
+      "block_number": 51445902,
+      "index_complete": true,
+      "native_net_raw": "-320000000000000000",
+      "pilot_order_in_wallet": 1,
+      "quote": "ETH",
+      "quote_net_raw": "-320000000000000000",
+      "side": "buy",
+      "source_fee_raw": "3701617276972302",
+      "status": "SINGLE_TARGET_OPPOSITE_ACCOUNT_CASH",
+      "timestamp": 1789681151.0,
+      "token": "0x7e298d798656c03ec80f2a7843d0805103749ba3",
+      "token_net_raw": "1862003480081538036379706656",
+      "token_nets": {
+        "0x7e298d798656c03ec80f2a7843d0805103749ba3": "1862003480081538036379706656"
+      },
+      "tx_hash": "0x4b59a1bab1f277d95c1ac0fd773e8797becad855cdabedfb2106278d2caf581a",
+      "wallet": "0xe28601398a5448d1147e6e8b0e0c6d686f0d216d"
+    },
+    {
+      "after_snapshot": true,
+      "block_number": 51477330,
+      "index_complete": true,
+      "native_net_raw": "-320000000000000000",
+      "pilot_order_in_wallet": 2,
+      "quote": "ETH",
+      "quote_net_raw": "-320000000000000000",
+      "side": "buy",
+      "source_fee_raw": "4376386980144218",
+      "status": "SINGLE_TARGET_OPPOSITE_ACCOUNT_CASH",
+      "timestamp": 1789744007.0,
+      "token": "0xa474be8f2c404a3dbbaa4e703d679aa188aa6757",
+      "token_net_raw": "62153408998922592562414",
+      "token_nets": {
+        "0xa474be8f2c404a3dbbaa4e703d679aa188aa6757": "62153408998922592562414"
+      },
+      "tx_hash": "0xf1e047b9a9feefaa6463ea636379fc45d75385dff84f6eb9a9fd1bdfd695c803",
+      "wallet": "0xe28601398a5448d1147e6e8b0e0c6d686f0d216d"
+    },
+    {
+      "after_snapshot": true,
+      "block_number": 51540579,
+      "index_complete": true,
+      "native_net_raw": "-125000000000000000",
+      "pilot_order_in_wallet": 1,
+      "quote": "ETH",
+      "quote_net_raw": "-125000000000000000",
+      "side": "buy",
+      "source_fee_raw": "4328658693276",
+      "status": "SINGLE_TARGET_OPPOSITE_ACCOUNT_CASH",
+      "timestamp": 1789870505.0,
+      "token": "0x882c8e35504d58979b1280fe76d6553f717029f8",
+      "token_net_raw": "23499597458674696139453095",
+      "token_nets": {
+        "0x882c8e35504d58979b1280fe76d6553f717029f8": "23499597458674696139453095"
+      },
+      "tx_hash": "0xbd21bbf6d51300a162d27b5fe52fff3e0000d18ffa1ca4aa1fbe6c5e277381d6",
+      "wallet": "0x2ce9d43d1cba6ae31d7f07bfe0098dfa2d833373"
+    },
+    {
+      "after_snapshot": true,
+      "block_number": 51630970,
+      "index_complete": true,
+      "native_net_raw": "-770000000000000000",
+      "pilot_order_in_wallet": 2,
+      "quote": "ETH",
+      "quote_net_raw": "-770000000000000000",
+      "side": "buy",
+      "source_fee_raw": "12487980984186",
+      "status": "SINGLE_TARGET_OPPOSITE_ACCOUNT_CASH",
+      "timestamp": 1790051287.0,
+      "token": "0xe3f4b833512f0bcb1467ee55e25804bbb8304ba3",
+      "token_net_raw": "971756382505506615089555724",
+      "token_nets": {
+        "0xe3f4b833512f0bcb1467ee55e25804bbb8304ba3": "971756382505506615089555724"
+      },
+      "tx_hash": "0x2608d62a37b906b11de1ef858c0d9c7d26c1df02e2aa49ef0940682d03a111b2",
+      "wallet": "0x2ce9d43d1cba6ae31d7f07bfe0098dfa2d833373"
+    },
+    {
+      "after_snapshot": true,
+      "block_number": 51445897,
+      "index_complete": true,
+      "native_net_raw": "-62500000000000000",
+      "pilot_order_in_wallet": 1,
+      "quote": "ETH",
+      "quote_net_raw": "-62500000000000000",
+      "side": "buy",
+      "source_fee_raw": "22230669674128935",
+      "status": "SINGLE_TARGET_OPPOSITE_ACCOUNT_CASH",
+      "timestamp": 1789681141.0,
+      "token": "0x7e298d798656c03ec80f2a7843d0805103749ba3",
+      "token_net_raw": "511915670746063423152058876",
+      "token_nets": {
+        "0x7e298d798656c03ec80f2a7843d0805103749ba3": "511915670746063423152058876"
+      },
+      "tx_hash": "0xfc443a645511d2f0a40322f6d4b701cad9d225ea6663359a4a914db0fd70e757",
+      "wallet": "0x371903abb32f5f69b536b77495e92adedfea25da"
+    },
+    {
+      "after_snapshot": true,
+      "block_number": 51608896,
+      "index_complete": true,
+      "native_net_raw": "-500000000000000000",
+      "pilot_order_in_wallet": 2,
+      "quote": "ETH",
+      "quote_net_raw": "-500000000000000000",
+      "side": "buy",
+      "source_fee_raw": "6374712472453",
+      "status": "SINGLE_TARGET_OPPOSITE_ACCOUNT_CASH",
+      "timestamp": 1790007139.0,
+      "token": "0xeb148dedecf90ed4c824efa3f6ce486d15afcba3",
+      "token_net_raw": "3272926777431135092108627261",
+      "token_nets": {
+        "0xeb148dedecf90ed4c824efa3f6ce486d15afcba3": "3272926777431135092108627261"
+      },
+      "tx_hash": "0x84ba76eeb724ee0a8fdfce710b4980623954e550e893e86c8346d9fd0456dd9e",
+      "wallet": "0x371903abb32f5f69b536b77495e92adedfea25da"
+    },
+    {
+      "after_snapshot": true,
+      "block_number": 51579676,
+      "index_complete": true,
+      "native_net_raw": "-100000000000000000",
+      "pilot_order_in_wallet": 1,
+      "quote": "ETH",
+      "quote_net_raw": "-100000000000000000",
+      "side": "buy",
+      "source_fee_raw": "2621189234506929",
+      "status": "SINGLE_TARGET_OPPOSITE_ACCOUNT_CASH",
+      "timestamp": 1789948699.0,
+      "token": "0x9f62b62cf8cc3aea56a3ce8808cf13503d1131e7",
+      "token_net_raw": "1522398487242579146763549",
+      "token_nets": {
+        "0x9f62b62cf8cc3aea56a3ce8808cf13503d1131e7": "1522398487242579146763549"
+      },
+      "tx_hash": "0xf2202819e8e11dbb608e190df5eb2561e110469f701773da15b35c47a942508b",
+      "wallet": "0xfd7e55a555555c2f25053a38ec744de1afea4fa4"
+    },
+    {
+      "after_snapshot": true,
+      "block_number": 51607363,
+      "index_complete": true,
+      "native_net_raw": "-20000000000000000",
+      "pilot_order_in_wallet": 2,
+      "quote": "ETH",
+      "quote_net_raw": "-20000000000000000",
+      "side": "buy",
+      "source_fee_raw": "1471087813391225",
+      "status": "SINGLE_TARGET_OPPOSITE_ACCOUNT_CASH",
+      "timestamp": 1790004073.0,
+      "token": "0xb2000000000000000000009b58ad4f11efabbae5",
+      "token_net_raw": "563120678747387487421775628",
+      "token_nets": {
+        "0xb2000000000000000000009b58ad4f11efabbae5": "563120678747387487421775628"
+      },
+      "tx_hash": "0x504ebd0ccecf169a91c50d90eff297ed583b4b281a5a6851bbf0e7305e7f375e",
+      "wallet": "0xfd7e55a555555c2f25053a38ec744de1afea4fa4"
+    },
+    {
+      "after_snapshot": true,
+      "block_number": 51528479,
+      "index_complete": true,
+      "native_net_raw": "-100000000000000000",
+      "pilot_order_in_wallet": 1,
+      "quote": "ETH",
+      "quote_net_raw": "-100000000000000000",
+      "side": "buy",
+      "source_fee_raw": "25528008868470",
+      "status": "SINGLE_TARGET_OPPOSITE_ACCOUNT_CASH",
+      "timestamp": 1789846305.0,
+      "token": "0xfc28f881426a2931ec01b7392fe7bd87de220222",
+      "token_net_raw": "16710070284517069312587992",
+      "token_nets": {
+        "0xfc28f881426a2931ec01b7392fe7bd87de220222": "16710070284517069312587992"
+      },
+      "tx_hash": "0xe0d8089ef9f0e5e276833f338e5c9cd8639cc8de675e2deeaa758adbb6c1b8fb",
+      "wallet": "0x217946e128c1b9c7f8c3f16b33878a908713923a"
+    },
+    {
+      "after_snapshot": true,
+      "block_number": 51589437,
+      "index_complete": true,
+      "native_net_raw": "-500000000000000000",
+      "pilot_order_in_wallet": 2,
+      "quote": "ETH",
+      "quote_net_raw": "-500000000000000000",
+      "side": "buy",
+      "source_fee_raw": "18132682645940",
+      "status": "SINGLE_TARGET_OPPOSITE_ACCOUNT_CASH",
+      "timestamp": 1789968221.0,
+      "token": "0x0f61edbfe6cd86024c0f210c0695b08df55fdfc9",
+      "token_net_raw": "347605198605454116653831",
+      "token_nets": {
+        "0x0f61edbfe6cd86024c0f210c0695b08df55fdfc9": "347605198605454116653831"
+      },
+      "tx_hash": "0x5d7e39b79f8e7bd0f3e54f800bfc8cd4ee416f8ac0c69fc3008716e0403323ee",
+      "wallet": "0x217946e128c1b9c7f8c3f16b33878a908713923a"
+    },
+    {
+      "after_snapshot": true,
+      "block_number": 51542217,
+      "index_complete": true,
+      "native_net_raw": "-500000000000000000",
+      "pilot_order_in_wallet": 1,
+      "quote": "ETH",
+      "quote_net_raw": "-500000000000000000",
+      "side": "buy",
+      "source_fee_raw": "4730868392393801",
+      "status": "SINGLE_TARGET_OPPOSITE_ACCOUNT_CASH",
+      "timestamp": 1789873781.0,
+      "token": "0x882c8e35504d58979b1280fe76d6553f717029f8",
+      "token_net_raw": "15112460329794600764026710",
+      "token_nets": {
+        "0x882c8e35504d58979b1280fe76d6553f717029f8": "15112460329794600764026710"
+      },
+      "tx_hash": "0x9fe9aacef500c34dc188449e76fd725783fbef317ba438d20104b486ef63953f",
+      "wallet": "0xdd6f338b91f40e5a02c468b7cb49cccc569a3134"
+    },
+    {
+      "after_snapshot": true,
+      "block_number": 51574748,
+      "index_complete": true,
+      "native_net_raw": "-250000000000000000",
+      "pilot_order_in_wallet": 2,
+      "quote": "ETH",
+      "quote_net_raw": "-250000000000000000",
+      "side": "buy",
+      "source_fee_raw": "4081291132332909",
+      "status": "SINGLE_TARGET_OPPOSITE_ACCOUNT_CASH",
+      "timestamp": 1789938843.0,
+      "token": "0xb20000000000000000000046012e90119e505b01",
+      "token_net_raw": "14087174924544060198885923",
+      "token_nets": {
+        "0xb20000000000000000000046012e90119e505b01": "14087174924544060198885923"
+      },
+      "tx_hash": "0x553794de99a2b6549c52f2bc1920b79e1970adfa83691e6e7371206b201852ae",
+      "wallet": "0xdd6f338b91f40e5a02c468b7cb49cccc569a3134"
+    },
+    {
+      "after_snapshot": true,
+      "block_number": 51612872,
+      "index_complete": true,
+      "native_net_raw": "-250000000000000000",
+      "pilot_order_in_wallet": 1,
+      "quote": "ETH",
+      "quote_net_raw": "-250000000000000000",
+      "side": "buy",
+      "source_fee_raw": "29921471489336",
+      "status": "SINGLE_TARGET_OPPOSITE_ACCOUNT_CASH",
+      "timestamp": 1790015091.0,
+      "token": "0x46324147ce37f551faec752084f9b51e05a33425",
+      "token_net_raw": "17176215847984194247020084",
+      "token_nets": {
+        "0x46324147ce37f551faec752084f9b51e05a33425": "17176215847984194247020084"
+      },
+      "tx_hash": "0x6551d8cdec6e0ab147d10199c8e1c675a5dab5396cccaf07a2dba15722165bb0",
+      "wallet": "0xd569e570b94265e5ebc7df1990f99ee68d3f60a1"
+    },
+    {
+      "after_snapshot": true,
+      "block_number": 51618429,
+      "index_complete": true,
+      "native_net_raw": "-500000000000000000",
+      "pilot_order_in_wallet": 2,
+      "quote": "ETH",
+      "quote_net_raw": "-500000000000000000",
+      "side": "buy",
+      "source_fee_raw": "4086732586033",
+      "status": "SINGLE_TARGET_OPPOSITE_ACCOUNT_CASH",
+      "timestamp": 1790026205.0,
+      "token": "0xb2000000000000000000007ab5bf182b1f897401",
+      "token_net_raw": "25005916176234775992829763",
+      "token_nets": {
+        "0xb2000000000000000000007ab5bf182b1f897401": "25005916176234775992829763"
+      },
+      "tx_hash": "0x98e84da5926dafd426b9e8389fe5ecb79802e85cd6645cb81222880ab5d7a480",
+      "wallet": "0xd569e570b94265e5ebc7df1990f99ee68d3f60a1"
+    },
+    {
+      "after_snapshot": true,
+      "block_number": 51490485,
+      "index_complete": true,
+      "native_net_raw": "-250000000000000000",
+      "pilot_order_in_wallet": 1,
+      "quote": "ETH",
+      "quote_net_raw": "-250000000000000000",
+      "side": "buy",
+      "source_fee_raw": "12239911976077147",
+      "status": "SINGLE_TARGET_OPPOSITE_ACCOUNT_CASH",
+      "timestamp": 1789770317.0,
+      "token": "0xb20000000000000000000009cdb12aefd9830b01",
+      "token_net_raw": "65869041323881323937181312",
+      "token_nets": {
+        "0xb20000000000000000000009cdb12aefd9830b01": "65869041323881323937181312"
+      },
+      "tx_hash": "0x3e43a15bada54a0b8f9d0e438890a38999e0cc42ed7c080fe551a461faea18ef",
+      "wallet": "0x0b3edd0d0bf7c6281a7f8ae5a5630defb94ae78e"
+    },
+    {
+      "after_snapshot": true,
+      "block_number": 51711595,
+      "index_complete": true,
+      "native_net_raw": "-100000000000000000",
+      "pilot_order_in_wallet": 2,
+      "quote": "ETH",
+      "quote_net_raw": "-100000000000000000",
+      "side": "buy",
+      "source_fee_raw": "3411608837565004",
+      "status": "SINGLE_TARGET_OPPOSITE_ACCOUNT_CASH",
+      "timestamp": 1790212537.0,
+      "token": "0x366b11937eff8dfa59e347310a2f86e88821d222",
+      "token_net_raw": "58544778627218197094454907",
+      "token_nets": {
+        "0x366b11937eff8dfa59e347310a2f86e88821d222": "58544778627218197094454907"
+      },
+      "tx_hash": "0x6a09074547ecd02a85d0c3733d0f082de0bfd4d3216bcadd8d8c421ca0243fc4",
+      "wallet": "0x0b3edd0d0bf7c6281a7f8ae5a5630defb94ae78e"
+    },
+    {
+      "after_snapshot": true,
+      "block_number": 51433619,
+      "cash_reconciliation": "INTERNAL_INDEX_INCOMPLETE",
+      "index_complete": false,
+      "native_net_raw": "-25000000000000000",
+      "pilot_order_in_wallet": 1,
+      "quote": "ETH",
+      "quote_net_raw": "-25000000000000000",
+      "side": "buy",
+      "source_fee_raw": "4090862383411",
+      "status": "SINGLE_TARGET_OPPOSITE_ACCOUNT_CASH",
+      "timestamp": 1789656585.0,
+      "token": "0xb2000000000000000000000b0a815fd8838d9f01",
+      "token_net_raw": "12181682319814464386056874",
+      "token_nets": {
+        "0xb2000000000000000000000b0a815fd8838d9f01": "12181682319814464386056874"
+      },
+      "tx_hash": "0x497107c1d2f5da1167cc6fa49dbfa31259791f5e4fcb0bcda78f92e6f4e5a89d",
+      "wallet": "0x347ffc6db9acc54ac2019795173b9599e8b82bd9"
+    },
+    {
+      "after_snapshot": true,
+      "block_number": 51437442,
+      "cash_reconciliation": "INTERNAL_INDEX_INCOMPLETE",
+      "index_complete": false,
+      "native_net_raw": "-25000000000000000",
+      "pilot_order_in_wallet": 2,
+      "quote": "ETH",
+      "quote_net_raw": "-25000000000000000",
+      "side": "buy",
+      "source_fee_raw": "8324040768189",
+      "status": "SINGLE_TARGET_OPPOSITE_ACCOUNT_CASH",
+      "timestamp": 1789664231.0,
+      "token": "0x08a9da206c41d2a79a0cb047c28c56d9b6787de0",
+      "token_net_raw": "10546966665182217331530036",
+      "token_nets": {
+        "0x08a9da206c41d2a79a0cb047c28c56d9b6787de0": "10546966665182217331530036"
+      },
+      "tx_hash": "0xd0b744f64a7d90eb83591cddb77281051efe5a821e881ca144b9dc8d17eb8165",
+      "wallet": "0x347ffc6db9acc54ac2019795173b9599e8b82bd9"
+    }
+  ],
+  "selection": "first two distinct-token own buys per frozen wallet after supplier snapshot"
+}

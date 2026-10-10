@@ -1,0 +1,26 @@
+{
+  "strategy_id": "F02_LP_DEPTH_LEAD",
+  "data_class": "C_PRODUCTION_DB_HEAVY",
+  "required_tables_or_files": [
+    "mints",
+    "burns",
+    "swaps",
+    "optional ticks"
+  ],
+  "required_columns": [
+    "pool_address",
+    "block_time",
+    "amounts",
+    "liquidity if present"
+  ],
+  "required_time_resolution": "1m",
+  "point_in_time_requirements": "PIT",
+  "minimum_history": ">=30d",
+  "estimated_rows": "multi-table join heavy",
+  "estimated_read_bytes": ">2GB likely",
+  "whether_current_diagnostics_may_support_it": "unlikely complete offline",
+  "whether_production_database_would_be_required": true,
+  "missing_data": [
+    "true depth/tick bitmap"
+  ]
+}

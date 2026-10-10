@@ -1,0 +1,35 @@
+{
+  "strategy_id": "F04_XS_SAME_AGE_RS",
+  "family": "F04",
+  "name": "Same-age cohort relative strength",
+  "parameter_search_space": {
+    "age_lo": [
+      5,
+      10
+    ],
+    "age_hi": [
+      30,
+      60,
+      120
+    ],
+    "w": [
+      5,
+      10
+    ],
+    "rs_min": [
+      0.5,
+      1.0
+    ],
+    "hold": [
+      5,
+      15
+    ]
+  },
+  "param_combo_count": 48,
+  "access_flags": {
+    "database_access_enabled": false,
+    "rpc_access_enabled": false,
+    "large_file_access_enabled": false,
+    "backtest_enabled": false
+  }
+}

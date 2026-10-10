@@ -1,0 +1,22 @@
+{
+  "strategy_id": "F09_EXE_QUOTE_STALE",
+  "data_class": "D_DATA_UNAVAILABLE",
+  "required_tables_or_files": [
+    "high-res mid quotes or tick stream + swaps"
+  ],
+  "required_columns": [
+    "mid",
+    "last_trade",
+    "times"
+  ],
+  "required_time_resolution": "sub-second to 1s ideal",
+  "point_in_time_requirements": "PIT",
+  "minimum_history": "UNKNOWN",
+  "estimated_rows": "UNKNOWN",
+  "estimated_read_bytes": "UNKNOWN",
+  "whether_current_diagnostics_may_support_it": "no quote tape in offline inventory names",
+  "whether_production_database_would_be_required": true,
+  "missing_data": [
+    "quote tape"
+  ]
+}

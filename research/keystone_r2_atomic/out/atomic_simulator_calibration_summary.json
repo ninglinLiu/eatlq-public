@@ -1,0 +1,16 @@
+{
+  "n_success_cases": 3,
+  "n_rug_cases": 5,
+  "n_success_evaluable": 3,
+  "n_rug_evaluable": 5,
+  "false_sellable_rate": 0.0,
+  "false_unsellable_rate": 0.0,
+  "sim_vs_actual_weth_abs_rel_error_median": 2.1034659463412633e-07,
+  "sim_vs_actual_weth_abs_rel_error_mean": 0.00046850563229586126,
+  "infrastructure_unknown_rate": 0.0,
+  "known_rug_detection_coverage": 1.0,
+  "revert_reason_agreement": "n/a_live_reverts_not_decoded",
+  "rpc_calls": 106,
+  "trustworthy": true,
+  "fail_reasons": []
+}

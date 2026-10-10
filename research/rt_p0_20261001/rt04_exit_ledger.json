@@ -1,0 +1,122 @@
+{
+  "new_chain_calls": false,
+  "merit_claimed": false,
+  "samples": [
+    {
+      "id": "GL2B-baseline-forward",
+      "source": "/root/copy_cascade_invert_r0/data/raw/golden/base_gl2_b_final_20260715.json",
+      "what_it_is": "market reference after a delay plus 30 bps, not our fill",
+      "n": 4,
+      "confirmed_resolved": 2,
+      "unknown": 2,
+      "unknown_class": "UNRESOLVED_NO_TRUE_EXIT",
+      "confirmed_fail": 0,
+      "resolved_pair": [
+        -0.10526449178297503,
+        -0.09458418993718287
+      ],
+      "point_if_unknowns_dropped": -0.09992434086007895,
+      "bound_if_unknowns_marked_zero": -0.049962170430039476,
+      "bound_if_unknowns_marked_minus_100pct": -0.5499621704300395,
+      "note": "Published mean uses the 2 resolved rows only. Dropping unknowns and calling them total losses are different numbers."
+    },
+    {
+      "id": "GL2B-smart-forward",
+      "source": "/root/copy_cascade_invert_r0/data/raw/golden/base_gl2_b_final_20260715.json",
+      "what_it_is": "same reference price, contaminated wallets only",
+      "n": 4,
+      "confirmed_resolved": 4,
+      "unknown": 0,
+      "confirmed_fail_or_negative": 4,
+      "mean": -0.053695117184317825,
+      "note": "All 4 are resolved and negative, and all 4 come from the 2 left-truncated wallets. This is not an eligibility result."
+    },
+    {
+      "id": "latency-tax-vendor-overlap",
+      "source": "/root/copy_cascade_invert_r0/out/latency_tax.json",
+      "n": 3,
+      "atomic_sell_sim": "INCONCLUSIVE_NO_RPC",
+      "delays_sec": {
+        "0": {
+          "mean": -0.38871734685561227,
+          "unrealizable": true
+        },
+        "1": {
+          "mean": -0.006252675531175885,
+          "unrealizable": false
+        },
+        "10": {
+          "mean": -0.03810924587524689,
+          "unrealizable": false
+        },
+        "120": {
+          "mean": -0.3882364431173402,
+          "unrealizable": false
+        },
+        "3": {
+          "mean": -0.006218811375260517,
+          "unrealizable": false
+        },
+        "30": {
+          "mean": -0.15564718900071786,
+          "unrealizable": false
+        },
+        "60": {
+          "mean": -0.2516362746591756,
+          "unrealizable": false
+        }
+      },
+      "note": "n=3 is below the project's powered gate of 20. No tax verdict."
+    },
+    {
+      "id": "live-receipts-2026-06",
+      "source": "LEGACY/03_SCOPED_VERDICTS.md section 6 receipt table",
+      "re_fetched_this_round": false,
+      "buys": 8,
+      "sells_landed": 3,
+      "bot_sell_attempts_status_0": 48,
+      "status_0_class": "confirmed_fail",
+      "unsold_positions": 5,
+      "unsold_class": "confirmed_unfilled_then_pool_collapsed",
+      "mark_weth": 0.001363,
+      "cost_weth": 0.16142,
+      "economic_net_weth": -0.160235862229,
+      "after_2026_06_29": "UNKNOWN",
+      "note": "Mark near zero is not the economic result. The 48 failed sends are confirmed failures, not unknown exits."
+    }
+  ],
+  "delay_on_gl2_published_means": {
+    "1": {
+      "smart_mean": -0.053695117184317825,
+      "smart_resolved": 4,
+      "smart_unresolved": 0,
+      "baseline_mean_resolved_only": -0.09992434086007895,
+      "baseline_unresolved": 2,
+      "baseline_unresolved_reason": {
+        "UNRESOLVED_NO_TRUE_EXIT": 2
+      }
+    },
+    "15": {
+      "smart_mean": -0.05604115089013783,
+      "smart_resolved": 4,
+      "smart_unresolved": 0,
+      "baseline_mean_resolved_only": -0.10124102911169455,
+      "baseline_unresolved": 2,
+      "baseline_unresolved_reason": {
+        "UNRESOLVED_NO_TRUE_EXIT": 2
+      }
+    },
+    "5": {
+      "smart_mean": -0.053695117184317825,
+      "smart_resolved": 4,
+      "smart_unresolved": 0,
+      "baseline_mean_resolved_only": -0.09992434086007895,
+      "baseline_unresolved": 2,
+      "baseline_unresolved_reason": {
+        "UNRESOLVED_NO_TRUE_EXIT": 2
+      }
+    }
+  },
+  "size_sweep_this_round": null,
+  "gap": "Entry size, pool state, tax and impact were not re-read from receipts or traces in this round. Bounds above only restate published aggregates."
+}

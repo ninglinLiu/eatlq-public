@@ -1,0 +1,35 @@
+{
+  "n_samples": 21,
+  "idle_mean": 44.96857142857143,
+  "idle_min": 0.0,
+  "idle_max": 93.89,
+  "idle_lt_10_count": 7,
+  "max_consecutive_idle_lt_10": 3,
+  "iowait_mean": 0.11190476190476191,
+  "iowait_max": 1.24,
+  "swap_start_b": 2176348160,
+  "swap_end_b": 2175561728,
+  "swap_delta_b": -786432,
+  "ch_queries_max": 3,
+  "ch_cpu_mean": 380.40761904761905,
+  "ch_cpu_max": 878.41,
+  "disc_tip_age_max_s": 13,
+  "load1_mean": 5.335714285714285,
+  "load1_max": 7.33,
+  "gates": {
+    "mean_idle_gt_30": true,
+    "no_idle_lt_10_streak_ge_1": false,
+    "swap_not_growing": true,
+    "executor_stable": true,
+    "bridge_stable": true,
+    "ingestor_stable": true,
+    "panic_clear": true,
+    "iowait_low": true,
+    "ch_no_pileup": true
+  },
+  "SAFE_TO_BEGIN_OFFLINE_RESEARCH": false,
+  "plan_status": "PAUSED_LIVE_PRIORITY",
+  "blocking": [
+    "BLOCKED_RESOURCE_RISK_CPU_IDLE"
+  ]
+}

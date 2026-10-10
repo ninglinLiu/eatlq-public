@@ -1,0 +1,64 @@
+{
+  "status": "DIAGNOSTIC_REPLAY_COMPLETE",
+  "phase": "LARGE_BUY_ABSORPTION_V3",
+  "parent_freeze": "large_buy_absorption_freeze_v2.json",
+  "deploy_allowed": false,
+  "mutates_v2_shadow": false,
+  "historical_label": "DIAGNOSTIC_REPLAY",
+  "capacity_grid": {
+    "max_concurrent": [3, 5, 10, 20],
+    "multi_token_modes": [
+      {"one_position_per_token": true, "max_per_token": 1, "label": "one_tok"},
+      {"one_position_per_token": false, "max_per_token": 3, "label": "multi_tok_le3"}
+    ],
+    "exit_frozen": true,
+    "exit_note": "4h primary horizon + TP ladder unchanged from v2",
+    "edge_rule": "SELECTION_EDGE_ROBUST_ACROSS_CAPACITY requires paired LBA-vs-POOL day p05>0 on majority (>=50%) of grid cells after BH correction; do NOT pick best cell"
+  },
+  "matched_incremental": {
+    "treatment": "large_buy_score>0 AND absorbed>0",
+    "covariates": ["depth_score", "pool_age_s", "rel_size", "mom_from_open"],
+    "n_boot": 400,
+    "seed": 11,
+    "max_pairs": 50000,
+    "n_perm": 200
+  },
+  "ranker": {
+    "model": "HistGradientBoostingRegressor",
+    "features_pit_only": [
+      "depth_score",
+      "depth_impact_25usd",
+      "depth_impact_100usd",
+      "depth_weth_to_move_1pct",
+      "pool_age_s",
+      "mom_from_open",
+      "rel_size",
+      "buy_intensity_30m",
+      "prior_30m_volume_weth",
+      "quote_weth",
+      "large_buy_score",
+      "pool_only_score"
+    ],
+    "top_k_intraday": 5,
+    "primary_capacity": {"max_concurrent": 10, "one_position_per_token": true, "max_per_token": 1},
+    "require_sealed_replication": true,
+    "forbid_future_labels_in_features": true
+  },
+  "multiple_testing": {
+    "method": "benjamini_hochberg",
+    "alpha": 0.05
+  },
+  "upgrade_requires": [
+    "SIGNAL_LEVEL_INCREMENTAL_RETURN==PROVEN",
+    "SELECTION_EDGE_ROBUST_ACROSS_CAPACITY==PROVEN",
+    "RANKER_BEATS_SIZE==PROVEN_ON_SEALED"
+  ],
+  "hard_bans": [
+    "live_trading",
+    "mutate_v2_frozen_shadow",
+    "pick_best_capacity_cell",
+    "retune_after_seeing_sealed",
+    "use_future_features",
+    "global_kill_without_per_hypothesis"
+  ]
+}

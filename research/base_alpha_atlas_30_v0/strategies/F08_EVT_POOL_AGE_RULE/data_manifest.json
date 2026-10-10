@@ -1,0 +1,23 @@
+{
+  "strategy_id": "F08_EVT_POOL_AGE_RULE",
+  "data_class": "B_SMALL_BOUNDED_EXPORT_REQUIRED",
+  "required_tables_or_files": [
+    "swaps",
+    "first_swap"
+  ],
+  "required_columns": [
+    "pool",
+    "time",
+    "amounts"
+  ],
+  "required_time_resolution": "1m/event",
+  "point_in_time_requirements": "PIT",
+  "minimum_history": ">=30d",
+  "estimated_rows": "medium",
+  "estimated_read_bytes": "200MB-2GB",
+  "whether_current_diagnostics_may_support_it": "partial",
+  "whether_production_database_would_be_required": true,
+  "missing_data": [
+    "non-overlapping evaluation protocol vs live"
+  ]
+}

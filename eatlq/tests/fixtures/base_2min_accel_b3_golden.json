@@ -1,0 +1,484 @@
+{
+  "all_locked_standard_integer_equalities": true,
+  "cases": [
+    {
+      "event_side_equal": {
+        "target": false,
+        "weth": false
+      },
+      "event_side_note": "local mint/burn/swap event series misses initial reserve-changing events when false; transfer-net remains primary",
+      "holder_balance_of_positive_count": 3,
+      "holder_checks": [
+        {
+          "address": "0x21cf042654bca72607a0ce9bf7a1de053547b4e9",
+          "balance_of": "43521792780164",
+          "reconstructed": "43521792780164"
+        },
+        {
+          "address": "0x596254230700f90a37c8de6fa4ad19bdac1d57e4",
+          "balance_of": "297927359618722",
+          "reconstructed": "297927359618722"
+        },
+        {
+          "address": "0xefc63467e013b88ff056dee5e7c984985b0aa6db",
+          "balance_of": "102212438",
+          "reconstructed": "102212438"
+        }
+      ],
+      "holder_reconstructed_count": 3,
+      "kind": "locked_standard",
+      "pool": "0x016a245b171c2573acc462278a669b7aa1bf812a",
+      "pool_type": "v2",
+      "proxy_signal": 1,
+      "real_signal": 0,
+      "reserve": {
+        "event_target": "-341449254611324",
+        "event_weth": "88647025630000000",
+        "target_balance_of": "9658550745388676",
+        "target_reconstructed": "9658550745388676",
+        "weth_balance_of": "2588647025630000000",
+        "weth_reconstructed": "2588647025630000000"
+      },
+      "snapshot_block": 46771957,
+      "standard_equalities": {
+        "holders": true,
+        "target": true,
+        "weth": true
+      },
+      "target_token": "0x547362dfcf889ecd6e7e3430e59acb1c517c13bf",
+      "window": "W3"
+    },
+    {
+      "event_side_equal": {
+        "target": false,
+        "weth": true
+      },
+      "event_side_note": "local mint/burn/swap event series misses initial reserve-changing events when false; transfer-net remains primary",
+      "holder_balance_of_positive_count": 32,
+      "holder_checks": [
+        {
+          "address": "0x1248a85e9abd29666d90c5132fea30eb8d1edb88",
+          "balance_of": "197218956863739885817567912",
+          "reconstructed": "197218956863739885817567912"
+        },
+        {
+          "address": "0x1535a0c799ab4e930d7ded22352530eef513ba0b",
+          "balance_of": "24256636085943986077712745",
+          "reconstructed": "24256636085943986077712745"
+        },
+        {
+          "address": "0x159ed03d7d7bd3f0c43b7739e2bf51ee09159004",
+          "balance_of": "890199986770007911400375351",
+          "reconstructed": "890199986770007911400375351"
+        },
+        {
+          "address": "0x2a40cfc16bb78d92532b916a28d72ae0639ef67b",
+          "balance_of": "70586604880184325914272151",
+          "reconstructed": "70586604880184325914272151"
+        },
+        {
+          "address": "0x2ce83ba2f55f385bf0bf8f9b01a21057cd659ae9",
+          "balance_of": "3026292029137272419073909968",
+          "reconstructed": "3026292029137272419073909968"
+        },
+        {
+          "address": "0x3867c80177b7bc630c33a0d552b2c0d319039538",
+          "balance_of": "949928349121841140291486443",
+          "reconstructed": "949928349121841140291486443"
+        },
+        {
+          "address": "0x42c26ddbcb8ea94f4d750510843457e5be221218",
+          "balance_of": "430172885549904684884520668",
+          "reconstructed": "430172885549904684884520668"
+        },
+        {
+          "address": "0x4fafac59a1cff2c75ca87245bec8c9cd930bb04b",
+          "balance_of": "5773715",
+          "reconstructed": "5773715"
+        },
+        {
+          "address": "0x531455a60d835137e4f98d7a7353c0be46369faf",
+          "balance_of": "1054711584943940143584960190",
+          "reconstructed": "1054711584943940143584960190"
+        },
+        {
+          "address": "0x62c1db2243be646d7a2d9960aa184e176bbdf429",
+          "balance_of": "9074532",
+          "reconstructed": "9074532"
+        },
+        {
+          "address": "0x64033c6e0c03afc830ed6c5f305684cd424c76a0",
+          "balance_of": "2040858915914814465046640692",
+          "reconstructed": "2040858915914814465046640692"
+        },
+        {
+          "address": "0x6433fee90659dda2c1f751967d4142cfd3c4d6d4",
+          "balance_of": "759776021501693744287724138",
+          "reconstructed": "759776021501693744287724138"
+        },
+        {
+          "address": "0x64ba44e4973594d7edc625369b83fcfed330227f",
+          "balance_of": "26238102882924825416331420",
+          "reconstructed": "26238102882924825416331420"
+        },
+        {
+          "address": "0x70dd31aac47d4e6742b21c9767d9e18b3833fdd0",
+          "balance_of": "1096468147156092828170066822",
+          "reconstructed": "1096468147156092828170066822"
+        },
+        {
+          "address": "0x74b059cb100b501648e3f4d8d5b5660207ad5027",
+          "balance_of": "622684888959173834850324030",
+          "reconstructed": "622684888959173834850324030"
+        },
+        {
+          "address": "0x790b7ad12a38dcd0dcc7e8efe453cf8bb7b4f071",
+          "balance_of": "1301508867381515667960915269",
+          "reconstructed": "1301508867381515667960915269"
+        },
+        {
+          "address": "0x7d2a95b9bbe861c962eb33080bc3f78f43112669",
+          "balance_of": "2012707517977044993813004704",
+          "reconstructed": "2012707517977044993813004704"
+        },
+        {
+          "address": "0x7d2c27aa5e69a5a39d6de101420cdce82955b77a",
+          "balance_of": "939282714644870696827583583",
+          "reconstructed": "939282714644870696827583583"
+        },
+        {
+          "address": "0x7e701063249be37a99207f7be8149d355fe56829",
+          "balance_of": "455402233944538879727285559",
+          "reconstructed": "455402233944538879727285559"
+        },
+        {
+          "address": "0x809b88c69d6388c06a5416748d75ee8b83971505",
+          "balance_of": "40433",
+          "reconstructed": "40433"
+        },
+        {
+          "address": "0x87087374b3f2c65578f0815fe8a93da6f3237d04",
+          "balance_of": "1187876675304474898773215640",
+          "reconstructed": "1187876675304474898773215640"
+        },
+        {
+          "address": "0x9223eb8e2a8965cfa0d4d5508e0766d5ed9f8147",
+          "balance_of": "1913586548292225097547121239",
+          "reconstructed": "1913586548292225097547121239"
+        },
+        {
+          "address": "0x961e34e74dd1be3f7a0d64f81a3c815bf128cc20",
+          "balance_of": "12456865476724081227226557",
+          "reconstructed": "12456865476724081227226557"
+        },
+        {
+          "address": "0x96f46d3a4f48f6fca551f2d691fe01c56c099bfd",
+          "balance_of": "1733006181846570981391081420",
+          "reconstructed": "1733006181846570981391081420"
+        },
+        {
+          "address": "0xa255c55dba8f0bcce62d7152f02df42e7a319379",
+          "balance_of": "673601964650301319643703419",
+          "reconstructed": "673601964650301319643703419"
+        },
+        {
+          "address": "0xa51b892654a963336833a282ba0afc5bdd922e4d",
+          "balance_of": "77096",
+          "reconstructed": "77096"
+        },
+        {
+          "address": "0xa5dde005dc25cdd553ab304a2cb1bca8eea93495",
+          "balance_of": "451671826275334619194399715",
+          "reconstructed": "451671826275334619194399715"
+        },
+        {
+          "address": "0xad0a861ee076c0b13ebab9dbf7b6dea761779b05",
+          "balance_of": "905529646315075792846829167",
+          "reconstructed": "905529646315075792846829167"
+        },
+        {
+          "address": "0xbb1ed6219c0769ee53189a19c55f21ae1cde2e7e",
+          "balance_of": "689865956331528358321779649",
+          "reconstructed": "689865956331528358321779649"
+        },
+        {
+          "address": "0xc0018903aa59594883f4351c7da7f3a8a4caf3b0",
+          "balance_of": "749946135127794062467009101",
+          "reconstructed": "749946135127794062467009101"
+        },
+        {
+          "address": "0xc222ea4b172198f216f977d0ed6de163fa8fad60",
+          "balance_of": "156416859020147359382457988",
+          "reconstructed": "156416859020147359382457988"
+        },
+        {
+          "address": "0xe858f1acd2f9844dc18ae3e373ba03c2f1d297d9",
+          "balance_of": "5469655607554528335418628",
+          "reconstructed": "5469655607554528335418628"
+        }
+      ],
+      "holder_reconstructed_count": 32,
+      "kind": "locked_standard",
+      "pool": "0x132878e1d9f19ac183c10326e02bead090a8d933",
+      "pool_type": "v3",
+      "proxy_signal": 1,
+      "real_signal": 1,
+      "reserve": {
+        "event_target": "-24377722757963235532289849511",
+        "event_weth": "3236074338200179047",
+        "target_balance_of": "75622277242036764467710110056",
+        "target_reconstructed": "75622277242036764467710110056",
+        "weth_balance_of": "3236074338200179047",
+        "weth_reconstructed": "3236074338200179047"
+      },
+      "snapshot_block": 42717943,
+      "standard_equalities": {
+        "holders": true,
+        "target": true,
+        "weth": true
+      },
+      "target_token": "0x3c385887ccab9dd15c70dbb1df2c7b253efcea7a",
+      "window": "W1"
+    },
+    {
+      "event_side_equal": {
+        "target": false,
+        "weth": true
+      },
+      "event_side_note": "local mint/burn/swap event series misses initial reserve-changing events when false; transfer-net remains primary",
+      "holder_balance_of_positive_count": 35,
+      "holder_checks": [
+        {
+          "address": "0x04a35e5ecbe90daaa1caebf2889aab30710e6017",
+          "balance_of": "21613871802266676815615",
+          "reconstructed": "21613871802266676815615"
+        },
+        {
+          "address": "0x0621f7cfb0d434d5af331b8cb9ba5b28e5318ac1",
+          "balance_of": "23",
+          "reconstructed": "23"
+        },
+        {
+          "address": "0x06490e6cb9c674fdd910f0428aec22aadb910834",
+          "balance_of": "21881498311960329045278",
+          "reconstructed": "21881498311960329045278"
+        },
+        {
+          "address": "0x0e2c5bd2ce2b6a90cf7557b43f24651623d28efb",
+          "balance_of": "43524448674463043293660",
+          "reconstructed": "43524448674463043293660"
+        },
+        {
+          "address": "0x10a263e3b0737a51e335b40a7ced62a7f5a88ec1",
+          "balance_of": "5820341929044743700",
+          "reconstructed": "5820341929044743700"
+        },
+        {
+          "address": "0x135eefba77b5bdfb8326518e2d89ea18691a49be",
+          "balance_of": "22579990464599762937020",
+          "reconstructed": "22579990464599762937020"
+        },
+        {
+          "address": "0x206b50e3a8ea2daa602639079ab3db9695397251",
+          "balance_of": "50169054542225658570239",
+          "reconstructed": "50169054542225658570239"
+        },
+        {
+          "address": "0x34dbacb8c38e364e018ce899030bb3e5fc0fdf4c",
+          "balance_of": "6425054087196451548278",
+          "reconstructed": "6425054087196451548278"
+        },
+        {
+          "address": "0x4611508665b083917b011a3214b1cf10965319b9",
+          "balance_of": "16741346137722239343284",
+          "reconstructed": "16741346137722239343284"
+        },
+        {
+          "address": "0x4d4e76ff6df718ca628dfd336181e352a313dde1",
+          "balance_of": "21696510849784441269349",
+          "reconstructed": "21696510849784441269349"
+        },
+        {
+          "address": "0x5672f7f60ba452897a91c5908f01b7bbf13c9254",
+          "balance_of": "162312439595361358099",
+          "reconstructed": "162312439595361358099"
+        },
+        {
+          "address": "0x69d28c1d89698b9d43c30418e6bb2922df667643",
+          "balance_of": "448604152239664324798",
+          "reconstructed": "448604152239664324798"
+        },
+        {
+          "address": "0x7c9526883b611d519b183a913da13e34222abc60",
+          "balance_of": "36316155810479034606445",
+          "reconstructed": "36316155810479034606445"
+        },
+        {
+          "address": "0x86655bb588addc297c04c948c6ad6388adfb7698",
+          "balance_of": "32366847678157564961503",
+          "reconstructed": "32366847678157564961503"
+        },
+        {
+          "address": "0x876b9653ced4a1cfd2e7753b852f906898b8ac45",
+          "balance_of": "2834076058158920428013",
+          "reconstructed": "2834076058158920428013"
+        },
+        {
+          "address": "0x89df9543ebae9c7739a5597bccb2f7b05f1595be",
+          "balance_of": "25700161536718828042675",
+          "reconstructed": "25700161536718828042675"
+        },
+        {
+          "address": "0x8e3f3ab1c7b14ed07c209ff597a720154dc58c7f",
+          "balance_of": "33196801442774388510",
+          "reconstructed": "33196801442774388510"
+        },
+        {
+          "address": "0xa0cf16242d0f3620c70d18a94f2e2bfbc70d87ca",
+          "balance_of": "56876746601074709189712",
+          "reconstructed": "56876746601074709189712"
+        },
+        {
+          "address": "0xa5fa3135c82999fcf206d5d56dacf9b7d48954f9",
+          "balance_of": "45085226089589965921139",
+          "reconstructed": "45085226089589965921139"
+        },
+        {
+          "address": "0xb0c0fe17758628e9e26e0406cf96dc23c9324525",
+          "balance_of": "353",
+          "reconstructed": "353"
+        },
+        {
+          "address": "0xba1bccac8a8ee9f9afcb7d3a7e7b15252f81b2fe",
+          "balance_of": "22092179185284278794793",
+          "reconstructed": "22092179185284278794793"
+        },
+        {
+          "address": "0xbefc9257dd899f1aa8077158320cc9c8b00725d6",
+          "balance_of": "45686015798069684490079",
+          "reconstructed": "45686015798069684490079"
+        },
+        {
+          "address": "0xc0189e69fd4652adfba154e3274f4414317b54d4",
+          "balance_of": "207054506248009410692985",
+          "reconstructed": "207054506248009410692985"
+        },
+        {
+          "address": "0xce1aabca1f0d0ec43b13fc9828153ca121a274e1",
+          "balance_of": "54669788696805940986",
+          "reconstructed": "54669788696805940986"
+        },
+        {
+          "address": "0xd2cea227cb4ffd6f2ebbb81ae3a325aa725363c8",
+          "balance_of": "7586751604636191621007",
+          "reconstructed": "7586751604636191621007"
+        },
+        {
+          "address": "0xd5b5937fe56384dce881d7485ea2f98d45ed920e",
+          "balance_of": "228541347770484645104311",
+          "reconstructed": "228541347770484645104311"
+        },
+        {
+          "address": "0xd9c5a11d9cbd527768aa4a33d9441473b52b1c06",
+          "balance_of": "175963868016292979011970",
+          "reconstructed": "175963868016292979011970"
+        },
+        {
+          "address": "0xe6c9c5c0033ab74d0ee07aad9f251a2b7178a2e3",
+          "balance_of": "664404063149018067374",
+          "reconstructed": "664404063149018067374"
+        },
+        {
+          "address": "0xebe45f51952d5345982150e0f508df9ca77fe4a9",
+          "balance_of": "55969366936336789510183",
+          "reconstructed": "55969366936336789510183"
+        },
+        {
+          "address": "0xf18c5b44b8a76589607b943b06615557db381b6c",
+          "balance_of": "21807116851094431690462",
+          "reconstructed": "21807116851094431690462"
+        },
+        {
+          "address": "0xf3a6a6ced60c2ba15ae40a9779f51d429526bc66",
+          "balance_of": "25844096165804199201",
+          "reconstructed": "25844096165804199201"
+        },
+        {
+          "address": "0xf4827857736fe7518e3f89268498d19932d2ec36",
+          "balance_of": "42444090455636684268790",
+          "reconstructed": "42444090455636684268790"
+        },
+        {
+          "address": "0xf7c9cdcf0fcd4806befaa4adc574d368c39da1b6",
+          "balance_of": "11007245113425382585361",
+          "reconstructed": "11007245113425382585361"
+        },
+        {
+          "address": "0xf7caf1741a769bb0f5b73755ef6528cacabbebbc",
+          "balance_of": "3373775860593577053810",
+          "reconstructed": "3373775860593577053810"
+        },
+        {
+          "address": "0xfb47cf9eb93e00110a5b438502ae1bbf689013e9",
+          "balance_of": "42623264800443556980714",
+          "reconstructed": "42623264800443556980714"
+        }
+      ],
+      "holder_reconstructed_count": 35,
+      "kind": "locked_standard",
+      "pool": "0xe3b975fc73eb513f0a6bc538ab1e03e4c0e71a33",
+      "pool_type": "v3",
+      "proxy_signal": 1,
+      "real_signal": 1,
+      "reserve": {
+        "event_target": "-1269355368967923710799366",
+        "event_weth": "5724937879771255296",
+        "target_balance_of": "44487554631032076289200281",
+        "target_reconstructed": "44487554631032076289200281",
+        "weth_balance_of": "5724937879771255296",
+        "weth_reconstructed": "5724937879771255296"
+      },
+      "snapshot_block": 42701794,
+      "standard_equalities": {
+        "holders": true,
+        "target": true,
+        "weth": true
+      },
+      "target_token": "0xd8c16ee8ff54f5418f7043815b4163479b934a26",
+      "window": "W1"
+    },
+    {
+      "cached_honeypot_sell_tax_pct": 100,
+      "holder_checks": [
+        {
+          "address": "0x463d42c389723e2616dc6673e750c1747a45a0d2",
+          "balance_of": "51767447623486875055132129",
+          "reconstructed": "51767447623486875055132129"
+        },
+        {
+          "address": "0xe7b0186c1c94aa2ce09100b862298065e05d8973",
+          "balance_of": "53000000000000000000000000",
+          "reconstructed": "53000000000000000000000000"
+        }
+      ],
+      "kind": "fee_on_sell_sentinel_outside_locked_universe",
+      "mismatch": {
+        "target": "0",
+        "weth": "0"
+      },
+      "note": "nonstandard golden sentinel only; excluded from locked universe and all return results",
+      "pool": "0xa11c4daa19a632d220ec443c2e28c07b07803f78",
+      "reserve": {
+        "target_balance_of": "1232552376513124944867871",
+        "target_reconstructed": "1232552376513124944867871",
+        "weth_balance_of": "10000000000000",
+        "weth_reconstructed": "10000000000000"
+      },
+      "risk_cache_sha256": "e230b5c03af69e56d9d10c653240c12c31b5c766dc117598ed43e44c702fcace",
+      "snapshot_block": 46553602,
+      "target_token": "0xfd860436e10f899bee052e7b5578205f29e396b9"
+    }
+  ],
+  "chain_id": 8453,
+  "rpc_calls_this_run": 88
+}

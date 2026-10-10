@@ -1,0 +1,35 @@
+{
+  "action": {
+    "action": null,
+    "action_name": "CUSTOM_EFFBEC13_SINGLE_HOP",
+    "action_order": 0,
+    "actions_bytes_hex": null,
+    "ambiguity": null,
+    "amount_in": 1000000000000000000,
+    "amount_out_minimum": 2641396673719898026607478114,
+    "hook_data_hex": null,
+    "notes": [
+      "effbec13_template_parse",
+      "hookData_not_fully_typed"
+    ],
+    "pool_key": {
+      "currency0": "0x4200000000000000000000000000000000000006",
+      "currency1": "0x7e84588b6997bbfddcd50beac0ca0f9582547b07",
+      "fee": 8388608,
+      "fee_mode": "DYNAMIC_FLAG",
+      "hooks": "0xb429d62f8f3bffb98cdb9569533ea23bf0ba28cc",
+      "path_order": [
+        "0x4200000000000000000000000000000000000006",
+        "0x7e84588b6997bbfddcd50beac0ca0f9582547b07"
+      ],
+      "tick_spacing": 200
+    },
+    "status": "MAPPED_CUSTOM_ROUTER",
+    "to_address": "0xd8ba9d1a99fc21f0eca24e9b85737c28a194a4e2",
+    "top_level_selector": "0xeffbec13",
+    "zero_for_one": true
+  },
+  "expected_status": "MAPPED_CUSTOM_ROUTER",
+  "kind": "custom_router_template",
+  "transaction_hash": "0x4a9bddac1670b2fe6f50b1d7abbf05ffeda871d30d806a4892755461a3b7b0f2"
+}

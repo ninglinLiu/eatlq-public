@@ -1,0 +1,2 @@
+event_id,search_term,category,chain_primary,t0_anchor,t0_rationale,is_known_superwinner,notes
+# SCHEMA: one row per EVENT (not per token). category in {web2_culture,chain_native,near_miss,political_identity}. t0_rationale MUST NOT mention ATH/listing/100x. is_known_superwinner in {0,1}.

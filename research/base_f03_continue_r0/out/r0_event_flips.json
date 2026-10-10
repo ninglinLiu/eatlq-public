@@ -1,0 +1,47 @@
+{
+  "sample_n_requested": 400,
+  "sample_n": 400,
+  "swap_rows": 100358,
+  "hours_with_flips": 400,
+  "mean_flip_rate": 0.21580722140333386,
+  "mean_placebo_flip_rate": 0.3433533530845998,
+  "mean_placebo_minus_obs": 0.12754613168126594,
+  "corr_flip_rate_abs_flow": -0.6857514847188443,
+  "scarcity_spread_signed_fwd": {
+    "n": 160,
+    "n_top": 80,
+    "n_bottom": 80,
+    "spread_bps": -85.77071153588574,
+    "t_day": -0.42208817157989204,
+    "p_day": 0.6764305412163476,
+    "high_mean_bps": 288.5355734617294,
+    "low_mean_bps": 374.3062849976152
+  },
+  "holdout_r2_m0": {
+    "n": 120,
+    "r2": -0.5312541369927797
+  },
+  "holdout_r2_m1": {
+    "n": 120,
+    "r2": -0.5472021182122493
+  },
+  "holdout_r2_increment": -0.01594798121946961,
+  "train_n": 280,
+  "holdout_n": 120,
+  "by_side": {
+    "HIGH": {
+      "n": 200,
+      "mean_flip_rate": 0.21729841678641793,
+      "mean_scarcity": 0.7827015832135821,
+      "mean_signed_fwd_bps": 34.893255366304075
+    },
+    "LOW": {
+      "n": 200,
+      "mean_flip_rate": 0.2143160260202498,
+      "mean_scarcity": 0.7856839739797502,
+      "mean_signed_fwd_bps": 326.3086848376324
+    }
+  },
+  "verdict": "FLIP_SPREAD_ONLY_NO_R2",
+  "note": "scarcity = 1 - flip_rate; signed_fwd = fwd_ret_4 for HIGH, -fwd_ret_4 for LOW"
+}

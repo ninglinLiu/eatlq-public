@@ -1,0 +1,12 @@
+mo	pools	med_active_days	max_active_days	pools_ge7days	sources
+2025-10-01	220	1	31	24	bf180_2025_10
+2025-11-01	290	1	30	18	bf180_2025_11
+2025-12-01	218	1	30	30	bf180_2025_12
+2026-01-01	376	1	31	48	bf180_2026_01
+2026-02-01	388	1	28	26	bf180_2026_02 + quicknode-backfill
+2026-03-01	341	1	31	29	bf180_2026_03 + quicknode-backfill
+2026-04-01	269	1	30	4	bf180_2026_04a + discovery_poller
+2026-05-01	583	1	17	4	discovery_poller + sprint089_gap_backfill
+2026-06-01	1682	1	14	4	discovery_poller
+2026-07-01	4274	1	31	4	discovery_poller
+2026-08-01	677	1	17	4	discovery_poller

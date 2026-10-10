@@ -1,0 +1,31 @@
+{
+  "created_utc": "2026-07-20T06:58:25Z",
+  "status": "OOF_PROVENANCE_OK",
+  "reports": [
+    {
+      "model_id": "C3_SIMPLE_MOMENTUM",
+      "ok": true,
+      "issues": [],
+      "n_rows": 1089,
+      "n_selected": 146,
+      "all_row_in_training_set_false": true
+    },
+    {
+      "model_id": "G2_HGB_COMPETING",
+      "ok": true,
+      "issues": [],
+      "n_rows": 1089,
+      "n_selected": 167,
+      "all_row_in_training_set_false": true
+    },
+    {
+      "model_id": "C1_PRICE_ONLY",
+      "ok": true,
+      "issues": [],
+      "n_rows": 1089,
+      "n_selected": 325,
+      "all_row_in_training_set_false": true
+    }
+  ],
+  "path": "/root/base_greenfield_directional_v0/out_v1/OOF_PROVENANCE.csv"
+}

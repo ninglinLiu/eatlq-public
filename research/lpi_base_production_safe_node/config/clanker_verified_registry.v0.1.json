@@ -1,0 +1,91 @@
+{
+  "registry_version": "0.1",
+  "chain_id": 8453,
+  "chain_name": "base",
+  "generated_for": "CLANKER_ALPHA_FEASIBILITY_STUDY_V01",
+  "factories": [
+    {
+      "name": "Clanker",
+      "version": "4",
+      "version_label": "v4.0",
+      "address": "0xE85A59c628F7d27878ACeB4bf3b35733630083a9",
+      "deployment_transaction": "UNKNOWN",
+      "deployment_block": 31526699,
+      "deployment_block_method": "eth_getCode_binary_search_first_nonempty",
+      "deployment_block_note": "First block where eth_getCode(factory) is non-empty; creating tx hash not recovered from top-level contractAddress in that block (likely CREATE2/internal). Left UNKNOWN.",
+      "runtime_bytecode_sha256": "365456b7fae5f3d0f95eb1500426505f8a8a4a412fce23008792e1b7ff8b0b5f",
+      "runtime_bytecode_keccak256": "43acb1f309cc223c71169825b9ab9c0f703669c25156e2999102dcfbb1826bee",
+      "runtime_bytecode_length_bytes": 12375,
+      "abi_sources": [
+        {
+          "layer": "official_source",
+          "url": "https://raw.githubusercontent.com/clanker-devco/v4-contracts/e0ed708395fe31d10c427890c4c55d6752bfa302/src/interfaces/IClanker.sol",
+          "commit": "e0ed708395fe31d10c427890c4c55d6752bfa302",
+          "path": "src/interfaces/IClanker.sol"
+        },
+        {
+          "layer": "official_readme_deployed_contracts",
+          "url": "https://raw.githubusercontent.com/clanker-devco/v4-contracts/main/README.md",
+          "note": "Base Mainnet v4.0 Clanker address listed explicitly"
+        },
+        {
+          "layer": "explorer_verified_source",
+          "url": "https://base.blockscout.com/address/0xE85A59c628F7d27878ACeB4bf3b35733630083a9",
+          "api": "https://base.blockscout.com/api/v2/smart-contracts/0xE85A59c628F7d27878ACeB4bf3b35733630083a9",
+          "verified": true,
+          "contract_name": "Clanker",
+          "compiler_version": "0.8.28+commit.7893614a"
+        }
+      ],
+      "launch_event": {
+        "name": "TokenCreated",
+        "signature": "TokenCreated(address,address,address,string,string,string,string,string,int24,address,bytes32,address,address,address,uint256,address[])",
+        "topic0": "0x9299d1d1a88d8e1abdc591ae7a167a6bc63a8f17d695804e9091ee33aa89fb67",
+        "indexed": [
+          {"name": "tokenAddress", "type": "address", "topic_index": 1},
+          {"name": "tokenAdmin", "type": "address", "topic_index": 2}
+        ],
+        "non_indexed": [
+          {"name": "msgSender", "type": "address"},
+          {"name": "tokenImage", "type": "string"},
+          {"name": "tokenName", "type": "string"},
+          {"name": "tokenSymbol", "type": "string"},
+          {"name": "tokenMetadata", "type": "string"},
+          {"name": "tokenContext", "type": "string"},
+          {"name": "startingTick", "type": "int24"},
+          {"name": "poolHook", "type": "address"},
+          {"name": "poolId", "type": "bytes32"},
+          {"name": "pairedToken", "type": "address"},
+          {"name": "locker", "type": "address"},
+          {"name": "mevModule", "type": "address"},
+          {"name": "extensionsSupply", "type": "uint256"},
+          {"name": "extensions", "type": "address[]"}
+        ]
+      },
+      "related_addresses": {
+        "uniswap_v4_pool_manager": "0x498581ff718922c3f8e6A244956aF099B2652b2b",
+        "weth": "0x4200000000000000000000000000000000000006",
+        "usdc": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"
+      },
+      "applicable_block_range": {
+        "from_block": 31526699,
+        "to_block": null,
+        "to_block_note": "open-ended while factory code remains at this address"
+      },
+      "verification_status": "VERIFIED_MULTI_SOURCE",
+      "source_confidence": "HIGH",
+      "unknowns": [
+        "deployment_transaction",
+        "pre_v4_factory_addresses",
+        "historical_v0_v1_v2_v3_event_layouts"
+      ]
+    }
+  ],
+  "explicitly_unverified_or_unknown": [
+    {
+      "item": "Clanker factories prior to v4 on Base",
+      "status": "UNKNOWN",
+      "reason": "Not independently cross-verified in this study; excluded from sample universe"
+    }
+  ]
+}

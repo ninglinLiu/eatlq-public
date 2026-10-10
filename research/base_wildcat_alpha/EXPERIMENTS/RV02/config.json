@@ -1,0 +1,23 @@
+{
+  "alpha_id": "RV02",
+  "family": "relative_value",
+  "hypothesis": "deep pool leads thin pool",
+  "mechanism": "price discovery occurs where active liquidity is highest",
+  "venue": "Base V3",
+  "universe": "active observed pools",
+  "horizon": "1h",
+  "data_source": "same-token pools and pool returns",
+  "experiment": "lagged matched-pool regression",
+  "feature": "deep_pool_lead",
+  "direction": 1,
+  "prediction_object": "thin-pool next return",
+  "falsifier": "simultaneity after block alignment",
+  "status": "NOT_YET_TESTED",
+  "sample_size": 0,
+  "gross_result": "pending",
+  "cost_adjusted_result": "pending",
+  "capacity": "pending",
+  "concentration": "pending",
+  "tail_risk": "pending",
+  "next_action": "run rapid screen"
+}

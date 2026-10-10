@@ -1,0 +1,273 @@
+{
+  "task": "whale_proxy_ablation",
+  "whale_n": 19684,
+  "large_buy_n": 30683,
+  "jaccard": 0.6187071214610107,
+  "overlap_fraction_of_whale": 0.9782542269301283,
+  "overlap_fraction_of_lbi": 0.6273350751143044,
+  "whale_total_pnl_weth": 38.250217890793536,
+  "lbi_total_pnl_weth": 35.14910884325102,
+  "whale_mean_pnl": 0.001943213670534116,
+  "lbi_mean_pnl": 0.0011455564593830794,
+  "whale_impact_score_corr": 0.39922332760099194,
+  "n_whale_only": 429,
+  "n_lbi_only": 11430,
+  "absorbed_filter_drop_rate": 0.34893509679589274,
+  "stratified_hit_ratio_age_depth": [
+    {
+      "age_bucket": "0-15m",
+      "depth_decile": "0",
+      "n": 6,
+      "whale_hit_rate": 0.6666666666666666
+    },
+    {
+      "age_bucket": "0-15m",
+      "depth_decile": "1",
+      "n": 9,
+      "whale_hit_rate": 0.6666666666666666
+    },
+    {
+      "age_bucket": "0-15m",
+      "depth_decile": "2",
+      "n": 7,
+      "whale_hit_rate": 0.14285714285714285
+    },
+    {
+      "age_bucket": "0-15m",
+      "depth_decile": "3",
+      "n": 39,
+      "whale_hit_rate": 0.10256410256410256
+    },
+    {
+      "age_bucket": "0-15m",
+      "depth_decile": "4",
+      "n": 6,
+      "whale_hit_rate": 0.5
+    },
+    {
+      "age_bucket": "0-15m",
+      "depth_decile": "5",
+      "n": 8,
+      "whale_hit_rate": 0.125
+    },
+    {
+      "age_bucket": "0-15m",
+      "depth_decile": "6",
+      "n": 4,
+      "whale_hit_rate": 0.5
+    },
+    {
+      "age_bucket": "0-15m",
+      "depth_decile": "7",
+      "n": 4,
+      "whale_hit_rate": 0.25
+    },
+    {
+      "age_bucket": "0-15m",
+      "depth_decile": "8",
+      "n": 4,
+      "whale_hit_rate": 0.5
+    },
+    {
+      "age_bucket": "0-15m",
+      "depth_decile": "9",
+      "n": 6,
+      "whale_hit_rate": 0.3333333333333333
+    },
+    {
+      "age_bucket": "15-60m",
+      "depth_decile": "0",
+      "n": 6037,
+      "whale_hit_rate": 0.13814808679807852
+    },
+    {
+      "age_bucket": "15-60m",
+      "depth_decile": "1",
+      "n": 6996,
+      "whale_hit_rate": 0.13936535162950256
+    },
+    {
+      "age_bucket": "15-60m",
+      "depth_decile": "2",
+      "n": 6693,
+      "whale_hit_rate": 0.12565366801135514
+    },
+    {
+      "age_bucket": "15-60m",
+      "depth_decile": "3",
+      "n": 4073,
+      "whale_hit_rate": 0.10164497913086178
+    },
+    {
+      "age_bucket": "15-60m",
+      "depth_decile": "4",
+      "n": 8371,
+      "whale_hit_rate": 0.14514394934894279
+    },
+    {
+      "age_bucket": "15-60m",
+      "depth_decile": "5",
+      "n": 6690,
+      "whale_hit_rate": 0.13183856502242153
+    },
+    {
+      "age_bucket": "15-60m",
+      "depth_decile": "6",
+      "n": 6978,
+      "whale_hit_rate": 0.14058469475494412
+    },
+    {
+      "age_bucket": "15-60m",
+      "depth_decile": "7",
+      "n": 8229,
+      "whale_hit_rate": 0.11872645521934622
+    },
+    {
+      "age_bucket": "15-60m",
+      "depth_decile": "8",
+      "n": 7259,
+      "whale_hit_rate": 0.1445102631216421
+    },
+    {
+      "age_bucket": "15-60m",
+      "depth_decile": "9",
+      "n": 6600,
+      "whale_hit_rate": 0.14484848484848484
+    },
+    {
+      "age_bucket": "1-6h",
+      "depth_decile": "0",
+      "n": 8312,
+      "whale_hit_rate": 0.06171799807507219
+    },
+    {
+      "age_bucket": "1-6h",
+      "depth_decile": "1",
+      "n": 8157,
+      "whale_hit_rate": 0.08373176412896899
+    },
+    {
+      "age_bucket": "1-6h",
+      "depth_decile": "2",
+      "n": 10794,
+      "whale_hit_rate": 0.03983694645173244
+    },
+    {
+      "age_bucket": "1-6h",
+      "depth_decile": "3",
+      "n": 8471,
+      "whale_hit_rate": 0.04450478101758942
+    },
+    {
+      "age_bucket": "1-6h",
+      "depth_decile": "4",
+      "n": 9816,
+      "whale_hit_rate": 0.08659331703341483
+    },
+    {
+      "age_bucket": "1-6h",
+      "depth_decile": "5",
+      "n": 9297,
+      "whale_hit_rate": 0.09078197267935893
+    },
+    {
+      "age_bucket": "1-6h",
+      "depth_decile": "6",
+      "n": 7347,
+      "whale_hit_rate": 0.06193003947189329
+    },
+    {
+      "age_bucket": "1-6h",
+      "depth_decile": "7",
+      "n": 10242,
+      "whale_hit_rate": 0.05506736965436438
+    },
+    {
+      "age_bucket": "1-6h",
+      "depth_decile": "8",
+      "n": 8588,
+      "whale_hit_rate": 0.09257102934326968
+    },
+    {
+      "age_bucket": "1-6h",
+      "depth_decile": "9",
+      "n": 8219,
+      "whale_hit_rate": 0.09417204039420854
+    },
+    {
+      "age_bucket": "6-24h",
+      "depth_decile": "0",
+      "n": 5857,
+      "whale_hit_rate": 0.08912412497865801
+    },
+    {
+      "age_bucket": "6-24h",
+      "depth_decile": "1",
+      "n": 5053,
+      "whale_hit_rate": 0.14011478329705127
+    },
+    {
+      "age_bucket": "6-24h",
+      "depth_decile": "2",
+      "n": 2743,
+      "whale_hit_rate": 0.06598614655486694
+    },
+    {
+      "age_bucket": "6-24h",
+      "depth_decile": "3",
+      "n": 7673,
+      "whale_hit_rate": 0.02137364785611886
+    },
+    {
+      "age_bucket": "6-24h",
+      "depth_decile": "4",
+      "n": 2008,
+      "whale_hit_rate": 0.224601593625498
+    },
+    {
+      "age_bucket": "6-24h",
+      "depth_decile": "5",
+      "n": 4216,
+      "whale_hit_rate": 0.13567362428842505
+    },
+    {
+      "age_bucket": "6-24h",
+      "depth_decile": "6",
+      "n": 5886,
+      "whale_hit_rate": 0.056744818212708124
+    },
+    {
+      "age_bucket": "6-24h",
+      "depth_decile": "7",
+      "n": 1727,
+      "whale_hit_rate": 0.09727851766068327
+    },
+    {
+      "age_bucket": "6-24h",
+      "depth_decile": "8",
+      "n": 4357,
+      "whale_hit_rate": 0.1163644709662612
+    },
+    {
+      "age_bucket": "6-24h",
+      "depth_decile": "9",
+      "n": 5396,
+      "whale_hit_rate": 0.1540029651593773
+    }
+  ],
+  "recommendation": {
+    "size_explains_effect": false,
+    "recommended_label": "KEEP_WHALE_EVENT_LABEL_PENDING",
+    "rationale": "Absorbed/non-reversal filter or selection mass differs enough that a pure size label is not yet forced; still not an identity trait.",
+    "identity_component_present": false,
+    "feature_decomposition": {
+      "whale_impact": "quote_weth / prior_30m_pool_volume (PIT)",
+      "whale_absorbed": "5m price non-reversal after buy",
+      "whale_score": "clip(impact,0,5) * (0.5 + 0.5*absorbed)",
+      "actor_fields_used": []
+    }
+  },
+  "bootstrap_note": "Absolute PnLs are unconstrained sums; use incremental module for paired \u0394.",
+  "n_boot_config": 200,
+  "seed": 7
+}

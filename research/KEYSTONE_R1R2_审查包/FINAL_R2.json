@@ -1,0 +1,417 @@
+{
+  "r2_version": "r2.0.0",
+  "created_utc": "2026-07-19T15:03:21Z",
+  "conclusion": "PURE_DIRECTIONAL_META_ALPHA",
+  "conclusion_rationale": "On realgas atomic labels among KEYSTONE live-pass: V2 F10 q50 EV/accepted 1.5883079419947448 > V1 early_ret control 0.9261467506635302; sellable-only uplift holds; nested M1>M0; score-shuffle beats null p95; fatal_first drops 2.3pp\u21920 (only 8 unsellable in sample). CRITICAL CAVEAT: for SELL_SUCCESS rows, atomic_net_return_h \u2261 qv2_net_comparison (corr=1.0) \u2014 directional label is not an independent atomic markout series. Simulator is trustworthy on GL4 (0 false sellable / 0 false unsellable). Confirmation post-2026-06-01: INSUFFICIENT_ATOMIC_SAMPLE. DEVELOPMENT_HOLDOUT_BURNED. forward_eligible=false. No deploy.",
+  "calibration": {
+    "n_success_cases": 3,
+    "n_rug_cases": 5,
+    "n_success_evaluable": 3,
+    "n_rug_evaluable": 5,
+    "false_sellable_rate": 0.0,
+    "false_unsellable_rate": 0.0,
+    "sim_vs_actual_weth_abs_rel_error_median": 2.1034659463412633e-07,
+    "sim_vs_actual_weth_abs_rel_error_mean": 0.00046850563229586126,
+    "infrastructure_unknown_rate": 0.0,
+    "known_rug_detection_coverage": 1.0,
+    "revert_reason_agreement": "n/a_live_reverts_not_decoded",
+    "rpc_calls": 106,
+    "trustworthy": true,
+    "fail_reasons": []
+  },
+  "f10_meta": {
+    "features": [
+      "impact_residual",
+      "ineffective_buying",
+      "liq_fragility_score",
+      "part_exhaust_score",
+      "accel"
+    ],
+    "hgb_params": {
+      "max_depth": 3,
+      "max_iter": 80,
+      "learning_rate": 0.05,
+      "random_state": 0
+    },
+    "thresholds": {
+      "train_q40": 0.8284417809694159,
+      "train_q50": 0.8624456161522396,
+      "train_q60": 0.8886893755257821
+    },
+    "primary_gate": "train_q50",
+    "train_n_ks_live_pass": 308,
+    "model_sha256": "e1c68ae160004cd80711a7ae5461ee1d3d8e1f4359aebf1f890c25b74c277c5c",
+    "feature_schema_sha256": "3169ef58a34ebd33990a172404a9f70b5193d13af6cbb8c8f981b758dfe624a1",
+    "folds": [
+      {
+        "fold": 2,
+        "train_n": 150,
+        "thr_q50": 0.7949251922847386
+      },
+      {
+        "fold": 3,
+        "train_n": 232,
+        "thr_q50": 0.839225668550745
+      }
+    ],
+    "recipe": "R1_F10 identical; regenerated because R1 did not persist pickle",
+    "v1_match_accept_rate": 0.5,
+    "v1_early_ret_threshold": 1.1178941062260979,
+    "v3_thresholds": {
+      "q60": -1.151769621079575,
+      "q70": 49.92726635060728,
+      "q80": 263.6701904259472
+    }
+  },
+  "variants_core": [
+    {
+      "variant": "V0_KEYSTONE_ALLPASS",
+      "n_base_signals": 308,
+      "n_accepted": 308,
+      "n_accepted_labeled": 306,
+      "accept_rate": 1.0,
+      "ev_per_accepted": 1.1515489856823393,
+      "ev_per_signal_skip0": 1.1515489856823393,
+      "median": 0.5559640063114821,
+      "trimmed_mean_10": 0.8158277899096472,
+      "tp_first_rate": 0.5294117647058824,
+      "sl_first_rate": 0.0392156862745098,
+      "fatal_first_rate": 0.02287581699346405,
+      "atomic_sell_failure_rate": 0.02287581699346405,
+      "cond_return_sellable": 1.201919697721725,
+      "max_drawdown_cumsum": -1.5476532761687807,
+      "top1_share": 0.04019786207636072,
+      "top5_share": 0.1438390690990964,
+      "loto_min_ev": 1.1043442841180247,
+      "lowo_min_ev": 1.0479039141808764,
+      "bootstrap_ci95": [
+        0.950438557639541,
+        1.3728645611878338
+      ],
+      "pnl_per_capital_hour": 0.28788724642058483
+    },
+    {
+      "variant": "V1_EARLY_RET_CTRL",
+      "n_base_signals": 308,
+      "n_accepted": 154,
+      "n_accepted_labeled": 154,
+      "accept_rate": 0.5,
+      "ev_per_accepted": 0.9261467506635302,
+      "ev_per_signal_skip0": 0.4630733753317651,
+      "median": 0.46932447288790136,
+      "trimmed_mean_10": 0.656393960390642,
+      "tp_first_rate": 0.461038961038961,
+      "sl_first_rate": 0.032467532467532464,
+      "fatal_first_rate": 0.006493506493506494,
+      "atomic_sell_failure_rate": 0.006493506493506494,
+      "cond_return_sellable": 0.9387359451123115,
+      "max_drawdown_cumsum": -1.0,
+      "top1_share": 0.07801531522700104,
+      "top5_share": 0.2094056078269328,
+      "loto_min_ev": 0.8542919029330038,
+      "lowo_min_ev": 0.8663727289646439,
+      "bootstrap_ci95": [
+        0.7113651802220721,
+        1.172032335972688
+      ],
+      "pnl_per_capital_hour": 0.23153668766588256
+    },
+    {
+      "variant": "V2_F10_Q50",
+      "n_base_signals": 308,
+      "n_accepted": 154,
+      "n_accepted_labeled": 154,
+      "accept_rate": 0.5,
+      "ev_per_accepted": 1.5883079419947448,
+      "ev_per_signal_skip0": 0.7941539709973723,
+      "median": 0.9741442112545985,
+      "trimmed_mean_10": 1.1947823470314787,
+      "tp_first_rate": 0.6623376623376623,
+      "sl_first_rate": 0.006493506493506494,
+      "fatal_first_rate": 0.0,
+      "atomic_sell_failure_rate": 0.0,
+      "cond_return_sellable": 1.5883079419947448,
+      "max_drawdown_cumsum": -0.3721160174376763,
+      "top1_share": 0.05013712447052209,
+      "top5_share": 0.18976874070997235,
+      "loto_min_ev": 1.5182023018263267,
+      "lowo_min_ev": 1.4901165893851949,
+      "bootstrap_ci95": [
+        1.3246523686034657,
+        1.8949368198620713
+      ],
+      "pnl_per_capital_hour": 0.3970769854986862
+    },
+    {
+      "variant": "V3_INEFF_BUY_Q80KEEP",
+      "n_base_signals": 308,
+      "n_accepted": 246,
+      "n_accepted_labeled": 244,
+      "accept_rate": 0.7987012987012987,
+      "ev_per_accepted": 1.1995336432304333,
+      "ev_per_signal_skip0": 0.9564908789157703,
+      "median": 0.5809545047453327,
+      "trimmed_mean_10": 0.87280142495998,
+      "tp_first_rate": 0.5491803278688525,
+      "sl_first_rate": 0.03278688524590164,
+      "fatal_first_rate": 0.028688524590163935,
+      "atomic_sell_failure_rate": 0.028688524590163935,
+      "cond_return_sellable": 1.2644987719334422,
+      "max_drawdown_cumsum": -1.5476532761687807,
+      "top1_share": 0.04813938233425124,
+      "top5_share": 0.15553984655920716,
+      "loto_min_ev": 1.1404824114626648,
+      "lowo_min_ev": 1.0714634131131007,
+      "bootstrap_ci95": [
+        0.9646021397408844,
+        1.4289330719192341
+      ],
+      "pnl_per_capital_hour": 0.29988341080760833
+    },
+    {
+      "variant": "V4_ATOMIC_RETARGET_Q50",
+      "n_base_signals": 308,
+      "n_accepted": 153,
+      "n_accepted_labeled": 153,
+      "accept_rate": 0.4967532467532468,
+      "ev_per_accepted": 1.5343618798550143,
+      "ev_per_signal_skip0": 0.7621992455123934,
+      "median": 0.9596249262224092,
+      "trimmed_mean_10": 1.1870449587928942,
+      "tp_first_rate": 0.6601307189542484,
+      "sl_first_rate": 0.006535947712418301,
+      "fatal_first_rate": 0.0,
+      "atomic_sell_failure_rate": 0.0,
+      "cond_return_sellable": 1.5343618798550143,
+      "max_drawdown_cumsum": -0.3721160174376763,
+      "top1_share": 0.05055817260911719,
+      "top5_share": 0.17055362226459572,
+      "loto_min_ev": 1.466035718186731,
+      "lowo_min_ev": 1.4054365257253323,
+      "bootstrap_ci95": [
+        1.270215189309187,
+        1.8244575285602072
+      ],
+      "pnl_per_capital_hour": 0.38359046996375357
+    }
+  ],
+  "sensitivity_monotonicity": {
+    "q40_ev": 1.4928449431619548,
+    "q50_ev": 1.5883079419947448,
+    "q60_ev": 1.5117733570617935
+  },
+  "sellable_only_directional": {
+    "V0": {
+      "variant": "V0_SELLABLE_ONLY",
+      "n_base_signals": 299,
+      "n_accepted": 299,
+      "n_accepted_labeled": 299,
+      "accept_rate": 1.0,
+      "ev_per_accepted": 1.201919697721725,
+      "ev_per_signal_skip0": 1.201919697721725,
+      "median": 0.5698872369091121,
+      "trimmed_mean_10": 0.8498673137205565,
+      "tp_first_rate": 0.5418060200668896,
+      "sl_first_rate": 0.04013377926421405,
+      "fatal_first_rate": 0.0,
+      "atomic_sell_failure_rate": 0.0,
+      "cond_return_sellable": 1.201919697721725,
+      "max_drawdown_cumsum": -0.8114777110638869,
+      "top1_share": 0.0409387171120852,
+      "top5_share": 0.14649005333486387,
+      "loto_min_ev": 1.153775190120797,
+      "lowo_min_ev": 1.1011950941037987,
+      "bootstrap_ci95": [
+        0.9822765853137991,
+        1.4168005994728967
+      ],
+      "pnl_per_capital_hour": 0.30047992443043126
+    },
+    "V1": {
+      "variant": "V1_SELLABLE_ONLY",
+      "n_base_signals": 299,
+      "n_accepted": 153,
+      "n_accepted_labeled": 153,
+      "accept_rate": 0.5117056856187291,
+      "ev_per_accepted": 0.9387359451123115,
+      "ev_per_signal_skip0": 0.480356520408641,
+      "median": 0.46975420172732374,
+      "trimmed_mean_10": 0.662565500686554,
+      "tp_first_rate": 0.46405228758169936,
+      "sl_first_rate": 0.032679738562091505,
+      "fatal_first_rate": 0.0,
+      "atomic_sell_failure_rate": 0.0,
+      "cond_return_sellable": 0.9387359451123115,
+      "max_drawdown_cumsum": -0.919769293606457,
+      "top1_share": 0.07852928490396434,
+      "top5_share": 0.21078518480224775,
+      "loto_min_ev": 0.8664911917680894,
+      "lowo_min_ev": 0.8663727289646439,
+      "bootstrap_ci95": [
+        0.7216854818788143,
+        1.1905457958365868
+      ],
+      "pnl_per_capital_hour": 0.23468398627807788
+    },
+    "V2": {
+      "variant": "V2_SELLABLE_ONLY",
+      "n_base_signals": 299,
+      "n_accepted": 154,
+      "n_accepted_labeled": 154,
+      "accept_rate": 0.5150501672240803,
+      "ev_per_accepted": 1.5883079419947448,
+      "ev_per_signal_skip0": 0.818058271127728,
+      "median": 0.9741442112545985,
+      "trimmed_mean_10": 1.1947823470314787,
+      "tp_first_rate": 0.6623376623376623,
+      "sl_first_rate": 0.006493506493506494,
+      "fatal_first_rate": 0.0,
+      "atomic_sell_failure_rate": 0.0,
+      "cond_return_sellable": 1.5883079419947448,
+      "max_drawdown_cumsum": -0.3721160174376763,
+      "top1_share": 0.05013712447052209,
+      "top5_share": 0.18976874070997235,
+      "loto_min_ev": 1.5182023018263267,
+      "lowo_min_ev": 1.4901165893851949,
+      "bootstrap_ci95": [
+        1.3246523686034657,
+        1.8949368198620713
+      ],
+      "pnl_per_capital_hour": 0.3970769854986862
+    }
+  },
+  "mechanism_tests": {
+    "nested": {
+      "M0_early_ret": {
+        "n_sel": 78,
+        "ev": 1.1610922126308019,
+        "acc": 0.7973856209150327
+      },
+      "M1_f10": {
+        "n_sel": 76,
+        "ev": 1.2194695042250203,
+        "acc": 0.8169934640522876
+      },
+      "M2_early_ret_plus_f10": {
+        "n_sel": 67,
+        "ev": 1.3037969057634569,
+        "acc": 0.803921568627451
+      }
+    },
+    "shuffle": {
+      "real_ev": 1.5883079419947448,
+      "null_mean": 1.125515284096779,
+      "null_p95": 1.2858133023359832,
+      "beat_null": true
+    },
+    "early_ret_uplift": {
+      "by_decile": [
+        {
+          "decile": 0,
+          "n_base": 29,
+          "base_ev": 1.3765400892507946,
+          "n_f10": 3,
+          "f10_ev": 4.969607497118497,
+          "uplift": 3.5930674078677027
+        },
+        {
+          "decile": 1,
+          "n_base": 31,
+          "base_ev": 1.4849576477578936,
+          "n_f10": 14,
+          "f10_ev": 1.8092802047087029,
+          "uplift": 0.32432255695080925
+        },
+        {
+          "decile": 2,
+          "n_base": 31,
+          "base_ev": 1.599949992900203,
+          "n_f10": 19,
+          "f10_ev": 1.963931740176675,
+          "uplift": 0.3639817472764719
+        },
+        {
+          "decile": 3,
+          "n_base": 30,
+          "base_ev": 1.3370272694305916,
+          "n_f10": 20,
+          "f10_ev": 1.611887522397976,
+          "uplift": 0.2748602529673845
+        },
+        {
+          "decile": 4,
+          "n_base": 31,
+          "base_ev": 1.0995087898393663,
+          "n_f10": 17,
+          "f10_ev": 1.497655584157826,
+          "uplift": 0.3981467943184598
+        },
+        {
+          "decile": 5,
+          "n_base": 31,
+          "base_ev": 1.2865760225331344,
+          "n_f10": 19,
+          "f10_ev": 1.8179447660519503,
+          "uplift": 0.5313687435188159
+        },
+        {
+          "decile": 6,
+          "n_base": 30,
+          "base_ev": 0.7535369483178813,
+          "n_f10": 15,
+          "f10_ev": 0.8663692354071433,
+          "uplift": 0.11283228708926196
+        },
+        {
+          "decile": 7,
+          "n_base": 31,
+          "base_ev": 0.7137855327139945,
+          "n_f10": 14,
+          "f10_ev": 1.1840360977378899,
+          "uplift": 0.4702505650238954
+        },
+        {
+          "decile": 8,
+          "n_base": 31,
+          "base_ev": 0.7461718466899279,
+          "n_f10": 17,
+          "f10_ev": 1.215050250935402,
+          "uplift": 0.4688784042454741
+        },
+        {
+          "decile": 9,
+          "n_base": 31,
+          "base_ev": 1.125095344922531,
+          "n_f10": 16,
+          "f10_ev": 1.5362019092242154,
+          "uplift": 0.41110656430168446
+        }
+      ]
+    }
+  },
+  "development_holdout_status": "DEVELOPMENT_HOLDOUT_BURNED",
+  "confirmation": {
+    "status": "INSUFFICIENT_ATOMIC_SAMPLE",
+    "forward_eligible": false,
+    "development_holdout": "DEVELOPMENT_HOLDOUT_BURNED"
+  },
+  "forward_eligible": false,
+  "deployed": false,
+  "artifacts": {
+    "manifest": "/root/keystone_r2_atomic/out/R2_MANIFEST.json",
+    "calibration_csv": "/root/keystone_r2_atomic/out/atomic_simulator_calibration.csv",
+    "scores": "/root/keystone_r2_atomic/out/frozen_f10_scores.parquet",
+    "comparison": "/root/keystone_r2_atomic/out/r2_candidate_comparison.csv",
+    "ledger": "/root/keystone_r2_atomic/out/r2_trial_ledger.csv"
+  },
+  "label_semantics": {
+    "sellable_atomic_equals_qv2": true,
+    "unsellable_override": "DETERMINISTIC_REVERT -> -100%",
+    "n_ks_live_pass_unsellable": 8,
+    "implication": "Directional meta-alpha claim is conditional on realgas sellability filter + QV2-identical success path"
+  },
+  "sensitivity_note": "q40/q50/q60 EV 1.493/1.588/1.512 \u2014 not strictly monotone at q60",
+  "frozen_f10_model_sha256": "e1c68ae160004cd80711a7ae5461ee1d3d8e1f4359aebf1f890c25b74c277c5c",
+  "calibration_trustworthy": true,
+  "updated_utc": "2026-07-19T15:04:10Z"
+}

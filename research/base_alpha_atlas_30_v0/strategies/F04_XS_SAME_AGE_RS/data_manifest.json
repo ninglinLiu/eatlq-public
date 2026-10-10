@@ -1,0 +1,24 @@
+{
+  "strategy_id": "F04_XS_SAME_AGE_RS",
+  "data_class": "B_SMALL_BOUNDED_EXPORT_REQUIRED",
+  "required_tables_or_files": [
+    "swaps/OHLCV",
+    "first_swap times"
+  ],
+  "required_columns": [
+    "pool",
+    "time",
+    "close",
+    "first_swap_ts"
+  ],
+  "required_time_resolution": "1m",
+  "point_in_time_requirements": "first_swap<=t",
+  "minimum_history": ">=30d new pools",
+  "estimated_rows": "many short series",
+  "estimated_read_bytes": "200MB-2GB",
+  "whether_current_diagnostics_may_support_it": "partial",
+  "whether_production_database_would_be_required": true,
+  "missing_data": [
+    "clean first_swap catalog without full CH group by"
+  ]
+}

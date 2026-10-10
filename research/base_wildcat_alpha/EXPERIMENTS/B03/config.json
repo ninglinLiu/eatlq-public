@@ -1,0 +1,23 @@
+{
+  "alpha_id": "B03",
+  "family": "block_time",
+  "hypothesis": "low block coverage flags fragile price moves",
+  "mechanism": "few distinct blocks make the close easy to distort",
+  "venue": "Base V3",
+  "universe": "active observed pools",
+  "horizon": "4h",
+  "data_source": "V3 event timestamps and ordering",
+  "experiment": "tail-risk screen",
+  "feature": "block_coverage",
+  "direction": -1,
+  "prediction_object": "future adverse return",
+  "falsifier": "no higher downside or inactivity",
+  "status": "NOT_YET_TESTED",
+  "sample_size": 0,
+  "gross_result": "pending",
+  "cost_adjusted_result": "pending",
+  "capacity": "pending",
+  "concentration": "pending",
+  "tail_risk": "pending",
+  "next_action": "run rapid screen"
+}

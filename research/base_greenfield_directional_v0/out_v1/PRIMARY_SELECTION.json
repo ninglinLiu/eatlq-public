@@ -1,0 +1,14 @@
+{
+  "primary_policy": "P1_G2_COMPETING",
+  "ranked": [
+    "P1_G2_COMPETING",
+    "P2_C3_G2_VETO",
+    "P0_C3_MOMENTUM"
+  ],
+  "kill_g2": false,
+  "kill_g2_reasons": [],
+  "secondary_policies": [
+    "P0_C3_MOMENTUM",
+    "P2_C3_G2_VETO"
+  ]
+}

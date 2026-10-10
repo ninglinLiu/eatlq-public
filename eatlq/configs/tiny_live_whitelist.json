@@ -1,0 +1,17 @@
+{
+  "pools": [
+    "0x0a423a23c97ce0e4296d13c2b846f8b8b66085d6",
+    "0x3558eea62c750a1e3f13523d875f67dde6c88fa4",
+    "0x2201f9b61a4a9be3cc529b04536b59824f1711af",
+    "0xa5a98447c7e10dbf35da4a4c4ba151539c200344",
+    "0x369adee33d0d5c5c4abaabf75965976c60909451",
+    "0x3bd608dfb713ba66a987cb9b8c89c403ace049e3",
+    "0xa68c78d969e51ac10d488c6d1da97541151f599c"
+  ],
+  "removed_pools_note": "Dropped 0xc682, 0xb4cb, 0x40aeb — per-pool PF<1 or n<15 in paper history",
+  "fee_bps_note": "Use per-signal fee_bps from paper CSV (Uniswap tier: 100/500/3000/10000)",
+  "stake_eth": 0.0015,
+  "hold_seconds": 1800,
+  "cooldown_seconds": 1800,
+  "source": "sprint055 top-7 by PF>=1 and signal count"
+}

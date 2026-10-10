@@ -1,0 +1,69 @@
+input_paths:
+  h166_patch_json: mvp/diagnostics/run004_patch_h166_split_v2_mainline_v3_repair.json
+  h166_v2_candidate_csv: mvp/diagnostics/run004_h166_v2_candidate_selection.csv
+  h166_v2_candidate_report_json: mvp/diagnostics/run004_h166_v2_candidate_report.json
+  h166_v2_readiness_report_json: mvp/diagnostics/run004_h166_v2_readiness_report.json
+  h166_v3_repair_branch_plan_json: mvp/diagnostics/run004_h166_v3_repair_branch_plan.json
+
+labeling:
+  target_success_rows: 10000
+  max_attempts: 15000
+  batch_size: 250
+  workers: 20
+  fixed_horizon_sec: 1800
+  notional_wei: 500000000000000
+  round_trip_cost: 0.006
+  slippage_stress_bps: 100
+  rpc_env_vars:
+    - LABEL_RPC_URL
+    - EVM_HTTP_URL
+    - LIVE_BASE_RPC_URL
+  gas_price_gwei:
+    low: 0.01
+    medium: 0.03
+    high: 0.10
+  include_approval_gas: true
+  approval_gas_units: 50000
+  gas_units:
+    v2:
+      buy: 180000
+      sell: 160000
+    v3:
+      buy: 260000
+      sell: 240000
+
+risk_severity:
+  hard_exclude_abs_return: 0.20
+  feature_limited_abs_return: 0.50
+  focus_pools:
+    - "0x3e118916cd67cc9bfeb0fc44ae3dde8bc33c2d4a"
+    - "0x54219bce730d2727d91d8dcdf1465c7d299dee45"
+    - "0xc2476883d28d40b6c057f242fce2e8bda674faa0"
+  confirmed_bad_pools:
+    - "0x3e118916cd67cc9bfeb0fc44ae3dde8bc33c2d4a"
+  alpha_island_pools:
+    - "0x54219bce730d2727d91d8dcdf1465c7d299dee45"
+    - "0xc2476883d28d40b6c057f242fce2e8bda674faa0"
+
+outputs:
+  patch_json: mvp/diagnostics/run004_patch_h167_v2_only_10k_fixed_horizon_gas_adjusted.json
+  all_dataset_csv: mvp/diagnostics/run004_h167_v2_only_all_fixed_horizon_gas_adjusted_dataset.csv
+  clean_alpha_dataset_csv: mvp/diagnostics/run004_h167_v2_only_clean_alpha_dataset.csv
+  risk_bad_pool_dataset_csv: mvp/diagnostics/run004_h167_v2_only_risk_bad_pool_dataset.csv
+  checkpoint_report_json: mvp/diagnostics/run004_h167_v2_only_checkpoint_report.json
+  dataset_quality_report_json: mvp/diagnostics/run004_h167_v2_only_dataset_quality_report.json
+  return_accounting_report_json: mvp/diagnostics/run004_h167_v2_only_return_accounting_report.json
+  risk_severity_report_json: mvp/diagnostics/run004_h167_v2_only_risk_severity_report.json
+  markdown: mvp/runs/run-004-patch-h167-v2-only-10k-fixed-horizon-gas-adjusted.md
+
+safety:
+  diagnostics_only: true
+  no_training: true
+  no_production_retrain: true
+  no_promote: true
+  no_live: true
+  no_v3_mainline: true
+  no_mixed_v2_v3_resume: true
+  no_production_model_write: true
+  no_active_model_overwrite: true
+  not_full_strategy_backtest: true

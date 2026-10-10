@@ -1,0 +1,56 @@
+{
+  "historical_label": "DIAGNOSTIC_REPLAY",
+  "inherits_v0_oos": false,
+  "primary_arm": "LARGE_BUY_ABSORPTION",
+  "best_arm_by_scheduled_incremental": "LARGE_BUY_ABSORPTION",
+  "primary_scheduled_verdict": "SCHEDULED_EDGE_UNCONFIRMED",
+  "primary_paired": {
+    "n_days": 38,
+    "sum_delta": 0.11176135607393439,
+    "mean_daily_delta": 0.0029410883177351157,
+    "bootstrap_day": {
+      "mean": 0.10954932403559386,
+      "p05": -0.12822337434074288,
+      "frac_positive": 0.745,
+      "n_clusters": 38
+    },
+    "bootstrap_token": {
+      "mean": 0.1125896770213042,
+      "p05": -0.07740906427817787,
+      "frac_positive": 0.81,
+      "n_clusters": 345
+    },
+    "p05_day": -0.12822337434074288,
+    "p05_token": -0.07740906427817787,
+    "passes": false
+  },
+  "target_verdict": "TARGET_NO_GO",
+  "deploy_allowed": false,
+  "generated_at": "2026-07-21T07:21:45Z",
+  "arms_brief": {
+    "POOL_ONLY": {
+      "scheduled_verdict": "BASELINE",
+      "n_fills": 153,
+      "cum_withdrawn_usd": 404.782557732519,
+      "unconstrained_diag": 51.73247282798967
+    },
+    "LARGE_BUY_ONLY": {
+      "scheduled_verdict": "SCHEDULED_EDGE_UNCONFIRMED",
+      "n_fills": 385,
+      "cum_withdrawn_usd": 437.3297946803752,
+      "unconstrained_diag": 87.99494884148744
+    },
+    "ABSORPTION_ONLY": {
+      "scheduled_verdict": "SCHEDULED_EDGE_NEGATIVE",
+      "n_fills": 386,
+      "cum_withdrawn_usd": 371.1724643180041,
+      "unconstrained_diag": 217.7028798449806
+    },
+    "LARGE_BUY_ABSORPTION": {
+      "scheduled_verdict": "SCHEDULED_EDGE_UNCONFIRMED",
+      "n_fills": 384,
+      "cum_withdrawn_usd": 740.0666259543277,
+      "unconstrained_diag": 65.88527253601077
+    }
+  }
+}

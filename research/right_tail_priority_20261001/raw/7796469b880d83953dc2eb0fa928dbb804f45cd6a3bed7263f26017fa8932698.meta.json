@@ -1,0 +1,16 @@
+{
+  "body_sha256": "aebd8b3ab7bf2852fcae98595551dfa6e13ce8081d13761734cac04488c555ef",
+  "bytes": 46,
+  "finished": "2026-10-01T07:26:15.886489+00:00",
+  "http_status": 200,
+  "key": "7796469b880d83953dc2eb0fa928dbb804f45cd6a3bed7263f26017fa8932698",
+  "label": "bsc_head",
+  "payload": {
+    "id": 1,
+    "jsonrpc": "2.0",
+    "method": "eth_blockNumber",
+    "params": []
+  },
+  "started": "2026-10-01T07:26:15.724890+00:00",
+  "url": "https://bsc-rpc.publicnode.com"
+}

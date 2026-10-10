@@ -1,0 +1,138 @@
+{
+  "task": "MATCHED_INCREMENTAL",
+  "generated_at": "2026-07-21T08:19:30Z",
+  "universe_n": 516742,
+  "att_lba_vs_nonlba": {
+    "n_treat": 403062,
+    "n_control": 113680,
+    "n_pairs": 50000,
+    "n_unmatched": 4191,
+    "match_rate": 0.12405039423215287,
+    "att_mean_delta_weth": -0.00012172877283833392,
+    "att_sum_delta_weth": -6.086438641916696,
+    "bootstrap_token": {
+      "mean": -0.0011932549039800362,
+      "p05": -0.0014450867852800941,
+      "p50": -0.001195257292517086,
+      "p95": -0.0009522022738326058,
+      "frac_positive": 0.0,
+      "n_clusters": 697
+    },
+    "bootstrap_day": {
+      "mean": -0.0003014222249639411,
+      "p05": -0.0006004696657249251,
+      "p50": -0.0002958862404777658,
+      "p95": -3.872356177159397e-05,
+      "frac_positive": 0.025,
+      "n_clusters": 95
+    },
+    "permutation_p_one_sided": 1.0,
+    "passes_token_p05": false,
+    "passes_day_p05": false,
+    "balance_smd": {
+      "size": 0.009941498435148983,
+      "depth": 0.08903053140948704,
+      "mom": -0.014844790291431568
+    }
+  },
+  "att_large_buy_only": {
+    "n_treat": 516742,
+    "n_control": 0,
+    "n_pairs": 0,
+    "n_unmatched": 516742,
+    "match_rate": 0.0,
+    "att_mean_delta_weth": 0.0,
+    "att_sum_delta_weth": 0.0,
+    "bootstrap_token": {
+      "mean": 0.0,
+      "p05": 0.0,
+      "frac_positive": 0.0,
+      "n_clusters": 0
+    },
+    "bootstrap_day": {
+      "mean": 0.0,
+      "p05": 0.0,
+      "frac_positive": 0.0,
+      "n_clusters": 0
+    },
+    "permutation_p_one_sided": 1.0,
+    "passes_token_p05": false,
+    "passes_day_p05": false,
+    "balance_smd": {
+      "size": null,
+      "depth": null,
+      "mom": null
+    }
+  },
+  "att_absorption_only": {
+    "n_treat": 403062,
+    "n_control": 113680,
+    "n_pairs": 50000,
+    "n_unmatched": 4114,
+    "match_rate": 0.12405039423215287,
+    "att_mean_delta_weth": -0.00014248826936200963,
+    "att_sum_delta_weth": -7.124413468100482,
+    "bootstrap_token": {
+      "mean": -0.001093960744261747,
+      "p05": -0.0012955865891376831,
+      "p50": -0.0010938139362608981,
+      "p95": -0.0008660536671892468,
+      "frac_positive": 0.0,
+      "n_clusters": 711
+    },
+    "bootstrap_day": {
+      "mean": -0.00044707440099091126,
+      "p05": -0.0009200287459228583,
+      "p50": -0.00043854363365218693,
+      "p95": 2.0606541640058575e-05,
+      "frac_positive": 0.06,
+      "n_clusters": 97
+    },
+    "permutation_p_one_sided": 1.0,
+    "passes_token_p05": false,
+    "passes_day_p05": false,
+    "balance_smd": {
+      "size": 0.015974955177552375,
+      "depth": 0.0924639767050077,
+      "mom": -0.015550417688677836
+    }
+  },
+  "att_absorption_within_large_buy": {
+    "n_treat": 403062,
+    "n_control": 113680,
+    "n_pairs": 50000,
+    "n_unmatched": 4151,
+    "match_rate": 0.12405039423215287,
+    "att_mean_delta_weth": -0.00010276792565053636,
+    "att_sum_delta_weth": -5.138396282526818,
+    "bootstrap_token": {
+      "mean": -0.0010270863839196122,
+      "p05": -0.0012471635097874507,
+      "p50": -0.0010263482286039251,
+      "p95": -0.0008023990088245574,
+      "frac_positive": 0.0,
+      "n_clusters": 721
+    },
+    "bootstrap_day": {
+      "mean": -0.00033788498542296403,
+      "p05": -0.0005813255263588082,
+      "p50": -0.00034151332333921705,
+      "p95": -6.926889739830518e-05,
+      "frac_positive": 0.015,
+      "n_clusters": 97
+    },
+    "permutation_p_one_sided": 1.0,
+    "passes_token_p05": false,
+    "passes_day_p05": false,
+    "balance_smd": {
+      "size": 0.010329499769487212,
+      "depth": 0.09065100202049617,
+      "mom": -0.01263468264505479
+    }
+  },
+  "verdicts": {
+    "SIGNAL_LEVEL_INCREMENTAL_RETURN": "REFUTED",
+    "WHALE_NOT_JUST_SIZE_DEPTH_PROXY": "REFUTED"
+  },
+  "interpretation": "Primary power test is ATT of LBA-eligible vs matched non-LBA buys on wallet_pnl_weth. Proxy check: absorption must still help inside the large-buy stratum."
+}

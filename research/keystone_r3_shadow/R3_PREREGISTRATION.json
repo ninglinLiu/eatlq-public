@@ -1,0 +1,83 @@
+{
+  "r3_version": "r3.0.0-shadow",
+  "status": "SUPERSEDED",
+  "superseded_by": "r3.0.1-shadow",
+  "supersession_reason": "R3_START_BLOCKED_HASH_AMBIGUITY and incomplete freeze; see /root/keystone_r3_shadow/r3.0.1/",
+  "created_utc": "2026-07-20T04:53:57Z",
+  "mode": "PROSPECTIVE_SHADOW",
+  "capital": 0,
+  "decision_impact": false,
+  "discovery_allowed": false,
+  "threshold_retune_allowed": false,
+  "feature_change_allowed": false,
+  "frozen_from": "r2.1.0",
+  "operational_scorer": {
+    "model_sha256_expected": "e1c68ae160004cd80711a7ae5461ee1d3d8e1f4359aebf1f890c25b74c277c5c",
+    "primary_threshold": 0.8624456161522396,
+    "features": [
+      "impact_residual",
+      "ineffective_buying",
+      "liq_fragility_score",
+      "part_exhaust_score",
+      "accel"
+    ]
+  },
+  "record_all_keystone_passes": true,
+  "must_write_before_outcome": [
+    "signal_id",
+    "block",
+    "t0",
+    "pool",
+    "keystone_pass",
+    "p_fatal",
+    "friction",
+    "f10_score",
+    "f10_pass",
+    "f10_fail",
+    "price_only_control_score",
+    "feature_snapshot_hash",
+    "expected_entry_tx_template",
+    "timestamp_written_utc",
+    "manifest_version"
+  ],
+  "primary_endpoints_preregistered": [
+    {
+      "id": "E1_CAPITAL_CONSTRAINED_PORTFOLIO_DELTA",
+      "desc": "KEYSTONE all-pass portfolio vs KEYSTONE+F10 q50 under real concurrency/balance/size/gas/retry"
+    },
+    {
+      "id": "E2_SELLABLE_ONLY_DIRECTIONAL",
+      "desc": "F10 pass vs matched F10 fail among sellable; match early_ret/age/liq/regime/time"
+    },
+    {
+      "id": "E3_FATAL_RATE",
+      "desc": "P(fatal|F10 pass) vs P(fatal|F10 fail) reported separately from directional EV"
+    }
+  ],
+  "monitoring_only_during_shadow": [
+    "write_completeness",
+    "simulator_health",
+    "risk_events",
+    "score_histogram",
+    "PSI",
+    "KS_distance",
+    "acceptance_rate",
+    "feature_missingness",
+    "feature_percentile_drift",
+    "p_fatal_drift"
+  ],
+  "forbidden_during_shadow": [
+    "peek_f10_pnl_delta_for_retune",
+    "change_q50",
+    "add_features",
+    "retrain_hgb",
+    "drop_losing_tokens"
+  ],
+  "sizing_grid_eth": [
+    0.005,
+    0.01,
+    0.0166666667,
+    0.0333333333
+  ],
+  "production_primary_eth_approx": 0.0166666667
+}

@@ -1,0 +1,162 @@
+{
+  "task": "RANKER_GBM",
+  "generated_at": "2026-07-21T08:20:56Z",
+  "features_used": [
+    "depth_score",
+    "depth_impact_25usd",
+    "depth_impact_100usd",
+    "depth_weth_to_move_1pct",
+    "pool_age_s",
+    "mom_from_open",
+    "rel_size",
+    "buy_intensity_30m",
+    "prior_30m_volume_weth",
+    "quote_weth",
+    "large_buy_score",
+    "pool_only_score"
+  ],
+  "feature_importance_proxy": {
+    "depth_score": 0.6126516464471404,
+    "depth_impact_25usd": 0.0,
+    "depth_impact_100usd": 0.0,
+    "depth_weth_to_move_1pct": 0.0,
+    "pool_age_s": 0.07712305025996534,
+    "mom_from_open": 0.11611785095320624,
+    "rel_size": 0.009098786828422877,
+    "buy_intensity_30m": 0.05415944540727903,
+    "prior_30m_volume_weth": 0.06672443674176777,
+    "quote_weth": 0.01386481802426343,
+    "large_buy_score": 0.0,
+    "pool_only_score": 0.05025996533795494
+  },
+  "top_k_intraday": 5,
+  "primary_capacity": {
+    "max_concurrent": 10,
+    "one_position_per_token": true,
+    "max_per_token": 1
+  },
+  "n_test_rows": 46865,
+  "policies": {
+    "HISTGBM_TOPK": {
+      "n_selected": 38,
+      "n_fills": 9,
+      "skip_rate": 0.7631578947368421,
+      "scheduled_trading_pnl_weth": 0.02874803267398819,
+      "cum_withdrawn_usd": 86.24409802196503
+    },
+    "RIDGE_TOPK": {
+      "n_selected": 38,
+      "n_fills": 16,
+      "skip_rate": 0.5789473684210527,
+      "scheduled_trading_pnl_weth": -0.024975502171917824,
+      "cum_withdrawn_usd": 0.0
+    },
+    "RANK_RANDOM": {
+      "n_selected": 38,
+      "n_fills": 22,
+      "skip_rate": 0.42105263157894735,
+      "scheduled_trading_pnl_weth": 0.00029689749673433765,
+      "cum_withdrawn_usd": 30.38945887899408
+    },
+    "RANK_BY_SIZE": {
+      "n_selected": 38,
+      "n_fills": 27,
+      "skip_rate": 0.2894736842105263,
+      "scheduled_trading_pnl_weth": 0.0030222978453837597,
+      "cum_withdrawn_usd": 74.66409941843905
+    },
+    "RANK_BY_LBA_SCORE": {
+      "n_selected": 38,
+      "n_fills": 25,
+      "skip_rate": 0.34210526315789475,
+      "scheduled_trading_pnl_weth": -0.012930651417435176,
+      "cum_withdrawn_usd": 0.0
+    }
+  },
+  "paired_test": {
+    "vs_random": {
+      "n_days": 8,
+      "sum_delta": 0.028451135177253853,
+      "mean_daily_delta": 0.0035563918971567316,
+      "bootstrap_day": {
+        "mean": 0.02643639861911656,
+        "p05": -0.0061558443161302484,
+        "frac_positive": 0.835,
+        "n_clusters": 8
+      },
+      "p05_day": -0.0061558443161302484,
+      "p05_token": -0.007326381432176003,
+      "passes": false
+    },
+    "vs_size": {
+      "n_days": 8,
+      "sum_delta": 0.025725734828604428,
+      "mean_daily_delta": 0.0032157168535755535,
+      "bootstrap_day": {
+        "mean": 0.02965204228423424,
+        "p05": -0.020862378996442953,
+        "frac_positive": 0.755,
+        "n_clusters": 8
+      },
+      "p05_day": -0.020862378996442953,
+      "p05_token": -0.017228602640621097,
+      "passes": false
+    },
+    "vs_ridge": {
+      "n_days": 8,
+      "sum_delta": 0.053723534845906015,
+      "mean_daily_delta": 0.006715441855738252,
+      "bootstrap_day": {
+        "mean": 0.057679359135245176,
+        "p05": 0.012338388490567873,
+        "frac_positive": 1.0,
+        "n_clusters": 8
+      },
+      "p05_day": 0.012338388490567873,
+      "p05_token": 0.026091614930371994,
+      "passes": true
+    },
+    "vs_lba_score": {
+      "n_days": 8,
+      "sum_delta": 0.041678684091423376,
+      "mean_daily_delta": 0.005209835511427922,
+      "bootstrap_day": {
+        "mean": 0.04197197662570078,
+        "p05": 0.0036706779211183966,
+        "frac_positive": 0.955,
+        "n_clusters": 8
+      },
+      "p05_day": 0.0036706779211183966,
+      "p05_token": 0.0011287252768825812,
+      "passes": true
+    }
+  },
+  "sealed": {
+    "n_sealed": 52791,
+    "available": true,
+    "gbm_sched_weth": 0.024312978968796528,
+    "gbm_cum_usd": 72.93893690639025,
+    "size_sched_weth": 0.04381455310555579,
+    "size_cum_usd": 131.4436593166688,
+    "paired_vs_size": {
+      "n_days": 18,
+      "sum_delta": -0.019501574136759257,
+      "mean_daily_delta": -0.0010834207853755143,
+      "bootstrap_token": {
+        "mean": -0.019321286737126818,
+        "p05": -0.07686388413172952,
+        "frac_positive": 0.24,
+        "n_clusters": 52
+      },
+      "p05_day": -0.07792952784830579,
+      "p05_token": -0.07686388413172952,
+      "passes": false
+    },
+    "beats_size": false
+  },
+  "verdicts": {
+    "RANKER_BEATS_SIZE": "UNCONFIRMED",
+    "RANKER_BEATS_RANDOM": "UNCONFIRMED"
+  },
+  "note": "PIT features only. SEALED looked only after TEST fit for replication check."
+}

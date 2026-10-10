@@ -1,0 +1,35 @@
+{
+  "strategy_id": "F04_XS_LEADER_TO_SECOND",
+  "family": "F04",
+  "name": "Leader to second-tier rotation",
+  "parameter_search_space": {
+    "cohort_min_pools": [
+      10,
+      20
+    ],
+    "hold_h": [
+      1,
+      2,
+      4
+    ],
+    "rel_vol_min": [
+      1.0,
+      1.5
+    ],
+    "stop_ret": [
+      0.15,
+      0.25
+    ],
+    "tp_ret": [
+      0.1,
+      0.2
+    ]
+  },
+  "param_combo_count": 48,
+  "access_flags": {
+    "database_access_enabled": false,
+    "rpc_access_enabled": false,
+    "large_file_access_enabled": false,
+    "backtest_enabled": false
+  }
+}

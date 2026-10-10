@@ -1,0 +1,100 @@
+{
+  "built_at_utc": "2026-10-07T09:41:40Z",
+  "note": "Raw API responses live in /root/midnight-research and were not modified. This manifest hashes them and the tables derived here.",
+  "files": [
+    {
+      "path": "/root/midnight-research/raw/markets_base_all.json",
+      "bytes": 1482030,
+      "sha256": "f9a59a02252b6859d00651a5964c06c492c935773fc80ad7aa5421ade5034f4e"
+    },
+    {
+      "path": "/root/midnight-research/raw/markets_eth_all.json",
+      "bytes": 1349491,
+      "sha256": "cdcd12c05bf7678276e6f41e97854df023f66ecb725f0d59d0cc6c321a4d5cce"
+    },
+    {
+      "path": "/root/midnight-research/raw/cands_alldebt_base.json",
+      "bytes": 155792,
+      "sha256": "a403e8055249ee2b7441cc9e37061fac14a30bfce0ffe08be8faa171e39e10f3"
+    },
+    {
+      "path": "/root/midnight-research/raw/cands_liq_base.json",
+      "bytes": 17109,
+      "sha256": "87465c64ca7301a5a1b04489dec63475732c2badef71b4e26d1b9f81dabc4d08"
+    },
+    {
+      "path": "/root/midnight-research/raw/liq_scan_base_summary.json",
+      "bytes": 7950,
+      "sha256": "036c769d7d625bbf4beb09b8685f22be4e435eae978f50a35d1516f9f6f0168c"
+    },
+    {
+      "path": "/root/midnight-research/data/base_liquidations_flat.json",
+      "bytes": 587903,
+      "sha256": "522e6da00ddff00721432caa29b3942612486ac3a493a3a3c6c89b8773aa871a"
+    },
+    {
+      "path": "/root/midnight-research/data/oct30_collateral_balances.json",
+      "bytes": 8053,
+      "sha256": "cb4a3a1e031161b6cb707a681aa69a8a84085146d5238699c4645ae36bda1196"
+    },
+    {
+      "path": "/root/midnight-research/raw/books_base.json",
+      "bytes": 278326,
+      "sha256": "8bdab0447f8d25b16f8d4d0def1878d379ba4612da137f4b765dff47e6fee34a"
+    },
+    {
+      "path": "/root/midnight-research/raw/deployment_blocks.json",
+      "bytes": 617,
+      "sha256": "0afe0543180ced15d85d239565ef96270f55f117cbd4a796bfa3051892d85a53"
+    },
+    {
+      "path": "/root/midnight_research/data/base_liquidations.csv",
+      "bytes": 312033,
+      "sha256": "43e736f0a07b303f243fc0742b3a227fab4a82256d7f72f5d9d62adc6712932f"
+    },
+    {
+      "path": "/root/midnight_research/data/liquidation_windows.csv",
+      "bytes": 54517,
+      "sha256": "259f2f0e5c1f98931ddd3e3000e84700ea2f564cadeacfc834e62e868b85cc66"
+    },
+    {
+      "path": "/root/midnight_research/data/total_units_vs_debt.csv",
+      "bytes": 7518,
+      "sha256": "7c0bb9a1bced1c6b1d63745fc501f1dc5927fb08d0c1c7cbc254db0ee67e0883"
+    },
+    {
+      "path": "/root/midnight_research/data/oct30_positions.csv",
+      "bytes": 1485,
+      "sha256": "a837104586727322423b3c235a93da13a5a080a8fcc0a2cc4c456ca2ed9cac5a"
+    },
+    {
+      "path": "/root/midnight_research/data/capital_scenarios.csv",
+      "bytes": 2116,
+      "sha256": "7f09577424848eed3e76945479b4bb18c044968aff0197e26a9509a28531498d"
+    },
+    {
+      "path": "/root/midnight_research/data/summary.json",
+      "bytes": 1002,
+      "sha256": "5c4badc9e1651217829639023cc2369ee8776c0830d35a3d96aac5d1682bc0ee"
+    },
+    {
+      "path": "/root/midnight_research/data/receipt_usdc_nets.json",
+      "bytes": 949,
+      "sha256": "cb1737fd4cf2a1bde75abfbef8b4848f61420de14d638a77b454afb32cf47b5b"
+    }
+  ],
+  "coverage": {
+    "chains_queried": [
+      "8453 base full market list and liquidation scan",
+      "1 ethereum market list and debt census; liquidation scan incomplete",
+      "5042 arc and 4663 robinhood current candidate sample only"
+    ],
+    "base_markets": 1095,
+    "base_liquidation_scan": "1095/1095 HTTP 200 at 2026-10-07 08:10 UTC. One market kept only the newest 100 events (7.73 USDC repaid in that page). Older pages of that market are a count gap, not the dollar concentration.",
+    "base_liquidation_time": "2026-07-09T17:14:25Z to 2026-09-25T22:07:21Z indexed events. Deployment block 48286884 is 2026-07-06 18:38:35 UTC. The three days before the first indexed liquidation are not proven empty by logs; eth_getLogs on the public Base endpoint returned 413.",
+    "ethereum_liquidation_scan": "474/981 requests returned 429. Those markets are unknown, not zero.",
+    "quotes": "Base books snapshot 2026-10-07 08:07 UTC, 267 books, complete for that endpoint. No historical offer tape. Ethereum books pagination stopped at 600 by a script cap and is unused.",
+    "total_units_check": "Onchain at Base block 52288300 (2026-10-07 09:39:07 UTC): one market's totalUnits - withdrawable equalled the summed API debt. The other 27 positive gaps were not read onchain.",
+    "receipt_redecode": "2026-10-07: five tx receipts via eth_getTransactionReceipt on https://mainnet.base.org. Surplus is the USDC net of the transaction sender, except the cbBTC swap where it is the net of the executor contract."
+  }
+}

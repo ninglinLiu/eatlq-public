@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "frozen_before_seconds_replay": true,
+  "research_only": true,
+  "seed": 20260715,
+  "universe": {
+    "keystone_primary": "frozen B8/B5 116 selected pools inside the 431 W1-W3 opportunities",
+    "unconditional_baseline": "all frozen B8/B5 431 W1-W3 opportunities",
+    "b4_health_census": "all fresh Base V3 rows in base_pool_universe_b3 joined to base_pool_2min_snapshot_b3",
+    "b3": "frozen 64 B3 opportunities; 17 real-signal and 47 proxy-only/overlap rows remain descriptive"
+  },
+  "clocks": {
+    "feature_horizon": "KEYSTONE entry_block remains the causal t0+10m decision point",
+    "entry_execution_offsets_blocks": [1, 3, 5, 10, 15],
+    "exit_execution_offsets_blocks": [1, 3, 5, 10, 15],
+    "block_seconds_nominal": 2,
+    "primary_frontiers": {
+      "entry": "vary entry offset while exit offset is +1 block",
+      "exit": "vary exit offset while entry offset is +1 block",
+      "matrix": "report every 5x5 entry/exit offset combination"
+    }
+  },
+  "execution_estimator": {
+    "notional_weth_wei": "1000000000000000",
+    "entry": "pinned AtomicRoundTrip buy leg; buy failure means no fill and flat zero, with no fictitious loss or gas",
+    "exit_evidence_priority": [
+      "decoded real sell at scheduled block or the immediately following block with token amount at least the counterfactual position",
+      "exact-size QuoterV2 token-to-WETH amount guarded by a successful same-block AtomicRoundTrip sell path",
+      "first later recovery on the frozen offset grid, charging one gas leg for every failed exit attempt",
+      "minus one only for independently confirmed, non-recovering LP or transfer-restriction rug",
+      "otherwise unresolved"
+    ],
+    "real_fill_window_blocks": 1,
+    "gas_usd_per_attempted_leg": 0.075,
+    "eth_usd_source": "frozen B3 daily ETH close",
+    "unknown_policy": "UNRESOLVED; never minus one"
+  },
+  "rug_adjudication": {
+    "evidence": ["real_trades", "atomic_sellability", "pool_weth_depth", "pool_and_weth_logs_plus_receipt_trace", "token_transfer_control_and_recovery"],
+    "classes": ["CONFIRMED_LP_RUG", "TRANSFER_RESTRICTION_RUG", "TEMPORARY_UNSELLABLE", "LIQUIDITY_IMPAIRMENT", "UNRESOLVED"],
+    "minus_one_allowed": "only CONFIRMED_LP_RUG or TRANSFER_RESTRICTION_RUG with no recovery through the fixed observation cutoff"
+  },
+  "b4_health_times": {
+    "pool_age_minutes": [2, 5, 10],
+    "severe_roundtrip_recovery_lte": 0.1,
+    "quoter_reasonable_recovery_gte": 0.9,
+    "temporary": "pathology at 2m and healthy by 5m or 10m",
+    "persistent": "pathology remains at 10m; not automatically called rug"
+  },
+  "weather_gate": {
+    "input": "corrected B6 causal trailing-7d honeypot proxy; W labels forbidden",
+    "calibration_end_exclusive": "2026-04-15T00:00:00Z",
+    "threshold": "35th percentile, linear, of eligible calibration days",
+    "minimum_proxy_n": 20,
+    "missing": "closed",
+    "comparison": "10000 random OOS calendar-day gates with identical open-day count"
+  },
+  "right_tail": {
+    "apply_independently_to_every_entry_exit_cell": true,
+    "powered_n_min": 20,
+    "pooled_mean_gt_0": true,
+    "pooled_top1_removed_mean_gt_0": true,
+    "every_powered_rolling_14d_step_7d_mean_floor": -0.1,
+    "minimum_powered_regimes_with_positive_mean_and_positive_alpha": 2,
+    "mc_paths": 10000,
+    "mc_terminal_p5_gt_R": 100,
+    "mc_mdd_p95_le_R": 20,
+    "heldout_oos_mean_gt_0": true,
+    "primary_unresolved_must_equal": 0,
+    "priority": "n<20 is untested/inconclusive, never FAIL; tested false is FAIL; unresolved is INCONCLUSIVE"
+  },
+  "keystone_three_state": {
+    "alive_pending_real_latency": "all tested exit-frontier points PASS",
+    "latency_sensitive_pending_real_latency": "at least one tested exit-frontier point PASS and at least one later point FAIL or INCONCLUSIVE",
+    "dead": "no tested exit-frontier point PASS"
+  },
+  "forbidden": [
+    "sendTransaction", "sendRawTransaction", "signing", "broadcast", "private key or SEND variables",
+    "live configuration changes", "starting or stopping executor/strategy/services", "GO decision",
+    "QuoterV2 without an independent sell-path guard as realized return", "missing evidence coerced to minus one"
+  ]
+}

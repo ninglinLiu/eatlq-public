@@ -1,0 +1,9 @@
+[project]
+name = "launchpad-intelligence-base-node"
+version = "0.1.0"
+description = "Local authoritative baseline for Base production-safe Launchpad Intelligence node"
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.unittest]
+# stdlib unittest only; no pytest dependency

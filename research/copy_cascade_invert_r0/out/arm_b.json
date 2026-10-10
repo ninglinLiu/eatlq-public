@@ -1,0 +1,23 @@
+{
+  "W_new_sec": 86400,
+  "arm": "B_NEW_COHORT",
+  "dt_sec": 300,
+  "first_seen_status": "FIRST_SEEN_WALLET_AGE_DAYS",
+  "gates": {
+    "first_seen_usable": true,
+    "k_not_lowered": true,
+    "mean_gt_0": true,
+    "permute_weaker": false,
+    "top1_removed_gt_0": true
+  },
+  "generated_at": "2026-09-17T06:25:00+00:00",
+  "k_min": 3,
+  "mean": 1.2068945705338476,
+  "median": 0.0005331210339396542,
+  "n_signals": 192,
+  "note": "Cohort sync \u2260 single-wallet follow. Missing first_seen is INCONCLUSIVE, not a k cut.",
+  "passed": false,
+  "permute_mean": 1.4149897550265382,
+  "permute_n": 146,
+  "top1_removed_mean": 1.0424957264696697
+}

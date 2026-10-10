@@ -1,0 +1,127 @@
+{
+  "created_utc": "2026-07-20T07:24:58Z",
+  "role": "Base Greenfield V1.1 Execution Truth Audit",
+  "verdict": "MIXED_FAILURE",
+  "component_findings": [
+    "UNIVERSE_REGISTRY_CONTAMINATION_CONFIRMED",
+    "EXECUTION_PIPELINE_BUG_CONFIRMED"
+  ],
+  "kill_g2": false,
+  "keep_g2_discovery_lead": true,
+  "start_fresh_prospective_shadow": true,
+  "deploy_allowed": false,
+  "label": "HOLDOUT_MEASUREMENT_REPAIR_DIAGNOSTIC",
+  "canonical_summary": {
+    "n_holdout": 480,
+    "n_canonical_ok": 100,
+    "n_canonical_bad": 380,
+    "canonical_bad_rate": 0.7916666666666666,
+    "status_counts": {
+      "CANONICAL_INVALID_FEE": 244,
+      "CANONICAL_NO_POOL": 135,
+      "CANONICAL_OK": 100,
+      "CANONICAL_POOL_MISMATCH": 1
+    },
+    "fee_row_value_counts": {
+      "1": 193,
+      "100": 140,
+      "10000": 93,
+      "30": 36,
+      "5": 12,
+      "500": 3,
+      "2": 1,
+      "3": 1,
+      "4": 1
+    }
+  },
+  "legacy_holdout_artifact": {
+    "buy_ok": 9,
+    "buy_revert": 139,
+    "note": "V1 labeled many ENTRY failures as -100% returns; total_net_weth_pnl used sum(return)"
+  },
+  "corrected_p1": {
+    "policy": "P1_G2_COMPETING",
+    "label": "HOLDOUT_MEASUREMENT_REPAIR_DIAGNOSTIC",
+    "model_selected": 122,
+    "preflight_pass": 8,
+    "buy_filled": 8,
+    "exit_success": 6,
+    "entry_revert": 0,
+    "entry_preflight_reject": 114,
+    "fatal_position": 2,
+    "fill_rate": 0.06557377049180328,
+    "pnl_per_selected": -9.792210627549043e-05,
+    "pnl_per_filled": -0.001493312120701229,
+    "total_pnl_weth": -0.011946496965609833,
+    "sum_return_for_reference": -114.6326156508845,
+    "wallet_return": -0.023892993931219797,
+    "wallet_final_weth": 0.4880535030343901,
+    "wallet_total_pnl_weth": -0.011946496965609898,
+    "max_drawdown": -0.03727939703247651,
+    "capital_hours": 8.166666666666666,
+    "canonical_ok_among_selected": 8,
+    "canonical_bad_among_selected": 114
+  },
+  "corrected_p0": {
+    "policy": "P0_C3_MOMENTUM",
+    "label": "HOLDOUT_MEASUREMENT_REPAIR_DIAGNOSTIC",
+    "model_selected": 131,
+    "preflight_pass": 9,
+    "buy_filled": 9,
+    "exit_success": 7,
+    "entry_revert": 0,
+    "entry_preflight_reject": 122,
+    "fatal_position": 2,
+    "fill_rate": 0.06870229007633588,
+    "pnl_per_selected": -0.00010621764790408308,
+    "pnl_per_filled": -0.00154605687504832,
+    "total_pnl_weth": -0.013914511875434884,
+    "sum_return_for_reference": -122.73889654547399,
+    "wallet_return": -0.02782902375086993,
+    "wallet_final_weth": 0.48608548812456503,
+    "wallet_total_pnl_weth": -0.013914511875434965,
+    "max_drawdown": -0.03924741194230158,
+    "capital_hours": 9.166666666666666,
+    "canonical_ok_among_selected": 9,
+    "canonical_bad_among_selected": 122
+  },
+  "p1_filled_n": 8,
+  "p1_pnl_on_filled_weth": -0.011946496965609833,
+  "p1_preflight_reject_share_among_selected": 0.9344262295081968,
+  "rpc_a_calls": 204,
+  "rpc_b_available": false,
+  "manifest_path": "/root/base_greenfield_directional_v0/out_v1_1/EXECUTION_TRUTH_MANIFEST.json",
+  "notes": [
+    "Does not modify out/ or out_v1/",
+    "Does not change G2/C3/thresholds/TB_A",
+    "Not a new sealed holdout confirmation"
+  ],
+  "root_cause_attribution": {
+    "primary": "UNIVERSE_REGISTRY_CONTAMINATION",
+    "secondary": "EXECUTION_PIPELINE_BUG_V1_LABELING",
+    "evidence": {
+      "holdout_canonical_bad_rate": 0.7916666666666666,
+      "fee1_rows": 193,
+      "fee1_repair_to_100": 0,
+      "fee30_repair_to_3000": 0,
+      "canonical_ok_focus_buy_fill_rate": 1.0,
+      "v1_sum_return_p1_reference": -114.6326156508845,
+      "v1_1_wallet_pnl_p1_weth": -0.011946496965609898,
+      "note": "V1 HOLDOUT_FAIL_ALL (~-114 sum return) collapses to ~-0.012 WETH wallet delta after treating illegal/preflight as non-fills"
+    },
+    "ruled_out_or_weak": {
+      "buy_simulator_on_canonical_ok": "WEAKLY_RULED_OUT \u2014 21/21 canonical-OK focus routes BUY_TX_SUCCESS on archive eth_call+stateDiff",
+      "archive_rpc_state_override": "INCONCLUSIVE_NO_SECOND_RPC \u2014 single archive; local fork UNAVAILABLE_NO_ANVIL",
+      "g2_directional_failure": "INSUFFICIENT_FILLED_N \u2014 n_filled=8, slightly negative but dominated by contamination; not KILL_G2",
+      "real_entry_untradeability_on_canonical_ok": "NOT_CONFIRMED \u2014 fill rate ~100% among canonical-OK selected"
+    }
+  },
+  "disposition": {
+    "G2_status": "DISCOVERY_LEAD_RETAINED",
+    "action": "START_FRESH_PROSPECTIVE_SHADOW",
+    "deploy": false,
+    "kill_g2": false,
+    "reason": "HOLDOUT_FAIL_ALL explained primarily by registry fee contamination + V1 labeling buy failures as -100%; true filled sample too small/contaminated to confirm directional failure"
+  },
+  "updated_utc": "2026-07-20T07:25:36Z"
+}

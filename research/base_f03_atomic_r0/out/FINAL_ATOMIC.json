@@ -1,0 +1,74 @@
+{
+  "verdict": "TICK_NOT_ATOMIC",
+  "highest_status": "SHADOW_CANDIDATE",
+  "usd_capacity": "UNVERIFIED",
+  "deploy_allowed": false,
+  "calibration_smoke": "PASS",
+  "why_not_atomic_edge": "Labeled EV includes fatals as -100% and is negative. Filled mean is lottery-pulled; median is negative. Time holdout last 30% is worse. Automated mean-of-fills>0 rule is rejected.",
+  "primary_long_tick": {
+    "n_attempted": 289,
+    "n_unknown": 56,
+    "n_labeled": 233,
+    "n_filled": 212,
+    "n_fatal_sell": 21,
+    "n_entry_revert": 0,
+    "fill_rate": 0.7336,
+    "filled_mean_ret": 0.0447,
+    "filled_median_ret": -0.0581,
+    "filled_win": 0.3585,
+    "filled_mean_ret_without_abs_p99": -0.0008,
+    "labeled_mean_ret": -0.0495,
+    "labeled_median_ret": -0.0930,
+    "labeled_sum_pnl_weth": -0.1963,
+    "labeled_mean_pnl_usd_at_3000": -2.53,
+    "tick_mean_on_same_set": 0.00222,
+    "qv2_mean_on_filled": 0.0449,
+    "corr_tick_atomic_filled": 0.891
+  },
+  "holdout_last_30pct_time": {
+    "n": 83,
+    "n_labeled": 60,
+    "n_filled": 47,
+    "filled_mean_ret": -0.2111,
+    "filled_median_ret": -0.2266,
+    "labeled_mean_ret": -0.3820,
+    "labeled_sum_pnl_weth": -0.3846
+  },
+  "train_first_70pct_time": {
+    "n_labeled": 173,
+    "labeled_mean_ret": 0.0659,
+    "labeled_sum_pnl_weth": 0.1883
+  },
+  "monthly_labeled_mean_ret": {
+    "2026-06": 0.0217,
+    "2026-07": -0.0586,
+    "2026-08": -0.3085
+  },
+  "secondary_short_via": {
+    "n": 60,
+    "n_labeled": 33,
+    "n_filled": 22,
+    "n_entry_revert": 10,
+    "n_unknown": 27,
+    "labeled_mean_ret": -0.0405
+  },
+  "shadow": {
+    "n_frozen": 4,
+    "n_executable": 1,
+    "executable": {
+      "pair": "WETH/TSLA",
+      "map": "SHORT_TICK_VIA_ALT",
+      "atomic": "DETERMINISTIC_REVERT",
+      "ret": -1.0002,
+      "qv2_ret": 0.6294,
+      "note": "Quoter said +63%; router sell reverted. This is why Quoter is comparison-only."
+    },
+    "not_executable": ["WETH/AERO HIGH", "USDC/AERO HIGH", "AERO/cbBTC HIGH"]
+  },
+  "paper_vs_executable": {
+    "paper_HIGH_n": 2357,
+    "executable_LONG_TICK_n": 289,
+    "paper_HIGH_weth_token0_n": 1263,
+    "note": "Buying alt on HIGH when WETH is token0 would fade the tick. Those 1263 were excluded by pre-registration."
+  }
+}

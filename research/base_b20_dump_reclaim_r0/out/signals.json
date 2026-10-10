@@ -1,0 +1,1211 @@
+{
+  "generated_at": "2026-08-19T09:05:29.269071+00:00",
+  "universe": {
+    "n_primary": 334,
+    "n_with_swaps": 260,
+    "n_minpre": 95,
+    "n_dump": 3,
+    "n_arm_a": 1,
+    "n_arm_b": 26
+  },
+  "arm_a": [
+    {
+      "pool": "0xf79478d5a6bae4546f7e489e80b2fc690b558944",
+      "token": "0xb2000000000000000000004c27f6523082f41d01",
+      "sym": "Basecat",
+      "fee": 10000,
+      "orient": -1,
+      "created_block": 50019381,
+      "t0_block": 50019387,
+      "t0_ts": 1786828121,
+      "ns_pre": 87,
+      "early_ret": -0.4142792863808508,
+      "recover_ret": 0.06059697020197818,
+      "entry_block": 50019975,
+      "entry_tick": 150991,
+      "exit_block": 50021363,
+      "exit_why": "trail",
+      "exit_tick": 150839
+    }
+  ],
+  "arm_b": [
+    {
+      "pool": "0x4358cf85e5c52fd97efb9a438f5e28d35ccf8923",
+      "token": "0xb2000000000000000000004c2ffbdd1b50277a79",
+      "sym": "B20",
+      "fee": 10000,
+      "orient": -1,
+      "t0_block": 48379245,
+      "t0_ts": 1783547837,
+      "ns_pre": 15,
+      "early_ret": 0.42357882141184744,
+      "entry_block": 48379672,
+      "entry_tick": 222575,
+      "exit_block": 48379845,
+      "exit_why": "stop",
+      "exit_tick": 228102
+    },
+    {
+      "pool": "0xe5aed661f83ebaabd492f3752b65752aaa6f5deb",
+      "token": "0xb2000000000000000000007bf6d5cbb0e24cb301",
+      "sym": "BRIAN",
+      "fee": 10000,
+      "orient": -1,
+      "t0_block": 48682076,
+      "t0_ts": 1784153499,
+      "ns_pre": 57,
+      "early_ret": 0.09509524531696575,
+      "entry_block": 48682380,
+      "entry_tick": 142544,
+      "exit_block": 48682686,
+      "exit_why": "trail",
+      "exit_tick": 144430
+    },
+    {
+      "pool": "0xedfeda1e3139751cc6303e98791ca0e3faed5a12",
+      "token": "0xb2000000000000000000003b3f31bb7379ad6d5d",
+      "sym": "TORRO",
+      "fee": 10000,
+      "orient": -1,
+      "t0_block": 48742860,
+      "t0_ts": 1784275067,
+      "ns_pre": 165,
+      "early_ret": 0.5441727918138041,
+      "entry_block": 48743171,
+      "entry_tick": 193048,
+      "exit_block": 48743331,
+      "exit_why": "trail",
+      "exit_tick": 194886
+    },
+    {
+      "pool": "0x74ba4fd9cb77b843f5c5e5fa51e8ad95f8fa4b01",
+      "token": "0xb2000000000000000000003bec97f0a85f002701",
+      "sym": "BALLSACK",
+      "fee": 10000,
+      "orient": -1,
+      "t0_block": 50094858,
+      "t0_ts": 1786979063,
+      "ns_pre": 14,
+      "early_ret": 0.15769211552560988,
+      "entry_block": 50095167,
+      "entry_tick": 175355,
+      "exit_block": 50095970,
+      "exit_why": "trail",
+      "exit_tick": 177248
+    },
+    {
+      "pool": "0x63052e5f4108ebcf15a1bf9ad28237c9fd7ccbf0",
+      "token": "0xb20000000000000000000041609c7dd34ecbb316",
+      "sym": "Beryl",
+      "fee": 3000,
+      "orient": -1,
+      "t0_block": 48379233,
+      "t0_ts": 1783547813,
+      "ns_pre": 20,
+      "early_ret": -0.04909754516364898,
+      "entry_block": 48379614,
+      "entry_tick": 181051,
+      "exit_block": 48379726,
+      "exit_why": "hold_end",
+      "exit_tick": 181214
+    },
+    {
+      "pool": "0xde873807149fe4ca6810510b8592e35a0908a99f",
+      "token": "0xb200000000000000000000ba0daa8fa295baf226",
+      "sym": "Beryl",
+      "fee": 3000,
+      "orient": -1,
+      "t0_block": 48379232,
+      "t0_ts": 1783547811,
+      "ns_pre": 18,
+      "early_ret": -0.31648417605488605,
+      "entry_block": 48379551,
+      "entry_tick": 178722,
+      "exit_block": 48381072,
+      "exit_why": "hold_end",
+      "exit_tick": 180762
+    },
+    {
+      "pool": "0x057b6950ed9df792ccdb180079d23e9b5cfd4be1",
+      "token": "0xb200000000000000000000156237a114f008092c",
+      "sym": "BERYL",
+      "fee": 10000,
+      "orient": -1,
+      "t0_block": 48379239,
+      "t0_ts": 1783547825,
+      "ns_pre": 60,
+      "early_ret": 1.1184440787279306,
+      "entry_block": 48379555,
+      "entry_tick": 188130,
+      "exit_block": 48379682,
+      "exit_why": "trail",
+      "exit_tick": 179044
+    },
+    {
+      "pool": "0xc921f8b1f654b7d67fd366839a7985e41c914d28",
+      "token": "0xb200000000000000000000390e33a58e4f08976b",
+      "sym": "COMB20",
+      "fee": 10000,
+      "orient": -1,
+      "t0_block": 48673432,
+      "t0_ts": 1784136211,
+      "ns_pre": 98,
+      "early_ret": 1.2235388240782261,
+      "entry_block": 48673736,
+      "entry_tick": 183939,
+      "exit_block": 48673823,
+      "exit_why": "hold_end",
+      "exit_tick": 182116
+    },
+    {
+      "pool": "0xf79478d5a6bae4546f7e489e80b2fc690b558944",
+      "token": "0xb2000000000000000000004c27f6523082f41d01",
+      "sym": "Basecat",
+      "fee": 10000,
+      "orient": -1,
+      "t0_block": 50019387,
+      "t0_ts": 1786828121,
+      "ns_pre": 87,
+      "early_ret": -0.4142792863808508,
+      "entry_block": 50019694,
+      "entry_tick": 155699,
+      "exit_block": 50019974,
+      "exit_why": "trail",
+      "exit_tick": 155970
+    },
+    {
+      "pool": "0x78e35b347c01440b2ac64c25d1e66b8370fdeb34",
+      "token": "0xb2000000000000000000005fc44dd0b43e3c7413",
+      "sym": "LUNMIR",
+      "fee": 100,
+      "orient": -1,
+      "t0_block": 48767283,
+      "t0_ts": 1784323913,
+      "ns_pre": 14,
+      "early_ret": 0.0186990650623266,
+      "entry_block": 48770587,
+      "entry_tick": 249199,
+      "exit_block": 48770587,
+      "exit_why": "no_fwd",
+      "exit_tick": 248512
+    },
+    {
+      "pool": "0x5cb8a5cb13bad78248ac889688c47efbd0bdd016",
+      "token": "0xb200000000000000000000ba1de61c04524eba1d",
+      "sym": "BALD",
+      "fee": 100,
+      "orient": -1,
+      "t0_block": 48379233,
+      "t0_ts": 1783547813,
+      "ns_pre": 226,
+      "early_ret": 1.1221438937402626,
+      "entry_block": 48379556,
+      "entry_tick": 117972,
+      "exit_block": 48380141,
+      "exit_why": "trail",
+      "exit_tick": 121139
+    },
+    {
+      "pool": "0x1df108835fc0138f2ea0867e9e38a1dac137d8fa",
+      "token": "0xb200000000000000000000bf0548ab2ebd00ba5e",
+      "sym": "RWAGMI",
+      "fee": 10000,
+      "orient": -1,
+      "t0_block": 48380987,
+      "t0_ts": 1783551321,
+      "ns_pre": 12,
+      "early_ret": 0.3819809012731958,
+      "entry_block": 48381662,
+      "entry_tick": 142799,
+      "exit_block": 48381720,
+      "exit_why": "trail",
+      "exit_tick": 142105
+    },
+    {
+      "pool": "0xe4b8d9361843547d26f0e5892cc3428f96ec196b",
+      "token": "0xb200000000000000000000d2ee8fd810961d33e5",
+      "sym": "COMB20",
+      "fee": 10000,
+      "orient": -1,
+      "t0_block": 48646084,
+      "t0_ts": 1784081515,
+      "ns_pre": 40,
+      "early_ret": 0.9335533231116638,
+      "entry_block": 48646387,
+      "entry_tick": 185864,
+      "exit_block": 48646544,
+      "exit_why": "hold_end",
+      "exit_tick": 183258
+    },
+    {
+      "pool": "0x22377339ec1a7a6b61f751a84ecc1ded288a160d",
+      "token": "0xb200000000000000000000289914488470f54529",
+      "sym": "SYNC",
+      "fee": 10000,
+      "orient": -1,
+      "t0_block": 48380340,
+      "t0_ts": 1783550027,
+      "ns_pre": 176,
+      "early_ret": 1.1564421788545836,
+      "entry_block": 48380640,
+      "entry_tick": 111995,
+      "exit_block": 48380935,
+      "exit_why": "trail",
+      "exit_tick": 111943
+    },
+    {
+      "pool": "0xabba802c41e1efd3816a7121a82b1024ff444eda",
+      "token": "0xb20000000000000000000046f646ed05de8eb108",
+      "sym": "cc0ded",
+      "fee": 10000,
+      "orient": -1,
+      "t0_block": 48773139,
+      "t0_ts": 1784335625,
+      "ns_pre": 18,
+      "early_ret": 0.028598570095323034,
+      "entry_block": 48773729,
+      "entry_tick": 248594,
+      "exit_block": 48774496,
+      "exit_why": "hold_end",
+      "exit_tick": 249164
+    },
+    {
+      "pool": "0x835ec1f5035d139f9626a3f3bd93471c021f00d0",
+      "token": "0xb2000000000000000000003def83e24a9a000b20",
+      "sym": "B20",
+      "fee": 10000,
+      "orient": -1,
+      "t0_block": 48386564,
+      "t0_ts": 1783562475,
+      "ns_pre": 18,
+      "early_ret": -0.02719864009065687,
+      "entry_block": 48386868,
+      "entry_tick": 134506,
+      "exit_block": 48387170,
+      "exit_why": "trail",
+      "exit_tick": 131808
+    },
+    {
+      "pool": "0xd58133778eb8ef5ddaff96919ac16b54f91859f6",
+      "token": "0xb2000000000000000000006cbac07c401c3571fc",
+      "sym": "EGG",
+      "fee": 10000,
+      "orient": -1,
+      "t0_block": 48645021,
+      "t0_ts": 1784079389,
+      "ns_pre": 37,
+      "early_ret": 0.59227038697412,
+      "entry_block": 48645322,
+      "entry_tick": 190132,
+      "exit_block": 48645323,
+      "exit_why": "hold_end",
+      "exit_tick": 189425
+    },
+    {
+      "pool": "0x1226b64c3208a225befcf7401f484db423e30b32",
+      "token": "0xb2000000000000000000006e0e6e501b04522c9d",
+      "sym": "BDOG",
+      "fee": 10000,
+      "orient": -1,
+      "t0_block": 48379252,
+      "t0_ts": 1783547851,
+      "ns_pre": 5,
+      "early_ret": 0.007399630024664002,
+      "entry_block": 48379704,
+      "entry_tick": 181393,
+      "exit_block": 48379978,
+      "exit_why": "hold_end",
+      "exit_tick": 184165
+    },
+    {
+      "pool": "0x0e57202817fe38703b16faf032af715584034e89",
+      "token": "0xb200000000000000000000af39cc4694703c3e6a",
+      "sym": "BASED",
+      "fee": 10000,
+      "orient": -1,
+      "t0_block": 48379248,
+      "t0_ts": 1783547843,
+      "ns_pre": 5,
+      "early_ret": 0.0037998100126652983,
+      "entry_block": 48379658,
+      "entry_tick": 179750,
+      "exit_block": 48381328,
+      "exit_why": "hold_end",
+      "exit_tick": 178163
+    },
+    {
+      "pool": "0xd67f52155a3e5f6bb3a8523a90173042dfbf0163",
+      "token": "0xb200000000000000000000c72d867a69b435fb7a",
+      "sym": "BBRETT",
+      "fee": 10000,
+      "orient": -1,
+      "t0_block": 48386847,
+      "t0_ts": 1783563041,
+      "ns_pre": 90,
+      "early_ret": 1.3669316545561745,
+      "entry_block": 48387154,
+      "entry_tick": 116569,
+      "exit_block": 48387521,
+      "exit_why": "trail",
+      "exit_tick": 114658
+    },
+    {
+      "pool": "0x25d39972f8f6fcbd9ce99fc851905c97daf69db5",
+      "token": "0xb200000000000000000000f514dcf6446b4a2dbf",
+      "sym": "0XB20",
+      "fee": 10000,
+      "orient": -1,
+      "t0_block": 48384030,
+      "t0_ts": 1783557407,
+      "ns_pre": 24,
+      "early_ret": 0.22218889074058665,
+      "entry_block": 48384427,
+      "entry_tick": 128686,
+      "exit_block": 48384835,
+      "exit_why": "trail",
+      "exit_tick": 128144
+    },
+    {
+      "pool": "0x73963eaf68620b51890fa4ff0d89f7c38db7364b",
+      "token": "0xb200000000000000000000fbd30b2373cc610e17",
+      "sym": "HOLDFI",
+      "fee": 10000,
+      "orient": -1,
+      "t0_block": 48379413,
+      "t0_ts": 1783548173,
+      "ns_pre": 333,
+      "early_ret": -2.1024948770079095,
+      "entry_block": 48379741,
+      "entry_tick": 148195,
+      "exit_block": 48380029,
+      "exit_why": "trail",
+      "exit_tick": 151025
+    },
+    {
+      "pool": "0xe673c448e931c7a1129fafd2d52015e3f2972722",
+      "token": "0xb200000000000000000000747a76cc3f248a9999",
+      "sym": "TSG",
+      "fee": 10000,
+      "orient": -1,
+      "t0_block": 48750724,
+      "t0_ts": 1784290795,
+      "ns_pre": 21,
+      "early_ret": 1.08294585360961,
+      "entry_block": 48751049,
+      "entry_tick": 191054,
+      "exit_block": 48751301,
+      "exit_why": "trail",
+      "exit_tick": 192516
+    },
+    {
+      "pool": "0xac0d190a65e758c19b0e024c0e332ff5876822a6",
+      "token": "0xb200000000000000000000874d7deac259dc223f",
+      "sym": "B20",
+      "fee": 10000,
+      "orient": -1,
+      "t0_block": 48379242,
+      "t0_ts": 1783547831,
+      "ns_pre": 27,
+      "early_ret": 0.12409379541362198,
+      "entry_block": 48379550,
+      "entry_tick": 228948,
+      "exit_block": 48380035,
+      "exit_why": "hold_end",
+      "exit_tick": 229990
+    },
+    {
+      "pool": "0x59876b57ef59e2317d145181d4ca330f93d39bb4",
+      "token": "0xb200000000000000000000bcc2b2e3bb7527ba87",
+      "sym": "\u79c3\u5934\u7537",
+      "fee": 10000,
+      "orient": -1,
+      "t0_block": 48730048,
+      "t0_ts": 1784249443,
+      "ns_pre": 7,
+      "early_ret": 0.09129543530430045,
+      "entry_block": 48731488,
+      "entry_tick": 202860,
+      "exit_block": 48731967,
+      "exit_why": "hold_end",
+      "exit_tick": 203422
+    },
+    {
+      "pool": "0xd83e3021a782b02ddbf0de263228817ea1426928",
+      "token": "0xb200000000000000000000e4a38b449b393a6f31",
+      "sym": "FBM",
+      "fee": 3000,
+      "orient": -1,
+      "t0_block": 48379232,
+      "t0_ts": 1783547811,
+      "ns_pre": 5,
+      "early_ret": 0.12459377041528846,
+      "entry_block": 48379901,
+      "entry_tick": 275105,
+      "exit_block": 48380100,
+      "exit_why": "hold_end",
+      "exit_tick": 275181
+    }
+  ],
+  "minpre": [
+    {
+      "pool": "0x4358cf85e5c52fd97efb9a438f5e28d35ccf8923",
+      "token": "0xb2000000000000000000004c2ffbdd1b50277a79",
+      "sym": "B20",
+      "early_ret": 0.42357882141184744,
+      "ns_pre": 15,
+      "t0_block": 48379245
+    },
+    {
+      "pool": "0x9766f0037b14ecc3d34267fa05b57916a9f8ff1a",
+      "token": "0xb20000000000000000000062597400b682e90ec0",
+      "sym": "Coinbase690",
+      "early_ret": 0.00019999000066659464,
+      "ns_pre": 6,
+      "t0_block": 48729491
+    },
+    {
+      "pool": "0xe5aed661f83ebaabd492f3752b65752aaa6f5deb",
+      "token": "0xb2000000000000000000007bf6d5cbb0e24cb301",
+      "sym": "BRIAN",
+      "early_ret": 0.09509524531696575,
+      "ns_pre": 57,
+      "t0_block": 48682076
+    },
+    {
+      "pool": "0x1229a634a8d1db086a176d77772ebe766033dc8b",
+      "token": "0xb200000000000000000000aa983c4fc453acaecb",
+      "sym": "EGG",
+      "early_ret": 0.6685665722284259,
+      "ns_pre": 27,
+      "t0_block": 48730088
+    },
+    {
+      "pool": "0xc585355bdb6269b634aae9e82397d6c4c545baa6",
+      "token": "0xb20000000000000000000006a05e4829aac453e7",
+      "sym": "MYRAD",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48753253
+    },
+    {
+      "pool": "0xedfeda1e3139751cc6303e98791ca0e3faed5a12",
+      "token": "0xb2000000000000000000003b3f31bb7379ad6d5d",
+      "sym": "TORRO",
+      "early_ret": 0.5441727918138041,
+      "ns_pre": 165,
+      "t0_block": 48742860
+    },
+    {
+      "pool": "0x74ba4fd9cb77b843f5c5e5fa51e8ad95f8fa4b01",
+      "token": "0xb2000000000000000000003bec97f0a85f002701",
+      "sym": "BALLSACK",
+      "early_ret": 0.15769211552560988,
+      "ns_pre": 14,
+      "t0_block": 50094858
+    },
+    {
+      "pool": "0x63052e5f4108ebcf15a1bf9ad28237c9fd7ccbf0",
+      "token": "0xb20000000000000000000041609c7dd34ecbb316",
+      "sym": "Beryl",
+      "early_ret": -0.04909754516364898,
+      "ns_pre": 20,
+      "t0_block": 48379233
+    },
+    {
+      "pool": "0x4dbcd0518ff04ed82571eb5be8caef54e8542294",
+      "token": "0xb2000000000000000000008423c84c93437bf9ba",
+      "sym": "0xB20\u57fa\u7840",
+      "early_ret": 0.5767711619224589,
+      "ns_pre": 19,
+      "t0_block": 48414788
+    },
+    {
+      "pool": "0xde873807149fe4ca6810510b8592e35a0908a99f",
+      "token": "0xb200000000000000000000ba0daa8fa295baf226",
+      "sym": "Beryl",
+      "early_ret": -0.31648417605488605,
+      "ns_pre": 18,
+      "t0_block": 48379232
+    },
+    {
+      "pool": "0x723340a05bacd77a193bfb0e1a6ffd6ae9c66e7c",
+      "token": "0xb200000000000000000000db7b833951a0dea42e",
+      "sym": "TEE",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48760040
+    },
+    {
+      "pool": "0x057b6950ed9df792ccdb180079d23e9b5cfd4be1",
+      "token": "0xb200000000000000000000156237a114f008092c",
+      "sym": "BERYL",
+      "early_ret": 1.1184440787279306,
+      "ns_pre": 60,
+      "t0_block": 48379239
+    },
+    {
+      "pool": "0x5843cadafeb83a7ef25f829bdd46bf9adf5ad750",
+      "token": "0xb2000000000000000000001f7143a06e7dea7eb1",
+      "sym": "TSG",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48751047
+    },
+    {
+      "pool": "0xc921f8b1f654b7d67fd366839a7985e41c914d28",
+      "token": "0xb200000000000000000000390e33a58e4f08976b",
+      "sym": "COMB20",
+      "early_ret": 1.2235388240782261,
+      "ns_pre": 98,
+      "t0_block": 48673432
+    },
+    {
+      "pool": "0x560036f4ceb8ae94224ef5388f9ba7661a64f6d6",
+      "token": "0xb20000000000000000000041ef2d73c379009999",
+      "sym": "TORRO",
+      "early_ret": 0.21758912072525496,
+      "ns_pre": 5,
+      "t0_block": 48752292
+    },
+    {
+      "pool": "0xf79478d5a6bae4546f7e489e80b2fc690b558944",
+      "token": "0xb2000000000000000000004c27f6523082f41d01",
+      "sym": "Basecat",
+      "early_ret": -0.4142792863808508,
+      "ns_pre": 87,
+      "t0_block": 50019387
+    },
+    {
+      "pool": "0xc22c1cdbc7a24cd1dbbe408451c07447ecd9c9cf",
+      "token": "0xb200000000000000000000510dbcfaa27531c8d9",
+      "sym": "TURB20",
+      "early_ret": 0.8143592827143734,
+      "ns_pre": 40,
+      "t0_block": 48643582
+    },
+    {
+      "pool": "0x78e35b347c01440b2ac64c25d1e66b8370fdeb34",
+      "token": "0xb2000000000000000000005fc44dd0b43e3c7413",
+      "sym": "LUNMIR",
+      "early_ret": 0.0186990650623266,
+      "ns_pre": 14,
+      "t0_block": 48767283
+    },
+    {
+      "pool": "0xe08843644e9728b05f2a7545d2729f201de55b6e",
+      "token": "0xb200000000000000000000843efa45c10c6e9efe",
+      "sym": "TSG",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48751039
+    },
+    {
+      "pool": "0xe1bb074db6f57bcc3afbf125f230665d9de67017",
+      "token": "0xb200000000000000000000972a238e9b7b294b05",
+      "sym": "SCLR",
+      "early_ret": 0.650767462169099,
+      "ns_pre": 39,
+      "t0_block": 48628243
+    },
+    {
+      "pool": "0x1f40fb43179ae28f64acbcbcb5b1290c93a0c2e0",
+      "token": "0xb2000000000000000000009a80ed6672ff482e18",
+      "sym": "BERYL",
+      "early_ret": 1.9474026314909654,
+      "ns_pre": 94,
+      "t0_block": 48379560
+    },
+    {
+      "pool": "0x4fd77f8567c25db2884c4467fdd1eefa73aae50f",
+      "token": "0xb200000000000000000000a1b9ef313b1725662e",
+      "sym": "FISH",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48751044
+    },
+    {
+      "pool": "0x3958ea80195a84366292c0290d815bd4bcc66066",
+      "token": "0xb200000000000000000000a21979366b2dedfce1",
+      "sym": "ETHETH",
+      "early_ret": -0.0007999600026663786,
+      "ns_pre": 6,
+      "t0_block": 48760047
+    },
+    {
+      "pool": "0x0a3f602aa304dfaab2a210bbc526fba5d93ab326",
+      "token": "0xb200000000000000000000b7f060a202dc3ca3a6",
+      "sym": "CASHCAT",
+      "early_ret": -0.1352932354509513,
+      "ns_pre": 40,
+      "t0_block": 48381293
+    },
+    {
+      "pool": "0x5cb8a5cb13bad78248ac889688c47efbd0bdd016",
+      "token": "0xb200000000000000000000ba1de61c04524eba1d",
+      "sym": "BALD",
+      "early_ret": 1.1221438937402626,
+      "ns_pre": 226,
+      "t0_block": 48379233
+    },
+    {
+      "pool": "0x1df108835fc0138f2ea0867e9e38a1dac137d8fa",
+      "token": "0xb200000000000000000000bf0548ab2ebd00ba5e",
+      "sym": "RWAGMI",
+      "early_ret": 0.3819809012731958,
+      "ns_pre": 12,
+      "t0_block": 48380987
+    },
+    {
+      "pool": "0x0e88cd86a7e8810b7cdfc5b30d08872ae7083824",
+      "token": "0xb200000000000000000000c4376053bc88486ba9",
+      "sym": "GS",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48760037
+    },
+    {
+      "pool": "0xe4b8d9361843547d26f0e5892cc3428f96ec196b",
+      "token": "0xb200000000000000000000d2ee8fd810961d33e5",
+      "sym": "COMB20",
+      "early_ret": 0.9335533231116638,
+      "ns_pre": 40,
+      "t0_block": 48646084
+    },
+    {
+      "pool": "0xa170d7a97e7d4db5da3de57f694aae114b0666ed",
+      "token": "0xb200000000000000000000daa2f84a318400865d",
+      "sym": "JADU",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48760033
+    },
+    {
+      "pool": "0xd8e24f6166c8fa515fc40f32bb298fbbaddb5fcf",
+      "token": "0xb200000000000000000000fa50f814867c0eba7c",
+      "sym": "BITCOIN",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48763896
+    },
+    {
+      "pool": "0x344c37bc9f873ee3d9266da84f2870d684d81dd7",
+      "token": "0xb20000000000000000000027d2c515779c352671",
+      "sym": "4 ALL",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48761880
+    },
+    {
+      "pool": "0x22377339ec1a7a6b61f751a84ecc1ded288a160d",
+      "token": "0xb200000000000000000000289914488470f54529",
+      "sym": "SYNC",
+      "early_ret": 1.1564421788545836,
+      "ns_pre": 176,
+      "t0_block": 48380340
+    },
+    {
+      "pool": "0x22e6eac798f6fd7bf9cb718978032ee4a4f92937",
+      "token": "0xb20000000000000000000034aef31b5a52e1f9a4",
+      "sym": "Cake",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48763898
+    },
+    {
+      "pool": "0xabba802c41e1efd3816a7121a82b1024ff444eda",
+      "token": "0xb20000000000000000000046f646ed05de8eb108",
+      "sym": "cc0ded",
+      "early_ret": 0.028598570095323034,
+      "ns_pre": 18,
+      "t0_block": 48773139
+    },
+    {
+      "pool": "0xa8ae9a39308c365d7ce73215fa6f2e69b12f40ca",
+      "token": "0xb20000000000000000000056f21b251743afc532",
+      "sym": "BULLISH",
+      "early_ret": -0.0006999650023330813,
+      "ns_pre": 6,
+      "t0_block": 48763408
+    },
+    {
+      "pool": "0x152b3a7672f4156024cb351074ebd32673f8eed9",
+      "token": "0xb200000000000000000000594b4d70e0fdef8a57",
+      "sym": "PUNKSTRONG",
+      "early_ret": 0.03869806512898606,
+      "ns_pre": 8,
+      "t0_block": 48776343
+    },
+    {
+      "pool": "0x4278f6c3813c6565c4d7b5343247f919c1872695",
+      "token": "0xb200000000000000000000726799ac62b800c139",
+      "sym": "DOGUE",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48757097
+    },
+    {
+      "pool": "0xbdbe9e9500f18dca004f32c59138b0f0433640c4",
+      "token": "0xb20000000000000000000077609ddd116feda09e",
+      "sym": "tBTC",
+      "early_ret": -0.000999950003332973,
+      "ns_pre": 6,
+      "t0_block": 48761893
+    },
+    {
+      "pool": "0xefc8652e30983cf55be9a4367db60614e5f7a6af",
+      "token": "0xb20000000000000000000098bb155af3fbd2f18a",
+      "sym": "CADC",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48763895
+    },
+    {
+      "pool": "0xc8f715bc1ac876965595b95c0872d44e5038e30f",
+      "token": "0xb200000000000000000000a535375204c086218a",
+      "sym": "COINBASE",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48761881
+    },
+    {
+      "pool": "0x4de0e2deb222576cc2b40539a68d13abbd4e7f05",
+      "token": "0xb200000000000000000000d1b11e578211173807",
+      "sym": "BALAJIS",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48757997
+    },
+    {
+      "pool": "0xd319d75889fd412e9185d6368832b5b27a087934",
+      "token": "0xb200000000000000000000ed3866712989443ec9",
+      "sym": "POKEBALLS",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48751046
+    },
+    {
+      "pool": "0xcd5a1d8cfc3fb90a85587a2b8eefe238864c5ed0",
+      "token": "0xb200000000000000000000eeb137ec47a724943e",
+      "sym": "BLABS",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48763900
+    },
+    {
+      "pool": "0x8ce057a2c98b73a491aa2d07d5b92d587ea8c757",
+      "token": "0xb20000000000000000000007289499678a4594a8",
+      "sym": "Barmstrong",
+      "early_ret": -0.000999950003332973,
+      "ns_pre": 6,
+      "t0_block": 48751050
+    },
+    {
+      "pool": "0xaf363adc6eff8a5696788117ccd6a59a27bf4f5b",
+      "token": "0xb20000000000000000000012914c0f6efbee42a9",
+      "sym": "ORBIT",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48753261
+    },
+    {
+      "pool": "0xce83345a5bc2fbabc708537ecd441b4f710cccca",
+      "token": "0xb20000000000000000000020d28219e84f59cb35",
+      "sym": "EURC",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48760036
+    },
+    {
+      "pool": "0x12db8c5b170f5c8c042ce94a6010581ff001e5f7",
+      "token": "0xb200000000000000000000378d7120a2248bc79e",
+      "sym": "BRIAN",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48776340
+    },
+    {
+      "pool": "0xe0b5212503a58e181be25c50ee642523b445df19",
+      "token": "0xb2000000000000000000004106dae6f96e2c4063",
+      "sym": "BASE",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48763899
+    },
+    {
+      "pool": "0x02c773a868954df67686db7abfed47da025c8dfa",
+      "token": "0xb20000000000000000000043dd731a022b89feff",
+      "sym": "WOLF",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48763893
+    },
+    {
+      "pool": "0xd52b0eabd4e96d9310b538236bc7bf6a2735f948",
+      "token": "0xb200000000000000000000626bd364fc54447c7b",
+      "sym": "TIMMY",
+      "early_ret": 0.03639818012132023,
+      "ns_pre": 19,
+      "t0_block": 50138673
+    },
+    {
+      "pool": "0x07636656da36f49a0fe0151d06a8eda69a32cd92",
+      "token": "0xb20000000000000000000082fe938ce1577e0322",
+      "sym": "FRED",
+      "early_ret": -0.0,
+      "ns_pre": 9,
+      "t0_block": 48757999
+    },
+    {
+      "pool": "0xebd5ef400113e77ff556752b22816dc6140e64a8",
+      "token": "0xb200000000000000000000c6bf25d0253ca54742",
+      "sym": "BB20",
+      "early_ret": 0.0003999800013331893,
+      "ns_pre": 10,
+      "t0_block": 48428306
+    },
+    {
+      "pool": "0x09dbfc0f98f5f94782d0de57f57ba06c967b2086",
+      "token": "0xb200000000000000000000defde5a9b32947ea8c",
+      "sym": "CHOI",
+      "early_ret": 0.7591620425303932,
+      "ns_pre": 62,
+      "t0_block": 48729599
+    },
+    {
+      "pool": "0x9cb004d87c54e4c8cd17f0a04d5644bef29477b3",
+      "token": "0xb200000000000000000000e53d32e5cb2350e877",
+      "sym": "HODL",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48751043
+    },
+    {
+      "pool": "0x23eda49d816e9a8bd613b6f93434c7c05458b2a5",
+      "token": "0xb200000000000000000000f5a6f3fe61a389fd30",
+      "sym": "EE",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48760407
+    },
+    {
+      "pool": "0x6ecfb1dce9cd5bfa078cc9dd0ec941de7dee540d",
+      "token": "0xb2000000000000000000001d23238c7545e76ed4",
+      "sym": "BRIAN",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48776351
+    },
+    {
+      "pool": "0x835ec1f5035d139f9626a3f3bd93471c021f00d0",
+      "token": "0xb2000000000000000000003def83e24a9a000b20",
+      "sym": "B20",
+      "early_ret": -0.02719864009065687,
+      "ns_pre": 18,
+      "t0_block": 48386564
+    },
+    {
+      "pool": "0xd58133778eb8ef5ddaff96919ac16b54f91859f6",
+      "token": "0xb2000000000000000000006cbac07c401c3571fc",
+      "sym": "EGG",
+      "early_ret": 0.59227038697412,
+      "ns_pre": 37,
+      "t0_block": 48645021
+    },
+    {
+      "pool": "0x1226b64c3208a225befcf7401f484db423e30b32",
+      "token": "0xb2000000000000000000006e0e6e501b04522c9d",
+      "sym": "BDOG",
+      "early_ret": 0.007399630024664002,
+      "ns_pre": 5,
+      "t0_block": 48379252
+    },
+    {
+      "pool": "0x0d301ac05f19671321ff25acca1d02ae4c3016cd",
+      "token": "0xb2000000000000000000007fdf48eed2205fd38d",
+      "sym": "EXCHANCE",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48757094
+    },
+    {
+      "pool": "0x6feeb7429b87ee1107d8373c48e164b2b3057b2d",
+      "token": "0xb200000000000000000000a141d7cc4e70f6e16e",
+      "sym": "CB690",
+      "early_ret": 0.17699115058993625,
+      "ns_pre": 8,
+      "t0_block": 48729645
+    },
+    {
+      "pool": "0x0e57202817fe38703b16faf032af715584034e89",
+      "token": "0xb200000000000000000000af39cc4694703c3e6a",
+      "sym": "BASED",
+      "early_ret": 0.0037998100126652983,
+      "ns_pre": 5,
+      "t0_block": 48379248
+    },
+    {
+      "pool": "0x9b7ddc6809827981c00ffc36c6becaaf2be94d77",
+      "token": "0xb200000000000000000000b4a4834a745d88658a",
+      "sym": "SCLR",
+      "early_ret": 0.9203539830676686,
+      "ns_pre": 45,
+      "t0_block": 48674403
+    },
+    {
+      "pool": "0xd67f52155a3e5f6bb3a8523a90173042dfbf0163",
+      "token": "0xb200000000000000000000c72d867a69b435fb7a",
+      "sym": "BBRETT",
+      "early_ret": 1.3669316545561745,
+      "ns_pre": 90,
+      "t0_block": 48386847
+    },
+    {
+      "pool": "0x44160eae4092d4b53b98f821a5832ea87b1b7cec",
+      "token": "0xb200000000000000000000cd05d0b3c5f56bf606",
+      "sym": "CUINBASE",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48760034
+    },
+    {
+      "pool": "0x29d7c762f33d71c06258add54d9c7c40e2791a8e",
+      "token": "0xb200000000000000000000da9c153557aec72038",
+      "sym": "DOLLARCAT",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48760043
+    },
+    {
+      "pool": "0x25d39972f8f6fcbd9ce99fc851905c97daf69db5",
+      "token": "0xb200000000000000000000f514dcf6446b4a2dbf",
+      "sym": "0XB20",
+      "early_ret": 0.22218889074058665,
+      "ns_pre": 24,
+      "t0_block": 48384030
+    },
+    {
+      "pool": "0x73963eaf68620b51890fa4ff0d89f7c38db7364b",
+      "token": "0xb200000000000000000000fbd30b2373cc610e17",
+      "sym": "HOLDFI",
+      "early_ret": -2.1024948770079095,
+      "ns_pre": 333,
+      "t0_block": 48379413
+    },
+    {
+      "pool": "0xace8b43466c98158a404ba29dc5530744ce6378b",
+      "token": "0xb200000000000000000000fccbce860f0159993d",
+      "sym": "DIEM",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48763401
+    },
+    {
+      "pool": "0x0b1aa720e88bc0d1655d88724f8b2b9cd73a934d",
+      "token": "0xb200000000000000000000024edad8cb9fd403e6",
+      "sym": "BALAJI",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48760031
+    },
+    {
+      "pool": "0xdc5a9bf35de43b2988be3ae13767cff640b9b8d9",
+      "token": "0xb2000000000000000000001376a7951bd6211c5d",
+      "sym": "4441",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48776344
+    },
+    {
+      "pool": "0xffe9ae3b688a627811475adf9fd5770fc778b15b",
+      "token": "0xb200000000000000000000419976b28276032898",
+      "sym": "Satoshi",
+      "early_ret": -0.0,
+      "ns_pre": 5,
+      "t0_block": 48761888
+    },
+    {
+      "pool": "0xfe8dc9230f88aacd6416f277110a993b295072a9",
+      "token": "0xb2000000000000000000004a842a2a5ba2462f69",
+      "sym": "TENDIES",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48776350
+    },
+    {
+      "pool": "0x8284ef4b0fa79e639c64183736ab9a09313cb3ef",
+      "token": "0xb2000000000000000000004f44332f7a18e97e7d",
+      "sym": "EE",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48757098
+    },
+    {
+      "pool": "0x8fc2a94e8e8aff95224da88001f33427a633221e",
+      "token": "0xb200000000000000000000526486a129419a28f3",
+      "sym": "SCLR",
+      "early_ret": 0.7811609426037187,
+      "ns_pre": 43,
+      "t0_block": 48713920
+    },
+    {
+      "pool": "0x0369710c56b41255959baddb24a6a384fe29d9d4",
+      "token": "0xb2000000000000000000005eb37fad9c18c98e02",
+      "sym": "MORPHY",
+      "early_ret": 0.8454577278180289,
+      "ns_pre": 50,
+      "t0_block": 50116367
+    },
+    {
+      "pool": "0x9d87687a34323245c4e6b0406a002689ca63dd2b",
+      "token": "0xb2000000000000000000006532460ba387d47066",
+      "sym": "DOLLARCAT",
+      "early_ret": -0.0008999550029996758,
+      "ns_pre": 6,
+      "t0_block": 48763407
+    },
+    {
+      "pool": "0x809da758e5f0a90aa6eb6e20d3dffe35d581a317",
+      "token": "0xb2000000000000000000006d1b06d28443cea7ac",
+      "sym": "BASE",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48753263
+    },
+    {
+      "pool": "0xdaf3ea92844a82505b0573718562753cab5b6284",
+      "token": "0xb200000000000000000000713d32304a0ed384e1",
+      "sym": "SCLR",
+      "early_ret": 108.33908313610931,
+      "ns_pre": 33,
+      "t0_block": 48641792
+    },
+    {
+      "pool": "0xe673c448e931c7a1129fafd2d52015e3f2972722",
+      "token": "0xb200000000000000000000747a76cc3f248a9999",
+      "sym": "TSG",
+      "early_ret": 1.08294585360961,
+      "ns_pre": 21,
+      "t0_block": 48750724
+    },
+    {
+      "pool": "0xb5164517e4e7e063478c8a5bca6a2a1a9a0090a3",
+      "token": "0xb2000000000000000000007de92d1e0520046479",
+      "sym": "JOE",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48753260
+    },
+    {
+      "pool": "0x63c21b48c723ac2954862c9b6fda4916989b9bbc",
+      "token": "0xb2000000000000000000007f72121882464c7ae2",
+      "sym": "RWAGMI",
+      "early_ret": 0.047597620158649524,
+      "ns_pre": 6,
+      "t0_block": 48379233
+    },
+    {
+      "pool": "0xda3cfd6677fbf831a5e014633d9dfdb8941aef87",
+      "token": "0xb2000000000000000000007fe3b30c3b96d301c5",
+      "sym": "CTO",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48753258
+    },
+    {
+      "pool": "0xac0d190a65e758c19b0e024c0e332ff5876822a6",
+      "token": "0xb200000000000000000000874d7deac259dc223f",
+      "sym": "B20",
+      "early_ret": 0.12409379541362198,
+      "ns_pre": 27,
+      "t0_block": 48379242
+    },
+    {
+      "pool": "0xe4b24b9213ca76ea8f156bd73047f6d0349b615c",
+      "token": "0xb200000000000000000000aa5fb41a85ea4354fd",
+      "sym": "REGEN",
+      "early_ret": 0.7848607576160507,
+      "ns_pre": 36,
+      "t0_block": 48646887
+    },
+    {
+      "pool": "0x4c4d8bdb75b1a3dae2255dcb01e6458b08fe99a3",
+      "token": "0xb200000000000000000000b32dcb6f4eee2cc969",
+      "sym": "bruan",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48776347
+    },
+    {
+      "pool": "0xe8adb2eed84e9deee7d1643ec498c8a8cf5383c1",
+      "token": "0xb200000000000000000000ba710136ebc2c8f95c",
+      "sym": "AERO",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48760041
+    },
+    {
+      "pool": "0x59876b57ef59e2317d145181d4ca330f93d39bb4",
+      "token": "0xb200000000000000000000bcc2b2e3bb7527ba87",
+      "sym": "\u79c3\u5934\u7537",
+      "early_ret": 0.09129543530430045,
+      "ns_pre": 7,
+      "t0_block": 48730048
+    },
+    {
+      "pool": "0x92910db4e3116c9b4e85bd17a9b182eaee34ba12",
+      "token": "0xb200000000000000000000be88ebf9052e3f7861",
+      "sym": "PORT",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48753256
+    },
+    {
+      "pool": "0x857f92b7ee02dc27c810c3ea70bf82e72a2c2c95",
+      "token": "0xb200000000000000000000bf78942c24e8913fa1",
+      "sym": "BRIAN",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48761883
+    },
+    {
+      "pool": "0xadb05d0e68ce602fe1f3d1d2749c2f551adc7e8a",
+      "token": "0xb200000000000000000000c2017f41b7f1f713e1",
+      "sym": "BRIAN",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48776345
+    },
+    {
+      "pool": "0xf73426b33ead959c36a02d172190834d3f15b427",
+      "token": "0xb200000000000000000000cadbde723c988e31dd",
+      "sym": "ODY",
+      "early_ret": 1.5996200203317572,
+      "ns_pre": 74,
+      "t0_block": 49667808
+    },
+    {
+      "pool": "0x1112a38093bce3b524f6359e50888e63383fc91b",
+      "token": "0xb200000000000000000000d7c278c3f6c8df7a20",
+      "sym": "MORPHO",
+      "early_ret": -0.0010999450036662706,
+      "ns_pre": 6,
+      "t0_block": 48761893
+    },
+    {
+      "pool": "0xd83e3021a782b02ddbf0de263228817ea1426928",
+      "token": "0xb200000000000000000000e4a38b449b393a6f31",
+      "sym": "FBM",
+      "early_ret": 0.12459377041528846,
+      "ns_pre": 5,
+      "t0_block": 48379232
+    },
+    {
+      "pool": "0x678792d01ff4f48dc96be359ab32789fc9916e28",
+      "token": "0xb200000000000000000000f44553d635f8f1c8fb",
+      "sym": "JADU",
+      "early_ret": -0.0,
+      "ns_pre": 7,
+      "t0_block": 48753255
+    }
+  ]
+}

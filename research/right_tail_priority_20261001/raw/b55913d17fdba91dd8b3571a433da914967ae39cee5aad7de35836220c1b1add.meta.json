@@ -1,0 +1,23 @@
+{
+  "body_sha256": "95a9de46a0887757c00a678cc838d0eedd70e7e07cd397c1233db888666a2f38",
+  "bytes": 75,
+  "finished": "2026-10-01T13:21:50.796003+00:00",
+  "http_status": 200,
+  "key": "b55913d17fdba91dd8b3571a433da914967ae39cee5aad7de35836220c1b1add",
+  "label": "smartmoney_v2_factory_repair",
+  "payload": {
+    "id": 1,
+    "jsonrpc": "2.0",
+    "method": "eth_call",
+    "params": [
+      {
+        "data": "0xc45a0155",
+        "to": "0x04573631468b5cd09fcb397f165476f4075e01bb"
+      },
+      "0x313b715"
+    ]
+  },
+  "retry_after": null,
+  "started": "2026-10-01T13:21:50.686696+00:00",
+  "url": "https://mainnet.base.org"
+}

@@ -1,0 +1,35 @@
+{
+  "strategy_id": "F05_REG_BREADTH_EXPAND",
+  "family": "F05",
+  "name": "Active breadth expansion gate",
+  "parameter_search_space": {
+    "q": [
+      5,
+      10
+    ],
+    "D": [
+      7,
+      14
+    ],
+    "z_min": [
+      0.5,
+      1.0,
+      1.5
+    ],
+    "basket_k": [
+      5,
+      10
+    ],
+    "hold_h": [
+      1,
+      2
+    ]
+  },
+  "param_combo_count": 48,
+  "access_flags": {
+    "database_access_enabled": false,
+    "rpc_access_enabled": false,
+    "large_file_access_enabled": false,
+    "backtest_enabled": false
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "hypothesis_id": "H_PARTICIPANT",
+  "n_folds": 4,
+  "feature_cols": [
+    "buyers_pre",
+    "sellers_pre",
+    "senders_pre",
+    "part_concentration",
+    "buyer_growth",
+    "seller_growth",
+    "buyer_sender_ratio",
+    "age_s"
+  ],
+  "fold_stats": [
+    {
+      "fold": 1,
+      "n_test": 254,
+      "n_selected": 76,
+      "mean_utility": -0.23306428804572107,
+      "selected_pnl": -0.13735089283626123
+    },
+    {
+      "fold": 2,
+      "n_test": 255,
+      "n_selected": 77,
+      "mean_utility": -0.27089074030621896,
+      "selected_pnl": -0.3370538292333214
+    },
+    {
+      "fold": 3,
+      "n_test": 254,
+      "n_selected": 76,
+      "mean_utility": -0.21591038953501387,
+      "selected_pnl": -0.5449212292140284
+    },
+    {
+      "fold": 4,
+      "n_test": 254,
+      "n_selected": 76,
+      "mean_utility": -0.1864876213629793,
+      "selected_pnl": -0.35770124203674314
+    }
+  ],
+  "n_oof": 1017,
+  "n_selected": 305
+}

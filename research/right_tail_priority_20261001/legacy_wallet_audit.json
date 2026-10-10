@@ -1,0 +1,178 @@
+{
+  "conclusions": [
+    "deterministic transaction subsampling is not an inventory-complete trading history",
+    "zero oversell is insufficient: missing high-cost purchases can coexist with matched profitable sells",
+    "per-transaction balance delta equality does not validate cost basis or complete chronology",
+    "legacy raw-token aggregate totals mix assets; do not treat them as meaningful portfolio inventory units"
+  ],
+  "database_time_range": {
+    "end": "2026-05-24 11:14:23.000",
+    "start": "2026-05-23 22:25:03.000"
+  },
+  "eligible_audit": [
+    {
+      "additional_eoa_tx_from_confirmed": 18,
+      "additional_in_original_17_pool_universe": 18,
+      "additional_in_same_sampled_tokens": 18,
+      "additional_known_txs_not_sampled": 18,
+      "observed_wallet_table_txs": 21,
+      "old_matched_fifo_realized_weth": 0.122196267828462,
+      "oversell_raw": "0",
+      "qualification_status": "NOT_VERIFIED_FULL_INVENTORY",
+      "sampled_attribution_txs": 3,
+      "wallet": "0x44e5f8183162994e70f3d4a9235a8a1e2471b038"
+    },
+    {
+      "additional_eoa_tx_from_confirmed": 8,
+      "additional_in_original_17_pool_universe": 8,
+      "additional_in_same_sampled_tokens": 8,
+      "additional_known_txs_not_sampled": 8,
+      "observed_wallet_table_txs": 11,
+      "old_matched_fifo_realized_weth": 0.00814104614661866,
+      "oversell_raw": "1587848651696515872084066",
+      "qualification_status": "NOT_VERIFIED_FULL_INVENTORY",
+      "sampled_attribution_txs": 3,
+      "wallet": "0x47b19472132ab2bb31b10e749437473bbdc3979b"
+    },
+    {
+      "additional_eoa_tx_from_confirmed": 8,
+      "additional_in_original_17_pool_universe": 8,
+      "additional_in_same_sampled_tokens": 8,
+      "additional_known_txs_not_sampled": 8,
+      "observed_wallet_table_txs": 14,
+      "old_matched_fifo_realized_weth": 0.003768412904129932,
+      "oversell_raw": "0",
+      "qualification_status": "NOT_VERIFIED_FULL_INVENTORY",
+      "sampled_attribution_txs": 6,
+      "wallet": "0x5ccfc6e399003a8e2f68d9c7710f965b9cf67c6d"
+    },
+    {
+      "additional_eoa_tx_from_confirmed": 4,
+      "additional_in_original_17_pool_universe": 4,
+      "additional_in_same_sampled_tokens": 4,
+      "additional_known_txs_not_sampled": 4,
+      "observed_wallet_table_txs": 7,
+      "old_matched_fifo_realized_weth": 0.003205515736976091,
+      "oversell_raw": "1373648887137487492095832",
+      "qualification_status": "NOT_VERIFIED_FULL_INVENTORY",
+      "sampled_attribution_txs": 3,
+      "wallet": "0x875ab0ae8ba199549acc88dd24d4adc6b8a4aae1"
+    },
+    {
+      "additional_eoa_tx_from_confirmed": 4,
+      "additional_in_original_17_pool_universe": 4,
+      "additional_in_same_sampled_tokens": 4,
+      "additional_known_txs_not_sampled": 4,
+      "observed_wallet_table_txs": 7,
+      "old_matched_fifo_realized_weth": 0.08846785522261753,
+      "oversell_raw": "0",
+      "qualification_status": "NOT_VERIFIED_FULL_INVENTORY",
+      "sampled_attribution_txs": 3,
+      "wallet": "0xb32a88954e85ff3e0b7977c41847682970fc52d1"
+    }
+  ],
+  "golden_audit": [
+    {
+      "all_transaction_delta_checks_pass": true,
+      "first_observation_positive_inventory_tokens": 0,
+      "first_observations": [
+        {
+          "balance_after_raw": 1669959318169765813577722,
+          "balance_before_raw": 0,
+          "balance_delta_raw": 1669959318169765813577722,
+          "block_number": 46393747,
+          "integer_equal": true,
+          "receipt_transfer_net_raw": 1669959318169765813577722,
+          "token": "0x23fcefda11d1d785325beda44765472252b37b1d",
+          "tx_hash": "0x0ca088d1954fca24b0634e7f3dd5fc6ecab4c97ba9918d0c98f19104feae528f"
+        }
+      ],
+      "wallet": "0xb65cd501cf7ff6e95946b588639863018874f11c"
+    },
+    {
+      "all_transaction_delta_checks_pass": true,
+      "first_observation_positive_inventory_tokens": 0,
+      "first_observations": [
+        {
+          "balance_after_raw": 9204737736410675072803223,
+          "balance_before_raw": 0,
+          "balance_delta_raw": 9204737736410675072803223,
+          "block_number": 46393198,
+          "integer_equal": true,
+          "receipt_transfer_net_raw": 9204737736410675072803223,
+          "token": "0x23fcefda11d1d785325beda44765472252b37b1d",
+          "tx_hash": "0x3c4beb9ce97ec2a510754873295a5ee1ea2dd1d2faca0434691674a2c58ddbbd"
+        }
+      ],
+      "wallet": "0xda48a3d958227d4a055ed326e72d3c08737ba06b"
+    },
+    {
+      "all_transaction_delta_checks_pass": true,
+      "first_observation_positive_inventory_tokens": 1,
+      "first_observations": [
+        {
+          "balance_after_raw": 6226507102844235739685406,
+          "balance_before_raw": 2246833969062984757823420,
+          "balance_delta_raw": 3979673133781250981861986,
+          "block_number": 46401383,
+          "integer_equal": true,
+          "receipt_transfer_net_raw": 3979673133781250981861986,
+          "token": "0x23fcefda11d1d785325beda44765472252b37b1d",
+          "tx_hash": "0xc73d10d4853a76941a088adee3ca62207920328f4157b7e04dd3669f08ed6a6d"
+        }
+      ],
+      "wallet": "0x4090c904f4f099001bec54f48c26cf67a904b931"
+    },
+    {
+      "all_transaction_delta_checks_pass": true,
+      "first_observation_positive_inventory_tokens": 1,
+      "first_observations": [
+        {
+          "balance_after_raw": 6824784096706917748030282,
+          "balance_before_raw": 1312797117765157302851059,
+          "balance_delta_raw": 5511986978941760445179223,
+          "block_number": 46402079,
+          "integer_equal": true,
+          "receipt_transfer_net_raw": 5511986978941760445179223,
+          "token": "0x23fcefda11d1d785325beda44765472252b37b1d",
+          "tx_hash": "0x7af1c7936eab2cc57c922624d10819d01ff0e39c2c3afe9517bf284dab891777"
+        }
+      ],
+      "wallet": "0x54132bf6ca4e280d4b2e67741665bf57199a4ef9"
+    },
+    {
+      "all_transaction_delta_checks_pass": true,
+      "first_observation_positive_inventory_tokens": 1,
+      "first_observations": [
+        {
+          "balance_after_raw": 8807842406272759828442017,
+          "balance_before_raw": 8807892406272759828442017,
+          "balance_delta_raw": -50000000000000000000,
+          "block_number": 46390759,
+          "integer_equal": true,
+          "receipt_transfer_net_raw": -50000000000000000000,
+          "token": "0x24f1631cb35a5af57ab885bbb90c36b82da3ae09",
+          "tx_hash": "0x3735302cab49a5e8792c9f00af502ea4edf41e18de5ed21395222d54bf03691b"
+        }
+      ],
+      "wallet": "0xaad7419ae75d0e1a45d7fb7088adf7f938d755f6"
+    }
+  ],
+  "scope": {
+    "deterministic_attribution_sample": 1000,
+    "fifo_accounts": 539,
+    "fifo_events": 871,
+    "high_confidence_sample": 932,
+    "scope_warning": "qualification distribution is the preregistered deterministic B3 target-universe sample, not all Base swaps",
+    "target_universe_transactions": 4339
+  },
+  "source_hashes": {
+    "/opt/EATLQ/mvp/diagnostics/base_gl2_b_copy_forward_20260715.json": "6f4cc029e34caecb410c068cc89194d106ba38d7b32b1bd463e52375cdc9a2bd",
+    "/opt/EATLQ/mvp/diagnostics/base_gl2_b_stage1_distribution_20260715.json": "b80d466a71ea4ed1b9b4e4f59a56485e3b0e426fc0d503483e33bf6f315b8f7b",
+    "/root/copy_cascade_invert_r0/data/raw/golden/base_b3_entity_attribution_sample_v2_20260714.json": "94fe923402f2ed6e2e3ed6310e7d89149db32598f86efc037d6aeedd2946bdd3"
+  },
+  "window": {
+    "end_block": 46417105,
+    "start_block": 46389458
+  }
+}

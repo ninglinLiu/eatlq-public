@@ -1,0 +1,23 @@
+{
+  "alpha_id": "C01",
+  "family": "lifecycle",
+  "hypothesis": "young pools show faster activity decay",
+  "mechanism": "launch attention has a short half-life",
+  "venue": "Base V3",
+  "universe": "active observed pools",
+  "horizon": "24h",
+  "data_source": "creation block and activity age",
+  "experiment": "age survival curve",
+  "feature": "pool_age_hours",
+  "direction": -1,
+  "prediction_object": "future activity",
+  "falsifier": "creation timestamps are incomplete",
+  "status": "NOT_YET_TESTED",
+  "sample_size": 0,
+  "gross_result": "pending",
+  "cost_adjusted_result": "pending",
+  "capacity": "pending",
+  "concentration": "pending",
+  "tail_risk": "pending",
+  "next_action": "run rapid screen"
+}

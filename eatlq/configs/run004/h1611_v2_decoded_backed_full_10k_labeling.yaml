@@ -1,0 +1,101 @@
+input_paths:
+  expanded_candidate_csv: mvp/diagnostics/run004_h1610s_expanded_v2_decoded_backed_candidates.csv
+  h1610s_candidate_filter_waterfall_json: mvp/diagnostics/run004_h1610s_candidate_filter_waterfall.json
+  h1610s_sampler_strategy_comparison_json: mvp/diagnostics/run004_h1610s_sampler_strategy_comparison.json
+  h1610s_feature_coverage_precheck_report_json: mvp/diagnostics/run004_h1610s_feature_coverage_precheck_report.json
+  h1610s_pilot_report_json: mvp/diagnostics/run004_h1610s_pilot_report.json
+
+clickhouse:
+  url: http://clickhouse:8123
+  database: eatlq
+  docker_container: eatlq-clickhouse-1
+  query_timeout_sec: 240
+  decoded_sources:
+    v2_table: uniswap_v2_swaps_decoded
+    metadata_table: discovered_pools
+
+rpc:
+  env_vars:
+    - LABEL_RPC_URL
+    - EVM_HTTP_URL
+    - LIVE_BASE_RPC_URL
+  env_files:
+    - infra/compose/.env
+    - infra/compose/.env.example
+  timeout_sec: 60
+  max_retries: 6
+
+preflight:
+  min_candidates: 20000
+
+features:
+  include_source_event_in_features: true
+
+windows_sec:
+  - 60
+  - 180
+  - 300
+  - 900
+  - 1800
+
+labeling:
+  target_success_rows: 10000
+  max_attempts: 15000
+  batch_size: 250
+  workers: 8
+  fixed_horizon_sec: 1800
+  timeout_sec: 60
+  max_retries: 6
+  notional_wei: 500000000000000
+  round_trip_cost: 0.006
+  slippage_stress_bps: 100
+  rpc_env_vars:
+    - LABEL_RPC_URL
+    - EVM_HTTP_URL
+    - LIVE_BASE_RPC_URL
+  gas_price_gwei:
+    low: 0.01
+    medium: 0.03
+    high: 0.10
+  include_approval_gas: true
+  approval_gas_units: 50000
+  gas_units:
+    v2:
+      buy: 180000
+      sell: 160000
+
+risk_severity:
+  hard_exclude_abs_return: 0.20
+  repeated_pool_hour_cluster_threshold: 25
+  confirmed_bad_pools:
+    - "0x3e118916cd67cc9bfeb0fc44ae3dde8bc33c2d4a"
+  alpha_island_pools:
+    - "0x54219bce730d2727d91d8dcdf1465c7d299dee45"
+    - "0xc2476883d28d40b6c057f242fce2e8bda674faa0"
+
+outputs:
+  patch_json: mvp/diagnostics/run004_patch_h1611_v2_decoded_backed_full_10k_labeling.json
+  rpc_readiness_injection_report_json: mvp/diagnostics/run004_h1611_rpc_readiness_injection_report.json
+  preflight_report_json: mvp/diagnostics/run004_h1611_preflight_report.json
+  checkpoint_report_json: mvp/diagnostics/run004_h1611_checkpoint_report.json
+  all_dataset_csv: mvp/diagnostics/run004_h1611_all_v2_decoded_backed_10k_dataset.csv
+  clean_alpha_dataset_csv: mvp/diagnostics/run004_h1611_clean_alpha_v2_decoded_backed_10k_dataset.csv
+  risk_bad_pool_dataset_csv: mvp/diagnostics/run004_h1611_risk_bad_pool_v2_decoded_backed_10k_dataset.csv
+  buy_trigger_subset_csv: mvp/diagnostics/run004_h1611_buy_trigger_subset.csv
+  sell_trigger_subset_csv: mvp/diagnostics/run004_h1611_sell_trigger_subset.csv
+  feature_coverage_report_json: mvp/diagnostics/run004_h1611_feature_coverage_report.json
+  direction_split_report_json: mvp/diagnostics/run004_h1611_direction_split_report.json
+  risk_severity_report_json: mvp/diagnostics/run004_h1611_risk_severity_report.json
+  dataset_quality_report_json: mvp/diagnostics/run004_h1611_dataset_quality_report.json
+  markdown: mvp/runs/run-004-patch-h1611-v2-decoded-backed-full-10k-labeling.md
+
+safety:
+  diagnostics_only: true
+  no_training: true
+  no_production_retrain: true
+  no_promote: true
+  no_live: true
+  no_v3_artifact_changes: true
+  no_mixed_v2_v3_artifact_changes: true
+  no_production_model_write: true
+  no_active_model_overwrite: true

@@ -1,0 +1,293 @@
+{
+  "n": 12,
+  "rows": [
+    {
+      "adjacent_swap": null,
+      "decimals": {
+        "paired": 6,
+        "token": 18
+      },
+      "fee_mode": "DYNAMIC_FLAG",
+      "fee_raw": 8388608,
+      "liquidity": 1795125268484819020,
+      "pool_id": "0x588b0d575847946043b3e2c252c2778de2b892f453f796efb5e9457c4a8acf84",
+      "quote_method": "V4_QUOTER",
+      "quoter_or_proxy_amount_in": 250000000,
+      "quoter_or_proxy_amount_out": 716380832241260415581580174,
+      "slot0_sqrtPriceX96": 35398664311015649511,
+      "slot0_tick": -430600,
+      "token": "0x78d2e86d6beca0cf6792addb420f8b55ded1ab07",
+      "token_order": {
+        "currency0": "0x78d2e86d6beca0cf6792addb420f8b55ded1ab07",
+        "currency1": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "token_is_token0": true
+      }
+    },
+    {
+      "adjacent_swap": null,
+      "decimals": {
+        "paired": 18,
+        "token": 18
+      },
+      "fee_mode": "DYNAMIC_FLAG",
+      "fee_raw": 8388608,
+      "liquidity": 0,
+      "pool_id": "0x4e2608862bbd3f5f910624ef5b356d741a5be383a1109c79596fda408f9093c1",
+      "quote_method": "V4_QUOTER",
+      "quoter_or_proxy_amount_in": 135677846521220032,
+      "quoter_or_proxy_amount_out": 947851808484518639873433265,
+      "slot0_sqrtPriceX96": 7974470913604094264140738513890252,
+      "slot0_tick": 230400,
+      "token": "0x873462b68568efe776ad2d18bacbaecc11d74b07",
+      "token_order": {
+        "currency0": "0x4200000000000000000000000000000000000006",
+        "currency1": "0x873462b68568efe776ad2d18bacbaecc11d74b07",
+        "token_is_token0": false
+      }
+    },
+    {
+      "adjacent_swap": null,
+      "decimals": {
+        "paired": 6,
+        "token": 18
+      },
+      "fee_mode": "DYNAMIC_FLAG",
+      "fee_raw": 8388608,
+      "liquidity": null,
+      "pool_id": "0x08b460d4b5e5b9ecf27ec3d0fca86629bf8b15353342d935796d28dc8219d181",
+      "quote_method": "V4_QUOTER",
+      "quoter_or_proxy_amount_in": 250000000,
+      "quoter_or_proxy_amount_out": 716380832241260415581580174,
+      "slot0_sqrtPriceX96": null,
+      "slot0_tick": null,
+      "token": "0x6e73d4a7c9e3c87e7d5dc4f625f6228d17ee6b07",
+      "token_order": {
+        "currency0": "0x6e73d4a7c9e3c87e7d5dc4f625f6228d17ee6b07",
+        "currency1": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "token_is_token0": true
+      }
+    },
+    {
+      "adjacent_swap": null,
+      "decimals": {
+        "paired": 6,
+        "token": 18
+      },
+      "fee_mode": "DYNAMIC_FLAG",
+      "fee_raw": 8388608,
+      "liquidity": 1795125268484819020,
+      "pool_id": "0x3f782e091574ec7f5b4b8d7ddd3f0b953e1cda02bd0cb2b1bfd669326f0f0b8c",
+      "quote_method": "V4_QUOTER",
+      "quoter_or_proxy_amount_in": 250000000,
+      "quoter_or_proxy_amount_out": 716380832241260415581580174,
+      "slot0_sqrtPriceX96": 35398664311015649511,
+      "slot0_tick": -430600,
+      "token": "0x7bfffcc29b275cedfab8f52c477015f83f14bb07",
+      "token_order": {
+        "currency0": "0x7bfffcc29b275cedfab8f52c477015f83f14bb07",
+        "currency1": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "token_is_token0": true
+      }
+    },
+    {
+      "adjacent_swap": {
+        "amount0": -9880239520958084,
+        "amount1": 98996270339808831736620068,
+        "block_number": 48713597,
+        "fee": 10000,
+        "liquidity": 997519511065749950282714,
+        "log_index": 199,
+        "pm_sender": "0xd8ba9d1a99fc21f0eca24e9b85737c28a194a4e2",
+        "pool_id": "0xdac765e6067128f453bb7d8e6ad85bfae2eef344d881db3f775028ea009a732d",
+        "sqrt_price_x96": 7966608117430404743091470869846326,
+        "tick": 230380,
+        "transaction_hash": "0x79275506f574ac934df9777f7f5fe3d76731895746a265907ef99b5dc2404669"
+      },
+      "decimals": {
+        "paired": 18,
+        "token": 18
+      },
+      "fee_mode": "DYNAMIC_FLAG",
+      "fee_raw": 8388608,
+      "liquidity": 0,
+      "pool_id": "0xdac765e6067128f453bb7d8e6ad85bfae2eef344d881db3f775028ea009a732d",
+      "quote_method": "V4_QUOTER",
+      "quoter_or_proxy_amount_in": 135677846521220032,
+      "quoter_or_proxy_amount_out": 947851808484518639873433265,
+      "slot0_sqrtPriceX96": 7974470913604094264140738513890252,
+      "slot0_tick": 230400,
+      "token": "0x80b8991af0b05e6cadc29088ad920d0c09479b07",
+      "token_order": {
+        "currency0": "0x4200000000000000000000000000000000000006",
+        "currency1": "0x80b8991af0b05e6cadc29088ad920d0c09479b07",
+        "token_is_token0": false
+      }
+    },
+    {
+      "adjacent_swap": null,
+      "decimals": {
+        "paired": 6,
+        "token": 18
+      },
+      "fee_mode": "DYNAMIC_FLAG",
+      "fee_raw": 8388608,
+      "liquidity": 0,
+      "pool_id": "0xa3ed49574b0f864a3dc6077550cdf6c55cb31f06a180420de8bfdd73f822f247",
+      "quote_method": "V4_QUOTER",
+      "quoter_or_proxy_amount_in": 250000000,
+      "quoter_or_proxy_amount_out": 716380832241263374227179159,
+      "slot0_sqrtPriceX96": 177325948805173427482606446195952739416,
+      "slot0_tick": 430600,
+      "token": "0xf10dfa3d128c3039218eb725530cea47adc68b07",
+      "token_order": {
+        "currency0": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "currency1": "0xf10dfa3d128c3039218eb725530cea47adc68b07",
+        "token_is_token0": false
+      }
+    },
+    {
+      "adjacent_swap": null,
+      "decimals": {
+        "paired": 18,
+        "token": 18
+      },
+      "fee_mode": "DYNAMIC_FLAG",
+      "fee_raw": 8388608,
+      "liquidity": 0,
+      "pool_id": "0xb3ce18a0f878c6e4414bb786494fbbea14f1234aacf11103f51d6dd9d4b586af",
+      "quote_method": "V4_QUOTER",
+      "quoter_or_proxy_amount_in": 135677846521220032,
+      "quoter_or_proxy_amount_out": 946858602405235832737134338,
+      "slot0_sqrtPriceX96": 7974470913604094264140738513890252,
+      "slot0_tick": 230400,
+      "token": "0xaad7847f4bf8432423f297a95ae3d646fb264b07",
+      "token_order": {
+        "currency0": "0x4200000000000000000000000000000000000006",
+        "currency1": "0xaad7847f4bf8432423f297a95ae3d646fb264b07",
+        "token_is_token0": false
+      }
+    },
+    {
+      "adjacent_swap": null,
+      "decimals": {
+        "paired": 18,
+        "token": 18
+      },
+      "fee_mode": "DYNAMIC_FLAG",
+      "fee_raw": 8388608,
+      "liquidity": 0,
+      "pool_id": "0x3b83a979eaca2de490022a3442d42e67f305613106cc7f91fbe23ccf4da26404",
+      "quote_method": "V4_QUOTER",
+      "quoter_or_proxy_amount_in": 135677846521220032,
+      "quoter_or_proxy_amount_out": 946858602405235832737134338,
+      "slot0_sqrtPriceX96": 7974470913604094264140738513890252,
+      "slot0_tick": 230400,
+      "token": "0xd6dd1a1fa7c55d3e8bde866a9f4ccef32540bb07",
+      "token_order": {
+        "currency0": "0x4200000000000000000000000000000000000006",
+        "currency1": "0xd6dd1a1fa7c55d3e8bde866a9f4ccef32540bb07",
+        "token_is_token0": false
+      }
+    },
+    {
+      "adjacent_swap": null,
+      "decimals": {
+        "paired": 18,
+        "token": 18
+      },
+      "fee_mode": "DYNAMIC_FLAG",
+      "fee_raw": 8388608,
+      "liquidity": null,
+      "pool_id": "0x8ad110bcc853e4cff05ee4349b19596684a67e54201bd5eca5742f79b2eb9189",
+      "quote_method": "V4_QUOTER",
+      "quoter_or_proxy_amount_in": 135677846521220032,
+      "quoter_or_proxy_amount_out": 947851808484518639873433265,
+      "slot0_sqrtPriceX96": null,
+      "slot0_tick": null,
+      "token": "0x4ead349593d87449f7b6c6498b4fbf67e8582b07",
+      "token_order": {
+        "currency0": "0x4200000000000000000000000000000000000006",
+        "currency1": "0x4ead349593d87449f7b6c6498b4fbf67e8582b07",
+        "token_is_token0": false
+      }
+    },
+    {
+      "adjacent_swap": null,
+      "decimals": {
+        "paired": 18,
+        "token": 18
+      },
+      "fee_mode": "DYNAMIC_FLAG",
+      "fee_raw": 8388608,
+      "liquidity": null,
+      "pool_id": "0xaacaf19585753f318e941bf1ebe0f8f05f33f25c1d933ff925bad3f0995df46a",
+      "quote_method": "V4_QUOTER",
+      "quoter_or_proxy_amount_in": 135677846521220032,
+      "quoter_or_proxy_amount_out": 946858602405235832737134338,
+      "slot0_sqrtPriceX96": null,
+      "slot0_tick": null,
+      "token": "0x948306a03c3972fe522b09456604d988c9ae0b07",
+      "token_order": {
+        "currency0": "0x4200000000000000000000000000000000000006",
+        "currency1": "0x948306a03c3972fe522b09456604d988c9ae0b07",
+        "token_is_token0": false
+      }
+    },
+    {
+      "adjacent_swap": null,
+      "decimals": {
+        "paired": 6,
+        "token": 18
+      },
+      "fee_mode": "DYNAMIC_FLAG",
+      "fee_raw": 8388608,
+      "liquidity": 1795125268484819020,
+      "pool_id": "0x63b2afa9582c3de21e6199878f2e08a6e9846ecb4085c67670416a784298a003",
+      "quote_method": "V4_QUOTER",
+      "quoter_or_proxy_amount_in": 250000000,
+      "quoter_or_proxy_amount_out": 716380832241260415581580174,
+      "slot0_sqrtPriceX96": 35398664311015649511,
+      "slot0_tick": -430600,
+      "token": "0x3c6db6e364d65deb1e710a769fd0bcbea2515b07",
+      "token_order": {
+        "currency0": "0x3c6db6e364d65deb1e710a769fd0bcbea2515b07",
+        "currency1": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "token_is_token0": true
+      }
+    },
+    {
+      "adjacent_swap": {
+        "amount0": -1033608,
+        "amount1": 4634885782602865521053557,
+        "block_number": 48714765,
+        "fee": 30000,
+        "liquidity": 7101745898021841329,
+        "log_index": 430,
+        "pm_sender": "0x8f10b468b06c6fd214b65f87778827f7d113f996",
+        "pool_id": "0xf5592764a01a7e94be4e79c18d6f9b609afad5a69cc4f27620795079a35e5253",
+        "sqrt_price_x96": 170321532129014412529014251126491740306,
+        "tick": 429793,
+        "transaction_hash": "0xdcba363953a2b0c2cfa986d27ad1c0eda68068ee91506515c3e18623f3362a7a"
+      },
+      "decimals": {
+        "paired": 6,
+        "token": 18
+      },
+      "fee_mode": "DYNAMIC_FLAG",
+      "fee_raw": 8388608,
+      "liquidity": null,
+      "pool_id": "0xf5592764a01a7e94be4e79c18d6f9b609afad5a69cc4f27620795079a35e5253",
+      "quote_method": "V4_QUOTER",
+      "quoter_or_proxy_amount_in": 250000000,
+      "quoter_or_proxy_amount_out": 764514490845258176591711509,
+      "slot0_sqrtPriceX96": null,
+      "slot0_tick": null,
+      "token": "0xa16206cf592de73197f23ba9866f81cff7e78b07",
+      "token_order": {
+        "currency0": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "currency1": "0xa16206cf592de73197f23ba9866f81cff7e78b07",
+        "token_is_token0": false
+      }
+    }
+  ]
+}

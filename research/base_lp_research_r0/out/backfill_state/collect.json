@@ -1,0 +1,20 @@
+{
+  "chain_id": 8453,
+  "event_type": "collect",
+  "start_block": 42334927,
+  "end_block": 46266127,
+  "next_block": 46266128,
+  "event_topic": "0x70935338e69775456a85ddef226c395fb668b63fa0115f5f20610b388e6ca9c0",
+  "metrics": {
+    "started_at_utc": "2026-08-07T06:27:34.447119+00:00",
+    "completed_chunks": 394,
+    "decoded_logs": 7719230,
+    "http_attempts": 394,
+    "json_rpc_responses": 394,
+    "retries": 0,
+    "rpc_errors": 0,
+    "elapsed_seconds": 1641.8724627988413
+  },
+  "observed_getlogs_credits": 23640,
+  "updated_at_utc": "2026-08-07T06:54:56.321048+00:00"
+}

@@ -1,0 +1,34 @@
+{
+  "version": "r3.0.1",
+  "preferred_name_success_path": "atomic_net_after_all_costs",
+  "two_outcome_tracks": [
+    "ACTUAL_LIVE_OUTCOME",
+    "COUNTERFACTUAL_ATOMIC_SHADOW_OUTCOME"
+  ],
+  "priority": "actual live tx wins when present; else counterfactual",
+  "must_store_fields": [
+    "entry_amount_in_wei",
+    "entry_sim_status",
+    "entry_token_out",
+    "entry_gas_weth",
+    "exit_sim_status",
+    "exit_weth_out",
+    "exit_gas_weth",
+    "failed_retry_gas_weth",
+    "atomic_net_after_all_costs",
+    "actual_tx_hash_if_any",
+    "amountOutMinimum",
+    "inclusion_delay_blocks"
+  ],
+  "unknown_policy": {
+    "do_not_drop_silently": true,
+    "report_unknown_rate_by_f10_group": true,
+    "max_unknown_rate_confirmatory": 0.05,
+    "bounds": [
+      "worst_case_-100pct",
+      "best_case_skip0"
+    ]
+  },
+  "executor_path": "prefer production executor simulate_real_sell semantics; document caller/recipient",
+  "qv2_role": "comparison_only"
+}

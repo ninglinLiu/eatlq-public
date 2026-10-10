@@ -1,0 +1,36 @@
+{
+  "strategy_id": "F02_LP_DEPTH_LEAD",
+  "family": "F02",
+  "name": "Depth thinning leads returns",
+  "parameter_search_space": {
+    "w": [
+      5,
+      15,
+      30
+    ],
+    "thin_min": [
+      0.1,
+      0.2,
+      0.35
+    ],
+    "hold": [
+      5,
+      15
+    ],
+    "stop_ret": [
+      0.1,
+      0.15
+    ],
+    "mode": [
+      0,
+      1
+    ]
+  },
+  "param_combo_count": 72,
+  "access_flags": {
+    "database_access_enabled": false,
+    "rpc_access_enabled": false,
+    "large_file_access_enabled": false,
+    "backtest_enabled": false
+  }
+}

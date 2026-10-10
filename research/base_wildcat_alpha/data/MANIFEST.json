@@ -1,0 +1,23 @@
+{
+  "chain_id": 8453,
+  "cutoff_utc": "2026-08-14 14:00:00",
+  "rapid_panel_start_utc": "2026-04-01 00:00:00",
+  "selection": "all observed V3 pools in the time window; no ex-post activity filter or prior labels",
+  "dedup_key": [
+    "pool_address",
+    "tx_hash",
+    "log_index"
+  ],
+  "source_mode": "ClickHouse --readonly=1, SELECT only",
+  "files": [
+    "MANIFEST.json",
+    "feature_panel.parquet",
+    "feature_quality.json",
+    "hourly_lp.tsv",
+    "hourly_v2_market.tsv",
+    "hourly_v3.tsv",
+    "pool_meta.tsv",
+    "quarantined_extreme_ticks.csv",
+    "source_audit.json"
+  ]
+}

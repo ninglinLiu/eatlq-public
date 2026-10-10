@@ -1,0 +1,11 @@
+{
+  "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "bytes": 0,
+  "error": "HTTPSConnectionPool(host='base.blockscout.com', port=443): Read timed out. (read timeout=22)",
+  "finished": "2026-10-01T07:31:35.906319+00:00",
+  "key": "813a6bc70d513e3c3c67c3cd2a9201bccaf27e57be9088d7dc4977d95caf1ecc",
+  "label": "base_internal_index",
+  "payload": null,
+  "started": "2026-10-01T07:31:13.805714+00:00",
+  "url": "https://base.blockscout.com/api/v2/addresses/0x347ffc6db9acc54ac2019795173b9599e8b82bd9/internal-transactions"
+}

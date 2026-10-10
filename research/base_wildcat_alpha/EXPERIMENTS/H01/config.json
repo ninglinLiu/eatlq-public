@@ -1,0 +1,23 @@
+{
+  "alpha_id": "H01",
+  "family": "path",
+  "hypothesis": "close near hourly high predicts continuation",
+  "mechanism": "price accepts at the edge of its traversed range",
+  "venue": "Base V3",
+  "universe": "active observed pools",
+  "horizon": "1h",
+  "data_source": "V3 ticks in event order",
+  "experiment": "signed quintile spread",
+  "feature": "close_location",
+  "direction": 1,
+  "prediction_object": "next return",
+  "falsifier": "gap after delay reverses it",
+  "status": "NOT_YET_TESTED",
+  "sample_size": 0,
+  "gross_result": "pending",
+  "cost_adjusted_result": "pending",
+  "capacity": "pending",
+  "concentration": "pending",
+  "tail_risk": "pending",
+  "next_action": "run rapid screen"
+}

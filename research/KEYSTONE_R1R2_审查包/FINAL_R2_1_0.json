@@ -1,0 +1,30 @@
+{
+  "r2_version": "r2.1.0",
+  "created_utc": "2026-07-20T04:53:57Z",
+  "conclusion": "PROSPECTIVE_DIRECTIONAL_META_ALPHA_LEAD",
+  "status_flags": {
+    "STRONG_HISTORICAL_META_ALPHA_LEAD": true,
+    "CONFIRMATION_PENDING": true,
+    "SHADOW_DATA_COLLECTION_ELIGIBLE": true,
+    "FORWARD_ELIGIBLE": false,
+    "DEPLOY_ELIGIBLE": false
+  },
+  "supersedes_r2_0_0": "PURE_DIRECTIONAL_META_ALPHA",
+  "calibration_smoke_test_passed": true,
+  "calibration_external_validity": "insufficient",
+  "forward_eligible": false,
+  "deploy_eligible": false,
+  "shadow_data_collection_eligible": true,
+  "dev_in_sample_ev_accepted": 1.5883079419947448,
+  "dev_walk_forward_oof_ev_accepted": 1.466614651024219,
+  "burned_holdout_ev_accepted": 1.2477273383427723,
+  "correct_claim": "Historical directional uplift persists after atomic sellability conditioning.",
+  "incorrect_claim": "Atomic directional alpha independently confirmed.",
+  "next": "R3 prospective shadow only",
+  "artifacts": {
+    "manifest": "/root/keystone_r2_atomic/out/R2_1_0_MANIFEST.json",
+    "adjudication": "/root/keystone_r2_atomic/out/R2_ADJUDICATION_ACCEPTANCE.md",
+    "scores": "/root/keystone_r2_atomic/out/frozen_f10_scores.parquet",
+    "split_metrics": "/root/keystone_r2_atomic/out/r21_split_metrics.json"
+  }
+}

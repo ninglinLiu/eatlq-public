@@ -1,0 +1,27 @@
+{
+  "does_not_replace": "smartmoney_constraint_audit.json",
+  "finite_capital_on_independent_fills": {
+    "one_trade_0_01_eth": {
+      "buys_executed": 0,
+      "buys_not_done_insufficient_cash": 428,
+      "capital_raw": "10000000000000000",
+      "ending_cash_raw": "10000000000000000",
+      "minimum_cash_raw": "10000000000000000",
+      "sells_executed": 0
+    },
+    "published_peak_cash_gap": {
+      "buys_executed": 428,
+      "buys_not_done_insufficient_cash": 0,
+      "capital_raw": "712268669325781954",
+      "ending_cash_raw": "224641995259784812",
+      "minimum_cash_raw": "0",
+      "sells_executed": 417
+    }
+  },
+  "generated_at": "2026-10-02T05:55:09.171229+00:00",
+  "implied_initial_quote_to_stay_nonnegative_raw": "712268669325781954",
+  "input": "frozen 441 rows with the separate mature-window sells spliced in memory",
+  "limit": "independent historical fills; the 26 exits are included, residual inventory is still unpriced, and pool state is not propagated",
+  "minimum_cash_if_started_at_zero_raw": "-712268669325781954",
+  "profitability_certified": false
+}

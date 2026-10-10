@@ -1,0 +1,23 @@
+{
+  "alpha_id": "F02",
+  "family": "flow",
+  "hypothesis": "extreme flow imbalance mean reverts",
+  "mechanism": "inventory providers absorb one-sided flow",
+  "venue": "Base V3",
+  "universe": "active observed pools",
+  "horizon": "4h",
+  "data_source": "signed swap amounts",
+  "experiment": "inverse quintile spread",
+  "feature": "flow_imbalance",
+  "direction": -1,
+  "prediction_object": "next return",
+  "falsifier": "delay preserves rather than reverses sign",
+  "status": "NOT_YET_TESTED",
+  "sample_size": 0,
+  "gross_result": "pending",
+  "cost_adjusted_result": "pending",
+  "capacity": "pending",
+  "concentration": "pending",
+  "tail_risk": "pending",
+  "next_action": "run rapid screen"
+}

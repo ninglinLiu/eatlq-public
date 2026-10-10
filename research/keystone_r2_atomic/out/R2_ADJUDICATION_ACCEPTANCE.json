@@ -1,0 +1,52 @@
+{
+  "accepted_utc": "2026-07-20T04:53:56Z",
+  "third_party_verdict_accepted": true,
+  "supersedes": {
+    "r2_0_0_conclusion": "PURE_DIRECTIONAL_META_ALPHA",
+    "reason": "overstated; main table likely DEV full-fit; atomic success path aliased to QV2; no prospective confirmation"
+  },
+  "reclassified_conclusion": "PROSPECTIVE_DIRECTIONAL_META_ALPHA_LEAD",
+  "status_flags": {
+    "STRONG_HISTORICAL_META_ALPHA_LEAD": true,
+    "CONFIRMATION_PENDING": true,
+    "SHADOW_DATA_COLLECTION_ELIGIBLE": true,
+    "FORWARD_ELIGIBLE": false,
+    "DEPLOY_ELIGIBLE": false
+  },
+  "calibration_rewording": {
+    "calibration_trustworthy": false,
+    "calibration_smoke_test_passed": true,
+    "calibration_external_validity": "insufficient",
+    "engineering_smoke_test": "ENGINEERING_SMOKE_TEST_PASS"
+  },
+  "model_governance": {
+    "r1": "FROZEN_RECIPE_ONLY (model not persisted)",
+    "r2_0_0": "recipe regeneration + post_freeze binding (audit-contradictory)",
+    "r2_1_0": "closed freeze of scoring artifact; prospective-only confirmation"
+  },
+  "unsellable_reconciliation": {
+    "ks_live_pass_n": 404,
+    "SELL_SUCCESS": 391,
+    "DETERMINISTIC_REVERT": 7,
+    "ECONOMICALLY_UNSELLABLE": 1,
+    "INFRASTRUCTURE_UNKNOWN": 5,
+    "sellable_h_eq_0": 8,
+    "note": "FINAL_R2 n_ks_live_pass_unsellable=8 = REVERT(7)+ECONOMIC(1). Core fatal_first=7 among labeled core (6 REVERT + 1 ECONOMIC); holdout has 1 additional REVERT."
+  },
+  "label_semantics": {
+    "atomic_net_on_SELL_SUCCESS": "aliased_to_qv2_net (corr=1.0)",
+    "preferred_name": "atomic_sellable_gross_return",
+    "correct_claim": "Historical directional uplift persists after atomic sellability conditioning.",
+    "incorrect_claim": "Atomic directional alpha independently confirmed."
+  },
+  "product_implication": {
+    "ev_per_accepted_improves": true,
+    "ev_per_original_signal_skip0_worsens": true,
+    "preferred_use": [
+      "priority_when_capital_constrained",
+      "concurrent_signal_ranking",
+      "sizing_score_hypothesis_NEW"
+    ],
+    "hard_q50_filter_not_automatically_portfolio_optimal": true
+  }
+}

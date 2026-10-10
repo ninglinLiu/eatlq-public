@@ -1,0 +1,162 @@
+{
+  "alpha_id": "AR-GL2-B-SMARTMONEY",
+  "attribution_gate": {
+    "eoa_mismatch_n": 0,
+    "eoa_mismatch_pct": 0.0,
+    "eoa_subset_n": 859,
+    "gate_le_2pct": true,
+    "smart_accounts_reference_only": true,
+    "trace_eoa_golden_n": 73,
+    "trace_eoa_integer_gate": true,
+    "trace_eoa_mismatch_n": 0
+  },
+  "decision_flags": {
+    "live_allowed": false,
+    "self_go_allowed": false,
+    "training_allowed": false
+  },
+  "external_cross_validation": {
+    "nansen": "NOT_RUN_MISSING_AUTHORITY_AND_API_KEY"
+  },
+  "fifo_golden": {
+    "gate": true,
+    "target_balance_all_integer_equal": true,
+    "target_balance_delta_checks": 20,
+    "wallets": 5,
+    "weth_pool_cash_leg_checks": 20,
+    "weth_pool_cash_leg_integer_equal": 20
+  },
+  "forward": {
+    "all_signal_wallets_left_truncated": true,
+    "comparison_warning": "smart resolved 4/4 versus baseline 2/4 and every smart signal came from left-truncated oversell wallets; means are not an identified edge comparison",
+    "complete_inventory_signal_n": 0,
+    "complete_inventory_signal_wallets": [],
+    "descriptive_contaminated_group_by_delay": {
+      "1": {
+        "baseline": {
+          "max": -0.09458418993718287,
+          "mean": -0.09992434086007895,
+          "median": -0.09992434086007895,
+          "n_signals": 4,
+          "p90": -0.09458418993718287,
+          "resolved": 2,
+          "top1_removed_mean": -0.10526449178297505,
+          "unresolved": 2,
+          "unresolved_reasons": {
+            "UNRESOLVED_NO_TRUE_EXIT": 2
+          },
+          "winrate": 0.0
+        },
+        "smart": {
+          "max": -0.021999618839070825,
+          "mean": -0.053695117184317825,
+          "median": -0.04768760365512639,
+          "n_signals": 4,
+          "p90": -0.021999618839070825,
+          "resolved": 4,
+          "top1_removed_mean": -0.06426028329940016,
+          "unresolved": 0,
+          "unresolved_reasons": {},
+          "winrate": 0.0
+        }
+      },
+      "15": {
+        "baseline": {
+          "max": -0.09458418993718287,
+          "mean": -0.10124102911169455,
+          "median": -0.10124102911169455,
+          "n_signals": 4,
+          "p90": -0.09458418993718287,
+          "resolved": 2,
+          "top1_removed_mean": -0.10789786828620623,
+          "unresolved": 2,
+          "unresolved_reasons": {
+            "UNRESOLVED_NO_TRUE_EXIT": 2
+          },
+          "winrate": 0.0
+        },
+        "smart": {
+          "max": -0.033496908376945474,
+          "mean": -0.05604115089013783,
+          "median": -0.04663102629782907,
+          "n_signals": 4,
+          "p90": -0.033496908376945474,
+          "resolved": 4,
+          "top1_removed_mean": -0.06355589839453528,
+          "unresolved": 0,
+          "unresolved_reasons": {},
+          "winrate": 0.0
+        }
+      },
+      "5": {
+        "baseline": {
+          "max": -0.09458418993718287,
+          "mean": -0.09992434086007895,
+          "median": -0.09992434086007895,
+          "n_signals": 4,
+          "p90": -0.09458418993718287,
+          "resolved": 2,
+          "top1_removed_mean": -0.10526449178297505,
+          "unresolved": 2,
+          "unresolved_reasons": {
+            "UNRESOLVED_NO_TRUE_EXIT": 2
+          },
+          "winrate": 0.0
+        },
+        "smart": {
+          "max": -0.021999618839070825,
+          "mean": -0.053695117184317825,
+          "median": -0.04768760365512639,
+          "n_signals": 4,
+          "p90": -0.021999618839070825,
+          "resolved": 4,
+          "top1_removed_mean": -0.06426028329940016,
+          "unresolved": 0,
+          "unresolved_reasons": {},
+          "winrate": 0.0
+        }
+      }
+    },
+    "population": {
+      "baseline_sample": 4,
+      "pools": 17,
+      "smart_buy_signals": 4,
+      "true_swaps": 4355
+    },
+    "signal_wallets": [
+      "0x47b19472132ab2bb31b10e749437473bbdc3979b",
+      "0x875ab0ae8ba199549acc88dd24d4adc6b8a4aae1"
+    ]
+  },
+  "frozen_hashes": {
+    "stage1": "b80d466a71ea4ed1b9b4e4f59a56485e3b0e426fc0d503483e33bf6f315b8f7b",
+    "stage2_erratum": "f7d40c61297dd10947da8c5a9d15a508bcec52d144d2492e93e997247ab94da8",
+    "stage2_prereg": "a5e6ef0a46245348eb96b50de7243716dce3c746b3074c8a4716e2dc686aa4e2"
+  },
+  "merit": "UNTESTED_ELIGIBILITY_CONTAMINATED",
+  "no_go": true,
+  "qualification": {
+    "complete_inventory_n": 3,
+    "complete_inventory_wallets": [
+      "0x44e5f8183162994e70f3d4a9235a8a1e2471b038",
+      "0x5ccfc6e399003a8e2f68d9c7710f965b9cf67c6d",
+      "0xb32a88954e85ff3e0b7977c41847682970fc52d1"
+    ],
+    "eligible_n": 5,
+    "eligible_wallets": [
+      "0x44e5f8183162994e70f3d4a9235a8a1e2471b038",
+      "0x47b19472132ab2bb31b10e749437473bbdc3979b",
+      "0x5ccfc6e399003a8e2f68d9c7710f965b9cf67c6d",
+      "0x875ab0ae8ba199549acc88dd24d4adc6b8a4aae1",
+      "0xb32a88954e85ff3e0b7977c41847682970fc52d1"
+    ],
+    "left_truncated_n": 2,
+    "left_truncated_oversell_wallets": [
+      "0x47b19472132ab2bb31b10e749437473bbdc3979b",
+      "0x875ab0ae8ba199549acc88dd24d4adc6b8a4aae1"
+    ]
+  },
+  "research_only": true,
+  "reviewer_grade": "PENDING_INDEPENDENT_REVIEW",
+  "schema_version": 1
+}

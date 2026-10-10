@@ -1,0 +1,82 @@
+{
+  "adapter": "MIXED_REGISTERED_FACTORY_V1",
+  "buy": {
+    "amount_raw": "10000000000000000",
+    "base_fee_header_evidence": null,
+    "base_fee_wei": 5000000,
+    "block": 51972374,
+    "direction": "buy",
+    "evidence": {
+      "http_status": 200,
+      "key": "21c037dbf73707255aefe92b1034dc69c81be7178583f4281001df8ef82247e2",
+      "rpc_error": null
+    },
+    "gas_model_note": "measured internal execution + intrinsic calldata + explicit 5000 dispatcher/return buffer; not a mined receipt",
+    "gas_model_units": 658016,
+    "intrinsic_gas": 26400,
+    "measured_internal_gas": 626616,
+    "per_leg_unspent_input_raw": [
+      "0",
+      "0",
+      "0"
+    ],
+    "received_raw": "322911864433293737025474",
+    "simulation_context": "hypothetical executor with empty hookData; no persistent state change",
+    "spent_raw": "10000000000000000",
+    "status": "HISTORICAL_TRANSFER_SETTLED_SIMULATION",
+    "timestamp": 1790734095
+  },
+  "buy_fees": {
+    "assumptions": "historical base fee; 0.01 gwei tip; measured gas+intrinsic+5000; unsigned type-2 nonce 0 L1 fee estimate; excludes deployment and adverse transaction ordering",
+    "evidence": {
+      "http_status": 200,
+      "key": "6568b7af606ca361a5aca127211c4766863f25952c19ac4c115354fe536ebd22",
+      "rpc_error": null
+    },
+    "gas_model_units": 658016,
+    "l1_fee_model_raw": "2294068669",
+    "l2_fee_model_raw": "9870240000000",
+    "operator_fee_model_raw": "0",
+    "priority_fee_assumption_wei": 10000000,
+    "total_fee_model_raw": "9872534068669"
+  },
+  "delay_seconds": 10,
+  "exit_policy": "24h",
+  "input_eth_raw": "10000000000000000",
+  "modeled_net_eth_raw": null,
+  "net_profit_certified": false,
+  "sell": {
+    "amount_raw": "322911864433293737025474",
+    "block": 52015574,
+    "direction": "sell",
+    "evidence": {
+      "http_status": 200,
+      "key": "a39a9d7f2d45090f24b696dbc3ada9e09c6a9e57b41d564a80cd322ddf0a755c",
+      "rpc_error": {
+        "code": 3,
+        "message": "execution reverted"
+      }
+    },
+    "status": "SIMULATION_UNAVAILABLE_OR_REVERT"
+  },
+  "slot_evidence": {
+    "access_list_evidence": null,
+    "attempts": [
+      {
+        "http_status": 200,
+        "key": "68a6638d440537ab742773f3c9dee31b8702c4c4b2e18a99907b4d01b82065c7",
+        "rpc_error": null
+      }
+    ],
+    "block": 52015551,
+    "detector_version": 2,
+    "layout_source": "https://github.com/base/base-std/blob/main/test/lib/mocks/MockB20Storage.sol",
+    "slot": "0x1c76cfbd3a760f85759d80d9e5c75b7dabb48d25dd02baee7f15245c7d88f9d1",
+    "token": "0xb200000000000000000000874f97ee8ebf639701"
+  },
+  "source_block": 51972369,
+  "source_tx": "0x9186eead26c3158f6edcf8f96c394f8a20cffe57d2c317030302b0124925faed",
+  "status": "SELL_SIMULATION_UNRESOLVED",
+  "token": "0xb200000000000000000000874f97ee8ebf639701",
+  "wallet": "0x347ffc6db9acc54ac2019795173b9599e8b82bd9"
+}

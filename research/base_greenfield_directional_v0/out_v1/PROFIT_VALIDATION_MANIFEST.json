@@ -1,0 +1,45 @@
+{
+  "created_utc": "2026-07-20T06:58:43Z",
+  "immutability": "DO_NOT_MODIFY_AFTER_CREATION",
+  "primary_policy": "P1_G2_COMPETING",
+  "secondary_policies": [
+    "P0_C3_MOMENTUM",
+    "P2_C3_G2_VETO"
+  ],
+  "kill_g2": false,
+  "kill_g2_reasons": [],
+  "artifact_freeze_sha256": "da3c8cf5e3d4fd41650f6b6170890bd1f2198e54dd85b489db2487ea651e80aa",
+  "oof_c3_sha256": "07e0b606f48e0d14731e8b74923f23b521d72c91325cb14f41d790d214e13efa",
+  "oof_g2_sha256": "f347d5f0ecba999f7e0af8f11335821379b6aa758fbedea1e5095cbf01e549dd",
+  "design_freeze_sha256": "bd300cb459049ee34b634b086b97abc7eeccdc727ed15b78d96f1fbfe035d405",
+  "atomic_label_spec": "/root/base_greenfield_directional_v0/out_v1/ATOMIC_LABEL_SPEC.md",
+  "atomic_calibration_pass": true,
+  "amt_in_wei": 16666666666666666,
+  "wallet_constraints": {
+    "wallet_eth": 0.5,
+    "max_concurrent": 3,
+    "executor_max_position_usd": 50.0,
+    "executor_max_position_eth": 0.02
+  },
+  "promotion_rules": [
+    "primary chosen on DEV atomic total_net_weth_pnl, pnl_per_capital_hour, fatal/ES, max_drawdown",
+    "complex models get no priority",
+    "holdout run once; no retune"
+  ],
+  "rejection_rules": [
+    "OOF_PROVENANCE_FAILURE",
+    "ATOMIC_LABEL_FAILURE",
+    "INSUFFICIENT_INDEPENDENT_SAMPLE",
+    "HOLDOUT_FAIL_ALL if primary total_net_weth_pnl <= 0"
+  ],
+  "holdout_time_range": {
+    "n_rows": 480,
+    "decision_time_min": 1775187979,
+    "decision_time_max": 1782804387,
+    "n_pools": 164
+  },
+  "H": 3600,
+  "barrier": "TB_A",
+  "p_fatal_max_for_P2": 0.35,
+  "deploy_allowed": false
+}

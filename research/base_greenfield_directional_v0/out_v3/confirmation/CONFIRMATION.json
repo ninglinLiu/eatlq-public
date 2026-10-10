@@ -1,0 +1,92 @@
+{
+  "best_hypothesis": "H_TRADEABLE_RISK_SPLIT",
+  "feature_cols": [
+    "buy_ok_proxy",
+    "depth_proxy",
+    "entry_slip_proxy",
+    "liq_drawdown",
+    "infra_lag_s",
+    "flow_persist_score",
+    "executable_depth_weth",
+    "age_s"
+  ],
+  "holdout_executed": true,
+  "untouched_executed": false,
+  "holdout": {
+    "n": 257,
+    "n_selected": 156,
+    "utility_threshold_frozen": 0.005025814568268004,
+    "metrics": {
+      "policy": "H_TRADEABLE_RISK_SPLIT_INTERNAL_HOLDOUT",
+      "selected_trades": 156,
+      "buy_fill_rate": 0.40384615384615385,
+      "fatal_rate_selected": 0.057692307692307696,
+      "fatal_rate_universe": 0.042801556420233464,
+      "total_wallet_pnl_weth": -0.8504832353901681,
+      "total_wallet_pnl_usd": -2551.449706170504,
+      "conservative_tail_haircut_pnl_weth": -0.8504832353901681,
+      "conservative_tail_haircut_pnl_usd": -2551.449706170504,
+      "worst_fold_pnl_weth": null,
+      "wallet": {
+        "initial_weth": 0.3333333333333333,
+        "initial_usd": 1000.0,
+        "final_wallet_weth": 0.2660329811913645,
+        "final_wallet_usd": 798.0989435740935,
+        "cum_withdrawn_weth": 0.0,
+        "cum_withdrawn_usd": 0.0,
+        "withdrawn_12m_usd": 0.0,
+        "fixed_capital_return_on_initial": 0.0,
+        "n_months": 1,
+        "pct_months_hit_1000_usd": 0.0,
+        "median_monthly_withdraw_usd": 0.0,
+        "worst_month_withdraw_usd": 0.0,
+        "median_monthly_trading_pnl_usd": -201.9010564259065,
+        "worst_month_trading_pnl_usd": -201.9010564259065,
+        "max_consecutive_losing_months": 1,
+        "ruin": false,
+        "ruin_time": null,
+        "n_fills": 16,
+        "n_skipped_capital": 140,
+        "max_drawdown_wallet_weth": -0.05047368547530218,
+        "compound": false
+      },
+      "right_tail": {
+        "n_selected": 156,
+        "independent_right_tail_events": 1,
+        "token_breadth": 156,
+        "deployer_breadth": 132,
+        "week_breadth": 1,
+        "month_breadth": 1,
+        "top1_pnl_share": -0.0,
+        "top3_pnl_share": -0.0,
+        "top5_pnl_share": -0.0,
+        "top10_pnl_share": -0.0,
+        "pnl_miss_top1": -0.8504832353901681,
+        "pnl_miss_top3": -0.8504832353901681,
+        "pnl_miss_top5": -0.8504832353901681,
+        "total_pnl": -0.8504832353901681,
+        "haircut_pnl": -0.8504832353901681,
+        "positive_pnl_tokens": 0,
+        "positive_pnl_deployers": 0
+      },
+      "monthly_rows": [
+        {
+          "month": "2025-11",
+          "withdrawn_weth": 0.0,
+          "trading_pnl_weth": -0.06730035214196883,
+          "withdrawn_usd": 0.0,
+          "hit_target": false,
+          "trading_pnl_usd": -201.9010564259065
+        }
+      ],
+      "curve_rows": 257,
+      "verdict": "LOTTERY_DEPENDENT_REJECT"
+    },
+    "verdict": "LOTTERY_DEPENDENT_REJECT"
+  },
+  "untouched": null,
+  "retune_after_confirmation": false,
+  "note": "one-shot confirmation; thresholds frozen from train only",
+  "untouched_skip_reason": "holdout_not_eligible_or_insufficient_rows",
+  "final_confirmation_verdict": "LOTTERY_DEPENDENT_REJECT"
+}

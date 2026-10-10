@@ -1,0 +1,229 @@
+# H17 – V2-only Return-Aware Feature Ablation
+# Prerequisite: H16.11 PASS  (10,000 final V2 rows, 747 unique pools)
+# Training set: 5,884 clean rows (all 10k minus 4,116 risk rows)
+# Target: alpha_h17_clean_top20  (recomputed top-20% return within clean rows)
+# promote_live_allowed: false  |  sanity_only_not_deploy_evidence: true
+
+all_input: mvp/diagnostics/run004_h1611_all_v2_decoded_backed_10k_dataset.csv
+risk_input: mvp/diagnostics/run004_h1611_risk_bad_pool_v2_decoded_backed_10k_dataset.csv
+
+# Primary target is recomputed in code from final_return_after_cost within clean rows
+primary_target: alpha_h17_clean_top20
+net_return_column: final_return_after_cost
+
+oracle_status: pass_20_samples_100pct_matched
+
+feature_groups:
+  # Group A – old H11 runtime baseline (4 features at 300s)
+  old_baseline_4f:
+    - unique_swap_senders_300s
+    - sender_entropy_300s
+    - buy_count_300s
+    - sell_count_300s
+
+  # Group B – sender concentration at 5-minute window
+  sender_concentration_5m:
+    - unique_swap_senders_300s
+    - top1_sender_share_300s
+    - top3_sender_share_300s
+    - sender_gini_300s
+    - sender_entropy_300s
+
+  # Group C – buyer-side concentration (19.7% missing, NOT high_missing)
+  buyer_concentration_5m:
+    - unique_buyers_300s
+    - top1_buyer_share_300s
+    - buyer_gini_300s
+    - buy_wallet_entropy_300s
+
+  # Group D – activity flow counts (robust, <1.3% missing)
+  flow_count_5m:
+    - buy_count_300s
+    - sell_count_300s
+    - decoded_event_count_5m
+
+  # Group E – ratio/CV features (19.7% missing for buyer ratios)
+  flow_ratio_5m:
+    - new_buyer_ratio_300s
+    - repeat_buyer_ratio_300s
+    - trade_size_cv_300s
+
+  # Group F – temporal acceleration (buy_pressure excluded: 68.8% missing)
+  temporal_5m:
+    - activity_acceleration_1m_vs_5m
+    - activity_acceleration_3m_vs_15m
+    - sender_entropy_change_1m_vs_5m
+
+  # Group G – sender + flow count combined
+  combined_sender_flow_5m:
+    - unique_swap_senders_300s
+    - top1_sender_share_300s
+    - top3_sender_share_300s
+    - sender_gini_300s
+    - sender_entropy_300s
+    - buy_count_300s
+    - sell_count_300s
+    - decoded_event_count_5m
+
+  # Group H – full microstructure (no raw vol, no extreme values)
+  combined_microstructure_no_raw_vol:
+    - unique_swap_senders_300s
+    - top1_sender_share_300s
+    - top3_sender_share_300s
+    - sender_gini_300s
+    - sender_entropy_300s
+    - buy_count_300s
+    - sell_count_300s
+    - decoded_event_count_5m
+    - new_buyer_ratio_300s
+    - repeat_buyer_ratio_300s
+    - trade_size_cv_300s
+    - activity_acceleration_1m_vs_5m
+    - activity_acceleration_3m_vs_15m
+    - sender_entropy_change_1m_vs_5m
+
+  # Group I – multi-window sender (3 time horizons: 60s / 300s / 1800s)
+  multi_window_sender:
+    - unique_swap_senders_60s
+    - top1_sender_share_60s
+    - sender_gini_60s
+    - unique_swap_senders_300s
+    - top1_sender_share_300s
+    - sender_gini_300s
+    - unique_swap_senders_1800s
+    - top1_sender_share_1800s
+    - sender_gini_1800s
+
+  # Group J – raw volume features (extreme values expected, flagged as high_scale)
+  flow_raw_extreme_5m:
+    - buy_volume_raw_300s
+    - sell_volume_raw_300s
+    - net_flow_raw_300s
+    - abs_flow_raw_300s
+
+# Columns forbidden as features (leakage / future / identity / constant)
+denylist_columns:
+  - final_return_after_cost
+  - alpha_top20_after_gas
+  - alpha_h17_clean_top20
+  - alpha_ret_gt_5pct_after_gas
+  - alpha_ret_gt_10pct_after_gas
+  - alpha_island_candidate_label
+  - final_return_rank
+  - within_pool_return_rank
+  - rn_pool
+  - rn_pool_bucket
+  - gross_quote_return_30m
+  - fixed_cost_adjusted_return_30m
+  - slippage_stress_return
+  - exit_reason
+  - exit_time
+  - exit_block
+  - feature_cutoff_time
+  - signal_time
+  - block_time
+  - fee_bps
+  - quarantine_reason
+  - risk_severity
+  - bad_pool_candidate
+  - bad_pool_label
+  - gas_cost_dominates_label
+  - quote_anomaly_label
+  - scale_risk_label
+  - liquidity_anomaly_label
+  - repeated_pool_hour_cluster
+  - executable_label_after_gas
+  - executable_label_current
+  - label_status
+  - label_type
+  - failure_reason
+  - candidate_kind
+  - candidate_id
+  - sampler_bucket
+  - row_id
+  - weth_leg
+  - weth_leg_source
+  - side_inferred
+  - side_source_available
+  - decoded_join_status
+  - decoded_source
+  - decoded_source_used
+  - amount_source_available
+  - backfill_source_status
+  - pool_type_backfilled
+  - protocol_backfilled
+  - pool_class
+  - swap_direction
+  - direction
+  - buyer_side_unavailable
+  - wallet_source_available
+  - dynamic_exit_available
+  - dynamic_exit_unavailable_reason
+  - include_source_event_in_features
+
+denylist_prefixes:
+  - gas_adjusted_return_30m
+  - gas_cost_return
+  - dynamic_exit
+  - source_tx_hash
+  - source_log_index
+  - source_block_number
+  - source_timestamp
+  - pool_address
+  - pair_address
+  - token0_address
+  - token0
+  - token1_address
+  - token1
+  - timestamp
+  - entry_time
+  - entry_block
+  - buyer
+  - seller
+  - recipient
+  - sender
+  - amount0
+  - amount1
+  - fixed_horizon_sec
+  - day_bucket
+  - hour_bucket
+
+stress_tests:
+  - shuffled_5fold_sanity_only
+  - exclude_top1_pool
+  - exclude_top5_pools
+
+training:
+  estimator: xgboost
+  n_estimators: 300
+  max_depth: 4
+  learning_rate: 0.05
+  subsample: 0.8
+  colsample_bytree: 0.8
+  min_child_weight: 3
+  gamma: 0.1
+  n_jobs: 4
+  min_rows: 300
+  test_split_frac: 0.30
+  n_folds: 5
+  random_seed: 42
+
+safety:
+  no_production_model_write: true
+  no_mixed_dataset: true
+  no_v3_mainline: true
+  promote_live_allowed: false
+  v2_only: true
+  dune_api_reserved_for_spot_check_only: true
+
+outputs:
+  input_validation_json: mvp/diagnostics/run004_h17_input_validation.json
+  feature_availability_json: mvp/diagnostics/run004_h17_feature_availability.json
+  feature_group_metrics_json: mvp/diagnostics/run004_h17_feature_group_metrics.json
+  feature_group_summary_csv: mvp/diagnostics/run004_h17_feature_group_summary.csv
+  stress_json: mvp/diagnostics/run004_h17_stress_tests.json
+  leakage_guard_json: mvp/diagnostics/run004_h17_leakage_guard.json
+  interpretation_json: mvp/diagnostics/run004_h17_interpretation.json
+  patch_json: mvp/diagnostics/run004_h17_patch.json
+  candidate_model_dir: mvp/models/h17_v2_ablation
+  markdown: mvp/runs/run-004-patch-h17-v2-return-aware-feature-ablation.md

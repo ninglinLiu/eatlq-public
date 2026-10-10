@@ -1,0 +1,14 @@
+{
+  "n_success_cases": 3,
+  "n_rug_cases": 5,
+  "n_thin_probes": 15,
+  "false_sellable_rate": 0.0,
+  "false_unsellable_rate": 0.0,
+  "unknown_rate": 0.2608695652173913,
+  "weth_out_error_median": 2.1034659463412633e-07,
+  "fatal_detection_delay": "retry_blocks=[0,5,30,150] on INFRASTRUCTURE_UNKNOWN only",
+  "recover_after_temp_fail_coverage": "NOT_IN_CALIBRATION_SET",
+  "success_only": false,
+  "calibration_pass": true,
+  "rpc_calls": 0
+}

@@ -1,0 +1,23 @@
+{
+  "alpha_id": "C04",
+  "family": "lifecycle",
+  "hypothesis": "late-life activity shock precedes terminal burst",
+  "mechanism": "abandoned pools can exhibit exit-liquidity spikes",
+  "venue": "Base V3",
+  "universe": "active observed pools",
+  "horizon": "24h",
+  "data_source": "creation block and activity age",
+  "experiment": "competing-risk screen",
+  "feature": "late_life_burst",
+  "direction": 1,
+  "prediction_object": "future inactivity",
+  "falsifier": "small sample and no repeatability",
+  "status": "NOT_YET_TESTED",
+  "sample_size": 0,
+  "gross_result": "pending",
+  "cost_adjusted_result": "pending",
+  "capacity": "pending",
+  "concentration": "pending",
+  "tail_risk": "pending",
+  "next_action": "run rapid screen"
+}

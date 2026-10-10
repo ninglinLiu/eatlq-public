@@ -1,0 +1,17 @@
+{
+  "hypothesis_id": "H_ATOMIC_AUDITED_ONLY",
+  "n_oof": 170,
+  "n_selected": 41,
+  "feature_cols": [
+    "executable_depth_weth",
+    "entry_slip_proxy",
+    "depth_proxy",
+    "buy_ok_proxy",
+    "flow_persist_score",
+    "liq_log",
+    "early_ret",
+    "pre_vol",
+    "age_s"
+  ],
+  "n_clean_dev": 282
+}

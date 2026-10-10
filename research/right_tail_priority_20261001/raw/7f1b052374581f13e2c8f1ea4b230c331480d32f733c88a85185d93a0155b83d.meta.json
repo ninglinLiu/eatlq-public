@@ -1,0 +1,24 @@
+{
+  "body_sha256": "563dcdfa1bb0b7ccff8aced36fe3f89091329a15b5b6c6619ab106aa1283c5df",
+  "bytes": 212,
+  "finished": "2026-10-01T12:48:19.744757+00:00",
+  "http_status": 200,
+  "key": "7f1b052374581f13e2c8f1ea4b230c331480d32f733c88a85185d93a0155b83d",
+  "label": "smartmoney_balance_access_list",
+  "payload": {
+    "id": 1,
+    "jsonrpc": "2.0",
+    "method": "eth_createAccessList",
+    "params": [
+      {
+        "data": "0x70a0823100000000000000000000000000000000000000000000000000000000c0de0606",
+        "from": "0x00000000000000000000000000000000c0de0707",
+        "to": "0xfc28f881426a2931ec01b7392fe7bd87de220222"
+      },
+      "0x312ebe4"
+    ]
+  },
+  "retry_after": null,
+  "started": "2026-10-01T12:48:17.566962+00:00",
+  "url": "https://mainnet.base.org"
+}

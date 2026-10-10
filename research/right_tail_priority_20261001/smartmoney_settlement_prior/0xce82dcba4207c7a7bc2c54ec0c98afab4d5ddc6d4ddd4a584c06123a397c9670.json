@@ -1,0 +1,83 @@
+{
+  "buy": {
+    "amount_raw": "10000000000000000",
+    "base_fee_header_evidence": null,
+    "base_fee_wei": 5000000,
+    "block": 51450270,
+    "direction": "buy",
+    "evidence": {
+      "http_status": 200,
+      "key": "7d782641dfd7b9a2723391c5482a6e5b379fdd4a963aa272f78cb8de575fa4c6",
+      "rpc_error": null
+    },
+    "gas_model_note": "measured internal execution + intrinsic calldata + explicit 5000 dispatcher/return buffer; not a mined receipt",
+    "gas_model_units": 217328,
+    "intrinsic_gas": 23104,
+    "measured_internal_gas": 189224,
+    "received_raw": "5707536612612007380436448",
+    "simulation_context": "hypothetical executor with empty hookData; no persistent state change",
+    "spent_raw": "10000000000000000",
+    "status": "HISTORICAL_TRANSFER_SETTLED_SIMULATION",
+    "timestamp": 1789689887
+  },
+  "buy_fees": {
+    "assumptions": "historical base fee; 0.01 gwei tip; measured gas+intrinsic+5000; unsigned type-2 nonce 0 L1 fee estimate; excludes deployment and adverse transaction ordering",
+    "evidence": {
+      "http_status": 200,
+      "key": "f3760505932f591bfd5a09a1fbcdce39f557cd67b8be5563e057cac4b88964ab",
+      "rpc_error": null
+    },
+    "gas_model_units": 217328,
+    "l1_fee_model_raw": "651190662",
+    "l2_fee_model_raw": "3259920000000",
+    "operator_fee_model_raw": "0",
+    "priority_fee_assumption_wei": 10000000,
+    "total_fee_model_raw": "3260571190662"
+  },
+  "delay_seconds": 10,
+  "exit_policy": "24h",
+  "input_eth_raw": "10000000000000000",
+  "modeled_net_eth_raw": null,
+  "net_profit_certified": false,
+  "platform_fee_status": "NOT_SPECIFIED_SEPARATE_FROM_ONCHAIN_MODEL",
+  "sell": {
+    "status": "TOKEN_BALANCE_SLOT_UNRESOLVED"
+  },
+  "slot_evidence": {
+    "access_list_evidence": {
+      "http_status": 200,
+      "key": "fe46b0b3df90f472fe6c4aa4f7e41fb6d932d7bad9e70bf8dd82fa740d38709a",
+      "rpc_error": null
+    },
+    "attempts": [
+      {
+        "http_status": 200,
+        "key": "425f5765d443fd6524cf14dc8d00cf186f24c5279e72687204ca5f514df66cbd",
+        "rpc_error": null
+      },
+      {
+        "http_status": 200,
+        "key": "1dbe40fc7692d07c8e6fd3e084f3349829ffd8a2f30d4f6648521633caaef2d5",
+        "rpc_error": null
+      },
+      {
+        "http_status": 200,
+        "key": "62c3942b065e445c54e1f49b90d4c04513fcbf563ee903ea3be2ef97870f71af",
+        "rpc_error": null
+      },
+      {
+        "http_status": 200,
+        "key": "556e6882a795a2dc2c2977ee52209b9c0d421722e4e3dc156d6ee57cb4eae492",
+        "rpc_error": null
+      }
+    ],
+    "block": 51493470,
+    "slot": null,
+    "token": "0xb2000000000000000000008be937d1978afc1201"
+  },
+  "source_block": 51450265,
+  "source_tx": "0xce82dcba4207c7a7bc2c54ec0c98afab4d5ddc6d4ddd4a584c06123a397c9670",
+  "status": "SELL_SIMULATION_UNRESOLVED",
+  "token": "0xb2000000000000000000008be937d1978afc1201",
+  "wallet": "0x347ffc6db9acc54ac2019795173b9599e8b82bd9"
+}

@@ -1,0 +1,23 @@
+{
+  "strategy_id": "F06_REV_LIQ_REINJECT",
+  "data_class": "B_SMALL_BOUNDED_EXPORT_REQUIRED",
+  "required_tables_or_files": [
+    "mints",
+    "swaps"
+  ],
+  "required_columns": [
+    "pool",
+    "times",
+    "amounts"
+  ],
+  "required_time_resolution": "event",
+  "point_in_time_requirements": "confirm at mint+dt only with data<=that time",
+  "minimum_history": ">=30d",
+  "estimated_rows": "medium",
+  "estimated_read_bytes": "100MB-1GB",
+  "whether_current_diagnostics_may_support_it": "uncertain",
+  "whether_production_database_would_be_required": true,
+  "missing_data": [
+    "mint decode coverage"
+  ]
+}

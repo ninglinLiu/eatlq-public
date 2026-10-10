@@ -1,0 +1,118 @@
+test_cli_dry_run_writes_preflight (offline.test_probe_cli_dry_run.ProbeCliDryRunTests.test_cli_dry_run_writes_preflight) ... ok
+test_cli_execute_denied (offline.test_probe_cli_dry_run.ProbeCliDryRunTests.test_cli_execute_denied) ... ok
+test_blocks_escaping_symlink (test_bootstrap_candidate_audit.BootstrapCandidateAuditTests.test_blocks_escaping_symlink) ... ok
+test_blocks_production_path_and_service_mutation (test_bootstrap_candidate_audit.BootstrapCandidateAuditTests.test_blocks_production_path_and_service_mutation) ... ok
+test_external_connections_fail_closed (test_bootstrap_candidate_audit.BootstrapCandidateAuditTests.test_external_connections_fail_closed) ... ok
+test_records_network_host_without_connecting (test_bootstrap_candidate_audit.BootstrapCandidateAuditTests.test_records_network_host_without_connecting) ... ok
+test_safe_candidate (test_bootstrap_candidate_audit.BootstrapCandidateAuditTests.test_safe_candidate) ... ok
+test_export_verify_payload_hashes_and_detached_archive (unit.test_bundle_integrity.BundleIntegrityTests.test_export_verify_payload_hashes_and_detached_archive) ... ok
+test_rejects_symlink_escape (unit.test_bundle_integrity.BundleIntegrityTests.test_rejects_symlink_escape) ... ok
+test_rejects_missing_archive_sidecar (unit.test_bundle_path_hardening.BundlePathHardeningTests.test_rejects_missing_archive_sidecar) ... ok
+test_rejects_preexisting_sidecar_symlink (unit.test_bundle_path_hardening.BundlePathHardeningTests.test_rejects_preexisting_sidecar_symlink) ... ok
+test_rejects_symlink_archive_input_before_resolve (unit.test_bundle_path_hardening.BundlePathHardeningTests.test_rejects_symlink_archive_input_before_resolve) ... ok
+test_requires_both_sidecars_and_rejects_tamper (unit.test_bundle_path_hardening.BundlePathHardeningTests.test_requires_both_sidecars_and_rejects_tamper) ... ok
+test_refuse_overwrite (unit.test_bundle_set_equality.BundleSetEqualityTests.test_refuse_overwrite) ... ok
+test_rejects_bad_bundle_id (unit.test_bundle_set_equality.BundleSetEqualityTests.test_rejects_bad_bundle_id) ... ok
+test_rejects_extra_payload_and_bad_counts (unit.test_bundle_set_equality.BundleSetEqualityTests.test_rejects_extra_payload_and_bad_counts) ... ok
+test_candidate_file_if_present_is_disabled (unit.test_candidate_binding_disabled.CandidateBindingDisabledTests.test_candidate_file_if_present_is_disabled) ... ok
+test_defaults_still_closed (unit.test_candidate_binding_disabled.CandidateBindingDisabledTests.test_defaults_still_closed) ... ok
+test_swap_pool_liquidity (unit.test_derived_envelopes.DerivedEnvelopeTests.test_swap_pool_liquidity) ... ok
+test_transfer_positive_unknown_none_empty (unit.test_derived_envelopes.DerivedEnvelopeTests.test_transfer_positive_unknown_none_empty) ... ok
+test_event_direct_rejects_empty_and_accepts_unknown (unit.test_envelope_all_types.EnvelopeAllTypesTests.test_event_direct_rejects_empty_and_accepts_unknown) ... ok
+test_log_direct_validation (unit.test_envelope_all_types.EnvelopeAllTypesTests.test_log_direct_validation) ... ok
+test_transaction_direct_validation (unit.test_envelope_all_types.EnvelopeAllTypesTests.test_transaction_direct_validation) ... ok
+test_missing_source_table_becomes_unknown (unit.test_envelope_unknown.EnvelopeUnknownTests.test_missing_source_table_becomes_unknown) ... ok
+test_rejects_empty_required_field (unit.test_envelope_unknown.EnvelopeUnknownTests.test_rejects_empty_required_field) ... ok
+test_register_matches_tsv_and_hashes (unit.test_evidence_register.EvidenceRegisterTests.test_register_matches_tsv_and_hashes) ... ok
+test_pause_on_restart_growth (unit.test_health_guard.HealthGuardTests.test_pause_on_restart_growth) ... ok
+test_safe_when_stable (unit.test_health_guard.HealthGuardTests.test_safe_when_stable) ... ok
+test_merges_block (unit.test_metadata_health_gate.MetadataHealthGateTests.test_merges_block) ... ok
+test_pending_nonzero_blocks (unit.test_metadata_health_gate.MetadataHealthGateTests.test_pending_nonzero_blocks) ... ok
+test_safe (unit.test_metadata_health_gate.MetadataHealthGateTests.test_safe) ... ok
+test_unknown_blocks (unit.test_metadata_health_gate.MetadataHealthGateTests.test_unknown_blocks) ... ok
+test_default_plans_validate_and_hash_stable (unit.test_metadata_inventory_plan.MetadataInventoryPlanTests.test_default_plans_validate_and_hash_stable) ... ok
+test_execute_unauthorized (unit.test_metadata_inventory_plan.MetadataInventoryPlanTests.test_execute_unauthorized) ... ok
+test_hash_match_helper (unit.test_metadata_inventory_plan.MetadataInventoryPlanTests.test_hash_match_helper) ... ok
+test_health_plans_forbid_database_filter (unit.test_metadata_inventory_plan.MetadataInventoryPlanTests.test_health_plans_forbid_database_filter) ... ok
+test_reject_business_table_from (unit.test_metadata_inventory_plan.MetadataInventoryPlanTests.test_reject_business_table_from) ... ok
+test_reject_join_union_semicolon_comment_in_sql (unit.test_metadata_inventory_plan.MetadataInventoryPlanTests.test_reject_join_union_semicolon_comment_in_sql) ... ok
+test_reject_limit_over (unit.test_metadata_inventory_plan.MetadataInventoryPlanTests.test_reject_limit_over) ... ok
+test_reject_max_threads (unit.test_metadata_inventory_plan.MetadataInventoryPlanTests.test_reject_max_threads) ... ok
+test_reject_missing_database_filter (unit.test_metadata_inventory_plan.MetadataInventoryPlanTests.test_reject_missing_database_filter) ... ok
+test_reject_non_system_table (unit.test_metadata_inventory_plan.MetadataInventoryPlanTests.test_reject_non_system_table) ... ok
+test_reject_query_log_and_parts (unit.test_metadata_inventory_plan.MetadataInventoryPlanTests.test_reject_query_log_and_parts) ... ok
+test_reject_select_star (unit.test_metadata_inventory_plan.MetadataInventoryPlanTests.test_reject_select_star) ... ok
+test_reject_timeout_over (unit.test_metadata_inventory_plan.MetadataInventoryPlanTests.test_reject_timeout_over) ... ok
+test_field_mapping_exact_alias_missing (unit.test_metadata_ranking.MetadataRankingTests.test_field_mapping_exact_alias_missing) ... ok
+test_fingerprint_stable (unit.test_metadata_ranking.MetadataRankingTests.test_fingerprint_stable) ... ok
+test_pruning_statuses (unit.test_metadata_ranking.MetadataRankingTests.test_pruning_statuses) ... ok
+test_rank_prefers_logs_prunable (unit.test_metadata_ranking.MetadataRankingTests.test_rank_prefers_logs_prunable) ... ok
+test_estimate_marked_heuristic (unit.test_preflight_hardening.PreflightHardeningTests.test_estimate_marked_heuristic) ... ok
+test_rejects_bytes_over_cap (unit.test_preflight_hardening.PreflightHardeningTests.test_rejects_bytes_over_cap) ... ok
+test_rejects_limit_over_1000 (unit.test_preflight_hardening.PreflightHardeningTests.test_rejects_limit_over_1000) ... ok
+test_rejects_malicious_candidate_table (unit.test_preflight_hardening.PreflightHardeningTests.test_rejects_malicious_candidate_table) ... ok
+test_rejects_malicious_column (unit.test_preflight_hardening.PreflightHardeningTests.test_rejects_malicious_column) ... ok
+test_rejects_span_over_1000 (unit.test_preflight_hardening.PreflightHardeningTests.test_rejects_span_over_1000) ... ok
+test_rejects_zero_and_negative_timeout (unit.test_preflight_hardening.PreflightHardeningTests.test_rejects_zero_and_negative_timeout) ... ok
+test_rejects_zero_bytes (unit.test_preflight_hardening.PreflightHardeningTests.test_rejects_zero_bytes) ... ok
+test_build_manifest_direct (unit.test_preflight_manifest_bundle.PreflightManifestBundleTests.test_build_manifest_direct) ... ok
+test_database_fail_closed_via_defaults_json (unit.test_preflight_manifest_bundle.PreflightManifestBundleTests.test_database_fail_closed_via_defaults_json) ... ok
+test_manifest_and_bundle_export (unit.test_preflight_manifest_bundle.PreflightManifestBundleTests.test_manifest_and_bundle_export) ... ok
+test_network_fail_closed (unit.test_preflight_manifest_bundle.PreflightManifestBundleTests.test_network_fail_closed) ... ok
+test_path_isolation (unit.test_preflight_manifest_bundle.PreflightManifestBundleTests.test_path_isolation) ... ok
+test_preflight_builds_without_execution (unit.test_preflight_manifest_bundle.PreflightManifestBundleTests.test_preflight_builds_without_execution) ... ok
+test_preflight_rejects_select_star_and_execute_flags (unit.test_preflight_manifest_bundle.PreflightManifestBundleTests.test_preflight_rejects_select_star_and_execute_flags) ... ok
+test_secret_scan (unit.test_preflight_manifest_bundle.PreflightManifestBundleTests.test_secret_scan) ... ok
+test_sql_shape_validator (unit.test_preflight_manifest_bundle.PreflightManifestBundleTests.test_sql_shape_validator) ... ok
+test_adapter_explain_rejects_invalid_bounds (unit.test_query_bounds_limits.QueryBoundsLimitsTests.test_adapter_explain_rejects_invalid_bounds) ... ok
+test_adapter_iter_rejects_invalid_bounds_before_access (unit.test_query_bounds_limits.QueryBoundsLimitsTests.test_adapter_iter_rejects_invalid_bounds_before_access) ... ok
+test_rejects_bad_timeout_bytes_and_flags (unit.test_query_bounds_limits.QueryBoundsLimitsTests.test_rejects_bad_timeout_bytes_and_flags) ... ok
+test_rejects_overspan_and_overlimit (unit.test_query_bounds_limits.QueryBoundsLimitsTests.test_rejects_overspan_and_overlimit) ... ok
+test_accepts_safe_column (unit.test_querybounds_identifiers.QueryBoundsIdentifierTests.test_accepts_safe_column) ... ok
+test_rejects_malicious_columns (unit.test_querybounds_identifiers.QueryBoundsIdentifierTests.test_rejects_malicious_columns) ... ok
+test_legacy_final_closeout_mapping (unit.test_run_metadata_evidence.RunMetadataEvidenceTests.test_legacy_final_closeout_mapping) ... ok
+test_new_dir_classified_without_generator_code_change (unit.test_run_metadata_evidence.RunMetadataEvidenceTests.test_new_dir_classified_without_generator_code_change)
+A fresh timestamped dir with run_metadata is classified via metadata, not hardcoded stamps. ... ok
+test_event_envelope_requires_fields (unit.test_schema_registry_envelopes.SchemaRegistryEnvelopeTests.test_event_envelope_requires_fields) ... ok
+test_registry_bootstrap_keeps_unknown_factory (unit.test_schema_registry_envelopes.SchemaRegistryEnvelopeTests.test_registry_bootstrap_keeps_unknown_factory) ... ok
+test_registry_rejects_missing_launchpad (unit.test_schema_registry_envelopes.SchemaRegistryEnvelopeTests.test_registry_rejects_missing_launchpad) ... ok
+test_unknown_preserved (unit.test_schema_registry_envelopes.SchemaRegistryEnvelopeTests.test_unknown_preserved) ... ok
+test_versions_declared (unit.test_schema_registry_envelopes.SchemaRegistryEnvelopeTests.test_versions_declared) ... ok
+test_env_vars_do_not_authorize (unit.test_script_auth_gates.ScriptAuthGateTests.test_env_vars_do_not_authorize) ... ok
+test_observe_script_exits_before_connect_by_default (unit.test_script_auth_gates.ScriptAuthGateTests.test_observe_script_exits_before_connect_by_default) ... ok
+test_run_offline_tests_does_not_mention_home_reset_in_script (unit.test_script_auth_gates.ScriptAuthGateTests.test_run_offline_tests_does_not_mention_home_reset_in_script) ... ok
+test_symlink_token_or_ancestor_rejected (unit.test_script_auth_gates.ScriptAuthGateTests.test_symlink_token_or_ancestor_rejected) ... ok
+test_access_defaults_fail_closed (unit.test_source_lifecycle_golden.SourceLifecycleGoldenTests.test_access_defaults_fail_closed) ... ok
+test_clickhouse_adapter_explain_no_endpoint (unit.test_source_lifecycle_golden.SourceLifecycleGoldenTests.test_clickhouse_adapter_explain_no_endpoint) ... ok
+test_golden_is_synthetic_contract_only (unit.test_source_lifecycle_golden.SourceLifecycleGoldenTests.test_golden_is_synthetic_contract_only) ... ok
+test_golden_unknown_and_na (unit.test_source_lifecycle_golden.SourceLifecycleGoldenTests.test_golden_unknown_and_na) ... ok
+test_lifecycle_preserves_unknown_transition (unit.test_source_lifecycle_golden.SourceLifecycleGoldenTests.test_lifecycle_preserves_unknown_transition) ... ok
+test_null_source_blocks_iteration (unit.test_source_lifecycle_golden.SourceLifecycleGoldenTests.test_null_source_blocks_iteration) ... ok
+
+----------------------------------------------------------------------
+Ran 89 tests in 0.415s
+
+OK
+	Command being timed: "nice -n 19 ionice -c 3 env PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/root/lpi_base_production_safe_node/tests/offline_guard:/root/lpi_base_production_safe_node TMPDIR=/root/lpi_base_production_safe_node/var/tmp XDG_CACHE_HOME=/root/lpi_base_production_safe_node/var/cache XDG_RUNTIME_DIR=/root/lpi_base_production_safe_node/var/tmp OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 /root/lpi_base_production_safe_node/runtime/venv/bin/python -m unittest discover -s /root/lpi_base_production_safe_node/tests -p test_*.py -v"
+	User time (seconds): 0.52
+	System time (seconds): 0.09
+	Percent of CPU this job got: 75%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.81
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 25300
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 5724
+	Voluntary context switches: 9
+	Involuntary context switches: 85
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 576
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

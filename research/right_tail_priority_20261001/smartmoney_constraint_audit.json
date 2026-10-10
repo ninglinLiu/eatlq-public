@@ -1,0 +1,93 @@
+{
+  "delay": {
+    "entry_block_gap_max": 5,
+    "entry_block_gap_min": 5,
+    "entry_delay_seconds_max": 10.0,
+    "entry_delay_seconds_min": 10.0,
+    "meaning": "The simulator enters at source_block+5. On these rows that gap is exactly 5 blocks and the recorded block timestamps differ by exactly 10 seconds. That is Base block time, not a measured delay from seeing the signal to our transaction being included.",
+    "rows_with_buy_timestamp": 428
+  },
+  "finite_capital_on_independent_fills": {
+    "one_trade_0_01_eth": {
+      "buys_executed": 0,
+      "buys_not_done_insufficient_cash": 428,
+      "capital_raw": "10000000000000000",
+      "ending_cash_raw": "10000000000000000",
+      "minimum_cash_raw": "10000000000000000",
+      "sells_executed": 0
+    },
+    "published_peak_cash_gap": {
+      "buys_executed": 428,
+      "buys_not_done_insufficient_cash": 0,
+      "capital_raw": "712268669325781954",
+      "ending_cash_raw": "155385669184129144",
+      "minimum_cash_raw": "0",
+      "sells_executed": 394
+    }
+  },
+  "generated_at": "2026-10-02T05:47:12.049018+00:00",
+  "input": "smartmoney_follower_execution_result.json",
+  "limits": [
+    "no mempool or inclusion trace",
+    "capital test skips a buy when cash on hand is short; it still uses each fill as if the pool never saw our other trades",
+    "unsold inventory stays unpriced"
+  ],
+  "profitability_certified": false,
+  "same_token_overlap": {
+    "meaning": "Each position is assumed to occupy 0.01 ETH for 24h on the historical pool, ignoring our own earlier trade. Concurrent count is the number of those independent assumptions alive at once. It is not a sequential fill.",
+    "tokens_with_a_modeled_buy": 180,
+    "tokens_with_overlapping_holds": 89,
+    "top": [
+      {
+        "max_concurrent_independent_positions": 19,
+        "signals_with_a_buy": 24,
+        "token": "0xca7a1e31b36779cf32acb18714ab26982cf36b05"
+      },
+      {
+        "max_concurrent_independent_positions": 11,
+        "signals_with_a_buy": 11,
+        "token": "0x60555ab88a0caaf893ab284c1332c9d0a05af222"
+      },
+      {
+        "max_concurrent_independent_positions": 10,
+        "signals_with_a_buy": 10,
+        "token": "0xb462a5039a540883508ee37b5cf3999647557ba3"
+      },
+      {
+        "max_concurrent_independent_positions": 9,
+        "signals_with_a_buy": 9,
+        "token": "0x346465a301078fbd45727c4c925e1c94be2e6520"
+      },
+      {
+        "max_concurrent_independent_positions": 7,
+        "signals_with_a_buy": 7,
+        "token": "0x5a3392371432da2fc0de18263b1fa2ffab8a5a01"
+      },
+      {
+        "max_concurrent_independent_positions": 7,
+        "signals_with_a_buy": 7,
+        "token": "0x882c8e35504d58979b1280fe76d6553f717029f8"
+      },
+      {
+        "max_concurrent_independent_positions": 6,
+        "signals_with_a_buy": 6,
+        "token": "0x80210081479359b512f464058b2699cebe998579"
+      },
+      {
+        "max_concurrent_independent_positions": 6,
+        "signals_with_a_buy": 6,
+        "token": "0xb2000000000000000000001eb03f58a18f2add01"
+      }
+    ],
+    "worst": {
+      "at_timestamp": 1790188077,
+      "max_concurrent": 19,
+      "token": "0xca7a1e31b36779cf32acb18714ab26982cf36b05"
+    }
+  },
+  "state_limits": {
+    "partial_exit_second_sell": "77 partial exits still hold inventory. A second independent sell of the remainder on the untouched historical pool would reuse the same liquidity the first sell already consumed in a separate call. That second call is not a legal continuation and was not run.",
+    "sell_state_override": "sell simulation writes only the target-token balance slot and the hypothetical executor code. It does not carry pool reserves, spend authorization, or a cooldown created by our own buy.",
+    "witnessed_buy_restriction": "3 buys reverted because the historical spend gate did not authorize this executor. Those 3 stay unresolved. The signature in the source transaction was not reused."
+  }
+}

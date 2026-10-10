@@ -1,0 +1,35 @@
+{
+  "strategy_id": "F04_XS_OLD_TO_NEW_MIGRATE",
+  "family": "F04",
+  "name": "Old-to-new capital migration",
+  "parameter_search_space": {
+    "ratio_min": [
+      1.0,
+      1.5,
+      2.0
+    ],
+    "basket_k": [
+      3,
+      5
+    ],
+    "hold_h": [
+      1,
+      2
+    ],
+    "stop_ret": [
+      0.2,
+      0.3
+    ],
+    "min_pool_vol_eth": [
+      1.0,
+      3.0
+    ]
+  },
+  "param_combo_count": 48,
+  "access_flags": {
+    "database_access_enabled": false,
+    "rpc_access_enabled": false,
+    "large_file_access_enabled": false,
+    "backtest_enabled": false
+  }
+}

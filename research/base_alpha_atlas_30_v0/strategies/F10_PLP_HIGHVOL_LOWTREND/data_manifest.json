@@ -1,0 +1,29 @@
+{
+  "strategy_id": "F10_PLP_HIGHVOL_LOWTREND",
+  "data_class": "B_SMALL_BOUNDED_EXPORT_REQUIRED",
+  "required_tables_or_files": [
+    "OHLCV+volume",
+    "fee tier"
+  ],
+  "required_columns": [
+    "pool",
+    "hour",
+    "close",
+    "volume",
+    "fee"
+  ],
+  "required_time_resolution": "1h",
+  "point_in_time_requirements": "PIT",
+  "minimum_history": ">=30d",
+  "estimated_rows": "medium",
+  "estimated_read_bytes": "50-500MB",
+  "whether_current_diagnostics_may_support_it": "partial ohlcv",
+  "whether_production_database_would_be_required": true,
+  "missing_data": [
+    "fee income realization"
+  ],
+  "feasibility": "BLOCKED",
+  "evidence": [],
+  "notes": "no fee income / IL realization offline",
+  "data_class_revised": "D_OR_EXPORT_REQUIRED"
+}

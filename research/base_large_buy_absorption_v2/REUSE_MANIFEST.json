@@ -1,0 +1,52 @@
+{
+  "project": "base_large_buy_absorption_v2",
+  "reused_from_v1": [
+    "src/labels_truth.py",
+    "src/scheduler.py",
+    "src/arms_v1.py",
+    "src/scorecard_v1.py",
+    "src/calendar_audit.py",
+    "src/wallet_monthly.py",
+    "src/atomic_sim.py",
+    "src/fifo_episodes.py",
+    "src/attribution_policy.py",
+    "src/actor_resolution.py (hardened load_swap_universe)"
+  ],
+  "data": {
+    "resolved_swaps_full.parquet": {
+      "source": "/root/base_actor_flow_oos_v0/out/phase1/resolved_swaps.parquet",
+      "note": "Phase0 proved match to CH new-pool-48h ground truth; full rebuild skipped."
+    }
+  },
+  "new_modules": [
+    "src/coverage_diag.py",
+    "src/pnl_decomp.py",
+    "src/ranking.py",
+    "src/sensitivity.py",
+    "src/finalize_v2.py",
+    "src/run_all_v2.py"
+  ],
+  "alpha_hunt_v1": {
+    "config": "configs/freeze_alpha_v1.json",
+    "package": "src/alpha/",
+    "status": "SEALED_BOTH_REFUTED",
+    "mutates_v2_v3": false
+  },
+  "alpha_hunt_v2": {
+    "config": "configs/freeze_alpha_v2.json",
+    "package": "src/alpha_v2/",
+    "reuses": [
+      "src/alpha/cost_attach.py",
+      "src/alpha/alpha_bakeoff.py",
+      "src/alpha/pit_actor_features.py (FIFO/asof helpers)",
+      "src/execution_depth.py",
+      "out/panel/labeled_wait_absorption.parquet"
+    ],
+    "new_data": [
+      "eatlq.base_v3_wallet_swaps_resolved (cross-pool actor history)",
+      "RPC eth_getCode for panel tokens (clone-family)"
+    ],
+    "mutates_v1_seal": false,
+    "mutates_v2_v3": false
+  }
+}

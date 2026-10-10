@@ -1,0 +1,19 @@
+{
+  "pass": true,
+  "success_case": {
+    "token": "0xf0e5c61f4ca7577f735cb8313a1df348fe494e12",
+    "sim": {
+      "class": "SELL_SUCCESS",
+      "weth_out": 2493992207216061,
+      "reason": ""
+    }
+  },
+  "rug_case": {
+    "token": "0xe8D95A1d1a66F60C264C54E1bFc6Fad066495Ff9",
+    "sim": {
+      "class": "DETERMINISTIC_REVERT",
+      "weth_out": 0,
+      "reason": "{'code': 3, 'message': 'execution reverted'}"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "budget_exhausted": false,
+  "combined_network_attempts": 175,
+  "completed_pool_results": 12,
+  "economic_edge_conclusion": "NOT_AUTHORIZED",
+  "entry_successes": 8,
+  "error_class_counts": {
+    "UNKNOWN_REVERT": 19
+  },
+  "exit_successes": 0,
+  "immediate_reverse_successes": 1,
+  "network_attempts": 90,
+  "prior_run_network_attempts": 85,
+  "real_swap_crosscheck_attempts": 8,
+  "real_swap_crosscheck_passes": 8,
+  "selected_pools": 12,
+  "stopped_reason": null,
+  "transport_failure_ratio": 0.0,
+  "transport_failures": 0,
+  "validation_thresholds": {
+    "entry_successes_gte": 8,
+    "immediate_reverse_successes_gte": 8,
+    "real_swap_crosscheck_passes_gte": 5,
+    "transport_failure_ratio_lte": 0.2
+  },
+  "verdict": "QUOTE_PATH_NOT_VALIDATED",
+  "verified_pool_keys": 12
+}

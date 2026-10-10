@@ -1,0 +1,26 @@
+{
+  "verdict": "PASS",
+  "passed": true,
+  "sampled_error_rate": 0.0,
+  "max_allowed_error_rate": 0.02,
+  "n_golden_requested": 80,
+  "n_golden_sampled": 80,
+  "n_audited": 25,
+  "unresolved_coverage": 0.014613403716915774,
+  "resolvable_scorable_coverage": 0.9853865962830842,
+  "min_resolvable_scorable_coverage": 0.15,
+  "rpc_error": null,
+  "audit_mode": "debug_trace",
+  "route_family_sample_counts": {
+    "universal_router": 46,
+    "uniswap_router": 15,
+    "unknown": 9,
+    "unknown_contract_or_route": 7,
+    "erc4337_entrypoint": 3
+  },
+  "tier_sample_counts": {
+    "C": 77,
+    "B": 3
+  },
+  "generated_at": "2026-07-20T16:04:14Z"
+}

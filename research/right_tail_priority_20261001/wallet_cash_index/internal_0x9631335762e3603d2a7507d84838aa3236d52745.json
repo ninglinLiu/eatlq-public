@@ -1,0 +1,244 @@
+{
+  "complete": true,
+  "cutoff": 1789021456.0,
+  "items": [
+    {
+      "block_number": 51679638,
+      "created_contract": null,
+      "error": null,
+      "from": {
+        "ens_domain_name": null,
+        "hash": "0xd8Ba9D1a99Fc21f0ECA24e9b85737c28A194a4E2",
+        "implementations": [
+          {
+            "address_hash": "0xbc32D89027D59D42989a017DaB2DC8f8EE9Dad1b",
+            "name": null
+          }
+        ],
+        "is_contract": true,
+        "is_scam": false,
+        "is_verified": true,
+        "metadata": {
+          "tags": [
+            {
+              "meta": {
+                "projectName": "Good Morning, Good Night (GMGN)",
+                "tagUrl": "https://scout-app.kleros.io/single-tags/0xca27e4ed2836fef4891b9fe80192800bcd556d1442e75df09bad1a3dd0c4e22e",
+                "tooltipDescription": "The official Good Morning, Good Night (GMGN) Fee Adapter proxy contract on Base Mainnet.",
+                "tooltipUrl": "https://gmgn.ai/"
+              },
+              "name": "Fee Adapter Proxy",
+              "ordinal": 10,
+              "slug": "fee-adapter-proxy-8453",
+              "tagType": "name"
+            },
+            {
+              "meta": {
+                "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                "textColor": "#C163D4",
+                "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                "tooltipDescription": "Provided by OLI"
+              },
+              "name": "Router",
+              "ordinal": 0,
+              "slug": "router",
+              "tagType": "name"
+            }
+          ]
+        },
+        "name": "TransparentUpgradeableProxy",
+        "private_tags": [],
+        "proxy_type": "eip1967",
+        "public_tags": [],
+        "reputation": "ok",
+        "watchlist_names": []
+      },
+      "gas_limit": "665979",
+      "index": 128,
+      "success": true,
+      "timestamp": "2026-09-23T07:30:23.000000Z",
+      "to": {
+        "ens_domain_name": null,
+        "hash": "0x9631335762E3603d2a7507D84838AA3236d52745",
+        "implementations": [],
+        "is_contract": false,
+        "is_scam": false,
+        "is_verified": false,
+        "metadata": null,
+        "name": null,
+        "private_tags": [],
+        "proxy_type": null,
+        "public_tags": [],
+        "reputation": "ok",
+        "watchlist_names": []
+      },
+      "transaction_hash": "0x7f72cf205583f9a6242c13d27d0f89779dc1702b7798def0b8550b59e19031f5",
+      "transaction_index": 101,
+      "type": "call",
+      "value": "1187917350207338921"
+    },
+    {
+      "block_number": 51679637,
+      "created_contract": null,
+      "error": null,
+      "from": {
+        "ens_domain_name": null,
+        "hash": "0xd8Ba9D1a99Fc21f0ECA24e9b85737c28A194a4E2",
+        "implementations": [
+          {
+            "address_hash": "0xbc32D89027D59D42989a017DaB2DC8f8EE9Dad1b",
+            "name": null
+          }
+        ],
+        "is_contract": true,
+        "is_scam": false,
+        "is_verified": true,
+        "metadata": {
+          "tags": [
+            {
+              "meta": {
+                "projectName": "Good Morning, Good Night (GMGN)",
+                "tagUrl": "https://scout-app.kleros.io/single-tags/0xca27e4ed2836fef4891b9fe80192800bcd556d1442e75df09bad1a3dd0c4e22e",
+                "tooltipDescription": "The official Good Morning, Good Night (GMGN) Fee Adapter proxy contract on Base Mainnet.",
+                "tooltipUrl": "https://gmgn.ai/"
+              },
+              "name": "Fee Adapter Proxy",
+              "ordinal": 10,
+              "slug": "fee-adapter-proxy-8453",
+              "tagType": "name"
+            },
+            {
+              "meta": {
+                "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                "textColor": "#C163D4",
+                "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                "tooltipDescription": "Provided by OLI"
+              },
+              "name": "Router",
+              "ordinal": 0,
+              "slug": "router",
+              "tagType": "name"
+            }
+          ]
+        },
+        "name": "TransparentUpgradeableProxy",
+        "private_tags": [],
+        "proxy_type": "eip1967",
+        "public_tags": [],
+        "reputation": "ok",
+        "watchlist_names": []
+      },
+      "gas_limit": "653450",
+      "index": 128,
+      "success": true,
+      "timestamp": "2026-09-23T07:30:21.000000Z",
+      "to": {
+        "ens_domain_name": null,
+        "hash": "0x9631335762E3603d2a7507D84838AA3236d52745",
+        "implementations": [],
+        "is_contract": false,
+        "is_scam": false,
+        "is_verified": false,
+        "metadata": null,
+        "name": null,
+        "private_tags": [],
+        "proxy_type": null,
+        "public_tags": [],
+        "reputation": "ok",
+        "watchlist_names": []
+      },
+      "transaction_hash": "0x66aef529fe64b8871339a771d6a281f06244a88b359d5825298d183c2cc2c533",
+      "transaction_index": 7,
+      "type": "call",
+      "value": "1228472750091884783"
+    },
+    {
+      "block_number": 51679635,
+      "created_contract": null,
+      "error": null,
+      "from": {
+        "ens_domain_name": null,
+        "hash": "0xd8Ba9D1a99Fc21f0ECA24e9b85737c28A194a4E2",
+        "implementations": [
+          {
+            "address_hash": "0xbc32D89027D59D42989a017DaB2DC8f8EE9Dad1b",
+            "name": null
+          }
+        ],
+        "is_contract": true,
+        "is_scam": false,
+        "is_verified": true,
+        "metadata": {
+          "tags": [
+            {
+              "meta": {
+                "projectName": "Good Morning, Good Night (GMGN)",
+                "tagUrl": "https://scout-app.kleros.io/single-tags/0xca27e4ed2836fef4891b9fe80192800bcd556d1442e75df09bad1a3dd0c4e22e",
+                "tooltipDescription": "The official Good Morning, Good Night (GMGN) Fee Adapter proxy contract on Base Mainnet.",
+                "tooltipUrl": "https://gmgn.ai/"
+              },
+              "name": "Fee Adapter Proxy",
+              "ordinal": 10,
+              "slug": "fee-adapter-proxy-8453",
+              "tagType": "name"
+            },
+            {
+              "meta": {
+                "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                "textColor": "#C163D4",
+                "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                "tooltipDescription": "Provided by OLI"
+              },
+              "name": "Router",
+              "ordinal": 0,
+              "slug": "router",
+              "tagType": "name"
+            }
+          ]
+        },
+        "name": "TransparentUpgradeableProxy",
+        "private_tags": [],
+        "proxy_type": "eip1967",
+        "public_tags": [],
+        "reputation": "ok",
+        "watchlist_names": []
+      },
+      "gas_limit": "665599",
+      "index": 128,
+      "success": true,
+      "timestamp": "2026-09-23T07:30:17.000000Z",
+      "to": {
+        "ens_domain_name": null,
+        "hash": "0x9631335762E3603d2a7507D84838AA3236d52745",
+        "implementations": [],
+        "is_contract": false,
+        "is_scam": false,
+        "is_verified": false,
+        "metadata": null,
+        "name": null,
+        "private_tags": [],
+        "proxy_type": null,
+        "public_tags": [],
+        "reputation": "ok",
+        "watchlist_names": []
+      },
+      "transaction_hash": "0x1edc681115058ce62e9eaff076a768e1f54f89354f59848e0b7a89cf06738425",
+      "transaction_index": 107,
+      "type": "call",
+      "value": "842557489868550219"
+    }
+  ],
+  "kind": "internal",
+  "pages": [
+    {
+      "http_status": 200,
+      "key": "6c8e3939c2d7dfedb323e7621f1e7b34b1c5870d35c786a7cf63b4b8b8108e6f"
+    }
+  ],
+  "snapshot": "2026-09-17T06:24:16+00:00",
+  "status": "CROSSED_QUALIFICATION_START",
+  "wallet": "0x9631335762e3603d2a7507d84838aa3236d52745"
+}

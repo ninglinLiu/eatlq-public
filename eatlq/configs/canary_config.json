@@ -1,0 +1,46 @@
+{
+  "_schema_version": "sprint083_canary_harness_v1",
+  "_mode": "HARNESS_ONLY_DEFAULT_OFF",
+  "_description": "Real-money canary harness configuration. This file prepares bounded future ignition capability but does not enable live trading.",
+  "canary": {
+    "CANARY_ENABLED": false,
+    "NORMAL_LIVE_ALLOWED": false,
+    "max_trade_usd": 5.0,
+    "max_daily_trades": 1,
+    "max_total_loss_usd": 20.0,
+    "require_manual_approval": true,
+    "allowed_strategy_ids": [
+      "S074_022_6ff5",
+      "S074_032_6ff5",
+      "S074_022_6ff5_B",
+      "S074_032_6ff5_B"
+    ],
+    "require_honeypot_pass": true,
+    "require_sell_sim_pass": true,
+    "require_executor_lag_zero": true,
+    "approval_token_ttl_seconds_max": 600
+  },
+  "preflight_gates": {
+    "min_true_live_forward_executor_n": 25,
+    "require_signal_stale_false": true,
+    "max_toxic_rate_7d": 0.15,
+    "require_dead_letters_zero": true,
+    "require_stuck_positions_zero": true,
+    "require_executor_lag_zero": true,
+    "require_live_trading_mode_default_false": true,
+    "private_key_policy": "Do not read, print, or save private key in canary preflight."
+  },
+  "manual_approval_contract": {
+    "required": true,
+    "single_use": true,
+    "scope_fields_required": [
+      "strategy_id",
+      "pool",
+      "max_trade_usd",
+      "expires_at_utc",
+      "nonce"
+    ],
+    "max_ttl_seconds": 600,
+    "without_valid_approval": "HARD_ABORT"
+  }
+}

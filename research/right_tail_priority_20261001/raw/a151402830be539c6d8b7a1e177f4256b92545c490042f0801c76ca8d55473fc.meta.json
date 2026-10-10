@@ -1,0 +1,20 @@
+{
+  "body_sha256": "dd17e27cb14bf0d81124c4db1bc664051aab7ea18e20747e189217beeaf87b20",
+  "bytes": 21102,
+  "finished": "2026-10-02T05:47:13.207145+00:00",
+  "http_status": 200,
+  "key": "a151402830be539c6d8b7a1e177f4256b92545c490042f0801c76ca8d55473fc",
+  "label": "smartmoney_mature_head_header",
+  "payload": {
+    "id": 1,
+    "jsonrpc": "2.0",
+    "method": "eth_getBlockByNumber",
+    "params": [
+      "0x319d71a",
+      false
+    ]
+  },
+  "retry_after": null,
+  "started": "2026-10-02T05:47:13.069252+00:00",
+  "url": "https://mainnet.base.org"
+}

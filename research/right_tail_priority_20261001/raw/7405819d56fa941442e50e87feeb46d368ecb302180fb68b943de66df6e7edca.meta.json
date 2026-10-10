@@ -1,0 +1,23 @@
+{
+  "body_sha256": "55ba97afa8356e432f56e986f6cf0b730fe5f22f4872d13937895c072f0a6bae",
+  "bytes": 103,
+  "finished": "2026-10-01T07:43:21.931981+00:00",
+  "http_status": 200,
+  "key": "7405819d56fa941442e50e87feeb46d368ecb302180fb68b943de66df6e7edca",
+  "label": "pilot_inventory_before_source",
+  "payload": {
+    "id": 1,
+    "jsonrpc": "2.0",
+    "method": "eth_call",
+    "params": [
+      {
+        "data": "0x70a082310000000000000000000000009631335762e3603d2a7507d84838aa3236d52745",
+        "to": "0x9e00fc92493451eba1c63dd3880d68b622037ba3"
+      },
+      "0x3133efe"
+    ]
+  },
+  "retry_after": null,
+  "started": "2026-10-01T07:43:19.854528+00:00",
+  "url": "https://mainnet.base.org"
+}

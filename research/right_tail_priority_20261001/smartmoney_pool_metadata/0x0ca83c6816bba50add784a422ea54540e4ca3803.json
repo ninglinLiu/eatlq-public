@@ -1,0 +1,24 @@
+{
+  "block_number": 51623944,
+  "fee_evidence": {
+    "http_status": 200,
+    "key": "1a3eeb6d696d5d04e689f09b0e3c604b5c565100dd8187f29a404c9cbcbcd191",
+    "rpc_error": {
+      "code": 3,
+      "message": "execution reverted"
+    }
+  },
+  "pool": "0x0ca83c6816bba50add784a422ea54540e4ca3803",
+  "token0": "0x798b24ba106188002ea1349654be2b0d515c7777",
+  "token0_evidence": {
+    "http_status": 200,
+    "key": "329845de018d72bf10dcda617af35134e0b6b966462aa955f8e77fbf9113863b",
+    "rpc_error": null
+  },
+  "token1": "0xacfe6019ed1a7dc6f7b508c02d1b04ec88cc21bf",
+  "token1_evidence": {
+    "http_status": 200,
+    "key": "1d13693fdfa4b4ab879ba4addb18969b50ba78f8bf0507bcbce1fea652d15b1d",
+    "rpc_error": null
+  }
+}

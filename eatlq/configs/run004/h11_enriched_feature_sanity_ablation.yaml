@@ -1,0 +1,233 @@
+input_path: mvp/diagnostics/run004_h108_enriched_executable_dataset.csv
+active_model_path: models/signal_model_realtime_v2.json
+target_column: executable_label
+net_return_column: executable_net_return
+status_filter:
+  executable_status: success
+
+outputs:
+  patch_json: mvp/diagnostics/run004_patch_h11_enriched_feature_sanity_ablation.json
+  metrics_json: mvp/diagnostics/run004_h11_feature_group_metrics.json
+  stress_json: mvp/diagnostics/run004_h11_stress_tests.json
+  summary_csv: mvp/diagnostics/run004_h11_feature_group_summary.csv
+  interpretation_json: mvp/diagnostics/run004_h11_feature_interpretation.json
+  markdown: mvp/runs/run-004-patch-h11-enriched-feature-sanity-ablation.md
+  candidate_model_dir: mvp/diagnostics/run004_h11_candidate_models
+
+feature_groups:
+  old_baseline_4f:
+    - price_velocity_5m
+    - buy_pressure_ratio
+    - token_volatility_5m
+    - activity_heat
+
+  old_baseline_plus_entropy:
+    - price_velocity_5m
+    - buy_pressure_ratio
+    - token_volatility_5m
+    - activity_heat
+    - unique_buyer_entropy_5m
+
+  sender_concentration_5m:
+    - unique_swap_senders_300
+    - top1_sender_share_300
+    - top3_sender_share_300
+    - sender_gini_300
+    - sender_entropy_300
+
+  buyer_concentration_5m:
+    - unique_buyers_300
+    - unique_sellers_300
+    - buyer_trade_count_300
+    - seller_trade_count_300
+    - top1_buyer_share_300
+    - top3_buyer_share_300
+    - buyer_gini_300
+    - repeat_buyer_ratio_300
+    - new_buyer_ratio_300
+    - buy_wallet_entropy_300
+
+  flow_count_5m:
+    - buy_count_300
+    - sell_count_300
+    - buy_sell_count_ratio_300
+    - decoded_event_count_5m
+
+  flow_raw_5m:
+    - buy_volume_raw_300
+    - sell_volume_raw_300
+    - net_flow_raw_300
+    - abs_flow_raw_300
+    - median_trade_size_raw_300
+    - trade_size_cv_300
+
+  temporal_regime:
+    - event_count_60
+    - event_count_300
+    - event_count_900
+    - event_count_1800
+    - activity_acceleration_1m_vs_5m
+    - activity_acceleration_3m_vs_15m
+    - buy_pressure_acceleration_1m_vs_5m
+    - sender_entropy_change_1m_vs_5m
+    - volatility_change_1m_vs_5m
+
+  old_plus_sender_concentration:
+    - price_velocity_5m
+    - buy_pressure_ratio
+    - token_volatility_5m
+    - activity_heat
+    - unique_swap_senders_300
+    - top1_sender_share_300
+    - top3_sender_share_300
+    - sender_gini_300
+    - sender_entropy_300
+
+  old_plus_buyer_concentration:
+    - price_velocity_5m
+    - buy_pressure_ratio
+    - token_volatility_5m
+    - activity_heat
+    - unique_buyers_300
+    - unique_sellers_300
+    - top1_buyer_share_300
+    - top3_buyer_share_300
+    - buyer_gini_300
+    - buy_wallet_entropy_300
+
+  old_plus_flow_count:
+    - price_velocity_5m
+    - buy_pressure_ratio
+    - token_volatility_5m
+    - activity_heat
+    - buy_count_300
+    - sell_count_300
+    - buy_sell_count_ratio_300
+    - decoded_event_count_5m
+
+  old_plus_temporal:
+    - price_velocity_5m
+    - buy_pressure_ratio
+    - token_volatility_5m
+    - activity_heat
+    - activity_acceleration_1m_vs_5m
+    - activity_acceleration_3m_vs_15m
+    - buy_pressure_acceleration_1m_vs_5m
+    - sender_entropy_change_1m_vs_5m
+
+  microstructure_combo_no_raw_volume:
+    - unique_swap_senders_300
+    - top1_sender_share_300
+    - top3_sender_share_300
+    - sender_gini_300
+    - sender_entropy_300
+    - buy_count_300
+    - sell_count_300
+    - buy_sell_count_ratio_300
+    - decoded_event_count_5m
+    - activity_acceleration_1m_vs_5m
+    - sender_entropy_change_1m_vs_5m
+
+  microstructure_combo_with_old:
+    - price_velocity_5m
+    - buy_pressure_ratio
+    - token_volatility_5m
+    - activity_heat
+    - unique_swap_senders_300
+    - top1_sender_share_300
+    - top3_sender_share_300
+    - sender_gini_300
+    - sender_entropy_300
+    - buy_count_300
+    - sell_count_300
+    - buy_sell_count_ratio_300
+    - decoded_event_count_5m
+    - activity_acceleration_1m_vs_5m
+    - sender_entropy_change_1m_vs_5m
+
+denylist_columns:
+  - pool_address
+  - token_address
+  - pool_type
+  - protocol
+  - tx_hash
+  - log_index
+  - block_number
+  - timestamp
+  - final_score
+  - final_score_logit
+  - final_score_sq
+  - final_score_neg
+  - approximate_label
+  - approximate_net_return
+  - executable_label
+  - executable_net_return
+  - executable_status
+  - failure_reason
+  - decoded_source_used
+  - decoded_join_status
+  - backfill_source_status
+  - source_tag
+  - entry_block
+  - exit_block
+
+denylist_prefixes:
+  - future_
+  - final_score_
+
+training:
+  model_type: xgboost
+  max_depth: 2
+  n_estimators: 30
+  learning_rate: 0.08
+  subsample: 0.9
+  colsample_bytree: 0.9
+  random_state: 44
+  split: chronological_70_30
+  min_rows: 300
+  min_positive_labels: 50
+  min_negative_labels: 50
+  metrics:
+    - roc_auc
+    - pr_auc
+    - pr_auc_lift_over_positive_baseline
+    - brier_score
+    - accuracy
+    - precision
+    - recall
+    - top_decile_positive_rate
+    - top_decile_net_return_mean
+    - calibration_bins
+
+stress_tests:
+  - uncapped
+  - exclude_top1_pool
+  - exclude_top5_pools
+  - top5_only
+  - non_top5_only
+  - v2_only
+  - v3_only
+  - top_pool_vs_non_top_pool
+  - entropy_low
+  - entropy_mid
+  - entropy_high
+  - chronological_70_30
+  - shuffled_5fold_sanity_only
+
+interpretation_rules:
+  compare_to_old_baseline: true
+  compare_pr_auc_to_positive_baseline: true
+  high_positive_rate_threshold: 0.70
+  weak_ranking_roc_auc_threshold: 0.60
+  require_top_pool_stress: true
+  require_v2_v3_split: true
+  entropy_stability_check: true
+  raw_volume_scale_review: true
+
+safety:
+  sanity_only_not_deploy_evidence: true
+  executable_labels_only: true
+  no_promote: true
+  no_production_model_write: true
+  no_redis_signals: true
+  no_live: true

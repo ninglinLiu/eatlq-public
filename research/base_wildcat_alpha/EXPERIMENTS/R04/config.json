@@ -1,0 +1,23 @@
+{
+  "alpha_id": "R04",
+  "family": "regime",
+  "hypothesis": "illiquid-market hours should be skipped",
+  "mechanism": "thin global state worsens cost tolerance",
+  "venue": "Base V3",
+  "universe": "active observed pools",
+  "horizon": "4h",
+  "data_source": "cross-pool hourly state",
+  "experiment": "no-trade meta filter",
+  "feature": "market_liquidity",
+  "direction": 1,
+  "prediction_object": "cost-adjusted return",
+  "falsifier": "gross and net outcomes do not improve",
+  "status": "NOT_YET_TESTED",
+  "sample_size": 0,
+  "gross_result": "pending",
+  "cost_adjusted_result": "pending",
+  "capacity": "pending",
+  "concentration": "pending",
+  "tail_risk": "pending",
+  "next_action": "run rapid screen"
+}

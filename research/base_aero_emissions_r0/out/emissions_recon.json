@@ -1,0 +1,17 @@
+{
+  "source_A_rows_all_gauges": 26440,
+  "source_A_distinct_gauges": 793,
+  "source_A_rows_cl_gauges": 6467,
+  "source_B_rows": 10354,
+  "keys_compared": 6585,
+  "exact_match": 3688,
+  "mismatch": 2779,
+  "only_A": 0,
+  "only_B": 118,
+  "notifiers": {
+    "0x16613524e02ad97edfef371bc883f2f5d6c480a5": 6467,
+    "0x11a53f31bf406de59fcf9613e1922bd3e283a4b4": 1845,
+    "0xe6a41fe61e7a1996b59d508661e3f524d6a32075": 2,
+    "0xee5b3c7b333e2870b746b3b2b168ef0958e55e15": 2040
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "body_sha256": "899ec5b511888493bff3d44f16361497b766d9b24895ed4d12888c98131c824f",
+  "bytes": 103,
+  "finished": "2026-10-01T07:30:18.902113+00:00",
+  "http_status": 200,
+  "key": "c311bb4b7ad87a6f495da27fbb9e1a7705b7e1c7ce554578d1a7b71e414ee97f",
+  "label": "migration_events",
+  "payload": {
+    "id": 1,
+    "jsonrpc": "2.0",
+    "method": "eth_getLogs",
+    "params": [
+      {
+        "address": "0x5c952063c7fc8610ffdb798152d69f0b9550762b",
+        "fromBlock": "0x76b7bf0",
+        "toBlock": "0x76b7c21",
+        "topics": [
+          "0xc18aa71171b358b706fe3dd345299685ba21a5316c66ffa9e319268b033c44b0"
+        ]
+      }
+    ]
+  },
+  "started": "2026-10-01T07:30:17.536012+00:00",
+  "url": "https://1rpc.io/bnb"
+}

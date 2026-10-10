@@ -1,0 +1,19 @@
+{
+  "written_before_fills": true,
+  "written_utc": "2026-08-17T05:32:00+00:00",
+  "f03_protocol": "wildcat deep-dive 40% time calibration, tails 20/80",
+  "primary_set": "all replay LONG_TICK = F03 HIGH and token1==WETH",
+  "secondary_set": "60 SHORT_TICK_VIA_ALT = F03 LOW and token0==WETH, 20 per month, seed 8453",
+  "shadow": "classify 4 frozen signals; run only if mapped; n=4 no verdict",
+  "amt_in_wei": 16666666666666666,
+  "entry": "last_swap_block_of_signal_hour + 1",
+  "exit": "last_swap_block in [t+4h,t+5h) else entry+7200",
+  "fee": "onchain fee() at entry block",
+  "primary_pnl": "router eth_call buy + atomic sell",
+  "quoter": "comparison only",
+  "tick_fwd_ret_4": "comparison only",
+  "gas_debit_weth": 0.0002,
+  "reject_is_zero": true,
+  "do_not_buy_alt_on_HIGH_when_weth_is_token0": true,
+  "highest_status": "SHADOW_CANDIDATE"
+}

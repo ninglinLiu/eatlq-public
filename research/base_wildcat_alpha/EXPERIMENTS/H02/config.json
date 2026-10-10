@@ -1,0 +1,23 @@
+{
+  "alpha_id": "H02",
+  "family": "path",
+  "hypothesis": "close near hourly high predicts reversal",
+  "mechanism": "edge closes reflect temporary exhaustion",
+  "venue": "Base V3",
+  "universe": "active observed pools",
+  "horizon": "4h",
+  "data_source": "V3 ticks in event order",
+  "experiment": "inverse quintile spread",
+  "feature": "close_location",
+  "direction": -1,
+  "prediction_object": "next return",
+  "falsifier": "walk-forward sign is unstable",
+  "status": "NOT_YET_TESTED",
+  "sample_size": 0,
+  "gross_result": "pending",
+  "cost_adjusted_result": "pending",
+  "capacity": "pending",
+  "concentration": "pending",
+  "tail_risk": "pending",
+  "next_action": "run rapid screen"
+}

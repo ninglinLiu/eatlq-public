@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360" fill="none">
+  <defs>
+    <style>
+      .bg { fill: #0B0E14; }
+      .title { fill: #9E9E9E; font: 600 11px Inter; letter-spacing: 0.12em; }
+      .left { fill: #151922; stroke: #2A3140; }
+      .right { fill: #11151C; stroke: #F5A623; stroke-opacity: 0.35; }
+      .lh { fill: #6B7280; font: 600 12px Inter; }
+      .rh { fill: #F5A623; font: 600 12px Inter; }
+      .lt { fill: #9CA3AF; font: 400 11px Inter; }
+      .rt { fill: #E5E7EB; font: 500 11px Inter; }
+    </style>
+  </defs>
+  <rect width="960" height="360" class="bg" rx="10"/>
+  <text x="32" y="32" class="title">RETAIL STATUS QUO vs LASZLO INSTITUTIONAL STANDARD</text>
+
+  <rect x="32" y="52" width="440" height="280" rx="8" class="left"/>
+  <text x="56" y="84" class="lh">RETAIL</text>
+  <text x="56" y="118" class="lt">Noisy transfers · 15s polling</text>
+  <text x="56" y="142" class="lt">Nansen + TV + Uniswap tabs</text>
+  <text x="56" y="166" class="lt">Public mempool · MEV sandwich</text>
+  <text x="56" y="190" class="lt">Manual stop · forgot positions</text>
+  <text x="56" y="230" class="lt">Fragmented tools · context loss</text>
+
+  <rect x="488" y="52" width="440" height="280" rx="8" class="right"/>
+  <text x="512" y="84" class="rh">LASZLO</text>
+  <text x="512" y="118" class="rt">Blacklist + whale USD filter</text>
+  <text x="512" y="142" class="rt">WS ingest · Redis Streams · &lt;20ms</text>
+  <text x="512" y="166" class="rt">Ingest → Strategy → Executor loop</text>
+  <text x="512" y="190" class="rt">Base L2 gas · 3% slippage hard cap</text>
+  <text x="512" y="214" class="rt">Trailing · Time · Hard stop (chain)</text>
+  <text x="512" y="254" class="rt">Single-tenant weapon system</text>
+</svg>

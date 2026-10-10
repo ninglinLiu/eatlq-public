@@ -1,0 +1,23 @@
+{
+  "alpha_id": "S04",
+  "family": "survival",
+  "hypothesis": "price jump without breadth is a veto",
+  "mechanism": "mechanical spikes without new actors are fragile",
+  "venue": "Base V3",
+  "universe": "active observed pools",
+  "horizon": "4h",
+  "data_source": "future activity and price path",
+  "experiment": "conditional disaster screen",
+  "feature": "hollow_jump",
+  "direction": 1,
+  "prediction_object": "future adverse return",
+  "falsifier": "not worse than broad jumps",
+  "status": "NOT_YET_TESTED",
+  "sample_size": 0,
+  "gross_result": "pending",
+  "cost_adjusted_result": "pending",
+  "capacity": "pending",
+  "concentration": "pending",
+  "tail_risk": "pending",
+  "next_action": "run rapid screen"
+}

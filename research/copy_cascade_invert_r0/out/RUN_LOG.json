@@ -1,0 +1,62 @@
+{
+  "GO": false,
+  "finished_at": "2026-09-17T06:25:00+00:00",
+  "started_at": "2026-09-17T06:23:58+00:00",
+  "steps": [
+    {
+      "n": 15,
+      "name": "copy_offline",
+      "ok": true,
+      "status": null
+    },
+    {
+      "n": 18,
+      "name": "collect_gmgn",
+      "ok": true,
+      "status": "CAPTURED"
+    },
+    {
+      "n": 0,
+      "name": "collect_debot",
+      "ok": true,
+      "status": "SOURCE_BLOCKED"
+    },
+    {
+      "n": 0,
+      "name": "collect_fomo",
+      "ok": true,
+      "status": "SOURCE_BLOCKED"
+    },
+    {
+      "n": 1755,
+      "name": "normalize_boards",
+      "ok": true,
+      "status": "OK"
+    },
+    {
+      "n": null,
+      "name": "reconcile",
+      "ok": true,
+      "status": "VENDOR_LEDGER_GAP"
+    },
+    {
+      "n": null,
+      "name": "latency_tax",
+      "ok": true,
+      "status": "CLOSED_TAX_EATS_EDGE"
+    },
+    {
+      "n": 281,
+      "name": "arm_a",
+      "ok": true,
+      "status": null
+    },
+    {
+      "n": 192,
+      "name": "arm_b",
+      "ok": true,
+      "status": null
+    }
+  ],
+  "verdict": "VENDOR_LEDGER_GAP"
+}

@@ -1,0 +1,34 @@
+---
+description: When to use Gitleaks, DuckDB, Pandera; security and no-training/live/RPC guardrails for EATLQ agents.
+alwaysApply: true
+---
+
+# EATLQ — OSS tooling (Gitleaks / DuckDB / Pandera)
+
+## Security (non-negotiable)
+
+- Do **not** read, print, or commit real `.env`, private keys, RPC URLs with secrets, or API/Telegram tokens.
+- Gitleaks: always `--redact`; never paste `Secret`/`Match` or raw reports into chat or Git.
+- Never `git add .`; stage explicit paths only.
+
+## Gitleaks
+
+Use **before push** and after large edits or dependency/config changes. Output **path/rule/line aggregates** only. Repo is **gitleaks-noisy** on `generic-api-key`; treat **P0** (`private-key`, `telegram-bot-api-token`) seriously—**tracked P0 must be resolved before push**. Prefer baselines/path excludes for diagnostics/cache (see `mvp/audits/gitleaks_triage/`).
+
+## DuckDB
+
+For **`mvp/audits`**, **`mvp/runs`**, **diagnostics**, **bounded CSV/Parquet**, OOS/coverage/sidecar ROI-style rollups: prefer **DuckDB SQL** over ad-hoc pandas. Read-only inventory only; **not** ClickHouse replacement; **no RPC**.
+
+## Pandera
+
+For **dashcam / labeled_dataset / schema / leakage / ROI column** checks: use **Pandera** (`import pandera.pandas as pa`) for offline gates. Passing validation **does not** permit training or live.
+
+## Escalation
+
+If **tracked** files show **P0** gitleaks hits or suspected real secret in **git history**, stop and request **human security review** before push.
+
+## Full text
+
+See **`AGENTS.md`** and **`docs/dev/tooling-policy.md`** in repo root.
+
+**Note:** `.cursor/` may be gitignored; this file’s canonical path in Git is `docs/cursor/rules/eatlq-tooling.mdc`.

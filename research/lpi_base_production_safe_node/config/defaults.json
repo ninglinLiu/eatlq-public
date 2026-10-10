@@ -1,0 +1,20 @@
+{
+  "database_access_enabled": false,
+  "rpc_access_enabled": false,
+  "http_access_enabled": false,
+  "backfill_enabled": false,
+  "business_table_query_enabled": false,
+  "worker_concurrency": 1,
+  "database_query_concurrency": 1,
+  "rpc_concurrency": 1,
+  "max_threads": 1,
+  "memory_hard_ceiling_mib": 384,
+  "database_statement_timeout_sec": 10,
+  "request_timeout_sec": 10,
+  "retry_limit": 1,
+  "batch_size": 100,
+  "chain_id": 8453,
+  "chain_name": "base",
+  "source_host_role": "base_production_safe_data_node",
+  "workspace_root_required_prefix": "/root/lpi_base_production_safe_node"
+}

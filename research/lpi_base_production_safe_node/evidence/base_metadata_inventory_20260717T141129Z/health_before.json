@@ -1,0 +1,118 @@
+{
+  "decision": {
+    "snapshot": {
+      "clickhouse_active_merges": 0,
+      "clickhouse_active_queries_excl_self": 0,
+      "containers": {
+        "eatlq-archiver-1": {
+          "restart_count": 0,
+          "restart_growth": false,
+          "state": "running"
+        },
+        "eatlq-clickhouse-1": {
+          "restart_count": 0,
+          "restart_growth": false,
+          "state": "running"
+        },
+        "eatlq-executor-1": {
+          "restart_count": 0,
+          "restart_growth": false,
+          "state": "running"
+        },
+        "eatlq-ingestor-1": {
+          "restart_count": 0,
+          "restart_growth": false,
+          "state": "running"
+        },
+        "eatlq-postgres-1": {
+          "restart_count": 0,
+          "restart_growth": false,
+          "state": "running"
+        },
+        "eatlq-redis-1": {
+          "restart_count": 0,
+          "restart_growth": false,
+          "state": "running"
+        },
+        "eatlq-signal-bridge-1": {
+          "restart_count": 0,
+          "restart_growth": false,
+          "state": "running"
+        },
+        "eatlq-swap-poller-1": {
+          "restart_count": 0,
+          "restart_growth": false,
+          "state": "running"
+        }
+      },
+      "disk_free_bytes": 115791122432,
+      "executor_pending": 0,
+      "load_1m": 12.86,
+      "mem_available_kb": 17169792,
+      "notes": [],
+      "nproc": 8,
+      "swap_used_kb": 2237724,
+      "timestamp_utc": "2026-07-17T14:11:32Z",
+      "unknown_fields": []
+    },
+    "status": "BLOCKED_LIVE_PRIORITY",
+    "triggers": [
+      "load1=12.86>limit=6.0"
+    ]
+  },
+  "snapshot": {
+    "clickhouse_active_merges": 0,
+    "clickhouse_active_queries_excl_self": 0,
+    "containers": {
+      "eatlq-archiver-1": {
+        "restart_count": 0,
+        "restart_growth": false,
+        "state": "running"
+      },
+      "eatlq-clickhouse-1": {
+        "restart_count": 0,
+        "restart_growth": false,
+        "state": "running"
+      },
+      "eatlq-executor-1": {
+        "restart_count": 0,
+        "restart_growth": false,
+        "state": "running"
+      },
+      "eatlq-ingestor-1": {
+        "restart_count": 0,
+        "restart_growth": false,
+        "state": "running"
+      },
+      "eatlq-postgres-1": {
+        "restart_count": 0,
+        "restart_growth": false,
+        "state": "running"
+      },
+      "eatlq-redis-1": {
+        "restart_count": 0,
+        "restart_growth": false,
+        "state": "running"
+      },
+      "eatlq-signal-bridge-1": {
+        "restart_count": 0,
+        "restart_growth": false,
+        "state": "running"
+      },
+      "eatlq-swap-poller-1": {
+        "restart_count": 0,
+        "restart_growth": false,
+        "state": "running"
+      }
+    },
+    "disk_free_bytes": 115791122432,
+    "executor_pending": 0,
+    "load_1m": 12.86,
+    "mem_available_kb": 17169792,
+    "notes": [],
+    "nproc": 8,
+    "swap_used_kb": 2237724,
+    "timestamp_utc": "2026-07-17T14:11:32Z",
+    "unknown_fields": []
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "source_endpoint_class": "public_base_http",
+  "source_endpoint": "https://mainnet.base.org",
+  "window": {
+    "from_block": 48745520,
+    "to_block": 48753520,
+    "latest_at_fetch": 48755520
+  },
+  "factory": "0xE85A59c628F7d27878ACeB4bf3b35733630083a9",
+  "topic0": "0x9299d1d1a88d8e1abdc591ae7a167a6bc63a8f17d695804e9091ee33aa89fb67",
+  "cases": [
+    {
+      "file": "success_01.json",
+      "sha256": "fbdb93394cc87e5c34de8b5e721033fe3c6d428518d1bdab5dc1ffedad100da4",
+      "expected_status": "OK",
+      "observed_status": "OK",
+      "transaction_hash": "0x3e9ba4f2e94faca97526d1d756e7e2adf6935eb43df28a91cf84502560ce4a6a",
+      "block_number": 48745614,
+      "address": "0xe85a59c628f7d27878aceb4bf3b35733630083a9"
+    },
+    {
+      "file": "success_02.json",
+      "sha256": "a6ee39934efc195d5ba79d128513ea508489674cf0ad3feb185ea35c93a693ff",
+      "expected_status": "OK",
+      "observed_status": "OK",
+      "transaction_hash": "0xd12a32bd2f4b12f5f9784dc492c6c0292842a74da03f1ea4f1eddf5299532e2b",
+      "block_number": 48745739,
+      "address": "0xe85a59c628f7d27878aceb4bf3b35733630083a9"
+    },
+    {
+      "file": "success_03.json",
+      "sha256": "5482ba5e750a45629c29cde0eaf02b69df8b703f964c49a05c45232545c0e395",
+      "expected_status": "OK",
+      "observed_status": "OK",
+      "transaction_hash": "0x4e6e900c5a3df9ab4c2ae3b4a4f64676a93140e22b01c19721030421b4b97f37",
+      "block_number": 48745835,
+      "address": "0xe85a59c628f7d27878aceb4bf3b35733630083a9"
+    },
+    {
+      "file": "non_clanker_transfer.json",
+      "sha256": "81ad8c49cad052ef14b4f821cb26bd23c6e35ebea4948efda0a55d054ef84bba",
+      "expected_status": "NOT_CLANKER_LAUNCH",
+      "observed_status": "NOT_CLANKER_LAUNCH",
+      "transaction_hash": "0x705bb8bf0841f3b5a7a285eb5ced033d5f37eb64ef11f78d794e454fe5fccad8",
+      "block_number": 48753515,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    {
+      "file": "malformed_short_data.json",
+      "sha256": "ccde02b7cd7c498194e242a37a2c1b809b1e2f40407373c48620b6a151413cd9",
+      "expected_status": "MALFORMED_LOG",
+      "observed_status": "MALFORMED_LOG",
+      "transaction_hash": "0x3e9ba4f2e94faca97526d1d756e7e2adf6935eb43df28a91cf84502560ce4a6a",
+      "block_number": 48745614,
+      "address": "0xe85a59c628f7d27878aceb4bf3b35733630083a9"
+    },
+    {
+      "file": "wrong_version_topic.json",
+      "sha256": "e225328f1a5b778fc87c3267ff5eb5dd0daf24105adcba576cbfadf3ffdc0ee5",
+      "expected_status": "UNKNOWN_VERSION",
+      "observed_status": "UNKNOWN_VERSION",
+      "transaction_hash": "0xd12a32bd2f4b12f5f9784dc492c6c0292842a74da03f1ea4f1eddf5299532e2b",
+      "block_number": 48745739,
+      "address": "0xe85a59c628f7d27878aceb4bf3b35733630083a9"
+    }
+  ]
+}

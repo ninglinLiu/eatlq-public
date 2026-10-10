@@ -1,0 +1,10 @@
+<clickhouse>
+  <profiles>
+    <default>
+      <max_insert_block_size>1048576</max_insert_block_size>
+      <async_insert>1</async_insert>
+      <wait_for_async_insert>1</wait_for_async_insert>
+      <max_threads>4</max_threads>
+    </default>
+  </profiles>
+</clickhouse>

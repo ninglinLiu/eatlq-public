@@ -1,0 +1,14 @@
+{
+  "created_at_utc": "2026-07-17T19:04:47Z",
+  "docker_accessed": false,
+  "network_boundary": "PUBLIC_BASE_RPC_ONLY",
+  "production_clickhouse_accessed": false,
+  "production_redis_accessed": false,
+  "run_id": "clanker_actual_sell_route_capture_v021",
+  "source_commit": "a12d9356dbabd9984f329faec0e0ad61e78e3669",
+  "source_crosscheck_evidence_commit": "1df2268",
+  "source_direction_corrected_commit": "e883ba0",
+  "source_sell_crosschecks_sha256": "aea99749fc966def96cbc84be561a671383fcecdc8107a0d08ed050b07dafe42",
+  "transaction_submission_capability": false,
+  "wallet_or_signing_accessed": false
+}

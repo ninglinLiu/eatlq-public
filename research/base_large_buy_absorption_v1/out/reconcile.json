@@ -1,0 +1,49 @@
+{
+  "task": "denominator_reconciliation",
+  "generated_at": "2026-07-21T06:24:50Z",
+  "v0_frozen_figures": {
+    "arm_vs_arm_share": {
+      "value": 0.6742481331780503,
+      "formula": "WHALE_EVENT selected / POOL_ONLY selected",
+      "nums": "19684 / 29194 = 67.42%"
+    },
+    "within_pool_overlay_share": {
+      "value": 0.6198533945331233,
+      "formula": "whale-flagged rows among POOL_ONLY selected",
+      "nums": "18096 / 29194 = 61.99%",
+      "note": "Different denominator than arm-vs-arm; both correct."
+    },
+    "skip_rate_whale": {
+      "value": 0.975,
+      "formula": "WHALE arm scheduled skips / (fills+skips) under $1000 max_concurrent=3"
+    },
+    "skip_rate_pool": {
+      "value": 0.99198,
+      "formula": "POOL_ONLY arm same scheduler",
+      "note": "~99% was POOL, ~97.5% was WHALE \u2014 not a contradiction."
+    },
+    "unique_days_whale_selected": {
+      "value": 43,
+      "explanation": "v0 whale-selected 43 unique days arose from: (1) underlying resolved data covering only 131 of 274 calendar days (true discontinuity), (2) walk-forward TEST windows only, (3) v0 200k random downsample of scoped buys (removed in v1), (4) absorbed+quantile selection. Not a date-field bug alone."
+    }
+  },
+  "v1_figures": {
+    "POOL_ONLY_selected": 75797,
+    "LARGE_BUY_ABSORPTION_selected": 48148,
+    "LARGE_BUY_ONLY_selected": 78329,
+    "arm_vs_arm_share_lba_over_pool": 0.6352230299352217,
+    "within_pool_lba_flag_share": 0.5985856960037996,
+    "skip_rate_POOL_ONLY": 0.9978627122445479,
+    "skip_rate_LARGE_BUY_ABSORPTION": 0.9915468970673756,
+    "skip_rate_LARGE_BUY_ONLY": 0.9946124679237575,
+    "calendar_coverage_frac_scoped": 0.38321167883211676,
+    "calendar_missing_days_n": 169,
+    "full_universe_no_downsample": true
+  },
+  "rules": [
+    "Always state numerator and denominator explicitly.",
+    "Never mix arm-vs-arm share with within-pool overlay share.",
+    "Always label which arm a skip_rate belongs to.",
+    "Monthly $1000 target evaluated only over months with covered days."
+  ]
+}

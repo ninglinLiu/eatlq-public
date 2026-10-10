@@ -1,0 +1,112 @@
+{
+  "task": "INTRADAY_RANKING",
+  "generated_at": "2026-07-21T07:22:55Z",
+  "features_used": [
+    "depth_score",
+    "pool_age_s",
+    "mom_from_open",
+    "rel_size",
+    "buy_intensity_30m",
+    "prior_30m_volume_weth",
+    "depth_impact_100usd"
+  ],
+  "top_k_intraday": 3,
+  "n_test_rows": 46865,
+  "policies": {
+    "PIT_RIDGE_TOPK": {
+      "n_selected": 24,
+      "n_fills": 12,
+      "skip_rate": 0.5,
+      "scheduled_trading_pnl_weth": -0.019422249897146505,
+      "cum_withdrawn_usd": 0.0
+    },
+    "RANK_RANDOM": {
+      "n_selected": 24,
+      "n_fills": 17,
+      "skip_rate": 0.2916666666666667,
+      "scheduled_trading_pnl_weth": -0.030312488686605896,
+      "cum_withdrawn_usd": 2.0141619322265325
+    },
+    "RANK_BY_SIZE": {
+      "n_selected": 24,
+      "n_fills": 17,
+      "skip_rate": 0.2916666666666667,
+      "scheduled_trading_pnl_weth": 0.009443423152084374,
+      "cum_withdrawn_usd": 54.44503605578282
+    },
+    "RANK_BY_LBA_SCORE": {
+      "n_selected": 24,
+      "n_fills": 16,
+      "skip_rate": 0.3333333333333333,
+      "scheduled_trading_pnl_weth": -0.0016168767946833657,
+      "cum_withdrawn_usd": 0.0
+    }
+  },
+  "paired": {
+    "vs_random": {
+      "n_days": 8,
+      "sum_delta": 0.010890238789459388,
+      "mean_daily_delta": 0.0013612798486824236,
+      "bootstrap_day": {
+        "mean": 0.007192739180807649,
+        "p05": -0.03466608157665429,
+        "frac_positive": 0.59,
+        "n_clusters": 8
+      },
+      "bootstrap_token": {
+        "mean": 0.00831933892114519,
+        "p05": -0.04704520290050277,
+        "frac_positive": 0.595,
+        "n_clusters": 25
+      },
+      "p05_day": -0.03466608157665429,
+      "p05_token": -0.04704520290050277,
+      "passes": false
+    },
+    "vs_size": {
+      "n_days": 8,
+      "sum_delta": -0.028865673049230878,
+      "mean_daily_delta": -0.0036082091311538597,
+      "bootstrap_day": {
+        "mean": -0.030237380989880432,
+        "p05": -0.05988648165144439,
+        "frac_positive": 0.025,
+        "n_clusters": 8
+      },
+      "bootstrap_token": {
+        "mean": -0.02767860598468383,
+        "p05": -0.061114111427323065,
+        "frac_positive": 0.05,
+        "n_clusters": 25
+      },
+      "p05_day": -0.05988648165144439,
+      "p05_token": -0.061114111427323065,
+      "passes": false
+    },
+    "vs_lba_score": {
+      "n_days": 8,
+      "sum_delta": -0.017805373102463138,
+      "mean_daily_delta": -0.0022256716378078923,
+      "bootstrap_day": {
+        "mean": -0.02111389556724728,
+        "p05": -0.058536235528804555,
+        "frac_positive": 0.17,
+        "n_clusters": 8
+      },
+      "bootstrap_token": {
+        "mean": -0.014893611919469418,
+        "p05": -0.061286616533266065,
+        "frac_positive": 0.315,
+        "n_clusters": 25
+      },
+      "p05_day": -0.058536235528804555,
+      "p05_token": -0.061286616533266065,
+      "passes": false
+    }
+  },
+  "verdicts": {
+    "STRUCTURED_RANKING_BEATS_RANDOM": "UNCONFIRMED",
+    "STRUCTURED_RANKING_BEATS_SIZE": "REFUTED"
+  },
+  "note": "Features are PIT-only; absorbed is an event label known at signal_t (eligibility), not a future path feature."
+}

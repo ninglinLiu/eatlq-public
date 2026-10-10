@@ -1,0 +1,15 @@
+[project]
+name = "launchpad-intelligence"
+version = "0.1.0"
+description = "Offline-first, point-in-time-safe launchpad intelligence core"
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+

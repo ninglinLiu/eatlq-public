@@ -1,0 +1,27 @@
+{
+  "strategy_id": "F03_VOL_JUMP_CONTINUE",
+  "data_class": "A_OFFLINE_DATA_LIKELY_AVAILABLE",
+  "required_tables_or_files": [
+    "OHLCV/swaps"
+  ],
+  "required_columns": [
+    "close",
+    "time",
+    "pool"
+  ],
+  "required_time_resolution": "1m",
+  "point_in_time_requirements": "PIT",
+  "minimum_history": ">=14d",
+  "estimated_rows": "~1e6",
+  "estimated_read_bytes": "50-500MB",
+  "whether_current_diagnostics_may_support_it": "yes ohlcv diagnostics names",
+  "whether_production_database_would_be_required": false,
+  "missing_data": [],
+  "feasibility": "PARTIAL",
+  "evidence": [
+    "normalized/wave1_probe/sprint035f_ohlcv_multihorizon_diagnostic.csv",
+    "normalized/wave1_probe/base_b5_real_swaps_head50k.tsv"
+  ],
+  "notes": "OHLCV smoke too small; derive 1m from swaps",
+  "data_class_revised": "B_DERIVE_OR_SMALL_EXPORT"
+}

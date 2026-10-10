@@ -1,0 +1,7 @@
+{
+  "adapter_gate": {"requires_real_golden": true, "min_case_kinds": 12, "required_reconciliations": 10},
+  "research_gate": {"requires_adapter_gate": true, "requires_point_in_time": true, "requires_unknown_coverage": true},
+  "paper_forward_gate": {"manual_approval_required": true, "minimum_independent_signals": 30, "live_execution_enabled": false},
+  "allowed_verdicts": ["PASS","PAPER_ONLY","WEAK_STRUCTURE","INCONCLUSIVE","FAIL","REJECT_NOT_EXECUTABLE","REJECT_DATA_INVALID"]
+}
+

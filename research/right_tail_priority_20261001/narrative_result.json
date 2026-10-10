@@ -1,0 +1,3616 @@
+{
+  "biases": [
+    "retrospectively named events",
+    "DEX search incomplete for disappeared contracts",
+    "saved pool selected at collection, not proven available at historical signal",
+    "strict absence-as-unknown, not zero-volume assumption",
+    "hour bars cannot test 10-second execution"
+  ],
+  "generated_at": "2026-10-01T11:39:25.468900+00:00",
+  "groups": [
+    {
+      "chain": "bsc",
+      "event_id": "E01_niulai",
+      "n_contracts": 28,
+      "n_full_coverage_hours": 0,
+      "n_missing_competitor_hours": 42,
+      "n_series": 4,
+      "primary_scope": true,
+      "signals": [],
+      "status": "INCOMPLETE_COMPETITOR_HISTORY"
+    },
+    {
+      "chain": "bsc",
+      "event_id": "E02_moodeng",
+      "n_contracts": 2,
+      "n_full_coverage_hours": 0,
+      "n_missing_competitor_hours": 0,
+      "n_series": 0,
+      "primary_scope": true,
+      "signals": [],
+      "status": "INCOMPLETE_COMPETITOR_HISTORY"
+    },
+    {
+      "chain": "solana",
+      "event_id": "E02_moodeng",
+      "n_contracts": 6,
+      "n_full_coverage_hours": 0,
+      "n_missing_competitor_hours": 4996,
+      "n_series": 6,
+      "primary_scope": false,
+      "signals": [],
+      "status": "INCOMPLETE_COMPETITOR_HISTORY"
+    },
+    {
+      "chain": "bsc",
+      "event_id": "E03_chillguy",
+      "n_contracts": 1,
+      "n_full_coverage_hours": 0,
+      "n_missing_competitor_hours": 0,
+      "n_series": 0,
+      "primary_scope": true,
+      "signals": [],
+      "status": "NO_COMPETITION"
+    },
+    {
+      "chain": "solana",
+      "event_id": "E03_chillguy",
+      "n_contracts": 3,
+      "n_full_coverage_hours": 3,
+      "n_missing_competitor_hours": 45,
+      "n_series": 3,
+      "primary_scope": false,
+      "signals": [
+        {
+          "available_at": 1786712400,
+          "hour_start": 1786708800,
+          "n_competitors": 2,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": -0.004674098848456931,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": -0.004674098848456931
+            },
+            "24": {
+              "earliest_gross": 0.06519008314825858,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": 0.06519008314825858
+            },
+            "4": {
+              "earliest_gross": 0.018146277564170088,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": 0.018146277564170088
+            }
+          },
+          "share": 0.7300151122041467,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E03_chillguy__solana__df6yfrkc8k"
+        }
+      ],
+      "status": "CONDITIONAL_REPLAY_ONLY"
+    },
+    {
+      "chain": "base",
+      "event_id": "E04_fartcoin",
+      "n_contracts": 1,
+      "n_full_coverage_hours": 0,
+      "n_missing_competitor_hours": 0,
+      "n_series": 0,
+      "primary_scope": true,
+      "signals": [],
+      "status": "NO_COMPETITION"
+    },
+    {
+      "chain": "solana",
+      "event_id": "E04_fartcoin",
+      "n_contracts": 9,
+      "n_full_coverage_hours": 0,
+      "n_missing_competitor_hours": 4995,
+      "n_series": 8,
+      "primary_scope": false,
+      "signals": [],
+      "status": "INCOMPLETE_COMPETITOR_HISTORY"
+    },
+    {
+      "chain": "base",
+      "event_id": "E05_neiro",
+      "n_contracts": 1,
+      "n_full_coverage_hours": 0,
+      "n_missing_competitor_hours": 0,
+      "n_series": 0,
+      "primary_scope": true,
+      "signals": [],
+      "status": "NO_COMPETITION"
+    },
+    {
+      "chain": "bsc",
+      "event_id": "E05_neiro",
+      "n_contracts": 6,
+      "n_full_coverage_hours": 0,
+      "n_missing_competitor_hours": 35,
+      "n_series": 1,
+      "primary_scope": true,
+      "signals": [],
+      "status": "INCOMPLETE_COMPETITOR_HISTORY"
+    },
+    {
+      "chain": "ethereum",
+      "event_id": "E05_neiro",
+      "n_contracts": 4,
+      "n_full_coverage_hours": 0,
+      "n_missing_competitor_hours": 4998,
+      "n_series": 4,
+      "primary_scope": false,
+      "signals": [],
+      "status": "INCOMPLETE_COMPETITOR_HISTORY"
+    },
+    {
+      "chain": "solana",
+      "event_id": "E06_pnutt",
+      "n_contracts": 27,
+      "n_full_coverage_hours": 0,
+      "n_missing_competitor_hours": 4996,
+      "n_series": 8,
+      "primary_scope": false,
+      "signals": [],
+      "status": "INCOMPLETE_COMPETITOR_HISTORY"
+    },
+    {
+      "chain": "base",
+      "event_id": "E07_clanker",
+      "n_contracts": 1,
+      "n_full_coverage_hours": 0,
+      "n_missing_competitor_hours": 0,
+      "n_series": 1,
+      "primary_scope": true,
+      "signals": [],
+      "status": "NO_COMPETITION"
+    },
+    {
+      "chain": "base",
+      "event_id": "E08_virtuals",
+      "n_contracts": 1,
+      "n_full_coverage_hours": 0,
+      "n_missing_competitor_hours": 0,
+      "n_series": 1,
+      "primary_scope": true,
+      "signals": [],
+      "status": "NO_COMPETITION"
+    },
+    {
+      "chain": "solana",
+      "event_id": "E09_pumpfun",
+      "n_contracts": 19,
+      "n_full_coverage_hours": 0,
+      "n_missing_competitor_hours": 221,
+      "n_series": 8,
+      "primary_scope": false,
+      "signals": [],
+      "status": "INCOMPLETE_COMPETITOR_HISTORY"
+    },
+    {
+      "chain": "base",
+      "event_id": "E10_bonk",
+      "n_contracts": 2,
+      "n_full_coverage_hours": 0,
+      "n_missing_competitor_hours": 0,
+      "n_series": 0,
+      "primary_scope": true,
+      "signals": [],
+      "status": "INCOMPLETE_COMPETITOR_HISTORY"
+    },
+    {
+      "chain": "bsc",
+      "event_id": "E10_bonk",
+      "n_contracts": 2,
+      "n_full_coverage_hours": 0,
+      "n_missing_competitor_hours": 0,
+      "n_series": 0,
+      "primary_scope": true,
+      "signals": [],
+      "status": "INCOMPLETE_COMPETITOR_HISTORY"
+    },
+    {
+      "chain": "solana",
+      "event_id": "E10_bonk",
+      "n_contracts": 7,
+      "n_full_coverage_hours": 0,
+      "n_missing_competitor_hours": 4998,
+      "n_series": 7,
+      "primary_scope": false,
+      "signals": [],
+      "status": "INCOMPLETE_COMPETITOR_HISTORY"
+    },
+    {
+      "chain": "base",
+      "event_id": "E11_brett",
+      "n_contracts": 1,
+      "n_full_coverage_hours": 0,
+      "n_missing_competitor_hours": 0,
+      "n_series": 1,
+      "primary_scope": true,
+      "signals": [],
+      "status": "NO_COMPETITION"
+    },
+    {
+      "chain": "bsc",
+      "event_id": "E11_brett",
+      "n_contracts": 1,
+      "n_full_coverage_hours": 0,
+      "n_missing_competitor_hours": 0,
+      "n_series": 0,
+      "primary_scope": true,
+      "signals": [],
+      "status": "NO_COMPETITION"
+    },
+    {
+      "chain": "base",
+      "event_id": "E12_toshi",
+      "n_contracts": 1,
+      "n_full_coverage_hours": 0,
+      "n_missing_competitor_hours": 0,
+      "n_series": 1,
+      "primary_scope": true,
+      "signals": [],
+      "status": "NO_COMPETITION"
+    },
+    {
+      "chain": "bsc",
+      "event_id": "E12_toshi",
+      "n_contracts": 1,
+      "n_full_coverage_hours": 0,
+      "n_missing_competitor_hours": 0,
+      "n_series": 0,
+      "primary_scope": true,
+      "signals": [],
+      "status": "NO_COMPETITION"
+    },
+    {
+      "chain": "base",
+      "event_id": "E13_trump_fragment",
+      "n_contracts": 5,
+      "n_full_coverage_hours": 0,
+      "n_missing_competitor_hours": 391,
+      "n_series": 2,
+      "primary_scope": true,
+      "signals": [],
+      "status": "INCOMPLETE_COMPETITOR_HISTORY"
+    },
+    {
+      "chain": "bsc",
+      "event_id": "E13_trump_fragment",
+      "n_contracts": 2,
+      "n_full_coverage_hours": 0,
+      "n_missing_competitor_hours": 0,
+      "n_series": 0,
+      "primary_scope": true,
+      "signals": [],
+      "status": "INCOMPLETE_COMPETITOR_HISTORY"
+    },
+    {
+      "chain": "solana",
+      "event_id": "E13_trump_fragment",
+      "n_contracts": 4,
+      "n_full_coverage_hours": 0,
+      "n_missing_competitor_hours": 2381,
+      "n_series": 4,
+      "primary_scope": false,
+      "signals": [],
+      "status": "INCOMPLETE_COMPETITOR_HISTORY"
+    },
+    {
+      "chain": "solana",
+      "event_id": "E14_harris",
+      "n_contracts": 5,
+      "n_full_coverage_hours": 0,
+      "n_missing_competitor_hours": 216,
+      "n_series": 5,
+      "primary_scope": false,
+      "signals": [],
+      "status": "INCOMPLETE_COMPETITOR_HISTORY"
+    },
+    {
+      "chain": "base",
+      "event_id": "E15_maga",
+      "n_contracts": 3,
+      "n_full_coverage_hours": 0,
+      "n_missing_competitor_hours": 0,
+      "n_series": 0,
+      "primary_scope": true,
+      "signals": [],
+      "status": "INCOMPLETE_COMPETITOR_HISTORY"
+    },
+    {
+      "chain": "bsc",
+      "event_id": "E15_maga",
+      "n_contracts": 3,
+      "n_full_coverage_hours": 0,
+      "n_missing_competitor_hours": 0,
+      "n_series": 0,
+      "primary_scope": true,
+      "signals": [],
+      "status": "INCOMPLETE_COMPETITOR_HISTORY"
+    },
+    {
+      "chain": "ethereum",
+      "event_id": "E15_maga",
+      "n_contracts": 5,
+      "n_full_coverage_hours": 122,
+      "n_missing_competitor_hours": 3328,
+      "n_series": 5,
+      "primary_scope": false,
+      "signals": [
+        {
+          "available_at": 1767560400,
+          "hour_start": 1767556800,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            }
+          },
+          "share": 0.6178167795168595,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1767718800,
+          "hour_start": 1767715200,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": -0.006343224609256182,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": -0.024535659374706476,
+              "equal_weight_gross": null,
+              "resolved_competitors": 2,
+              "winner_gross": -0.026213427456142746
+            },
+            "4": {
+              "earliest_gross": 0.00654739148437411,
+              "equal_weight_gross": null,
+              "resolved_competitors": 2,
+              "winner_gross": -0.0060645844119195935
+            }
+          },
+          "share": 0.8019995037899464,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1767798000,
+          "hour_start": 1767794400,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            }
+          },
+          "share": 0.7432424021592859,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1768014000,
+          "hour_start": 1768010400,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": 0.003686458841921203,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": 0.003686458841921203
+            }
+          },
+          "share": 0.8862419034635459,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0x576e2bed"
+        },
+        {
+          "available_at": 1768150800,
+          "hour_start": 1768147200,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            }
+          },
+          "share": 0.8913716689697414,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0x576e2bed"
+        },
+        {
+          "available_at": 1768186800,
+          "hour_start": 1768183200,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": -0.0011155894092582663,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": -0.013770405483301551,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            }
+          },
+          "share": 0.8881312369284818,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1768215600,
+          "hour_start": 1768212000,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            }
+          },
+          "share": 0.6630021827551565,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0x6aa56e1d"
+        },
+        {
+          "available_at": 1768284000,
+          "hour_start": 1768280400,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            }
+          },
+          "share": 0.7286975769676516,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0x6aa56e1d"
+        },
+        {
+          "available_at": 1768428000,
+          "hour_start": 1768424400,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            }
+          },
+          "share": 0.9657842162559899,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1768950000,
+          "hour_start": 1768946400,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": 0.008476986629044392,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": null
+            }
+          },
+          "share": 0.7612686988160522,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1769022000,
+          "hour_start": 1769018400,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": -0.021545681480116596
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": -0.010351484558677071
+            }
+          },
+          "share": 0.9790450412774658,
+          "status": "OBSERVED_DOMINANCE_TRANSITION",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1769148000,
+          "hour_start": 1769144400,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            }
+          },
+          "share": 0.9916140235035462,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1769187600,
+          "hour_start": 1769184000,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            }
+          },
+          "share": 0.8070089636397108,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1769436000,
+          "hour_start": 1769432400,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            }
+          },
+          "share": 0.976214981368976,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1769886000,
+          "hour_start": 1769882400,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": -0.027175623395509607,
+              "equal_weight_gross": null,
+              "resolved_competitors": 2,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": -0.0044036413371707495,
+              "equal_weight_gross": null,
+              "resolved_competitors": 2,
+              "winner_gross": null
+            }
+          },
+          "share": 0.4545708658299847,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0x6aa56e1d"
+        },
+        {
+          "available_at": 1769907600,
+          "hour_start": 1769904000,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": -0.0070964952523612235
+            },
+            "24": {
+              "earliest_gross": -0.06496130840747893,
+              "equal_weight_gross": null,
+              "resolved_competitors": 2,
+              "winner_gross": -0.05440837280719901
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            }
+          },
+          "share": 0.5344475555646089,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1769958000,
+          "hour_start": 1769954400,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": -0.02045298234002535
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": 0.01089398964204702
+            }
+          },
+          "share": 0.9824705933490118,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1769990400,
+          "hour_start": 1769986800,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            }
+          },
+          "share": 0.503207840933905,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0x6aa56e1d"
+        },
+        {
+          "available_at": 1770004800,
+          "hour_start": 1770001200,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": -0.025491196448086728,
+              "equal_weight_gross": 0.002332169866025876,
+              "resolved_competitors": 3,
+              "winner_gross": -0.025491196448086728
+            },
+            "24": {
+              "earliest_gross": 0.02694078982525694,
+              "equal_weight_gross": null,
+              "resolved_competitors": 2,
+              "winner_gross": 0.02694078982525694
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 2,
+              "winner_gross": null
+            }
+          },
+          "share": 0.7283416051302772,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0x576e2bed"
+        },
+        {
+          "available_at": 1770012000,
+          "hour_start": 1770008400,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": 0.012709031859890807,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            }
+          },
+          "share": 0.4741881624368576,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0x6aa56e1d"
+        },
+        {
+          "available_at": 1770163200,
+          "hour_start": 1770159600,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            }
+          },
+          "share": 0.7418902819447337,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1770228000,
+          "hour_start": 1770224400,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            }
+          },
+          "share": 0.6830434188339061,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0x6aa56e1d"
+        },
+        {
+          "available_at": 1770253200,
+          "hour_start": 1770249600,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            }
+          },
+          "share": 0.6114413888282535,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0x576e2bed"
+        },
+        {
+          "available_at": 1770292800,
+          "hour_start": 1770289200,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": -0.06302112487257905,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            }
+          },
+          "share": 0.6900887949700252,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1770310800,
+          "hour_start": 1770307200,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            }
+          },
+          "share": 0.9884997772214037,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1770325200,
+          "hour_start": 1770321600,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": -0.00537339993409236,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": 0.11181221896246507,
+              "equal_weight_gross": null,
+              "resolved_competitors": 2,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": 0.01596405944906487,
+              "equal_weight_gross": null,
+              "resolved_competitors": 2,
+              "winner_gross": null
+            }
+          },
+          "share": 0.8387626870603008,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0x6aa56e1d"
+        },
+        {
+          "available_at": 1770483600,
+          "hour_start": 1770480000,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": 0.03336087626191575
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            }
+          },
+          "share": 0.5022387318008202,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1770955200,
+          "hour_start": 1770951600,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": -0.001442359379006608,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": 0.05948591120784563,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            }
+          },
+          "share": 0.5529671059455973,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0x6aa56e1d"
+        },
+        {
+          "available_at": 1771542000,
+          "hour_start": 1771538400,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": -0.02835237614645758,
+              "equal_weight_gross": null,
+              "resolved_competitors": 2,
+              "winner_gross": -0.02835237614645758
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": -0.02791895974154701,
+              "equal_weight_gross": null,
+              "resolved_competitors": 2,
+              "winner_gross": -0.02791895974154701
+            }
+          },
+          "share": 0.9922742834593747,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0x576e2bed"
+        },
+        {
+          "available_at": 1771560000,
+          "hour_start": 1771556400,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": 0.02015320848845903,
+              "equal_weight_gross": null,
+              "resolved_competitors": 2,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            }
+          },
+          "share": 0.8659363591885604,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1771668000,
+          "hour_start": 1771664400,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            }
+          },
+          "share": 0.945796080299029,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1771927200,
+          "hour_start": 1771923600,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            }
+          },
+          "share": 0.7902337440854375,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1771966800,
+          "hour_start": 1771963200,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": 0.15909932454740727,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": 0.15909932454740727
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": null
+            }
+          },
+          "share": 0.9000953691113045,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0x576e2bed"
+        },
+        {
+          "available_at": 1772017200,
+          "hour_start": 1772013600,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": 0.007053030894159207
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": 0.05063379420734071
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": 0.03742126729590378
+            }
+          },
+          "share": 0.704819032765481,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0x6aa56e1d"
+        },
+        {
+          "available_at": 1773406800,
+          "hour_start": 1773403200,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": 0.0025694666919937603,
+              "equal_weight_gross": null,
+              "resolved_competitors": 2,
+              "winner_gross": 0.040903028367593075
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": 0.03780278463978104
+            }
+          },
+          "share": 0.6752844395111346,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1773417600,
+          "hour_start": 1773414000,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": null
+            }
+          },
+          "share": 0.9036142419987566,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1773432000,
+          "hour_start": 1773428400,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": -0.027832234505571152
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": 0.0059547927372087806
+            }
+          },
+          "share": 0.9367786692196761,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1773496800,
+          "hour_start": 1773493200,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": -0.006786517725059782,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": null
+            }
+          },
+          "share": 0.7410638817092355,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0x6aa56e1d"
+        },
+        {
+          "available_at": 1774587600,
+          "hour_start": 1774584000,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": 0.004593988574792318,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": -0.002191138053684094,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": null
+            }
+          },
+          "share": 0.5040207438424997,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1775142000,
+          "hour_start": 1775138400,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            }
+          },
+          "share": 0.5778253160711387,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0x6aa56e1d"
+        },
+        {
+          "available_at": 1776121200,
+          "hour_start": 1776117600,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            }
+          },
+          "share": 0.7225584192315772,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0x6aa56e1d"
+        },
+        {
+          "available_at": 1776387600,
+          "hour_start": 1776384000,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            }
+          },
+          "share": 0.5080478356963429,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0x576e2bed"
+        },
+        {
+          "available_at": 1776474000,
+          "hour_start": 1776470400,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": 0.0018941071685456556
+            }
+          },
+          "share": 0.9197396450225125,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1776603600,
+          "hour_start": 1776600000,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": -0.0038059347699871404
+            },
+            "24": {
+              "earliest_gross": -0.00859295563912943,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": -0.008841666192173414
+            }
+          },
+          "share": 0.8787100244798007,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1776618000,
+          "hour_start": 1776614400,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            }
+          },
+          "share": 0.6712470276539471,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0x6aa56e1d"
+        },
+        {
+          "available_at": 1776830400,
+          "hour_start": 1776826800,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 2,
+              "winner_gross": 0.026826717122237165
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": -0.03976524169057072
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": -0.029551213008038535
+            }
+          },
+          "share": 0.9063585370241596,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1776841200,
+          "hour_start": 1776837600,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": 0.010639219827441426
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 2,
+              "winner_gross": -0.11802480678319893
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 2,
+              "winner_gross": -0.04415089244714143
+            }
+          },
+          "share": 0.6280705264166222,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1776859200,
+          "hour_start": 1776855600,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": -0.00909906008846817
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 2,
+              "winner_gross": -0.047294596966246716
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": 0.15453883415228953
+            }
+          },
+          "share": 0.7604740560624605,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1776862800,
+          "hour_start": 1776859200,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": -0.010935869651356178,
+              "equal_weight_gross": null,
+              "resolved_competitors": 2,
+              "winner_gross": -0.010935869651356178
+            },
+            "24": {
+              "earliest_gross": -0.04955976765665315,
+              "equal_weight_gross": null,
+              "resolved_competitors": 2,
+              "winner_gross": -0.04955976765665315
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": null
+            }
+          },
+          "share": 0.6642489937335134,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0x576e2bed"
+        },
+        {
+          "available_at": 1776891600,
+          "hour_start": 1776888000,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": -0.005327545058450012,
+              "equal_weight_gross": null,
+              "resolved_competitors": 2,
+              "winner_gross": 0.05436480348263828
+            },
+            "24": {
+              "earliest_gross": -0.040342169671117034,
+              "equal_weight_gross": -0.10111057026624037,
+              "resolved_competitors": 3,
+              "winner_gross": -0.2083625633478402
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 2,
+              "winner_gross": -0.06572419009822095
+            }
+          },
+          "share": 0.993502655058275,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1776895200,
+          "hour_start": 1776891600,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": 0.09590892175062593,
+              "equal_weight_gross": null,
+              "resolved_competitors": 2,
+              "winner_gross": 0.09590892175062593
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": null
+            }
+          },
+          "share": 0.8387627110097947,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0x576e2bed"
+        },
+        {
+          "available_at": 1776898800,
+          "hour_start": 1776895200,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": -0.10069814888005069
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": -0.11268332066324738
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": -0.12452924533983989
+            }
+          },
+          "share": 0.9896341480815765,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1776920400,
+          "hour_start": 1776916800,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": -0.0664392379880141
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": 0.0036461674415702028
+            },
+            "4": {
+              "earliest_gross": -0.0020918826897712295,
+              "equal_weight_gross": null,
+              "resolved_competitors": 2,
+              "winner_gross": -0.07911625223442642
+            }
+          },
+          "share": 0.7534939040735379,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1776952800,
+          "hour_start": 1776949200,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            }
+          },
+          "share": 0.8973400723895152,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1776985200,
+          "hour_start": 1776981600,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": -0.001515656041228386,
+              "equal_weight_gross": null,
+              "resolved_competitors": 2,
+              "winner_gross": 0.043755291465482404
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": -0.027488111686966188
+            },
+            "4": {
+              "earliest_gross": -0.03260386217957234,
+              "equal_weight_gross": null,
+              "resolved_competitors": 2,
+              "winner_gross": -0.08332213879082762
+            }
+          },
+          "share": 0.5808389874186364,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1777017600,
+          "hour_start": 1777014000,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": null
+            }
+          },
+          "share": 0.8779077349365441,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0x576e2bed"
+        },
+        {
+          "available_at": 1777050000,
+          "hour_start": 1777046400,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": -0.007425172071394037
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": -0.10400835847624634
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": -0.006843650749374985
+            }
+          },
+          "share": 0.8229987718570507,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1777060800,
+          "hour_start": 1777057200,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": 0.008375398968526682,
+              "equal_weight_gross": null,
+              "resolved_competitors": 2,
+              "winner_gross": 0.008375398968526682
+            }
+          },
+          "share": 0.9828687999213983,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0x576e2bed"
+        },
+        {
+          "available_at": 1777064400,
+          "hour_start": 1777060800,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": null
+            }
+          },
+          "share": 0.723027054832927,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0x6aa56e1d"
+        },
+        {
+          "available_at": 1777068000,
+          "hour_start": 1777064400,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": null
+            }
+          },
+          "share": 0.7696482912096899,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0x576e2bed"
+        },
+        {
+          "available_at": 1777208400,
+          "hour_start": 1777204800,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": 0.007930153624584602
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": 0.010240079469935104
+            }
+          },
+          "share": 0.9633978220936144,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1777338000,
+          "hour_start": 1777334400,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": -0.0014071039205595381
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": -0.0735467646575041
+            }
+          },
+          "share": 0.6766800859627293,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1777381200,
+          "hour_start": 1777377600,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": -0.0020652357650974285
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": 0.013565660000821156
+            }
+          },
+          "share": 0.9299225915245697,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1777636800,
+          "hour_start": 1777633200,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": 0.015215761037485676,
+              "equal_weight_gross": null,
+              "resolved_competitors": 2,
+              "winner_gross": 0.0505086702069204
+            },
+            "24": {
+              "earliest_gross": 0.03478965589059824,
+              "equal_weight_gross": null,
+              "resolved_competitors": 2,
+              "winner_gross": -0.03490295538903254
+            },
+            "4": {
+              "earliest_gross": 0.006156891605842096,
+              "equal_weight_gross": null,
+              "resolved_competitors": 2,
+              "winner_gross": 0.012819969463878422
+            }
+          },
+          "share": 0.9897546550130929,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1777705200,
+          "hour_start": 1777701600,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": -0.02086900542195358
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": -0.010066872918954695
+            }
+          },
+          "share": 0.9770632690730303,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0xd29da236"
+        },
+        {
+          "available_at": 1777896000,
+          "hour_start": 1777892400,
+          "n_competitors": 3,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            }
+          },
+          "share": 0.5952027481492307,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E15_maga__ethereum__0x576e2bed"
+        }
+      ],
+      "status": "CONDITIONAL_REPLAY_ONLY"
+    },
+    {
+      "chain": "bsc",
+      "event_id": "E16_biden",
+      "n_contracts": 2,
+      "n_full_coverage_hours": 0,
+      "n_missing_competitor_hours": 0,
+      "n_series": 0,
+      "primary_scope": true,
+      "signals": [],
+      "status": "INCOMPLETE_COMPETITOR_HISTORY"
+    },
+    {
+      "chain": "ethereum",
+      "event_id": "E16_biden",
+      "n_contracts": 2,
+      "n_full_coverage_hours": 6,
+      "n_missing_competitor_hours": 64,
+      "n_series": 2,
+      "primary_scope": false,
+      "signals": [
+        {
+          "available_at": 1783267200,
+          "hour_start": 1783263600,
+          "n_competitors": 2,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            }
+          },
+          "share": 0.5906126361571717,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E16_biden__ethereum__0xc548e905"
+        },
+        {
+          "available_at": 1786248000,
+          "hour_start": 1786244400,
+          "n_competitors": 2,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": null
+            }
+          },
+          "share": 0.5486002686347676,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E16_biden__ethereum__0xc548e905"
+        },
+        {
+          "available_at": 1786251600,
+          "hour_start": 1786248000,
+          "n_competitors": 2,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            }
+          },
+          "share": 0.5970957428736626,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E16_biden__ethereum__0x80999b02"
+        },
+        {
+          "available_at": 1786255200,
+          "hour_start": 1786251600,
+          "n_competitors": 2,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": 0.06598140488141202,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": 0.06598140488141202
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            }
+          },
+          "share": 0.5866378665735783,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E16_biden__ethereum__0xc548e905"
+        },
+        {
+          "available_at": 1786262400,
+          "hour_start": 1786258800,
+          "n_competitors": 2,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": 0.11798002548916786
+            }
+          },
+          "share": 0.9673089212762863,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E16_biden__ethereum__0x80999b02"
+        }
+      ],
+      "status": "CONDITIONAL_REPLAY_ONLY"
+    },
+    {
+      "chain": "solana",
+      "event_id": "E17_goatseus",
+      "n_contracts": 7,
+      "n_full_coverage_hours": 0,
+      "n_missing_competitor_hours": 5028,
+      "n_series": 6,
+      "primary_scope": false,
+      "signals": [],
+      "status": "INCOMPLETE_COMPETITOR_HISTORY"
+    },
+    {
+      "chain": "solana",
+      "event_id": "E18_hawktuah",
+      "n_contracts": 2,
+      "n_full_coverage_hours": 96,
+      "n_missing_competitor_hours": 1153,
+      "n_series": 2,
+      "primary_scope": false,
+      "signals": [
+        {
+          "available_at": 1767718800,
+          "hour_start": 1767715200,
+          "n_competitors": 2,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            }
+          },
+          "share": 0.996156340293057,
+          "status": "OBSERVED_DOMINANCE_TRANSITION",
+          "winner": "E18_hawktuah__solana__hawkthxrcn"
+        },
+        {
+          "available_at": 1768618800,
+          "hour_start": 1768615200,
+          "n_competitors": 2,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            }
+          },
+          "share": 0.9890420969490127,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E18_hawktuah__solana__hawkthxrcn"
+        },
+        {
+          "available_at": 1771981200,
+          "hour_start": 1771977600,
+          "n_competitors": 2,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": -0.016485944748549808,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": -0.016485944748549808
+            },
+            "24": {
+              "earliest_gross": 1.1730786508893463,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": 1.1730786508893463
+            },
+            "4": {
+              "earliest_gross": 1.2078569279578364,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": 1.2078569279578364
+            }
+          },
+          "share": 0.9999581933228615,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E18_hawktuah__solana__4gfe6mbdor"
+        },
+        {
+          "available_at": 1771995600,
+          "hour_start": 1771992000,
+          "n_competitors": 2,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": -0.001643356712322852,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": -0.001643356712322852
+            },
+            "24": {
+              "earliest_gross": -0.028128056110456323,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": -0.028128056110456323
+            },
+            "4": {
+              "earliest_gross": -0.05356138170120961,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": -0.05356138170120961
+            }
+          },
+          "share": 0.9969508751708904,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E18_hawktuah__solana__4gfe6mbdor"
+        },
+        {
+          "available_at": 1772035200,
+          "hour_start": 1772031600,
+          "n_competitors": 2,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": 0.008027265431279185,
+              "equal_weight_gross": null,
+              "resolved_competitors": 1,
+              "winner_gross": 0.008027265431279185
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": 0.005848100698075287,
+              "equal_weight_gross": 0.004568607805534253,
+              "resolved_competitors": 2,
+              "winner_gross": 0.005848100698075287
+            }
+          },
+          "share": 0.9977339088990842,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E18_hawktuah__solana__4gfe6mbdor"
+        },
+        {
+          "available_at": 1772640000,
+          "hour_start": 1772636400,
+          "n_competitors": 2,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            }
+          },
+          "share": 0.9998866845477595,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E18_hawktuah__solana__hawkthxrcn"
+        },
+        {
+          "available_at": 1774072800,
+          "hour_start": 1774069200,
+          "n_competitors": 2,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            }
+          },
+          "share": 0.9780829608769257,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E18_hawktuah__solana__hawkthxrcn"
+        },
+        {
+          "available_at": 1775552400,
+          "hour_start": 1775548800,
+          "n_competitors": 2,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            }
+          },
+          "share": 0.993854511909845,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E18_hawktuah__solana__4gfe6mbdor"
+        },
+        {
+          "available_at": 1777305600,
+          "hour_start": 1777302000,
+          "n_competitors": 2,
+          "price_kind": "HOURLY_REFERENCE_NOT_EXECUTABLE_FILL",
+          "returns": {
+            "1": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "24": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            },
+            "4": {
+              "earliest_gross": null,
+              "equal_weight_gross": null,
+              "resolved_competitors": 0,
+              "winner_gross": null
+            }
+          },
+          "share": 0.9999788057330872,
+          "status": "LEFT_CENSORED_OR_WINNER_SWITCH",
+          "winner": "E18_hawktuah__solana__hawkthxrcn"
+        }
+      ],
+      "status": "CONDITIONAL_REPLAY_ONLY"
+    },
+    {
+      "chain": "bsc",
+      "event_id": "E19_luguan",
+      "n_contracts": 0,
+      "n_full_coverage_hours": 0,
+      "n_missing_competitor_hours": 0,
+      "n_series": 0,
+      "primary_scope": true,
+      "signals": [],
+      "status": "NO_COMPETITION"
+    },
+    {
+      "chain": "bsc",
+      "event_id": "E20_shandong",
+      "n_contracts": 1,
+      "n_full_coverage_hours": 0,
+      "n_missing_competitor_hours": 0,
+      "n_series": 1,
+      "primary_scope": true,
+      "signals": [],
+      "status": "NO_COMPETITION"
+    },
+    {
+      "chain": "bsc",
+      "event_id": "E21_夫妻文学",
+      "n_contracts": 0,
+      "n_full_coverage_hours": 0,
+      "n_missing_competitor_hours": 0,
+      "n_series": 0,
+      "primary_scope": true,
+      "signals": [],
+      "status": "NO_COMPETITION"
+    },
+    {
+      "chain": "solana",
+      "event_id": "E22_wen",
+      "n_contracts": 1,
+      "n_full_coverage_hours": 0,
+      "n_missing_competitor_hours": 0,
+      "n_series": 1,
+      "primary_scope": false,
+      "signals": [],
+      "status": "NO_COMPETITION"
+    }
+  ],
+  "locked_contract_rows": 354,
+  "locked_events": 22,
+  "rh_excluded": 81,
+  "source_files": {
+    "('base', '0x0c3b466104545efa096b8f944c1e524e1d0d4888', '0xa4a2e2ca3fbfe21aed83471d28b6f65a233c6e00')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_base_0x0c3b466104545efa096b8f944c1e524E1d0D4888_0_d90cb88ffe68b1a9.json",
+        "sha256": "c473935168b9cf1cc3752800a4af009fdf18951ed13d2ee47afd5f22c61eeea0"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_base_0x0c3b466104545efa096b8f944c1e524E1d0D4888_1_be0bf10dfc6f0154.json",
+        "sha256": "3b763c7d423d58bb6cc20b307e75bd8fcd85c3d27834383f5480fc62896ad1ef"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_base_0x0c3b466104545efa096b8f944c1e524E1d0D4888_2_fcecf4601295fa03.json",
+        "sha256": "aeec26b35eb18980a5d35d3baefed6822607e048304bf184105d54b50439d556"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_base_0x0c3b466104545efa096b8f944c1e524E1d0D4888_3_60e29fe54dd0bb52.json",
+        "sha256": "de5d6d327d2cc71e1487cf0b5e0b25a5ee618a5a1d8334c33057b35c09eb848e"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_base_0x0c3b466104545efa096b8f944c1e524E1d0D4888_4_aca7a271431e801f.json",
+        "sha256": "1a4174322c368528fa8028eb935c12dbf7136165a50fd121404cfbccdf6dfbbc"
+      }
+    ],
+    "('base', '0x404e927b203375779a6abd52a2049ce0adf6609b', '0x532f27101965dd16442e59d40670faf5ebb142e4')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_base_0x404E927b203375779a6aBD52A2049cE0ADf6609B_0_f3d3c05ba76391b8.json",
+        "sha256": "1fa2f0a1a5fb8ece2f44528c6a14fac9005fad638a17f6c9e81d5ca5fb26d765"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_base_0x404E927b203375779a6aBD52A2049cE0ADf6609B_1_0d59645275f9ed60.json",
+        "sha256": "dcad44e6df859fdf86c32d2fc5ce49aa198bc8a229310eb13d6ed930af7c68a0"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_base_0x404E927b203375779a6aBD52A2049cE0ADf6609B_2_c38fbfd2aea14e1f.json",
+        "sha256": "61920cdd3512bc0913bf514d9978440528021f79af28ce35268e40c749cecb60"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_base_0x404E927b203375779a6aBD52A2049cE0ADf6609B_3_633ef2f10d36c654.json",
+        "sha256": "f1538aef6320d9bf5e7c9d1493e423133b9f2ffee33e54ceedb913265ff3c01f"
+      }
+    ],
+    "('base', '0x4b0aaf3ebb163dd45f663b38b6d93f6093ebc2d3', '0xac1bd2486aaf3b5c0fc3fd868558b082a531b2b4')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_base_0x4b0aaf3ebb163dd45f663b38b6d93f6093ebc2d3_0_68df5f6ed052b85f.json",
+        "sha256": "f98b582bc87ee812263d5ccb721765ff7c66c93ee82412cf640a6e8ee60913eb"
+      }
+    ],
+    "('base', '0xbfc74e1de81e81b0a807469502f6662cc238795e', '0xac1bd2486aaf3b5c0fc3fd868558b082a531b2b4')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_base_0xbFC74e1De81E81B0A807469502F6662Cc238795e_0_9f2e1e24f99b01cd.json",
+        "sha256": "2f5fa639cd203e9b8be41a4a24fdf178e4a73b7ac639c265730ffa509065fa7c"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_base_0xbFC74e1De81E81B0A807469502F6662Cc238795e_1_93fe8ad89924933e.json",
+        "sha256": "2a60779eff5257c2139b6998b62ec26f7c4225570a077bba16fdf0d82712c9f3"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_base_0xbFC74e1De81E81B0A807469502F6662Cc238795e_2_fbc00777d0d36e5c.json",
+        "sha256": "354f239af3f997ec93fbb074d986fc6925ed8b9bfad05ba73685284c797687a1"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_base_0xbFC74e1De81E81B0A807469502F6662Cc238795e_3_d03e13c0bb229fb0.json",
+        "sha256": "5809804d9be99bf503e7613b0c2d6c4aa78b69f55979b7fcfc79ea44e4e1caca"
+      }
+    ],
+    "('base', '0xc1a6fbedae68e1472dbb91fe29b51f7a0bd44f97', '0x1bc0c42215582d5a085795f4badbac3ff36d1bcb')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_base_0xC1a6FBeDAe68E1472DbB91FE29B51F7a0Bd44F97_0_3e28f9596af033ac.json",
+        "sha256": "d34501f25023718a65bb29bc116cb4c868cf59689fbab631d8d3d79d2d20c80d"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_base_0xC1a6FBeDAe68E1472DbB91FE29B51F7a0Bd44F97_1_f7f29de08d12037a.json",
+        "sha256": "ddbcc6d3a984f98a7328fde7e675e0dd1a0de6b2f733cbe5195d22f5e7718577"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_base_0xC1a6FBeDAe68E1472DbB91FE29B51F7a0Bd44F97_2_f311cecc3905c992.json",
+        "sha256": "bd3b2e3bf296a5937687491c095289b959a3016538a4e9a28fbef4efece4377f"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_base_0xC1a6FBeDAe68E1472DbB91FE29B51F7a0Bd44F97_3_f0fa55729856f420.json",
+        "sha256": "a0c82497205118275a3695d8b9b4d19a45f038b5a640cf75a0e360e2f06f5e0e"
+      }
+    ],
+    "('bsc', '0x1dd5a19d29ef5938bbd105c6c02122800de24444', '0x1dd5a19d29ef5938bbd105c6c02122800de24444')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_bsc_0x1dd5a19d29ef5938bbd105c6c02122800de24444_0_fd4de06767b14069.json",
+        "sha256": "dc6b877292d69f139378cd11eaf8aded740dde81b7b0d959bdae33943765a81a"
+      }
+    ],
+    "('bsc', '0x7761169a268a47ecee31048daf80d75926434444', '0x7761169a268a47ecee31048daf80d75926434444')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_bsc_0x7761169a268a47ecee31048daf80d75926434444_0_d7baea1171b5bac0.json",
+        "sha256": "d9e3af1e7b994784474ec65c019cb88f07d8f274653a6145ea57b941f95c7b9b"
+      }
+    ],
+    "('bsc', '0x961842832793df69fd8eab3d503561c11f0c8c6b', '0x708b9a23807edaf3deb232e98898a5b46754ffff')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_bsc_0x961842832793dF69fD8eaB3d503561C11f0c8C6B_0_ff0c79ddd51207c0.json",
+        "sha256": "463ea4b47fe9af41c610130b80e76a2649f62568466699fb568e4bd217c4648b"
+      }
+    ],
+    "('bsc', '0xa61b79c620560cbb025194a23ce06431049b71d3', '0x1fd39fcaeb217739e25d28db75fc841698198888')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_bsc_0xa61B79C620560cBb025194A23Ce06431049B71D3_0_754bab3b8bb7ad46.json",
+        "sha256": "a3270aa34ee6c4fb7f7adb2e6f530b3bff26f6c56b260a999d37e14b652114d0"
+      }
+    ],
+    "('bsc', '0xab058332a7279f1e64162be08f59ac0cd9601759', '0xbeea1d618e533a387d941f58a7d4c9b7bd377777')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_bsc_0xab058332a7279F1e64162BE08F59ac0cd9601759_0_6523dc58182424ae.json",
+        "sha256": "e4ed5c0d7bb168e540e8ed8b1fa7e4660b71cfb9537c1566e7593293a8329cfc"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_bsc_0xab058332a7279f1e64162be08f59ac0cd9601759_0_c42aab302a8fa23d.json",
+        "sha256": "f38f03b7863bcb2ff1ddb46518cb5c2334fe93a90ce8bd6c38b280babeec35d6"
+      }
+    ],
+    "('bsc', '0xc91d0280d92e2c89f2c6a984ddafa6cca39c7643', '0x3604b5c377124d2180c4fb791953fc8431a90111')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_bsc_0xC91d0280D92E2c89F2c6a984DDAfa6cCA39C7643_0_b7d54f3aeb61aa77.json",
+        "sha256": "afe169e7ba0787209b588dbe341c29f10f1e3858fe9f3ddf61b972473413e3a1"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_bsc_0xc91d0280d92e2c89f2c6a984ddafa6cca39c7643_0_18cc55e8d02f24b1.json",
+        "sha256": "2b9b033f80346bd8899c19925af4f7d02a58fbf6df6aad77046d9db81d843290"
+      }
+    ],
+    "('bsc', '0xf5b6811e74e1bc11421dda1255a9c163821535ee', '0xdd17635c5517a30395c73127c1838809da1a7777')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_bsc_0xF5b6811E74e1Bc11421Dda1255a9c163821535EE_0_7633ecc7947c19df.json",
+        "sha256": "5f8355465c8b3397a954423bc8ef7cca631711e2d904d5760af175ecd2c8993d"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_bsc_0xf5b6811e74e1bc11421dda1255a9c163821535ee_0_afe22a602e4c319c.json",
+        "sha256": "72beb205bdf4ab8ff61ed15f802a4f0fad38d777dbd0eb93ab999b7ca3acf815"
+      }
+    ],
+    "('eth', '0x0c3fdf9c70835f9be9db9585ecb6a1ee3f20a6c7', '0xd29da236dd4aac627346e1bba06a619e8c22d7c5')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_eth_0x0c3FDf9C70835F9Be9dB9585eCB6A1Ee3f20a6c7_0_beb0d1b0a8a276af.json",
+        "sha256": "e330954a7f6e667acc559f30d087626470a79d970c33c32a52530bbd6422e6cf"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_eth_0x0c3FDf9C70835F9Be9dB9585eCB6A1Ee3f20a6c7_1_2352038741687fb5.json",
+        "sha256": "bd7b10779ad20e099cecb86a115fbd456c0b36e6daa07b5773c3c0ccadf711ac"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_eth_0x0c3FDf9C70835F9Be9dB9585eCB6A1Ee3f20a6c7_2_d9db6ee1cd1ffea0.json",
+        "sha256": "11c5cf08737337dc1b468bcee193c120dd5dee7a955c7aea38329b8968d01de6"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_eth_0x0c3FDf9C70835F9Be9dB9585eCB6A1Ee3f20a6c7_3_2a75c3ebd640e044.json",
+        "sha256": "938f45bd9233a4ce3a841c170824d8473058570c16b63653ec8745e77ea9535c"
+      }
+    ],
+    "('eth', '0x1fbbddba38967a632643072174bc4999b2ebc54f', '0x2aef74e8f7fbfa3c88b944b47385021afdb2182b')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_eth_0x1FbBddBa38967A632643072174Bc4999B2EBC54f_0_f0380afd86f77cde.json",
+        "sha256": "4bee9df75b6f0d407a4aacdf7f9095fced2207f8d0a12cf5a85eb8161f59dafe"
+      }
+    ],
+    "('eth', '0x2666b38582185c6225aa99e0b6856f3c9e428ef4', '0x7d051bdf3954912fff5d25b0e2981801f61a4784')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_eth_0x2666B38582185C6225AA99e0b6856f3c9E428EF4_0_3a6cdb0fe0e0ba2e.json",
+        "sha256": "3239aabbe5076f7a42ecc64f269a686e242ea3af42ad0f376a07ab8924bf8b78"
+      }
+    ],
+    "('eth', '0x55c967f8fdd1fafe52b9e2b8eac02cd2a9a50679', '0xf210c4b588279aadccfbb6086f23d5d2b154acf2')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_eth_0x55c967f8fDd1FaFe52b9E2B8EAc02cD2a9A50679_0_c1ee8fc81af9da9b.json",
+        "sha256": "a698cfcb7f5b6be2864924b7895e650b9f0c8f23624f29a8373b4d8e92caba96"
+      }
+    ],
+    "('eth', '0x56bc8f3293f53825c9fbd6ddfe0cafefa82820d0', '0x6aa56e1d98b3805921c170eb4b3fe7d4fda6d89b')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_eth_0x56Bc8F3293f53825c9FBD6DdFE0caFefA82820D0_0_677ff1e7af66c53d.json",
+        "sha256": "bc1c5f482c15f1575a52208a10e5a2a8b7a5843c191bb51ada48cfcda3fc2690"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_eth_0x56Bc8F3293f53825c9FBD6DdFE0caFefA82820D0_1_56353f77291f5256.json",
+        "sha256": "9af8bd0a77b6df6f7141ebc12f95bc897dc4d486bfc4e99dc0b9ff08558bf849"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_eth_0x56Bc8F3293f53825c9FBD6DdFE0caFefA82820D0_2_98976b180ea82abc.json",
+        "sha256": "5000f343fb6d5a6397730eb3a53342b21803a64278daf1e6b08dd993751becc2"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_eth_0x56Bc8F3293f53825c9FBD6DdFE0caFefA82820D0_3_bfd8378d3398a1b4.json",
+        "sha256": "024ecc64c86e9c633b8506c7d3743a7e840018759aa61396d25c717fdceac4fd"
+      }
+    ],
+    "('eth', '0x7153374b6e9388f142b3c89f570d57d548ea16b8', '0x3da91def54affc22fc7d59d46495fb783f8f4e29')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_eth_0x7153374b6e9388f142B3C89F570d57d548ea16b8_0_26b6d768655c365f.json",
+        "sha256": "d884e44550dc8b24eab1bb7a03db71af5007d9995bbc14bcb245197b8d314c7e"
+      }
+    ],
+    "('eth', '0x7edc297010f04c4e82b997bd60ef7eeaf9c360d5', '0xc548e90589b166e1364de744e6d35d8748996fe8')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_eth_0x7EdC297010f04c4E82b997bD60ef7EEAf9C360d5_0_44ae60a25eab21d4.json",
+        "sha256": "ac8471afee640d66fe91ffe2e0c259e494819ad51914a4c971fd293a8c91381e"
+      }
+    ],
+    "('eth', '0x85eaa57645d10fb980968df297ca534e6d72bdc0', '0xa6180029845469e89c507fe3eafedfa242687822')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_eth_0x85eAA57645D10fB980968dF297CA534e6d72BDc0_0_0c377fd9275d2b6d.json",
+        "sha256": "851747d61a78d88bb4572fb859ce46e28db8bc215f62a90325fa8f9e3ee994ac"
+      }
+    ],
+    "('eth', '0xa079a8ebc65482b383627bf1b96ff76b822b57a0', '0x80999b0276246db7e3869b7aaa23e349ddf9aba6')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_eth_0xA079A8EBC65482b383627bf1B96ff76B822b57A0_0_1c907c5e13225d4d.json",
+        "sha256": "4ec5e4778f7f2939f539c7bac29ba7aca27707bf9d5fb35ef3013c562f3cf2be"
+      }
+    ],
+    "('eth', '0xc555d55279023e732ccd32d812114caf5838fd46', '0x812ba41e071c7b7fa4ebcfb62df5f45f6fa853ee')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_eth_0xC555D55279023E732CcD32D812114cAF5838fD46_0_e64ae658de7c555d.json",
+        "sha256": "0278dda330be0143ab9adc1c0f2e7a3d115898da18f5684b7d575f57318e7243"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_eth_0xC555D55279023E732CcD32D812114cAF5838fD46_1_d566a4d8ac4abd97.json",
+        "sha256": "1fb05ce864402f637e5aa146b427ea8e4279a1bcaacd8dd8f0caf439649419c5"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_eth_0xC555D55279023E732CcD32D812114cAF5838fD46_2_139e7130fae425fd.json",
+        "sha256": "c2aea0e728565b7b213997081de26df655907887df3a1f8684db1e8885fe9857"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_eth_0xC555D55279023E732CcD32D812114cAF5838fD46_3_e0f09d84cc8430dc.json",
+        "sha256": "77b29fc369669557301c6dac9fdf694aa4ec37e775a33e36c852c17510226ab0"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_eth_0xC555D55279023E732CcD32D812114cAF5838fD46_4_625011009581f67a.json",
+        "sha256": "640ad8bb63fc35674e14eb34546d33e7f43a1dc1316bf63fb1d2544c1bba1ecc"
+      }
+    ],
+    "('eth', '0xe4b8583ccb95b25737c016ac88e539d0605949e8', '0x576e2bed8f7b46d34016198911cdf9886f78bea7')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_eth_0xE4b8583cCB95b25737C016ac88E539D0605949e8_0_022173a6edab5ce1.json",
+        "sha256": "bd8f227a1d4f4d1c202c1320ea4e6c33a42702ea0bd34f095fae9e5c06fac640"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_eth_0xE4b8583cCB95b25737C016ac88E539D0605949e8_1_7eba2e53e84724ca.json",
+        "sha256": "915c1422cfba652dcebeb531c8022c8b4f5aa17bacc74f607e33c592f1a5a152"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_eth_0xE4b8583cCB95b25737C016ac88E539D0605949e8_2_9c025373adedd976.json",
+        "sha256": "19a34f74ba3715bca5dfc004a1748eaa3667529fd74fc5ff1218a10c99b77690"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_eth_0xE4b8583cCB95b25737C016ac88E539D0605949e8_3_61d21e2c0f502ca6.json",
+        "sha256": "db63437df7f4b8dda54f6e788960980243a585208763d9c1ec2fb379bd550f2b"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_eth_0xe4b8583ccb95b25737c016ac88e539d0605949e8_0_e8e2f42f1d70b009.json",
+        "sha256": "4e8de20900f2e6d9bdc1c77e4bf4d0d92336fa28a158601598bf3dc413428803"
+      }
+    ],
+    "('qqqb', 'niulai', '0x205812cdbed920aff76c6580abd681a46d11efc7')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_qqqb_niulai_0.json",
+        "sha256": "33876cc726743aa3f9ed71945c6e7f63bbca35d7aa4b9190e12f90b2900f30ea"
+      }
+    ],
+    "('solana', '22wrmytj8x2trvqen3fxxi2r4rn6jdhwomtpssmn8rud', 'ed5nyywezpppiwimp8vym7sd7td3lat3q3grtwhzpjby')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_22WrmyTj8x2TRVQen3fxxi2r4Rn6JDHWoMTpsSmn8RUd_0_5b3a1455ab5b8e74.json",
+        "sha256": "626ddb0da3ab7d7d2ce882d04072f469373c4ea2c8a3b72e63cd19357d0b1999"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_22WrmyTj8x2TRVQen3fxxi2r4Rn6JDHWoMTpsSmn8RUd_1_1296aa9a0a5823c6.json",
+        "sha256": "c2f1307dc0da834fd0cdb10f79a7cb36978af7a8b6ce762a963302e92b796920"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_22WrmyTj8x2TRVQen3fxxi2r4Rn6JDHWoMTpsSmn8RUd_2_cb1350fd7a7924f3.json",
+        "sha256": "5c03c7ebbb4c6044b14851923a576acd93e7590e5eae68284e6f605016c21595"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_22WrmyTj8x2TRVQen3fxxi2r4Rn6JDHWoMTpsSmn8RUd_3_b35d088d253dc8f4.json",
+        "sha256": "dc0b3d60c31558110f8551f9f281f200240a4bff6e7757f3268fe289120732a1"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_22WrmyTj8x2TRVQen3fxxi2r4Rn6JDHWoMTpsSmn8RUd_4_e3d3033b33316337.json",
+        "sha256": "e42559f814bf2c52c633cc866d7eb2890972aa9821b3b09b7063f6f8de6a0749"
+      }
+    ],
+    "('solana', '2c5teuhb19utxpvtygcfqdstosmrjn4c3h4dqkpcm2ve', 'cfsgbe4xo9mtfha5n2suq3dz918fy3twp9v3buskpump')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_2C5TeUHb19uTXPVTYgcfQdsTosmRjn4c3H4dQKPcm2VE_0_576d63103ab4a8dc.json",
+        "sha256": "7ee44682f64c16127912198261046af579a3ec9b68bbf9eca177336409d53748"
+      }
+    ],
+    "('solana', '3bhsmuvsbxtpbisbby5jtmz5xrfj9ymr89xpm6bgytq1', 'f4alcmxqy6cpcxauer3j5qgb89n4fqbms2bcrqqbpump')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_3BHsMuvsBXtpBisBbY5JtmZ5xRfJ9yMR89xPM6BGyTq1_0_9a6710f7733a041d.json",
+        "sha256": "5c8372a24a472495965c60154ff7328b34f62966d46da796b75a9e16a2fc534c"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_3BHsMuvsBXtpBisBbY5JtmZ5xRfJ9yMR89xPM6BGyTq1_1_a6568f4ca5cb5d84.json",
+        "sha256": "f76d57c91cd7dfa8c02ddcc85a4e4ee6a0c83f4931b4b01c31c45c7bc7d9e5b8"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_3BHsMuvsBXtpBisBbY5JtmZ5xRfJ9yMR89xPM6BGyTq1_2_2509b97e1d89bd3b.json",
+        "sha256": "6164dd9b0b35950aa440638c0be6611bc2689c7d9faeb5a8ba02c9aea98d7859"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_3BHsMuvsBXtpBisBbY5JtmZ5xRfJ9yMR89xPM6BGyTq1_3_f269a46cd8cbd59e.json",
+        "sha256": "f29d0891aad850016c6bc9d3beb94ae448e1a326247741ea797c1d3290f6e483"
+      }
+    ],
+    "('solana', '3bnjd8vphvgpuao9exvss7ckbmzfg6sgxc19joqmv5gj', '7tgwufayv3xqjygdgdwxzxegx419wge4wwtebjq9x1es')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_3bnjD8vpHvGpuAo9ExVSs7CKBMzfG6SgxC19joqMV5gJ_0_76decf83f98bad14.json",
+        "sha256": "976753a5050bbf6d6528d3dd2b11a09270ba03b4c8e4416d8778a8611fe89450"
+      }
+    ],
+    "('solana', '3k3tencrpo35wjzgbouwfcyjam8isd1ak2al7trfkods', '7chzt3mgyh3vgckemehenwzdaepj1on2yxtbpfy9pbbu')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_3k3TENCRpo35wJzGbouwfCyjAm8isD1Ak2aL7TrFKodS_0_292adee1a41b06e3.json",
+        "sha256": "6d23c0066ca994294b529bea01eba8321b0163302db636235825ed99b6e26682"
+      }
+    ],
+    "('solana', '4azrpnefcj7iw28rju5auyeqhycvdcnm8cswyl51ay9i', '2qehjdldlbubgryvsxhc5d6udwaivnfzgan56p1tpump')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_4AZRPNEfCJ7iw28rJu5aUyeQhYcvdcNm8cswyL51AY9i_0_aa4bfff8f3c762ea.json",
+        "sha256": "d80373e6e2eb9f116b8d69e4dcf50217a02a9037dc7e9cd887f95aeef368d228"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_4AZRPNEfCJ7iw28rJu5aUyeQhYcvdcNm8cswyL51AY9i_1_8e09fd6c97818f53.json",
+        "sha256": "ef55a2ab7541a047dff8919e0715044e5d8c8b16ae1e4a5f8e59bdc094a6eb9d"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_4AZRPNEfCJ7iw28rJu5aUyeQhYcvdcNm8cswyL51AY9i_2_ccec5fb1f4e556b0.json",
+        "sha256": "3191918f0775b4b079a9cfe3686aef1bb486d68adfdcc8cbe92627bb26435969"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_4AZRPNEfCJ7iw28rJu5aUyeQhYcvdcNm8cswyL51AY9i_3_b2e2fed39c31ec4e.json",
+        "sha256": "5b3b24dc7c3648e4a6e73f90d19db98b97f6c69549a8db03fa66f332c3fd4301"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_4AZRPNEfCJ7iw28rJu5aUyeQhYcvdcNm8cswyL51AY9i_4_76c3cb350979bd09.json",
+        "sha256": "36b9c8d48d6ae089a2376b3efeb017b4749a1232db38f7d7e5590855987793ce"
+      }
+    ],
+    "('solana', '4cgeebtt8euwesnm8kpiy3jkdclsepncwcu5nygrmimt', '6kvnnyvdzzphbbbycm2vkcjr9rq6icstumwmeakupump')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_4cGeEBtT8euWEsNm8KpiY3jkdcLsEpnCWcu5NyGRmimt_0_bb09d4f578445a49.json",
+        "sha256": "9fc5f4890ff8e62acab6931046d6828ccdf4691d319b7a1e7771827b94358f62"
+      }
+    ],
+    "('solana', '4qqleiawe6nuanlqeazwtn6pnqlagtbujwxbnxe3cuyj', 'wenwenvqqnya429ubcdr81zmd69brwqaabyy6p3lcpk')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_4qqLEiAwe6nuANLQeazwtn6pnqLaGTBUjWxBnXE3cUYj_0_4d19ed0b97b3c221.json",
+        "sha256": "069466920cc04eac640ad69b63eea7fd8c15379b7b73b62f6c4817e522543d00"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_4qqLEiAwe6nuANLQeazwtn6pnqLaGTBUjWxBnXE3cUYj_1_b2acf85defb9f457.json",
+        "sha256": "c4031f8acb494092b2dbc1ccce575843162541fcfe0d7dd49172d8a049fb972c"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_4qqLEiAwe6nuANLQeazwtn6pnqLaGTBUjWxBnXE3cUYj_2_40d9f9f4ffa0af0f.json",
+        "sha256": "45729f164ac50c946f5add32e12506f67afe4973974f7b1f61a6b1c685b31b48"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_4qqLEiAwe6nuANLQeazwtn6pnqLaGTBUjWxBnXE3cUYj_3_e927ae8efb615f19.json",
+        "sha256": "4d8080cb371a73eb51013d1aa857659a260654c4d138791b8eefc80000fdd729"
+      }
+    ],
+    "('solana', '4rx3hevhvdt1n2qnn9wmvthfsge3nqu3gynuhacokdud', '9tpeuw6haw6yukgypfumwbrsrn2ktpdhqxqqxr9z5pcq')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_4RX3HeVhvDT1N2Qnn9wMVtHfSGE3NqU3GYnuhaCoKDUD_0_4eebb5bb3dc5398b.json",
+        "sha256": "fdfab572028aad9fde3b2b8a54c61da8da392a63097e321273ac5b2be6de1f54"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_4RX3HeVhvDT1N2Qnn9wMVtHfSGE3NqU3GYnuhaCoKDUD_1_a5f31abc00c233a1.json",
+        "sha256": "e33e1e2689b5367b55e11aea9838068a6b4472dab8888cf08726e7d47bb27960"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_4RX3HeVhvDT1N2Qnn9wMVtHfSGE3NqU3GYnuhaCoKDUD_2_30489b3bda89f5aa.json",
+        "sha256": "68037dd51c4f0eebb906f04db4d97acbd63565912390c9035021aed8661f4b08"
+      }
+    ],
+    "('solana', '4xspuuydz5eknvnky8bnght6tx4rte6njvbq7a9humr1', 'bonkug9t46hnxf4erzzmnb4ae6oecds4v66zquouhwwy')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_4XspUUYDz5EkNvNKy8BngHt6Tx4rTe6nJvbq7A9hUmR1_0_dfee1e93763cb747.json",
+        "sha256": "9034beaa0e302baf43fc17b1a0c3e09272585a8baee8e6ab64547eabd44533c4"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_4XspUUYDz5EkNvNKy8BngHt6Tx4rTe6nJvbq7A9hUmR1_1_779b55baf7002f3d.json",
+        "sha256": "295d86f3dcf2827bc6bf970b796d495c51a38ead1344f4ab42e955b1548a216e"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_4XspUUYDz5EkNvNKy8BngHt6Tx4rTe6nJvbq7A9hUmR1_2_209e24d9b20df6e9.json",
+        "sha256": "f1ea0b3ad5b3a5e14fe5bab7fdf55ff55b1ff8d9cd427aaf40eccfe630c4fcd8"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_4XspUUYDz5EkNvNKy8BngHt6Tx4rTe6nJvbq7A9hUmR1_3_6cff5d109778846d.json",
+        "sha256": "c48cdc18e1994505a68a8b91084f102476b56f593b8b027a433f2e3babc9b319"
+      }
+    ],
+    "('solana', '5rc4ejyce94yukir1dvgtsehsjpbhh7pujavmjzeoxhv', '8jpfpa63ypm7az2t3qjoxv9jroy52pehc7eqvrs2pump')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_5rc4eJyCE94YUKir1dVGTseHsjpbhh7PuJAvMJZeoxhv_0_3c568dd9ac350d17.json",
+        "sha256": "be6dd33c3ce08685be5ee240ca3fbe4337f660eaec2cf7db3ab5dea24af456c8"
+      }
+    ],
+    "('solana', '5ssazrihzdaz1e1egkagoe5ess4hcmbclvqcqmneqqc1', '6yn35vzdoxywbzb3zdv8w4zbbauiuw7ujhgtmgyd3bsn')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_5ssaZRiHzDAz1E1egkAGoe5ESS4HCMBcLVQcqmnEQQc1_0_b38f9601ff356dc6.json",
+        "sha256": "fa4bffacb0c29500c5dfce9e82f79d735c378c0495c971c2405d3a2606679ec3"
+      }
+    ],
+    "('solana', '7iogfmgtotthksqb7uwbvrwhebyjjpkn7ruf6pvm2wnm', 'dhuv2ryup9myabbxxml4yneczfay6kvgnarcypfvpump')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_7iogfMGtoTtHkSqb7UwbVrWhEbyJjpKN7rUf6PVM2wnM_0_359c55c2fa9066d6.json",
+        "sha256": "e0e01fb2c4c468f05481489f159c947cd52a59dae7c34299a662d844457da6d0"
+      }
+    ],
+    "('solana', '7q2dqbjtxxp4dqmhec2nsgxwsytq8jaxdygswmag3pfp', '9593dfjslkkraaz4lx1ek2ddegrzfu3idb6yvmysd6a1')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_7q2dQbjtxxP4DqmHEC2nsGXWSytQ8jaxdyGswmAg3PFP_0_449cbef2ff361ee9.json",
+        "sha256": "30a7551b7b4b672fcac5b5f8b007af1a10649f219c1dd4b8044960b9746d3f71"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_7q2dQbjtxxP4DqmHEC2nsGXWSytQ8jaxdyGswmAg3PFP_1_b6e2f96e24ebc3a1.json",
+        "sha256": "df6c7108b76fb890ad7b578a425bc542415fd9cae4c2737ecd4097bf86062981"
+      }
+    ],
+    "('solana', '8kmho9almfgoy9gd7yetmnrwm1z7wmeeslcmlntn3pfy', 'f1ualcoddpkji6y5ua3fxxpj6bhndlr3ifqwgmkqpsrp')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_8kMho9aLmfgoy9gD7YETmnrWm1z7wmeeSLcMLNTn3pFy_0_641ae2070c35d0c2.json",
+        "sha256": "0c0db16712f401dd5e52e9f5ddf13a7cd138db0e7fb7fec532b945ccf8c3f268"
+      }
+    ],
+    "('solana', '8rqz1hbev6hbv8e9peuiwnardgcgsxm5ypmnjrojghqv', 'ccsttkajaxqby4mu7vmhpsp6yfunzn7cbc59o5odebbo')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_8RqZ1hbEV6hbV8E9PeUiWNArdGcgSXm5YPmNJrojghqv_0_f578b612434c9ffe.json",
+        "sha256": "b8c15e185b49542c6beab4c0080a78b72f91e1a543f8951af2c36167297e6e12"
+      }
+    ],
+    "('solana', '8sj2qychdevielhxasyga2xdi6gqyo9enpcdko5acipp', '6mctggvn8sqr7smjqpcwnbc1f3frwcjq9tfzjvvbrcel')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_8SJ2QychDEviELHxaSYGA2xdi6gqyo9enPCDKo5aciPP_0_cc37fdeb8a69277f.json",
+        "sha256": "1188a4dbbfee60752d7fda337e13836938499d0d32eb7c71b4ee1c4ef1f20e0c"
+      }
+    ],
+    "('solana', '8wmrgtuemzs2md5xacyne1ls9zaitlzgszxpgqsebfqk', '9xvbkrteydpyuwznszu8hdnqxngk5spovrqmptfupump')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_8WMRGtuEMZs2mD5xACyne1LS9zaiTLZgszXPGqSEbfQK_0_e9b6a1ba08ddd297.json",
+        "sha256": "b0777dc00c2ecdd9d869860297094365a1067daff6e35639265d9547370c7eda"
+      }
+    ],
+    "('solana', '8yrz49cncgqocckfi4fmh9h6sfy3ikjrm2didmajf5xw', '56lc5by6bbmewolzly2qws9l9nd8aqhfzrycsax5kdcm')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_8yrz49cncgqoCCKfi4fmH9h6sFy3ikjrm2DiDMaJf5xw_0_88e2870536dfab7d.json",
+        "sha256": "3633125d1eb5f820c6c8d358a7be46823ec2b87dda83401fb507c8b21bf864a2"
+      }
+    ],
+    "('solana', '93tjgwff5ac5thymi8c4wejvvqq4tumemuyw1leyz7bu', 'df6yfrkc8kze3knkrherkzaetsxbrweniqfyjy4jpump')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_93tjgwff5Ac5ThyMi8C4WejVVQq4tuMeMuYW1LEYZ7bu_0_42d8534b21e2d897.json",
+        "sha256": "316f91b8f5ccb75ec4d8a0fa042da7970ae9f8a5bd5c6d0ad1b23492e53b1171"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_93tjgwff5Ac5ThyMi8C4WejVVQq4tuMeMuYW1LEYZ7bu_1_9d79f3833d33f135.json",
+        "sha256": "6b3b4078e46a85875df79a460abaf61f7f9b144bd1fd84c33a4462056603894f"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_93tjgwff5Ac5ThyMi8C4WejVVQq4tuMeMuYW1LEYZ7bu_2_3f3900b2eaa47853.json",
+        "sha256": "5d06ad9a5d9a1cf53d9e22752e8588c4fb3738b42f36f9b2461a220cc8a0ff99"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_93tjgwff5Ac5ThyMi8C4WejVVQq4tuMeMuYW1LEYZ7bu_3_51eefbb8be5ff7a3.json",
+        "sha256": "5b53cf5fc1467b90001083d6a01aba86e742519f6140ba7790a2fea86f811c32"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_93tjgwff5Ac5ThyMi8C4WejVVQq4tuMeMuYW1LEYZ7bu_4_9f4cdb015a8952d4.json",
+        "sha256": "38eb870c90ec1af6d0d0d6fc7911d34385bb35f7ecac823b0a21489405abdc12"
+      }
+    ],
+    "('solana', '983pmuahvtalpdqt24lkr7xsoag7nhyqlufh1qlucus6', 'g4jpb7fe5iprryrglz3umw8thqh5boxsfspqndurpxft')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_983pmuAHVtALpDqt24LKR7xSoAg7NHYqLUfH1qLucUS6_0_b909995d9047ec1a.json",
+        "sha256": "0a639198443237f1d82975e17197ec368e65dc3718e7eaf0626544dba9f823e5"
+      }
+    ],
+    "('solana', '9injddpxbmsx1i6cx95ugjmuxss6mes6z4txswa6ghur', 'apjua1v2rggj5n3mrki2oocf9m3rimq2pyajv7qbzciw')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_9iNjDDPXbMsx1i6cx95UGjMuXSS6mES6Z4tXSwA6ghuR_0_dfac7fbecb765275.json",
+        "sha256": "68d33219dd043182b85840e8b0966df7b6a1cb9e8a40cb7ac3c934b9121977aa"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_9iNjDDPXbMsx1i6cx95UGjMuXSS6mES6Z4tXSwA6ghuR_1_24febdca1cbd5e68.json",
+        "sha256": "616d29e7f253d873426c3ccac985c69bdbc8320b99b5572bbf214cd88e679031"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_9iNjDDPXbMsx1i6cx95UGjMuXSS6mES6Z4tXSwA6ghuR_2_33545501f07f2f6a.json",
+        "sha256": "5efb925f07b2edc3f0ab8c9b6cd847be038f5d1e4c7b274b033986f06747e9e7"
+      }
+    ],
+    "('solana', '9mirigissdrbikut4c23xxtqlemccdtwqjqzze98wn6n', 'bgqbutqitkaqjsc97g8vq4s7yzj6afuemltktzvgcr6h')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_9MirigiSsDrbiKUt4C23XXTQLemcCDTwqjQzZe98Wn6n_0_f0b268eefbce7c0c.json",
+        "sha256": "59f7afc38666d3c8d5031ff703a6be793b08b3b6ddc9d3889be5c9c68037fa57"
+      }
+    ],
+    "('solana', '9tb2ohu5p16bpbarqd3n27wnkf51ukfs8z1gzzldxvzw', 'czlsujwblfssjncfkh59rufqvafwcy5tzedwjsuypump')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_9Tb2ohu5P16BpBarqd3N27WnkF51Ukfs8Z1GzzLDxVZW_0_4c5ca22e98c9313b.json",
+        "sha256": "955e0fd50d21f68a59c619293957fcd9e240792219ac507efc07529f9e6b25c6"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_9Tb2ohu5P16BpBarqd3N27WnkF51Ukfs8Z1GzzLDxVZW_1_808d9f28466c2c76.json",
+        "sha256": "a92e3113b005226c6d2041aa28def874fc3714ab4229cf7a30ae869805fa158a"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_9Tb2ohu5P16BpBarqd3N27WnkF51Ukfs8Z1GzzLDxVZW_2_934d84cc8ef87ab0.json",
+        "sha256": "69853fb07950834b34049e50aac00af33ca3e52ee96632a9137ae702a4fd742b"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_9Tb2ohu5P16BpBarqd3N27WnkF51Ukfs8Z1GzzLDxVZW_3_5169f3e2d2d74356.json",
+        "sha256": "910af2223487b12b48f3e8eeb3272baf6ce86c545edb24208919676c34ab86d7"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_9Tb2ohu5P16BpBarqd3N27WnkF51Ukfs8Z1GzzLDxVZW_4_c4b2ec5a8e3afe1d.json",
+        "sha256": "2e541bf42efbb7a6fbd5226182883807e9842e60edc01eae83b06765edf11bdf"
+      }
+    ],
+    "('solana', 'a8gnfe4gsgpv9yqgu8smxjgmfpvvgffwqf7bbdabsycy', '7tmhxhuvmxymmlwkghjynmvounvecvtsgtreg2r6pump')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_A8gnfe4GSGpv9YQGu8SMXJgmFPvVGFFWqf7BbDAbsYCY_0_6540cd0b6758467c.json",
+        "sha256": "0f67e3965e3641220d081a268f55c30fc8b317527c0ce807e6225dd753a91eb9"
+      }
+    ],
+    "('solana', 'a8nphpcjqtqhdquk35uj9hy2ysgxfkczgunwvkd3k7vc', '6p6xghyf7aee6tzksmfsko444wqop15icusqi2jfgipn')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_A8nPhpCJqtqHdqUk35Uj9Hy2YsGXFkCZGuNwvkD3k7VC_0_19a0dd08f771d8b1.json",
+        "sha256": "a7a6cd224cb298554230f0edf11b91f6bfab4aba330ef986d0a676c0dd229263"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_A8nPhpCJqtqHdqUk35Uj9Hy2YsGXFkCZGuNwvkD3k7VC_1_291920d401c08c2b.json",
+        "sha256": "1fa997c6e69439020098d8185fddfbcc5abda9c37d348b503ce4ab244fe09abb"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_A8nPhpCJqtqHdqUk35Uj9Hy2YsGXFkCZGuNwvkD3k7VC_2_0d633870cdf4ecfc.json",
+        "sha256": "b7df13f6fab75dae4fc70727fda6cfde53605693ab209b4deee77396d57d673c"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_A8nPhpCJqtqHdqUk35Uj9Hy2YsGXFkCZGuNwvkD3k7VC_3_3d91346fd5a47c1c.json",
+        "sha256": "1840fbc6842ca40fa689f3e98fa1bc478c0dee06acf7920348381e02e5ae6746"
+      }
+    ],
+    "('solana', 'bckuxcmd8kbjrlfy5hhnejxvkjy5npdmsmet2v7r8k2k', 'e31mtjg5ffjkzawrb2jiwik8ei5z4qgb7as77kg9pump')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_BckUXcmd8KbJRLfY5hhNEJxVkJY5npdMSmet2v7r8K2K_0_b3dc4584e984d171.json",
+        "sha256": "1d2a4a1cff3262b7bde52676b4fd07e5f4941afa2155eb7b2fe07e918e0edbd0"
+      }
+    ],
+    "('solana', 'bg2gko35v85pcythblz7afpow4xjh7supw6xa1e7oijy', 'e3eq9egzy7pjq3zqpizmwhdosb4ofnhjislzqhq4pump')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_BG2gko35V85pcYThBLz7afPow4xJh7sUPW6xa1e7oijY_0_5d454e9667b0a0d5.json",
+        "sha256": "f5c09a7655e7a878452226f745a5e0cde4f1154893542aabc60449a0af4cb032"
+      }
+    ],
+    "('solana', 'bjj6ujrepfgbhcwng2w6dfd27kwjulnwrceqz9ggqngs', 'ckpskb4emwgbwmkh8rfs2dzj1uaphfjeayheys9vpim3')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_BJj6ujRepfGBHCwNg2W6DFd27KwjULnWrcEqz9ggQNgS_0_586dcc095ddeba63.json",
+        "sha256": "b0e5759406bb0d3a9046655f0bbf3a161baa5e519643ce11de5a7384ca16b159"
+      }
+    ],
+    "('solana', 'bpnkhwaqvpxfhn1totts677h82jm4fqpvowk1ttoami', 'arqrnvdu9q85zwwegqarx43sca4wgoobfry6k37w2zb3')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_BPnKhwaQvpxfhn1TotTs677H82Jm4FQpvoWK1TtoAMi_0_9d0a03cc181b2eae.json",
+        "sha256": "e764d14cf5448530a3d0e82732c4455042a2537ef6cf60a43f680c3fa2db6c8f"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_BPnKhwaQvpxfhn1TotTs677H82Jm4FQpvoWK1TtoAMi_1_c36ef857499d118d.json",
+        "sha256": "ac2912be07e7e498195b71c2cd2e015e0780625a3c3702de733dd38e903fa3a3"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_BPnKhwaQvpxfhn1TotTs677H82Jm4FQpvoWK1TtoAMi_2_4d204ef614e9163c.json",
+        "sha256": "ea7763adeb34c428ee8daab80ac6e89a80b7cf7fbddf5f349d88aac93abd07f6"
+      }
+    ],
+    "('solana', 'bwsbn9j8zclagva8uyajndjtrsgitgumsduomfhrjfbn', '7g4rxx818x5arcl41umy86lxbfdwkicuayvxxlbapump')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_BWSbN9J8ZCLAGVa8uyaJnDjTRSgitGuMSDUomFHRJFbN_0_4b1abfb047f891f8.json",
+        "sha256": "a4d7f6671fb15f66182309ec43fd18db9aba40520c45b77b73583687bb629ef2"
+      }
+    ],
+    "('solana', 'bzc9nzfmqkxr6fz1dbph7bdf9broyef6pnzesp7v5iiw', '9bb6nfecjbctnnlfko2fqvqbq8hhm13kcyycdqbgpump')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_Bzc9NZfMqkXR6fz1DBph7BDf9BroyEf6pnzESP7v5iiw_0_093a7cab2d4815d7.json",
+        "sha256": "96f39122f751f7a016689cb60c6e8c91ef7f8fabb141961d81e7f4288f519364"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_Bzc9NZfMqkXR6fz1DBph7BDf9BroyEf6pnzESP7v5iiw_1_ab50fbdd1ed0d070.json",
+        "sha256": "3ca73c2eaa5c2d3e2d0688c5571bdfe1e090d411247a3781614beb92477480d9"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_Bzc9NZfMqkXR6fz1DBph7BDf9BroyEf6pnzESP7v5iiw_2_401719ff813a0881.json",
+        "sha256": "18315904d0fc16d0bc5520f5741cb6b85dec7f32c36e38faf984b2955581b6d1"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_Bzc9NZfMqkXR6fz1DBph7BDf9BroyEf6pnzESP7v5iiw_3_2b813a2b89b54694.json",
+        "sha256": "0d6c9b5209eb50745ca0f257273a9d5815463a350b5ef708a3e645c7dbeb8793"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_Bzc9NZfMqkXR6fz1DBph7BDf9BroyEf6pnzESP7v5iiw_4_529cdcacb09848dc.json",
+        "sha256": "374ac5656acc0b779ffe35cdee5f9c3119d32ddf3e0393990fe36f105a4fa760"
+      }
+    ],
+    "('solana', 'c24fdlr11b8eytxzl2ktn72r1pz3g21grrodrwctyyjs', 'bthoivev3rapgnuioh4xgpmbm6zgt83hw32zwreqpump')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_C24fdLR11B8eYTXzL2ktN72r1pZ3G21GRRodrWCTyyJS_0_afc55e147a46c525.json",
+        "sha256": "9375f9a63f4a2ebe6d06a3802e8c724ee423fd4116f8e20c5632747c147dd25d"
+      }
+    ],
+    "('solana', 'cgfovdn6k5ag1zzgs9t2grfvwquaa1rew1kvjthob7pe', '4l9ftxitfu5faismg5pp1qdndzxf6xf2pcghpv5pvhfb')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_CGfoVDN6k5aG1zzgs9T2gRFvWQuAa1reW1KVJthob7Pe_0_200690772f2ed1dd.json",
+        "sha256": "3e5fa05c761491b7122d9243143360f23987e2cc0e91232ce8a4b0e7e1f38d64"
+      }
+    ],
+    "('solana', 'cjvfxtmwxtmimktk42iswjdnkhnnz7u9znywxj9lutid', 'hhyd17aexppc5jf9y1ei1nejqnx1gtjbyzmz7nzmpump')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_CjVFxTMWxTMiMKtK42iswjdNKhNNZ7U9ZNYwXj9LuTid_0_9eb3bde54b947634.json",
+        "sha256": "624336875dfa4a1a18911409dd49a4334fd1e456f96558c91d92025cbde909df"
+      }
+    ],
+    "('solana', 'd7dawnyuas5etrrs9queel5zfyd175oauepwqrclbenp', '5ngy33drvnxhmu5qwwdx8fz6qbicjswjlo2ekg2yr6ak')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_D7DaWNYUaS5eTRRS9QUeeL5zFYd175oAUEPWqrCLbEnP_0_327ae95b92a435d4.json",
+        "sha256": "247894226686fb7a582ffde1dbf60ca7c033cee9b2549fc92fc4c79bdaef6009"
+      }
+    ],
+    "('solana', 'dpadtewtdhijtgcpfuidt935vbs3zkuhhqdsnhrehpur', 'f4wwkgbjkpqft4bb6gl1afhpm7bhsqk5lx8i2e3kpump')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_DPadTEWtDhijtgcpFUidT935vbs3ZKUhhqdsNHRehPur_0_50a85d3e17107225.json",
+        "sha256": "a866c8f9c7c36aa8ff05c13808252a3bda1fec0f81ac5efd87270b5989612f5e"
+      }
+    ],
+    "('solana', 'dpxoufpzxddrsciaiaswzad2eukldhuq3r1vzgs6ttqf', 'ascgakewqvxs9oxwnaccws7wbunbl58vntmrf8rvpump')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_DpxoufPzXDdrsCiAiASwzAd2EUKLDhuq3R1vZgs6Ttqf_0_54a6695bf0546cd7.json",
+        "sha256": "bf7be35191c885c87387097429b3a9ea4d10bd23c4ab15b2c8f82259b90c60c3"
+      }
+    ],
+    "('solana', 'dtyhucbowfdssy3dydfbgprmy5cnkkex54d5me3cu5b5', '8jffdjcsmqtxzguzreknawmk3agfgzzsfsnfjrzjpump')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_DtYHUCBowfDsSY3DyDFbgprMY5CnKKEX54d5mE3cu5B5_0_6ed119a757881f64.json",
+        "sha256": "1bd93eea9d5b21ca75c44468648a00e5ea1a0dfabb04427d2128058468d53ccf"
+      }
+    ],
+    "('solana', 'e8mglghnz8gb3ghvpwvlpp3z8zczncgzzhykeevccrqz', '9hiyfxkdmvh9edshzqp5peuz6rg1abrlbd7rrhud4gwd')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_E8MgLghnZ8GB3GhVPwVLPP3Z8ZcZNCGZzHykEeVCcRQz_0_2a1dbbe6179c0bdf.json",
+        "sha256": "066d3f001fef177bc007ed5b3029536560aea3c5cc8d795490f663e2d427390e"
+      }
+    ],
+    "('solana', 'eahbahdv9rbldbyc71boyd1kqelr9aytutoevaj6cswp', 'cssfzz9xm83k5upbcxap1rpzmxbrjakwhp1g8zhepump')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_Eahbahdv9RBLdBYC71BoyD1KQELr9AYTutoevaJ6cswP_0_70f996de72d8b211.json",
+        "sha256": "179e816dae2fa8fa57009075e7dda7cf79c7f593e52975cc14dc840cb8324706"
+      }
+    ],
+    "('solana', 'eqxggzomtjmvdv3hpzytuykeqfcn2bmnbzmlw9bt2uqc', 'bvowbvt8ee2gamgzjquhvje8hg6beqdtuoeaql48dwe4')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_EqXGGZomtjmvdV3HPZyTuYKEqFCn2bmNBZMLw9Bt2UqC_0_5cea65f8c2d291ec.json",
+        "sha256": "c9264763b242b76f53a825adb40e69b3a7b48f2e1f685364feadf4eaaf106328"
+      }
+    ],
+    "('solana', 'errdtwwykdz37ogvjdruq2txnc9ntx78x32pnxwpeq7l', '4gfe6mbdorsy5blbiumrgetr6pzcjyfxmdm5ehsgpump')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_ErRdtWwYKdz37oGVjdruq2tXNC9NTX78x32pnXWPeQ7L_0_508f9a270a93ba55.json",
+        "sha256": "8a77822730ea7f2794b7225d748472b84b8a28ee2fdac5d2fce894f0ce8e14a9"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_ErRdtWwYKdz37oGVjdruq2tXNC9NTX78x32pnXWPeQ7L_1_1fb51d4582e92587.json",
+        "sha256": "4461d1e5295c0cb2f7c9d7bc83add9892a21aaaeecdd283a474d2476137cb867"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_ErRdtWwYKdz37oGVjdruq2tXNC9NTX78x32pnXWPeQ7L_2_fbd015b4ff3c802e.json",
+        "sha256": "00f570cc8876821af31df04dd16a964903d9ead3d72ccce6be346fe432b246db"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_ErRdtWwYKdz37oGVjdruq2tXNC9NTX78x32pnXWPeQ7L_3_7a6a07853c844bc5.json",
+        "sha256": "8d18f83abf30b5b2897dcc8a1f5d7605ee8555ea70025b5523248043f1cde86b"
+      }
+    ],
+    "('solana', 'esugypqy5emmeptfth3vxkrbt2gt2nzcdwt5e5bqsy1a', '3lt2dbbd5bw2gffduuq3d7ixqjzevsd5uulcvne9pump')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_ESUGYPqy5eMMEPtfth3VXKrBT2GT2nZCDWt5E5bqSY1A_0_ab201ad94785ed92.json",
+        "sha256": "dbe88805ef76ea0446f47de686a3c30a84b6dbb413e1fb2c37c7a5fe364ed12e"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_ESUGYPqy5eMMEPtfth3VXKrBT2GT2nZCDWt5E5bqSY1A_1_8ed7ee2584af751d.json",
+        "sha256": "ccb2afb04800888f79b56a87aaa72fd9e8cc69afcbc9feba462b3cc5673964b4"
+      }
+    ],
+    "('solana', 'exuunt42v3s7p7t8w7knegrtccdvcutxduxnknpnha3p', '5snu6g1qvji5debnb6swsx2gu2rtdvvk7khkyujj6cuu')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_EXuuNT42v3S7p7T8W7knEgRtCcDvcUtxdUXnknpnHA3p_0_06811e1062d83846.json",
+        "sha256": "ae63cf4a1cd1965dcda2c3b778a8eac8e827c04a472295f2c82c9b4bac6379d4"
+      }
+    ],
+    "('solana', 'exygvxvrvujjryo65vyuhlaccxhwyztkqa7jxqit2tvr', 'hawkthxrcnl9zgzkqguxlm4w8tnrz7u6mvdeepsutj34')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_ExyGVXVRvUjJryo65vYUhLACcxhwYztKqa7jXqiT2tvr_0_65841e81f9235c89.json",
+        "sha256": "472a706b64ac44b28b378f1a06ed7bdb59408d0f6cbf9744bb8ba99e57677dcf"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_ExyGVXVRvUjJryo65vYUhLACcxhwYztKqa7jXqiT2tvr_1_00a1352df9068715.json",
+        "sha256": "cffffe1a227d4cf0a5cc96f6abe19f8a5e118c6939eb655b826da12d479fc66b"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_ExyGVXVRvUjJryo65vYUhLACcxhwYztKqa7jXqiT2tvr_2_9965aba0207ba24e.json",
+        "sha256": "e5d12b1d3204a5cbc6ddfac4a5343268d7da0d747f4f9536ada90b6b1db3d5f3"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_ExyGVXVRvUjJryo65vYUhLACcxhwYztKqa7jXqiT2tvr_3_60208ab620559ced.json",
+        "sha256": "2bb61979f7cc8082fd0fb5e5fea9021d03851cdc47af99209d0d2da9d27dda14"
+      }
+    ],
+    "('solana', 'fexboqazyemjjm8msusaovjvjm6bhqatz6mavppju1uz', '47qqicyyu8fj1azda5bic6x2ptutlmyfrhweq3yxpump')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_FeXBoQAZyEmJJM8MsUSaovjVJM6bhQAtZ6maVPPju1uz_0_c83c31e404ace134.json",
+        "sha256": "222bd2e046ae72013b44fa18c1c3c3f503b4473da5596c96fb61dc7bb2c58fef"
+      }
+    ],
+    "('solana', 'fqvqrrdf1vxcj7zrtg5c6nguaxapa4qnfhlngnc7i8ie', '4uw1pjlhrtssonztagutswpdhaw3jws8d8pns2ha95uv')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_FqVqrRdF1VXcJ7Zrtg5C6nGuAXaPa4qnFhLnGnc7i8ie_0_b18823f0a5c416a0.json",
+        "sha256": "011259ca7376df13a12af057687fbc4be0a4e58601f1b7ba1785173047a42f83"
+      }
+    ],
+    "('solana', 'ftcgljxcifix2tqktackcjfpi17xmxkyjo8z8owtlpxx', '7scptzkhjzytfuz4qz9qgrjo3fpv8muoedckcxelpump')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_FTcGLJxCiFiX2tqkTAckcjFpi17xmxkYjo8Z8owTLPxx_0_8ca5763d121b2f22.json",
+        "sha256": "c29da17ef43306f8b8d074b8605ffad5b9e2c0921ea2a70002e680f5edbfce52"
+      }
+    ],
+    "('solana', 'fvzlfvxydzfpjqybhmo3mqgk5pjkwbtqvr6wt7qadcuz', 'tmpkzjfnthauyz7qsab51pb6dap5diwtxbudksj7n8g')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_FvZLFVXYDzfPjqyBHmo3mqgK5pJKwbtqVR6WT7qADcUz_0_42ea947db506dfc9.json",
+        "sha256": "edea4bf822195ad4e95bec87dea04350a26eca1bd4634e8ed7a7c5e9c2a9b725"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_FvZLFVXYDzfPjqyBHmo3mqgK5pJKwbtqVR6WT7qADcUz_1_0f4c69e136b69739.json",
+        "sha256": "9574a09261ed44c0268da826878490c13f4ce249015d918c244efaeae51758d9"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_FvZLFVXYDzfPjqyBHmo3mqgK5pJKwbtqVR6WT7qADcUz_2_a9d3f3854dbae7aa.json",
+        "sha256": "da59cc9c632fc7858e6489cdd7787175d80ccbe4a73670612f911f5124df620e"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_FvZLFVXYDzfPjqyBHmo3mqgK5pJKwbtqVR6WT7qADcUz_3_a02b53c023883d52.json",
+        "sha256": "6194b7cde784ca224ba3bb090ff078acdca140a45b9739977a3ccc15bdee1a54"
+      }
+    ],
+    "('solana', 'g7mw1d83ismcqjkkzt62ug4noxcjvhu3ev7u5emgge6z', 'dezxaz8z7pnrnrjjz3wxborgixca6xjnb7yab1ppb263')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_G7mw1d83ismcQJKkzt62Ug4noXCjVhu3eV7U5EMgge6Z_0_75fb29afc0e8cf6f.json",
+        "sha256": "771414b5eb599ed5d0c70bac324d2a0354e5b51cb7b87662bc411bb0b19da75f"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_G7mw1d83ismcQJKkzt62Ug4noXCjVhu3eV7U5EMgge6Z_1_6f270f1bd40122bd.json",
+        "sha256": "2fa568214d8f9d0112ba66afeb7344778017bb3d2be35ce9fc7353aae88c9247"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_G7mw1d83ismcQJKkzt62Ug4noXCjVhu3eV7U5EMgge6Z_2_9cdfceddf7e65a0b.json",
+        "sha256": "fcd35c5770fa36b70db09f9f9c77fe978324ddf7bb3f94d18a9edada80f6a568"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_G7mw1d83ismcQJKkzt62Ug4noXCjVhu3eV7U5EMgge6Z_3_a070f980e1287de1.json",
+        "sha256": "c8f12e718c18efe0b06f5d682826b9bd76d53b9b4078df86babe82af75e7b0aa"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_G7mw1d83ismcQJKkzt62Ug4noXCjVhu3eV7U5EMgge6Z_4_a36f2e25f37d7bbd.json",
+        "sha256": "9989b397af7343818657994b7b16e68b328d8cdae2dfdad5019639dd6fafd46b"
+      }
+    ],
+    "('solana', 'gmfnsmqsv7vgd9vtj7zitjve49zqcekz9dyzsnl7myxc', 'fp5efwp3g2cdacbbgdjv7leeqecnqxmcqnueewz2pump')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_GmfNSMQSv7vgd9Vtj7ZiTjVE49zqcEKz9DyzSNL7mYxC_0_ed2a350db56f6723.json",
+        "sha256": "e3bdf6d700e25d31b06982ed3beb0e3b4609a545e015c1f3d4097962ceb4940a"
+      }
+    ],
+    "('solana', 'gperafn8ekwdmuc41r9cqhcd3brqkzxyexgak8x97kt3', '4vm5td1og9vwpwbrssz4qkhnwaavkouuaj4blse1pump')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_GPeRAfn8EkWDmUC41R9cqHcd3BRQkZXyexgaK8x97KT3_0_a200e6dbdd4a5d18.json",
+        "sha256": "4daf1befa99f67566edcae82e9d3dfd8c41e0d22a7b978f45aae4f9021d9a325"
+      }
+    ],
+    "('solana', 'gwyt8ajwhxfvkfwecbmzh3ec7bmbtpfncvjvpthx9ukj', '3mvgwvlf4uqrenwurtddq5mhmadfud25xsmn8gv7edka')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_GwYt8ajwHXFVkfwEcbmzh3ec7bmbtPfNCVJVpTHx9UKJ_0_2ee4cdf09987ea9e.json",
+        "sha256": "5bc04bf5f90a649389dfb318f4ad6e7b7feec8db52063484fec9384408c797df"
+      }
+    ],
+    "('solana', 'haixk29py5qra2nzqju7olncjymwahbvydbwrqbp2qpv', 'hwxbz2bm8sk4yc6hsr1p9a7n5fnuf8hmupd2xluzpump')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_HAixk29Py5qra2nzQJU7oLnCJymWaHbvyDbwrqbp2QpV_0_557264b8c61eeda4.json",
+        "sha256": "343768e68bd050a114e700787982315af120f119c7c1ce480a37996792f65c9c"
+      }
+    ],
+    "('solana', 'heqtflhhtqyvg42bwuk4zjqy61qzjv1r5vzmrk8h2hnp', '3src8ksb2eijynmgfk72mdk7jof56aqz3njwqeyeki7c')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_HeQTfLhHTqyvG42BwUK4zJQy61qzjv1R5VzMrK8h2hNP_0_fa2fe394c6c26b4b.json",
+        "sha256": "21a8961d6eb9302066b6971eb96090ff9c1da8f49b4872a2ca3439ea4ee4c789"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_HeQTfLhHTqyvG42BwUK4zJQy61qzjv1R5VzMrK8h2hNP_1_78a15caa5bcc0775.json",
+        "sha256": "f526c733ed2b7c2ef71e11b929f6d7c34f03eddbbf82dbe163edc0cc011395ac"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_HeQTfLhHTqyvG42BwUK4zJQy61qzjv1R5VzMrK8h2hNP_2_e416853b1dea411c.json",
+        "sha256": "290e9115e632eb34e785433ee93ef4b247c3d78a17fe15ba5a7be7a7922d099c"
+      }
+    ],
+    "('solana', 'hr7e8i3nqihv5z7lns9hsetanynrrpkaw5pvwqfcchob', '5u2qp4pbvqbbpakkt9mvv88qga8su9vtmr3mykfnpump')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_Hr7E8i3nQihv5z7LNs9HSetANynRrpKaw5PvWQFccHob_0_049c51f06d8fdf6b.json",
+        "sha256": "2782e4ad4a30d8bad6f17c814f9487c1a4b789688e1fb8c40dcedded51da43fe"
+      }
+    ],
+    "('solana', 'hskxcank9632vp339uv3edug9vnvvy5wdgmwadauwdbx', '5m8k6jhhyfzkil8fvlftiu1eeki6hitbqvladoubtjaa')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_HSKxCANK9632vp339UV3EDUg9VNvVY5wDGmwAdAUWdbX_0_83ca6459e9a1b727.json",
+        "sha256": "e810acef247b4b4a1c246a3c904ff2dfe355bacf9b5de03403d1ba419ed63793"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_HSKxCANK9632vp339UV3EDUg9VNvVY5wDGmwAdAUWdbX_1_8979557a323c8f4e.json",
+        "sha256": "987a4ed415186ba62d746cef90eebc61f31b8b3e2fc6add867e09e87be719caa"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_HSKxCANK9632vp339UV3EDUg9VNvVY5wDGmwAdAUWdbX_2_6a691b3de7d739ea.json",
+        "sha256": "772e083d7b8bda7b782242a5a79a1765c7864cce25c38b48c05c96cda7f291ea"
+      }
+    ],
+    "('solana', 'sjscmqa7kbgfugsznphw5brppzffp9rrjktv7w5fvhw', 'fqnucgayn5sgemwvcuzpgvy6eyd3yuo3amfcm1w51xk3')": [
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_sjSCmQA7kBgfugsZNphw5brpPZfFP9RRJktV7W5FvHw_0_4134ad7e5474cf97.json",
+        "sha256": "631b79ba64dfaffdad4c2075dc5965d58edcab4c5c1854e84809697cf8a97d4b"
+      },
+      {
+        "path": "/root/mimic_meme_score_r0/data/raw/gt_ohlcv_solana_sjSCmQA7kBgfugsZNphw5brpPZfFP9RRJktV7W5FvHw_1_9132d25123b281b0.json",
+        "sha256": "ffc0ba6945eb71875d09b26497607ca2cb2e800bb9465667d08c27df3133f810"
+      }
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "strategy_id": "F01_OFS_INTERARRIVAL",
+  "family": "F01",
+  "name": "Inter-arrival compression continuation",
+  "parameter_search_space": {
+    "L": [
+      50,
+      100
+    ],
+    "S": [
+      5,
+      10
+    ],
+    "compress_min": [
+      2.0,
+      3.0,
+      4.0
+    ],
+    "hold_bars": [
+      2,
+      5,
+      10
+    ],
+    "stop_ret": [
+      0.07,
+      0.12
+    ]
+  },
+  "param_combo_count": 72,
+  "access_flags": {
+    "database_access_enabled": false,
+    "rpc_access_enabled": false,
+    "large_file_access_enabled": false,
+    "backtest_enabled": false
+  }
+}

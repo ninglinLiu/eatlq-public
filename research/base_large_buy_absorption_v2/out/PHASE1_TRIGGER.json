@@ -1,0 +1,10 @@
+{
+  "trigger": "SKIP_FULL_REBUILD",
+  "actions": [
+    "Keep resolved_swaps as resolved_swaps_full (already matches CH ground truth).",
+    "Harden load_swap_universe with daily-chunk asserts for future rebuilds.",
+    "Proceed to v2 timing/ranking research on this complete intended universe.",
+    "Do NOT claim 260+ calendar days of new-pool signals \u2014 births cluster; evaluate on covered days only."
+  ],
+  "note": "Full rebuild skipped when intended universe already matches CH ground truth."
+}

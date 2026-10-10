@@ -1,0 +1,37 @@
+{
+  "data": {
+    "error": {
+      "code": -32614,
+      "message": "eth_getLogs is limited to a 2,000 range"
+    },
+    "id": 1,
+    "jsonrpc": "2.0"
+  },
+  "meta": {
+    "body_sha256": "9cb3fad611e565b3023779ffa16f192e9fd7e998100bf18e40ece883eca3e9c5",
+    "bytes": 101,
+    "finished": "2026-10-01T07:35:15.447963+00:00",
+    "http_status": 413,
+    "key": "9646aed74486d3106ef3cbc8a5e82ac3c404b5ce8e48ef47a7a7fb413479d8f6",
+    "label": "v4_init_rpc_probe",
+    "payload": {
+      "id": 1,
+      "jsonrpc": "2.0",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x498581ff718922c3f8e6a244956af099b2652b2b",
+          "fromBlock": "0x16e3600",
+          "toBlock": "0x310c23a",
+          "topics": [
+            "0xdd466e674ea557f56295e2d0218a125ea4b4f0f6f3307b95f85e6110838d6438",
+            "0x1f601b26422ccad68cd4d0f0c9de8bed20914a5bc752325b9714583d0eeb9db5"
+          ]
+        }
+      ]
+    },
+    "retry_after": null,
+    "started": "2026-10-01T07:35:15.324323+00:00",
+    "url": "https://mainnet.base.org"
+  }
+}

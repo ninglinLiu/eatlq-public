@@ -1,0 +1,11 @@
+{
+  "current_round_trips": 6,
+  "gap_to_30": 24,
+  "need": "trace_capable_public_eth_getTransactionReceipt_or_debug_trace_for_swap_txs",
+  "suggested_budget": {
+    "concurrency": 1,
+    "max_calls": 200,
+    "targets": "unique swap txs for launches that have buy but no sell in-window"
+  },
+  "why": "Sealed v0.2 swap logs classify buy/sell by corrected event signs, but many launches still lack an observed sell within 30m; expanding to receipt/trace would recover multi-leg router semantics and confirm external beneficiary without production DB access."
+}

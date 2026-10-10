@@ -1,0 +1,63 @@
+{
+  "probed_at": "2026-10-01",
+  "auth": "none",
+  "cookies_forged": false,
+  "spot_base": {
+    "url": "https://debot.ai/api/dashboard/wallet/smart_wallet?chain=base",
+    "http": 200,
+    "code": 101,
+    "message_en": "not login",
+    "data_is_null": true,
+    "body": {
+      "code": 101,
+      "message_en": "not login",
+      "message_cn": "未登录"
+    }
+  },
+  "spot_bsc": {
+    "url": "https://debot.ai/api/dashboard/wallet/smart_wallet?chain=bsc",
+    "http": 200,
+    "code": 101,
+    "message_en": "not login",
+    "data_is_null": true,
+    "body": {
+      "code": 101,
+      "message_en": "not login",
+      "message_cn": "未登录"
+    }
+  },
+  "discover_7d": {
+    "url": "https://debot.ai/api/contract/discover/wallets?duration=7d&page_size=1",
+    "http": 200,
+    "code": 0,
+    "message_en": null,
+    "total": 1694,
+    "record_keys": [
+      "avg_holding_time_seconds",
+      "dimension_scores",
+      "duration",
+      "is_smart_money",
+      "last_trade_time",
+      "long_profit_trades",
+      "long_realized_pnl",
+      "loss_trades",
+      "max_drawdown",
+      "max_drawdown_ratio",
+      "positive_pnl_days_ratio",
+      "profit_loss_ratio",
+      "profit_trades",
+      "rank",
+      "realized_pnl",
+      "score",
+      "short_profit_trades",
+      "short_realized_pnl",
+      "tags",
+      "tier",
+      "trade_count",
+      "volume",
+      "wallet",
+      "win_rate"
+    ],
+    "perp_fields_present": true
+  }
+}

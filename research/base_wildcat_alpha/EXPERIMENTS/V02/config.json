@@ -1,0 +1,23 @@
+{
+  "alpha_id": "V02",
+  "family": "venue",
+  "hypothesis": "V2 activity share leads V3 volatility",
+  "mechanism": "retail venue migration is an attention proxy",
+  "venue": "Base V2+V3",
+  "universe": "active observed pools",
+  "horizon": "4h",
+  "data_source": "V2/V3 and fee-tier metadata",
+  "experiment": "cross-venue hourly panel",
+  "feature": "v2_market_share",
+  "direction": 1,
+  "prediction_object": "future absolute return",
+  "falsifier": "pool pairing coverage insufficient",
+  "status": "NOT_YET_TESTED",
+  "sample_size": 0,
+  "gross_result": "pending",
+  "cost_adjusted_result": "pending",
+  "capacity": "pending",
+  "concentration": "pending",
+  "tail_risk": "pending",
+  "next_action": "run rapid screen"
+}

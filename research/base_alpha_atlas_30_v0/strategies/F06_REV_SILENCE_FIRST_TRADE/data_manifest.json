@@ -1,0 +1,20 @@
+{
+  "strategy_id": "F06_REV_SILENCE_FIRST_TRADE",
+  "data_class": "A_OFFLINE_DATA_LIKELY_AVAILABLE",
+  "required_tables_or_files": [
+    "swap times series"
+  ],
+  "required_columns": [
+    "pool",
+    "block_time",
+    "amounts"
+  ],
+  "required_time_resolution": "event",
+  "point_in_time_requirements": "PIT",
+  "minimum_history": ">=30d",
+  "estimated_rows": "swaps medium",
+  "estimated_read_bytes": "100MB-1GB",
+  "whether_current_diagnostics_may_support_it": "maybe from swap TSV",
+  "whether_production_database_would_be_required": false,
+  "missing_data": []
+}

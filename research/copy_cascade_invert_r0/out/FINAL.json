@@ -1,0 +1,71 @@
+{
+  "GO": false,
+  "arm_a_passed": false,
+  "arm_b_passed": false,
+  "board_lineage": "OK",
+  "debot_hyperliquid": {
+    "frac_within_10pct": 0.7635829662261381,
+    "median_abs_ratio": 0.9999999999999993,
+    "n_clean_active_uncapped": 683,
+    "n_ok": 994,
+    "sign_agree_rate_clean": 0.986822840409956,
+    "status": "RECONCILED_WITH_GAPS",
+    "venue": "hyperliquid_perp"
+  },
+  "deploy_allowed": false,
+  "eatlq_archive_used": false,
+  "generated_at": "2026-09-17T08:18:32+00:00",
+  "live_allowed": false,
+  "live_base": {
+    "both_7d": 378,
+    "n_ok": 378,
+    "pearson_7d": -0.34828883304419894,
+    "pearson_7d_active": -0.3492623305225864,
+    "rpc_head": 51419202,
+    "sign_agree_rate_7d": 0.8597883597883598,
+    "sign_agree_rate_7d_active": 0.49504950495049505,
+    "status": "VENDOR_LEDGER_GAP"
+  },
+  "live_bsc": {
+    "both_7d": 532,
+    "n_ok": 532,
+    "sign_agree_rate_7d": 0.34398496240601506,
+    "sign_agree_rate_7d_active": 0.10963455149501661,
+    "status": "VENDOR_LEDGER_GAP"
+  },
+  "n_spot_reconcilable_addresses": 846,
+  "n_vendor_addresses": 2183,
+  "n_vendor_rows": 3255,
+  "offline_copied": 15,
+  "project": "copy_cascade_invert_r0",
+  "reasons": [
+    "July offline FIFO \u2229 today's board is empty or mismatched (old tape)",
+    "live Base GMGN vs public-index FIFO: VENDOR_LEDGER_GAP sign7=0.8597883597883598",
+    "live BSC: VENDOR_LEDGER_GAP",
+    "Debot open board is Hyperliquid perp, not Base/BSC spot; its spot smart-money board is SOURCE_BLOCKED_AUTH",
+    "Debot vs Hyperliquid own ledger: RECONCILED_WITH_GAPS sign_clean=0.986822840409956 within10%=0.7635829662261381",
+    "Fomo prod-api requires a Privy session; no anonymous board exists",
+    "vendor\u2229tape delay-tax n below powered gate (do not close on n<20)",
+    "atomic sell-sim skipped (INCONCLUSIVE_NO_RPC)",
+    "Arm A did not pass preregistered gates",
+    "Arm B did not pass preregistered gates",
+    "BSC used GMGN activity hashes + public RPC receipts (no free Blockscout index)",
+    "prospective window after captured_at is empty on this tape"
+  ],
+  "reconcile_status": "VENDOR_LEDGER_GAP",
+  "rpc_kind": "public_https_only",
+  "rpc_used": true,
+  "same_direction_copy_arm": "INCONCLUSIVE_SMALL_N",
+  "self_go_allowed": false,
+  "source_status": {
+    "debot": "CAPTURED_WRONG_VENUE",
+    "fomo": "SOURCE_BLOCKED_AUTH",
+    "gmgn": "CAPTURED"
+  },
+  "training_allowed": false,
+  "venue_counts": {
+    "base_bsc_spot": 1755,
+    "hyperliquid_perp": 1500
+  },
+  "verdict": "VENDOR_LEDGER_GAP"
+}

@@ -1,0 +1,33 @@
+{
+  "hypothesis_id": "H_BUCKET_SPECIALIST",
+  "n_oof": 688,
+  "n_selected": 263,
+  "feature_cols": [
+    "age_s",
+    "flow_persist_score",
+    "liq_trend",
+    "liq_drawdown",
+    "early_ret",
+    "mom_h2",
+    "part_concentration",
+    "deployer_prior_fatal_rate"
+  ],
+  "per_bucket": {
+    "1-6h": {
+      "n_dev": 330,
+      "n_selected_oof": 64
+    },
+    "6-24h": {
+      "n_dev": 310,
+      "n_selected_oof": 63
+    },
+    "1-3d": {
+      "n_dev": 355,
+      "n_selected_oof": 66
+    },
+    "3-7d": {
+      "n_dev": 382,
+      "n_selected_oof": 70
+    }
+  }
+}

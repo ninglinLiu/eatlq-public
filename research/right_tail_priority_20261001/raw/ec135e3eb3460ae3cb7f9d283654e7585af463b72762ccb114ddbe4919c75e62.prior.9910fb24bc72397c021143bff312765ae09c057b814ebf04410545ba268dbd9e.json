@@ -1,0 +1,22 @@
+{
+  "body_sha256": "9910fb24bc72397c021143bff312765ae09c057b814ebf04410545ba268dbd9e",
+  "bytes": 77,
+  "finished": "2026-10-01T07:34:21.645786+00:00",
+  "http_status": 429,
+  "key": "ec135e3eb3460ae3cb7f9d283654e7585af463b72762ccb114ddbe4919c75e62",
+  "label": "pilot_pool_fee",
+  "payload": {
+    "id": 1,
+    "jsonrpc": "2.0",
+    "method": "eth_call",
+    "params": [
+      {
+        "data": "0xddca3f43",
+        "to": "0x67a11022b7b6ed66f81233f6c8ed6e48f7826530"
+      },
+      "0x313b808"
+    ]
+  },
+  "started": "2026-10-01T07:34:21.496955+00:00",
+  "url": "https://mainnet.base.org"
+}

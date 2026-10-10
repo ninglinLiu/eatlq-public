@@ -1,0 +1,23 @@
+{
+  "body_sha256": "373d32cdf501b1123f656bfe88c0f9b501cd38ed6a8747c2cc1f6ac49f166266",
+  "bytes": 295,
+  "finished": "2026-10-01T07:42:10.254332+00:00",
+  "http_status": 200,
+  "key": "3d49174ce183af5022458858550475d5ff0fc637eaa9ee745ec2f9016251eace",
+  "label": "pilot_route_state",
+  "payload": {
+    "id": 1,
+    "jsonrpc": "2.0",
+    "method": "eth_call",
+    "params": [
+      {
+        "data": "0xc815641c1f601b26422ccad68cd4d0f0c9de8bed20914a5bc752325b9714583d0eeb9db5",
+        "to": "0xa3c0c9b65bad0b08107aa264b0f3db444b867a71"
+      },
+      "0x310c250"
+    ]
+  },
+  "retry_after": null,
+  "started": "2026-10-01T07:42:10.157546+00:00",
+  "url": "https://mainnet.base.org"
+}

@@ -1,0 +1,53 @@
+{
+  "tables": {
+    "r3_preoutcome_events": {
+      "insert_only": true,
+      "update_delete_forbidden": true,
+      "unique": [
+        "signal_id"
+      ],
+      "hash_chain": true,
+      "required_fields": [
+        "signal_id",
+        "t0_block",
+        "decision_block",
+        "feature_cutoff_block",
+        "preoutcome_write_block",
+        "target_entry_block",
+        "decision_block_hash",
+        "pool",
+        "keystone_pass",
+        "p_fatal",
+        "friction",
+        "f10_score",
+        "f10_pass",
+        "impact_residual_value",
+        "ineffective_buying_value",
+        "liq_fragility_score_value",
+        "part_exhaust_score_value",
+        "accel_value",
+        "feature_pipeline_sha256",
+        "residualizer_sha256",
+        "price_only_control_score",
+        "price_only_control_sha256",
+        "feature_snapshot_hash",
+        "record_sha256",
+        "prev_record_sha256",
+        "timestamp_written_utc",
+        "recorder_code_sha256",
+        "manifest_version",
+        "write_delay_ms"
+      ]
+    },
+    "r3_outcome_events": {
+      "append_only": true,
+      "join_key": "signal_id",
+      "may_not_mutate_preoutcome": true,
+      "superseding_events_allowed": true
+    }
+  },
+  "late_backfill_label": "LATE_BACKFILL",
+  "late_backfill_excluded_from_confirmatory": true,
+  "f10_fail_field": "derived_not_stored",
+  "assert_on_write": "f10_pass == (f10_score >= primary_threshold)"
+}

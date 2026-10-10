@@ -1,0 +1,181 @@
+# Run-004 Patch V3R-7 — V3-only Return-Aware Feature Ablation
+# Input: V3R-6 5k decoded-backed V3-only dataset
+# Safety: research-only / sanity-only. No production model writes. No mixed dataset.
+
+clean_alpha_input: mvp/diagnostics/run004_v3r6_clean_alpha_v3_5k_dataset.csv
+all_input: mvp/diagnostics/run004_v3r6_all_v3_5k_dataset.csv
+risk_input: mvp/diagnostics/run004_v3r6_risk_v3_5k_dataset.csv
+
+primary_target: alpha_top20_after_gas
+net_return_column: final_return_after_cost
+
+oracle_status: pending_manual_execution
+
+# ── Feature groups ──────────────────────────────────────────────────────────
+# A. old/runtime baseline — unavailable in V3R-6 (no pre-computed 4-feature baseline)
+# B. Sender concentration (pool-level; per-wallet gini/entropy not computed in V3R-6)
+# C. Buyer/seller — UNAVAILABLE in V3R-6 (not in feature set)
+# D. Flow count
+# E. Signed/raw flow
+# F. Temporal acceleration (only prev_pool_delta_sec available)
+# G. V3 liquidity / tick / fee metadata
+# H. Risk-aware features
+# I. Combined microstructure variants
+feature_groups:
+  # G — V3 metadata
+  v3_metadata:
+    - feature_fee_tier
+    - feature_tick
+    - feature_liquidity
+
+  # B — Sender concentration (available at pool level)
+  sender_concentration:
+    - feature_pool_unique_senders_1h
+    - feature_sender_pool_prior_count_1h
+
+  # D — Flow count
+  flow_count:
+    - feature_pool_flow_count_1h
+
+  # E — Signed/raw flow (WETH-normalised)
+  signed_flow:
+    - feature_pool_weth_flow_sum_1h
+    - feature_pool_weth_signed_flow_sum_1h
+
+  # F — Temporal (prev_pool_delta_sec only; acceleration not available)
+  temporal:
+    - feature_temporal_prev_pool_delta_sec
+
+  # H — Risk-aware features (leakage guard will check correlation with target)
+  risk_features:
+    - v3_exit_drained_label
+    - v3_liquidity_exit_risk
+    - repeated_pool_hour_cluster_label
+    - gas_cost_dominates_label
+    - scale_risk_label
+
+  # I — Combined: sender + flow count
+  combined_sender_flow:
+    - feature_pool_unique_senders_1h
+    - feature_sender_pool_prior_count_1h
+    - feature_pool_flow_count_1h
+    - feature_pool_weth_signed_flow_sum_1h
+
+  # I — Combined: sender + flow + temporal (no raw volume, no protocol metadata)
+  combined_microstructure_no_raw_volume:
+    - feature_pool_unique_senders_1h
+    - feature_sender_pool_prior_count_1h
+    - feature_pool_flow_count_1h
+    - feature_temporal_prev_pool_delta_sec
+
+  # G+D — V3 liquidity + flow (pool state + activity)
+  v3_liquidity_micro:
+    - feature_fee_tier
+    - feature_liquidity
+    - feature_pool_flow_count_1h
+    - feature_pool_weth_signed_flow_sum_1h
+
+  # ALL — all non-forbidden feature_* columns (excl. constant ones)
+  all_available:
+    - feature_fee_tier
+    - feature_tick
+    - feature_liquidity
+    - feature_pool_flow_count_1h
+    - feature_pool_unique_senders_1h
+    - feature_pool_weth_flow_sum_1h
+    - feature_pool_weth_signed_flow_sum_1h
+    - feature_sender_pool_prior_count_1h
+    - feature_temporal_prev_pool_delta_sec
+
+# ── Denylist — forbidden / leakage fields ───────────────────────────────────
+denylist_columns:
+  # Targets (direct leakage)
+  - final_return_after_cost
+  - executable_label_after_gas
+  - alpha_top20_after_gas
+  - alpha_ret_gt_5pct_after_gas
+  - alpha_ret_gt_10pct_after_gas
+  - final_return_rank
+  - within_pool_return_rank
+  # Source identity / position fields
+  - source_tx_hash
+  - source_log_index
+  - source_block_number
+  - source_timestamp
+  - pool_address
+  - token0
+  - token1
+  - tokenIn
+  - tokenOut
+  - sender
+  - recipient
+  - tx_log_block_identity_present
+  # Temporal / block fields
+  - timestamp
+  - timestamp_ms
+  - block_number
+  - entry_block
+  - exit_block
+  # Post-entry fields
+  - exit_block
+  - gross_quote_return_30m
+  - fixed_cost_adjusted_return_30m
+  - gas_adjusted_return_30m_high
+  - gas_adjusted_return_30m_low
+  - gas_adjusted_return_30m_medium
+  - gas_cost_return_high
+  - gas_cost_return_low
+  - gas_cost_return_medium
+  # Constants (flagged by feature coverage report)
+  - feature_protocol
+  - feature_sender_present
+
+denylist_prefixes: []
+
+# ── Stress tests ─────────────────────────────────────────────────────────────
+stress_tests:
+  - shuffled_5fold_sanity_only
+  - exclude_top1_pool
+  - exclude_top5_pools
+  - fee_tier_100_only
+  - fee_tier_non100
+  - high_liquidity
+  - low_liquidity
+
+# ── Model training params ─────────────────────────────────────────────────────
+training:
+  max_depth: 2
+  n_estimators: 50
+  learning_rate: 0.08
+  subsample: 0.9
+  colsample_bytree: 0.9
+  random_state: 47
+  min_rows: 250
+  min_positive_labels: 30
+  min_negative_labels: 50
+  chronological_split: 0.70
+
+# ── Safety ────────────────────────────────────────────────────────────────────
+safety:
+  no_production_model_write: true
+  no_active_model_overwrite: true
+  no_live: true
+  no_redis_signals: true
+  no_mixed_dataset: true
+  no_v2_impact: true
+  sanity_only_not_deploy_evidence: true
+  promote_live_allowed: false
+  production_model_write_allowed: false
+
+# ── Outputs ───────────────────────────────────────────────────────────────────
+outputs:
+  patch_json: mvp/diagnostics/run004_patch_v3r7_return_aware_feature_ablation.json
+  input_validation_json: mvp/diagnostics/run004_v3r7_input_validation_report.json
+  feature_availability_json: mvp/diagnostics/run004_v3r7_feature_availability_report.json
+  feature_group_metrics_json: mvp/diagnostics/run004_v3r7_feature_group_metrics.json
+  stress_json: mvp/diagnostics/run004_v3r7_stress_tests.json
+  leakage_guard_json: mvp/diagnostics/run004_v3r7_leakage_guard_report.json
+  interpretation_json: mvp/diagnostics/run004_v3r7_interpretation.json
+  feature_group_summary_csv: mvp/diagnostics/run004_v3r7_feature_group_summary.csv
+  candidate_model_dir: mvp/diagnostics/run004_v3r7_candidate_models
+  markdown: mvp/runs/run-004-patch-v3r7-return-aware-feature-ablation.md

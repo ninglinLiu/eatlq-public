@@ -1,0 +1,758 @@
+# Compose profiles (opt-in services):
+#   --profile strategy   — strategy_engine, pool-discovery, swap-poller, shadow-closer, wallet-scorer
+#   --profile executor   — executor (set EXECUTOR_DRY_RUN / RPC via .env; not live authorization)
+#   --profile dashboard  — optional HTTP dashboard (laszlo.sh enables all three for a full stack)
+#   --profile backfill   — backfill-only jobs (not required for paper observation path)
+# Core infra (redis, postgres, clickhouse, archiver, autoheal) starts without profiles.
+# Ingestion (ingestor) is opt-in: docker compose --profile ingestion up -d ingestor
+services:
+  redis:
+    image: redis:7.4-alpine
+    labels:
+      - "autoheal=true"
+    command: ["redis-server", "--appendonly", "yes", "--save", "60", "1000"]
+    restart: unless-stopped
+    environment:
+      TZ: ${TZ}
+    networks:
+      - eatlq-net
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  clickhouse:
+    image: clickhouse/clickhouse-server:24.12
+    labels:
+      - "autoheal=true"
+    restart: unless-stopped
+    environment:
+      TZ: ${TZ}
+      CLICKHOUSE_DB: ${CLICKHOUSE_DB}
+      CLICKHOUSE_USER: ${CLICKHOUSE_USER}
+      CLICKHOUSE_PASSWORD: ${CLICKHOUSE_PASSWORD}
+    networks:
+      - eatlq-net
+    volumes:
+      - clickhouse_data:/var/lib/clickhouse
+      - ../clickhouse/init:/docker-entrypoint-initdb.d:ro
+      - ../clickhouse/config/config.xml:/etc/clickhouse-server/config.d/eatlq.xml:ro
+    ulimits:
+      nofile:
+        soft: 262144
+        hard: 262144
+    healthcheck:
+      test: ["CMD-SHELL", "clickhouse-client --query 'SELECT 1'"]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+      start_period: 20s
+
+  postgres:
+    image: postgres:16-alpine
+    labels:
+      - "autoheal=true"
+    restart: unless-stopped
+    environment:
+      TZ: ${TZ}
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    command:
+      [
+        "postgres",
+        "-c",
+        "max_connections=100",
+        "-c",
+        "shared_buffers=256MB",
+        "-c",
+        "wal_level=replica",
+      ]
+    networks:
+      - eatlq-net
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ../postgres/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+
+  ingestor:
+    labels:
+      - "autoheal=true"
+    build:
+      context: ../..
+      dockerfile: services/ingestor/Dockerfile
+    profiles: ["ingestion"]
+    restart: unless-stopped
+    environment:
+      TZ: ${TZ}
+      RUST_LOG: ${RUST_LOG}
+      EVM_WS_URL: ${EVM_WS_URL}
+      EVM_HTTP_URL: ${EVM_HTTP_URL:-}
+      WS_SOURCE: ${WS_SOURCE:-quicknode}
+      CHAIN_ID: ${CHAIN_ID}
+      WS_SUBSCRIBE_METHOD: ${WS_SUBSCRIBE_METHOD}
+      WS_SUBSCRIBE_PARAMS_JSON: ${WS_SUBSCRIBE_PARAMS_JSON}
+      LOG_FILTER_JSON: ${LOG_FILTER_JSON:-}
+      WS_RECONNECT_INITIAL_BACKOFF_MS: ${WS_RECONNECT_INITIAL_BACKOFF_MS}
+      WS_RECONNECT_MAX_BACKOFF_MS: ${WS_RECONNECT_MAX_BACKOFF_MS}
+      WS_READ_TIMEOUT_SECS: ${WS_READ_TIMEOUT_SECS}
+      RPC_REQUEST_TIMEOUT_SECS: ${RPC_REQUEST_TIMEOUT_SECS:-30}
+      REDIS_URL: ${REDIS_URL}
+      MARKET_TICKS_STREAM: ${MARKET_TICKS_STREAM}
+      MARKET_TICKS_MAXLEN: ${MARKET_TICKS_MAXLEN}
+      REDIS_BATCH_SIZE: ${REDIS_BATCH_SIZE}
+      REDIS_BATCH_TIMEOUT_MS: ${REDIS_BATCH_TIMEOUT_MS}
+      RAW_CHANNEL_CAPACITY: ${RAW_CHANNEL_CAPACITY}
+      RECORD_CHANNEL_CAPACITY: ${RECORD_CHANNEL_CAPACITY}
+      INGESTOR_HEALTHCHECK_PATH: ${INGESTOR_HEALTHCHECK_PATH}
+      EVM_WS_URLS_POOL: ${EVM_WS_URLS_POOL:-}
+      EVM_HTTP_URLS_POOL: ${EVM_HTTP_URLS_POOL:-}
+      WS_CONNECT_TIMEOUT_SECS: ${WS_CONNECT_TIMEOUT_SECS:-10}
+      INGESTOR_STALL_SECS: ${INGESTOR_STALL_SECS:-300}
+      INGESTOR_STALL_GRACE_SECS: ${INGESTOR_STALL_GRACE_SECS:-120}
+      INGESTOR_WS_IDLE_SECS: ${INGESTOR_WS_IDLE_SECS:-120}
+      INGESTOR_POOL_COOLDOWN_SECS: ${INGESTOR_POOL_COOLDOWN_SECS:-15}
+      INGESTOR_POOL_BAN_SECS: ${INGESTOR_POOL_BAN_SECS:-120}
+      INGESTOR_POOL_MAX_CONSECUTIVE_FAILS: ${INGESTOR_POOL_MAX_CONSECUTIVE_FAILS:-4}
+      INGESTOR_HTTP_HEAD_POLL_MS: ${INGESTOR_HTTP_HEAD_POLL_MS:-2000}
+      INGESTOR_CATCHUP_CHUNK: ${INGESTOR_CATCHUP_CHUNK:-20}
+      INGESTOR_CATCHUP_MAX_BLOCKS: ${INGESTOR_CATCHUP_MAX_BLOCKS:-300}
+      INGESTOR_CATCHUP_PAUSE_MS: ${INGESTOR_CATCHUP_PAUSE_MS:-50}
+      BACKFILL_STATE_POSTGRES_URL: ${BACKFILL_STATE_POSTGRES_URL:-}
+    networks:
+      - eatlq-net
+    depends_on:
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "find ${INGESTOR_HEALTHCHECK_PATH:-/tmp/ingestor_healthy} -mmin -2 | grep -q ."]
+      interval: 20s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+
+  backfill:
+    build:
+      context: ../..
+      dockerfile: services/ingestor/Dockerfile
+    profiles: ["backfill"]
+    command: ["backfill"]
+    restart: "no"
+    environment:
+      TZ: ${TZ}
+      RUST_LOG: ${RUST_LOG}
+      EVM_WS_URL: ${EVM_WS_URL}
+      EVM_HTTP_URL: ${EVM_HTTP_URL:-}
+      WS_SOURCE: ${WS_SOURCE:-quicknode}
+      CHAIN_ID: ${CHAIN_ID}
+      WS_SUBSCRIBE_METHOD: ${WS_SUBSCRIBE_METHOD}
+      WS_SUBSCRIBE_PARAMS_JSON: ${WS_SUBSCRIBE_PARAMS_JSON}
+      LOG_FILTER_JSON: ${LOG_FILTER_JSON:-}
+      WS_RECONNECT_INITIAL_BACKOFF_MS: ${WS_RECONNECT_INITIAL_BACKOFF_MS}
+      WS_RECONNECT_MAX_BACKOFF_MS: ${WS_RECONNECT_MAX_BACKOFF_MS}
+      WS_READ_TIMEOUT_SECS: ${WS_READ_TIMEOUT_SECS}
+      RPC_REQUEST_TIMEOUT_SECS: ${RPC_REQUEST_TIMEOUT_SECS:-30}
+      REDIS_URL: ${REDIS_URL}
+      MARKET_TICKS_STREAM: ${MARKET_TICKS_STREAM}
+      MARKET_TICKS_MAXLEN: ${MARKET_TICKS_MAXLEN}
+      REDIS_BATCH_SIZE: ${REDIS_BATCH_SIZE}
+      REDIS_BATCH_TIMEOUT_MS: ${REDIS_BATCH_TIMEOUT_MS}
+      RAW_CHANNEL_CAPACITY: ${RAW_CHANNEL_CAPACITY}
+      RECORD_CHANNEL_CAPACITY: ${RECORD_CHANNEL_CAPACITY}
+      INGESTOR_HEALTHCHECK_PATH: ${INGESTOR_HEALTHCHECK_PATH}
+      BACKFILL_FROM_BLOCK: ${BACKFILL_FROM_BLOCK:-}
+      BACKFILL_TO_BLOCK: ${BACKFILL_TO_BLOCK:-}
+      BACKFILL_CHUNK_SIZE: ${BACKFILL_CHUNK_SIZE:-100}
+      BACKFILL_CONFIRMATIONS: ${BACKFILL_CONFIRMATIONS:-6}
+      BACKFILL_PAUSE_MS: ${BACKFILL_PAUSE_MS:-0}
+      BACKFILL_SOURCE_SUFFIX: ${BACKFILL_SOURCE_SUFFIX:-backfill}
+      BACKFILL_STATE_POSTGRES_URL: ${BACKFILL_STATE_POSTGRES_URL:-}
+      BACKFILL_JOB_NAME: ${BACKFILL_JOB_NAME:-default}
+      BACKFILL_AUTO_CLAIM_PENDING_GAP: ${BACKFILL_AUTO_CLAIM_PENDING_GAP:-true}
+    networks:
+      - eatlq-net
+    depends_on:
+      redis:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+
+  backfill-enqueue-gap:
+    build:
+      context: ../..
+      dockerfile: services/ingestor/Dockerfile
+    profiles: ["backfill"]
+    command: ["backfill_enqueue_gap"]
+    restart: "no"
+    environment:
+      TZ: ${TZ}
+      RUST_LOG: ${RUST_LOG}
+      EVM_WS_URL: ${EVM_WS_URL}
+      EVM_HTTP_URL: ${EVM_HTTP_URL:-}
+      WS_SOURCE: ${WS_SOURCE:-quicknode}
+      CHAIN_ID: ${CHAIN_ID}
+      WS_SUBSCRIBE_METHOD: ${WS_SUBSCRIBE_METHOD}
+      WS_SUBSCRIBE_PARAMS_JSON: ${WS_SUBSCRIBE_PARAMS_JSON}
+      LOG_FILTER_JSON: ${LOG_FILTER_JSON:-}
+      WS_RECONNECT_INITIAL_BACKOFF_MS: ${WS_RECONNECT_INITIAL_BACKOFF_MS}
+      WS_RECONNECT_MAX_BACKOFF_MS: ${WS_RECONNECT_MAX_BACKOFF_MS}
+      WS_READ_TIMEOUT_SECS: ${WS_READ_TIMEOUT_SECS}
+      RPC_REQUEST_TIMEOUT_SECS: ${RPC_REQUEST_TIMEOUT_SECS:-30}
+      REDIS_URL: ${REDIS_URL}
+      MARKET_TICKS_STREAM: ${MARKET_TICKS_STREAM}
+      MARKET_TICKS_MAXLEN: ${MARKET_TICKS_MAXLEN}
+      REDIS_BATCH_SIZE: ${REDIS_BATCH_SIZE}
+      REDIS_BATCH_TIMEOUT_MS: ${REDIS_BATCH_TIMEOUT_MS}
+      RAW_CHANNEL_CAPACITY: ${RAW_CHANNEL_CAPACITY}
+      RECORD_CHANNEL_CAPACITY: ${RECORD_CHANNEL_CAPACITY}
+      INGESTOR_HEALTHCHECK_PATH: ${INGESTOR_HEALTHCHECK_PATH}
+      BACKFILL_FROM_BLOCK: ${BACKFILL_FROM_BLOCK:-}
+      BACKFILL_TO_BLOCK: ${BACKFILL_TO_BLOCK:-}
+      BACKFILL_CHUNK_SIZE: ${BACKFILL_CHUNK_SIZE:-100}
+      BACKFILL_CONFIRMATIONS: ${BACKFILL_CONFIRMATIONS:-6}
+      BACKFILL_PAUSE_MS: ${BACKFILL_PAUSE_MS:-0}
+      BACKFILL_SOURCE_SUFFIX: ${BACKFILL_SOURCE_SUFFIX:-backfill}
+      BACKFILL_STATE_POSTGRES_URL: ${BACKFILL_STATE_POSTGRES_URL:-}
+      BACKFILL_JOB_NAME: ${BACKFILL_JOB_NAME:-default}
+      BACKFILL_AUTO_CLAIM_PENDING_GAP: ${BACKFILL_AUTO_CLAIM_PENDING_GAP:-true}
+    networks:
+      - eatlq-net
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  backfill-discover-gaps:
+    build:
+      context: ../..
+      dockerfile: services/ingestor/Dockerfile
+    profiles: ["backfill"]
+    command: ["backfill_discover_gaps"]
+    restart: "no"
+    environment:
+      TZ: ${TZ}
+      RUST_LOG: ${RUST_LOG}
+      EVM_WS_URL: ${EVM_WS_URL}
+      EVM_HTTP_URL: ${EVM_HTTP_URL:-}
+      WS_SOURCE: ${WS_SOURCE:-quicknode}
+      CHAIN_ID: ${CHAIN_ID}
+      WS_SUBSCRIBE_METHOD: ${WS_SUBSCRIBE_METHOD}
+      WS_SUBSCRIBE_PARAMS_JSON: ${WS_SUBSCRIBE_PARAMS_JSON}
+      LOG_FILTER_JSON: ${LOG_FILTER_JSON:-}
+      WS_RECONNECT_INITIAL_BACKOFF_MS: ${WS_RECONNECT_INITIAL_BACKOFF_MS}
+      WS_RECONNECT_MAX_BACKOFF_MS: ${WS_RECONNECT_MAX_BACKOFF_MS}
+      WS_READ_TIMEOUT_SECS: ${WS_READ_TIMEOUT_SECS}
+      RPC_REQUEST_TIMEOUT_SECS: ${RPC_REQUEST_TIMEOUT_SECS:-30}
+      REDIS_URL: ${REDIS_URL}
+      MARKET_TICKS_STREAM: ${MARKET_TICKS_STREAM}
+      MARKET_TICKS_MAXLEN: ${MARKET_TICKS_MAXLEN}
+      REDIS_BATCH_SIZE: ${REDIS_BATCH_SIZE}
+      REDIS_BATCH_TIMEOUT_MS: ${REDIS_BATCH_TIMEOUT_MS}
+      RAW_CHANNEL_CAPACITY: ${RAW_CHANNEL_CAPACITY}
+      RECORD_CHANNEL_CAPACITY: ${RECORD_CHANNEL_CAPACITY}
+      INGESTOR_HEALTHCHECK_PATH: ${INGESTOR_HEALTHCHECK_PATH}
+      BACKFILL_FROM_BLOCK: ${BACKFILL_FROM_BLOCK:-}
+      BACKFILL_TO_BLOCK: ${BACKFILL_TO_BLOCK:-}
+      BACKFILL_CHUNK_SIZE: ${BACKFILL_CHUNK_SIZE:-100}
+      BACKFILL_CONFIRMATIONS: ${BACKFILL_CONFIRMATIONS:-6}
+      BACKFILL_PAUSE_MS: ${BACKFILL_PAUSE_MS:-0}
+      BACKFILL_SOURCE_SUFFIX: ${BACKFILL_SOURCE_SUFFIX:-backfill}
+      BACKFILL_STATE_POSTGRES_URL: ${BACKFILL_STATE_POSTGRES_URL:-}
+      BACKFILL_JOB_NAME: ${BACKFILL_JOB_NAME:-default}
+      BACKFILL_AUTO_CLAIM_PENDING_GAP: ${BACKFILL_AUTO_CLAIM_PENDING_GAP:-true}
+      BACKFILL_DISCOVERY_CLICKHOUSE_URL: ${BACKFILL_DISCOVERY_CLICKHOUSE_URL:-}
+      BACKFILL_DISCOVERY_CLICKHOUSE_DB: ${BACKFILL_DISCOVERY_CLICKHOUSE_DB:-eatlq}
+      BACKFILL_DISCOVERY_CLICKHOUSE_USER: ${BACKFILL_DISCOVERY_CLICKHOUSE_USER:-default}
+      BACKFILL_DISCOVERY_CLICKHOUSE_PASSWORD: ${BACKFILL_DISCOVERY_CLICKHOUSE_PASSWORD:-}
+      BACKFILL_DISCOVERY_CLICKHOUSE_TABLE: ${BACKFILL_DISCOVERY_CLICKHOUSE_TABLE:-raw_evm_logs}
+      BACKFILL_DISCOVERY_FROM_BLOCK: ${BACKFILL_DISCOVERY_FROM_BLOCK:-}
+      BACKFILL_DISCOVERY_TO_BLOCK: ${BACKFILL_DISCOVERY_TO_BLOCK:-}
+      BACKFILL_DISCOVERY_MIN_GAP_SIZE: ${BACKFILL_DISCOVERY_MIN_GAP_SIZE:-1}
+      BACKFILL_DISCOVERY_MAX_GAP_SIZE: ${BACKFILL_DISCOVERY_MAX_GAP_SIZE:-20}
+      BACKFILL_DISCOVERY_INCLUDE_EDGE_GAPS: ${BACKFILL_DISCOVERY_INCLUDE_EDGE_GAPS:-false}
+      CLICKHOUSE_URL: ${CLICKHOUSE_URL:-http://clickhouse:8123}
+    networks:
+      - eatlq-net
+    depends_on:
+      postgres:
+        condition: service_healthy
+      clickhouse:
+        condition: service_healthy
+
+  backfill-scheduler:
+    build:
+      context: ../..
+      dockerfile: services/ingestor/Dockerfile
+    profiles: ["backfill"]
+    command: ["backfill_scheduler"]
+    restart: unless-stopped
+    environment:
+      TZ: ${TZ}
+      RUST_LOG: ${RUST_LOG}
+      EVM_WS_URL: ${EVM_WS_URL}
+      EVM_HTTP_URL: ${EVM_HTTP_URL:-}
+      WS_SOURCE: ${WS_SOURCE:-quicknode}
+      CHAIN_ID: ${CHAIN_ID}
+      WS_SUBSCRIBE_METHOD: ${WS_SUBSCRIBE_METHOD}
+      WS_SUBSCRIBE_PARAMS_JSON: ${WS_SUBSCRIBE_PARAMS_JSON}
+      LOG_FILTER_JSON: ${LOG_FILTER_JSON:-}
+      WS_RECONNECT_INITIAL_BACKOFF_MS: ${WS_RECONNECT_INITIAL_BACKOFF_MS}
+      WS_RECONNECT_MAX_BACKOFF_MS: ${WS_RECONNECT_MAX_BACKOFF_MS}
+      WS_READ_TIMEOUT_SECS: ${WS_READ_TIMEOUT_SECS}
+      RPC_REQUEST_TIMEOUT_SECS: ${RPC_REQUEST_TIMEOUT_SECS:-30}
+      REDIS_URL: ${REDIS_URL}
+      MARKET_TICKS_STREAM: ${MARKET_TICKS_STREAM}
+      MARKET_TICKS_MAXLEN: ${MARKET_TICKS_MAXLEN}
+      REDIS_BATCH_SIZE: ${REDIS_BATCH_SIZE}
+      REDIS_BATCH_TIMEOUT_MS: ${REDIS_BATCH_TIMEOUT_MS}
+      RAW_CHANNEL_CAPACITY: ${RAW_CHANNEL_CAPACITY}
+      RECORD_CHANNEL_CAPACITY: ${RECORD_CHANNEL_CAPACITY}
+      INGESTOR_HEALTHCHECK_PATH: ${INGESTOR_HEALTHCHECK_PATH}
+      BACKFILL_FROM_BLOCK: ${BACKFILL_FROM_BLOCK:-}
+      BACKFILL_TO_BLOCK: ${BACKFILL_TO_BLOCK:-}
+      BACKFILL_CHUNK_SIZE: ${BACKFILL_CHUNK_SIZE:-100}
+      BACKFILL_CONFIRMATIONS: ${BACKFILL_CONFIRMATIONS:-6}
+      BACKFILL_PAUSE_MS: ${BACKFILL_PAUSE_MS:-0}
+      BACKFILL_SOURCE_SUFFIX: ${BACKFILL_SOURCE_SUFFIX:-backfill}
+      BACKFILL_STATE_POSTGRES_URL: ${BACKFILL_STATE_POSTGRES_URL:-}
+      BACKFILL_JOB_NAME: ${BACKFILL_JOB_NAME:-default}
+      BACKFILL_AUTO_CLAIM_PENDING_GAP: ${BACKFILL_AUTO_CLAIM_PENDING_GAP:-true}
+      BACKFILL_SCHEDULER_POLL_INTERVAL_MS: ${BACKFILL_SCHEDULER_POLL_INTERVAL_MS:-30000}
+    networks:
+      - eatlq-net
+    depends_on:
+      redis:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+
+  archiver:
+    labels:
+      - "autoheal=true"
+    build:
+      context: ../..
+      dockerfile: services/archiver/Dockerfile
+    restart: unless-stopped
+    environment:
+      TZ: ${TZ:-UTC}
+      RUST_LOG: ${RUST_LOG:-info,archiver=debug}
+      REDIS_URL: ${REDIS_URL:-redis://redis:6379/0}
+      MARKET_TICKS_STREAM: ${MARKET_TICKS_STREAM:-market_ticks}
+      ARCHIVER_STREAMS: ${ARCHIVER_STREAMS:-market_ticks,market_ticks_discovery}
+      ARCHIVER_GROUP: ${ARCHIVER_GROUP:-archiver_group}
+      ARCHIVER_CONSUMER: ${ARCHIVER_CONSUMER:-archiver-1}
+      ARCHIVER_READ_COUNT: ${ARCHIVER_READ_COUNT:-250}
+      ARCHIVER_BLOCK_MS: ${ARCHIVER_BLOCK_MS:-1000}
+      ARCHIVER_PENDING_MIN_IDLE_MS: ${ARCHIVER_PENDING_MIN_IDLE_MS:-60000}
+      ARCHIVER_PENDING_RECLAIM_COUNT: ${ARCHIVER_PENDING_RECLAIM_COUNT:-250}
+      ARCHIVER_PENDING_RECLAIM_INTERVAL_MS: ${ARCHIVER_PENDING_RECLAIM_INTERVAL_MS:-30000}
+      ARCHIVER_CLICKHOUSE_INSERT_TIMEOUT_SECS: ${ARCHIVER_CLICKHOUSE_INSERT_TIMEOUT_SECS:-120}
+      ARCHIVER_MAX_IDLE_FLUSH_SECS: ${ARCHIVER_MAX_IDLE_FLUSH_SECS:-120}
+      ARCHIVER_STARTUP_RECOVER_MAX_BATCHES: ${ARCHIVER_STARTUP_RECOVER_MAX_BATCHES:-200}
+      ARCHIVER_BATCH_SIZE: ${ARCHIVER_BATCH_SIZE:-1000}
+      ARCHIVER_BATCH_TIMEOUT_MS: ${ARCHIVER_BATCH_TIMEOUT_MS:-1000}
+      ARCHIVER_CLICKHOUSE_TABLE: ${ARCHIVER_CLICKHOUSE_TABLE:-raw_evm_logs}
+      ARCHIVER_HEALTHCHECK_PATH: ${ARCHIVER_HEALTHCHECK_PATH:-/tmp/archiver_healthy}
+      CLICKHOUSE_URL: ${CLICKHOUSE_URL:-http://clickhouse:8123}
+      CLICKHOUSE_DB: ${CLICKHOUSE_DB:-eatlq}
+      CLICKHOUSE_USER: ${CLICKHOUSE_USER:-default}
+      CLICKHOUSE_PASSWORD: ${CLICKHOUSE_PASSWORD:-}
+    networks:
+      - eatlq-net
+    depends_on:
+      redis:
+        condition: service_healthy
+      clickhouse:
+        condition: service_healthy
+    healthcheck:
+      # Freshness, not mere existence. The archiver heartbeats this file on every
+      # healthy loop iteration; if the loop hangs (CH insert stall, deadlock, etc.)
+      # the file goes stale and docker marks the container unhealthy so autoheal
+      # restarts it. `test -f` alone could not detect a "fake alive" zombie
+      # (root cause of the 2026-06-25 38h stall).
+      test: ["CMD-SHELL", "find ${ARCHIVER_HEALTHCHECK_PATH:-/tmp/archiver_healthy} -mmin -2 | grep -q ."]
+      interval: 20s
+      timeout: 5s
+      retries: 3
+      start_period: 45s
+
+  strategy:
+    build:
+      context: ../..
+      dockerfile: services/strategy/Dockerfile
+    profiles: ["strategy"]
+    restart: unless-stopped
+    environment:
+      TZ: ${TZ}
+      REDIS_URL: ${REDIS_URL}
+      EVM_HTTP_URL: ${EVM_HTTP_URL:-}
+      MARKET_TICKS_STREAM: ${MARKET_TICKS_STREAM}
+      SIGNALS_STREAM: ${SIGNALS_STREAM:-signals}
+      STRATEGY_CONSUMER_GROUP: ${STRATEGY_CONSUMER_GROUP:-strategy_group}
+      STRATEGY_CONSUMER_NAME: ${STRATEGY_CONSUMER_NAME:-strategy-1}
+      STRATEGY_READ_COUNT: ${STRATEGY_READ_COUNT:-100}
+      STRATEGY_BLOCK_MS: ${STRATEGY_BLOCK_MS:-1000}
+      BASE_CAPITAL: ${BASE_CAPITAL:-25}
+      SYSTEM_PANIC_KEY: ${SYSTEM_PANIC_KEY:-SYSTEM_PANIC}
+      WHALE_FLOW_THRESHOLD: ${WHALE_FLOW_THRESHOLD:-5000}
+      MODEL_DIR: ${MODEL_DIR:-models}
+      DASHCAM_PATH: ${DASHCAM_PATH:-logs/dashcam.csv}
+      CHAIN_ID: ${CHAIN_ID}
+      STRATEGY_TOKEN_BLACKLIST: ${STRATEGY_TOKEN_BLACKLIST:-}
+      STRATEGY_POOL_BLACKLIST: ${STRATEGY_POOL_BLACKLIST:-0xd0b53d9277642d899df5c87a3966a349a798f224,0x4c36388be6f416a29c8d8eee81c771ce6be14b18,0xb4cb800910b228ed3d0834cf79d697127bbb00e5,0xfcd08d68b2313cd5e1d9e0e3f3183ad7cfdbf66f}
+      STRATEGY_SYMBOL_BLACKLIST: ${STRATEGY_SYMBOL_BLACKLIST:-}
+      STRATEGY_SIGNAL_THRESHOLD: ${STRATEGY_SIGNAL_THRESHOLD:-0.40}
+      SIGNAL_MIN_CONFIDENCE: ${SIGNAL_MIN_CONFIDENCE:-0.52}
+      STRATEGY_MIN_CONFIDENCE: ${STRATEGY_MIN_CONFIDENCE:-}
+      SMART_MONEY_BUY_THRESHOLD: ${SMART_MONEY_BUY_THRESHOLD:-2}
+      SMART_MONEY_POOL_MAX_AGE_H: ${SMART_MONEY_POOL_MAX_AGE_H:-24}
+      STRATEGY_REQUIRE_MANIFEST: ${STRATEGY_REQUIRE_MANIFEST:-0}
+      SHADOW_VERSION: ${SHADOW_VERSION:-v_current}
+      SHADOW_NOTIONAL_WEI: ${SHADOW_NOTIONAL_WEI:-500000000000000}
+      CLICKHOUSE_URL: ${CLICKHOUSE_URL:-http://clickhouse:8123}
+      CLICKHOUSE_DB: ${CLICKHOUSE_DB:-eatlq}
+      CLICKHOUSE_USER: ${CLICKHOUSE_USER:-default}
+      CLICKHOUSE_PASSWORD: ${CLICKHOUSE_PASSWORD:-}
+    networks:
+      - eatlq-net
+    volumes:
+      - ../../models:/app/models
+      - ../../logs:/app/logs
+      - ../../scripts:/app/scripts
+      - ../../services/strategy/src:/app/services/strategy/src
+    depends_on:
+      redis:
+        condition: service_healthy
+      clickhouse:
+        condition: service_healthy
+
+  executor:
+    labels:
+      - "autoheal=true"
+    build:
+      context: ../..
+      dockerfile: services/executor/Dockerfile
+    profiles: ["executor"]
+    restart: unless-stopped
+    environment:
+      TZ: ${TZ:-UTC}
+      REDIS_URL: ${REDIS_URL:-redis://redis:6379/0}
+      SIGNALS_STREAM: ${SIGNALS_STREAM:-signals}
+      EXECUTOR_CONSUMER_GROUP: ${EXECUTOR_CONSUMER_GROUP:-execution_group}
+      EXECUTOR_CONSUMER_NAME: ${EXECUTOR_CONSUMER_NAME:-executor-1}
+      SIGNALS_CONSUMER_GROUP: ${SIGNALS_CONSUMER_GROUP:-${EXECUTOR_CONSUMER_GROUP:-execution_group}}
+      SIGNALS_CONSUMER_NAME: ${SIGNALS_CONSUMER_NAME:-${EXECUTOR_CONSUMER_NAME:-executor-1}}
+      EXECUTOR_READ_RPC_URL: ${EXECUTOR_READ_RPC_URL:-${EXECUTOR_RPC_URL:-}}
+      EXECUTOR_READ_RPC_URL_FALLBACK: ${EXECUTOR_READ_RPC_URL_FALLBACK:-}
+      EXECUTOR_READ_RPC_EXTRAS: ${EXECUTOR_READ_RPC_EXTRAS:-}
+      EXECUTOR_RPC_RETRY: ${EXECUTOR_RPC_RETRY:-3}
+      EXECUTOR_SEND_RPC_URL: ${EXECUTOR_SEND_RPC_URL:-${EXECUTOR_RPC_URL:-}}
+      EXECUTOR_SEND_RPC_URL_FALLBACK: ${EXECUTOR_SEND_RPC_URL_FALLBACK:-}
+      EXECUTOR_RPC_URL: ${EXECUTOR_RPC_URL:-}
+      EXECUTOR_MEV_PROTECTED: ${EXECUTOR_MEV_PROTECTED:-1}
+      EXECUTOR_FRICTION_MIN: ${EXECUTOR_FRICTION_MIN:--0.05}
+      EXECUTOR_FRICTION_FAIL_CLOSED: ${EXECUTOR_FRICTION_FAIL_CLOSED:-1}
+      # Executable-sell gate: replay the real router sell at realistic gas via
+      # state override to catch gas-bomb honeypots that pass QuoterV2 (which runs
+      # at near-unlimited gas) but revert on a real tx. Default ON.
+      EXECUTOR_SELL_SIM: ${EXECUTOR_SELL_SIM:-1}
+      EXECUTOR_SELL_SIM_GAS: ${EXECUTOR_SELL_SIM_GAS:-3000000}
+      # If the sim cannot run (storage slot undetected / rpc error), fail closed
+      # in live mode. Missing a BUY is cheaper than opening an unsellable token.
+      EXECUTOR_SELL_SIM_FAIL_CLOSED: ${EXECUTOR_SELL_SIM_FAIL_CLOSED:-1}
+      # External BUY-only token risk gate (GoPlus + Honeypot.is). Default strict:
+      # API failures, honeypot flags, high tax, proxy/admin, unverified source,
+      # mint/blacklist/anti-whale controls block new buys. Sell exits bypass this.
+      EXECUTOR_EXTERNAL_RISK_GATE: ${EXECUTOR_EXTERNAL_RISK_GATE:-1}
+      EXECUTOR_EXTERNAL_RISK_FAIL_CLOSED: ${EXECUTOR_EXTERNAL_RISK_FAIL_CLOSED:-1}
+      EXECUTOR_EXTERNAL_RISK_PROVIDERS: ${EXECUTOR_EXTERNAL_RISK_PROVIDERS:-goplus,honeypot}
+      EXECUTOR_EXTERNAL_RISK_TIMEOUT_SEC: ${EXECUTOR_EXTERNAL_RISK_TIMEOUT_SEC:-3}
+      EXECUTOR_EXTERNAL_RISK_CACHE_TTL_SEC: ${EXECUTOR_EXTERNAL_RISK_CACHE_TTL_SEC:-300}
+      EXECUTOR_EXTERNAL_RISK_MAX_BUY_TAX_PCT: ${EXECUTOR_EXTERNAL_RISK_MAX_BUY_TAX_PCT:-10}
+      EXECUTOR_EXTERNAL_RISK_MAX_SELL_TAX_PCT: ${EXECUTOR_EXTERNAL_RISK_MAX_SELL_TAX_PCT:-10}
+      EXECUTOR_EXTERNAL_RISK_MAX_OWNER_PCT: ${EXECUTOR_EXTERNAL_RISK_MAX_OWNER_PCT:-50}
+      EXECUTOR_EXTERNAL_RISK_MAX_CREATOR_PCT: ${EXECUTOR_EXTERNAL_RISK_MAX_CREATOR_PCT:-50}
+      EXECUTOR_EXTERNAL_RISK_BLOCK_PROXY: ${EXECUTOR_EXTERNAL_RISK_BLOCK_PROXY:-1}
+      EXECUTOR_EXTERNAL_RISK_BLOCK_UNVERIFIED: ${EXECUTOR_EXTERNAL_RISK_BLOCK_UNVERIFIED:-1}
+      EXECUTOR_EXTERNAL_RISK_BLOCK_MINTABLE: ${EXECUTOR_EXTERNAL_RISK_BLOCK_MINTABLE:-1}
+      EXECUTOR_EXTERNAL_RISK_BLOCK_BLACKLIST: ${EXECUTOR_EXTERNAL_RISK_BLOCK_BLACKLIST:-1}
+      EXECUTOR_EXTERNAL_RISK_BLOCK_ANTI_WHALE: ${EXECUTOR_EXTERNAL_RISK_BLOCK_ANTI_WHALE:-1}
+      EXECUTOR_EXTERNAL_RISK_CANARY_ON_MISSING: ${EXECUTOR_EXTERNAL_RISK_CANARY_ON_MISSING:-1}
+      EXECUTOR_EXTERNAL_RISK_CANARY_USD: ${EXECUTOR_EXTERNAL_RISK_CANARY_USD:-25}
+      EVM_HTTP_URL: ${EVM_HTTP_URL:-}
+      CHAIN_ID: ${CHAIN_ID:-8453}
+      BASESCAN_API_KEY: ${BASESCAN_API_KEY:-}
+      BLOCKSCOUT_URL: ${BLOCKSCOUT_URL:-https://base.blockscout.com/api}
+      EXECUTOR_PRIVATE_KEY: ${EXECUTOR_PRIVATE_KEY:-}
+      EXECUTOR_DRY_RUN: ${EXECUTOR_DRY_RUN:-0}
+      # Sprint013 S1-T1: executor startup fail-safe needs LIVE_TRADING_MODE in-container.
+      # Empty default keeps paper/dry-run posture; truthy is still rejected by the
+      # paper_dryrun_readiness preflight and by main.py's LIVE+DRY mutual-exclusion.
+      LIVE_TRADING_MODE: ${LIVE_TRADING_MODE:-}
+      LIVE_AUTHORIZED_BY: ${LIVE_AUTHORIZED_BY:-}
+      EXECUTOR_MAX_POSITION_USD: ${EXECUTOR_MAX_POSITION_USD:-100}
+      # 1.0 = disabled; a 0.10 default deadlocks any wallet under 10x the stake.
+      EXECUTOR_MAX_BALANCE_FRACTION: ${EXECUTOR_MAX_BALANCE_FRACTION:-1.0}
+      EXECUTOR_MAX_CONCURRENT_POSITIONS: ${EXECUTOR_MAX_CONCURRENT_POSITIONS:-3}
+      # Dynamic per-pool sizing: continuous binary-search on notional, capped by
+      # cash, pool WETH-reserve share, pre-entry volume share, and QuoterV2 friction.
+      # Default OFF (=0) keeps fixed-size behavior. Ladder kept for legacy/fallback.
+      EXECUTOR_DYNAMIC_SIZING: ${EXECUTOR_DYNAMIC_SIZING:-0}
+      EXECUTOR_SIZE_LADDER_USD: ${EXECUTOR_SIZE_LADDER_USD:-1000,500,300,100}
+      # Continuous sizing controls: floor size, max share of pool WETH reserve
+      # (depth/butterfly cap), max share of pre-entry WETH volume, bisect iters.
+      EXECUTOR_SIZE_MIN_USD: ${EXECUTOR_SIZE_MIN_USD:-25}
+      # ETH-native sizing (preferred). When > 0 these override the USD knobs so the
+      # critical sizing path never depends on an ETH/USD oracle. USD is display-only.
+      EXECUTOR_MAX_POSITION_ETH: ${EXECUTOR_MAX_POSITION_ETH:-0}
+      EXECUTOR_SIZE_MIN_ETH: ${EXECUTOR_SIZE_MIN_ETH:-0}
+      EXECUTOR_EXTERNAL_RISK_CANARY_ETH: ${EXECUTOR_EXTERNAL_RISK_CANARY_ETH:-0}
+      EXECUTOR_MAX_GAS_ETH: ${EXECUTOR_MAX_GAS_ETH:-0}
+      EXECUTOR_MAX_POOL_SHARE: ${EXECUTOR_MAX_POOL_SHARE:-0.05}
+      EXECUTOR_MAX_VOLUME_SHARE: ${EXECUTOR_MAX_VOLUME_SHARE:-0.10}
+      EXECUTOR_SIZE_BISECT_ITERS: ${EXECUTOR_SIZE_BISECT_ITERS:-7}
+      EXECUTOR_DAILY_LOSS_PCT: ${EXECUTOR_DAILY_LOSS_PCT:-20}
+      EXECUTOR_MAX_PORTFOLIO_FRACTION: ${EXECUTOR_MAX_PORTFOLIO_FRACTION:-0.30}
+      EXECUTOR_MAX_GAS_USD: ${EXECUTOR_MAX_GAS_USD:-2}
+      EXECUTOR_ETH_PRICE_USD: ${EXECUTOR_ETH_PRICE_USD:-3500}
+      EXECUTOR_MONITOR_INTERVAL_SEC: ${EXECUTOR_MONITOR_INTERVAL_SEC:-5}
+      EXECUTOR_HEARTBEAT_SEC: ${EXECUTOR_HEARTBEAT_SEC:-86400}
+      EXECUTOR_SIGNAL_MAX_AGE_SEC: ${EXECUTOR_SIGNAL_MAX_AGE_SEC:-90}
+      EXECUTOR_TAKE_PROFIT_PCT: ${EXECUTOR_TAKE_PROFIT_PCT:-10.0}
+      EXECUTOR_STOP_LOSS_PCT: ${EXECUTOR_STOP_LOSS_PCT:-0.50}
+      EXECUTOR_TRAILING_STOP_PCT: ${EXECUTOR_TRAILING_STOP_PCT:-1.0}
+      EXECUTOR_TIME_DECAY_MIN: ${EXECUTOR_TIME_DECAY_MIN:-240}
+      # F cluster-blacklist historical LP-pull seed toggle (1=seed 247+33, 0=experiment off;
+      # PARADAENGI honeypot seeds always kept). 2026-06-25 aggressive variant.
+      EXECUTOR_SEED_RUG_BLACKLIST: ${EXECUTOR_SEED_RUG_BLACKLIST:-1}
+      # 30min would-be-value shadow telemetry (observability only; never sells).
+      EXECUTOR_SHADOW_30MIN: ${EXECUTOR_SHADOW_30MIN:-1}
+      EXECUTOR_SHADOW_30MIN_SEC: ${EXECUTOR_SHADOW_30MIN_SEC:-1800}
+      EXECUTOR_READ_BLOCK_MS: ${EXECUTOR_READ_BLOCK_MS:-5000}
+      EXECUTOR_READ_COUNT: ${EXECUTOR_READ_COUNT:-20}
+      # ── Honeypot / LP-pull defenses (F cluster-blacklist + ① depth floor + E escape) ──
+      # ① Deep-pool floor: reject any pool with < this WETH depth at entry.
+      EXECUTOR_MIN_POOL_WETH: ${EXECUTOR_MIN_POOL_WETH:-3.0}
+      # When the depth probe itself fails: 0 = fail-open (allow), 1 = fail-closed (block).
+      EXECUTOR_MIN_POOL_WETH_FAIL_CLOSED: ${EXECUTOR_MIN_POOL_WETH_FAIL_CLOSED:-0}
+      # E — post-buy delayed recheck (escape): probe sellability every N blocks for a
+      # window after entry; on depth-collapse / unsellable → ABANDON + blacklist + CRITICAL.
+      EXECUTOR_POSTBUY_RECHECK_BLOCKS: ${EXECUTOR_POSTBUY_RECHECK_BLOCKS:-3}
+      EXECUTOR_POSTBUY_RECHECK_WINDOW_SEC: ${EXECUTOR_POSTBUY_RECHECK_WINDOW_SEC:-300}
+      EXECUTOR_POSTBUY_DEPTH_COLLAPSE_ETH: ${EXECUTOR_POSTBUY_DEPTH_COLLAPSE_ETH:-0.5}
+      SYSTEM_PANIC_KEY: ${SYSTEM_PANIC_KEY:-SYSTEM_PANIC}
+      TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN:-}
+      TELEGRAM_CHAT_ID: ${TELEGRAM_CHAT_ID:-}
+    volumes:
+      - ../../services/executor/src:/app/services/executor/src:ro
+    networks:
+      - eatlq-net
+    depends_on:
+      redis:
+        condition: service_healthy
+
+  dashboard:
+    build:
+      context: ../..
+      dockerfile: services/dashboard/Dockerfile
+    profiles: ["dashboard"]
+    restart: unless-stopped
+    environment:
+      TZ: ${TZ:-UTC}
+      REDIS_URL: ${REDIS_URL:-redis://redis:6379/0}
+      EXECUTOR_ETH_PRICE_USD: ${EXECUTOR_ETH_PRICE_USD:-2000}
+      CHAIN_ID: ${CHAIN_ID:-8453}
+      DASHBOARD_BIND: ${DASHBOARD_BIND:-0.0.0.0}
+      DASHBOARD_PORT: ${DASHBOARD_PORT:-8080}
+      DASHBOARD_BASIC_USER: ${DASHBOARD_BASIC_USER:-}
+      DASHBOARD_BASIC_PASS: ${DASHBOARD_BASIC_PASS:-}
+      DASHBOARD_ACTION_TOKEN: ${DASHBOARD_ACTION_TOKEN:-}
+      DASHBOARD_READONLY: ${DASHBOARD_READONLY:-0}
+      DASHBOARD_ALLOW_PANIC_ACTIONS: ${DASHBOARD_ALLOW_PANIC_ACTIONS:-0}
+      DASHBOARD_MAX_SIGNALS: ${DASHBOARD_MAX_SIGNALS:-60}
+      DASHBOARD_MAX_SHADOW: ${DASHBOARD_MAX_SHADOW:-120}
+      DASHBOARD_MAX_MARKET_TICKS: ${DASHBOARD_MAX_MARKET_TICKS:-1200}
+      DASHBOARD_MAX_MARKET_CANDLES: ${DASHBOARD_MAX_MARKET_CANDLES:-180}
+      DASHBOARD_INGEST_STALE_SEC: ${DASHBOARD_INGEST_STALE_SEC:-600}
+      DASHBOARD_ARCHIVE_STALE_SEC: ${DASHBOARD_ARCHIVE_STALE_SEC:-1800}
+      CLICKHOUSE_URL: ${CLICKHOUSE_URL:-http://clickhouse:8123}
+      CLICKHOUSE_DB: ${CLICKHOUSE_DB:-eatlq}
+      CLICKHOUSE_USER: ${CLICKHOUSE_USER:-default}
+      CLICKHOUSE_PASSWORD: ${CLICKHOUSE_PASSWORD:-}
+      MARKET_TICKS_STREAM: ${MARKET_TICKS_STREAM:-market_ticks}
+    networks:
+      - eatlq-net
+    ports:
+      - "${DASHBOARD_HOST_BIND:-127.0.0.1}:${DASHBOARD_PORT:-8080}:${DASHBOARD_PORT:-8080}"
+    depends_on:
+      redis:
+        condition: service_healthy
+
+  pool-discovery:
+    labels:
+      - "autoheal=true"
+    build:
+      context: ../..
+      dockerfile: services/pool_discovery/Dockerfile
+    profiles: ["strategy"]
+    restart: unless-stopped
+    environment:
+      TZ: ${TZ:-UTC}
+      REDIS_URL: ${REDIS_URL:-redis://redis:6379/0}
+      CLICKHOUSE_URL: ${CLICKHOUSE_URL:-http://clickhouse:8123}
+      CLICKHOUSE_DB: ${CLICKHOUSE_DB:-eatlq}
+      CLICKHOUSE_USER: ${CLICKHOUSE_USER:-default}
+      CLICKHOUSE_PASSWORD: ${CLICKHOUSE_PASSWORD:-}
+      POOL_DISCOVERY_CLICKHOUSE_TABLE: ${POOL_DISCOVERY_CLICKHOUSE_TABLE:-discovered_pools}
+      POOL_DISCOVERY_ENABLE_CLICKHOUSE: ${POOL_DISCOVERY_ENABLE_CLICKHOUSE:-1}
+      EVM_HTTP_URL: ${POOL_DISCOVERY_RPC_URL:-https://mainnet.base.org}
+      EXECUTOR_RPC_URL: ${EXECUTOR_RPC_URL:-}
+      CHAIN_ID: ${CHAIN_ID:-8453}
+      MARKET_TICKS_STREAM: ${MARKET_TICKS_STREAM:-market_ticks}
+      POOL_DISCOVERY_GROUP: ${POOL_DISCOVERY_GROUP:-pool_discovery_group}
+      POOL_DISCOVERY_CONSUMER: ${POOL_DISCOVERY_CONSUMER:-discovery-1}
+    networks:
+      - eatlq-net
+    depends_on:
+      redis:
+        condition: service_healthy
+      clickhouse:
+        condition: service_healthy
+
+  swap-poller:
+    build:
+      context: ../..
+      dockerfile: services/pool_discovery/Dockerfile
+    profiles: ["strategy"]
+    restart: unless-stopped
+    command: ["python", "-u", "services/pool_discovery/src/swap_poller.py"]
+    environment:
+      TZ: ${TZ:-UTC}
+      REDIS_URL: ${REDIS_URL:-redis://redis:6379/0}
+      EVM_HTTP_URL: ${SWAP_POLLER_RPC_URL:-${EVM_HTTP_URL:-https://mainnet.base.org}}
+      SWAP_POLLER_RPC_URL: ${SWAP_POLLER_RPC_URL:-${EVM_HTTP_URL:-https://mainnet.base.org}}
+      SWAP_POLLER_RPC_URL_FALLBACK: ${SWAP_POLLER_RPC_URL_FALLBACK:-}
+      SWAP_POLLER_RPC_RETRY: ${SWAP_POLLER_RPC_RETRY:-3}
+      SWAP_POLLER_CATCHUP_BLOCKS: ${SWAP_POLLER_CATCHUP_BLOCKS:-400}
+      EXECUTOR_RPC_URL: ${EXECUTOR_RPC_URL:-}
+      CHAIN_ID: ${CHAIN_ID:-8453}
+      MARKET_TICKS_DISCOVERY_STREAM: ${MARKET_TICKS_DISCOVERY_STREAM:-market_ticks_discovery}
+      MARKET_TICKS_DISCOVERY_MAXLEN: ${MARKET_TICKS_DISCOVERY_MAXLEN:-1000000}
+      MARKET_TICKS_STREAM: ${MARKET_TICKS_STREAM:-market_ticks}
+      MARKET_TICKS_MAXLEN: ${MARKET_TICKS_MAXLEN:-2000000}
+      SWAP_POLLER_INTERVAL_SEC: ${SWAP_POLLER_INTERVAL_SEC:-300}
+      SWAP_POLLER_POOL_MAX_AGE_H: ${SWAP_POLLER_POOL_MAX_AGE_H:-72}
+      SMART_MONEY_POOL_MAX_AGE_H: ${SMART_MONEY_POOL_MAX_AGE_H:-72}
+      SWAP_POLLER_SKIP_TX_FROM: ${SWAP_POLLER_SKIP_TX_FROM:-1}
+    volumes:
+      - ../../services/pool_discovery/src:/app/services/pool_discovery/src:ro
+    networks:
+      - eatlq-net
+    depends_on:
+      redis:
+        condition: service_healthy
+
+  shadow-closer:
+    build:
+      context: ../..
+      dockerfile: services/pool_discovery/Dockerfile
+    profiles: ["strategy"]
+    restart: unless-stopped
+    command: ["python", "-u", "scripts/shadow_closer.py"]
+    environment:
+      TZ: ${TZ:-UTC}
+      REDIS_URL: ${REDIS_URL:-redis://redis:6379/0}
+      EVM_HTTP_URL: ${EVM_HTTP_URL:-}
+      EXECUTOR_RPC_URL: ${EXECUTOR_RPC_URL:-}
+      SHADOW_HOLD_MIN: ${SHADOW_HOLD_MIN:-30}
+      SHADOW_CLOSER_POLL_SEC: ${SHADOW_CLOSER_POLL_SEC:-60}
+      ROUND_TRIP_COST: ${ROUND_TRIP_COST:-0.006}
+    networks:
+      - eatlq-net
+    volumes:
+      - ../../scripts:/app/scripts
+    depends_on:
+      redis:
+        condition: service_healthy
+
+  wallet-scorer:
+    build:
+      context: ../..
+      dockerfile: services/pool_discovery/Dockerfile
+    profiles: ["strategy"]
+    restart: unless-stopped
+    command: ["python", "-u", "scripts/compute_wallet_scores.py"]
+    environment:
+      TZ: ${TZ:-UTC}
+      REDIS_URL: ${REDIS_URL:-redis://redis:6379/0}
+      CLICKHOUSE_URL: ${CLICKHOUSE_URL:-http://clickhouse:8123}
+      CLICKHOUSE_DB: ${CLICKHOUSE_DB:-eatlq}
+      CLICKHOUSE_USER: ${CLICKHOUSE_USER:-default}
+      CLICKHOUSE_PASSWORD: ${CLICKHOUSE_PASSWORD:-}
+      CHAIN_ID: ${CHAIN_ID:-8453}
+      SCORING_INTERVAL_SEC: ${SCORING_INTERVAL_SEC:-21600}
+      STRATEGY_POOL_BLACKLIST: ${STRATEGY_POOL_BLACKLIST:-}
+    networks:
+      - eatlq-net
+    volumes:
+      - ../../scripts:/app/scripts
+    depends_on:
+      redis:
+        condition: service_healthy
+      clickhouse:
+        condition: service_healthy
+
+  signal-bridge:
+    labels:
+      - "autoheal=true"
+    build:
+      context: ../..
+      dockerfile: services/signal_bridge/Dockerfile
+    profiles: ["executor"]
+    restart: unless-stopped
+    environment:
+      TZ: ${TZ:-UTC}
+      REDIS_URL: ${REDIS_URL:-redis://redis:6379/0}
+      CLICKHOUSE_URL: ${CLICKHOUSE_URL:-http://clickhouse:8123}
+      CLICKHOUSE_DB: ${CLICKHOUSE_DB:-eatlq}
+      CLICKHOUSE_USER: ${CLICKHOUSE_USER:-default}
+      CLICKHOUSE_PASSWORD: ${CLICKHOUSE_PASSWORD:-}
+      SIGNALS_STREAM: ${SIGNALS_STREAM:-signals}
+      BRIDGE_POLL_SEC: ${BRIDGE_POLL_SEC:-30}
+      BRIDGE_POSITION_SIZE_USD: ${BRIDGE_POSITION_SIZE_USD:-100}
+      BRIDGE_P_CUT_MAX: ${BRIDGE_P_CUT_MAX:-0.27}
+      BRIDGE_MODEL_DIR: /app
+    networks:
+      - eatlq-net
+    depends_on:
+      redis:
+        condition: service_healthy
+      clickhouse:
+        condition: service_healthy
+
+  autoheal:
+    image: willfarrell/autoheal:latest
+    restart: unless-stopped
+    environment:
+      AUTOHEAL_CONTAINER_LABEL: autoheal
+      AUTOHEAL_INTERVAL: 60
+      AUTOHEAL_START_PERIOD: 120
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+
+networks:
+  eatlq-net:
+    driver: bridge
+
+volumes:
+  redis_data:
+  clickhouse_data:
+  postgres_data:

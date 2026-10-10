@@ -1,0 +1,51 @@
+{
+  "hypothesis_id": "H_PATH_STATE",
+  "n_folds": 4,
+  "feature_cols": [
+    "early_ret",
+    "pre_vol",
+    "pre_pullback",
+    "pre_runup_from_lo",
+    "range_location",
+    "mom_h1",
+    "mom_h2",
+    "accel",
+    "xs_early_ret_rank",
+    "age_s",
+    "vol_depth",
+    "flow_persist_score",
+    "depth_proxy"
+  ],
+  "fold_stats": [
+    {
+      "fold": 1,
+      "n_test": 254,
+      "n_selected": 76,
+      "mean_utility": -0.23482369952647103,
+      "selected_pnl": -0.18068455332302014
+    },
+    {
+      "fold": 2,
+      "n_test": 255,
+      "n_selected": 77,
+      "mean_utility": -0.28830909740530025,
+      "selected_pnl": -0.24785228423117076
+    },
+    {
+      "fold": 3,
+      "n_test": 254,
+      "n_selected": 76,
+      "mean_utility": -0.21805693071585655,
+      "selected_pnl": -0.34184650323112864
+    },
+    {
+      "fold": 4,
+      "n_test": 254,
+      "n_selected": 76,
+      "mean_utility": -0.17155515014403228,
+      "selected_pnl": -0.35679474968418945
+    }
+  ],
+  "n_oof": 1017,
+  "n_selected": 305
+}

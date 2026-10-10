@@ -1,0 +1,184 @@
+{
+  "discovery": {
+    "H1_conditional": {
+      "n": 0
+    },
+    "H1_strategy": {
+      "coverage_selected": 0.0,
+      "n": 0,
+      "skipped_non_pnl": 0
+    },
+    "H2_conditional": {
+      "n": 0
+    },
+    "H2_strategy": {
+      "bootstrap_mean_ci95": [
+        0.0,
+        0.0
+      ],
+      "coverage_selected": 0.058333333333333334,
+      "expected_net_pnl": 0.0,
+      "max_single_loss": 0.0,
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 7,
+      "p10": 0.0,
+      "p90": 0.0,
+      "profit_factor": NaN,
+      "skipped_non_pnl": 0,
+      "win_rate": 0.0
+    },
+    "H3_conditional": {
+      "n": 0
+    },
+    "H3_strategy": {
+      "bootstrap_mean_ci95": [
+        0.0,
+        0.0
+      ],
+      "coverage_selected": 0.6833333333333333,
+      "expected_net_pnl": 0.0,
+      "max_single_loss": 0.0,
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 82,
+      "p10": 0.0,
+      "p90": 0.0,
+      "profit_factor": NaN,
+      "skipped_non_pnl": 28,
+      "win_rate": 0.0
+    },
+    "conditional_executable": {
+      "n": 0
+    },
+    "strategy_all": {
+      "bootstrap_mean_ci95": [
+        0.0,
+        0.0
+      ],
+      "coverage_selected": 0.7666666666666667,
+      "expected_net_pnl": 0.0,
+      "max_single_loss": 0.0,
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 92,
+      "p10": 0.0,
+      "p90": 0.0,
+      "profit_factor": NaN,
+      "skipped_non_pnl": 28,
+      "win_rate": 0.0
+    },
+    "universe": {
+      "launches": 120,
+      "no_trade_rate": 0.7666666666666667,
+      "observed_swaps_pools": 20,
+      "quote_availability": 0.0,
+      "status_counts": {
+        "EXIT_QUOTE_UNAVAILABLE": 28,
+        "NO_TRADE_NO_QUOTE": 92
+      }
+    }
+  },
+  "holdout": {
+    "H1_conditional": {
+      "n": 0
+    },
+    "H1_strategy": {
+      "coverage_selected": 0.0,
+      "n": 0,
+      "skipped_non_pnl": 0
+    },
+    "H2_conditional": {
+      "n": 0
+    },
+    "H2_strategy": {
+      "bootstrap_mean_ci95": [
+        0.0,
+        0.0
+      ],
+      "coverage_selected": 0.075,
+      "expected_net_pnl": 0.0,
+      "max_single_loss": 0.0,
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 6,
+      "p10": 0.0,
+      "p90": 0.0,
+      "profit_factor": NaN,
+      "skipped_non_pnl": 0,
+      "win_rate": 0.0
+    },
+    "H3_conditional": {
+      "n": 0
+    },
+    "H3_strategy": {
+      "bootstrap_mean_ci95": [
+        0.0,
+        0.0
+      ],
+      "coverage_selected": 0.75,
+      "expected_net_pnl": 0.0,
+      "max_single_loss": 0.0,
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 60,
+      "p10": 0.0,
+      "p90": 0.0,
+      "profit_factor": NaN,
+      "skipped_non_pnl": 12,
+      "win_rate": 0.0
+    },
+    "conditional_executable": {
+      "n": 0
+    },
+    "strategy_all": {
+      "bootstrap_mean_ci95": [
+        0.0,
+        0.0
+      ],
+      "coverage_selected": 0.8375,
+      "expected_net_pnl": 0.0,
+      "max_single_loss": 0.0,
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 67,
+      "p10": 0.0,
+      "p90": 0.0,
+      "profit_factor": NaN,
+      "skipped_non_pnl": 13,
+      "win_rate": 0.0
+    },
+    "universe": {
+      "launches": 80,
+      "no_trade_rate": 0.8375,
+      "observed_swaps_pools": 11,
+      "quote_availability": 0.0,
+      "status_counts": {
+        "EXIT_QUOTE_UNAVAILABLE": 13,
+        "NO_TRADE_NO_QUOTE": 67
+      }
+    }
+  },
+  "meta": {
+    "discovery_n": 120,
+    "eth_usd": 1842.6,
+    "eth_usd_source": "blockscout_stats:20260717T172757Z",
+    "holdout_n": 80,
+    "hypotheses_sha256": "acf67c817bc3dde786913a2441f54f78ad55f1d324867d24ad3c68250e3b8f6f",
+    "launch_from": 48713150,
+    "launch_to": 48716765,
+    "max_entry_wait_blocks": 5,
+    "method_sha256": "d7753fc208c96024caeb95b42be404a235edf7ae4c68468e41a4e6f47e74d83e",
+    "n": 200,
+    "rpc_bytes": 6030488,
+    "rpc_calls": 919,
+    "run_id": "20260717T172757Z",
+    "thresholds": {
+      "h1_actors_ge": 1,
+      "h1_max_actor_share_le": 0.0,
+      "h3_extreme_share_le": 1.0,
+      "h3_imbalance_ge": 0.0
+    },
+    "v01_excluded_to_block": 48712326
+  }
+}

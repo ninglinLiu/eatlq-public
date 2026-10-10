@@ -1,0 +1,116 @@
+{
+  "n": 3,
+  "rows": [
+    {
+      "actual_amount_in": 9683718235562445,
+      "actual_amount_out": 98996270339808831736620068,
+      "limitation": "eth_call at prior block is a pre-block approximation, not transaction-index state",
+      "log_index": 145,
+      "pass_threshold": "relative_output_error <= 0.25",
+      "passed": true,
+      "pool_id": "0xdac765e6067128f453bb7d8e6ad85bfae2eef344d881db3f775028ea009a732d",
+      "quote": {
+        "amount_in": 9683718235562445,
+        "amount_out": 96644847069871264183286894,
+        "block": 48713857,
+        "calldata_sha256": "4c4c2422c01724621b1c8d8cc8a21bd81665fe3fd093cac3ac198182b05727f7",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": 318493,
+        "ok": true,
+        "pool_id": "0xdac765e6067128f453bb7d8e6ad85bfae2eef344d881db3f775028ea009a732d",
+        "rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 83,
+          "ok": true,
+          "result": "0x0000000000000000000000000000000000000000004ff157a85ab6d2a802fc6e000000000000000000000000000000000000000000000000000000000004dc1d",
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "side": "REAL_SWAP_PREBLOCK_CROSSCHECK",
+        "token": "0x80b8991af0b05e6cadc29088ad920d0c09479b07",
+        "zero_for_one": true
+      },
+      "quote_block": 48713857,
+      "relative_output_error": 0.02375264504274968,
+      "swap_block": 48713858,
+      "token": "0x80b8991af0b05e6cadc29088ad920d0c09479b07",
+      "transaction_hash": "0x76099f9f529c2f5950429c81eef2ee241625fd4d688d242f0be3c28c69d41a66"
+    },
+    {
+      "actual_amount_in": 972529,
+      "actual_amount_out": 4634885782602865521053556,
+      "limitation": "eth_call at prior block is a pre-block approximation, not transaction-index state",
+      "log_index": 179,
+      "pass_threshold": "relative_output_error <= 0.25",
+      "passed": true,
+      "pool_id": "0xf5592764a01a7e94be4e79c18d6f9b609afad5a69cc4f27620795079a35e5253",
+      "quote": {
+        "amount_in": 972529,
+        "amount_out": 4332445449477081499277148,
+        "block": 48715760,
+        "calldata_sha256": "9fef1538d68f2d6a7d327c751dea4f4b8e67b3c67e3944ec2ed607ad7c08e2ae",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": 468355,
+        "ok": true,
+        "pool_id": "0xf5592764a01a7e94be4e79c18d6f9b609afad5a69cc4f27620795079a35e5253",
+        "rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 84,
+          "ok": true,
+          "result": "0x00000000000000000000000000000000000000000003956e56a303a365c5975c0000000000000000000000000000000000000000000000000000000000072583",
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "side": "REAL_SWAP_PREBLOCK_CROSSCHECK",
+        "token": "0xa16206cf592de73197f23ba9866f81cff7e78b07",
+        "zero_for_one": true
+      },
+      "quote_block": 48715760,
+      "relative_output_error": 0.06525302829705097,
+      "swap_block": 48715761,
+      "token": "0xa16206cf592de73197f23ba9866f81cff7e78b07",
+      "transaction_hash": "0xc21918c9bf40dcd8809f7facc9d14d7848a952ec0508b7150f73a337f940a5cd"
+    },
+    {
+      "actual_amount_in": 372246566030574740,
+      "actual_amount_out": 1385061777326482130320239606,
+      "limitation": "eth_call at prior block is a pre-block approximation, not transaction-index state",
+      "log_index": 38,
+      "pass_threshold": "relative_output_error <= 0.25",
+      "passed": true,
+      "pool_id": "0x275b12c8374bde2ee088703ca1418c3a9183662051d1e30ff6389e1853885bf6",
+      "quote": {
+        "amount_in": 372246566030574740,
+        "amount_out": 1245332296414532620619422102,
+        "block": 48716289,
+        "calldata_sha256": "a20e5098634d9d864a02bdc6ec6875eefc0bdb5625087b9464d5967428be8d56",
+        "fee_mode": "DYNAMIC_FLAG",
+        "fee_raw": 8388608,
+        "gas_estimate": 411515,
+        "ok": true,
+        "pool_id": "0x275b12c8374bde2ee088703ca1418c3a9183662051d1e30ff6389e1853885bf6",
+        "rpc": {
+          "error_class": null,
+          "error_message": null,
+          "final_attempt_id": 85,
+          "ok": true,
+          "result": "0x000000000000000000000000000000000000000004061d5f0fdbf3371ff51996000000000000000000000000000000000000000000000000000000000006477b",
+          "revert_data": null,
+          "revert_selectors": []
+        },
+        "side": "REAL_SWAP_PREBLOCK_CROSSCHECK",
+        "token": "0x7e84588b6997bbfddcd50beac0ca0f9582547b07",
+        "zero_for_one": true
+      },
+      "quote_block": 48716289,
+      "relative_output_error": 0.10088321199770785,
+      "swap_block": 48716290,
+      "token": "0x7e84588b6997bbfddcd50beac0ca0f9582547b07",
+      "transaction_hash": "0x8b7ace170e0b771daba31228e7f1118e5ba2fcff6ee8da2b3073bb728da18cdf"
+    }
+  ]
+}

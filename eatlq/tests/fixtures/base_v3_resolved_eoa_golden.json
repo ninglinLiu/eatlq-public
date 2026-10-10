@@ -1,0 +1,35 @@
+{
+  "chain_id": 8453,
+  "start_block": 46389458,
+  "end_block": 46417105,
+  "block_time_start": "2026-05-23 20:31:03.000",
+  "block_time_end": "2026-05-24 11:52:37.000",
+  "target_token": "0x23fcefda11d1d785325beda44765472252b37b1d",
+  "token_decimals": 18,
+  "wallets": [
+    {
+      "wallet": "0x44e5f8183162994e70f3d4a9235a8a1e2471b038",
+      "swaps": 21,
+      "buys": 4,
+      "sells": 17,
+      "net_raw": "401071598661039602907575",
+      "code_at_end_block": "0x",
+      "sample_tx_hash": "0x4da255c913b1648182d7f5ee44c6716420491c30486598855ea773fed251b801",
+      "sample_tx_block": 46392878,
+      "basescan_tx": "https://basescan.org/tx/0x4da255c913b1648182d7f5ee44c6716420491c30486598855ea773fed251b801",
+      "basescan_address": "https://basescan.org/address/0x44e5f8183162994e70f3d4a9235a8a1e2471b038"
+    },
+    {
+      "wallet": "0x5ccfc6e399003a8e2f68d9c7710f965b9cf67c6d",
+      "swaps": 14,
+      "buys": 7,
+      "sells": 7,
+      "net_raw": "208520074714488298800513",
+      "code_at_end_block": "0x",
+      "sample_tx_hash": "0xe881d6db0f60479a7e71af503bf5b648cb8e2f1a0f25209ab97db315db71a893",
+      "sample_tx_block": 46401455,
+      "basescan_tx": "https://basescan.org/tx/0xe881d6db0f60479a7e71af503bf5b648cb8e2f1a0f25209ab97db315db71a893",
+      "basescan_address": "https://basescan.org/address/0x5ccfc6e399003a8e2f68d9c7710f965b9cf67c6d"
+    }
+  ]
+}

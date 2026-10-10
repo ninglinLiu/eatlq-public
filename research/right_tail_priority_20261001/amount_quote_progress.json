@@ -1,0 +1,1513 @@
+{
+  "generated_at": "2026-10-01T11:41:40.591396+00:00",
+  "rows": [
+    {
+      "entry": {
+        "amount_in_raw": "10000000000000000",
+        "block": 51429951,
+        "evidence": {
+          "http_status": 200,
+          "key": "a3aa60914b57935fb3ad2799aaeb273b0fd0ca6bcd69c8440e4cebbd4c745391",
+          "rpc_error": null
+        },
+        "quote": {
+          "amount_out_raw": "65497831198548451610486244",
+          "quoter_gas_units": 721223
+        },
+        "status": "POOL_QUOTE_RETURNED",
+        "token_in": "0x4200000000000000000000000000000000000006"
+      },
+      "exits": {
+        "24h": {
+          "amount_in_raw": "65497831198548451610486244",
+          "block": 51473151,
+          "evidence": {
+            "http_status": 200,
+            "key": "4b7b7605c0ee72c7c4ae9d162e0ade60a841377e6a8042674932d4f88993a3e4",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.6502406542784124,
+          "quote": {
+            "amount_out_raw": "3497593457215876",
+            "quoter_gas_units": 642866
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0x6666dd8d0a8889e41418141760753b69ab319ba3"
+        },
+        "2h": {
+          "amount_in_raw": "65497831198548451610486244",
+          "block": 51433551,
+          "evidence": {
+            "http_status": 200,
+            "key": "6249d90e5f826e9e00dfe5e7614d49999c42ef50de4f3fd96b9609e262fe37c6",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.6459959739157068,
+          "quote": {
+            "amount_out_raw": "3540040260842931",
+            "quoter_gas_units": 642798
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0x6666dd8d0a8889e41418141760753b69ab319ba3"
+        },
+        "30m": {
+          "amount_in_raw": "65497831198548451610486244",
+          "block": 51430851,
+          "evidence": {
+            "http_status": 200,
+            "key": "10ac1df70179b53c5b3114f43b0d047738020578c8d5466a17d409b493570da6",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.6459959739157068,
+          "quote": {
+            "amount_out_raw": "3540040260842931",
+            "quoter_gas_units": 642798
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0x6666dd8d0a8889e41418141760753b69ab319ba3"
+        },
+        "source_first_sell": {
+          "amount_in_raw": "65497831198548451610486244",
+          "block": 51429968,
+          "evidence": {
+            "http_status": 200,
+            "key": "658b03ea8caa7da4aa458383d0ad86a09f69215e5142026f10d79ed7494b09da",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.23388361630455645,
+          "quote": {
+            "amount_out_raw": "7661163836954436",
+            "quoter_gas_units": 641485
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0x6666dd8d0a8889e41418141760753b69ab319ba3"
+        }
+      },
+      "index_complete": true,
+      "input_quote_raw": "10000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0xc1272de959e567564ef4901708bdb2c13b24c3d7fa75a6b3ae586af42fa6f67e",
+      "status": "AMOUNT_SPECIFIC_POOL_QUOTE_NOT_SETTLED_FILL",
+      "token": "0x6666dd8d0a8889e41418141760753b69ab319ba3",
+      "wallet": "0xa05ec35f7d1eba823cff2ed26aeaed419683742f"
+    },
+    {
+      "entry": {
+        "amount_in_raw": "20000000000000000",
+        "block": 51429951,
+        "evidence": {
+          "http_status": 200,
+          "key": "d0210b5f427de0ac46f37a6641712070a991da6a98c2115df479c5a1a695f070",
+          "rpc_error": null
+        },
+        "quote": {
+          "amount_out_raw": "130851963766501637543039345",
+          "quoter_gas_units": 721223
+        },
+        "status": "POOL_QUOTE_RETURNED",
+        "token_in": "0x4200000000000000000000000000000000000006"
+      },
+      "exits": {
+        "24h": {
+          "amount_in_raw": "130851963766501637543039345",
+          "block": 51473151,
+          "evidence": {
+            "http_status": 200,
+            "key": "f764010d1c82cd074bfa059971630508c8edab6bc0f1a8f735d1716e713dea3f",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.6534762215457315,
+          "quote": {
+            "amount_out_raw": "6930475569085369",
+            "quoter_gas_units": 642314
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0x6666dd8d0a8889e41418141760753b69ab319ba3"
+        },
+        "2h": {
+          "amount_in_raw": "130851963766501637543039345",
+          "block": 51433551,
+          "evidence": {
+            "http_status": 200,
+            "key": "7b00c0fcebddcfe2365d9cd6aef4d9527abad6c3b960c21a7c62dee1a5310eeb",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.6492880832251045,
+          "quote": {
+            "amount_out_raw": "7014238335497911",
+            "quoter_gas_units": 643890
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0x6666dd8d0a8889e41418141760753b69ab319ba3"
+        },
+        "30m": {
+          "amount_in_raw": "130851963766501637543039345",
+          "block": 51430851,
+          "evidence": {
+            "http_status": 200,
+            "key": "aed15840331f37d6203495e9b67a59382e722d5f1c5dcbe402ec072773860f57",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.6492880832251045,
+          "quote": {
+            "amount_out_raw": "7014238335497911",
+            "quoter_gas_units": 643890
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0x6666dd8d0a8889e41418141760753b69ab319ba3"
+        },
+        "source_first_sell": {
+          "amount_in_raw": "130851963766501637543039345",
+          "block": 51429968,
+          "evidence": {
+            "http_status": 200,
+            "key": "ef1bf2c062bd48dfb6ec22ebe7c06c7b15761c62b60e15a5bb0af938446384d2",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.23545676626784273,
+          "quote": {
+            "amount_out_raw": "15290864674643145",
+            "quoter_gas_units": 641553
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0x6666dd8d0a8889e41418141760753b69ab319ba3"
+        }
+      },
+      "index_complete": true,
+      "input_quote_raw": "20000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0xc1272de959e567564ef4901708bdb2c13b24c3d7fa75a6b3ae586af42fa6f67e",
+      "status": "AMOUNT_SPECIFIC_POOL_QUOTE_NOT_SETTLED_FILL",
+      "token": "0x6666dd8d0a8889e41418141760753b69ab319ba3",
+      "wallet": "0xa05ec35f7d1eba823cff2ed26aeaed419683742f"
+    },
+    {
+      "entry": {
+        "amount_in_raw": "10000000000000000",
+        "block": 51564653,
+        "evidence": {
+          "http_status": 200,
+          "key": "2826cf0f67f1334bcadb397c71c9709d39f764314d4dc97ad4a30fb89aa4ffd6",
+          "rpc_error": null
+        },
+        "quote": {
+          "amount_out_raw": "1676108376209569906787843",
+          "quoter_gas_units": 713590
+        },
+        "status": "POOL_QUOTE_RETURNED",
+        "token_in": "0x4200000000000000000000000000000000000006"
+      },
+      "exits": {
+        "24h": {
+          "amount_in_raw": "1676108376209569906787843",
+          "block": 51607853,
+          "evidence": {
+            "http_status": 200,
+            "key": "324d8b577740ec3f9039a7084160218646dfe6a297024b22277c30dcd7153575",
+            "rpc_error": null
+          },
+          "pool_quote_return": 0.1238273935198766,
+          "quote": {
+            "amount_out_raw": "11238273935198767",
+            "quoter_gas_units": 620340
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0x9e00fc92493451eba1c63dd3880d68b622037ba3"
+        },
+        "2h": {
+          "amount_in_raw": "1676108376209569906787843",
+          "block": 51568253,
+          "evidence": {
+            "http_status": 200,
+            "key": "d9e8fbb1e7a3d4c8b2e448491f4d69a3883b6554802d49f718d69301d7d3c6f1",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.043124508497030645,
+          "quote": {
+            "amount_out_raw": "9568754915029693",
+            "quoter_gas_units": 636780
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0x9e00fc92493451eba1c63dd3880d68b622037ba3"
+        },
+        "30m": {
+          "amount_in_raw": "1676108376209569906787843",
+          "block": 51565553,
+          "evidence": {
+            "http_status": 200,
+            "key": "4d142c5b5811c1f4c656d8ce88804a46c8da69fdf4a17da5934c014f599c0acc",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.10018401075226235,
+          "quote": {
+            "amount_out_raw": "8998159892477376",
+            "quoter_gas_units": 637324
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0x9e00fc92493451eba1c63dd3880d68b622037ba3"
+        }
+      },
+      "index_complete": true,
+      "input_quote_raw": "10000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0xc704147d839c37ffd2ac97fc6afebee7f1442ac8e2436242b94a0eed495440a5",
+      "status": "AMOUNT_SPECIFIC_POOL_QUOTE_NOT_SETTLED_FILL",
+      "token": "0x9e00fc92493451eba1c63dd3880d68b622037ba3",
+      "wallet": "0xa05ec35f7d1eba823cff2ed26aeaed419683742f"
+    },
+    {
+      "entry": {
+        "amount_in_raw": "20000000000000000",
+        "block": 51564653,
+        "evidence": {
+          "http_status": 200,
+          "key": "724cd79a913f151bf4c0b5a65fbd9def87ac86e88119b01ef95e343d2e9712be",
+          "rpc_error": null
+        },
+        "quote": {
+          "amount_out_raw": "3351759809815984843319430",
+          "quoter_gas_units": 695767
+        },
+        "status": "POOL_QUOTE_RETURNED",
+        "token_in": "0x4200000000000000000000000000000000000006"
+      },
+      "exits": {
+        "24h": {
+          "amount_in_raw": "3351759809815984843319430",
+          "block": 51607853,
+          "evidence": {
+            "http_status": 200,
+            "key": "a36373b63be8318e41580995a8dc7bf7b96b767e8c229c2291ed30504a8cc4a2",
+            "rpc_error": null
+          },
+          "pool_quote_return": 0.12351203896995422,
+          "quote": {
+            "amount_out_raw": "22470240779399083",
+            "quoter_gas_units": 636780
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0x9e00fc92493451eba1c63dd3880d68b622037ba3"
+        },
+        "2h": {
+          "amount_in_raw": "3351759809815984843319430",
+          "block": 51568253,
+          "evidence": {
+            "http_status": 200,
+            "key": "9f316213e8c0af57544aaae1c794ddf042e2ddc46dc7657d04c07129b4e05ff4",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.0433824603512315,
+          "quote": {
+            "amount_out_raw": "19132350792975369",
+            "quoter_gas_units": 636236
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0x9e00fc92493451eba1c63dd3880d68b622037ba3"
+        },
+        "30m": {
+          "amount_in_raw": "3351759809815984843319430",
+          "block": 51565553,
+          "evidence": {
+            "http_status": 200,
+            "key": "9060933403694f859de2f01106ecd5b8cccd062fd137acd7919de54d451c985a",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.10042295878760676,
+          "quote": {
+            "amount_out_raw": "17991540824247864",
+            "quoter_gas_units": 636848
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0x9e00fc92493451eba1c63dd3880d68b622037ba3"
+        }
+      },
+      "index_complete": true,
+      "input_quote_raw": "20000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0xc704147d839c37ffd2ac97fc6afebee7f1442ac8e2436242b94a0eed495440a5",
+      "status": "AMOUNT_SPECIFIC_POOL_QUOTE_NOT_SETTLED_FILL",
+      "token": "0x9e00fc92493451eba1c63dd3880d68b622037ba3",
+      "wallet": "0xa05ec35f7d1eba823cff2ed26aeaed419683742f"
+    },
+    {
+      "entry": {
+        "amount_in_raw": "10000000000000000",
+        "block": 51592964,
+        "evidence": {
+          "http_status": 200,
+          "key": "4b440ccc22019b31ac4d5fbee7ee9e4e9c5f5cc669a225ad0e2c6126164bc75d",
+          "rpc_error": null
+        },
+        "quote": {
+          "amount_out_raw": "1544250131116145449504645",
+          "quoter_gas_units": 711690
+        },
+        "status": "POOL_QUOTE_RETURNED",
+        "token_in": "0x4200000000000000000000000000000000000006"
+      },
+      "exits": {
+        "24h": {
+          "amount_in_raw": "1544250131116145449504645",
+          "block": 51636164,
+          "evidence": {
+            "http_status": 200,
+            "key": "d7776ec2f60a508d818fd4636a0f96843365972d2862c61645bf2f24df4c916e",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.29588122501850733,
+          "quote": {
+            "amount_out_raw": "7041187749814927",
+            "quoter_gas_units": 620340
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0x9e00fc92493451eba1c63dd3880d68b622037ba3"
+        },
+        "2h": {
+          "amount_in_raw": "1544250131116145449504645",
+          "block": 51596564,
+          "evidence": {
+            "http_status": 200,
+            "key": "2c4d3d74d861896617598b0599c1f70b9041c93c1ff591ef465c5e0d3c086958",
+            "rpc_error": null
+          },
+          "pool_quote_return": 0.0564376668433233,
+          "quote": {
+            "amount_out_raw": "10564376668433234",
+            "quoter_gas_units": 638412
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0x9e00fc92493451eba1c63dd3880d68b622037ba3"
+        },
+        "30m": {
+          "amount_in_raw": "1544250131116145449504645",
+          "block": 51593864,
+          "evidence": {
+            "http_status": 200,
+            "key": "5f3ef78db9984fcdce0b9628a33f5109a9183d28c81ada6d2f0ddfcd3b8fff6b",
+            "rpc_error": null
+          },
+          "pool_quote_return": 0.053511699518062894,
+          "quote": {
+            "amount_out_raw": "10535116995180628",
+            "quoter_gas_units": 637936
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0x9e00fc92493451eba1c63dd3880d68b622037ba3"
+        },
+        "source_first_sell": {
+          "amount_in_raw": "1544250131116145449504645",
+          "block": 51679640,
+          "evidence": {
+            "http_status": 200,
+            "key": "c8412320051c56e71c2b71c7d85aa8bffa55a447c5be7e16612c7bbf069a806f",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.13268353646195352,
+          "quote": {
+            "amount_out_raw": "8673164635380465",
+            "quoter_gas_units": 636848
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0x9e00fc92493451eba1c63dd3880d68b622037ba3"
+        }
+      },
+      "index_complete": true,
+      "input_quote_raw": "10000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0xefa7da961e655c5f793a681a7aae53722379087f5f3a94db80dc2cbe7630d795",
+      "status": "AMOUNT_SPECIFIC_POOL_QUOTE_NOT_SETTLED_FILL",
+      "token": "0x9e00fc92493451eba1c63dd3880d68b622037ba3",
+      "wallet": "0x9631335762e3603d2a7507d84838aa3236d52745"
+    },
+    {
+      "entry": {
+        "amount_in_raw": "20000000000000000",
+        "block": 51592964,
+        "evidence": {
+          "http_status": 200,
+          "key": "24e606f701ba483f39b2b80c241d02b2f5ef02f155f0e53e516ece900794e96a",
+          "rpc_error": null
+        },
+        "quote": {
+          "amount_out_raw": "3088096495293301964947772",
+          "quoter_gas_units": 713514
+        },
+        "status": "POOL_QUOTE_RETURNED",
+        "token_in": "0x4200000000000000000000000000000000000006"
+      },
+      "exits": {
+        "24h": {
+          "amount_in_raw": "3088096495293301964947772",
+          "block": 51636164,
+          "evidence": {
+            "http_status": 200,
+            "key": "3715aa570b41c9164d528e1cdeab6b1eb45072d0b64995b701975305ec64411e",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.2960504206958927,
+          "quote": {
+            "amount_out_raw": "14078991586082146",
+            "quoter_gas_units": 636780
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0x9e00fc92493451eba1c63dd3880d68b622037ba3"
+        },
+        "2h": {
+          "amount_in_raw": "3088096495293301964947772",
+          "block": 51596564,
+          "evidence": {
+            "http_status": 200,
+            "key": "96f8b5ffa15b643ec816787bf343132e521604da8ef0a55f636a2bcdb810b315",
+            "rpc_error": null
+          },
+          "pool_quote_return": 0.056157676589664085,
+          "quote": {
+            "amount_out_raw": "21123153531793280",
+            "quoter_gas_units": 636304
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0x9e00fc92493451eba1c63dd3880d68b622037ba3"
+        },
+        "30m": {
+          "amount_in_raw": "3088096495293301964947772",
+          "block": 51593864,
+          "evidence": {
+            "http_status": 200,
+            "key": "c0d59ae3df098bc4af93364e764b130f82e1e288ef73179fe69c564d31c0d479",
+            "rpc_error": null
+          },
+          "pool_quote_return": 0.05323267986042013,
+          "quote": {
+            "amount_out_raw": "21064653597208403",
+            "quoter_gas_units": 637936
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0x9e00fc92493451eba1c63dd3880d68b622037ba3"
+        },
+        "source_first_sell": {
+          "amount_in_raw": "3088096495293301964947772",
+          "block": 51679640,
+          "evidence": {
+            "http_status": 200,
+            "key": "fa5c39ed68b1022e5605f37813dbd23a20ff7d9b449829e9e66f542888be6883",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.13290223223182496,
+          "quote": {
+            "amount_out_raw": "17341955355363500",
+            "quoter_gas_units": 636780
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0x9e00fc92493451eba1c63dd3880d68b622037ba3"
+        }
+      },
+      "index_complete": true,
+      "input_quote_raw": "20000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0xefa7da961e655c5f793a681a7aae53722379087f5f3a94db80dc2cbe7630d795",
+      "status": "AMOUNT_SPECIFIC_POOL_QUOTE_NOT_SETTLED_FILL",
+      "token": "0x9e00fc92493451eba1c63dd3880d68b622037ba3",
+      "wallet": "0x9631335762e3603d2a7507d84838aa3236d52745"
+    },
+    {
+      "exits": {},
+      "index_complete": true,
+      "input_quote_raw": "10000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0x2faeadd305a3ee7688bd7e2e8d93a30f4e60ab37550fdeb3ceabf2d83f8b903e",
+      "status": "UNRESOLVED_POOL_KEY_OR_ROUTE",
+      "token": "0x798b24ba106188002ea1349654be2b0d515c7777",
+      "wallet": "0x9631335762e3603d2a7507d84838aa3236d52745"
+    },
+    {
+      "exits": {},
+      "index_complete": true,
+      "input_quote_raw": "20000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0x2faeadd305a3ee7688bd7e2e8d93a30f4e60ab37550fdeb3ceabf2d83f8b903e",
+      "status": "UNRESOLVED_POOL_KEY_OR_ROUTE",
+      "token": "0x798b24ba106188002ea1349654be2b0d515c7777",
+      "wallet": "0x9631335762e3603d2a7507d84838aa3236d52745"
+    },
+    {
+      "entry": {
+        "amount_in_raw": "10000000000000000",
+        "block": 51445907,
+        "evidence": {
+          "http_status": 200,
+          "key": "548074f2b71fb333bde96f385533168ae5f3c3cb80083715bca9874cb5ad53b9",
+          "rpc_error": null
+        },
+        "quote": {
+          "amount_out_raw": "46727780800696674641157357",
+          "quoter_gas_units": 739582
+        },
+        "status": "POOL_QUOTE_RETURNED",
+        "token_in": "0x4200000000000000000000000000000000000006"
+      },
+      "exits": {
+        "24h": {
+          "amount_in_raw": "46727780800696674641157357",
+          "block": 51489107,
+          "evidence": {
+            "http_status": 200,
+            "key": "39e14a5fc6fe850a61ea4d252313db82c930cc716035980420552a478df2f163",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.7424514083077565,
+          "quote": {
+            "amount_out_raw": "2575485916922435",
+            "quoter_gas_units": 642322
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0x7e298d798656c03ec80f2a7843d0805103749ba3"
+        },
+        "2h": {
+          "amount_in_raw": "46727780800696674641157357",
+          "block": 51449507,
+          "evidence": {
+            "http_status": 200,
+            "key": "974779863d3bf286656790ff4e36b56c57b44cac8ff9032dbc7327d9a0547a78",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.7432932359388731,
+          "quote": {
+            "amount_out_raw": "2567067640611269",
+            "quoter_gas_units": 647508
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0x7e298d798656c03ec80f2a7843d0805103749ba3"
+        },
+        "30m": {
+          "amount_in_raw": "46727780800696674641157357",
+          "block": 51446807,
+          "evidence": {
+            "http_status": 200,
+            "key": "4421d42b14dd9dc412d810c418d81e8938eb3534ee017b055eb9486ee36c477b",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.7432932359388731,
+          "quote": {
+            "amount_out_raw": "2567067640611269",
+            "quoter_gas_units": 647508
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0x7e298d798656c03ec80f2a7843d0805103749ba3"
+        },
+        "source_first_sell": {
+          "amount_in_raw": "46727780800696674641157357",
+          "block": 51445918,
+          "evidence": {
+            "http_status": 200,
+            "key": "44428c655cc8c673a026cf1b08e1e96d1561ceee6697035b16a098f8c92d0ac0",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.41102536348901175,
+          "quote": {
+            "amount_out_raw": "5889746365109882",
+            "quoter_gas_units": 641553
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0x7e298d798656c03ec80f2a7843d0805103749ba3"
+        }
+      },
+      "index_complete": true,
+      "input_quote_raw": "10000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0x4b59a1bab1f277d95c1ac0fd773e8797becad855cdabedfb2106278d2caf581a",
+      "status": "AMOUNT_SPECIFIC_POOL_QUOTE_NOT_SETTLED_FILL",
+      "token": "0x7e298d798656c03ec80f2a7843d0805103749ba3",
+      "wallet": "0xe28601398a5448d1147e6e8b0e0c6d686f0d216d"
+    },
+    {
+      "entry": {
+        "amount_in_raw": "20000000000000000",
+        "block": 51445907,
+        "evidence": {
+          "http_status": 200,
+          "key": "2d993c120bdc07a753d3e72702d83b712fed7a7406f5f607525f055edc3692d8",
+          "rpc_error": null
+        },
+        "quote": {
+          "amount_out_raw": "93369328232540895336751782",
+          "quoter_gas_units": 721223
+        },
+        "status": "POOL_QUOTE_RETURNED",
+        "token_in": "0x4200000000000000000000000000000000000006"
+      },
+      "exits": {
+        "24h": {
+          "amount_in_raw": "93369328232540895336751782",
+          "block": 51489107,
+          "evidence": {
+            "http_status": 200,
+            "key": "b0e3bbdec18864b3c16cf7463d9765182c81e1c73bfa706c1f7bd5843b665fc2",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.7441406856277799,
+          "quote": {
+            "amount_out_raw": "5117186287444402",
+            "quoter_gas_units": 643378
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0x7e298d798656c03ec80f2a7843d0805103749ba3"
+        },
+        "2h": {
+          "amount_in_raw": "93369328232540895336751782",
+          "block": 51449507,
+          "evidence": {
+            "http_status": 200,
+            "key": "ed535b5138b567b1d905d8f64421f0af866f4e55bbe555c65c4a197a6d45ad12",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.7449746504572918,
+          "quote": {
+            "amount_out_raw": "5100506990854163",
+            "quoter_gas_units": 648588
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0x7e298d798656c03ec80f2a7843d0805103749ba3"
+        },
+        "30m": {
+          "amount_in_raw": "93369328232540895336751782",
+          "block": 51446807,
+          "evidence": {
+            "http_status": 200,
+            "key": "dd03c0cf143e6798293acf0fa72c675c9bcbfbeec0a8d8b8d2b413364bb4714d",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.7449746504572918,
+          "quote": {
+            "amount_out_raw": "5100506990854163",
+            "quoter_gas_units": 648588
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0x7e298d798656c03ec80f2a7843d0805103749ba3"
+        },
+        "source_first_sell": {
+          "amount_in_raw": "93369328232540895336751782",
+          "block": 51445918,
+          "evidence": {
+            "http_status": 200,
+            "key": "f89dd296b8b0e7de10d5d8badf1bb2d2d7238ae1f7757d38913c23206040a5b4",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.4119846746392376,
+          "quote": {
+            "amount_out_raw": "11760306507215248",
+            "quoter_gas_units": 641553
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0x7e298d798656c03ec80f2a7843d0805103749ba3"
+        }
+      },
+      "index_complete": true,
+      "input_quote_raw": "20000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0x4b59a1bab1f277d95c1ac0fd773e8797becad855cdabedfb2106278d2caf581a",
+      "status": "AMOUNT_SPECIFIC_POOL_QUOTE_NOT_SETTLED_FILL",
+      "token": "0x7e298d798656c03ec80f2a7843d0805103749ba3",
+      "wallet": "0xe28601398a5448d1147e6e8b0e0c6d686f0d216d"
+    },
+    {
+      "entry": {
+        "amount_in_raw": "10000000000000000",
+        "block": 51477335,
+        "evidence": {
+          "http_status": 200,
+          "key": "c28c93926220fd8f98107d1cc85275519962993120dc94b3453eea1531db9b91",
+          "rpc_error": null
+        },
+        "quote": {
+          "amount_out_raw": "3166743234534510263127",
+          "quoter_gas_units": 331981
+        },
+        "status": "POOL_QUOTE_RETURNED",
+        "token_in": "0x0000000000000000000000000000000000000000"
+      },
+      "exits": {
+        "24h": {
+          "amount_in_raw": "3166743234534510263127",
+          "block": 51520535,
+          "evidence": {
+            "http_status": 200,
+            "key": "e323d1e134528dd526f9985c598ffafe49cbb9f32eac67bc112391a9633e8eae",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.789796560623368,
+          "quote": {
+            "amount_out_raw": "2102034393766320",
+            "quoter_gas_units": 609118
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0xa474be8f2c404a3dbbaa4e703d679aa188aa6757"
+        },
+        "2h": {
+          "amount_in_raw": "3166743234534510263127",
+          "block": 51480935,
+          "evidence": {
+            "http_status": 200,
+            "key": "354380d0a0c51e74f841f759af08c414e5fc3de3ea789e49d04c6585bcf8ad9a",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.7880701348875547,
+          "quote": {
+            "amount_out_raw": "2119298651124453",
+            "quoter_gas_units": 638980
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0xa474be8f2c404a3dbbaa4e703d679aa188aa6757"
+        },
+        "30m": {
+          "amount_in_raw": "3166743234534510263127",
+          "block": 51478235,
+          "evidence": {
+            "http_status": 200,
+            "key": "1e8619755455009ed3e34fc7ee5d52500e638f1eddbd3e5eeef5503e12f78ada",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.758956734261647,
+          "quote": {
+            "amount_out_raw": "2410432657383530",
+            "quoter_gas_units": 613398
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0xa474be8f2c404a3dbbaa4e703d679aa188aa6757"
+        }
+      },
+      "index_complete": true,
+      "input_quote_raw": "10000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0xf1e047b9a9feefaa6463ea636379fc45d75385dff84f6eb9a9fd1bdfd695c803",
+      "status": "AMOUNT_SPECIFIC_POOL_QUOTE_NOT_SETTLED_FILL",
+      "token": "0xa474be8f2c404a3dbbaa4e703d679aa188aa6757",
+      "wallet": "0xe28601398a5448d1147e6e8b0e0c6d686f0d216d"
+    },
+    {
+      "entry": {
+        "amount_in_raw": "20000000000000000",
+        "block": 51477335,
+        "evidence": {
+          "http_status": 200,
+          "key": "ce68404217652371b696c1752c25da893429714ae4521e380fa5af6b9a4da84e",
+          "rpc_error": null
+        },
+        "quote": {
+          "amount_out_raw": "6283504138001948262227",
+          "quoter_gas_units": 331825
+        },
+        "status": "POOL_QUOTE_RETURNED",
+        "token_in": "0x0000000000000000000000000000000000000000"
+      },
+      "exits": {
+        "24h": {
+          "amount_in_raw": "6283504138001948262227",
+          "block": 51520535,
+          "evidence": {
+            "http_status": 200,
+            "key": "61d7bcb53e487d4707e074d27dfaa9efaa65d68e8328e1acab427b835940ff1a",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.7922120950657208,
+          "quote": {
+            "amount_out_raw": "4155758098685584",
+            "quoter_gas_units": 1131482
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0xa474be8f2c404a3dbbaa4e703d679aa188aa6757"
+        },
+        "2h": {
+          "amount_in_raw": "6283504138001948262227",
+          "block": 51480935,
+          "evidence": {
+            "http_status": 200,
+            "key": "6db4428453deaa3fb47469d829e9e7a053ba763aaa510a4ebc6853b109db3124",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.7905435002490199,
+          "quote": {
+            "amount_out_raw": "4189129995019603",
+            "quoter_gas_units": 1152889
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0xa474be8f2c404a3dbbaa4e703d679aa188aa6757"
+        },
+        "30m": {
+          "amount_in_raw": "6283504138001948262227",
+          "block": 51478235,
+          "evidence": {
+            "http_status": 200,
+            "key": "4121d7012dbbfd1157cbaa86f77cec32342231f95cd729c4a0c7e67413871f83",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.7617695107229147,
+          "quote": {
+            "amount_out_raw": "4764609785541707",
+            "quoter_gas_units": 613366
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0xa474be8f2c404a3dbbaa4e703d679aa188aa6757"
+        }
+      },
+      "index_complete": true,
+      "input_quote_raw": "20000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0xf1e047b9a9feefaa6463ea636379fc45d75385dff84f6eb9a9fd1bdfd695c803",
+      "status": "AMOUNT_SPECIFIC_POOL_QUOTE_NOT_SETTLED_FILL",
+      "token": "0xa474be8f2c404a3dbbaa4e703d679aa188aa6757",
+      "wallet": "0xe28601398a5448d1147e6e8b0e0c6d686f0d216d"
+    },
+    {
+      "exits": {},
+      "index_complete": true,
+      "input_quote_raw": "10000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0xbd21bbf6d51300a162d27b5fe52fff3e0000d18ffa1ca4aa1fbe6c5e277381d6",
+      "status": "UNRESOLVED_POOL_KEY_OR_ROUTE",
+      "token": "0x882c8e35504d58979b1280fe76d6553f717029f8",
+      "wallet": "0x2ce9d43d1cba6ae31d7f07bfe0098dfa2d833373"
+    },
+    {
+      "exits": {},
+      "index_complete": true,
+      "input_quote_raw": "20000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0xbd21bbf6d51300a162d27b5fe52fff3e0000d18ffa1ca4aa1fbe6c5e277381d6",
+      "status": "UNRESOLVED_POOL_KEY_OR_ROUTE",
+      "token": "0x882c8e35504d58979b1280fe76d6553f717029f8",
+      "wallet": "0x2ce9d43d1cba6ae31d7f07bfe0098dfa2d833373"
+    },
+    {
+      "exits": {},
+      "index_complete": true,
+      "input_quote_raw": "10000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0x2608d62a37b906b11de1ef858c0d9c7d26c1df02e2aa49ef0940682d03a111b2",
+      "status": "UNRESOLVED_POOL_KEY_OR_ROUTE",
+      "token": "0xe3f4b833512f0bcb1467ee55e25804bbb8304ba3",
+      "wallet": "0x2ce9d43d1cba6ae31d7f07bfe0098dfa2d833373"
+    },
+    {
+      "exits": {},
+      "index_complete": true,
+      "input_quote_raw": "20000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0x2608d62a37b906b11de1ef858c0d9c7d26c1df02e2aa49ef0940682d03a111b2",
+      "status": "UNRESOLVED_POOL_KEY_OR_ROUTE",
+      "token": "0xe3f4b833512f0bcb1467ee55e25804bbb8304ba3",
+      "wallet": "0x2ce9d43d1cba6ae31d7f07bfe0098dfa2d833373"
+    },
+    {
+      "entry": {
+        "amount_in_raw": "10000000000000000",
+        "block": 51445902,
+        "evidence": {
+          "http_status": 200,
+          "key": "35d42b4f82fae12fb06d444bfc1e1d27dda62694d00918b2e48d943a0ca6d0d9",
+          "rpc_error": null
+        },
+        "quote": {
+          "amount_out_raw": "57929472129440776465448041",
+          "quoter_gas_units": 739590
+        },
+        "status": "POOL_QUOTE_RETURNED",
+        "token_in": "0x4200000000000000000000000000000000000006"
+      },
+      "exits": {
+        "24h": {
+          "amount_in_raw": "57929472129440776465448041",
+          "block": 51489102,
+          "evidence": {
+            "http_status": 200,
+            "key": "dc8ca86aec6e5dff6cfe57b678fe50be3dea305722b4f9b3b754d66b6d6d0aae",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.6811457345853054,
+          "quote": {
+            "amount_out_raw": "3188542654146947",
+            "quoter_gas_units": 642322
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0x7e298d798656c03ec80f2a7843d0805103749ba3"
+        },
+        "2h": {
+          "amount_in_raw": "57929472129440776465448041",
+          "block": 51449502,
+          "evidence": {
+            "http_status": 200,
+            "key": "8e6e03a8d923e331280779ed42aa3fc9c15c5f3d4fa91b438539f8b4f77291bb",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.6821872432409516,
+          "quote": {
+            "amount_out_raw": "3178127567590484",
+            "quoter_gas_units": 646388
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0x7e298d798656c03ec80f2a7843d0805103749ba3"
+        },
+        "30m": {
+          "amount_in_raw": "57929472129440776465448041",
+          "block": 51446802,
+          "evidence": {
+            "http_status": 200,
+            "key": "0517f5328d8adb6692a10cf612e3e37d0fe08ff00db4d04672eb7fee670268cc",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.6821872432409516,
+          "quote": {
+            "amount_out_raw": "3178127567590484",
+            "quoter_gas_units": 646388
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0x7e298d798656c03ec80f2a7843d0805103749ba3"
+        },
+        "source_first_sell": {
+          "amount_in_raw": "57929472129440776465448041",
+          "block": 51445934,
+          "evidence": {
+            "http_status": 200,
+            "key": "fdd396f0538b77a061a6459976dff88583ee48c495efb39bfdd979761d6b3fd5",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.4010421369383568,
+          "quote": {
+            "amount_out_raw": "5989578630616432",
+            "quoter_gas_units": 638765
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0x7e298d798656c03ec80f2a7843d0805103749ba3"
+        }
+      },
+      "index_complete": true,
+      "input_quote_raw": "10000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0xfc443a645511d2f0a40322f6d4b701cad9d225ea6663359a4a914db0fd70e757",
+      "status": "AMOUNT_SPECIFIC_POOL_QUOTE_NOT_SETTLED_FILL",
+      "token": "0x7e298d798656c03ec80f2a7843d0805103749ba3",
+      "wallet": "0x371903abb32f5f69b536b77495e92adedfea25da"
+    },
+    {
+      "entry": {
+        "amount_in_raw": "20000000000000000",
+        "block": 51445902,
+        "evidence": {
+          "http_status": 200,
+          "key": "ed6c9402e881afe024195606a79800bb102858c1c94df1af279e52c3eb680099",
+          "rpc_error": null
+        },
+        "quote": {
+          "amount_out_raw": "115739909625391739091186347",
+          "quoter_gas_units": 740794
+        },
+        "status": "POOL_QUOTE_RETURNED",
+        "token_in": "0x4200000000000000000000000000000000000006"
+      },
+      "exits": {
+        "24h": {
+          "amount_in_raw": "115739909625391739091186347",
+          "block": 51489102,
+          "evidence": {
+            "http_status": 200,
+            "key": "ae79c4a5ca6419dcbfe1e1c40f953c924e3dccc9d4879ecde413957f5c42c756",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.6836946112383174,
+          "quote": {
+            "amount_out_raw": "6326107775233651",
+            "quoter_gas_units": 643346
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0x7e298d798656c03ec80f2a7843d0805103749ba3"
+        },
+        "2h": {
+          "amount_in_raw": "115739909625391739091186347",
+          "block": 51449502,
+          "evidence": {
+            "http_status": 200,
+            "key": "7ce13b22a974472ab5857c491a264139d54c0ac6133e8ff066f36699ebf896f4",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.6847242213634518,
+          "quote": {
+            "amount_out_raw": "6305515572730964",
+            "quoter_gas_units": 631945
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0x7e298d798656c03ec80f2a7843d0805103749ba3"
+        },
+        "30m": {
+          "amount_in_raw": "115739909625391739091186347",
+          "block": 51446802,
+          "evidence": {
+            "http_status": 200,
+            "key": "e3f63f67aef9f6244f2e58e987427a706892638d9e2c194cedae84a41af9b0eb",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.6847242213634518,
+          "quote": {
+            "amount_out_raw": "6305515572730964",
+            "quoter_gas_units": 631945
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0x7e298d798656c03ec80f2a7843d0805103749ba3"
+        },
+        "source_first_sell": {
+          "amount_in_raw": "115739909625391739091186347",
+          "block": 51445934,
+          "evidence": {
+            "http_status": 200,
+            "key": "e35e72d2a3ca0c7ec660a1be21827cf4dc0140195b6f462a744f89f69a49de71",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.4021319865275561,
+          "quote": {
+            "amount_out_raw": "11957360269448877",
+            "quoter_gas_units": 624501
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0x7e298d798656c03ec80f2a7843d0805103749ba3"
+        }
+      },
+      "index_complete": true,
+      "input_quote_raw": "20000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0xfc443a645511d2f0a40322f6d4b701cad9d225ea6663359a4a914db0fd70e757",
+      "status": "AMOUNT_SPECIFIC_POOL_QUOTE_NOT_SETTLED_FILL",
+      "token": "0x7e298d798656c03ec80f2a7843d0805103749ba3",
+      "wallet": "0x371903abb32f5f69b536b77495e92adedfea25da"
+    },
+    {
+      "entry": {
+        "amount_in_raw": "10000000000000000",
+        "block": 51608901,
+        "evidence": {
+          "http_status": 200,
+          "key": "a2731e94df0dd157d40182b075a856a61968a2dbedf8808fbd1f5b5755494bde",
+          "rpc_error": null
+        },
+        "quote": {
+          "amount_out_raw": "46465447131845766075411821",
+          "quoter_gas_units": 309412
+        },
+        "status": "POOL_QUOTE_RETURNED",
+        "token_in": "0x4200000000000000000000000000000000000006"
+      },
+      "exits": {
+        "24h": {
+          "amount_in_raw": "46465447131845766075411821",
+          "block": 51652101,
+          "evidence": {
+            "http_status": 200,
+            "key": "1a88eaf9b458b2e8216c1333d51a00ef3f9c58c2519ef8f693854815042ecd9d",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.4921606432803082,
+          "quote": {
+            "amount_out_raw": "5078393567196918",
+            "quoter_gas_units": 208068
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0xeb148dedecf90ed4c824efa3f6ce486d15afcba3"
+        },
+        "2h": {
+          "amount_in_raw": "46465447131845766075411821",
+          "block": 51612501,
+          "evidence": {
+            "http_status": 200,
+            "key": "cf27187d447210c20a039527e45f870342622e44c6b66ad7e3d6fd4ec0a7016b",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.4843553340710107,
+          "quote": {
+            "amount_out_raw": "5156446659289893",
+            "quoter_gas_units": 208136
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0xeb148dedecf90ed4c824efa3f6ce486d15afcba3"
+        },
+        "30m": {
+          "amount_in_raw": "46465447131845766075411821",
+          "block": 51609801,
+          "evidence": {
+            "http_status": 200,
+            "key": "3df3c642b66265b3e395cf07dcb6071f205b975c35a08b0e9ce5124ce0225883",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.46620254698571095,
+          "quote": {
+            "amount_out_raw": "5337974530142890",
+            "quoter_gas_units": 208072
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0xeb148dedecf90ed4c824efa3f6ce486d15afcba3"
+        }
+      },
+      "index_complete": true,
+      "input_quote_raw": "10000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0x84ba76eeb724ee0a8fdfce710b4980623954e550e893e86c8346d9fd0456dd9e",
+      "status": "AMOUNT_SPECIFIC_POOL_QUOTE_NOT_SETTLED_FILL",
+      "token": "0xeb148dedecf90ed4c824efa3f6ce486d15afcba3",
+      "wallet": "0x371903abb32f5f69b536b77495e92adedfea25da"
+    },
+    {
+      "entry": {
+        "amount_in_raw": "20000000000000000",
+        "block": 51608901,
+        "evidence": {
+          "http_status": 200,
+          "key": "fb5382cec2b5289f76b2a4d078f066def6b9e15697068f036ca63305df5f7575",
+          "rpc_error": null
+        },
+        "quote": {
+          "amount_out_raw": "92868735097279455958109623",
+          "quoter_gas_units": 309884
+        },
+        "status": "POOL_QUOTE_RETURNED",
+        "token_in": "0x4200000000000000000000000000000000000006"
+      },
+      "exits": {
+        "24h": {
+          "amount_in_raw": "92868735097279455958109623",
+          "block": 51652101,
+          "evidence": {
+            "http_status": 200,
+            "key": "bf58bf3180e9ce58e16bc813df2772fedcded8f5c49e8efc39d8964bad9e9e7e",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.49274197517171714,
+          "quote": {
+            "amount_out_raw": "10145160496565657",
+            "quoter_gas_units": 208132
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0xeb148dedecf90ed4c824efa3f6ce486d15afcba3"
+        },
+        "2h": {
+          "amount_in_raw": "92868735097279455958109623",
+          "block": 51612501,
+          "evidence": {
+            "http_status": 200,
+            "key": "895c03f41a9d34915333e53753749c189d0439614c1d8bcdd6007f749659f663",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.48494747786791315,
+          "quote": {
+            "amount_out_raw": "10301050442641736",
+            "quoter_gas_units": 208164
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0xeb148dedecf90ed4c824efa3f6ce486d15afcba3"
+        },
+        "30m": {
+          "amount_in_raw": "92868735097279455958109623",
+          "block": 51609801,
+          "evidence": {
+            "http_status": 200,
+            "key": "6df96ab14c10d327f4539f10a09dce6c0d410411c369c3adf1b08b8c66d4e490",
+            "rpc_error": null
+          },
+          "pool_quote_return": -0.4668199995768234,
+          "quote": {
+            "amount_out_raw": "10663600008463531",
+            "quoter_gas_units": 208104
+          },
+          "status": "POOL_QUOTE_RETURNED",
+          "token_in": "0xeb148dedecf90ed4c824efa3f6ce486d15afcba3"
+        }
+      },
+      "index_complete": true,
+      "input_quote_raw": "20000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0x84ba76eeb724ee0a8fdfce710b4980623954e550e893e86c8346d9fd0456dd9e",
+      "status": "AMOUNT_SPECIFIC_POOL_QUOTE_NOT_SETTLED_FILL",
+      "token": "0xeb148dedecf90ed4c824efa3f6ce486d15afcba3",
+      "wallet": "0x371903abb32f5f69b536b77495e92adedfea25da"
+    },
+    {
+      "exits": {},
+      "index_complete": true,
+      "input_quote_raw": "10000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0xf2202819e8e11dbb608e190df5eb2561e110469f701773da15b35c47a942508b",
+      "status": "ENGINEERING_PENDING_MIXED_ROUTE_ADAPTER",
+      "token": "0x9f62b62cf8cc3aea56a3ce8808cf13503d1131e7",
+      "wallet": "0xfd7e55a555555c2f25053a38ec744de1afea4fa4"
+    },
+    {
+      "exits": {},
+      "index_complete": true,
+      "input_quote_raw": "20000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0xf2202819e8e11dbb608e190df5eb2561e110469f701773da15b35c47a942508b",
+      "status": "ENGINEERING_PENDING_MIXED_ROUTE_ADAPTER",
+      "token": "0x9f62b62cf8cc3aea56a3ce8808cf13503d1131e7",
+      "wallet": "0xfd7e55a555555c2f25053a38ec744de1afea4fa4"
+    },
+    {
+      "exits": {},
+      "index_complete": true,
+      "input_quote_raw": "10000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0x504ebd0ccecf169a91c50d90eff297ed583b4b281a5a6851bbf0e7305e7f375e",
+      "status": "UNRESOLVED_POOL_KEY_OR_ROUTE",
+      "token": "0xb2000000000000000000009b58ad4f11efabbae5",
+      "wallet": "0xfd7e55a555555c2f25053a38ec744de1afea4fa4"
+    },
+    {
+      "exits": {},
+      "index_complete": true,
+      "input_quote_raw": "20000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0x504ebd0ccecf169a91c50d90eff297ed583b4b281a5a6851bbf0e7305e7f375e",
+      "status": "UNRESOLVED_POOL_KEY_OR_ROUTE",
+      "token": "0xb2000000000000000000009b58ad4f11efabbae5",
+      "wallet": "0xfd7e55a555555c2f25053a38ec744de1afea4fa4"
+    },
+    {
+      "exits": {},
+      "index_complete": true,
+      "input_quote_raw": "10000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0xe0d8089ef9f0e5e276833f338e5c9cd8639cc8de675e2deeaa758adbb6c1b8fb",
+      "status": "UNRESOLVED_POOL_KEY_OR_ROUTE",
+      "token": "0xfc28f881426a2931ec01b7392fe7bd87de220222",
+      "wallet": "0x217946e128c1b9c7f8c3f16b33878a908713923a"
+    },
+    {
+      "exits": {},
+      "index_complete": true,
+      "input_quote_raw": "20000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0xe0d8089ef9f0e5e276833f338e5c9cd8639cc8de675e2deeaa758adbb6c1b8fb",
+      "status": "UNRESOLVED_POOL_KEY_OR_ROUTE",
+      "token": "0xfc28f881426a2931ec01b7392fe7bd87de220222",
+      "wallet": "0x217946e128c1b9c7f8c3f16b33878a908713923a"
+    },
+    {
+      "exits": {},
+      "index_complete": true,
+      "input_quote_raw": "10000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0x5d7e39b79f8e7bd0f3e54f800bfc8cd4ee416f8ac0c69fc3008716e0403323ee",
+      "status": "ENGINEERING_PENDING_MIXED_ROUTE_ADAPTER",
+      "token": "0x0f61edbfe6cd86024c0f210c0695b08df55fdfc9",
+      "wallet": "0x217946e128c1b9c7f8c3f16b33878a908713923a"
+    },
+    {
+      "exits": {},
+      "index_complete": true,
+      "input_quote_raw": "20000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0x5d7e39b79f8e7bd0f3e54f800bfc8cd4ee416f8ac0c69fc3008716e0403323ee",
+      "status": "ENGINEERING_PENDING_MIXED_ROUTE_ADAPTER",
+      "token": "0x0f61edbfe6cd86024c0f210c0695b08df55fdfc9",
+      "wallet": "0x217946e128c1b9c7f8c3f16b33878a908713923a"
+    },
+    {
+      "exits": {},
+      "index_complete": true,
+      "input_quote_raw": "10000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0x9fe9aacef500c34dc188449e76fd725783fbef317ba438d20104b486ef63953f",
+      "status": "UNRESOLVED_POOL_KEY_OR_ROUTE",
+      "token": "0x882c8e35504d58979b1280fe76d6553f717029f8",
+      "wallet": "0xdd6f338b91f40e5a02c468b7cb49cccc569a3134"
+    },
+    {
+      "exits": {},
+      "index_complete": true,
+      "input_quote_raw": "20000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0x9fe9aacef500c34dc188449e76fd725783fbef317ba438d20104b486ef63953f",
+      "status": "UNRESOLVED_POOL_KEY_OR_ROUTE",
+      "token": "0x882c8e35504d58979b1280fe76d6553f717029f8",
+      "wallet": "0xdd6f338b91f40e5a02c468b7cb49cccc569a3134"
+    },
+    {
+      "exits": {},
+      "index_complete": true,
+      "input_quote_raw": "10000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0x553794de99a2b6549c52f2bc1920b79e1970adfa83691e6e7371206b201852ae",
+      "status": "UNRESOLVED_POOL_KEY_OR_ROUTE",
+      "token": "0xb20000000000000000000046012e90119e505b01",
+      "wallet": "0xdd6f338b91f40e5a02c468b7cb49cccc569a3134"
+    },
+    {
+      "exits": {},
+      "index_complete": true,
+      "input_quote_raw": "20000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0x553794de99a2b6549c52f2bc1920b79e1970adfa83691e6e7371206b201852ae",
+      "status": "UNRESOLVED_POOL_KEY_OR_ROUTE",
+      "token": "0xb20000000000000000000046012e90119e505b01",
+      "wallet": "0xdd6f338b91f40e5a02c468b7cb49cccc569a3134"
+    },
+    {
+      "exits": {},
+      "index_complete": true,
+      "input_quote_raw": "10000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0x6551d8cdec6e0ab147d10199c8e1c675a5dab5396cccaf07a2dba15722165bb0",
+      "status": "UNRESOLVED_POOL_KEY_OR_ROUTE",
+      "token": "0x46324147ce37f551faec752084f9b51e05a33425",
+      "wallet": "0xd569e570b94265e5ebc7df1990f99ee68d3f60a1"
+    },
+    {
+      "exits": {},
+      "index_complete": true,
+      "input_quote_raw": "20000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0x6551d8cdec6e0ab147d10199c8e1c675a5dab5396cccaf07a2dba15722165bb0",
+      "status": "UNRESOLVED_POOL_KEY_OR_ROUTE",
+      "token": "0x46324147ce37f551faec752084f9b51e05a33425",
+      "wallet": "0xd569e570b94265e5ebc7df1990f99ee68d3f60a1"
+    },
+    {
+      "exits": {},
+      "index_complete": true,
+      "input_quote_raw": "10000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0x98e84da5926dafd426b9e8389fe5ecb79802e85cd6645cb81222880ab5d7a480",
+      "status": "UNRESOLVED_POOL_KEY_OR_ROUTE",
+      "token": "0xb2000000000000000000007ab5bf182b1f897401",
+      "wallet": "0xd569e570b94265e5ebc7df1990f99ee68d3f60a1"
+    },
+    {
+      "exits": {},
+      "index_complete": true,
+      "input_quote_raw": "20000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0x98e84da5926dafd426b9e8389fe5ecb79802e85cd6645cb81222880ab5d7a480",
+      "status": "UNRESOLVED_POOL_KEY_OR_ROUTE",
+      "token": "0xb2000000000000000000007ab5bf182b1f897401",
+      "wallet": "0xd569e570b94265e5ebc7df1990f99ee68d3f60a1"
+    },
+    {
+      "exits": {},
+      "index_complete": true,
+      "input_quote_raw": "10000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0x3e43a15bada54a0b8f9d0e438890a38999e0cc42ed7c080fe551a461faea18ef",
+      "status": "UNRESOLVED_POOL_KEY_OR_ROUTE",
+      "token": "0xb20000000000000000000009cdb12aefd9830b01",
+      "wallet": "0x0b3edd0d0bf7c6281a7f8ae5a5630defb94ae78e"
+    },
+    {
+      "exits": {},
+      "index_complete": true,
+      "input_quote_raw": "20000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0x3e43a15bada54a0b8f9d0e438890a38999e0cc42ed7c080fe551a461faea18ef",
+      "status": "UNRESOLVED_POOL_KEY_OR_ROUTE",
+      "token": "0xb20000000000000000000009cdb12aefd9830b01",
+      "wallet": "0x0b3edd0d0bf7c6281a7f8ae5a5630defb94ae78e"
+    },
+    {
+      "exits": {},
+      "index_complete": true,
+      "input_quote_raw": "10000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0x6a09074547ecd02a85d0c3733d0f082de0bfd4d3216bcadd8d8c421ca0243fc4",
+      "status": "UNRESOLVED_POOL_KEY_OR_ROUTE",
+      "token": "0x366b11937eff8dfa59e347310a2f86e88821d222",
+      "wallet": "0x0b3edd0d0bf7c6281a7f8ae5a5630defb94ae78e"
+    },
+    {
+      "exits": {},
+      "index_complete": true,
+      "input_quote_raw": "20000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0x6a09074547ecd02a85d0c3733d0f082de0bfd4d3216bcadd8d8c421ca0243fc4",
+      "status": "UNRESOLVED_POOL_KEY_OR_ROUTE",
+      "token": "0x366b11937eff8dfa59e347310a2f86e88821d222",
+      "wallet": "0x0b3edd0d0bf7c6281a7f8ae5a5630defb94ae78e"
+    },
+    {
+      "exits": {},
+      "index_complete": false,
+      "input_quote_raw": "10000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0x497107c1d2f5da1167cc6fa49dbfa31259791f5e4fcb0bcda78f92e6f4e5a89d",
+      "status": "UNRESOLVED_POOL_KEY_OR_ROUTE",
+      "token": "0xb2000000000000000000000b0a815fd8838d9f01",
+      "wallet": "0x347ffc6db9acc54ac2019795173b9599e8b82bd9"
+    },
+    {
+      "exits": {},
+      "index_complete": false,
+      "input_quote_raw": "20000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0x497107c1d2f5da1167cc6fa49dbfa31259791f5e4fcb0bcda78f92e6f4e5a89d",
+      "status": "UNRESOLVED_POOL_KEY_OR_ROUTE",
+      "token": "0xb2000000000000000000000b0a815fd8838d9f01",
+      "wallet": "0x347ffc6db9acc54ac2019795173b9599e8b82bd9"
+    },
+    {
+      "exits": {},
+      "index_complete": false,
+      "input_quote_raw": "10000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0xd0b744f64a7d90eb83591cddb77281051efe5a821e881ca144b9dc8d17eb8165",
+      "status": "UNRESOLVED_POOL_KEY_OR_ROUTE",
+      "token": "0x08a9da206c41d2a79a0cb047c28c56d9b6787de0",
+      "wallet": "0x347ffc6db9acc54ac2019795173b9599e8b82bd9"
+    },
+    {
+      "exits": {},
+      "index_complete": false,
+      "input_quote_raw": "20000000000000000",
+      "net_pnl": null,
+      "quote_asset": "ETH_OR_WETH",
+      "source_tx": "0xd0b744f64a7d90eb83591cddb77281051efe5a821e881ca144b9dc8d17eb8165",
+      "status": "UNRESOLVED_POOL_KEY_OR_ROUTE",
+      "token": "0x08a9da206c41d2a79a0cb047c28c56d9b6787de0",
+      "wallet": "0x347ffc6db9acc54ac2019795173b9599e8b82bd9"
+    }
+  ]
+}

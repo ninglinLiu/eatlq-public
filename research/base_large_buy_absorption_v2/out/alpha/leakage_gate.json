@@ -1,0 +1,57 @@
+{
+  "task": "LEAKAGE_GATE",
+  "generated_at": "2026-07-21T09:07:47Z",
+  "asof_invariance": {
+    "pass": true,
+    "max_abs_diffs": {
+      "actor_n_prior_trips": 0.0,
+      "actor_prior_win_rate": 0.0,
+      "actor_prior_avg_ret": 0.0,
+      "actor_early_entry_skill": 0.0,
+      "actor_cold_start": 0.0
+    },
+    "n_checked": 2000,
+    "T_mid": 1770008123
+  },
+  "no_forward_refs": {
+    "pass": true,
+    "forbidden_in_feature_list": [],
+    "near_perfect_corr_with_label": {}
+  },
+  "placebo": {
+    "pass": true,
+    "max_abs_corr_with_shuffled_label": 0.01598381815718611,
+    "threshold": 0.15,
+    "per_feature": {
+      "actor_n_prior_trips": 0.004509977281798061,
+      "actor_prior_win_rate": 0.013363911061027637,
+      "actor_prior_avg_ret": 0.003696923023645618,
+      "actor_prior_median_hold_s": 0.01410876037620255,
+      "actor_early_entry_skill": 0.011022088696656274,
+      "actor_cluster_prior_win_rate": 0.013363911061027637,
+      "actor_cold_start": -0.010851312435408132,
+      "pool_buyers_mean_win_rate": -0.004887518675285234,
+      "pool_buyers_mean_n_trips": -0.0009761768251613439,
+      "pool_buyers_n_with_history": 0.011102504020995113,
+      "deployer_n_prior_pools": 0.0,
+      "deployer_prior_survival_rate": 0.0,
+      "deployer_prior_max_ret_mean": 0.0,
+      "deployer_prior_rug_rate": 0.0,
+      "deployer_cold_start": 0.0,
+      "lp_n_mints": -0.003078998152674447,
+      "lp_n_burns": -0.003051730661474241,
+      "lp_early_burn_frac": -0.0004394802708111743,
+      "lp_net_liq_proxy": 0.0006506875949296508,
+      "lp_owner_concentration": -0.0009669229131019888,
+      "holder_n_distinct": 0.007187717662032815,
+      "holder_growth_rate": 0.004739227244967146,
+      "holder_top_share": 0.0017093802471480908,
+      "holder_same_block_bundle_share": 0.003241397349997003,
+      "actor_score": 0.011664179100558563,
+      "genesis_score": 0.008378741024989854,
+      "combined_score": 0.01598381815718611
+    }
+  },
+  "passed": true,
+  "verdict": "PASS"
+}

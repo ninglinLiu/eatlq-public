@@ -1,0 +1,416 @@
+作者白皮书 2 外宣版
+
+ Agent务必注意，这份白皮书是原作者对外宣称的版本，跟我们的项目可能有实际偏差，需要理性思考辨别，不要把它当成我们已经完成的白皮书，或者说不要把它们当成我们自己项目的百分百对照白皮书！！！！！！！！！！！！！！！！！！！！！！
+
+Crypto•Mar 17, 2026LASZLO Project Whitepaper v2.0 — 实战修订版FNFranklin Nexus31 min read前言：从 v1 到 v2 — 战场反馈修正
+v1.0 白皮书是一份战前蓝图。它描述了一个理想化的系统：Ethereum Mainnet、Flashbots 私有中继、ClickHouse 数据仓库、完整的钱包画像引擎。
+v2.0 白皮书是一份战后报告。经过 6 周的实战开发与 Base L2 实盘测试，我们用真金白银验证了哪些假设成立、哪些假设需要修正，并据此重新校准了整套系统。
+关键变化一览：
+维度v1.0 蓝图v2.0 实战目标链Ethereum MainnetBase L2（OP Stack）MEV 防护Flashbots Bundle精确 EIP-1559 Gas 定价（单 Sequencer，无 tip 拍卖）蜜罐检测概念描述Quoter V2 模拟卖出（eth_call 零 Gas 验证）止盈止损概念描述Uniswap V3 slot0() 实时报价（每 2 秒链上查询）ML 模型合成数据 XGBoost双阶段模型（v1 合成 + v2 真实标注数据自动切换）日回撤保护手动 Kill Switch自动 10% 余额熔断（UTC 每日重置）数据管道newPendingTransactionseth_subscribe("logs") + Uniswap V3 Swap ABI 解码
+
+Part 1: 愿景、核心哲学与系统边界
+1.1 项目定义 (Executive Summary)
+LASZLO 是一个机构级、闭环式、低延迟的加密资产阿尔法（Alpha）终端与自动化交易系统。
+它不是什么：它不是一个被动的数据看板（Dashboard），不是另一个 Etherscan 浏览器，也不是一个仅仅用来"看盘"的玩具。
+它是什么：它是一套武器系统。它负责在毫秒级时间内完成从"链上噪音"中提取"智能信号"，并提供从"情报分析"到"安全执行"的一站式解决方案。
+核心目标：构建一套能够承载 $100M AUM（资产管理规模）逻辑的单兵作战系统。
+v2.0 状态：系统已在 Base L2 主网完成实盘验证。Rust Ingestor 实时解析 Uniswap V3 Swap 事件，Python 量化引擎生成信号，Rust Executor 执行链上交易，Position Manager 通过 slot0() 实时监控价格并自动止盈止损。
+1.2 核心痛点与解决方案 (Problem & Solution)
+维度当前市场痛点 (Retail Status Quo)LASZLO 解决方案 (Institutional Standard)数据质量噪音极大。满屏的 USDT/USDC 转账，无法区分巨鲸抄底还是左手倒右手。极度降噪。通过"黑名单机制"清洗基础路由代币（WETH/USDC），结合巨鲸 USD 阈值过滤无效数据。时效性高延迟。等待 Etherscan 刷新或 15 秒一次的轮询。毫秒级推流。基于 Rust 的 WebSocket 监听与 Redis Streams 分发，实测 Tick-to-Signal 延迟 < 20ms。决策闭环割裂。在 Nansen 看数据，在 TradingView 看 K 线，去 Uniswap 下单。一体化闭环。Ingestor → Strategy → Executor → Position Manager 全自动流水线。交易执行裸奔。直接广播到公共内存池，易被 MEV 机器人夹击。隐身执行。Base L2 精确 Gas 定价（maxPriorityFeePerGas = 1 wei），3% 滑点硬上限。止损管理手动。买完币就忘了，涨了不卖，跌了割肉。自动三重止损。Trailing Stop (5%)、Time Stop (30min)、Hard Stop (15%)，全部由链上实时价格驱动。
+1.3 设计哲学 (Core Philosophy)
+信噪比 > 数据量 (Signal over Noise)
+我们不追求"全网所有数据"。我们只关心"能赚钱的数据"。
+原则：如果一条数据不能辅助决策，它就不应该出现在屏幕上，甚至不应该进入数据库。
+v2.0 实践：黑名单机制在 Python 策略层和 Rust Ingestor 层双重过滤。WETH、USDC 等基础路由代币在进入特征计算之前就被丢弃，节省了 80%+ 的计算资源。
+慢即是快 (Slow is Smooth, Smooth is Fast)
+
+慢在架构设计：不急着写策略，先用 Rust + Redis 把地基打牢。
+快在交易执行：因为地基牢固，信号处理和下单速度将是极致的。
+
+v2.0 实践：我们在 Anvil 模拟环境中花了数周校准阈值、修复 MsgPack 序列化格式、调试 Redis Consumer Group 机制，才在实盘开出第一枪。这种"慢"让我们避免了在 Mainnet 上用真金白银调试代码。
+现实主义架构 (Pragmatic Architecture)
+
+折中方案：我们不盲目追求 Google 级别的 Kubernetes 集群。
+决策：在单机上使用 Docker Compose 编排 Rust (IO 密集) + Python (逻辑密集) + Redis (数据密集)。
+v2.0 修正：ClickHouse 在实时交易阶段被暂时禁用（OOM 风险），用 Redis Sorted Sets 承担实时特征存储，用 Dashcam CSV 承担离线分析。这是"现实主义"的典型体现——不需要的组件就关掉。
+
+1.4 系统边界 (System Boundaries)
+
+支持资产：Base L2（OP Stack）为主战场，架构预留 EVM 兼容链扩展接口。
+交易类型：专注于 Uniswap V3 链上现货 Swap。通过 exactInputSingle 路由执行，支持 3000/10000/500 三档费率池自动发现。
+用户规模：单租户（Single Tenant）系统，优化为个人或小团队极致性能。
+
+
+Part 2: 技术架构与基础设施 (Architecture & Infrastructure)
+2.1 架构总览：异构混合架构 (Hybrid Heterogeneous Architecture)
+LASZLO 采用 "Rust 外壳，Python 大脑，Redis 神经" 的设计模式。
+
+核心原则：IO 密集型任务交给 Rust，计算与逻辑密集型任务交给 Python，数据流转交给 Redis。
+部署模式：单机垂直扩展 (Single-Node Vertical Scaling)。通过 Docker Compose 编排，利用 Docker 内部网络 (laszlo-net, subnet 172.30.0.0/16) 实现容器间高速通信。
+内存管理：通过 .wslconfig 限制 WSL2 为 8GB + 4GB swap，各容器设定 deploy.resources.limits.memory 硬上限，避免 OOM 全面卡死。
+
+2.2 基础设施层级 (The Infrastructure Stack)
+Layer 1: 感知层 (The Interceptor) — Rust Ingestor
+角色：系统的"耳目"。实时监听 Base L2 链上所有 Uniswap V3 Swap 事件。
+核心组件：crates/ingestor/ — Rust Crate (2021 Edition)
+v2.0 实现细节：
+
+订阅方式：eth_subscribe("logs")，过滤 Uniswap V3 Swap 事件签名 Swap(address,address,int256,int256,uint160,uint128,int24)。
+ABI 解码：自定义 decode_int256() 处理有符号 256 位整数（amount0, amount1）。
+动态池发现：PoolCache 结构体通过 RPC 调用 token0()/token1()/decimals()/symbol() 自动发现新池子信息并缓存。
+USD 估值：estimate_usd_and_side() 函数根据已知代币价格表（TokenRegistry）估算每笔 Swap 的 USD 价值、方向（BUY/SELL）和价格。
+序列化：rmp_serde::to_vec_named(&tick) 序列化为 MsgPack Map（而非 Array），确保 Python 端能以字典形式反序列化。
+
+数据模型 — MarketTick (14 字段)：
+hljs ruststruct MarketTick {
+    timestamp: u64,
+    block_number: u64,
+    tx_hash: String,
+    log_index: u64,
+    pool_address: String,
+    token_address: String,
+    symbol: String,
+    wallet_address: String,
+    side: String,          // "BUY" | "SELL"
+    amount_usd: f64,
+    amount_raw: String,
+    price: f64,
+    event_type: String,    // "SWAP"
+    is_whale: bool,
+}
+
+Base L2 代币注册表：内置 11 种 Base 链核心代币（WETH, USDC, USDbC, DAI, cbETH, AERO, DEGEN, WBTC, BRETT, TOSHI, OX）的地址、精度和近似 USD 价格。
+Layer 2: 传输层 (The Synapse) — Redis Stack
+角色：系统的"神经中枢"。承担消息总线 + 实时特征存储双重职能。
+核心组件：Redis Stack (In-Memory)，限制 512MB。
+数据流定义 (Protocol Spec)：
+
+Stream 1: market_ticks (原始行情 — MsgPack Binary)
+
+Consumer Group A: archiver_group (归档，当前停用)
+Consumer Group B: strategy_group (量化引擎)
+
+
+Stream 2: signals (交易信号 — JSON)
+
+Consumer Group: execution_group (执行引擎)
+
+
+
+v2.0 新增 — Feature Store 热数据：
+
+fs:price:{symbol} — Sorted Set，按 timestamp 存储价格
+fs:buys:{symbol} / fs:sells:{symbol} — Sorted Set，按 timestamp 存储买卖事件
+fs:flow:{symbol} — Sorted Set，按 timestamp 存储有向 USD 流量
+fs:ticks:{symbol} — Sorted Set，按 timestamp 存储全部 tick
+自动 5 分钟滑动窗口（ZREMRANGEBYSCORE 清理过期数据）
+
+v2.0 新增 — 系统状态：
+
+SYSTEM_PANIC — 全局紧急停止开关（手动或自动触发）
+daily_start_balance / daily_date — 日内回撤追踪
+positions:{token_address} — Hash，存储持仓信息（入场 ETH 值、峰值、时间戳）
+
+Layer 3: 记忆层 (The Vault) — ClickHouse + PostgreSQL
+角色：系统的"大脑皮层"。
+v2.0 状态：
+
+ClickHouse (OLAP)：当前暂停启用。在 Phase 4.5 实时交易阶段，为了节省 WSL2 内存（8GB 硬限制），ClickHouse 和 Archiver 服务被注释。用 logs/dashcam.csv 替代离线分析需求。
+PostgreSQL (OLTP)：运行中。存储钱包画像（wallet_profiles 表）和系统配置。当前以默认值（win_rate_30d = 0.5, avg_roi = 0.0）提供基线，待真实数据积累后更新。
+
+优雅降级设计：Python database_api.py 对 ClickHouse 和 PostgreSQL 均做了 try...except 处理。任一组件不可用时，系统降级运行而非崩溃。
+Layer 4: 应用层 (The Brain & Hand) — Python + Rust
+角色：系统的"意识与执行"。
+核心组件：
+
+Strategy Engine (Python) — services/strategy/src/main.py：
+
+反序列化 MsgPack Tick → Feature Store 实时特征计算 → XGBoost 推理 → 融合层打分 → Kelly 仓位计算 → 发布 JSON 信号
+内置 Dashcam CSV 日志器，记录所有 final_score > 0.40 的候选信号
+
+
+Execution Engine (Rust) — crates/execution/：
+
+消费 JSON 信号 → Pre-trade 风控检查 → Uniswap V3 exactInputSingle 执行 → Position Manager 持仓追踪
+支持 Paper (Anvil) / Live (Base Mainnet) 双模式切换
+
+
+Position Manager (Rust) — 自动止盈止损子系统
+Dashboard (Streamlit) — 实时监控前端
+
+2.3 数据流全景 (The Life of a Tick) — v2.0 实测
+模拟 "一笔 Uniswap V3 Swap" 在 Base L2 上的完整生命周期：
+
+T+0ms: 链上发生 Swap 交易。
+T+2ms (Alchemy): WebSocket 推送 eth_subscription 日志。
+T+3ms (Rust Ingestor): 捕获 Log，ABI 解码 Swap 事件参数。
+T+4ms (Rust Ingestor): PoolCache 查找/发现池子信息。estimate_usd_and_side() 计算 USD 价值。
+T+5ms (Rust Ingestor): rmp_serde::to_vec_named 序列化为 MsgPack Map。
+T+6ms (Redis): XADD market_ticks * data {binary} 写入 Stream。
+T+8ms (Python Strategy): XREADGROUP 读取 Tick。msgpack.unpackb 反序列化。
+T+9ms (Python Strategy): FeatureStore.update() 更新 Redis Sorted Sets。
+T+10ms (Python Strategy): FeatureStore.compute() 计算 4 维特征向量：
+
+hljs python{
+    "price_velocity_5m": 0.23,    # net_flow / abs_flow (range [-1, +1])
+    "buy_pressure_ratio": 0.67,   # buys / (buys + sells)
+    "token_volatility_5m": 0.45,  # std(abs_flows) / mean(abs_flows) (capped at 2.0)
+    "activity_heat": 42.0,        # tick count in 5min window
+}
+
+
+T+12ms (Python Strategy): XGBoost predict_proba() 推理 → confidence 得分。
+T+13ms (Python Strategy): 融合层计算 final_score。
+T+14ms (Python Strategy): Kelly Criterion 动态仓位：position_size = BASE_CAPITAL * final_score * vol_adj。
+T+15ms (Python Strategy): 如果 final_score > 0.52，XADD signals * payload {JSON} 发布信号。
+T+16ms (Rust Executor): XREADGROUP 读取信号。
+T+17ms (Rust Executor): Pre-trade 检查：余额 → 流动性深度 → 蜜罐检测。
+T+20ms (Rust Executor): exactInputSingle 交易上链。
+T+2000ms (Base L2): 交易被 Sequencer 打包确认。
+T+2001ms (Position Manager): open_position() 记录持仓到 Redis。
+T+4000ms → ∞ (Position Manager): 每 2 秒通过 slot0() 查询实时价格，监控三重止损。
+
+2.4 基础设施清单 (Bill of Materials) — v2.0 实际部署
+Docker Compose 服务列表（infra/docker-compose.yml）：
+服务容器名内存限制IP状态redis-stacklaszlo-redis512M172.30.0.10运行中postgreslaszlo-postgres512M172.30.0.30运行中ingestorlaszlo-ingestor256M172.30.0.70运行中strategy_enginelaszlo-strategy1G172.30.0.40运行中rust_executorlaszlo-executor256M172.30.0.50运行中dashboardlaszlo-dashboard512M172.30.0.90运行中anvillaszlo-anvil1G172.30.0.60运行中（Paper 模式）clickhouselaszlo-clickhouse4G172.30.0.20暂停archiverlaszlo-archiver256M172.30.0.80暂停
+总内存占用：~3.3GB（峰值），在 WSL2 8GB 限制下稳定运行。
+
+Part 3: 量化引擎与信号系统 (Quant Engine & Signal System)
+3.1 核心理念：从确定性规则到概率模型
+LASZLO 的智能进化分为三个阶段：
+Phase 1: 合成数据启动 (Synthetic Bootstrap) — 已完成
+
+逻辑：用合成数据集（20,000 条）训练 XGBoost v1 模型，建立基线。
+特征：win_rate_30d, avg_roi, price_velocity_5m, buy_pressure_ratio, is_whale。
+局限：win_rate_30d 固定 0.5，avg_roi 固定 0.0。等于半随机猜测。
+产出：whale_sniper_v1.json — 提供初始打分能力，结合融合层权重生成信号。
+
+Phase 2: 真实数据校准 (Real-Data Calibration) — 进行中
+
+逻辑：用 Dashcam CSV 积累的 20,000+ 条真实链上信号数据，通过标注脚本查询历史价格变化，重训 XGBoost v2。
+特征：whale_val, momentum_val, activity_val, risk_val（融合层特征，直接预测盈利概率）。
+标注：scripts/label_dashcam.py — 对每条信号查询 5 分钟后的 Uniswap V3 pool 价格变化，标注 label=1（涨 > 1%）或 label=0。
+训练：scripts/retrain_model.py — 时间序列切分，最后 20% 为 holdout，只有准确率 > 55% 才部署。
+产出：whale_sniper_v2.json — 策略引擎自动检测并切换。
+
+Phase 3: 自适应进化 (Adaptive Evolution) — 规划中
+
+逻辑：自动化闭环。每周自动标注最近数据、重训模型、A/B 测试。
+技术栈：定时任务调度 + ClickHouse 历史数据 + 滚动验证。
+
+3.2 智能模块一：钱包画像引擎 (The Wallet Profiler)
+v2.0 状态：基础框架已部署，使用 PostgreSQL wallet_profiles 表。当前以默认值运行，画像数据积累中。
+标签体系设计（保持 v1.0 规划）：
+
+Smart Money (聪明钱)：历史上在 Token 涨幅前 10% 阶段买入的地址。
+Sniper (狙击手)：在开盘 0-3 区块内买入且未被 Rug 的地址。
+Diamond Hand (钻石手)：平均持仓时间 > 30 天的地址。
+Paper Hand (纸手)：一涨 10% 就跑的地址（反向指标）。
+
+v2.0 临时方案：在钱包画像数据尚不充分的过渡期，系统使用 USD 金额阈值（WHALE_USD_THRESH = $100,000）作为巨鲸判定的简化替代。
+3.3 智能模块二：特征工程工厂 (Feature Store)
+v2.0 实现：services/strategy/src/feature_store.py — 基于 Redis Sorted Sets 的实时滑动窗口特征计算。
+特征计算方法取值范围含义price_velocity_5mnet_flow / abs(total_flow)[-1.0, +1.0]5 分钟内买卖方向强度。+1 = 全部是买入，-1 = 全部是卖出。buy_pressure_ratiobuy_count / (buy_count + sell_count)[0.0, 1.0]5 分钟内主动买入占比。token_volatility_5mstd(abs_flows) / mean(abs_flows)，capped at 2.0[0.0, 2.0]交易量波动系数（CV）。高值 = 交易规模不稳定。activity_heattick_count in 5min window[0.0, ∞)原始活跃度，后续归一化到 [0, 1]（÷100）。
+关键设计决策：
+为什么不直接用价格计算动量？
+在 DEX 环境中，许多小市值代币没有稳定的 USD 定价来源（Ingestor 对非已知代币返回 price = 0）。我们选择用 净资金流方向 作为动量代理：如果一段时间内全部是买入流，动量 = +1.0，比任何价格导数都更可靠。
+3.4 信号融合层 (The Fusion Layer)
+v2.0 实现 — 双模式运行：
+模式 A: v1 模型 + 手动融合权重（当前默认）
+$$Final\_Score = (0.40 \times Whale) + (0.30 \times Momentum) + (0.20 \times Activity) - (0.10 \times Risk)$$
+
+Whale (40%)：XGBoost v1 置信度 × 巨鲸加成（1.3x）。
+Momentum (30%)：price_velocity_5m，取值 [-1, +1]。
+Activity (20%)：activity_heat / 100，归一化到 [0, 1]。
+Risk (10%)：负分项。volatility > 0.8 → 0.3 惩罚，> 0.4 → 0.1 惩罚。
+
+模式 B: v2 模型直接预测（当 whale_sniper_v2.json 存在时自动启用）
+$$Final\_Score = P(profitable \mid whale, momentum, activity, risk)$$
+v2 模型直接输出盈利概率，跳过手动权重。模型在真实标注数据上训练，自动学习最优特征权重。
+3.5 机器学习流水线 (The ML Loop)
+v2.0 完整实现：
+
+
+Data Collection (采集)：策略引擎将每个 final_score > 0.40 的候选信号记录到 logs/dashcam.csv（行车记录仪），包含 timestamp、token_address、final_score、whale_val、momentum_val、activity_val、risk_val、triggered_sniper 八列。
+
+
+Labeling (标注)：scripts/label_dashcam.py — 对每条记录通过 Alchemy RPC 查询 Uniswap V3 pool 的历史 slot0() 价格（信号时刻 vs 5 分钟后），标注实际涨跌。
+
+
+Training (训练)：scripts/retrain_model.py — XGBoost 二分类，时间序列切分（最旧 80% 训练，最新 20% 验证），只有 holdout 准确率 > 55% 才部署。
+
+
+Inference (推理)：策略引擎自动检测 v2 模型文件存在时切换推理路径。v1 → v2 无需重启。
+
+
+Monitoring (监控)：scripts/analyze_dashcam.py — 离线分析工具，生成分数分布直方图、特征均值统计、Top 10 猎物明细。
+
+
+
+Part 4: 交易执行与风控体系 (Execution & Risk Management)
+4.1 核心理念：Base L2 上的隐身执行
+v1.0 → v2.0 架构修正：
+v1.0 规划了 Flashbots 私有中继。实战中，我们选择 Base L2（OP Stack）作为主战场。Base 采用单个 Sequencer 排序，传统 Flashbots Bundle 机制不适用。
+替代 MEV 防护方案：
+
+精确 EIP-1559 Gas 定价：get_optimal_gas() 函数查询最新区块 baseFeePerGas，设置 maxFeePerGas = baseFee × 1.1（最小头部空间），maxPriorityFeePerGas = 1 wei（Base 单 Sequencer 无 tip 拍卖）。
+Gas 异常熔断：如果 baseFee > 5 gwei（Base 正常值 < 0.01 gwei），拒绝交易。
+滑点硬上限：MAX_SLIPPAGE_BPS = 300（3%），通过 Uniswap V3 的 amountOutMinimum 参数强制执行。
+
+4.2 执行架构：Rust 狙击手 (The Rust Sniper)
+组件：crates/execution/src/main.rs — Rust Execution Engine
+双模式运行：
+模式RPC URL私钥用途Paperhttp://anvil:8545 (Base Fork, Chain 8453)Anvil 测试账户模拟交易，零风险验证Livehttps://base-mainnet.g.alchemy.com/...真实私钥（.env）实盘交易，真金白银
+安全机制：
+
+私钥格式验证：必须为 64 个十六进制字符（32 字节），防止误将地址当作私钥。
+链 ID 校验：Live 模式下必须为 Base Mainnet (8453)，否则立即 bail!。
+余额检查：BUY 前查询 ETH 余额，不足则拒绝。
+WETH 自动解包：SELL 完成后自动调用 withdraw() 将 WETH 转为原生 ETH。
+
+工作流：
+
+监听：XREADGROUP GROUP execution_group sniper_instance_1 BLOCK 100 COUNT 10 STREAMS signals >。
+Pre-trade 检查：check_daily_drawdown() → check_liquidity_depth() → check_honeypot()。
+构建：build_exact_input_single() 生成 Uniswap V3 SwapRouter02 calldata。
+Gas 定价：get_optimal_gas() 设置精确的 EIP-1559 参数。
+执行：signer.send_transaction() 上链。
+持仓记录：position_manager.open_position() 写入 Redis。
+
+4.3 动态仓位管理 (Dynamic Position Sizing)
+v2.0 实现：Kelly Criterion 变体
+$$Position\_Size = Base\_Capital \times Final\_Score \times Volatility\_Adjustment$$
+
+Base_Capital：$25.0（匹配实际钱包余额，非理论值）。
+Final_Score：来自融合层或 v2 模型的概率输出。
+Volatility_Adjustment：max(0.3, 1.0 - token_volatility_5m × 0.5)。高波动代币自动降低仓位。
+
+实战校准：
+v1.0 规划中Base_Capital = $10,000。实战中钱包仅有 ~$25 ETH。我们将 Base_Capital 调整为实际余额，避免了"仓位比本金还大"的荒谬情况。这是从理论到实战的典型落差。
+4.4 自动风控卫士 (The Risk Guardian)
+Pre-Trade Checks (事前阻断)
+1. 蜜罐检测 (Honeypot Check) — crates/execution/src/risk.rs
+v1.0 仅检查 get_code() 是否为合约。v2.0 实现了真正的卖出模拟：
+
+调用 Uniswap V3 Quoter V2 (0x3d4e44Eb1374240CE5F1B871ab261CD16335B76a) 的 quoteExactInputSingle。
+模拟卖出 0.001 个代币 → WETH。
+如果所有费率池（3000/10000/500）的模拟均 revert 或返回 0 → 标记为蜜罐，拒绝买入。
+全部通过 eth_call 执行，零 Gas 消耗。
+
+2. 流动性深度 (Liquidity Depth)
+
+查询 V3 pool 的 liquidity() 函数获取 in-range 流动性。
+要求：liquidity_eth > trade_size_eth × 20。
+不满足则阻止交易（v2.0 修复了 v1.0 中"总是返回 true"的占位逻辑）。
+
+3. 日回撤熔断 (Daily Drawdown Circuit Breaker) — v2.0 新增
+
+每天 UTC 0:00 自动记录起始 ETH 余额到 Redis。
+每次交易前比对当前余额：如果 (start - current) / start > 10%，自动设置 SYSTEM_PANIC = true。
+系统立即停止所有买入，仅允许卖出。次日 UTC 0:00 自动重置。
+
+Post-Trade Management (事中管理) — Position Manager
+v2.0 实现：crates/execution/src/position_manager.rs — 带链上实时报价的自动止损系统。
+每 2 秒执行一次检查循环：
+
+查询代币余额：balanceOf(wallet) via eth_call。
+发现 V3 池：getPool(token, WETH, fee) via V3 Factory。
+获取实时价格：slot0() 返回 sqrtPriceX96，计算 WETH/token 汇率。
+计算持仓 ETH 价值：token_balance × price_in_weth。
+止损判定：
+
+止损类型条件触发动作Trailing Stop (移动止盈)从峰值回撤 > 5%，且当前盈利自动发 SELL 信号Time Stop (时间止损)持仓 > 30 分钟，且价格横盘（±2%）自动发 SELL 信号Hard Stop (硬止损)亏损 > 15%无条件自动发 SELL 信号
+4.5 系统级熔断 (System Circuit Breakers)
+
+Max Daily Drawdown (日内最大回撤)：ETH 余额下降 > 10% 时自动触发 SYSTEM_PANIC。
+Kill Switch (一键清仓)：Redis Key SYSTEM_PANIC = true。可通过前端按钮、脚本或日回撤机制自动触发。Executor 检测到后立即拒绝所有新信号。
+Gas 异常熔断：Base fee > 5 gwei 时自动拒绝交易（保护钱包不被异常高 Gas 消耗掏空）。
+
+
+Part 5: 实施路线图 (Implementation Roadmap)
+5.1 总体规划 — v2.0 实际进度
+阶段代号状态核心交付Phase 1Foundation (基石)已完成Docker Compose 编排，Redis/Postgres 部署，WSL2 内存限制，ClickHouse 暂停Phase 2The Eye (感知)已完成Rust Ingestor 实时解析 Base L2 Swap 事件，MsgPack Named 序列化，Redis Streams 数据管道Phase 3The Brain (大脑)已完成XGBoost v1 合成模型，Feature Store (Redis Sorted Sets)，融合层，Kelly 仓位，Dashcam CSVPhase 4The Hand (执行)已完成Uniswap V3 exactInputSingle 执行，Anvil Paper Trading，实盘验证（Base Mainnet）Phase 4.5Live Testing (实弹)已完成真实 BUY/SELL 交易执行，WETH 自动解包，余额检查，实盘发现并修复 14 个 bugPhase 5白皮书关键路径已完成Position Manager 实时报价，蜜罐 Quoter V2 检测，日回撤熔断，MEV Gas 保护，模型重训管线Phase 6Alpha Hunt (寻找 Alpha)进行中数据积累 3-5 天 → 标注 → 重训 v2 模型 → 验证胜率 > 55% → 重新实盘
+5.2 Phase 6 详细计划：Alpha Hunt
+Step 1: 数据积累（3-5 天）
+
+系统以 Paper 模式（LIVE_TRADING_MODE=false）24×7 运行。
+Ingestor 持续监听 Base L2 真实 Swap 事件。
+Strategy Engine 对所有 tick 进行特征计算和模型打分。
+Dashcam CSV 持续积累 final_score > 0.40 的候选信号。
+目标：积累 100,000 - 500,000 条带完整特征的真实数据。
+
+Step 2: 数据标注
+hljs bashpip install python-dotenv pandas requests
+python scripts/label_dashcam.py
+
+
+对每条 dashcam 记录查询 5 分钟后的链上价格变化。
+输出 logs/labeled_dataset.csv，包含 label 和 pct_change_5m 列。
+
+Step 3: 模型重训
+hljs bashpython scripts/retrain_model.py
+
+
+时间序列切分验证。
+只有 holdout 准确率 > 55% 才部署 whale_sniper_v2.json。
+策略引擎自动检测并切换到 v2 推理路径。
+
+Step 4: 重新实盘
+
+确认 v2 模型在 Anvil 上表现优于 v1。
+设置小额实盘资金（~$50 ETH）。
+LIVE_TRADING_MODE=true。
+监控日回撤熔断是否正常工作。
+
+5.3 长期路线图
+时间框架目标Month 2钱包画像引擎上线（从 dashcam 数据中回溯计算 wallet win_rate）Month 3ClickHouse 重新启用，Archiver 恢复历史数据归档Month 4多链扩展（Arbitrum/Optimism），共享 Feature Store 和模型Month 6资金规模扩展到 $10,000，自动化模型周训练循环
+5.4 资源需求 (Resource Requirements) — v2.0 实际
+开发环境（当前）：
+
+Windows 11 + WSL2，8GB 内存限制，4 CPU 核心。
+Docker Desktop，8 个容器并行运行。
+存储：~20GB（Docker 镜像 + Redis 数据 + 日志）。
+
+生产环境（推荐）：
+
+AWS EC2 c6i.2xlarge (8 vCPU, 16GB RAM) 或同等配置。
+存储：500GB NVMe SSD（ClickHouse 启用后）。
+Alchemy Growth Plan（WebSocket + Archive 节点访问）。
+
+
+Part 6: 实战复盘与教训 (Lessons Learned)
+6.1 MsgPack 的陷阱
+问题：Rust 的 rmp_serde::to_vec() 将 struct 序列化为 MsgPack Array，Python 端期望 Map（字典）。
+症状：'list' object has no attribute 'items' — 策略引擎无法解析 tick 数据，整个管道静默失败。
+修复：改用 rmp_serde::to_vec_named()，同时 Python 端增加 list/dict 双模式兼容。
+教训：跨语言序列化必须在联调阶段立即验证格式，不能假设"它应该能工作"。
+6.2 特征值爆炸
+问题：price_velocity_5m 从 token 原始数量推导"价格"，导致 DEGEN 等小市值代币的"价格"为天文数字（1e15），让动量特征失去意义。
+修复：放弃价格推导，改用净资金流方向（net_flow / abs_flow，范围 [-1, +1]）作为动量代理。这在数学上更稳定，且不依赖准确的 USD 定价。
+教训：特征工程不能照搬传统金融的"价格涨跌幅"思路。DEX 环境中，资金流方向比价格本身更可靠。
+6.3 占位符的致命性
+问题：Position Manager 中 let current_price = entry_price; 看似无害的占位符，导致止盈止损永远不会触发。买了代币就永远不会自动卖出。
+修复：实现 slot0() 实时链上价格查询。
+教训：TODO 注释中的占位符如果涉及资金安全，必须在上线前强制解决。应该用 todo!() 宏让编译器强制报错。
+6.4 Base L2 vs Ethereum Mainnet
+选择 Base 的原因：
+
+Gas 费极低（< $0.01/笔），适合高频小额交易。
+Uniswap V3 生态成熟，流动性充足。
+2 秒出块，交易确认快。
+单 Sequencer 排序，MEV 场景相对简单。
+
+权衡：
+
+Flashbots 不可用（但精确 Gas 定价提供了替代保护）。
+部分代币流动性不如 Mainnet（但足够测试和小规模交易）。
+
+
+结语 (Conclusion)
+v2.0 不再是一份蓝图，而是一份经过实弹验证的作战手册。
+我们在 Base L2 上完成了从"链上噪音"到"执行交易"的完整闭环。系统能够在毫秒内捕获 Uniswap V3 Swap 事件、计算实时特征、生成信号、执行交易、并自动监控止盈止损。
+但我们也清醒地认识到：当前的模型还不够聪明。它基于合成数据训练，用硬编码的融合权重打分。这是 Phase 6 要解决的核心问题——用真实链上数据重训模型，让 XGBoost 自己学习什么样的信号值得开枪。
+系统已经就位。弹药已经上膛。我们需要的，只是一个足够聪明的瞄准镜。
+这就是 Phase 6 — Alpha Hunt 的使命。
+
+《LASZLO 技术白皮书 v2.0》— 实战修订版，2026 年 3 月 17 日。

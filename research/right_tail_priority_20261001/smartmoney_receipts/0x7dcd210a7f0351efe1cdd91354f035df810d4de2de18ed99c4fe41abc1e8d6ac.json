@@ -1,0 +1,44 @@
+{
+  "after_snapshot": true,
+  "block_number": 51620750,
+  "cash_reconciliation": "INTERNAL_INDEX_INCOMPLETE",
+  "index_complete": false,
+  "native_net_raw": "-101000000000000000",
+  "quote": "ETH",
+  "quote_net_raw": "-101000000000000000",
+  "receipt_evidence": {
+    "http_status": 200,
+    "key": "ff39edf0bb72415e6d31f2824430f9a2e34abec49ef55020503d8803238b6103",
+    "rpc_error": null
+  },
+  "receipt_from_matches_wallet": true,
+  "receipt_status": "CONFIRMED_SUCCESS",
+  "receipt_token_net_matches_index": true,
+  "receipt_token_net_raw": "60829841180758386313358534",
+  "side": "buy",
+  "source_fee_raw": "8809319974199",
+  "source_fee_receipt_raw": "8809319974199",
+  "status": "SINGLE_TARGET_OPPOSITE_ACCOUNT_CASH",
+  "swap_logs": [
+    {
+      "data": "0xfffffffffffffffffffffffffffffffffffffffffffffffffea04806473c80000000000000000000000000000000000000000000003251384c4a246ffe056cc60000000000000000000000000000000000005dd634baab0a6cad67ad43e3b31300000000000000000000000000000000000000000000084764d55370d3a3380f00000000000000000000000000000000000000000000000000000000000314100000000000000000000000000000000000000000000000000000000000000000",
+      "kind": "V4",
+      "log_index": 28,
+      "pool": "0x498581ff718922c3f8e6a244956af099b2652b2b",
+      "topics": [
+        "0x40e9cecb9f5f1f1c5b9c97dec2917b7ee92e57ba5563708daca94dd84ad7112f",
+        "0x4b765be9b81d9a7fa87d32fd87a99a80ac4a56362892fe2f12f4d4a17dfde4b4",
+        "0x000000000000000000000000c3ace43169bbf51752b1603067f91ef60f8a662a"
+      ]
+    }
+  ],
+  "timestamp": 1790030847.0,
+  "token": "0xb20000000000000000000075c458c031755df501",
+  "token_net_raw": "60829841180758386313358534",
+  "token_nets": {
+    "0xb20000000000000000000075c458c031755df501": "60829841180758386313358534"
+  },
+  "tx_hash": "0x7dcd210a7f0351efe1cdd91354f035df810d4de2de18ed99c4fe41abc1e8d6ac",
+  "validation_layer": "ACCOUNT_RECEIPT_AND_LOGS; PROTOCOL/ROUTE MUST BE VERIFIED SEPARATELY",
+  "wallet": "0x347ffc6db9acc54ac2019795173b9599e8b82bd9"
+}

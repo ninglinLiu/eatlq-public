@@ -1,0 +1,412 @@
+{
+  "blocked": {
+    "snapshot": {
+      "clickhouse_active_merges": 0,
+      "clickhouse_active_queries_excl_self": 0,
+      "containers": {
+        "eatlq-archiver-1": {
+          "restart_count": 0,
+          "restart_growth": false,
+          "state": "running"
+        },
+        "eatlq-clickhouse-1": {
+          "restart_count": 0,
+          "restart_growth": false,
+          "state": "running"
+        },
+        "eatlq-executor-1": {
+          "restart_count": 0,
+          "restart_growth": false,
+          "state": "running"
+        },
+        "eatlq-ingestor-1": {
+          "restart_count": 0,
+          "restart_growth": false,
+          "state": "running"
+        },
+        "eatlq-postgres-1": {
+          "restart_count": 0,
+          "restart_growth": false,
+          "state": "running"
+        },
+        "eatlq-redis-1": {
+          "restart_count": 0,
+          "restart_growth": false,
+          "state": "running"
+        },
+        "eatlq-signal-bridge-1": {
+          "restart_count": 0,
+          "restart_growth": false,
+          "state": "running"
+        },
+        "eatlq-swap-poller-1": {
+          "restart_count": 0,
+          "restart_growth": false,
+          "state": "running"
+        }
+      },
+      "disk_free_bytes": 115791122432,
+      "executor_pending": 0,
+      "load_1m": 12.86,
+      "mem_available_kb": 17169792,
+      "notes": [],
+      "nproc": 8,
+      "swap_used_kb": 2237724,
+      "timestamp_utc": "2026-07-17T14:11:32Z",
+      "unknown_fields": []
+    },
+    "status": "BLOCKED_LIVE_PRIORITY",
+    "triggers": [
+      "load1=12.86>limit=6.0"
+    ]
+  },
+  "execution_performed": false,
+  "plans": [
+    {
+      "database_filter": "eatlq",
+      "execution_authorized": false,
+      "expected_columns": [
+        "database",
+        "table",
+        "name",
+        "type",
+        "position",
+        "default_kind",
+        "default_expression",
+        "is_in_partition_key",
+        "is_in_sorting_key",
+        "is_in_primary_key",
+        "is_in_sampling_key"
+      ],
+      "limit": 5000,
+      "plan_fields": {
+        "database_filter": "eatlq",
+        "execution_authorized": false,
+        "explicit_columns": [
+          "database",
+          "table",
+          "name",
+          "type",
+          "position",
+          "default_kind",
+          "default_expression",
+          "is_in_partition_key",
+          "is_in_sorting_key",
+          "is_in_primary_key",
+          "is_in_sampling_key"
+        ],
+        "limit": 5000,
+        "max_bytes_to_read": 4194304,
+        "max_execution_time_sec": 3,
+        "max_result_bytes": 2097152,
+        "max_result_rows": 5000,
+        "max_threads": 1,
+        "purpose": "list_app_column_schema_metadata",
+        "query_id": "q_app_columns",
+        "readonly": 2,
+        "system_table": "system.columns",
+        "table_name_filter": null
+      },
+      "purpose": "list_app_column_schema_metadata",
+      "query_hash": "07ce1559f178c4f250e4ffce855237b856e0ebe2496c4be39ab906f876f6c069",
+      "query_id": "q_app_columns",
+      "settings": {
+        "max_bytes_to_read": 4194304,
+        "max_execution_time": 3,
+        "max_result_bytes": 2097152,
+        "max_result_rows": 5000,
+        "max_threads": 1,
+        "readonly": 2
+      },
+      "sql": "SELECT database, table, name, type, position, default_kind, default_expression, is_in_partition_key, is_in_sorting_key, is_in_primary_key, is_in_sampling_key FROM system.columns WHERE database = 'eatlq' LIMIT 5000",
+      "system_table": "system.columns",
+      "table_name_filter": null
+    },
+    {
+      "database_filter": "eatlq",
+      "execution_authorized": false,
+      "expected_columns": [
+        "name",
+        "engine"
+      ],
+      "limit": 10,
+      "plan_fields": {
+        "database_filter": "eatlq",
+        "execution_authorized": false,
+        "explicit_columns": [
+          "name",
+          "engine"
+        ],
+        "limit": 10,
+        "max_bytes_to_read": 4194304,
+        "max_execution_time_sec": 3,
+        "max_result_bytes": 2097152,
+        "max_result_rows": 5000,
+        "max_threads": 1,
+        "purpose": "confirm_app_database_exists",
+        "query_id": "q_app_databases",
+        "readonly": 2,
+        "system_table": "system.databases",
+        "table_name_filter": null
+      },
+      "purpose": "confirm_app_database_exists",
+      "query_hash": "e1adf70486a21b4cdd99d2b33888e9ec5cba9d1aad6aad256aa26d2aeccdf9a0",
+      "query_id": "q_app_databases",
+      "settings": {
+        "max_bytes_to_read": 4194304,
+        "max_execution_time": 3,
+        "max_result_bytes": 2097152,
+        "max_result_rows": 5000,
+        "max_threads": 1,
+        "readonly": 2
+      },
+      "sql": "SELECT name, engine FROM system.databases WHERE name = 'eatlq' LIMIT 10",
+      "system_table": "system.databases",
+      "table_name_filter": null
+    },
+    {
+      "database_filter": "eatlq",
+      "execution_authorized": false,
+      "expected_columns": [
+        "database",
+        "name",
+        "engine",
+        "partition_key",
+        "sorting_key",
+        "primary_key",
+        "sampling_key",
+        "storage_policy"
+      ],
+      "limit": 5000,
+      "plan_fields": {
+        "database_filter": "eatlq",
+        "execution_authorized": false,
+        "explicit_columns": [
+          "database",
+          "name",
+          "engine",
+          "partition_key",
+          "sorting_key",
+          "primary_key",
+          "sampling_key",
+          "storage_policy"
+        ],
+        "limit": 5000,
+        "max_bytes_to_read": 4194304,
+        "max_execution_time_sec": 3,
+        "max_result_bytes": 2097152,
+        "max_result_rows": 5000,
+        "max_threads": 1,
+        "purpose": "list_app_table_schema_metadata",
+        "query_id": "q_app_tables",
+        "readonly": 2,
+        "system_table": "system.tables",
+        "table_name_filter": null
+      },
+      "purpose": "list_app_table_schema_metadata",
+      "query_hash": "b45902129ef3b895d271bcb4bd64a90ea6a62774a4011733710c29999d66b751",
+      "query_id": "q_app_tables",
+      "settings": {
+        "max_bytes_to_read": 4194304,
+        "max_execution_time": 3,
+        "max_result_bytes": 2097152,
+        "max_result_rows": 5000,
+        "max_threads": 1,
+        "readonly": 2
+      },
+      "sql": "SELECT database, name, engine, partition_key, sorting_key, primary_key, sampling_key, storage_policy FROM system.tables WHERE database = 'eatlq' LIMIT 5000",
+      "system_table": "system.tables",
+      "table_name_filter": null
+    },
+    {
+      "database_filter": null,
+      "execution_authorized": false,
+      "expected_columns": [
+        "database",
+        "table",
+        "elapsed",
+        "progress",
+        "num_parts"
+      ],
+      "limit": 100,
+      "plan_fields": {
+        "database_filter": null,
+        "execution_authorized": false,
+        "explicit_columns": [
+          "database",
+          "table",
+          "elapsed",
+          "progress",
+          "num_parts"
+        ],
+        "limit": 100,
+        "max_bytes_to_read": 4194304,
+        "max_execution_time_sec": 3,
+        "max_result_bytes": 2097152,
+        "max_result_rows": 5000,
+        "max_threads": 1,
+        "purpose": "health_active_merges",
+        "query_id": "q_health_merges",
+        "readonly": 2,
+        "system_table": "system.merges",
+        "table_name_filter": null
+      },
+      "purpose": "health_active_merges",
+      "query_hash": "ce8edc0e0adf2c88b61d66d7ba655f3e7525192483672af32214bd020a0d9971",
+      "query_id": "q_health_merges",
+      "settings": {
+        "max_bytes_to_read": 4194304,
+        "max_execution_time": 3,
+        "max_result_bytes": 2097152,
+        "max_result_rows": 5000,
+        "max_threads": 1,
+        "readonly": 2
+      },
+      "sql": "SELECT database, table, elapsed, progress, num_parts FROM system.merges LIMIT 100",
+      "system_table": "system.merges",
+      "table_name_filter": null
+    },
+    {
+      "database_filter": null,
+      "execution_authorized": false,
+      "expected_columns": [
+        "query_id",
+        "elapsed",
+        "read_rows",
+        "memory_usage"
+      ],
+      "limit": 100,
+      "plan_fields": {
+        "database_filter": null,
+        "execution_authorized": false,
+        "explicit_columns": [
+          "query_id",
+          "elapsed",
+          "read_rows",
+          "memory_usage"
+        ],
+        "limit": 100,
+        "max_bytes_to_read": 4194304,
+        "max_execution_time_sec": 3,
+        "max_result_bytes": 2097152,
+        "max_result_rows": 5000,
+        "max_threads": 1,
+        "purpose": "health_active_queries",
+        "query_id": "q_health_processes",
+        "readonly": 2,
+        "system_table": "system.processes",
+        "table_name_filter": null
+      },
+      "purpose": "health_active_queries",
+      "query_hash": "144fdf17a8be2f6e07c9315bc7905d2edb20ed4ff96ebc42ccde8e9626155e71",
+      "query_id": "q_health_processes",
+      "settings": {
+        "max_bytes_to_read": 4194304,
+        "max_execution_time": 3,
+        "max_result_bytes": 2097152,
+        "max_result_rows": 5000,
+        "max_threads": 1,
+        "readonly": 2
+      },
+      "sql": "SELECT query_id, elapsed, read_rows, memory_usage FROM system.processes LIMIT 100",
+      "system_table": "system.processes",
+      "table_name_filter": null
+    },
+    {
+      "database_filter": "system",
+      "execution_authorized": false,
+      "expected_columns": [
+        "database",
+        "table",
+        "name",
+        "type",
+        "position"
+      ],
+      "limit": 200,
+      "plan_fields": {
+        "database_filter": "system",
+        "execution_authorized": false,
+        "explicit_columns": [
+          "database",
+          "table",
+          "name",
+          "type",
+          "position"
+        ],
+        "limit": 200,
+        "max_bytes_to_read": 4194304,
+        "max_execution_time_sec": 3,
+        "max_result_bytes": 2097152,
+        "max_result_rows": 5000,
+        "max_threads": 1,
+        "purpose": "introspect_system_columns_columns",
+        "query_id": "q_sys_columns_columns",
+        "readonly": 2,
+        "system_table": "system.columns",
+        "table_name_filter": "columns"
+      },
+      "purpose": "introspect_system_columns_columns",
+      "query_hash": "262ba7d6060b2922c35b40fe4e532f3b4dab5ea1afdbb9d291c05e2cefef5186",
+      "query_id": "q_sys_columns_columns",
+      "settings": {
+        "max_bytes_to_read": 4194304,
+        "max_execution_time": 3,
+        "max_result_bytes": 2097152,
+        "max_result_rows": 5000,
+        "max_threads": 1,
+        "readonly": 2
+      },
+      "sql": "SELECT database, table, name, type, position FROM system.columns WHERE database = 'system' AND table = 'columns' LIMIT 200",
+      "system_table": "system.columns",
+      "table_name_filter": "columns"
+    },
+    {
+      "database_filter": "system",
+      "execution_authorized": false,
+      "expected_columns": [
+        "database",
+        "table",
+        "name",
+        "type",
+        "position"
+      ],
+      "limit": 200,
+      "plan_fields": {
+        "database_filter": "system",
+        "execution_authorized": false,
+        "explicit_columns": [
+          "database",
+          "table",
+          "name",
+          "type",
+          "position"
+        ],
+        "limit": 200,
+        "max_bytes_to_read": 4194304,
+        "max_execution_time_sec": 3,
+        "max_result_bytes": 2097152,
+        "max_result_rows": 5000,
+        "max_threads": 1,
+        "purpose": "introspect_system_tables_columns",
+        "query_id": "q_sys_tables_columns",
+        "readonly": 2,
+        "system_table": "system.columns",
+        "table_name_filter": "tables"
+      },
+      "purpose": "introspect_system_tables_columns",
+      "query_hash": "bea5f5dbe52386fab5259e7e22e3afb171897d68acc589393c23e8ccccae9b2c",
+      "query_id": "q_sys_tables_columns",
+      "settings": {
+        "max_bytes_to_read": 4194304,
+        "max_execution_time": 3,
+        "max_result_bytes": 2097152,
+        "max_result_rows": 5000,
+        "max_threads": 1,
+        "readonly": 2
+      },
+      "sql": "SELECT database, table, name, type, position FROM system.columns WHERE database = 'system' AND table = 'tables' LIMIT 200",
+      "system_table": "system.columns",
+      "table_name_filter": "tables"
+    }
+  ]
+}

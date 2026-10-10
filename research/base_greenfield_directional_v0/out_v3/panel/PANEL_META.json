@@ -1,0 +1,21 @@
+{
+  "created_utc": "2026-07-20T11:05:58Z",
+  "n_rows": 2601,
+  "n_formal": 2057,
+  "n_neg_control": 544,
+  "source_panel_sha256": "3831fabe5b0bcf52726803d88456ec6589fb731add4a835143524346a55a01f9",
+  "source_swaps_sha256": "4e1a0f26efedeb2c54bb03d7b0e9775381075a8d5f04486ff11346b87d339ff8",
+  "split_counts": {
+    "DEV": 1560,
+    "LABEL_DESIGN": 520,
+    "UNTOUCHED": 261,
+    "INTERNAL_HOLDOUT": 260
+  },
+  "bucket_counts": {
+    "15-60m_NEGATIVE_CONTROL": 544,
+    "1-6h": 527,
+    "6-24h": 510,
+    "1-3d": 510,
+    "3-7d": 510
+  }
+}

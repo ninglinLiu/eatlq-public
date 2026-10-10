@@ -1,0 +1,16 @@
+{
+  "hypothesis_id": "H_NEGCTRL_AVOID_TRANSFER",
+  "n_oof": 1101,
+  "n_selected": 368,
+  "feature_cols": [
+    "early_ret",
+    "pre_vol",
+    "liq_drawdown",
+    "flow_persist_score",
+    "buys_10m",
+    "sells_10m",
+    "part_concentration",
+    "mom_h2"
+  ],
+  "n_negctrl_train_pool": 446
+}

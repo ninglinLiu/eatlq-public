@@ -1,0 +1,129 @@
+{
+  "after_snapshot_classification": {
+    "FAILED_TRANSACTION": 43,
+    "UNRESOLVED_MULTIASSET_OR_NO_CASH": 1049,
+    "buy": 441,
+    "sell": 56
+  },
+  "after_snapshot_nonown_transfer_tx_pairs": 829,
+  "after_snapshot_wallet_transfer_tx_pairs": 1768,
+  "base_frozen_wallets": 12,
+  "biases": [
+    "one supplier, capped ranked category snapshots, not all profitable wallets",
+    "12 of 295 saved Base 7d addresses and no BSC activity in 441 candidates",
+    "retained Base top-12 rows are 10 kol and 2 smart_degen; not a broad Smart Money label census",
+    "one ranking window and about two weeks of subsequent trades, not independent regimes",
+    "own-sent transactions only; delegated/AA/non-own activity not classified here",
+    "single target and ETH/WETH/USDC opposite cash; multiasset/other quotes not classified",
+    "repeated same-wallet/token signals are not independent opportunities",
+    "largest historical absolute supplier PnL is a selection hypothesis, not copyability proof"
+  ],
+  "bsc_candidate_trades_in_this_manifest": 0,
+  "candidate_end_utc": "2026-09-30T22:02:47+00:00",
+  "candidate_index_complete": {
+    "False": 166,
+    "True": 275
+  },
+  "candidate_start_utc": "2026-09-17T12:47:19+00:00",
+  "frozen_wallets": 24,
+  "generated_at": "2026-10-01T13:00:15.449928+00:00",
+  "initial_retained_source_tag_counts": {
+    "base": {
+      "kol": 10,
+      "smart_degen": 2
+    },
+    "bsc": {
+      "kol": 8,
+      "smart_degen": 4
+    }
+  },
+  "n_after_snapshot_own_txs": 1589,
+  "n_buy_candidates": 441,
+  "n_candidate_tokens": 187,
+  "n_candidate_wallets": 11,
+  "n_indexed_own_txs": 2754,
+  "n_pilot": 22,
+  "pilot_rule": "first two distinct-token buys per active wallet; NOT a profit eligibility gate",
+  "saved_source_coverage": [
+    {
+      "chain": "base",
+      "initial_fraction_of_saved_addresses": null,
+      "n_initial_frozen": 0,
+      "saved_rows": 300,
+      "saved_tags": {
+        "fresh_wallet": 100,
+        "kol": 100,
+        "smart_degen": 100
+      },
+      "unique_addresses": 293,
+      "window": "1d"
+    },
+    {
+      "chain": "base",
+      "initial_fraction_of_saved_addresses": null,
+      "n_initial_frozen": 0,
+      "saved_rows": 300,
+      "saved_tags": {
+        "fresh_wallet": 100,
+        "kol": 100,
+        "smart_degen": 100
+      },
+      "unique_addresses": 291,
+      "window": "30d"
+    },
+    {
+      "chain": "base",
+      "initial_fraction_of_saved_addresses": 0.04067796610169491,
+      "n_initial_frozen": 12,
+      "saved_rows": 300,
+      "saved_tags": {
+        "fresh_wallet": 100,
+        "kol": 100,
+        "smart_degen": 100
+      },
+      "unique_addresses": 295,
+      "window": "7d"
+    },
+    {
+      "chain": "bsc",
+      "initial_fraction_of_saved_addresses": null,
+      "n_initial_frozen": 0,
+      "saved_rows": 255,
+      "saved_tags": {
+        "fresh_wallet": 55,
+        "kol": 100,
+        "smart_degen": 100
+      },
+      "unique_addresses": 247,
+      "window": "1d"
+    },
+    {
+      "chain": "bsc",
+      "initial_fraction_of_saved_addresses": null,
+      "n_initial_frozen": 0,
+      "saved_rows": 300,
+      "saved_tags": {
+        "fresh_wallet": 100,
+        "kol": 100,
+        "smart_degen": 100
+      },
+      "unique_addresses": 287,
+      "window": "30d"
+    },
+    {
+      "chain": "bsc",
+      "initial_fraction_of_saved_addresses": 0.041237113402061855,
+      "n_initial_frozen": 12,
+      "saved_rows": 300,
+      "saved_tags": {
+        "fresh_wallet": 100,
+        "kol": 100,
+        "smart_degen": 100
+      },
+      "unique_addresses": 291,
+      "window": "7d"
+    }
+  ],
+  "tag_count_note": "tag on retained deduplicated record; not independently validated economic skill or exclusive identity",
+  "total_saved_spot_unique_chain_addresses": 910
+}

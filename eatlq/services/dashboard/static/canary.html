@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EATLQ · Canary (fee=100 实盘前向)</title>
+<style>
+  :root{--bg:#0b0e14;--panel:#141925;--line:#222a3a;--mut:#7d8aa3;--fg:#e6edf6;
+        --grn:#33d17a;--red:#ff5c66;--amb:#ffb02e;--blu:#4aa3ff}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 -apple-system,Segoe UI,Roboto,"PingFang SC",sans-serif}
+  .wrap{max-width:900px;margin:0 auto;padding:18px}
+  h1{font-size:18px;margin:0 0 4px}
+  .sub{color:var(--mut);font-size:12px;margin-bottom:14px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media(max-width:680px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+  .card h2{font-size:13px;margin:0 0 10px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em}
+  .row{display:flex;justify-content:space-between;padding:3px 0;border-bottom:1px dashed #1c2333}
+  .row:last-child{border-bottom:0}
+  .k{color:var(--mut)} .v{font-variant-numeric:tabular-nums}
+  .big{font-size:24px;font-weight:700}
+  .pill{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:600}
+  .ok{background:rgba(51,209,122,.15);color:var(--grn)}
+  .bad{background:rgba(255,92,102,.15);color:var(--red)}
+  .warn{background:rgba(255,176,46,.15);color:var(--amb)}
+  .full{grid-column:1/-1}
+  ul{margin:6px 0 0;padding-left:18px} li{margin:4px 0}
+  .head{background:linear-gradient(90deg,rgba(74,163,255,.12),transparent);border-left:3px solid var(--blu);padding:10px 12px;border-radius:8px;margin-bottom:8px}
+  .ev{font-size:13px;padding:6px 0;border-bottom:1px solid #1c2333}
+  code{color:var(--blu)} .mut{color:var(--mut);font-size:12px}
+  .foot{color:var(--mut);font-size:11px;margin-top:14px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>🎣 Canary — fee=100 实盘前向验证</h1>
+  <div class="sub" id="updated">加载中…</div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>当下情况</h2>
+      <div class="row"><span class="k">循环</span><span class="v" id="loop">—</span></div>
+      <div class="row"><span class="k">风控</span><span class="v" id="halt">—</span></div>
+      <div class="row"><span class="k">成交</span><span class="v" id="trades">—</span></div>
+      <div class="row"><span class="k">投入</span><span class="v" id="deployed">—</span></div>
+      <div class="row"><span class="k">持仓</span><span class="v" id="open">—</span></div>
+      <div class="row"><span class="k">已实现盈亏</span><span class="v big" id="pnl">—</span></div>
+    </div>
+    <div class="card">
+      <h2>探测器漏斗</h2>
+      <div class="row"><span class="k">最近扫描池</span><span class="v" id="rows">—</span></div>
+      <div class="row"><span class="k">fee=100 出现</span><span class="v" id="fee100">—</span></div>
+      <div class="row"><span class="k">CLEAN 候选</span><span class="v" id="clean">—</span></div>
+      <div class="row"><span class="k">最后扫描</span><span class="v" id="lastscan">—</span></div>
+      <div class="mut" id="rejects" style="margin-top:8px"></div>
+    </div>
+
+    <div class="card full">
+      <h2>持仓明细</h2>
+      <div id="positions" class="mut">无</div>
+    </div>
+
+    <div class="card full">
+      <h2>🧭 总体情况（不要忽视）</h2>
+      <div class="head"><b id="headline">—</b><div class="mut" id="regime"></div></div>
+      <ul id="bullets"></ul>
+      <div class="mut" style="margin-top:8px"><b>当前策略：</b><span id="strategy"></span></div>
+    </div>
+
+    <div class="card full">
+      <h2>最近成交事件</h2>
+      <div id="events" class="mut">暂无成交（fee=100 onset 稀有 ~1/天，长时间无信号属正常）</div>
+    </div>
+  </div>
+  <div class="foot">每 15 秒自动刷新 · 数据源 /api/canary</div>
+</div>
+
+<script>
+function fmtPnl(v){const n=Number(v||0);const s=n>=0?'+':'';return s+n.toFixed(4)+' USD';}
+function pill(txt,cls){return '<span class="pill '+cls+'">'+txt+'</span>';}
+async function load(){
+  let d;
+  try{ d=await (await fetch('/api/canary',{cache:'no-store'})).json(); }
+  catch(e){ document.getElementById('updated').textContent='无法获取数据'; return; }
+  const st=d.state||{}, det=d.detector||{}, ov=d.overall||{}, caps=st.caps||{};
+  document.getElementById('updated').textContent='更新：'+((st.ts||'').slice(0,19).replace('T',' '))+' UTC';
+  document.getElementById('loop').innerHTML = d.loop_alive?pill('🟢 运行中','ok'):pill('🔴 已停','bad');
+  document.getElementById('halt').innerHTML = st.halted?pill('⛔ 已熔断','bad'):pill('✅ 未熔断','ok');
+  document.getElementById('trades').textContent=(st.trades_done??'—')+' / '+(caps.max_trades??'?');
+  document.getElementById('deployed').textContent='$'+(Number(st.deployed_usd||0).toFixed(1))+' / $'+(caps.total_usd??'?');
+  document.getElementById('open').textContent=(st.open_count??0)+' / '+(caps.max_concurrent??'?');
+  const pnlEl=document.getElementById('pnl');const p=Number(st.realized_pnl_usd||0);
+  pnlEl.textContent=fmtPnl(p);pnlEl.style.color=p>=0?'var(--grn)':'var(--red)';
+  document.getElementById('rows').textContent=det.rows_recent??'—';
+  document.getElementById('fee100').textContent=det.fee100_seen??'—';
+  document.getElementById('clean').textContent=det.clean_total??'—';
+  document.getElementById('lastscan').textContent=(det.last_scan||'—').slice(0,16).replace('T',' ');
+  const rej=det.top_rejects||{};
+  document.getElementById('rejects').textContent='主要拒绝：'+(Object.entries(rej).map(([k,v])=>k+':'+v).join(' · ')||'—');
+  // positions
+  const pos=st.open||[];
+  document.getElementById('positions').innerHTML = pos.length? pos.map(o=>
+    '• <code>'+(o.pool||'').slice(0,20)+'…</code> $'+o.size_usd+' · 还剩 '+o.hold_left_min+' min').join('<br>') : '无';
+  // overall
+  document.getElementById('headline').textContent=ov.headline||'—';
+  document.getElementById('regime').textContent=ov.regime||'';
+  document.getElementById('bullets').innerHTML=(ov.bullets||[]).map(b=>'<li>'+b+'</li>').join('');
+  document.getElementById('strategy').textContent=ov.strategy||'';
+  // events
+  const ev=d.events||[];
+  document.getElementById('events').innerHTML = ev.length? ev.map(e=>{
+    const isSell=(e.action||'')==='SELL';const pnl=isSell?(' · PnL '+fmtPnl(e.realized_pnl_usd)):'';
+    return '<div class="ev">'+(e.ts||'').slice(0,19).replace('T',' ')+' <b>'+(e.action||'')+'</b> <code>'+
+      (e.pool||'').slice(0,16)+'…</code> $'+e.size_usd+pnl+'</div>';
+  }).join('') : '暂无成交（fee=100 onset 稀有 ~1/天，长时间无信号属正常）';
+}
+load(); setInterval(load,15000);
+</script>
+</body>
+</html>

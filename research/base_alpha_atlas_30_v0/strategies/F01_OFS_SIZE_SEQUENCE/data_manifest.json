@@ -1,0 +1,24 @@
+{
+  "strategy_id": "F01_OFS_SIZE_SEQUENCE",
+  "data_class": "B_SMALL_BOUNDED_EXPORT_REQUIRED",
+  "required_tables_or_files": [
+    "uniswap_v3_swaps_decoded"
+  ],
+  "required_columns": [
+    "pool_address",
+    "block_time",
+    "amount0",
+    "amount1",
+    "log_index"
+  ],
+  "required_time_resolution": "event-time swaps",
+  "point_in_time_requirements": "strict event order by (block_time, log_index)",
+  "minimum_history": ">=14d",
+  "estimated_rows": "~1e6-1e7",
+  "estimated_read_bytes": "200MB-2GB",
+  "whether_current_diagnostics_may_support_it": "maybe via existing swap TSV names",
+  "whether_production_database_would_be_required": true,
+  "missing_data": [
+    "reliable WETH side mapping"
+  ]
+}

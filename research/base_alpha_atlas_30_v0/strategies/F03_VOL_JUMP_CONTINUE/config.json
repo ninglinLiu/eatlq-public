@@ -1,0 +1,36 @@
+{
+  "strategy_id": "F03_VOL_JUMP_CONTINUE",
+  "family": "F03",
+  "name": "Jump continuation",
+  "parameter_search_space": {
+    "k": [
+      3.0,
+      4.0,
+      5.0
+    ],
+    "l": [
+      60,
+      120
+    ],
+    "hold": [
+      3,
+      6,
+      12
+    ],
+    "arm": [
+      0,
+      1
+    ],
+    "stop_ret": [
+      0.1,
+      0.2
+    ]
+  },
+  "param_combo_count": 72,
+  "access_flags": {
+    "database_access_enabled": false,
+    "rpc_access_enabled": false,
+    "large_file_access_enabled": false,
+    "backtest_enabled": false
+  }
+}

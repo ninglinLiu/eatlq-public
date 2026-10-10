@@ -1,0 +1,11 @@
+{
+  "expect_eth": 0.012344272076008947,
+  "got_eth": 0.012344272076008947,
+  "kind": "sell",
+  "match": true,
+  "n_receipt_logs": 12,
+  "quote_kind": "weth_mint_burn",
+  "rpc": "https://mainnet.base.org",
+  "tx": "0x2e5fa72361a0e37bb31bfc01c08aa1d65a1a04f6eca00e8243c7fd90bb3eebfe",
+  "wallet": "0xfd7e55a555555c2f25053a38ec744de1afea4fa4"
+}

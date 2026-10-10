@@ -1,0 +1,23 @@
+{
+  "alpha_id": "A01",
+  "family": "anomaly",
+  "hypothesis": "more wallets with less activity predicts unstable price",
+  "mechanism": "apparent breadth can be dust-like fragmentation",
+  "venue": "Base V3",
+  "universe": "active observed pools",
+  "horizon": "4h",
+  "data_source": "event microstructure and data facts",
+  "experiment": "anomaly-conditioned screen",
+  "feature": "breadth_activity_mismatch",
+  "direction": 1,
+  "prediction_object": "future absolute return",
+  "falsifier": "router identities create the pattern",
+  "status": "NOT_YET_TESTED",
+  "sample_size": 0,
+  "gross_result": "pending",
+  "cost_adjusted_result": "pending",
+  "capacity": "pending",
+  "concentration": "pending",
+  "tail_risk": "pending",
+  "next_action": "run rapid screen"
+}

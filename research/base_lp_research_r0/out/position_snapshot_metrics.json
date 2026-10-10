@@ -1,0 +1,12 @@
+{
+  "block_number": 46266127,
+  "position_keys": 27172,
+  "http_attempts_this_run": 183,
+  "json_rpc_responses_this_run": 183,
+  "retries_this_run": 0,
+  "assumed_base_eth_call_credits_per_response": 20,
+  "observed_eth_call_credits_this_run": 3660,
+  "negative_initial_liquidity_rows": 129,
+  "nonzero_initial_liquidity_rows": 3176,
+  "output": "/root/base_lp_research_r0/out/position_liquidity_boundaries.csv"
+}

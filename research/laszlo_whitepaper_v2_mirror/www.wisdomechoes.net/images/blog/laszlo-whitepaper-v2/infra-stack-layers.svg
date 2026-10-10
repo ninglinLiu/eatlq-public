@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="520" viewBox="0 0 480 520" fill="none">
+  <defs>
+    <style>
+      .bg { fill: #0B0E14; }
+      .l1 { fill: #1A2332; stroke: #3B82F6; stroke-opacity: 0.5; }
+      .l2 { fill: #151922; stroke: #F5A623; stroke-opacity: 0.5; }
+      .l3 { fill: #141820; stroke: #6B7280; stroke-opacity: 0.5; }
+      .l4 { fill: #11151C; stroke: #4CAF50; stroke-opacity: 0.5; }
+      .t { fill: #FFF; font: 700 14px Inter; }
+      .s { fill: #9E9E9E; font: 400 11px Inter; }
+      .title { fill: #9E9E9E; font: 600 11px Inter; letter-spacing: 0.12em; }
+    </style>
+  </defs>
+  <rect width="480" height="520" class="bg" rx="10"/>
+  <text x="32" y="32" class="title">INFRASTRUCTURE STACK · V2</text>
+
+  <rect x="32" y="56" width="416" height="96" rx="8" class="l4"/>
+  <text x="56" y="88" class="t">Layer 4 · Brain &amp; Hand</text>
+  <text x="56" y="112" class="s">Python Strategy · Rust Executor · PM · Streamlit</text>
+  <text x="56" y="132" class="s">XGBoost · exactInputSingle · slot0() stops</text>
+
+  <rect x="32" y="168" width="416" height="88" rx="8" class="l3"/>
+  <text x="56" y="200" class="t">Layer 3 · Vault</text>
+  <text x="56" y="224" class="s">Postgres wallet profiles · ClickHouse paused</text>
+  <text x="56" y="244" class="s">Dashcam CSV for offline label / retrain</text>
+
+  <rect x="32" y="272" width="416" height="96" rx="8" class="l2"/>
+  <text x="56" y="304" class="t">Layer 2 · Synapse</text>
+  <text x="56" y="328" class="s">Redis Streams · market_ticks · signals</text>
+  <text x="56" y="348" class="s">feat2:{symbol} · positions:* · halt keys</text>
+
+  <rect x="32" y="384" width="416" height="96" rx="8" class="l1"/>
+  <text x="56" y="416" class="t">Layer 1 · Interceptor</text>
+  <text x="56" y="440" class="s">Rust Ingestor · eth_subscribe logs</text>
+  <text x="56" y="460" class="s">V3 Swap decode · MsgPack · WsPool RPC</text>
+</svg>

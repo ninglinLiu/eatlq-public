@@ -1,0 +1,11 @@
+{
+  "body_sha256": "b6d7728fa25730d4cf9051ded3f396b817211aca51eefbac70177bbcce076a67",
+  "bytes": 175574,
+  "finished": "2026-10-01T07:29:32.177132+00:00",
+  "http_status": 200,
+  "key": "3390a72b0036f29a0e1ff00e2d519069ddc06bf63509a7e13084735678019a70",
+  "label": "base_external_transactions_probe",
+  "payload": null,
+  "started": "2026-10-01T07:29:31.046837+00:00",
+  "url": "https://base.blockscout.com/api/v2/addresses/0xcbc04b6607e7ebe0373c3ee361ba396b8ecb721c/transactions?filter=from"
+}

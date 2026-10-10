@@ -1,0 +1,35 @@
+{
+  "strategy_id": "F08_EVT_MINT_BURST",
+  "family": "F08",
+  "name": "Clustered mint burst event",
+  "parameter_search_space": {
+    "dt_sec": [
+      300,
+      900,
+      1800
+    ],
+    "k_min": [
+      3,
+      5
+    ],
+    "age_max_m": [
+      30,
+      60
+    ],
+    "hold": [
+      15,
+      45
+    ],
+    "stop_ret": [
+      0.2,
+      0.3
+    ]
+  },
+  "param_combo_count": 48,
+  "access_flags": {
+    "database_access_enabled": false,
+    "rpc_access_enabled": false,
+    "large_file_access_enabled": false,
+    "backtest_enabled": false
+  }
+}

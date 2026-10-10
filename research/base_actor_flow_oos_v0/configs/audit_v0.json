@@ -1,0 +1,21 @@
+{
+  "role": "WHALE_EVENT_v0_DIAGNOSTIC_AUDIT",
+  "mutates_scored_arm": false,
+  "mutates_freeze": false,
+  "rpc": {
+    "skip_by_default": true,
+    "max_traces": 160,
+    "time_budget_seconds": 300,
+    "sleep_between_traces": 0.15,
+    "target_wilson_upper_lt": 0.02
+  },
+  "bootstrap": {
+    "n_boot": 200,
+    "seed": 7
+  },
+  "matching": {
+    "max_pairs": 20000,
+    "require_same_age_bucket": true
+  },
+  "notes": "Diagnostic vocabulary is separate from freeze allowed_verdicts."
+}

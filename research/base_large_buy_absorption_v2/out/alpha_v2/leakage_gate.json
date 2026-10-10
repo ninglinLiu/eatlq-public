@@ -1,0 +1,45 @@
+{
+  "task": "LEAKAGE_GATE_V2",
+  "generated_at": "2026-07-21T10:33:02Z",
+  "asof_invariance": {
+    "pass": true,
+    "max_abs_diffs": {
+      "n_trips": 0.0,
+      "win_rate": 0.0,
+      "avg_ret": 0.0
+    },
+    "n_checked": 1500,
+    "T_mid": 1770005909
+  },
+  "no_forward_refs": {
+    "pass": true,
+    "forbidden": [],
+    "near_perfect": {}
+  },
+  "placebo": {
+    "pass": true,
+    "max_abs_corr_shuffled": 0.00810717869552341,
+    "per_feature": {
+      "actor_xpool_n_prior_trips": 0.001476798917571826,
+      "actor_xpool_prior_win_rate": 0.00810717869552341,
+      "actor_xpool_prior_avg_ret": 0.003123268883255596,
+      "actor_xpool_prior_median_hold_s": 0.0004183805693526035,
+      "actor_xpool_early_entry_skill": 0.00810717869552341,
+      "actor_xpool_cold_start": -0.006005044791823594,
+      "pool_buyers_xpool_mean_win_rate": 0.003980772489494867,
+      "pool_buyers_xpool_mean_n_trips": 0.0022068297953043727,
+      "pool_buyers_xpool_n_with_history": 0.0017392959106738708,
+      "family_n_prior_tokens": -0.004527178391782377,
+      "family_prior_survival_rate": 0.0,
+      "family_prior_max_ret_mean": -0.0009323456768813431,
+      "family_prior_rug_rate": -0.0033533749826206395,
+      "family_cold_start": 0.0031709679569989512,
+      "family_size": -0.004527178391782377,
+      "actor_xpool_score": 0.004864192831377234,
+      "family_score": -0.0015080301606567408,
+      "combined_score": 0.0028163785460541702
+    }
+  },
+  "passed": true,
+  "verdict": "PASS"
+}

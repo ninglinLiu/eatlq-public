@@ -1,0 +1,1134 @@
+{
+  "alternative_funding_routes": 2,
+  "cash_delta_closed_and_partial_raw": "-216397764816830745",
+  "complete_conditionally_modeled_roundtrips": 317,
+  "frozen_candidates": 441,
+  "full_441_pnl": null,
+  "full_roundtrip_actual_entry_spend_raw": "3170000000000000000",
+  "full_roundtrip_chain_fees_raw": "5616612761167653",
+  "generated_at": "2026-10-01T13:24:05.165663+00:00",
+  "inventory_cash_note": "cash change only; residual inventories unpriced, neither zero-valued nor profit-certified",
+  "inventory_remaining_cash_delta_raw": "-642807829448733054",
+  "inventory_remaining_cash_modeled_rows": 77,
+  "inventory_remaining_rows": 77,
+  "largest_winner_raw": "380839943787754915",
+  "largest_winner_share_of_positive_pnl": 0.23013551861561485,
+  "limitations": "resolved subset only; repeated tokens/signals correlated; low win rate or concentrated gains not rejection criteria",
+  "mature_known_cash_delta_with_unresolved_exits_left_unliquidated_raw": "-296494617710676195",
+  "mature_unresolved_exit_entry_debit_raw": "80096852893845450",
+  "mature_unresolved_exit_with_known_entry_debit_rows": 8,
+  "modeled_win_rate": 0.20189274447949526,
+  "portfolio_pnl": null,
+  "positive_roundtrips": 64,
+  "positive_token_clusters": 18,
+  "profitability_certified": false,
+  "settlement_input_artifact": "smartmoney_follower_execution_result.json",
+  "statuses": {
+    "BUY_SIMULATION_UNRESOLVED_OR_ZERO": 13,
+    "CONDITIONAL_EXECUTION_COST_MODEL": 317,
+    "EXIT_HORIZON_NOT_YET_OBSERVED": 26,
+    "PARTIAL_EXIT_INVENTORY_REMAINS": 77,
+    "SELL_SIMULATION_UNRESOLVED": 8
+  },
+  "sum_modeled_eth_raw": "426410064631902309",
+  "sum_negative_pnl_raw": "-1228440721021289249",
+  "sum_positive_pnl_raw": "1654850785653191558",
+  "token_clusters": [
+    {
+      "n_independent_simulations": 7,
+      "not_independent_events": true,
+      "positive_trades": 7,
+      "sum_conditional_net_raw": "795257587427718347",
+      "token": "0x882c8e35504d58979b1280fe76d6553f717029f8"
+    },
+    {
+      "n_independent_simulations": 24,
+      "not_independent_events": true,
+      "positive_trades": 24,
+      "sum_conditional_net_raw": "323769516335896127",
+      "token": "0xca7a1e31b36779cf32acb18714ab26982cf36b05"
+    },
+    {
+      "n_independent_simulations": 4,
+      "not_independent_events": true,
+      "positive_trades": 3,
+      "sum_conditional_net_raw": "182277358810646887",
+      "token": "0x1685981068dc0ec45ee1d5a28ef051059e42a0f3"
+    },
+    {
+      "n_independent_simulations": 2,
+      "not_independent_events": true,
+      "positive_trades": 2,
+      "sum_conditional_net_raw": "103237005708905140",
+      "token": "0xb20000000000000000000070f6c1a66d7c1e4d01"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 1,
+      "sum_conditional_net_raw": "63628655000352849",
+      "token": "0x3c573bdd88008c94f025e5023212f28e5f39744c"
+    },
+    {
+      "n_independent_simulations": 5,
+      "not_independent_events": true,
+      "positive_trades": 5,
+      "sum_conditional_net_raw": "61437410682463213",
+      "token": "0xb200000000000000000000ad822dc9282ebe66ed"
+    },
+    {
+      "n_independent_simulations": 3,
+      "not_independent_events": true,
+      "positive_trades": 3,
+      "sum_conditional_net_raw": "31778760002828003",
+      "token": "0xb200000000000000000000e6a331992bd9eace01"
+    },
+    {
+      "n_independent_simulations": 3,
+      "not_independent_events": true,
+      "positive_trades": 3,
+      "sum_conditional_net_raw": "30403961062643532",
+      "token": "0xfc28f881426a2931ec01b7392fe7bd87de220222"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 1,
+      "sum_conditional_net_raw": "13943958561798997",
+      "token": "0xb2000000000000000000001eb03f58a18f2add01"
+    },
+    {
+      "n_independent_simulations": 6,
+      "not_independent_events": true,
+      "positive_trades": 2,
+      "sum_conditional_net_raw": "9823652436119095",
+      "token": "0x80210081479359b512f464058b2699cebe998579"
+    },
+    {
+      "n_independent_simulations": 2,
+      "not_independent_events": true,
+      "positive_trades": 1,
+      "sum_conditional_net_raw": "4220266427411818",
+      "token": "0x57092eed9ebc3abb0dcdc48f53a412712ecdb38d"
+    },
+    {
+      "n_independent_simulations": 2,
+      "not_independent_events": true,
+      "positive_trades": 1,
+      "sum_conditional_net_raw": "2691129856512800",
+      "token": "0x4dcdf3451dfc114991283c2e5b72823d69882ba3"
+    },
+    {
+      "n_independent_simulations": 2,
+      "not_independent_events": true,
+      "positive_trades": 2,
+      "sum_conditional_net_raw": "2470729004742387",
+      "token": "0x22ff60cde59273f6e373586d1c5168d464e39ba3"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 1,
+      "sum_conditional_net_raw": "1445971711411183",
+      "token": "0x28c959b032de0657ac230a569ecdbba326731dd2"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 1,
+      "sum_conditional_net_raw": "1317037027927661",
+      "token": "0xb2000000000000000000009fc0e6e7fd3823a701"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 1,
+      "sum_conditional_net_raw": "107312467203216",
+      "token": "0xe72a0c42b584a3e7a4503a82d1337deb52ade885"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 1,
+      "sum_conditional_net_raw": "72520693042285",
+      "token": "0x667f5be66c0ad32da1470966c884f645ccc23ba3"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 1,
+      "sum_conditional_net_raw": "9448050913601",
+      "token": "0xb20000000000000000000000c6f9024862c6fb01"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-270043722698501",
+      "token": "0xb200000000000000000000ab49d2d33ceeb64301"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-304277694318139",
+      "token": "0xb2000000000000000000008be937d1978afc1201"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-961578734497939",
+      "token": "0xb200000000000000000000a4e3d33b7c9a174801"
+    },
+    {
+      "n_independent_simulations": 2,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-1444726183936604",
+      "token": "0x65f8152809dd1fc0d5d8a345c9008d37b95f9ba3"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-1670717204003586",
+      "token": "0xa99b8a231a1ea9b9e636eaec679de85a0378aba3"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-1787550758559101",
+      "token": "0xb2000000000000000000008fc7debd14e0029a01"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-1960537228752340",
+      "token": "0xb200000000000000000000b44f0818672e0a7a01"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-1971590302205170",
+      "token": "0xb2000000000000000000003a867ccafc43fe4401"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-2378421425446597",
+      "token": "0xb20000000000000000000009836d02e61cc5ef01"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-2406620572883454",
+      "token": "0xb200000000000000000000b892b1b627a7c1e18b"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-2427216662087564",
+      "token": "0x9d9ffad38fcd670b0f7dc021bec9b084918526e6"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-2683129756775329",
+      "token": "0xb200000000000000000000874ff75c5ebc653c01"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-2751517540292693",
+      "token": "0x519848b982c61d387a73366c9f2de43f62514907"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-2959913767361784",
+      "token": "0xc119f2019deb838f57fb8e4e852777a6fcea76ef"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-3159405285058750",
+      "token": "0xb2000000000000000000006bb1f360f796576e01"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-3285713806099133",
+      "token": "0xb200000000000000000000497546f7c893f37401"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-3396481582815218",
+      "token": "0x9f8b110a1d599043a94a7ef09f128286a4ce1ba3"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-3489959309286099",
+      "token": "0x387a5a64d2a756ee2e865ea2036481d138aae222"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-3561633409576564",
+      "token": "0xbf93a042588c008c0488795790d9a19e479d260a"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-3627590769785812",
+      "token": "0xb2000000000000000000000859cfdeeb14aa4e01"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-3670745794158807",
+      "token": "0x35f846fc802c0d51d24814891b9b05c566a25996"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-3916959266524336",
+      "token": "0xb20000000000000000000074f6cec5cd48891a01"
+    },
+    {
+      "n_independent_simulations": 2,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-3925047253809907",
+      "token": "0x08a9da206c41d2a79a0cb047c28c56d9b6787de0"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-3975353054932246",
+      "token": "0xb2000000000000000000009b58ad4f11efabbae5"
+    },
+    {
+      "n_independent_simulations": 2,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-4120315219006664",
+      "token": "0x0f61edbfe6cd86024c0f210c0695b08df55fdfc9"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-4364980089392532",
+      "token": "0x3493401b7fce756dc0573bf216d3f20bb0aa54b8"
+    },
+    {
+      "n_independent_simulations": 2,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-4382776965702396",
+      "token": "0xb20000000000000000000044ae9c51bf7a0e1c01"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-4441535265547884",
+      "token": "0x9f62b62cf8cc3aea56a3ce8808cf13503d1131e7"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-4496038872872858",
+      "token": "0x5dbcffbe9a8d2be5510c88bb4302fce3cf03ffb6"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-4635841003454882",
+      "token": "0x187ca26376e8c4f7d9b2e0e1159436dccb5f8222"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-4687408743292695",
+      "token": "0xb200000000000000000000edb59a6e1e37285e01"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-4925727424111565",
+      "token": "0xb200000000000000000000364e143be89dfc7001"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-5028192695427647",
+      "token": "0x28fc5012320c93b9a26f3cc7cc1dec0eb4ffdcec"
+    },
+    {
+      "n_independent_simulations": 11,
+      "not_independent_events": true,
+      "positive_trades": 1,
+      "sum_conditional_net_raw": "-5453503081049704",
+      "token": "0x60555ab88a0caaf893ab284c1332c9d0a05af222"
+    },
+    {
+      "n_independent_simulations": 2,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-5455711849329092",
+      "token": "0x81aadbea7ef54d9b9f1cfaa3ee5be0782738e86c"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-5479030640260236",
+      "token": "0xe24a0facc48f1d4543bcc32a0d0e11ec49ad4ba3"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-5581811185047811",
+      "token": "0x42c0d5c7e5a14e0cfec71de83c22efe28e5f5136"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-5756484256876409",
+      "token": "0x2d196cc3618b4826a6730716afa29ca97815cd27"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-5866693105260714",
+      "token": "0x3fb675d3facf5162503d4db8932830de3ef1fee1"
+    },
+    {
+      "n_independent_simulations": 4,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-6092141865766799",
+      "token": "0xb2000000000000000000004edfbbf0b931852f23"
+    },
+    {
+      "n_independent_simulations": 2,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-6097450572566280",
+      "token": "0xb20000000000000000000046012e90119e505b01"
+    },
+    {
+      "n_independent_simulations": 2,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-6102040450521728",
+      "token": "0x38b0f2c827808fc5ad1f9e1ba78388d55a342ba3"
+    },
+    {
+      "n_independent_simulations": 2,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-6134326036432098",
+      "token": "0x00000e7efa313f4e11bfff432471ed9423ac6b30"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-6254323949914078",
+      "token": "0x546be663eae68591f4bf9eb561b8f4236053fee1"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-6268668531323332",
+      "token": "0x8ca1c4cea1ded38269b18fa2d92e20cb719a3ba3"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-6340182684079821",
+      "token": "0xf1d41281eddd4cd2d3e3f7014f73b2a0c144fff1"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-6590832750994217",
+      "token": "0x40dc7e4e018152fc25407c6b8fe5bc50d920fee1"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-6754575188504039",
+      "token": "0xb200000000000000000000e14c758b64972af601"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-6948792339341852",
+      "token": "0xb2000000000000000000005c3130457551052401"
+    },
+    {
+      "n_independent_simulations": 2,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-7008914374935159",
+      "token": "0x366b11937eff8dfa59e347310a2f86e88821d222"
+    },
+    {
+      "n_independent_simulations": 3,
+      "not_independent_events": true,
+      "positive_trades": 1,
+      "sum_conditional_net_raw": "-7494404315133833",
+      "token": "0xb200000000000000000000cbfc2ed49379b17001"
+    },
+    {
+      "n_independent_simulations": 2,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-7498546255821308",
+      "token": "0xeb148dedecf90ed4c824efa3f6ce486d15afcba3"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-7617753780358821",
+      "token": "0xa03a8ed1492a9d3b507830f186ca417c84805307"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-7679583093115504",
+      "token": "0xb2000000000000000000002663002ba77f9e6f01"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-7914937292913608",
+      "token": "0xa474be8f2c404a3dbbaa4e703d679aa188aa6757"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-8059366074852153",
+      "token": "0xa3b37c57bf6d95a2d19b5956c17017c8315187c0"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-8081726463988989",
+      "token": "0xdedf1983105a1b3eb74d85240e9f1ea54298bba3"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-8209782637874237",
+      "token": "0x984886be424cf698e95a2f84d013784a546ffb54"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-8299437065433811",
+      "token": "0xb2000000000000000000007ab5bf182b1f897401"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-8825938258571126",
+      "token": "0xb200000000000000000000b1c85db99d1de6ef2a"
+    },
+    {
+      "n_independent_simulations": 2,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-8830276036182259",
+      "token": "0xb20000000000000000000058f9f953d2dfff4201"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-9062451672549270",
+      "token": "0x5c2435a2927a947b4b3eb38d870798435b84e905"
+    },
+    {
+      "n_independent_simulations": 2,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-9087746681356773",
+      "token": "0x0cbf291ba052174879d90bf781df1a5f2bc5bb07"
+    },
+    {
+      "n_independent_simulations": 2,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-9145618842768773",
+      "token": "0x702b052a21ebb32a82475f406a21f8855032bba3"
+    },
+    {
+      "n_independent_simulations": 1,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-9255612105687295",
+      "token": "0xa2e492926e84ab13138db4acd8893a5b378111a1"
+    },
+    {
+      "n_independent_simulations": 2,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-9767373090155621",
+      "token": "0xb2000000000000000000006fa33fedb16efe3501"
+    },
+    {
+      "n_independent_simulations": 2,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-9934793898829697",
+      "token": "0xfca0f45092183e68b52cb2fcbd764735d28a7ba3"
+    },
+    {
+      "n_independent_simulations": 3,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-9938915503389595",
+      "token": "0xb20000000000000000000075c458c031755df501"
+    },
+    {
+      "n_independent_simulations": 2,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-10436288209138431",
+      "token": "0x17ccdc9f23c38dd392decb9872bcd423e751934c"
+    },
+    {
+      "n_independent_simulations": 2,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-10509728646036945",
+      "token": "0x2c1aa6957e45c7c1d87a626af6edc6fa19d96d19"
+    },
+    {
+      "n_independent_simulations": 2,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-10573077596963719",
+      "token": "0xb20000000000000000000009cdb12aefd9830b01"
+    },
+    {
+      "n_independent_simulations": 5,
+      "not_independent_events": true,
+      "positive_trades": 1,
+      "sum_conditional_net_raw": "-10700321350823204",
+      "token": "0x9e00fc92493451eba1c63dd3880d68b622037ba3"
+    },
+    {
+      "n_independent_simulations": 2,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-10821053537341658",
+      "token": "0xb2000000000000000000003bbe817b71af004e01"
+    },
+    {
+      "n_independent_simulations": 3,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-11573685554126249",
+      "token": "0xb2000000000000000000002fccbcf79f4f42bc01"
+    },
+    {
+      "n_independent_simulations": 5,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-11588725878815823",
+      "token": "0xe3f4b833512f0bcb1467ee55e25804bbb8304ba3"
+    },
+    {
+      "n_independent_simulations": 2,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-11751963691588934",
+      "token": "0xb200000000000000000000ee45d6cd5497e66501"
+    },
+    {
+      "n_independent_simulations": 2,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-11810583216842419",
+      "token": "0x00859e4cf6141746376aab8b90b2eb65d38e0222"
+    },
+    {
+      "n_independent_simulations": 4,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-12703952374612769",
+      "token": "0x07e61d8a4e197dfc269e90d7ece1df0d26702ba3"
+    },
+    {
+      "n_independent_simulations": 2,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-13454550737101947",
+      "token": "0x6666dd8d0a8889e41418141760753b69ab319ba3"
+    },
+    {
+      "n_independent_simulations": 2,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-13965144926524101",
+      "token": "0xb2000000000000000000003f17eb7e35a9f90601"
+    },
+    {
+      "n_independent_simulations": 2,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-14093703264655978",
+      "token": "0xb200000000000000000000fac1a85ab57681d601"
+    },
+    {
+      "n_independent_simulations": 2,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-14284772454293043",
+      "token": "0x7e298d798656c03ec80f2a7843d0805103749ba3"
+    },
+    {
+      "n_independent_simulations": 2,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-14592250012880472",
+      "token": "0xb200000000000000000000e2c2f05b671c0b7f01"
+    },
+    {
+      "n_independent_simulations": 2,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-15174737790426553",
+      "token": "0x243d1a5f47d352b667b90e03986700778a42f222"
+    },
+    {
+      "n_independent_simulations": 4,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-15495534922523504",
+      "token": "0xde86c93e8bdf5d5c196957a6710e61f79451cba3"
+    },
+    {
+      "n_independent_simulations": 3,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-16341940542581784",
+      "token": "0xb200000000000000000000da33c054fb496dc101"
+    },
+    {
+      "n_independent_simulations": 3,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-20295527436547439",
+      "token": "0xb200000000000000000000e0a273796a9a1aab01"
+    },
+    {
+      "n_independent_simulations": 4,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-21083983075355314",
+      "token": "0x2a7c66a4196d8a303bb9cfcec37ca7f60b0e75a4"
+    },
+    {
+      "n_independent_simulations": 4,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-22151389276628164",
+      "token": "0x660f5d192e7eaf69ed3d202fee16516dbaf42ba3"
+    },
+    {
+      "n_independent_simulations": 4,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-22467714593811320",
+      "token": "0xadd034ee7420c90ff3114088de419c521a43da1f"
+    },
+    {
+      "n_independent_simulations": 4,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-22852472063752727",
+      "token": "0x9f48a915db18df075d404adca210a7b50b647ba3"
+    },
+    {
+      "n_independent_simulations": 4,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-23977462724289365",
+      "token": "0x4a6bab7dd66f72b92f8aed9caa18424f188566e7"
+    },
+    {
+      "n_independent_simulations": 3,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-24029100017934429",
+      "token": "0xb2000000000000000000008f22c09e8629873001"
+    },
+    {
+      "n_independent_simulations": 7,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-24705726296823626",
+      "token": "0xb2000000000000000000004f6d4210eb5dee1c01"
+    },
+    {
+      "n_independent_simulations": 3,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-25020717968000880",
+      "token": "0xb20000000000000000000002105014ef13e57401"
+    },
+    {
+      "n_independent_simulations": 3,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-25915808059488295",
+      "token": "0xb20000000000000000000074e4706e56b073f001"
+    },
+    {
+      "n_independent_simulations": 4,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-26278831472164099",
+      "token": "0x2f5ab61870c9c5254eebd3e6361d3eb40181ac8e"
+    },
+    {
+      "n_independent_simulations": 3,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-26320581075728658",
+      "token": "0xb2000000000000000000002ccf69e15d9a1b0d01"
+    },
+    {
+      "n_independent_simulations": 5,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-26493089516139639",
+      "token": "0xf1cdf5830d7e8f8c9d124413d50924b587214ba3"
+    },
+    {
+      "n_independent_simulations": 6,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-27957000163001323",
+      "token": "0xe8ffba43711f1018aebb6d77cfd1ba52610a5ba3"
+    },
+    {
+      "n_independent_simulations": 4,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-28869500340540736",
+      "token": "0xb2000000000000000000003729f57da496686101"
+    },
+    {
+      "n_independent_simulations": 4,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-29047113424443229",
+      "token": "0x798b24ba106188002ea1349654be2b0d515c7777"
+    },
+    {
+      "n_independent_simulations": 10,
+      "not_independent_events": true,
+      "positive_trades": 1,
+      "sum_conditional_net_raw": "-31871930522124267",
+      "token": "0xb462a5039a540883508ee37b5cf3999647557ba3"
+    },
+    {
+      "n_independent_simulations": 7,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-34862406534713983",
+      "token": "0x5a3392371432da2fc0de18263b1fa2ffab8a5a01"
+    },
+    {
+      "n_independent_simulations": 5,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-43347557897065802",
+      "token": "0xb20000000000000000000032988daaf97a007601"
+    },
+    {
+      "n_independent_simulations": 6,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-48123013424675631",
+      "token": "0xb2000000000000000000007294d401751e50af01"
+    },
+    {
+      "n_independent_simulations": 9,
+      "not_independent_events": true,
+      "positive_trades": 0,
+      "sum_conditional_net_raw": "-53979982750267535",
+      "token": "0x346465a301078fbd45727c4c925e1c94be2e6520"
+    }
+  ],
+  "tokens_in_complete_roundtrips": 125,
+  "top_five_trades": [
+    {
+      "modeled_net_eth_raw": "380839943787754915",
+      "source_tx": "0xbd21bbf6d51300a162d27b5fe52fff3e0000d18ffa1ca4aa1fbe6c5e277381d6",
+      "token": "0x882c8e35504d58979b1280fe76d6553f717029f8"
+    },
+    {
+      "modeled_net_eth_raw": "128979718048935532",
+      "source_tx": "0x3c5b3a87c407ba1fb3cf857c0b2164a5b92c0b2d953bbf3b7a396aee01c04ecb",
+      "token": "0x882c8e35504d58979b1280fe76d6553f717029f8"
+    },
+    {
+      "modeled_net_eth_raw": "100180781491325164",
+      "source_tx": "0x836076854c7a81bb9e47eed324de18b6f4cc8ab43af333f371e99925b6f4eea9",
+      "token": "0x882c8e35504d58979b1280fe76d6553f717029f8"
+    },
+    {
+      "modeled_net_eth_raw": "98710191761930105",
+      "source_tx": "0x80f0b96f574511225a08ec9317c113b8127540ed4b2152eee457713b43cb7b4d",
+      "token": "0xb20000000000000000000070f6c1a66d7c1e4d01"
+    },
+    {
+      "modeled_net_eth_raw": "74872773699626395",
+      "source_tx": "0xbb61a13f21560233c170cf53f9e37acae3baf7aeb7ff9b5e0c832b1138a636b4",
+      "token": "0x1685981068dc0ec45ee1d5a28ef051059e42a0f3"
+    }
+  ],
+  "unliquidated_cash_note": "no liquidation credit assigned where exit has not been simulated; held tokens are not marked to zero; reverted-transaction gas and unknown entries remain unmodeled",
+  "unresolved_or_inventory_remaining": 124,
+  "wallet_breakdown": [
+    {
+      "known_cash_delta_at_cutoff_raw": "-42886238502338311",
+      "known_open_entry_debit_raw": "20020093402987152",
+      "n_frozen": 7,
+      "n_modeled": 3,
+      "n_unresolved_or_inventory_remaining": 4,
+      "partial_exit_cash_delta_raw": "-8636129717326187",
+      "partial_exit_rows": 1,
+      "qualification": "descriptive only; open inventory unpriced and unknown entry costs omitted; not source-wallet profitability or new eligibility screen",
+      "statuses": {
+        "BUY_SIMULATION_UNRESOLVED_OR_ZERO": 1,
+        "CONDITIONAL_EXECUTION_COST_MODEL": 3,
+        "PARTIAL_EXIT_INVENTORY_REMAINS": 1,
+        "SELL_SIMULATION_UNRESOLVED": 2
+      },
+      "sum_conditional_net_raw": "-14230015382024972",
+      "wallet": "0x0b3edd0d0bf7c6281a7f8ae5a5630defb94ae78e"
+    },
+    {
+      "known_cash_delta_at_cutoff_raw": "-17948091508436762",
+      "known_open_entry_debit_raw": "20113537171311274",
+      "n_frozen": 21,
+      "n_modeled": 19,
+      "n_unresolved_or_inventory_remaining": 2,
+      "partial_exit_cash_delta_raw": "0",
+      "partial_exit_rows": 0,
+      "qualification": "descriptive only; open inventory unpriced and unknown entry costs omitted; not source-wallet profitability or new eligibility screen",
+      "statuses": {
+        "CONDITIONAL_EXECUTION_COST_MODEL": 19,
+        "EXIT_HORIZON_NOT_YET_OBSERVED": 2
+      },
+      "sum_conditional_net_raw": "2165445662874512",
+      "wallet": "0x217946e128c1b9c7f8c3f16b33878a908713923a"
+    },
+    {
+      "known_cash_delta_at_cutoff_raw": "656356964372553096",
+      "known_open_entry_debit_raw": "60072079345625168",
+      "n_frozen": 31,
+      "n_modeled": 24,
+      "n_unresolved_or_inventory_remaining": 7,
+      "partial_exit_cash_delta_raw": "-5257327116561342",
+      "partial_exit_rows": 1,
+      "qualification": "descriptive only; open inventory unpriced and unknown entry costs omitted; not source-wallet profitability or new eligibility screen",
+      "statuses": {
+        "CONDITIONAL_EXECUTION_COST_MODEL": 24,
+        "EXIT_HORIZON_NOT_YET_OBSERVED": 6,
+        "PARTIAL_EXIT_INVENTORY_REMAINS": 1
+      },
+      "sum_conditional_net_raw": "721686370834739606",
+      "wallet": "0x2ce9d43d1cba6ae31d7f07bfe0098dfa2d833373"
+    },
+    {
+      "known_cash_delta_at_cutoff_raw": "-898886020940330322",
+      "known_open_entry_debit_raw": "50051966418683265",
+      "n_frozen": 166,
+      "n_modeled": 97,
+      "n_unresolved_or_inventory_remaining": 69,
+      "partial_exit_cash_delta_raw": "-517726294839541805",
+      "partial_exit_rows": 61,
+      "qualification": "descriptive only; open inventory unpriced and unknown entry costs omitted; not source-wallet profitability or new eligibility screen",
+      "statuses": {
+        "BUY_SIMULATION_UNRESOLVED_OR_ZERO": 3,
+        "CONDITIONAL_EXECUTION_COST_MODEL": 97,
+        "PARTIAL_EXIT_INVENTORY_REMAINS": 61,
+        "SELL_SIMULATION_UNRESOLVED": 5
+      },
+      "sum_conditional_net_raw": "-331107759682105252",
+      "wallet": "0x347ffc6db9acc54ac2019795173b9599e8b82bd9"
+    },
+    {
+      "known_cash_delta_at_cutoff_raw": "-58201525515218239",
+      "known_open_entry_debit_raw": "40044060854006834",
+      "n_frozen": 67,
+      "n_modeled": 53,
+      "n_unresolved_or_inventory_remaining": 14,
+      "partial_exit_cash_delta_raw": "-45362569510808543",
+      "partial_exit_rows": 6,
+      "qualification": "descriptive only; open inventory unpriced and unknown entry costs omitted; not source-wallet profitability or new eligibility screen",
+      "statuses": {
+        "BUY_SIMULATION_UNRESOLVED_OR_ZERO": 4,
+        "CONDITIONAL_EXECUTION_COST_MODEL": 53,
+        "EXIT_HORIZON_NOT_YET_OBSERVED": 4,
+        "PARTIAL_EXIT_INVENTORY_REMAINS": 6
+      },
+      "sum_conditional_net_raw": "27205104849597138",
+      "wallet": "0x371903abb32f5f69b536b77495e92adedfea25da"
+    },
+    {
+      "known_cash_delta_at_cutoff_raw": "-51867163821377080",
+      "known_open_entry_debit_raw": "0",
+      "n_frozen": 12,
+      "n_modeled": 12,
+      "n_unresolved_or_inventory_remaining": 0,
+      "partial_exit_cash_delta_raw": "0",
+      "partial_exit_rows": 0,
+      "qualification": "descriptive only; open inventory unpriced and unknown entry costs omitted; not source-wallet profitability or new eligibility screen",
+      "statuses": {
+        "CONDITIONAL_EXECUTION_COST_MODEL": 12
+      },
+      "sum_conditional_net_raw": "-51867163821377080",
+      "wallet": "0x9631335762e3603d2a7507d84838aa3236d52745"
+    },
+    {
+      "known_cash_delta_at_cutoff_raw": "-29917596873470554",
+      "known_open_entry_debit_raw": "30040032158121627",
+      "n_frozen": 24,
+      "n_modeled": 21,
+      "n_unresolved_or_inventory_remaining": 3,
+      "partial_exit_cash_delta_raw": "0",
+      "partial_exit_rows": 0,
+      "qualification": "descriptive only; open inventory unpriced and unknown entry costs omitted; not source-wallet profitability or new eligibility screen",
+      "statuses": {
+        "CONDITIONAL_EXECUTION_COST_MODEL": 21,
+        "EXIT_HORIZON_NOT_YET_OBSERVED": 3
+      },
+      "sum_conditional_net_raw": "122435284651073",
+      "wallet": "0xa05ec35f7d1eba823cff2ed26aeaed419683742f"
+    },
+    {
+      "known_cash_delta_at_cutoff_raw": "-49899725401620267",
+      "known_open_entry_debit_raw": "20035702061071724",
+      "n_frozen": 7,
+      "n_modeled": 4,
+      "n_unresolved_or_inventory_remaining": 3,
+      "partial_exit_cash_delta_raw": "-7822676474753140",
+      "partial_exit_rows": 1,
+      "qualification": "descriptive only; open inventory unpriced and unknown entry costs omitted; not source-wallet profitability or new eligibility screen",
+      "statuses": {
+        "CONDITIONAL_EXECUTION_COST_MODEL": 4,
+        "EXIT_HORIZON_NOT_YET_OBSERVED": 1,
+        "PARTIAL_EXIT_INVENTORY_REMAINS": 1,
+        "SELL_SIMULATION_UNRESOLVED": 1
+      },
+      "sum_conditional_net_raw": "-22041346865795403",
+      "wallet": "0xd569e570b94265e5ebc7df1990f99ee68d3f60a1"
+    },
+    {
+      "known_cash_delta_at_cutoff_raw": "23093379706299329",
+      "known_open_entry_debit_raw": "0",
+      "n_frozen": 9,
+      "n_modeled": 7,
+      "n_unresolved_or_inventory_remaining": 2,
+      "partial_exit_cash_delta_raw": "-13021402698526724",
+      "partial_exit_rows": 2,
+      "qualification": "descriptive only; open inventory unpriced and unknown entry costs omitted; not source-wallet profitability or new eligibility screen",
+      "statuses": {
+        "CONDITIONAL_EXECUTION_COST_MODEL": 7,
+        "PARTIAL_EXIT_INVENTORY_REMAINS": 2
+      },
+      "sum_conditional_net_raw": "36114782404826053",
+      "wallet": "0xdd6f338b91f40e5a02c468b7cb49cccc569a3134"
+    },
+    {
+      "known_cash_delta_at_cutoff_raw": "105880050270736715",
+      "known_open_entry_debit_raw": "90094812103797359",
+      "n_frozen": 43,
+      "n_modeled": 30,
+      "n_unresolved_or_inventory_remaining": 13,
+      "partial_exit_cash_delta_raw": "-18992833582560180",
+      "partial_exit_rows": 2,
+      "qualification": "descriptive only; open inventory unpriced and unknown entry costs omitted; not source-wallet profitability or new eligibility screen",
+      "statuses": {
+        "BUY_SIMULATION_UNRESOLVED_OR_ZERO": 2,
+        "CONDITIONAL_EXECUTION_COST_MODEL": 30,
+        "EXIT_HORIZON_NOT_YET_OBSERVED": 9,
+        "PARTIAL_EXIT_INVENTORY_REMAINS": 2
+      },
+      "sum_conditional_net_raw": "214967695957094254",
+      "wallet": "0xe28601398a5448d1147e6e8b0e0c6d686f0d216d"
+    },
+    {
+      "known_cash_delta_at_cutoff_raw": "-192607031928450415",
+      "known_open_entry_debit_raw": "10012951809217662",
+      "n_frozen": 54,
+      "n_modeled": 47,
+      "n_unresolved_or_inventory_remaining": 7,
+      "partial_exit_cash_delta_raw": "-25988595508655133",
+      "partial_exit_rows": 3,
+      "qualification": "descriptive only; open inventory unpriced and unknown entry costs omitted; not source-wallet profitability or new eligibility screen",
+      "statuses": {
+        "BUY_SIMULATION_UNRESOLVED_OR_ZERO": 3,
+        "CONDITIONAL_EXECUTION_COST_MODEL": 47,
+        "EXIT_HORIZON_NOT_YET_OBSERVED": 1,
+        "PARTIAL_EXIT_INVENTORY_REMAINS": 3
+      },
+      "sum_conditional_net_raw": "-156605484610577620",
+      "wallet": "0xfd7e55a555555c2f25053a38ec744de1afea4fa4"
+    }
+  ],
+  "wallets_in_complete_roundtrips": 11
+}

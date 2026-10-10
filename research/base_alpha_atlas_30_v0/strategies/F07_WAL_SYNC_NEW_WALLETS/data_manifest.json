@@ -1,0 +1,25 @@
+{
+  "strategy_id": "F07_WAL_SYNC_NEW_WALLETS",
+  "data_class": "C_PRODUCTION_DB_HEAVY",
+  "required_tables_or_files": [
+    "swaps with tx_from",
+    "wallet first_seen registry"
+  ],
+  "required_columns": [
+    "pool",
+    "tx_from",
+    "block_time",
+    "amounts"
+  ],
+  "required_time_resolution": "event",
+  "point_in_time_requirements": "first_seen PIT",
+  "minimum_history": ">=60d for wallet age",
+  "estimated_rows": "large",
+  "estimated_read_bytes": ">2GB",
+  "whether_current_diagnostics_may_support_it": "controller maps exist by name but heavy",
+  "whether_production_database_would_be_required": true,
+  "missing_data": [
+    "router/bundler exclusion list completeness",
+    "first_seen registry"
+  ]
+}

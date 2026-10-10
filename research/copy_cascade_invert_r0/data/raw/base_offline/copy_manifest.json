@@ -1,0 +1,145 @@
+{
+  "bsc_tape": "INCONCLUSIVE_BSC_NO_LEDGER",
+  "clickhouse_used": false,
+  "generated_at": "2026-09-17T06:24:01+00:00",
+  "items": [
+    {
+      "copied": true,
+      "dest": "/root/copy_cascade_invert_r0/data/raw/base_offline/base_b5_real_swaps_20260714.tsv",
+      "key": "b5_swaps",
+      "kind": "tape",
+      "nbytes": 121506901,
+      "sha256": "5e87fffba4dab3f6857ac45ddc8365b0bc17a19f3630629bf0625cfd169f0a36",
+      "src": "/opt/EATLQ/mvp/diagnostics/base_b5_real_swaps_20260714.tsv"
+    },
+    {
+      "copied": true,
+      "dest": "/root/copy_cascade_invert_r0/data/raw/base_offline/base_b8_future_swaps_20260714.tsv",
+      "key": "b8_swaps",
+      "kind": "tape",
+      "nbytes": 1292730,
+      "sha256": "97e5a8b57dbed7be9d73be447067c7b125e74e0b0678dde088b0c3ad87656b98",
+      "src": "/opt/EATLQ/mvp/diagnostics/base_b8_future_swaps_20260714.tsv"
+    },
+    {
+      "copied": true,
+      "dest": "/root/copy_cascade_invert_r0/data/raw/base_offline/copyability_safe_dataset_sample.csv",
+      "key": "sprint083_safe",
+      "kind": "wallet_tape",
+      "nbytes": 5311396,
+      "sha256": "509073d7cfd70b5610b9c9cd8c88b2f5ed021201bfa8858b312f1a0df1258b85",
+      "src": "/opt/EATLQ/mvp/audits/sprint083_fee500_paper_shadow/v3_smart_wallet_copyability_safe_prep_expanded_v2/copyability_safe_dataset_sample.csv"
+    },
+    {
+      "copied": true,
+      "dest": "/root/copy_cascade_invert_r0/data/raw/base_offline/dataset_sample.csv",
+      "key": "sprint083_dataset",
+      "kind": "wallet_tape",
+      "nbytes": 5510452,
+      "sha256": "b4a2b60eb65af87e2e9da18f9dfa062ce9d223a53be7053520409e16621c8cdf",
+      "src": "/opt/EATLQ/mvp/audits/sprint083_fee500_paper_shadow/v3_smart_wallet_dataset_builder_expanded_v2/dataset_sample.csv"
+    },
+    {
+      "copied": true,
+      "dest": "/root/copy_cascade_invert_r0/data/raw/base_offline/closed_trades_sample.csv",
+      "key": "sprint083_closed",
+      "kind": "fifo_closed",
+      "nbytes": 4384788,
+      "sha256": "3ebd774062832eb0ff2fad0edb4300171bbfd3ca98dbe5e4d2cc91a3885a3c1a",
+      "src": "/opt/EATLQ/mvp/audits/sprint083_fee500_paper_shadow/v3_smart_wallet_dataset_builder_expanded_v2/closed_trades_sample.csv"
+    },
+    {
+      "copied": true,
+      "dest": "/root/copy_cascade_invert_r0/data/raw/base_offline/run004_v3r6_candidate_pool.csv",
+      "key": "run004",
+      "kind": "pool_swaps",
+      "nbytes": 5813030,
+      "sha256": "3a50ed9e0cc548d80a63f6567ca507b620347cd0ea08dd5468675234368471be",
+      "src": "/opt/EATLQ/mvp/diagnostics/run004_v3r6_candidate_pool.csv"
+    },
+    {
+      "copied": true,
+      "dest": "/root/copy_cascade_invert_r0/data/raw/base_offline/base_attribution_exclusions.json",
+      "key": "exclusions",
+      "kind": "exclusions",
+      "nbytes": 4441,
+      "sha256": "c138034fe78d0a27679863f74648c9cb4d8790fe367d422504e22bc5738a8267",
+      "src": "/root/base_actor_flow_oos_v0/configs/base_attribution_exclusions.json"
+    },
+    {
+      "copied": true,
+      "dest": "/root/copy_cascade_invert_r0/data/raw/golden/base_b3_entity_attribution_sample_v2_20260714.json",
+      "key": "b3_entity",
+      "kind": "golden",
+      "nbytes": 949165,
+      "sha256": "94fe923402f2ed6e2e3ed6310e7d89149db32598f86efc037d6aeedd2946bdd3",
+      "src": "/opt/EATLQ/mvp/diagnostics/base_b3_entity_attribution_sample_v2_20260714.json"
+    },
+    {
+      "copied": true,
+      "dest": "/root/copy_cascade_invert_r0/data/raw/golden/base_b3_inventory_golden_20260714.json",
+      "key": "b3_inventory",
+      "kind": "golden",
+      "nbytes": 91573,
+      "sha256": "ba60f9a78d9dd5ea7220241b6d94e5546035da9657480248897b6d2dd3466dd0",
+      "src": "/opt/EATLQ/mvp/diagnostics/base_b3_inventory_golden_20260714.json"
+    },
+    {
+      "copied": true,
+      "dest": "/root/copy_cascade_invert_r0/data/raw/golden/base_b3_trace_golden_20260714.json",
+      "key": "b3_trace",
+      "kind": "golden",
+      "nbytes": 72154,
+      "sha256": "0b0d321f61e9d47b2cd9e194c835a57a6da15e009fc41f5d63649e41d4f64032",
+      "src": "/opt/EATLQ/mvp/diagnostics/base_b3_trace_golden_20260714.json"
+    },
+    {
+      "copied": true,
+      "dest": "/root/copy_cascade_invert_r0/data/raw/golden/base_gl2_b_fifo_cashleg_golden_20260715.json",
+      "key": "gl2b_fifo",
+      "kind": "golden",
+      "nbytes": 7752,
+      "sha256": "eddc5dfc975b036f7ae16470ea00d13a9834ada091d6bf3a0f347ea7c134b789",
+      "src": "/opt/EATLQ/mvp/diagnostics/base_gl2_b_fifo_cashleg_golden_20260715.json"
+    },
+    {
+      "copied": true,
+      "dest": "/root/copy_cascade_invert_r0/data/raw/golden/base_gl2_b_final_20260715.json",
+      "key": "gl2b_final",
+      "kind": "golden",
+      "nbytes": 5112,
+      "sha256": "b9a2ab9e1955857cdb891f0763fe342557c4e2c9a6ba32609cfdcb6a48c8612e",
+      "src": "/opt/EATLQ/mvp/diagnostics/base_gl2_b_final_20260715.json"
+    },
+    {
+      "copied": true,
+      "dest": "/root/copy_cascade_invert_r0/data/raw/golden/GL2_B_smartmoney_copyability_result_20260715.md",
+      "key": "gl2b_report",
+      "kind": "golden",
+      "nbytes": 3478,
+      "sha256": "b9c0a3dfcf63a0ea3c3319707ea79a4d7dcf9f2471d3a769f0e7a98869508108",
+      "src": "/opt/EATLQ/reports/GL2_B_smartmoney_copyability_result_20260715.md"
+    },
+    {
+      "copied": true,
+      "dest": "/root/copy_cascade_invert_r0/data/raw/golden/golden_audit_rows.csv",
+      "key": "actor_flow_golden",
+      "kind": "golden",
+      "nbytes": 17251,
+      "sha256": "af0eca54a2fdb479f41b08ae7db908f1fa8aa8ed0db52dbbdf3601e8e22b43a7",
+      "src": "/root/base_actor_flow_oos_v0/out/phase1/golden_audit_rows.csv"
+    },
+    {
+      "copied": true,
+      "dest": "/root/copy_cascade_invert_r0/data/raw/dune_overlay/dune_smart_base_20260504_q1_wallet_summary_v2.csv",
+      "key": "dune_overlay",
+      "kind": "overlay_not_vendor",
+      "nbytes": 439257,
+      "sha256": "f3b07fe5fc8c937f02a6c144ea5cfb52e06cb2d00392cb0e5f97e9d4656acbe7",
+      "src": "/opt/EATLQ/mvp/diagnostics/dune_smart_base_20260504_q1_wallet_summary_v2.csv"
+    }
+  ],
+  "n_copied": 15,
+  "n_missing": 0,
+  "rpc_used": false
+}

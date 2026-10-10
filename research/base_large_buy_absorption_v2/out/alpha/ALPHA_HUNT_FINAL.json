@@ -1,0 +1,37 @@
+{
+  "task": "ALPHA_HUNT_V1_FINAL",
+  "generated_at": "2026-07-21T09:15:24Z",
+  "leakage_gate": "PASS",
+  "families": {
+    "actor": {
+      "matched_att": "REFUTED",
+      "ranker": "REFUTED",
+      "overall": "REFUTED",
+      "bh_reject": false,
+      "att_mean": -0.001469771791779782,
+      "att_day_p05": -0.00800830623578046
+    },
+    "genesis": {
+      "matched_att": "REFUTED",
+      "ranker": "REFUTED",
+      "overall": "REFUTED",
+      "bh_reject": false,
+      "att_mean": -0.0010513346786697163,
+      "att_day_p05": -0.006037461927807224
+    },
+    "combined": {
+      "matched_att": "UNCONFIRMED",
+      "ranker": "REFUTED",
+      "overall": "UNCONFIRMED",
+      "bh_reject": false,
+      "att_mean": 0.00036741270523020953,
+      "att_day_p05": -0.0017065700340973325
+    }
+  },
+  "propose_observer_shadow": false,
+  "live": "NO_GO",
+  "t0": null,
+  "code_hash_bakeoff": "d3ce8f73ae4ec2b5f33dd7012c6fb59344dd8e55c4984f1791d6ee6fa467d0c0",
+  "stop_rule": "If both actor and genesis are REFUTED under matched+sealed bar net of cost, seal and stop \u2014 do not keep tuning.",
+  "both_refuted": true
+}

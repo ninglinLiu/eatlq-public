@@ -1,0 +1,23 @@
+{
+  "status": "FROZEN_BEFORE_MATURE_MCAP_CENSUS",
+  "phase": "MATURE_MCAP_CENSUS_V0",
+  "role": "Base UniV3 Mature-Token Universe Scout",
+  "venue": "base_uniswap_v3_weth_pools",
+  "not_new_pool_rescue": true,
+  "eth_usd_freeze": 3000.0,
+  "thresholds_usd": {
+    "candidate_cum_volume_usd": 100000,
+    "target_mcap_or_fdv_usd": 1000000
+  },
+  "definitions": {
+    "cum_volume_usd": "lifetime abs WETH-leg volume in UniV3 WETH pools * eth_usd_freeze",
+    "dexscreener_current": "current marketCap/fdv from DexScreener Base pairs (not ATH)",
+    "onchain_peak_fdv_proxy": "max observed alt USD price from UniV3 ticks * current totalSupply (FDV proxy; supply changes not historical)"
+  },
+  "core_exclusions": [
+    "0x4200000000000000000000000000000000000006",
+    "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+    "0x0000000000000000000000000000000000000000"
+  ],
+  "deploy_allowed": false
+}

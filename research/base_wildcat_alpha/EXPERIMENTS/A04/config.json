@@ -1,0 +1,23 @@
+{
+  "alpha_id": "A04",
+  "family": "anomaly",
+  "hypothesis": "extreme ticks with low participant count are false-price candidates",
+  "mechanism": "thin isolated events can create non-economic marks",
+  "venue": "Base V3",
+  "universe": "active observed pools",
+  "horizon": "4h",
+  "data_source": "event microstructure and data facts",
+  "experiment": "manual-tail and replay audit",
+  "feature": "isolated_extreme",
+  "direction": -1,
+  "prediction_object": "future reversal",
+  "falsifier": "valid large trades explain extremes",
+  "status": "NOT_YET_TESTED",
+  "sample_size": 0,
+  "gross_result": "pending",
+  "cost_adjusted_result": "pending",
+  "capacity": "pending",
+  "concentration": "pending",
+  "tail_risk": "pending",
+  "next_action": "run rapid screen"
+}

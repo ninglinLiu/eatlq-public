@@ -1,0 +1,27 @@
+{
+  "adapter": "MIXED_REGISTERED_FACTORY_V1",
+  "buy": {
+    "amount_raw": "10000000000000000",
+    "block": 51623850,
+    "direction": "buy",
+    "evidence": {
+      "http_status": 200,
+      "key": "2820b18d3c98d97375fcee2e741218b2c4d37d17d0138afdf1558244c177f2a1",
+      "rpc_error": {
+        "code": 3,
+        "message": "execution reverted"
+      }
+    },
+    "status": "SIMULATION_UNAVAILABLE_OR_REVERT"
+  },
+  "delay_seconds": 10,
+  "exit_policy": "24h",
+  "input_eth_raw": "10000000000000000",
+  "modeled_net_eth_raw": null,
+  "net_profit_certified": false,
+  "source_block": 51623845,
+  "source_tx": "0x1a61153060d243bbc5aae72510ecabf9788b28287cdf7dc2d2963da7b6653d61",
+  "status": "BUY_SIMULATION_UNRESOLVED_OR_ZERO",
+  "token": "0x0326ff7703ffc480e97305bfc0aeb5d31b477777",
+  "wallet": "0x347ffc6db9acc54ac2019795173b9599e8b82bd9"
+}

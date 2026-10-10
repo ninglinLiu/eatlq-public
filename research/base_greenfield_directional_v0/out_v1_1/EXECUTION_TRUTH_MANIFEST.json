@@ -1,0 +1,69 @@
+{
+  "created_utc": "2026-07-20T07:24:45Z",
+  "role": "Base Greenfield V1.1 Execution Truth Audit",
+  "immutability": "Must not modify out/ or out_v1/",
+  "input_sha256": {
+    "profit_validation_manifest": "18795ad5338cdfd17f37ddf39b85aec377bbd531f3ee285cd10d9542d81ffac8",
+    "holdout_atomic_outcomes": "0ff9d5f088a94853585acd32bb34fc41ddc8ec553d036295c41346e9f475a7a3",
+    "holdout_scores": "184e0cbe893ea28f752c314a2c7659dd9b531295a33d143878b5f16720db51e2",
+    "dev_atomic_outcomes": "f1198ab7f9f8b5b0f5b465612ed490104be0266e3770e915475b8b5c8b6615d7",
+    "panel": "32fc2d81d7d9b5d114b94d88d5a797c1b3e7c93ce6f6c24466e8dedeb4b89f44",
+    "oof_c3": "07e0b606f48e0d14731e8b74923f23b521d72c91325cb14f41d790d214e13efa",
+    "oof_g2": "f347d5f0ecba999f7e0af8f11335821379b6aa758fbedea1e5095cbf01e549dd",
+    "design_freeze": "bd300cb459049ee34b634b086b97abc7eeccdc727ed15b78d96f1fbfe035d405",
+    "final_greenfield": "c573b8e26c33733ff5043a15329f8d215df342fc78ea47d0f3afadd934df68ee",
+    "final_profit_validation": "42f2caa9c6fe5e3c9579ed7b90651a1c5dd1f7cc047b3d8481da7450aa3557e0"
+  },
+  "g2_oof_sha256": "f347d5f0ecba999f7e0af8f11335821379b6aa758fbedea1e5095cbf01e549dd",
+  "c3_oof_sha256": "07e0b606f48e0d14731e8b74923f23b521d72c91325cb14f41d790d214e13efa",
+  "holdout_bounds": {
+    "n_rows": 480,
+    "decision_time_min": 1775187979,
+    "decision_time_max": 1782804387,
+    "n_pools": 164
+  },
+  "addresses": {
+    "factory": "0x33128a8fC17869897dcE68Ed026d694621f6FDfD",
+    "router": "0x2626664c2603336E57B271c5C0b26F421741e481",
+    "quoter": "0x3d4e44Eb1374240CE5F1B871ab261CD16335B76a",
+    "weth": "0x4200000000000000000000000000000000000006",
+    "executor": "0x4B7cd953871663474a0A25B81bddDf5C1f1195A7"
+  },
+  "archive_rpc": {
+    "A_url_sha256": "0b98445d8abca769ef04d3df92f47c07b9b84b6bbffcd882f32696f3349644d2",
+    "B_url_sha256": null,
+    "B_available": false
+  },
+  "pnl_semantics": {
+    "ENTRY_PREFLIGHT_REJECT": "pnl_weth=0 (not a filled loss)",
+    "ENTRY_TX_REVERT": "pnl_weth=-buy_gas_weth",
+    "BUY_SUCCESS+SELL_SUCCESS": "weth_out - weth_in - gas",
+    "BUY_SUCCESS+PERMANENT_UNSELLABLE": "recoverable - weth_in - gas (~-amt_in)",
+    "total_pnl_weth": "wallet WETH delta, NOT sum(return)"
+  },
+  "status_taxonomy": {
+    "buy": [
+      "BUY_PREFLIGHT_PASS",
+      "BUY_TX_SUCCESS",
+      "ENTRY_PREFLIGHT_REJECT",
+      "ENTRY_TX_REVERT",
+      "INFRASTRUCTURE_UNKNOWN"
+    ],
+    "exit": [
+      "EXIT_SUCCESS",
+      "EXIT_TEMP_FAIL_RECOVERED",
+      "EXIT_PERMANENT_UNSELLABLE",
+      "EXIT_INFRASTRUCTURE_UNKNOWN"
+    ]
+  },
+  "audit_code_sha256": "c051df0f3ed52fb061d074abbd1660761d6979cdbc330556fdd7832bbfdf21c0",
+  "amt_in_wei": 16666666666666666,
+  "wallet": {
+    "initial_weth": 0.5,
+    "max_concurrent": 3,
+    "max_position_eth": 0.016666666666666666
+  },
+  "label": "HOLDOUT_MEASUREMENT_REPAIR_DIAGNOSTIC",
+  "deploy_allowed": false,
+  "manifest_refreshed_utc": "2026-07-20T07:25:45Z"
+}

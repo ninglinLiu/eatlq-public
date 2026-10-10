@@ -1,0 +1,36 @@
+{
+  "strategy_id": "F06_REV_SILENCE_FIRST_TRADE",
+  "family": "F06",
+  "name": "First trade after silence",
+  "parameter_search_space": {
+    "G_min": [
+      1800,
+      3600,
+      7200
+    ],
+    "min_eth": [
+      0.2,
+      0.5,
+      1.0
+    ],
+    "hold_sec": [
+      300,
+      900
+    ],
+    "stop_ret": [
+      0.1,
+      0.2
+    ],
+    "tp_ret": [
+      0.1,
+      0.2
+    ]
+  },
+  "param_combo_count": 72,
+  "access_flags": {
+    "database_access_enabled": false,
+    "rpc_access_enabled": false,
+    "large_file_access_enabled": false,
+    "backtest_enabled": false
+  }
+}

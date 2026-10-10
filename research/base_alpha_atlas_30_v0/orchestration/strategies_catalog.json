@@ -1,0 +1,3284 @@
+[
+  {
+    "strategy_id": "F01_OFS_SIGN_RUNLEN",
+    "family": "F01",
+    "family_name": "Order-flow sequence & microstructure",
+    "name": "Signed-trade run-length persistence",
+    "economic_mechanism": "Continuation after unusually long same-sign trade runs; counterparty is short-horizon mean-reverters fading runs.",
+    "counterparty": "liquidity_providers_and_fade_traders",
+    "universe": "Base UniswapV3 WETH pairs with >= N swaps in lookback; exclude fee-tier unknowns.",
+    "observation_time": "swap event time t (block_time); decision on bar close after run completes",
+    "feature_available_at": "feature_available_at = max(swap.block_time of last trade in run, bar_close_time); no future swaps",
+    "exact_feature_formulas": {
+      "sign_i": "sign(amount_in_weth_of_swap_i) with +1 buy token with WETH, -1 sell token for WETH",
+      "run_len_t": "largest k s.t. sign_{t-k+1..t} all equal",
+      "run_len_z": "(run_len_t - mean(run_len_{t-L..t-1})) / (std(run_len_{t-L..t-1})+eps)",
+      "run_notional_eth": "sum(|amount_weth|) over the current run"
+    },
+    "parameter_search_space": {
+      "L_bars": [
+        60,
+        120,
+        240
+      ],
+      "z_enter": [
+        1.5,
+        2.0,
+        2.5
+      ],
+      "min_run_notional_eth": [
+        0.3,
+        1.0
+      ],
+      "hold_bars": [
+        3,
+        6,
+        12
+      ],
+      "stop_ret": [
+        0.08,
+        0.15
+      ]
+    },
+    "param_combo_count": 108,
+    "entry": "BUY token if run_sign=+1 and run_len_z>=z_enter and run_notional_eth>=min; SELL/short-token proxy = flatten-only (long-only atlas default: enter long only on +1 runs)",
+    "execution_delay": "1 bar (or +1 block if event-time mode)",
+    "position_size": "fixed_usd in {50,100} search later; design default notional_usd grid {50,100}",
+    "exit": "time exit at hold_bars OR stop OR take_profit",
+    "stop": "close if ret_from_entry <= -stop_ret",
+    "take_profit": "close if ret_from_entry >= tp_ret where tp_ret search {0.10,0.20}",
+    "maximum_hold": "hold_bars",
+    "repeat_entry": "no re-entry while position open; after exit wait cooldown_bars",
+    "cooldown": "cooldown_bars in {6,12}",
+    "cost_model": {
+      "gas": "UNKNOWN_UNTIL_CALIBRATED | placeholder_search_usd_per_roundtrip in {0.05,0.15,0.40}",
+      "protocol_fee": "pool_fee_tier_bps * notional (known from pool metadata when available)",
+      "lp_fee": "included in fee_tier unless separated",
+      "slippage": "UNKNOWN_UNTIL_CALIBRATED | stress multipliers {1.0,1.5,2.5} on quoted impact",
+      "price_impact": "f(notional, depth_proxy); UNKNOWN if depth missing",
+      "mev": "UNKNOWN_UNTIL_CALIBRATED | additive stress_usd in {0,0.05,0.20}",
+      "revert": "P_revert search {0.01,0.05,0.15}; cost = P_revert * gas_usd",
+      "failed_sell": "P_fail_sell search {0.02,0.10,0.25}; residual inventory marked at stress exit",
+      "quote_latency_ms": "execution_delay_bars * bar_seconds * 1000",
+      "broadcast_latency_ms": "UNKNOWN_UNTIL_CALIBRATED"
+    },
+    "failure_handling": {
+      "missing_feature": "skip_signal",
+      "unknown_cost_field": "do_not_treat_as_zero; mark INCONCLUSIVE_COST",
+      "no_sell_quote": "force flat mark with failed_sell stress; no phantom fill",
+      "partial_history": "exclude pool from fold"
+    },
+    "main_falsification": "label shuffle of forward returns conditional on run_len_z; destroy edge if only from top 1% runs",
+    "difference_from_prior_failed_strategies": "Not net-flow chase: requires run-length z-score vs own history, not unsigned volume spike.",
+    "data_class": "B_SMALL_BOUNDED_EXPORT_REQUIRED",
+    "required_tables_or_files": [
+      "uniswap_v3_swaps_decoded or offline swap TSV",
+      "pool metadata"
+    ],
+    "required_columns": [
+      "pool_address",
+      "block_time",
+      "amount0",
+      "amount1",
+      "tick",
+      "tx_from"
+    ],
+    "required_time_resolution": "swap-event or 1m bars built from swaps",
+    "point_in_time_requirements": "features use only swaps with block_time<=decision_time",
+    "minimum_history": ">=14d active pools",
+    "estimated_rows": "~1e6-1e7 swap rows bounded export",
+    "estimated_read_bytes": "200MB-2GB bounded",
+    "whether_current_diagnostics_may_support_it": "maybe: base_b5_real_swaps_*.tsv / gl* swap extracts by name",
+    "whether_production_database_would_be_required": true,
+    "missing_data": [
+      "signed WETH orientation table",
+      "calibrated cost distribution"
+    ],
+    "scores": {
+      "economic_plausibility": 4,
+      "novelty": 4,
+      "data_readiness": 3,
+      "expected_gross_edge_required": 3,
+      "execution_feasibility": 3,
+      "capacity": 3,
+      "lookahead_risk": 2,
+      "overfitting_risk": 3,
+      "live_conflict_risk": 4,
+      "estimated_compute_cost": 3
+    },
+    "live_conflict_note": "Different from KEYSTONE p_fatal ML age-window; still same venues \u2192 deploy conflict if shared wallet.",
+    "universe_overlap_with_live": "PARTIAL_SAME_BASE_V3_WETH_POOLS",
+    "time_horizon_overlap": "VARIES",
+    "capital_overlap": "WOULD_SHARE_WALLET_IF_DEPLOYED_HENCE_NOT_DEPLOYABLE_WITH_LIVE",
+    "nonce_overlap_risk": "HIGH_IF_SAME_WALLET",
+    "rpc_overlap_risk": "MEDIUM_IF_SHARED_ENDPOINT",
+    "position_conflict_risk": "HIGH_IF_SAME_POOL",
+    "execution_conflict_risk": "HIGH_IF_SAME_EXECUTOR"
+  },
+  {
+    "strategy_id": "F01_OFS_SIZE_SEQUENCE",
+    "family": "F01",
+    "family_name": "Order-flow sequence & microstructure",
+    "name": "Large-then-small size sequence toxicity",
+    "economic_mechanism": "After a large signed trade, a burst of tiny same-sign trades indicates informed follow-through vs spoof-like fade.",
+    "counterparty": "uninformed_retail_and_LP",
+    "universe": "V3 WETH pools with trade count>=M in 15m",
+    "observation_time": "t = time of first small trade after large seed trade",
+    "feature_available_at": "all trades in windows ending at t only",
+    "exact_feature_formulas": {
+      "size_eth_i": "|weth_amount_i|",
+      "large_flag_i": "size_eth_i >= Q_p(size_eth, lookback) with p in search",
+      "seq_score": "1 if exists large_+ then >=k small_+ within dt_sec else 0",
+      "opp_fade": "count opposite-sign within dt_sec after large"
+    },
+    "parameter_search_space": {
+      "p_large": [
+        0.9,
+        0.95
+      ],
+      "k_small": [
+        3,
+        5,
+        8
+      ],
+      "dt_sec": [
+        30,
+        60,
+        120
+      ],
+      "max_opp_fade": [
+        0,
+        1
+      ],
+      "hold_sec": [
+        120,
+        300
+      ]
+    },
+    "param_combo_count": 72,
+    "entry": "Enter long token if seq_score=1 and opp_fade<=max_opp_fade and large sign = +1",
+    "execution_delay": "delay_sec in {2,5} mapped to next bar",
+    "position_size": "notional_usd grid {50,100}",
+    "exit": "exit at hold_sec or stop/tp",
+    "stop": "ret<=-stop_ret stop_ret in {0.08,0.12}",
+    "take_profit": "ret>=tp_ret tp_ret in {0.12,0.20}",
+    "maximum_hold": "hold_sec",
+    "repeat_entry": "one entry per large-seed event",
+    "cooldown": "cooldown_sec in {300,600}",
+    "cost_model": {
+      "gas": "UNKNOWN_UNTIL_CALIBRATED | placeholder_search_usd_per_roundtrip in {0.05,0.15,0.40}",
+      "protocol_fee": "pool_fee_tier_bps * notional (known from pool metadata when available)",
+      "lp_fee": "included in fee_tier unless separated",
+      "slippage": "UNKNOWN_UNTIL_CALIBRATED | stress multipliers {1.0,1.5,2.5} on quoted impact",
+      "price_impact": "f(notional, depth_proxy); UNKNOWN if depth missing",
+      "mev": "UNKNOWN_UNTIL_CALIBRATED | additive stress_usd in {0,0.05,0.20}",
+      "revert": "P_revert search {0.01,0.05,0.15}; cost = P_revert * gas_usd",
+      "failed_sell": "P_fail_sell search {0.02,0.10,0.25}; residual inventory marked at stress exit",
+      "quote_latency_ms": "execution_delay_bars * bar_seconds * 1000",
+      "broadcast_latency_ms": "UNKNOWN_UNTIL_CALIBRATED"
+    },
+    "failure_handling": {
+      "missing_feature": "skip_signal",
+      "unknown_cost_field": "do_not_treat_as_zero; mark INCONCLUSIVE_COST",
+      "no_sell_quote": "force flat mark with failed_sell stress; no phantom fill",
+      "partial_history": "exclude pool from fold"
+    },
+    "main_falsification": "permute trade sizes within window keeping signs; edge should vanish",
+    "difference_from_prior_failed_strategies": "Uses ordered size transition, not aggregate buy_pressure_ratio used in older LASZLO features.",
+    "data_class": "B_SMALL_BOUNDED_EXPORT_REQUIRED",
+    "required_tables_or_files": [
+      "uniswap_v3_swaps_decoded"
+    ],
+    "required_columns": [
+      "pool_address",
+      "block_time",
+      "amount0",
+      "amount1",
+      "log_index"
+    ],
+    "required_time_resolution": "event-time swaps",
+    "point_in_time_requirements": "strict event order by (block_time, log_index)",
+    "minimum_history": ">=14d",
+    "estimated_rows": "~1e6-1e7",
+    "estimated_read_bytes": "200MB-2GB",
+    "whether_current_diagnostics_may_support_it": "maybe via existing swap TSV names",
+    "whether_production_database_would_be_required": true,
+    "missing_data": [
+      "reliable WETH side mapping"
+    ],
+    "scores": {
+      "economic_plausibility": 4,
+      "novelty": 5,
+      "data_readiness": 3,
+      "expected_gross_edge_required": 3,
+      "execution_feasibility": 3,
+      "capacity": 2,
+      "lookahead_risk": 2,
+      "overfitting_risk": 3,
+      "live_conflict_risk": 4,
+      "estimated_compute_cost": 3
+    },
+    "live_conflict_note": "Mechanism \u2260 KEYSTONE features; execution conflict if co-deployed.",
+    "universe_overlap_with_live": "PARTIAL_SAME_BASE_V3_WETH_POOLS",
+    "time_horizon_overlap": "VARIES",
+    "capital_overlap": "WOULD_SHARE_WALLET_IF_DEPLOYED_HENCE_NOT_DEPLOYABLE_WITH_LIVE",
+    "nonce_overlap_risk": "HIGH_IF_SAME_WALLET",
+    "rpc_overlap_risk": "MEDIUM_IF_SHARED_ENDPOINT",
+    "position_conflict_risk": "HIGH_IF_SAME_POOL",
+    "execution_conflict_risk": "HIGH_IF_SAME_EXECUTOR"
+  },
+  {
+    "strategy_id": "F01_OFS_INTERARRIVAL",
+    "family": "F01",
+    "family_name": "Order-flow sequence & microstructure",
+    "name": "Inter-arrival compression continuation",
+    "economic_mechanism": "Sudden compression of trade inter-arrival times predicts short-horizon continuation of the dominant sign in the compressed window.",
+    "counterparty": "slower_market_makers",
+    "universe": "pools with >=20 swaps in 1h",
+    "observation_time": "bar close each 1m",
+    "feature_available_at": "inter-arrival stats from swaps with time<=bar_close",
+    "exact_feature_formulas": {
+      "ia_i": "t_i - t_{i-1}",
+      "ia_med_L": "median(ia) over last L swaps",
+      "ia_med_S": "median(ia) over last S swaps, S<L",
+      "compress_ratio": "ia_med_L / (ia_med_S+eps)",
+      "dom_sign": "sign of sum(sign_i) over last S swaps"
+    },
+    "parameter_search_space": {
+      "L": [
+        50,
+        100
+      ],
+      "S": [
+        5,
+        10
+      ],
+      "compress_min": [
+        2.0,
+        3.0,
+        4.0
+      ],
+      "hold_bars": [
+        2,
+        5,
+        10
+      ],
+      "stop_ret": [
+        0.07,
+        0.12
+      ]
+    },
+    "param_combo_count": 72,
+    "entry": "long if compress_ratio>=compress_min and dom_sign=+1",
+    "execution_delay": "1 bar",
+    "position_size": "notional_usd {50,100}",
+    "exit": "time/stop/tp",
+    "stop": "ret<=-stop_ret",
+    "take_profit": "tp_ret in {0.08,0.15}",
+    "maximum_hold": "hold_bars",
+    "repeat_entry": "no overlap positions per pool",
+    "cooldown": "cooldown_bars {5,10}",
+    "cost_model": {
+      "gas": "UNKNOWN_UNTIL_CALIBRATED | placeholder_search_usd_per_roundtrip in {0.05,0.15,0.40}",
+      "protocol_fee": "pool_fee_tier_bps * notional (known from pool metadata when available)",
+      "lp_fee": "included in fee_tier unless separated",
+      "slippage": "UNKNOWN_UNTIL_CALIBRATED | stress multipliers {1.0,1.5,2.5} on quoted impact",
+      "price_impact": "f(notional, depth_proxy); UNKNOWN if depth missing",
+      "mev": "UNKNOWN_UNTIL_CALIBRATED | additive stress_usd in {0,0.05,0.20}",
+      "revert": "P_revert search {0.01,0.05,0.15}; cost = P_revert * gas_usd",
+      "failed_sell": "P_fail_sell search {0.02,0.10,0.25}; residual inventory marked at stress exit",
+      "quote_latency_ms": "execution_delay_bars * bar_seconds * 1000",
+      "broadcast_latency_ms": "UNKNOWN_UNTIL_CALIBRATED"
+    },
+    "failure_handling": {
+      "missing_feature": "skip_signal",
+      "unknown_cost_field": "do_not_treat_as_zero; mark INCONCLUSIVE_COST",
+      "no_sell_quote": "force flat mark with failed_sell stress; no phantom fill",
+      "partial_history": "exclude pool from fold"
+    },
+    "main_falsification": "time-warp inter-arrivals (shuffle gaps); edge must die",
+    "difference_from_prior_failed_strategies": "Not activity_heat count; uses gap compression ratio.",
+    "data_class": "B_SMALL_BOUNDED_EXPORT_REQUIRED",
+    "required_tables_or_files": [
+      "uniswap_v3_swaps_decoded"
+    ],
+    "required_columns": [
+      "pool_address",
+      "block_time",
+      "amount0",
+      "amount1"
+    ],
+    "required_time_resolution": "1m from swaps",
+    "point_in_time_requirements": "PIT bar_close",
+    "minimum_history": ">=14d",
+    "estimated_rows": "~1e6+",
+    "estimated_read_bytes": "200MB+",
+    "whether_current_diagnostics_may_support_it": "maybe",
+    "whether_production_database_would_be_required": true,
+    "missing_data": [
+      "stable 1m builder"
+    ],
+    "scores": {
+      "economic_plausibility": 3,
+      "novelty": 4,
+      "data_readiness": 3,
+      "expected_gross_edge_required": 3,
+      "execution_feasibility": 3,
+      "capacity": 3,
+      "lookahead_risk": 2,
+      "overfitting_risk": 3,
+      "live_conflict_risk": 4,
+      "estimated_compute_cost": 2
+    },
+    "live_conflict_note": "Orthogonal to KEYSTONE fatal classifier.",
+    "universe_overlap_with_live": "PARTIAL_SAME_BASE_V3_WETH_POOLS",
+    "time_horizon_overlap": "VARIES",
+    "capital_overlap": "WOULD_SHARE_WALLET_IF_DEPLOYED_HENCE_NOT_DEPLOYABLE_WITH_LIVE",
+    "nonce_overlap_risk": "HIGH_IF_SAME_WALLET",
+    "rpc_overlap_risk": "MEDIUM_IF_SHARED_ENDPOINT",
+    "position_conflict_risk": "HIGH_IF_SAME_POOL",
+    "execution_conflict_risk": "HIGH_IF_SAME_EXECUTOR"
+  },
+  {
+    "strategy_id": "F02_LP_POST_MINT_DRIFT",
+    "family": "F02",
+    "family_name": "LP & liquidity events",
+    "name": "Post-mint short-horizon drift",
+    "economic_mechanism": "Large liquidity mints temporarily improve executable depth; subsequent informed flow may drift price before inventory adjusts.",
+    "counterparty": "LPs_providing_inventory",
+    "universe": "V3 pools with decoded mints",
+    "observation_time": "mint event time",
+    "feature_available_at": "mint row known_at; price path only after mint",
+    "exact_feature_formulas": {
+      "mint_eth_proxy": "abs(amount0/1) mapped to WETH side when possible else UNKNOWN",
+      "mint_z": "zscore(mint_eth_proxy vs prior 24h mints)",
+      "fwd_ret_h": "px(t+h)/px(t)-1 using mid from ticks/swaps"
+    },
+    "parameter_search_space": {
+      "mint_z_min": [
+        1.0,
+        1.5,
+        2.0
+      ],
+      "h_bars": [
+        5,
+        15,
+        30
+      ],
+      "stop_ret": [
+        0.1,
+        0.2
+      ],
+      "tp_ret": [
+        0.08,
+        0.15
+      ],
+      "min_mint_eth": [
+        0.5,
+        2.0
+      ]
+    },
+    "param_combo_count": 72,
+    "entry": "long if mint_z>=mint_z_min and mint_eth_proxy>=min and subsequent 1st swap sign not forced (no lookahead)",
+    "execution_delay": "delay 1 bar after mint confirmation",
+    "position_size": "notional_usd {50,100}",
+    "exit": "exit h_bars/stop/tp",
+    "stop": "ret<=-stop_ret",
+    "take_profit": "ret>=tp_ret",
+    "maximum_hold": "h_bars",
+    "repeat_entry": "max 1 open per pool",
+    "cooldown": "cooldown 30 bars",
+    "cost_model": {
+      "gas": "UNKNOWN_UNTIL_CALIBRATED | placeholder_search_usd_per_roundtrip in {0.05,0.15,0.40}",
+      "protocol_fee": "pool_fee_tier_bps * notional (known from pool metadata when available)",
+      "lp_fee": "included in fee_tier unless separated",
+      "slippage": "UNKNOWN_UNTIL_CALIBRATED | stress multipliers {1.0,1.5,2.5} on quoted impact",
+      "price_impact": "f(notional, depth_proxy); UNKNOWN if depth missing",
+      "mev": "UNKNOWN_UNTIL_CALIBRATED | additive stress_usd in {0,0.05,0.20}",
+      "revert": "P_revert search {0.01,0.05,0.15}; cost = P_revert * gas_usd",
+      "failed_sell": "P_fail_sell search {0.02,0.10,0.25}; residual inventory marked at stress exit",
+      "quote_latency_ms": "execution_delay_bars * bar_seconds * 1000",
+      "broadcast_latency_ms": "UNKNOWN_UNTIL_CALIBRATED"
+    },
+    "failure_handling": {
+      "missing_feature": "skip_signal",
+      "unknown_cost_field": "do_not_treat_as_zero; mark INCONCLUSIVE_COST",
+      "no_sell_quote": "force flat mark with failed_sell stress; no phantom fill",
+      "partial_history": "exclude pool from fold"
+    },
+    "main_falsification": "randomize mint timestamps within day; edge gone",
+    "difference_from_prior_failed_strategies": "Event-study on mint, not unsigned 'liquidity improved' narrative.",
+    "data_class": "B_SMALL_BOUNDED_EXPORT_REQUIRED",
+    "required_tables_or_files": [
+      "uniswap_v3_mints_decoded",
+      "uniswap_v3_swaps_decoded"
+    ],
+    "required_columns": [
+      "pool_address",
+      "block_time",
+      "amount0",
+      "amount1",
+      "tick_lower",
+      "tick_upper"
+    ],
+    "required_time_resolution": "event + 1m",
+    "point_in_time_requirements": "mint before entry; no future mints",
+    "minimum_history": ">=30d",
+    "estimated_rows": "mints ~1e5-1e6; swaps larger",
+    "estimated_read_bytes": "100MB-1GB",
+    "whether_current_diagnostics_may_support_it": "uncertain; mint tables named in docs",
+    "whether_production_database_would_be_required": true,
+    "missing_data": [
+      "WETH-normalized mint size"
+    ],
+    "scores": {
+      "economic_plausibility": 3,
+      "novelty": 3,
+      "data_readiness": 2,
+      "expected_gross_edge_required": 3,
+      "execution_feasibility": 3,
+      "capacity": 3,
+      "lookahead_risk": 2,
+      "overfitting_risk": 3,
+      "live_conflict_risk": 3,
+      "estimated_compute_cost": 3
+    },
+    "live_conflict_note": "Not KEYSTONE entry window logic.",
+    "universe_overlap_with_live": "PARTIAL_SAME_BASE_V3_WETH_POOLS",
+    "time_horizon_overlap": "VARIES",
+    "capital_overlap": "WOULD_SHARE_WALLET_IF_DEPLOYED_HENCE_NOT_DEPLOYABLE_WITH_LIVE",
+    "nonce_overlap_risk": "HIGH_IF_SAME_WALLET",
+    "rpc_overlap_risk": "MEDIUM_IF_SHARED_ENDPOINT",
+    "position_conflict_risk": "HIGH_IF_SAME_POOL",
+    "execution_conflict_risk": "HIGH_IF_SAME_EXECUTOR"
+  },
+  {
+    "strategy_id": "F02_LP_POST_BURN_PRESSURE",
+    "family": "F02",
+    "family_name": "LP & liquidity events",
+    "name": "Post-burn sell pressure",
+    "economic_mechanism": "Large burns reduce depth; residual inventory seekers sell into thinner book \u2192 negative drift.",
+    "counterparty": "remaining_LPs_and_holders",
+    "universe": "V3 pools with burns",
+    "observation_time": "burn event time",
+    "feature_available_at": "burn known_at",
+    "exact_feature_formulas": {
+      "burn_eth_proxy": "WETH-normalized burned liquidity proxy",
+      "burn_z": "zscore vs 24h burns",
+      "depth_proxy_drop": "1 - depth_after/depth_before if available else UNKNOWN"
+    },
+    "parameter_search_space": {
+      "burn_z_min": [
+        1.0,
+        2.0
+      ],
+      "hold_bars": [
+        5,
+        15,
+        30
+      ],
+      "stop_ret": [
+        0.1,
+        0.2
+      ],
+      "tp_ret": [
+        0.08,
+        0.15
+      ],
+      "min_burn_eth": [
+        0.5,
+        2.0
+      ]
+    },
+    "param_combo_count": 48,
+    "entry": "long-only atlas: enter SHORT-TOKEN via avoiding; design records SELL-token / flat-bias: open short-token synthetic = do not long; optional future short. For long-only: enter opposite pool? \u2192 specify: signal is BEARISH; strategy takes no long; paper metric tracks short mid. Implementation: side=SELL_SIGNAL_ONLY (no buy).",
+    "execution_delay": "1 bar",
+    "position_size": "0 USD long; tracks bearish mark-to-market for falsification only OR future short sleeve",
+    "exit": "signal horizon hold_bars",
+    "stop": "n/a long",
+    "take_profit": "n/a long",
+    "maximum_hold": "hold_bars",
+    "repeat_entry": "n/a",
+    "cooldown": "cooldown 30 bars",
+    "cost_model": {
+      "gas": "UNKNOWN_UNTIL_CALIBRATED | placeholder_search_usd_per_roundtrip in {0.05,0.15,0.40}",
+      "protocol_fee": "pool_fee_tier_bps * notional (known from pool metadata when available)",
+      "lp_fee": "included in fee_tier unless separated",
+      "slippage": "UNKNOWN_UNTIL_CALIBRATED | stress multipliers {1.0,1.5,2.5} on quoted impact",
+      "price_impact": "f(notional, depth_proxy); UNKNOWN if depth missing",
+      "mev": "UNKNOWN_UNTIL_CALIBRATED | additive stress_usd in {0,0.05,0.20}",
+      "revert": "P_revert search {0.01,0.05,0.15}; cost = P_revert * gas_usd",
+      "failed_sell": "P_fail_sell search {0.02,0.10,0.25}; residual inventory marked at stress exit",
+      "quote_latency_ms": "execution_delay_bars * bar_seconds * 1000",
+      "broadcast_latency_ms": "UNKNOWN_UNTIL_CALIBRATED"
+    },
+    "failure_handling": {
+      "missing_feature": "skip_signal",
+      "unknown_cost_field": "do_not_treat_as_zero; mark INCONCLUSIVE_COST",
+      "no_sell_quote": "force flat mark with failed_sell stress; no phantom fill",
+      "partial_history": "exclude pool from fold"
+    },
+    "main_falsification": "burn size shuffle",
+    "difference_from_prior_failed_strategies": "Opposite of mint-drift; burn-specific.",
+    "data_class": "B_SMALL_BOUNDED_EXPORT_REQUIRED",
+    "required_tables_or_files": [
+      "uniswap_v3_burns_decoded",
+      "swaps"
+    ],
+    "required_columns": [
+      "pool_address",
+      "block_time",
+      "amount0",
+      "amount1"
+    ],
+    "required_time_resolution": "event+1m",
+    "point_in_time_requirements": "PIT",
+    "minimum_history": ">=30d",
+    "estimated_rows": "~1e5-1e6",
+    "estimated_read_bytes": "100MB-1GB",
+    "whether_current_diagnostics_may_support_it": "uncertain",
+    "whether_production_database_would_be_required": true,
+    "missing_data": [
+      "short execution path not in live executor buy-focused"
+    ],
+    "scores": {
+      "economic_plausibility": 3,
+      "novelty": 3,
+      "data_readiness": 2,
+      "expected_gross_edge_required": 3,
+      "execution_feasibility": 2,
+      "capacity": 3,
+      "lookahead_risk": 2,
+      "overfitting_risk": 3,
+      "live_conflict_risk": 2,
+      "estimated_compute_cost": 3
+    },
+    "live_conflict_note": "Bearish signal sleeve; low live buy conflict but still research-only.",
+    "universe_overlap_with_live": "PARTIAL_SAME_BASE_V3_WETH_POOLS",
+    "time_horizon_overlap": "VARIES",
+    "capital_overlap": "WOULD_SHARE_WALLET_IF_DEPLOYED_HENCE_NOT_DEPLOYABLE_WITH_LIVE",
+    "nonce_overlap_risk": "HIGH_IF_SAME_WALLET",
+    "rpc_overlap_risk": "MEDIUM_IF_SHARED_ENDPOINT",
+    "position_conflict_risk": "HIGH_IF_SAME_POOL",
+    "execution_conflict_risk": "HIGH_IF_SAME_EXECUTOR"
+  },
+  {
+    "strategy_id": "F02_LP_DEPTH_LEAD",
+    "family": "F02",
+    "family_name": "LP & liquidity events",
+    "name": "Depth thinning leads returns",
+    "economic_mechanism": "Measurable depth proxy declines before adverse selection; trade mean-reversion or momentum per sign of thinning.",
+    "counterparty": "toxic_takers",
+    "universe": "pools with mint/burn/swap to proxy depth",
+    "observation_time": "1m bars",
+    "feature_available_at": "depth_proxy from events <= bar_close",
+    "exact_feature_formulas": {
+      "depth_proxy_t": "cum_mints_eth - cum_burns_eth + baseline (UNKNOWN if incomplete)",
+      "thin_rate": "(depth_{t-w}-depth_t)/(abs(depth_{t-w})+eps)",
+      "ret_1m": "px_t/px_{t-1}-1"
+    },
+    "parameter_search_space": {
+      "w": [
+        5,
+        15,
+        30
+      ],
+      "thin_min": [
+        0.1,
+        0.2,
+        0.35
+      ],
+      "hold": [
+        5,
+        15
+      ],
+      "stop_ret": [
+        0.1,
+        0.15
+      ],
+      "mode": [
+        0,
+        1
+      ]
+    },
+    "param_combo_count": 72,
+    "entry": "if mode=0 fade thinning (long after thin if ret_1m<0); if mode=1 momentum (long if thin and ret_1m>0). mode is structural arm, not free continuous param spam.",
+    "execution_delay": "1 bar",
+    "position_size": "notional {50,100}",
+    "exit": "hold/stop/tp",
+    "stop": "ret<=-stop_ret",
+    "take_profit": "tp in {0.08,0.15}",
+    "maximum_hold": "hold",
+    "repeat_entry": "no overlap",
+    "cooldown": "10 bars",
+    "cost_model": {
+      "gas": "UNKNOWN_UNTIL_CALIBRATED | placeholder_search_usd_per_roundtrip in {0.05,0.15,0.40}",
+      "protocol_fee": "pool_fee_tier_bps * notional (known from pool metadata when available)",
+      "lp_fee": "included in fee_tier unless separated",
+      "slippage": "UNKNOWN_UNTIL_CALIBRATED | stress multipliers {1.0,1.5,2.5} on quoted impact",
+      "price_impact": "f(notional, depth_proxy); UNKNOWN if depth missing",
+      "mev": "UNKNOWN_UNTIL_CALIBRATED | additive stress_usd in {0,0.05,0.20}",
+      "revert": "P_revert search {0.01,0.05,0.15}; cost = P_revert * gas_usd",
+      "failed_sell": "P_fail_sell search {0.02,0.10,0.25}; residual inventory marked at stress exit",
+      "quote_latency_ms": "execution_delay_bars * bar_seconds * 1000",
+      "broadcast_latency_ms": "UNKNOWN_UNTIL_CALIBRATED"
+    },
+    "failure_handling": {
+      "missing_feature": "skip_signal",
+      "unknown_cost_field": "do_not_treat_as_zero; mark INCONCLUSIVE_COST",
+      "no_sell_quote": "force flat mark with failed_sell stress; no phantom fill",
+      "partial_history": "exclude pool from fold"
+    },
+    "main_falsification": "placebo depth from shuffled mint/burn",
+    "difference_from_prior_failed_strategies": "Lead-lag depth\u2192price, not 'liquidity improved' slogan.",
+    "data_class": "C_PRODUCTION_DB_HEAVY",
+    "required_tables_or_files": [
+      "mints",
+      "burns",
+      "swaps",
+      "optional ticks"
+    ],
+    "required_columns": [
+      "pool_address",
+      "block_time",
+      "amounts",
+      "liquidity if present"
+    ],
+    "required_time_resolution": "1m",
+    "point_in_time_requirements": "PIT",
+    "minimum_history": ">=30d",
+    "estimated_rows": "multi-table join heavy",
+    "estimated_read_bytes": ">2GB likely",
+    "whether_current_diagnostics_may_support_it": "unlikely complete offline",
+    "whether_production_database_would_be_required": true,
+    "missing_data": [
+      "true depth/tick bitmap"
+    ],
+    "scores": {
+      "economic_plausibility": 4,
+      "novelty": 4,
+      "data_readiness": 1,
+      "expected_gross_edge_required": 3,
+      "execution_feasibility": 2,
+      "capacity": 3,
+      "lookahead_risk": 3,
+      "overfitting_risk": 4,
+      "live_conflict_risk": 3,
+      "estimated_compute_cost": 5
+    },
+    "live_conflict_note": "Heavy data; parked from Wave1.",
+    "universe_overlap_with_live": "PARTIAL_SAME_BASE_V3_WETH_POOLS",
+    "time_horizon_overlap": "VARIES",
+    "capital_overlap": "WOULD_SHARE_WALLET_IF_DEPLOYED_HENCE_NOT_DEPLOYABLE_WITH_LIVE",
+    "nonce_overlap_risk": "HIGH_IF_SAME_WALLET",
+    "rpc_overlap_risk": "MEDIUM_IF_SHARED_ENDPOINT",
+    "position_conflict_risk": "HIGH_IF_SAME_POOL",
+    "execution_conflict_risk": "HIGH_IF_SAME_EXECUTOR"
+  },
+  {
+    "strategy_id": "F03_VOL_COMPRESS_EXPAND",
+    "family": "F03",
+    "family_name": "Volatility regime transitions",
+    "name": "Volatility compression then expansion",
+    "economic_mechanism": "Low realized vol regimes store energy; breakout expansion continues briefly.",
+    "counterparty": "option-like_speculators",
+    "universe": "pools with continuous 1m prices >= H hours/day",
+    "observation_time": "1m close",
+    "feature_available_at": "vol from past returns only",
+    "exact_feature_formulas": {
+      "r_t": "log px_t - log px_{t-1}",
+      "rv_s": "sqrt(sum r^2 over s bars)",
+      "rv_l": "sqrt(sum r^2 over l bars)",
+      "compress": "rv_s/rv_l",
+      "expand_flag": "rv_s_next_window / rv_s >= e_min computed without peek: use causal trigger rv_s_t / rv_s_{t-s} "
+    },
+    "parameter_search_space": {
+      "s": [
+        15,
+        30
+      ],
+      "l": [
+        120,
+        240
+      ],
+      "compress_max": [
+        0.35,
+        0.5
+      ],
+      "expand_min": [
+        1.5,
+        2.0
+      ],
+      "hold": [
+        10,
+        20
+      ]
+    },
+    "param_combo_count": 32,
+    "entry": "enter long in breakout direction sign(sum r over last s) when compress_max met then expand_min met",
+    "execution_delay": "1 bar after expand trigger",
+    "position_size": "notional {50,100}",
+    "exit": "hold/stop/tp",
+    "stop": "stop_ret {0.1,0.2}",
+    "take_profit": "tp {0.1,0.2}",
+    "maximum_hold": "hold",
+    "repeat_entry": "no overlap",
+    "cooldown": "20 bars",
+    "cost_model": {
+      "gas": "UNKNOWN_UNTIL_CALIBRATED | placeholder_search_usd_per_roundtrip in {0.05,0.15,0.40}",
+      "protocol_fee": "pool_fee_tier_bps * notional (known from pool metadata when available)",
+      "lp_fee": "included in fee_tier unless separated",
+      "slippage": "UNKNOWN_UNTIL_CALIBRATED | stress multipliers {1.0,1.5,2.5} on quoted impact",
+      "price_impact": "f(notional, depth_proxy); UNKNOWN if depth missing",
+      "mev": "UNKNOWN_UNTIL_CALIBRATED | additive stress_usd in {0,0.05,0.20}",
+      "revert": "P_revert search {0.01,0.05,0.15}; cost = P_revert * gas_usd",
+      "failed_sell": "P_fail_sell search {0.02,0.10,0.25}; residual inventory marked at stress exit",
+      "quote_latency_ms": "execution_delay_bars * bar_seconds * 1000",
+      "broadcast_latency_ms": "UNKNOWN_UNTIL_CALIBRATED"
+    },
+    "failure_handling": {
+      "missing_feature": "skip_signal",
+      "unknown_cost_field": "do_not_treat_as_zero; mark INCONCLUSIVE_COST",
+      "no_sell_quote": "force flat mark with failed_sell stress; no phantom fill",
+      "partial_history": "exclude pool from fold"
+    },
+    "main_falsification": "vol block bootstrap",
+    "difference_from_prior_failed_strategies": "Explicit compress\u2192expand state machine vs raw momentum.",
+    "data_class": "A_OFFLINE_DATA_LIKELY_AVAILABLE",
+    "required_tables_or_files": [
+      "OHLCV diagnostics or swap-derived 1m"
+    ],
+    "required_columns": [
+      "pool",
+      "bar_time",
+      "close",
+      "volume"
+    ],
+    "required_time_resolution": "1m",
+    "point_in_time_requirements": "PIT",
+    "minimum_history": ">=14d",
+    "estimated_rows": "bars ~1e6",
+    "estimated_read_bytes": "50-500MB",
+    "whether_current_diagnostics_may_support_it": "yes: sprint035e/f ohlcv* filenames",
+    "whether_production_database_would_be_required": false,
+    "missing_data": [
+      "uniform OHLCV coverage across pools"
+    ],
+    "scores": {
+      "economic_plausibility": 3,
+      "novelty": 2,
+      "data_readiness": 4,
+      "expected_gross_edge_required": 3,
+      "execution_feasibility": 4,
+      "capacity": 3,
+      "lookahead_risk": 2,
+      "overfitting_risk": 3,
+      "live_conflict_risk": 3,
+      "estimated_compute_cost": 2
+    },
+    "live_conflict_note": "Classic vol; not KEYSTONE meme fatal model.",
+    "universe_overlap_with_live": "PARTIAL_SAME_BASE_V3_WETH_POOLS",
+    "time_horizon_overlap": "VARIES",
+    "capital_overlap": "WOULD_SHARE_WALLET_IF_DEPLOYED_HENCE_NOT_DEPLOYABLE_WITH_LIVE",
+    "nonce_overlap_risk": "HIGH_IF_SAME_WALLET",
+    "rpc_overlap_risk": "MEDIUM_IF_SHARED_ENDPOINT",
+    "position_conflict_risk": "HIGH_IF_SAME_POOL",
+    "execution_conflict_risk": "HIGH_IF_SAME_EXECUTOR"
+  },
+  {
+    "strategy_id": "F03_VOL_JUMP_CONTINUE",
+    "family": "F03",
+    "family_name": "Volatility regime transitions",
+    "name": "Jump continuation",
+    "economic_mechanism": "Returns exceeding k*rv are jumps; test continuation vs reversal as separate arms (structural).",
+    "counterparty": "inventory_liquidators",
+    "universe": "same as F03 compress universe",
+    "observation_time": "1m",
+    "feature_available_at": "causal rv",
+    "exact_feature_formulas": {
+      "jump_flag": "|r_t| >= k * rv_l_{t-1}",
+      "jump_sign": "sign(r_t)"
+    },
+    "parameter_search_space": {
+      "k": [
+        3.0,
+        4.0,
+        5.0
+      ],
+      "l": [
+        60,
+        120
+      ],
+      "hold": [
+        3,
+        6,
+        12
+      ],
+      "arm": [
+        0,
+        1
+      ],
+      "stop_ret": [
+        0.1,
+        0.2
+      ]
+    },
+    "param_combo_count": 72,
+    "entry": "arm=0 continuation long if jump_sign=+1; arm=1 fade long if jump_sign=-1 (buy dip after down jump)",
+    "execution_delay": "1 bar",
+    "position_size": "notional {50,100}",
+    "exit": "hold/stop/tp",
+    "stop": "stop_ret",
+    "take_profit": "tp {0.08,0.15}",
+    "maximum_hold": "hold",
+    "repeat_entry": "one per jump",
+    "cooldown": "10 bars",
+    "cost_model": {
+      "gas": "UNKNOWN_UNTIL_CALIBRATED | placeholder_search_usd_per_roundtrip in {0.05,0.15,0.40}",
+      "protocol_fee": "pool_fee_tier_bps * notional (known from pool metadata when available)",
+      "lp_fee": "included in fee_tier unless separated",
+      "slippage": "UNKNOWN_UNTIL_CALIBRATED | stress multipliers {1.0,1.5,2.5} on quoted impact",
+      "price_impact": "f(notional, depth_proxy); UNKNOWN if depth missing",
+      "mev": "UNKNOWN_UNTIL_CALIBRATED | additive stress_usd in {0,0.05,0.20}",
+      "revert": "P_revert search {0.01,0.05,0.15}; cost = P_revert * gas_usd",
+      "failed_sell": "P_fail_sell search {0.02,0.10,0.25}; residual inventory marked at stress exit",
+      "quote_latency_ms": "execution_delay_bars * bar_seconds * 1000",
+      "broadcast_latency_ms": "UNKNOWN_UNTIL_CALIBRATED"
+    },
+    "failure_handling": {
+      "missing_feature": "skip_signal",
+      "unknown_cost_field": "do_not_treat_as_zero; mark INCONCLUSIVE_COST",
+      "no_sell_quote": "force flat mark with failed_sell stress; no phantom fill",
+      "partial_history": "exclude pool from fold"
+    },
+    "main_falsification": "sign flip of jumps",
+    "difference_from_prior_failed_strategies": "Jump definition mathematical; arms are explicit hypotheses.",
+    "data_class": "A_OFFLINE_DATA_LIKELY_AVAILABLE",
+    "required_tables_or_files": [
+      "OHLCV/swaps"
+    ],
+    "required_columns": [
+      "close",
+      "time",
+      "pool"
+    ],
+    "required_time_resolution": "1m",
+    "point_in_time_requirements": "PIT",
+    "minimum_history": ">=14d",
+    "estimated_rows": "~1e6",
+    "estimated_read_bytes": "50-500MB",
+    "whether_current_diagnostics_may_support_it": "yes ohlcv diagnostics names",
+    "whether_production_database_would_be_required": false,
+    "missing_data": [],
+    "scores": {
+      "economic_plausibility": 3,
+      "novelty": 3,
+      "data_readiness": 4,
+      "expected_gross_edge_required": 3,
+      "execution_feasibility": 4,
+      "capacity": 3,
+      "lookahead_risk": 2,
+      "overfitting_risk": 3,
+      "live_conflict_risk": 3,
+      "estimated_compute_cost": 2
+    },
+    "live_conflict_note": "Distinct from KEYSTONE.",
+    "universe_overlap_with_live": "PARTIAL_SAME_BASE_V3_WETH_POOLS",
+    "time_horizon_overlap": "VARIES",
+    "capital_overlap": "WOULD_SHARE_WALLET_IF_DEPLOYED_HENCE_NOT_DEPLOYABLE_WITH_LIVE",
+    "nonce_overlap_risk": "HIGH_IF_SAME_WALLET",
+    "rpc_overlap_risk": "MEDIUM_IF_SHARED_ENDPOINT",
+    "position_conflict_risk": "HIGH_IF_SAME_POOL",
+    "execution_conflict_risk": "HIGH_IF_SAME_EXECUTOR"
+  },
+  {
+    "strategy_id": "F03_VOL_FAKE_BREAK_FADE",
+    "family": "F03",
+    "family_name": "Volatility regime transitions",
+    "name": "Failed breakout fade",
+    "economic_mechanism": "Price closes beyond Donchian high then reverses within m bars back inside \u2192 fade.",
+    "counterparty": "breakout_chasers",
+    "universe": "OHLCV pools",
+    "observation_time": "1m",
+    "feature_available_at": "Donchian from past only",
+    "exact_feature_formulas": {
+      "don_hi": "max(high)_{t-n..t-1}",
+      "don_lo": "min(low)_{t-n..t-1}",
+      "break_up": "close_t > don_hi",
+      "fail": "break_up and min(close)_{t+1..t+m} < don_hi (evaluated at t+m without using >t+m)"
+    },
+    "parameter_search_space": {
+      "n": [
+        30,
+        60,
+        120
+      ],
+      "m": [
+        3,
+        5,
+        10
+      ],
+      "hold": [
+        5,
+        15
+      ],
+      "stop_ret": [
+        0.08,
+        0.12
+      ],
+      "tp_ret": [
+        0.06,
+        0.12
+      ]
+    },
+    "param_combo_count": 72,
+    "entry": "At confirmation time t+m when fail=True, enter short-token bearish mark / no long; long-only atlas records BEARISH_FADE signal quality. Optional: long if failed break_down symmetric.",
+    "execution_delay": "confirm at t+m, delay 1",
+    "position_size": "0 long or {50,100} on upside failed breakdown arm only",
+    "exit": "hold/stop/tp",
+    "stop": "stop_ret",
+    "take_profit": "tp_ret",
+    "maximum_hold": "hold",
+    "repeat_entry": "no overlap",
+    "cooldown": "n bars",
+    "cost_model": {
+      "gas": "UNKNOWN_UNTIL_CALIBRATED | placeholder_search_usd_per_roundtrip in {0.05,0.15,0.40}",
+      "protocol_fee": "pool_fee_tier_bps * notional (known from pool metadata when available)",
+      "lp_fee": "included in fee_tier unless separated",
+      "slippage": "UNKNOWN_UNTIL_CALIBRATED | stress multipliers {1.0,1.5,2.5} on quoted impact",
+      "price_impact": "f(notional, depth_proxy); UNKNOWN if depth missing",
+      "mev": "UNKNOWN_UNTIL_CALIBRATED | additive stress_usd in {0,0.05,0.20}",
+      "revert": "P_revert search {0.01,0.05,0.15}; cost = P_revert * gas_usd",
+      "failed_sell": "P_fail_sell search {0.02,0.10,0.25}; residual inventory marked at stress exit",
+      "quote_latency_ms": "execution_delay_bars * bar_seconds * 1000",
+      "broadcast_latency_ms": "UNKNOWN_UNTIL_CALIBRATED"
+    },
+    "failure_handling": {
+      "missing_feature": "skip_signal",
+      "unknown_cost_field": "do_not_treat_as_zero; mark INCONCLUSIVE_COST",
+      "no_sell_quote": "force flat mark with failed_sell stress; no phantom fill",
+      "partial_history": "exclude pool from fold"
+    },
+    "main_falsification": "path scramble inside window",
+    "difference_from_prior_failed_strategies": "Requires failure confirmation; not plain breakout.",
+    "data_class": "A_OFFLINE_DATA_LIKELY_AVAILABLE",
+    "required_tables_or_files": [
+      "OHLCV"
+    ],
+    "required_columns": [
+      "open",
+      "high",
+      "low",
+      "close",
+      "time"
+    ],
+    "required_time_resolution": "1m",
+    "point_in_time_requirements": "confirm uses only <=t+m",
+    "minimum_history": ">=14d",
+    "estimated_rows": "~1e6",
+    "estimated_read_bytes": "50-500MB",
+    "whether_current_diagnostics_may_support_it": "yes",
+    "whether_production_database_would_be_required": false,
+    "missing_data": [],
+    "scores": {
+      "economic_plausibility": 3,
+      "novelty": 3,
+      "data_readiness": 4,
+      "expected_gross_edge_required": 3,
+      "execution_feasibility": 3,
+      "capacity": 3,
+      "lookahead_risk": 3,
+      "overfitting_risk": 3,
+      "live_conflict_risk": 2,
+      "estimated_compute_cost": 2
+    },
+    "live_conflict_note": "Mostly bearish fade; low buy conflict with KEYSTONE.",
+    "universe_overlap_with_live": "PARTIAL_SAME_BASE_V3_WETH_POOLS",
+    "time_horizon_overlap": "VARIES",
+    "capital_overlap": "WOULD_SHARE_WALLET_IF_DEPLOYED_HENCE_NOT_DEPLOYABLE_WITH_LIVE",
+    "nonce_overlap_risk": "HIGH_IF_SAME_WALLET",
+    "rpc_overlap_risk": "MEDIUM_IF_SHARED_ENDPOINT",
+    "position_conflict_risk": "HIGH_IF_SAME_POOL",
+    "execution_conflict_risk": "HIGH_IF_SAME_EXECUTOR"
+  },
+  {
+    "strategy_id": "F04_XS_LEADER_TO_SECOND",
+    "family": "F04",
+    "family_name": "Cross-sectional capital rotation",
+    "name": "Leader to second-tier rotation",
+    "economic_mechanism": "Within a 1h cohort, capital rotates from top return leader to 2nd-4th rank names with rising relative volume.",
+    "counterparty": "late_chasers_on_leader",
+    "universe": "cross-section of WETH V3 pools active in hour",
+    "observation_time": "hour close",
+    "feature_available_at": "ranks from past hour only",
+    "exact_feature_formulas": {
+      "ret_1h": "px_h/px_{h-1}-1",
+      "rank_ret": "rank(ret_1h)",
+      "rel_vol": "vol_1h / mean(vol_1h of cohort)",
+      "leader": "rank_ret==1",
+      "second_ok": "rank_ret in {2,3,4} and rel_vol rising vs prior hour"
+    },
+    "parameter_search_space": {
+      "cohort_min_pools": [
+        10,
+        20
+      ],
+      "hold_h": [
+        1,
+        2,
+        4
+      ],
+      "rel_vol_min": [
+        1.0,
+        1.5
+      ],
+      "stop_ret": [
+        0.15,
+        0.25
+      ],
+      "tp_ret": [
+        0.1,
+        0.2
+      ]
+    },
+    "param_combo_count": 48,
+    "entry": "long second_ok names when leader ret_1h > leader_min (leader_min in {0.05,0.10})",
+    "execution_delay": "next hour open proxy = +1 bar",
+    "position_size": "equal weight among signals capped notional_total {100,200}",
+    "exit": "hold_h",
+    "stop": "stop_ret",
+    "take_profit": "tp_ret",
+    "maximum_hold": "hold_h",
+    "repeat_entry": "rebalance hourly",
+    "cooldown": "0",
+    "cost_model": {
+      "gas": "UNKNOWN_UNTIL_CALIBRATED | placeholder_search_usd_per_roundtrip in {0.05,0.15,0.40}",
+      "protocol_fee": "pool_fee_tier_bps * notional (known from pool metadata when available)",
+      "lp_fee": "included in fee_tier unless separated",
+      "slippage": "UNKNOWN_UNTIL_CALIBRATED | stress multipliers {1.0,1.5,2.5} on quoted impact",
+      "price_impact": "f(notional, depth_proxy); UNKNOWN if depth missing",
+      "mev": "UNKNOWN_UNTIL_CALIBRATED | additive stress_usd in {0,0.05,0.20}",
+      "revert": "P_revert search {0.01,0.05,0.15}; cost = P_revert * gas_usd",
+      "failed_sell": "P_fail_sell search {0.02,0.10,0.25}; residual inventory marked at stress exit",
+      "quote_latency_ms": "execution_delay_bars * bar_seconds * 1000",
+      "broadcast_latency_ms": "UNKNOWN_UNTIL_CALIBRATED"
+    },
+    "failure_handling": {
+      "missing_feature": "skip_signal",
+      "unknown_cost_field": "do_not_treat_as_zero; mark INCONCLUSIVE_COST",
+      "no_sell_quote": "force flat mark with failed_sell stress; no phantom fill",
+      "partial_history": "exclude pool from fold"
+    },
+    "main_falsification": "rank shuffle within hour",
+    "difference_from_prior_failed_strategies": "Cross-sectional relative, not single-pool momentum.",
+    "data_class": "B_SMALL_BOUNDED_EXPORT_REQUIRED",
+    "required_tables_or_files": [
+      "multi-pool OHLCV panel"
+    ],
+    "required_columns": [
+      "pool",
+      "hour",
+      "close",
+      "volume"
+    ],
+    "required_time_resolution": "1h",
+    "point_in_time_requirements": "PIT ranks",
+    "minimum_history": ">=30d",
+    "estimated_rows": "panel hours * pools",
+    "estimated_read_bytes": "100MB-1GB",
+    "whether_current_diagnostics_may_support_it": "partial if OHLCV multihorizon exists",
+    "whether_production_database_would_be_required": true,
+    "missing_data": [
+      "aligned multi-pool clock"
+    ],
+    "scores": {
+      "economic_plausibility": 4,
+      "novelty": 4,
+      "data_readiness": 2,
+      "expected_gross_edge_required": 3,
+      "execution_feasibility": 3,
+      "capacity": 2,
+      "lookahead_risk": 2,
+      "overfitting_risk": 3,
+      "live_conflict_risk": 4,
+      "estimated_compute_cost": 3
+    },
+    "live_conflict_note": "XS \u2260 KEYSTONE single-pool age entry.",
+    "universe_overlap_with_live": "PARTIAL_SAME_BASE_V3_WETH_POOLS",
+    "time_horizon_overlap": "VARIES",
+    "capital_overlap": "WOULD_SHARE_WALLET_IF_DEPLOYED_HENCE_NOT_DEPLOYABLE_WITH_LIVE",
+    "nonce_overlap_risk": "HIGH_IF_SAME_WALLET",
+    "rpc_overlap_risk": "MEDIUM_IF_SHARED_ENDPOINT",
+    "position_conflict_risk": "HIGH_IF_SAME_POOL",
+    "execution_conflict_risk": "HIGH_IF_SAME_EXECUTOR"
+  },
+  {
+    "strategy_id": "F04_XS_SAME_AGE_RS",
+    "family": "F04",
+    "family_name": "Cross-sectional capital rotation",
+    "name": "Same-age cohort relative strength",
+    "economic_mechanism": "Among pools with age in [a,b] minutes, long top RS, avoid bottom (long-only: long top).",
+    "counterparty": "weak_same_age_pools",
+    "universe": "new pools age 5-120m",
+    "observation_time": "minute bars since pool first swap",
+    "feature_available_at": "age from first_swap_time known",
+    "exact_feature_formulas": {
+      "age_m": "(t-first_swap)/60",
+      "rs": "ret_{w} zscore within age cohort bucket"
+    },
+    "parameter_search_space": {
+      "age_lo": [
+        5,
+        10
+      ],
+      "age_hi": [
+        30,
+        60,
+        120
+      ],
+      "w": [
+        5,
+        10
+      ],
+      "rs_min": [
+        0.5,
+        1.0
+      ],
+      "hold": [
+        5,
+        15
+      ]
+    },
+    "param_combo_count": 48,
+    "entry": "long if age in [age_lo,age_hi] and rs>=rs_min",
+    "execution_delay": "1 bar",
+    "position_size": "notional {50,100}",
+    "exit": "hold/stop/tp",
+    "stop": "0.15/0.25",
+    "take_profit": "0.1/0.2",
+    "maximum_hold": "hold",
+    "repeat_entry": "one per pool lifetime window",
+    "cooldown": "until age_hi",
+    "cost_model": {
+      "gas": "UNKNOWN_UNTIL_CALIBRATED | placeholder_search_usd_per_roundtrip in {0.05,0.15,0.40}",
+      "protocol_fee": "pool_fee_tier_bps * notional (known from pool metadata when available)",
+      "lp_fee": "included in fee_tier unless separated",
+      "slippage": "UNKNOWN_UNTIL_CALIBRATED | stress multipliers {1.0,1.5,2.5} on quoted impact",
+      "price_impact": "f(notional, depth_proxy); UNKNOWN if depth missing",
+      "mev": "UNKNOWN_UNTIL_CALIBRATED | additive stress_usd in {0,0.05,0.20}",
+      "revert": "P_revert search {0.01,0.05,0.15}; cost = P_revert * gas_usd",
+      "failed_sell": "P_fail_sell search {0.02,0.10,0.25}; residual inventory marked at stress exit",
+      "quote_latency_ms": "execution_delay_bars * bar_seconds * 1000",
+      "broadcast_latency_ms": "UNKNOWN_UNTIL_CALIBRATED"
+    },
+    "failure_handling": {
+      "missing_feature": "skip_signal",
+      "unknown_cost_field": "do_not_treat_as_zero; mark INCONCLUSIVE_COST",
+      "no_sell_quote": "force flat mark with failed_sell stress; no phantom fill",
+      "partial_history": "exclude pool from fold"
+    },
+    "main_falsification": "cohort label shuffle",
+    "difference_from_prior_failed_strategies": "Age-bucket RS; KEYSTONE uses ML p_fatal not RS zscore.",
+    "data_class": "B_SMALL_BOUNDED_EXPORT_REQUIRED",
+    "required_tables_or_files": [
+      "swaps/OHLCV",
+      "first_swap times"
+    ],
+    "required_columns": [
+      "pool",
+      "time",
+      "close",
+      "first_swap_ts"
+    ],
+    "required_time_resolution": "1m",
+    "point_in_time_requirements": "first_swap<=t",
+    "minimum_history": ">=30d new pools",
+    "estimated_rows": "many short series",
+    "estimated_read_bytes": "200MB-2GB",
+    "whether_current_diagnostics_may_support_it": "partial",
+    "whether_production_database_would_be_required": true,
+    "missing_data": [
+      "clean first_swap catalog without full CH group by"
+    ],
+    "scores": {
+      "economic_plausibility": 3,
+      "novelty": 3,
+      "data_readiness": 2,
+      "expected_gross_edge_required": 3,
+      "execution_feasibility": 3,
+      "capacity": 2,
+      "lookahead_risk": 2,
+      "overfitting_risk": 3,
+      "live_conflict_risk": 5,
+      "estimated_compute_cost": 3
+    },
+    "live_conflict_note": "HIGH live overlap risk: same young-pool universe as KEYSTONE \u2192 Wave parking bias.",
+    "universe_overlap_with_live": "PARTIAL_SAME_BASE_V3_WETH_POOLS",
+    "time_horizon_overlap": "VARIES",
+    "capital_overlap": "WOULD_SHARE_WALLET_IF_DEPLOYED_HENCE_NOT_DEPLOYABLE_WITH_LIVE",
+    "nonce_overlap_risk": "HIGH_IF_SAME_WALLET",
+    "rpc_overlap_risk": "MEDIUM_IF_SHARED_ENDPOINT",
+    "position_conflict_risk": "HIGH_IF_SAME_POOL",
+    "execution_conflict_risk": "HIGH_IF_SAME_EXECUTOR"
+  },
+  {
+    "strategy_id": "F04_XS_OLD_TO_NEW_MIGRATE",
+    "family": "F04",
+    "family_name": "Cross-sectional capital rotation",
+    "name": "Old-to-new capital migration",
+    "economic_mechanism": "When aggregate notional in pools age>24h falls while age<2h rises, long a basket of newest qualifying pools.",
+    "counterparty": "migrating_speculators",
+    "universe": "Base V3 WETH universe hourly",
+    "observation_time": "hour close",
+    "feature_available_at": "age from first_swap",
+    "exact_feature_formulas": {
+      "flow_old": "sum buy_weth in age>24h",
+      "flow_new": "sum buy_weth in age<2h",
+      "migrate_ratio": "flow_new/(flow_old+eps)"
+    },
+    "parameter_search_space": {
+      "ratio_min": [
+        1.0,
+        1.5,
+        2.0
+      ],
+      "basket_k": [
+        3,
+        5
+      ],
+      "hold_h": [
+        1,
+        2
+      ],
+      "stop_ret": [
+        0.2,
+        0.3
+      ],
+      "min_pool_vol_eth": [
+        1.0,
+        3.0
+      ]
+    },
+    "param_combo_count": 48,
+    "entry": "if migrate_ratio>=ratio_min long top-k newest pools by flow_new with vol filter",
+    "execution_delay": "+1h",
+    "position_size": "total notional {100,200} split k ways",
+    "exit": "hold_h",
+    "stop": "stop_ret",
+    "take_profit": "tp {0.15,0.25}",
+    "maximum_hold": "hold_h",
+    "repeat_entry": "hourly",
+    "cooldown": "0",
+    "cost_model": {
+      "gas": "UNKNOWN_UNTIL_CALIBRATED | placeholder_search_usd_per_roundtrip in {0.05,0.15,0.40}",
+      "protocol_fee": "pool_fee_tier_bps * notional (known from pool metadata when available)",
+      "lp_fee": "included in fee_tier unless separated",
+      "slippage": "UNKNOWN_UNTIL_CALIBRATED | stress multipliers {1.0,1.5,2.5} on quoted impact",
+      "price_impact": "f(notional, depth_proxy); UNKNOWN if depth missing",
+      "mev": "UNKNOWN_UNTIL_CALIBRATED | additive stress_usd in {0,0.05,0.20}",
+      "revert": "P_revert search {0.01,0.05,0.15}; cost = P_revert * gas_usd",
+      "failed_sell": "P_fail_sell search {0.02,0.10,0.25}; residual inventory marked at stress exit",
+      "quote_latency_ms": "execution_delay_bars * bar_seconds * 1000",
+      "broadcast_latency_ms": "UNKNOWN_UNTIL_CALIBRATED"
+    },
+    "failure_handling": {
+      "missing_feature": "skip_signal",
+      "unknown_cost_field": "do_not_treat_as_zero; mark INCONCLUSIVE_COST",
+      "no_sell_quote": "force flat mark with failed_sell stress; no phantom fill",
+      "partial_history": "exclude pool from fold"
+    },
+    "main_falsification": "permute pool ages",
+    "difference_from_prior_failed_strategies": "Macro rotation aggregate, not single-pool micro.",
+    "data_class": "C_PRODUCTION_DB_HEAVY",
+    "required_tables_or_files": [
+      "all-pool swaps hourly aggregates"
+    ],
+    "required_columns": [
+      "pool",
+      "hour",
+      "buy_weth",
+      "age"
+    ],
+    "required_time_resolution": "1h",
+    "point_in_time_requirements": "PIT",
+    "minimum_history": ">=30d",
+    "estimated_rows": "wide universe",
+    "estimated_read_bytes": ">2GB",
+    "whether_current_diagnostics_may_support_it": "no",
+    "whether_production_database_would_be_required": true,
+    "missing_data": [
+      "full-universe hourly flows"
+    ],
+    "scores": {
+      "economic_plausibility": 4,
+      "novelty": 4,
+      "data_readiness": 1,
+      "expected_gross_edge_required": 3,
+      "execution_feasibility": 2,
+      "capacity": 2,
+      "lookahead_risk": 2,
+      "overfitting_risk": 3,
+      "live_conflict_risk": 4,
+      "estimated_compute_cost": 5
+    },
+    "live_conflict_note": "Heavy; also universe overlap.",
+    "universe_overlap_with_live": "PARTIAL_SAME_BASE_V3_WETH_POOLS",
+    "time_horizon_overlap": "VARIES",
+    "capital_overlap": "WOULD_SHARE_WALLET_IF_DEPLOYED_HENCE_NOT_DEPLOYABLE_WITH_LIVE",
+    "nonce_overlap_risk": "HIGH_IF_SAME_WALLET",
+    "rpc_overlap_risk": "MEDIUM_IF_SHARED_ENDPOINT",
+    "position_conflict_risk": "HIGH_IF_SAME_POOL",
+    "execution_conflict_risk": "HIGH_IF_SAME_EXECUTOR"
+  },
+  {
+    "strategy_id": "F05_REG_BREADTH_EXPAND",
+    "family": "F05",
+    "family_name": "Base-wide regime",
+    "name": "Active breadth expansion gate",
+    "economic_mechanism": "Trade any subordinate alpha only when unique active pools/hour rises above quantile; this strategy itself goes long a breadth ETF-like top-volume basket.",
+    "counterparty": "narrow_market_makers",
+    "universe": "Base-wide hourly",
+    "observation_time": "hour",
+    "feature_available_at": "breadth from past hour counts",
+    "exact_feature_formulas": {
+      "breadth_h": "count distinct pools with >=q swaps in hour h",
+      "breadth_z": "zscore vs trailing D days"
+    },
+    "parameter_search_space": {
+      "q": [
+        5,
+        10
+      ],
+      "D": [
+        7,
+        14
+      ],
+      "z_min": [
+        0.5,
+        1.0,
+        1.5
+      ],
+      "basket_k": [
+        5,
+        10
+      ],
+      "hold_h": [
+        1,
+        2
+      ]
+    },
+    "param_combo_count": 48,
+    "entry": "if breadth_z>=z_min long top-k pools by volume that hour",
+    "execution_delay": "+1h",
+    "position_size": "total {100,200}",
+    "exit": "hold_h",
+    "stop": "0.2",
+    "take_profit": "0.15",
+    "maximum_hold": "hold_h",
+    "repeat_entry": "hourly",
+    "cooldown": "0",
+    "cost_model": {
+      "gas": "UNKNOWN_UNTIL_CALIBRATED | placeholder_search_usd_per_roundtrip in {0.05,0.15,0.40}",
+      "protocol_fee": "pool_fee_tier_bps * notional (known from pool metadata when available)",
+      "lp_fee": "included in fee_tier unless separated",
+      "slippage": "UNKNOWN_UNTIL_CALIBRATED | stress multipliers {1.0,1.5,2.5} on quoted impact",
+      "price_impact": "f(notional, depth_proxy); UNKNOWN if depth missing",
+      "mev": "UNKNOWN_UNTIL_CALIBRATED | additive stress_usd in {0,0.05,0.20}",
+      "revert": "P_revert search {0.01,0.05,0.15}; cost = P_revert * gas_usd",
+      "failed_sell": "P_fail_sell search {0.02,0.10,0.25}; residual inventory marked at stress exit",
+      "quote_latency_ms": "execution_delay_bars * bar_seconds * 1000",
+      "broadcast_latency_ms": "UNKNOWN_UNTIL_CALIBRATED"
+    },
+    "failure_handling": {
+      "missing_feature": "skip_signal",
+      "unknown_cost_field": "do_not_treat_as_zero; mark INCONCLUSIVE_COST",
+      "no_sell_quote": "force flat mark with failed_sell stress; no phantom fill",
+      "partial_history": "exclude pool from fold"
+    },
+    "main_falsification": "time permute breadth series",
+    "difference_from_prior_failed_strategies": "Timing gate family: when to trade, not toxic-flow ML.",
+    "data_class": "B_SMALL_BOUNDED_EXPORT_REQUIRED",
+    "required_tables_or_files": [
+      "hourly unique pool counts",
+      "volumes"
+    ],
+    "required_columns": [
+      "hour",
+      "pool",
+      "swap_count",
+      "volume_eth"
+    ],
+    "required_time_resolution": "1h",
+    "point_in_time_requirements": "PIT",
+    "minimum_history": ">=30d",
+    "estimated_rows": "hours*pools",
+    "estimated_read_bytes": "50-500MB if aggregated offline",
+    "whether_current_diagnostics_may_support_it": "partial from diagnostics aggregates maybe",
+    "whether_production_database_would_be_required": true,
+    "missing_data": [
+      "preaggregated breadth table"
+    ],
+    "scores": {
+      "economic_plausibility": 3,
+      "novelty": 3,
+      "data_readiness": 2,
+      "expected_gross_edge_required": 3,
+      "execution_feasibility": 3,
+      "capacity": 3,
+      "lookahead_risk": 2,
+      "overfitting_risk": 3,
+      "live_conflict_risk": 3,
+      "estimated_compute_cost": 3
+    },
+    "live_conflict_note": "Regime sleeve; can gate others later.",
+    "universe_overlap_with_live": "PARTIAL_SAME_BASE_V3_WETH_POOLS",
+    "time_horizon_overlap": "VARIES",
+    "capital_overlap": "WOULD_SHARE_WALLET_IF_DEPLOYED_HENCE_NOT_DEPLOYABLE_WITH_LIVE",
+    "nonce_overlap_risk": "HIGH_IF_SAME_WALLET",
+    "rpc_overlap_risk": "MEDIUM_IF_SHARED_ENDPOINT",
+    "position_conflict_risk": "HIGH_IF_SAME_POOL",
+    "execution_conflict_risk": "HIGH_IF_SAME_EXECUTOR"
+  },
+  {
+    "strategy_id": "F05_REG_NEWPOOL_DILUTION",
+    "family": "F05",
+    "family_name": "Base-wide regime",
+    "name": "New-pool dilution avoidance",
+    "economic_mechanism": "When new pools created/hour exceed threshold, expected edge per pool dilutes; strategy flats risk-on basket (signal=FLAT).",
+    "counterparty": "attenion_fragmented_traders",
+    "universe": "Base-wide",
+    "observation_time": "hour",
+    "feature_available_at": "new pool counts from first_swap or pool_created events <=hour",
+    "exact_feature_formulas": {
+      "new_pools_h": "count first_swap in hour",
+      "dilution": "new_pools_h / median_7d"
+    },
+    "parameter_search_space": {
+      "dilution_max": [
+        1.5,
+        2.0,
+        3.0
+      ],
+      "lookback_d": [
+        7,
+        14
+      ],
+      "basket_k": [
+        5,
+        10
+      ],
+      "hold_h": [
+        1,
+        2
+      ],
+      "z_volume": [
+        0,
+        1
+      ]
+    },
+    "param_combo_count": 48,
+    "entry": "Trade long top-k ONLY if dilution<=dilution_max; else no entry (edge from avoidance).",
+    "execution_delay": "+1h",
+    "position_size": "{100,200} when allowed",
+    "exit": "hold_h",
+    "stop": "0.2",
+    "take_profit": "0.15",
+    "maximum_hold": "hold_h",
+    "repeat_entry": "hourly",
+    "cooldown": "0",
+    "cost_model": {
+      "gas": "UNKNOWN_UNTIL_CALIBRATED | placeholder_search_usd_per_roundtrip in {0.05,0.15,0.40}",
+      "protocol_fee": "pool_fee_tier_bps * notional (known from pool metadata when available)",
+      "lp_fee": "included in fee_tier unless separated",
+      "slippage": "UNKNOWN_UNTIL_CALIBRATED | stress multipliers {1.0,1.5,2.5} on quoted impact",
+      "price_impact": "f(notional, depth_proxy); UNKNOWN if depth missing",
+      "mev": "UNKNOWN_UNTIL_CALIBRATED | additive stress_usd in {0,0.05,0.20}",
+      "revert": "P_revert search {0.01,0.05,0.15}; cost = P_revert * gas_usd",
+      "failed_sell": "P_fail_sell search {0.02,0.10,0.25}; residual inventory marked at stress exit",
+      "quote_latency_ms": "execution_delay_bars * bar_seconds * 1000",
+      "broadcast_latency_ms": "UNKNOWN_UNTIL_CALIBRATED"
+    },
+    "failure_handling": {
+      "missing_feature": "skip_signal",
+      "unknown_cost_field": "do_not_treat_as_zero; mark INCONCLUSIVE_COST",
+      "no_sell_quote": "force flat mark with failed_sell stress; no phantom fill",
+      "partial_history": "exclude pool from fold"
+    },
+    "main_falsification": "shuffle new_pools_h series",
+    "difference_from_prior_failed_strategies": "Avoidance regime \u2260 always-in KEYSTONE.",
+    "data_class": "B_SMALL_BOUNDED_EXPORT_REQUIRED",
+    "required_tables_or_files": [
+      "new pool hourly counts"
+    ],
+    "required_columns": [
+      "hour",
+      "new_pool_count"
+    ],
+    "required_time_resolution": "1h",
+    "point_in_time_requirements": "PIT",
+    "minimum_history": ">=30d",
+    "estimated_rows": "small if aggregated",
+    "estimated_read_bytes": "<100MB aggregated",
+    "whether_current_diagnostics_may_support_it": "maybe",
+    "whether_production_database_would_be_required": true,
+    "missing_data": [
+      "pool creation feed completeness"
+    ],
+    "scores": {
+      "economic_plausibility": 4,
+      "novelty": 4,
+      "data_readiness": 2,
+      "expected_gross_edge_required": 2,
+      "execution_feasibility": 4,
+      "capacity": 4,
+      "lookahead_risk": 2,
+      "overfitting_risk": 2,
+      "live_conflict_risk": 2,
+      "estimated_compute_cost": 2
+    },
+    "live_conflict_note": "Could later risk-reduce live; research only now.",
+    "universe_overlap_with_live": "PARTIAL_SAME_BASE_V3_WETH_POOLS",
+    "time_horizon_overlap": "VARIES",
+    "capital_overlap": "WOULD_SHARE_WALLET_IF_DEPLOYED_HENCE_NOT_DEPLOYABLE_WITH_LIVE",
+    "nonce_overlap_risk": "HIGH_IF_SAME_WALLET",
+    "rpc_overlap_risk": "MEDIUM_IF_SHARED_ENDPOINT",
+    "position_conflict_risk": "HIGH_IF_SAME_POOL",
+    "execution_conflict_risk": "HIGH_IF_SAME_EXECUTOR"
+  },
+  {
+    "strategy_id": "F05_REG_GAS_CONGESTION",
+    "family": "F05",
+    "family_name": "Base-wide regime",
+    "name": "Gas congestion entry filter",
+    "economic_mechanism": "High base-fee regimes worsen net EV; long micro-alpha basket only when base_fee_z below threshold.",
+    "counterparty": "congested_priority_fees_eat_edge",
+    "universe": "needs base fee series + basket",
+    "observation_time": "hour/ L2 block",
+    "feature_available_at": "fee from blocks <=t",
+    "exact_feature_formulas": {
+      "base_fee_z": "zscore(base_fee_per_gas)"
+    },
+    "parameter_search_space": {
+      "z_max": [
+        -0.5,
+        0.0,
+        0.5
+      ],
+      "basket_k": [
+        5,
+        10
+      ],
+      "hold_h": [
+        1,
+        2
+      ],
+      "stop_ret": [
+        0.2,
+        0.3
+      ],
+      "tp_ret": [
+        0.1,
+        0.2
+      ]
+    },
+    "param_combo_count": 48,
+    "entry": "enter basket if base_fee_z<=z_max",
+    "execution_delay": "+1h",
+    "position_size": "{100,200}",
+    "exit": "hold_h",
+    "stop": "stop_ret",
+    "take_profit": "tp_ret",
+    "maximum_hold": "hold_h",
+    "repeat_entry": "hourly",
+    "cooldown": "0",
+    "cost_model": {
+      "gas": "UNKNOWN_UNTIL_CALIBRATED | placeholder_search_usd_per_roundtrip in {0.05,0.15,0.40}",
+      "protocol_fee": "pool_fee_tier_bps * notional (known from pool metadata when available)",
+      "lp_fee": "included in fee_tier unless separated",
+      "slippage": "UNKNOWN_UNTIL_CALIBRATED | stress multipliers {1.0,1.5,2.5} on quoted impact",
+      "price_impact": "f(notional, depth_proxy); UNKNOWN if depth missing",
+      "mev": "UNKNOWN_UNTIL_CALIBRATED | additive stress_usd in {0,0.05,0.20}",
+      "revert": "P_revert search {0.01,0.05,0.15}; cost = P_revert * gas_usd",
+      "failed_sell": "P_fail_sell search {0.02,0.10,0.25}; residual inventory marked at stress exit",
+      "quote_latency_ms": "execution_delay_bars * bar_seconds * 1000",
+      "broadcast_latency_ms": "UNKNOWN_UNTIL_CALIBRATED"
+    },
+    "failure_handling": {
+      "missing_feature": "skip_signal",
+      "unknown_cost_field": "do_not_treat_as_zero; mark INCONCLUSIVE_COST",
+      "no_sell_quote": "force flat mark with failed_sell stress; no phantom fill",
+      "partial_history": "exclude pool from fold"
+    },
+    "main_falsification": "permute fees vs returns",
+    "difference_from_prior_failed_strategies": "Cost-regime timing; not flow toxicity.",
+    "data_class": "D_DATA_UNAVAILABLE",
+    "required_tables_or_files": [
+      "base fee L2 series",
+      "basket prices"
+    ],
+    "required_columns": [
+      "block_time",
+      "base_fee",
+      "pool prices"
+    ],
+    "required_time_resolution": "1h or block",
+    "point_in_time_requirements": "PIT",
+    "minimum_history": ">=30d",
+    "estimated_rows": "fee series small; basket larger",
+    "estimated_read_bytes": "UNKNOWN",
+    "whether_current_diagnostics_may_support_it": "no dedicated fee parquet found by name",
+    "whether_production_database_would_be_required": true,
+    "missing_data": [
+      "Base L2 base_fee historical archive in-project"
+    ],
+    "scores": {
+      "economic_plausibility": 3,
+      "novelty": 3,
+      "data_readiness": 1,
+      "expected_gross_edge_required": 2,
+      "execution_feasibility": 3,
+      "capacity": 3,
+      "lookahead_risk": 2,
+      "overfitting_risk": 2,
+      "live_conflict_risk": 2,
+      "estimated_compute_cost": 2
+    },
+    "live_conflict_note": "Low conflict; data missing.",
+    "universe_overlap_with_live": "PARTIAL_SAME_BASE_V3_WETH_POOLS",
+    "time_horizon_overlap": "VARIES",
+    "capital_overlap": "WOULD_SHARE_WALLET_IF_DEPLOYED_HENCE_NOT_DEPLOYABLE_WITH_LIVE",
+    "nonce_overlap_risk": "HIGH_IF_SAME_WALLET",
+    "rpc_overlap_risk": "MEDIUM_IF_SHARED_ENDPOINT",
+    "position_conflict_risk": "HIGH_IF_SAME_POOL",
+    "execution_conflict_risk": "HIGH_IF_SAME_EXECUTOR"
+  },
+  {
+    "strategy_id": "F06_REV_SILENCE_FIRST_TRADE",
+    "family": "F06",
+    "family_name": "Silence & revival",
+    "name": "First trade after silence",
+    "economic_mechanism": "After silence_gap_sec with zero swaps, the first swap's sign and size predict short continuation.",
+    "counterparty": "sleeping_LP_inventory",
+    "universe": "pools with at least one silence >=G historically",
+    "observation_time": "event time of revival swap",
+    "feature_available_at": "gap measured with prior swap time known",
+    "exact_feature_formulas": {
+      "gap_sec": "t_i - t_{i-1}",
+      "revive_sign": "sign_i",
+      "revive_eth": "size_eth_i"
+    },
+    "parameter_search_space": {
+      "G_min": [
+        1800,
+        3600,
+        7200
+      ],
+      "min_eth": [
+        0.2,
+        0.5,
+        1.0
+      ],
+      "hold_sec": [
+        300,
+        900
+      ],
+      "stop_ret": [
+        0.1,
+        0.2
+      ],
+      "tp_ret": [
+        0.1,
+        0.2
+      ]
+    },
+    "param_combo_count": 72,
+    "entry": "long if gap_sec>=G_min and revive_sign=+1 and revive_eth>=min_eth",
+    "execution_delay": "delay_sec {2,5}",
+    "position_size": "{50,100}",
+    "exit": "hold_sec",
+    "stop": "stop_ret",
+    "take_profit": "tp_ret",
+    "maximum_hold": "hold_sec",
+    "repeat_entry": "one per silence episode",
+    "cooldown": "G_min",
+    "cost_model": {
+      "gas": "UNKNOWN_UNTIL_CALIBRATED | placeholder_search_usd_per_roundtrip in {0.05,0.15,0.40}",
+      "protocol_fee": "pool_fee_tier_bps * notional (known from pool metadata when available)",
+      "lp_fee": "included in fee_tier unless separated",
+      "slippage": "UNKNOWN_UNTIL_CALIBRATED | stress multipliers {1.0,1.5,2.5} on quoted impact",
+      "price_impact": "f(notional, depth_proxy); UNKNOWN if depth missing",
+      "mev": "UNKNOWN_UNTIL_CALIBRATED | additive stress_usd in {0,0.05,0.20}",
+      "revert": "P_revert search {0.01,0.05,0.15}; cost = P_revert * gas_usd",
+      "failed_sell": "P_fail_sell search {0.02,0.10,0.25}; residual inventory marked at stress exit",
+      "quote_latency_ms": "execution_delay_bars * bar_seconds * 1000",
+      "broadcast_latency_ms": "UNKNOWN_UNTIL_CALIBRATED"
+    },
+    "failure_handling": {
+      "missing_feature": "skip_signal",
+      "unknown_cost_field": "do_not_treat_as_zero; mark INCONCLUSIVE_COST",
+      "no_sell_quote": "force flat mark with failed_sell stress; no phantom fill",
+      "partial_history": "exclude pool from fold"
+    },
+    "main_falsification": "shuffle gaps",
+    "difference_from_prior_failed_strategies": "Silence definition hard; \u2260 continuous momentum.",
+    "data_class": "A_OFFLINE_DATA_LIKELY_AVAILABLE",
+    "required_tables_or_files": [
+      "swap times series"
+    ],
+    "required_columns": [
+      "pool",
+      "block_time",
+      "amounts"
+    ],
+    "required_time_resolution": "event",
+    "point_in_time_requirements": "PIT",
+    "minimum_history": ">=30d",
+    "estimated_rows": "swaps medium",
+    "estimated_read_bytes": "100MB-1GB",
+    "whether_current_diagnostics_may_support_it": "maybe from swap TSV",
+    "whether_production_database_would_be_required": false,
+    "missing_data": [],
+    "scores": {
+      "economic_plausibility": 3,
+      "novelty": 4,
+      "data_readiness": 3,
+      "expected_gross_edge_required": 3,
+      "execution_feasibility": 3,
+      "capacity": 3,
+      "lookahead_risk": 2,
+      "overfitting_risk": 3,
+      "live_conflict_risk": 3,
+      "estimated_compute_cost": 2
+    },
+    "live_conflict_note": "Different horizon than 10-15m KEYSTONE window.",
+    "universe_overlap_with_live": "PARTIAL_SAME_BASE_V3_WETH_POOLS",
+    "time_horizon_overlap": "VARIES",
+    "capital_overlap": "WOULD_SHARE_WALLET_IF_DEPLOYED_HENCE_NOT_DEPLOYABLE_WITH_LIVE",
+    "nonce_overlap_risk": "HIGH_IF_SAME_WALLET",
+    "rpc_overlap_risk": "MEDIUM_IF_SHARED_ENDPOINT",
+    "position_conflict_risk": "HIGH_IF_SAME_POOL",
+    "execution_conflict_risk": "HIGH_IF_SAME_EXECUTOR"
+  },
+  {
+    "strategy_id": "F06_REV_VOL_BEFORE_PRICE",
+    "family": "F06",
+    "family_name": "Silence & revival",
+    "name": "Volume revival before price",
+    "economic_mechanism": "Swap count recovers to >c*baseline while |ret| still <r_max \u2192 long anticipating price catch-up.",
+    "counterparty": "latent_demand",
+    "universe": "previously active pools silent then reviving",
+    "observation_time": "1m",
+    "feature_available_at": "vol and ret causal",
+    "exact_feature_formulas": {
+      "vol_base": "mean swap_count over baseline window B prior to silence",
+      "vol_now": "swap_count over last s bars",
+      "ret_abs": "abs(px_t/px_{t-s}-1)"
+    },
+    "parameter_search_space": {
+      "B": [
+        60,
+        120
+      ],
+      "s": [
+        5,
+        10
+      ],
+      "c": [
+        0.5,
+        1.0
+      ],
+      "r_max": [
+        0.02,
+        0.05
+      ],
+      "hold": [
+        10,
+        20
+      ]
+    },
+    "param_combo_count": 32,
+    "entry": "long if vol_now>=c*vol_base and ret_abs<=r_max and prior silence>=G (G in {1800,3600})",
+    "execution_delay": "1 bar",
+    "position_size": "{50,100}",
+    "exit": "hold",
+    "stop": "0.12",
+    "take_profit": "0.12",
+    "maximum_hold": "hold",
+    "repeat_entry": "no overlap",
+    "cooldown": "30 bars",
+    "cost_model": {
+      "gas": "UNKNOWN_UNTIL_CALIBRATED | placeholder_search_usd_per_roundtrip in {0.05,0.15,0.40}",
+      "protocol_fee": "pool_fee_tier_bps * notional (known from pool metadata when available)",
+      "lp_fee": "included in fee_tier unless separated",
+      "slippage": "UNKNOWN_UNTIL_CALIBRATED | stress multipliers {1.0,1.5,2.5} on quoted impact",
+      "price_impact": "f(notional, depth_proxy); UNKNOWN if depth missing",
+      "mev": "UNKNOWN_UNTIL_CALIBRATED | additive stress_usd in {0,0.05,0.20}",
+      "revert": "P_revert search {0.01,0.05,0.15}; cost = P_revert * gas_usd",
+      "failed_sell": "P_fail_sell search {0.02,0.10,0.25}; residual inventory marked at stress exit",
+      "quote_latency_ms": "execution_delay_bars * bar_seconds * 1000",
+      "broadcast_latency_ms": "UNKNOWN_UNTIL_CALIBRATED"
+    },
+    "failure_handling": {
+      "missing_feature": "skip_signal",
+      "unknown_cost_field": "do_not_treat_as_zero; mark INCONCLUSIVE_COST",
+      "no_sell_quote": "force flat mark with failed_sell stress; no phantom fill",
+      "partial_history": "exclude pool from fold"
+    },
+    "main_falsification": "shuffle volume path vs price",
+    "difference_from_prior_failed_strategies": "Requires volume-price divergence, not raw revival chase.",
+    "data_class": "A_OFFLINE_DATA_LIKELY_AVAILABLE",
+    "required_tables_or_files": [
+      "1m ohlcv+counts"
+    ],
+    "required_columns": [
+      "pool",
+      "time",
+      "close",
+      "trade_count"
+    ],
+    "required_time_resolution": "1m",
+    "point_in_time_requirements": "PIT",
+    "minimum_history": ">=30d",
+    "estimated_rows": "~1e6",
+    "estimated_read_bytes": "50-500MB",
+    "whether_current_diagnostics_may_support_it": "yes if ohlcv+counts",
+    "whether_production_database_would_be_required": false,
+    "missing_data": [
+      "trade_count column may be missing in some OHLCV files"
+    ],
+    "scores": {
+      "economic_plausibility": 4,
+      "novelty": 4,
+      "data_readiness": 3,
+      "expected_gross_edge_required": 3,
+      "execution_feasibility": 3,
+      "capacity": 3,
+      "lookahead_risk": 2,
+      "overfitting_risk": 3,
+      "live_conflict_risk": 3,
+      "estimated_compute_cost": 2
+    },
+    "live_conflict_note": "Orthogonal mechanism to KEYSTONE.",
+    "universe_overlap_with_live": "PARTIAL_SAME_BASE_V3_WETH_POOLS",
+    "time_horizon_overlap": "VARIES",
+    "capital_overlap": "WOULD_SHARE_WALLET_IF_DEPLOYED_HENCE_NOT_DEPLOYABLE_WITH_LIVE",
+    "nonce_overlap_risk": "HIGH_IF_SAME_WALLET",
+    "rpc_overlap_risk": "MEDIUM_IF_SHARED_ENDPOINT",
+    "position_conflict_risk": "HIGH_IF_SAME_POOL",
+    "execution_conflict_risk": "HIGH_IF_SAME_EXECUTOR"
+  },
+  {
+    "strategy_id": "F06_REV_LIQ_REINJECT",
+    "family": "F06",
+    "family_name": "Silence & revival",
+    "name": "Liquidity re-injection revival",
+    "economic_mechanism": "After silence, a mint above threshold then swaps resume \u2192 long.",
+    "counterparty": "reactivated_LP",
+    "universe": "pools with mint after silence",
+    "observation_time": "mint time",
+    "feature_available_at": "mint+prior gap known",
+    "exact_feature_formulas": {
+      "gap_before_mint": "mint_time - last_swap_before",
+      "mint_eth": "WETH proxy",
+      "swaps_after": "count swaps in (mint, mint+dt]"
+    },
+    "parameter_search_space": {
+      "G_min": [
+        3600,
+        7200
+      ],
+      "mint_min_eth": [
+        0.5,
+        2.0
+      ],
+      "dt_sec": [
+        300,
+        900
+      ],
+      "min_swaps_after": [
+        2,
+        5
+      ],
+      "hold": [
+        10,
+        30
+      ]
+    },
+    "param_combo_count": 32,
+    "entry": "long when gap_before_mint>=G_min and mint_eth>=min and swaps_after>=min (confirm at mint+dt)",
+    "execution_delay": "1 bar after confirm",
+    "position_size": "{50,100}",
+    "exit": "hold",
+    "stop": "0.15",
+    "take_profit": "0.15",
+    "maximum_hold": "hold",
+    "repeat_entry": "one per episode",
+    "cooldown": "G_min",
+    "cost_model": {
+      "gas": "UNKNOWN_UNTIL_CALIBRATED | placeholder_search_usd_per_roundtrip in {0.05,0.15,0.40}",
+      "protocol_fee": "pool_fee_tier_bps * notional (known from pool metadata when available)",
+      "lp_fee": "included in fee_tier unless separated",
+      "slippage": "UNKNOWN_UNTIL_CALIBRATED | stress multipliers {1.0,1.5,2.5} on quoted impact",
+      "price_impact": "f(notional, depth_proxy); UNKNOWN if depth missing",
+      "mev": "UNKNOWN_UNTIL_CALIBRATED | additive stress_usd in {0,0.05,0.20}",
+      "revert": "P_revert search {0.01,0.05,0.15}; cost = P_revert * gas_usd",
+      "failed_sell": "P_fail_sell search {0.02,0.10,0.25}; residual inventory marked at stress exit",
+      "quote_latency_ms": "execution_delay_bars * bar_seconds * 1000",
+      "broadcast_latency_ms": "UNKNOWN_UNTIL_CALIBRATED"
+    },
+    "failure_handling": {
+      "missing_feature": "skip_signal",
+      "unknown_cost_field": "do_not_treat_as_zero; mark INCONCLUSIVE_COST",
+      "no_sell_quote": "force flat mark with failed_sell stress; no phantom fill",
+      "partial_history": "exclude pool from fold"
+    },
+    "main_falsification": "mint/swap order scramble",
+    "difference_from_prior_failed_strategies": "Joint mint+silence+resume; not mint-only F02.",
+    "data_class": "B_SMALL_BOUNDED_EXPORT_REQUIRED",
+    "required_tables_or_files": [
+      "mints",
+      "swaps"
+    ],
+    "required_columns": [
+      "pool",
+      "times",
+      "amounts"
+    ],
+    "required_time_resolution": "event",
+    "point_in_time_requirements": "confirm at mint+dt only with data<=that time",
+    "minimum_history": ">=30d",
+    "estimated_rows": "medium",
+    "estimated_read_bytes": "100MB-1GB",
+    "whether_current_diagnostics_may_support_it": "uncertain",
+    "whether_production_database_would_be_required": true,
+    "missing_data": [
+      "mint decode coverage"
+    ],
+    "scores": {
+      "economic_plausibility": 3,
+      "novelty": 4,
+      "data_readiness": 2,
+      "expected_gross_edge_required": 3,
+      "execution_feasibility": 3,
+      "capacity": 3,
+      "lookahead_risk": 3,
+      "overfitting_risk": 3,
+      "live_conflict_risk": 3,
+      "estimated_compute_cost": 3
+    },
+    "live_conflict_note": "Event combo \u2260 KEYSTONE.",
+    "universe_overlap_with_live": "PARTIAL_SAME_BASE_V3_WETH_POOLS",
+    "time_horizon_overlap": "VARIES",
+    "capital_overlap": "WOULD_SHARE_WALLET_IF_DEPLOYED_HENCE_NOT_DEPLOYABLE_WITH_LIVE",
+    "nonce_overlap_risk": "HIGH_IF_SAME_WALLET",
+    "rpc_overlap_risk": "MEDIUM_IF_SHARED_ENDPOINT",
+    "position_conflict_risk": "HIGH_IF_SAME_POOL",
+    "execution_conflict_risk": "HIGH_IF_SAME_EXECUTOR"
+  },
+  {
+    "strategy_id": "F07_WAL_SYNC_NEW_WALLETS",
+    "family": "F07",
+    "family_name": "Wallet cohort & inventory migration",
+    "name": "Synchronized new-wallet entry",
+    "economic_mechanism": "k distinct tx_from with first-seen label NEW enter same pool within dt, excluding routers.",
+    "counterparty": "dispersed_coordinated_demand",
+    "universe": "pools with tx_from on swaps",
+    "observation_time": "event",
+    "feature_available_at": "wallet age labels known_at<=t",
+    "exact_feature_formulas": {
+      "new_wallet": "first_seen_tx_time >= t - W_new",
+      "sync_count": "count distinct new_wallet buyers in dt",
+      "router_exclude": "tx_from not in static router set"
+    },
+    "parameter_search_space": {
+      "W_new": [
+        3600,
+        86400
+      ],
+      "dt": [
+        60,
+        300
+      ],
+      "k_min": [
+        3,
+        5,
+        8
+      ],
+      "hold": [
+        10,
+        30
+      ],
+      "stop_ret": [
+        0.15,
+        0.25
+      ]
+    },
+    "param_combo_count": 48,
+    "entry": "long if sync_count>=k_min",
+    "execution_delay": "1 bar",
+    "position_size": "{50,100}",
+    "exit": "hold",
+    "stop": "stop_ret",
+    "take_profit": "tp {0.1,0.2}",
+    "maximum_hold": "hold",
+    "repeat_entry": "one per cluster",
+    "cooldown": "dt",
+    "cost_model": {
+      "gas": "UNKNOWN_UNTIL_CALIBRATED | placeholder_search_usd_per_roundtrip in {0.05,0.15,0.40}",
+      "protocol_fee": "pool_fee_tier_bps * notional (known from pool metadata when available)",
+      "lp_fee": "included in fee_tier unless separated",
+      "slippage": "UNKNOWN_UNTIL_CALIBRATED | stress multipliers {1.0,1.5,2.5} on quoted impact",
+      "price_impact": "f(notional, depth_proxy); UNKNOWN if depth missing",
+      "mev": "UNKNOWN_UNTIL_CALIBRATED | additive stress_usd in {0,0.05,0.20}",
+      "revert": "P_revert search {0.01,0.05,0.15}; cost = P_revert * gas_usd",
+      "failed_sell": "P_fail_sell search {0.02,0.10,0.25}; residual inventory marked at stress exit",
+      "quote_latency_ms": "execution_delay_bars * bar_seconds * 1000",
+      "broadcast_latency_ms": "UNKNOWN_UNTIL_CALIBRATED"
+    },
+    "failure_handling": {
+      "missing_feature": "skip_signal",
+      "unknown_cost_field": "do_not_treat_as_zero; mark INCONCLUSIVE_COST",
+      "no_sell_quote": "force flat mark with failed_sell stress; no phantom fill",
+      "partial_history": "exclude pool from fold"
+    },
+    "main_falsification": "wallet id permute",
+    "difference_from_prior_failed_strategies": "Cohort sync \u2260 single smart-money follow.",
+    "data_class": "C_PRODUCTION_DB_HEAVY",
+    "required_tables_or_files": [
+      "swaps with tx_from",
+      "wallet first_seen registry"
+    ],
+    "required_columns": [
+      "pool",
+      "tx_from",
+      "block_time",
+      "amounts"
+    ],
+    "required_time_resolution": "event",
+    "point_in_time_requirements": "first_seen PIT",
+    "minimum_history": ">=60d for wallet age",
+    "estimated_rows": "large",
+    "estimated_read_bytes": ">2GB",
+    "whether_current_diagnostics_may_support_it": "controller maps exist by name but heavy",
+    "whether_production_database_would_be_required": true,
+    "missing_data": [
+      "router/bundler exclusion list completeness",
+      "first_seen registry"
+    ],
+    "scores": {
+      "economic_plausibility": 4,
+      "novelty": 4,
+      "data_readiness": 1,
+      "expected_gross_edge_required": 3,
+      "execution_feasibility": 2,
+      "capacity": 2,
+      "lookahead_risk": 3,
+      "overfitting_risk": 4,
+      "live_conflict_risk": 3,
+      "estimated_compute_cost": 5
+    },
+    "live_conflict_note": "Heavy; not Wave1.",
+    "universe_overlap_with_live": "PARTIAL_SAME_BASE_V3_WETH_POOLS",
+    "time_horizon_overlap": "VARIES",
+    "capital_overlap": "WOULD_SHARE_WALLET_IF_DEPLOYED_HENCE_NOT_DEPLOYABLE_WITH_LIVE",
+    "nonce_overlap_risk": "HIGH_IF_SAME_WALLET",
+    "rpc_overlap_risk": "MEDIUM_IF_SHARED_ENDPOINT",
+    "position_conflict_risk": "HIGH_IF_SAME_POOL",
+    "execution_conflict_risk": "HIGH_IF_SAME_EXECUTOR"
+  },
+  {
+    "strategy_id": "F07_WAL_EARLY_HOLDER_RELEASE",
+    "family": "F07",
+    "family_name": "Wallet cohort & inventory migration",
+    "name": "Early-holder inventory release",
+    "economic_mechanism": "Wallets that bought in first A minutes net sell above threshold \u2192 bearish / avoid long.",
+    "counterparty": "early_insiders_distributing",
+    "universe": "young pools",
+    "observation_time": "event/1m",
+    "feature_available_at": "cohort defined by buys with time<=first_swap+A",
+    "exact_feature_formulas": {
+      "early_set": "tx_from with buy in [0,A]",
+      "net_sell_eth": "sell_weth - buy_weth of early_set in window W after A"
+    },
+    "parameter_search_space": {
+      "A_min": [
+        5,
+        10,
+        15
+      ],
+      "W_min": [
+        10,
+        30
+      ],
+      "sell_eth_min": [
+        1.0,
+        3.0
+      ],
+      "hold": [
+        10,
+        30
+      ],
+      "mode": [
+        0,
+        1
+      ]
+    },
+    "param_combo_count": 48,
+    "entry": "mode0: BEARISH no-long; mode1: long if net_sell below low threshold (holders retaining)",
+    "execution_delay": "1 bar after W",
+    "position_size": "{0 or 50,100}",
+    "exit": "hold",
+    "stop": "0.2",
+    "take_profit": "0.15",
+    "maximum_hold": "hold",
+    "repeat_entry": "once",
+    "cooldown": "until age>A+W",
+    "cost_model": {
+      "gas": "UNKNOWN_UNTIL_CALIBRATED | placeholder_search_usd_per_roundtrip in {0.05,0.15,0.40}",
+      "protocol_fee": "pool_fee_tier_bps * notional (known from pool metadata when available)",
+      "lp_fee": "included in fee_tier unless separated",
+      "slippage": "UNKNOWN_UNTIL_CALIBRATED | stress multipliers {1.0,1.5,2.5} on quoted impact",
+      "price_impact": "f(notional, depth_proxy); UNKNOWN if depth missing",
+      "mev": "UNKNOWN_UNTIL_CALIBRATED | additive stress_usd in {0,0.05,0.20}",
+      "revert": "P_revert search {0.01,0.05,0.15}; cost = P_revert * gas_usd",
+      "failed_sell": "P_fail_sell search {0.02,0.10,0.25}; residual inventory marked at stress exit",
+      "quote_latency_ms": "execution_delay_bars * bar_seconds * 1000",
+      "broadcast_latency_ms": "UNKNOWN_UNTIL_CALIBRATED"
+    },
+    "failure_handling": {
+      "missing_feature": "skip_signal",
+      "unknown_cost_field": "do_not_treat_as_zero; mark INCONCLUSIVE_COST",
+      "no_sell_quote": "force flat mark with failed_sell stress; no phantom fill",
+      "partial_history": "exclude pool from fold"
+    },
+    "main_falsification": "cohort membership scramble",
+    "difference_from_prior_failed_strategies": "Inventory release \u2260 copy-trade.",
+    "data_class": "C_PRODUCTION_DB_HEAVY",
+    "required_tables_or_files": [
+      "swaps+tx_from"
+    ],
+    "required_columns": [
+      "tx_from",
+      "pool",
+      "time",
+      "amounts"
+    ],
+    "required_time_resolution": "event",
+    "point_in_time_requirements": "PIT cohort",
+    "minimum_history": ">=30d",
+    "estimated_rows": "large",
+    "estimated_read_bytes": ">2GB",
+    "whether_current_diagnostics_may_support_it": "partial controller inventories by name",
+    "whether_production_database_would_be_required": true,
+    "missing_data": [
+      "accurate buy/sell attribution"
+    ],
+    "scores": {
+      "economic_plausibility": 4,
+      "novelty": 3,
+      "data_readiness": 1,
+      "expected_gross_edge_required": 3,
+      "execution_feasibility": 2,
+      "capacity": 2,
+      "lookahead_risk": 3,
+      "overfitting_risk": 3,
+      "live_conflict_risk": 4,
+      "estimated_compute_cost": 5
+    },
+    "live_conflict_note": "Young-pool overlap with live.",
+    "universe_overlap_with_live": "PARTIAL_SAME_BASE_V3_WETH_POOLS",
+    "time_horizon_overlap": "VARIES",
+    "capital_overlap": "WOULD_SHARE_WALLET_IF_DEPLOYED_HENCE_NOT_DEPLOYABLE_WITH_LIVE",
+    "nonce_overlap_risk": "HIGH_IF_SAME_WALLET",
+    "rpc_overlap_risk": "MEDIUM_IF_SHARED_ENDPOINT",
+    "position_conflict_risk": "HIGH_IF_SAME_POOL",
+    "execution_conflict_risk": "HIGH_IF_SAME_EXECUTOR"
+  },
+  {
+    "strategy_id": "F07_WAL_CONC_DECLINE",
+    "family": "F07",
+    "family_name": "Wallet cohort & inventory migration",
+    "name": "Holder concentration decline",
+    "economic_mechanism": "HHI of token balances among top wallets declines at rate d \u2192 healthier distribution long.",
+    "counterparty": "concentrated_whales_distributing_to_broader_set",
+    "universe": "tokens with transfer data",
+    "observation_time": "5m/1h snapshots",
+    "feature_available_at": "balances known_at from transfers <=t",
+    "exact_feature_formulas": {
+      "HHI_t": "sum share_i^2 top K holders",
+      "dHHI": "HHI_t - HHI_{t-w}"
+    },
+    "parameter_search_space": {
+      "K": [
+        10,
+        20
+      ],
+      "w": [
+        12,
+        24
+      ],
+      "dHHI_max": [
+        -0.02,
+        -0.05
+      ],
+      "hold": [
+        12,
+        24
+      ],
+      "stop_ret": [
+        0.2,
+        0.3
+      ]
+    },
+    "param_combo_count": 32,
+    "entry": "long if dHHI<=dHHI_max and liquidity filter",
+    "execution_delay": "1 bar",
+    "position_size": "{50,100}",
+    "exit": "hold",
+    "stop": "stop_ret",
+    "take_profit": "0.15",
+    "maximum_hold": "hold",
+    "repeat_entry": "no overlap",
+    "cooldown": "w",
+    "cost_model": {
+      "gas": "UNKNOWN_UNTIL_CALIBRATED | placeholder_search_usd_per_roundtrip in {0.05,0.15,0.40}",
+      "protocol_fee": "pool_fee_tier_bps * notional (known from pool metadata when available)",
+      "lp_fee": "included in fee_tier unless separated",
+      "slippage": "UNKNOWN_UNTIL_CALIBRATED | stress multipliers {1.0,1.5,2.5} on quoted impact",
+      "price_impact": "f(notional, depth_proxy); UNKNOWN if depth missing",
+      "mev": "UNKNOWN_UNTIL_CALIBRATED | additive stress_usd in {0,0.05,0.20}",
+      "revert": "P_revert search {0.01,0.05,0.15}; cost = P_revert * gas_usd",
+      "failed_sell": "P_fail_sell search {0.02,0.10,0.25}; residual inventory marked at stress exit",
+      "quote_latency_ms": "execution_delay_bars * bar_seconds * 1000",
+      "broadcast_latency_ms": "UNKNOWN_UNTIL_CALIBRATED"
+    },
+    "failure_handling": {
+      "missing_feature": "skip_signal",
+      "unknown_cost_field": "do_not_treat_as_zero; mark INCONCLUSIVE_COST",
+      "no_sell_quote": "force flat mark with failed_sell stress; no phantom fill",
+      "partial_history": "exclude pool from fold"
+    },
+    "main_falsification": "holder permute",
+    "difference_from_prior_failed_strategies": "Concentration path \u2260 flow run-length.",
+    "data_class": "C_PRODUCTION_DB_HEAVY",
+    "required_tables_or_files": [
+      "erc20_transfers_decoded",
+      "balance snapshots"
+    ],
+    "required_columns": [
+      "token",
+      "from",
+      "to",
+      "value",
+      "time"
+    ],
+    "required_time_resolution": "5m-1h",
+    "point_in_time_requirements": "PIT balances",
+    "minimum_history": ">=60d",
+    "estimated_rows": "very large transfers",
+    "estimated_read_bytes": ">>2GB",
+    "whether_current_diagnostics_may_support_it": "transfer net audits exist by name but huge",
+    "whether_production_database_would_be_required": true,
+    "missing_data": [
+      "point-in-time balance engine"
+    ],
+    "scores": {
+      "economic_plausibility": 3,
+      "novelty": 3,
+      "data_readiness": 1,
+      "expected_gross_edge_required": 3,
+      "execution_feasibility": 2,
+      "capacity": 2,
+      "lookahead_risk": 3,
+      "overfitting_risk": 3,
+      "live_conflict_risk": 3,
+      "estimated_compute_cost": 5
+    },
+    "live_conflict_note": "Heavy.",
+    "universe_overlap_with_live": "PARTIAL_SAME_BASE_V3_WETH_POOLS",
+    "time_horizon_overlap": "VARIES",
+    "capital_overlap": "WOULD_SHARE_WALLET_IF_DEPLOYED_HENCE_NOT_DEPLOYABLE_WITH_LIVE",
+    "nonce_overlap_risk": "HIGH_IF_SAME_WALLET",
+    "rpc_overlap_risk": "MEDIUM_IF_SHARED_ENDPOINT",
+    "position_conflict_risk": "HIGH_IF_SAME_POOL",
+    "execution_conflict_risk": "HIGH_IF_SAME_EXECUTOR"
+  },
+  {
+    "strategy_id": "F08_EVT_POOL_AGE_RULE",
+    "family": "F08",
+    "family_name": "Protocol & event driven",
+    "name": "Deterministic pool-age liquidity rule",
+    "economic_mechanism": "Pure age-window + min pre-volume + max p_impact_proxy rule without ML fatal model \u2014 structural contrast to KEYSTONE.",
+    "counterparty": "early_LP_and_snipers",
+    "universe": "new V3 WETH pools",
+    "observation_time": "age minutes since first_swap",
+    "feature_available_at": "first_swap known; features from [0,age_entry]",
+    "exact_feature_formulas": {
+      "age_m": "(t-first_swap)/60",
+      "pre_vol_eth": "sum |weth| in [0, age_m]",
+      "impact_proxy": "abs(ret) / (pre_vol_eth+eps)"
+    },
+    "parameter_search_space": {
+      "age_enter_lo": [
+        8,
+        10
+      ],
+      "age_enter_hi": [
+        12,
+        15,
+        20
+      ],
+      "min_pre_vol": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "max_impact_proxy": [
+        0.05,
+        0.1
+      ],
+      "hold_min": [
+        20,
+        60,
+        120
+      ]
+    },
+    "param_combo_count": 108,
+    "entry": "long if age in [lo,hi] and pre_vol>=min and impact_proxy<=max",
+    "execution_delay": "1 bar",
+    "position_size": "{50,100}",
+    "exit": "hold_min",
+    "stop": "0.5 hard stop like live optional stress",
+    "take_profit": "tp {0.2,0.5}",
+    "maximum_hold": "hold_min",
+    "repeat_entry": "once per pool",
+    "cooldown": "until age>hi",
+    "cost_model": {
+      "gas": "UNKNOWN_UNTIL_CALIBRATED | placeholder_search_usd_per_roundtrip in {0.05,0.15,0.40}",
+      "protocol_fee": "pool_fee_tier_bps * notional (known from pool metadata when available)",
+      "lp_fee": "included in fee_tier unless separated",
+      "slippage": "UNKNOWN_UNTIL_CALIBRATED | stress multipliers {1.0,1.5,2.5} on quoted impact",
+      "price_impact": "f(notional, depth_proxy); UNKNOWN if depth missing",
+      "mev": "UNKNOWN_UNTIL_CALIBRATED | additive stress_usd in {0,0.05,0.20}",
+      "revert": "P_revert search {0.01,0.05,0.15}; cost = P_revert * gas_usd",
+      "failed_sell": "P_fail_sell search {0.02,0.10,0.25}; residual inventory marked at stress exit",
+      "quote_latency_ms": "execution_delay_bars * bar_seconds * 1000",
+      "broadcast_latency_ms": "UNKNOWN_UNTIL_CALIBRATED"
+    },
+    "failure_handling": {
+      "missing_feature": "skip_signal",
+      "unknown_cost_field": "do_not_treat_as_zero; mark INCONCLUSIVE_COST",
+      "no_sell_quote": "force flat mark with failed_sell stress; no phantom fill",
+      "partial_history": "exclude pool from fold"
+    },
+    "main_falsification": "compare to KEYSTONE signals overlap; must show incremental EV after excluding overlapping entries",
+    "difference_from_prior_failed_strategies": "Explicitly non-ML and different feature set than p_fatal; still HIGH live universe overlap \u2192 research contrast only.",
+    "data_class": "B_SMALL_BOUNDED_EXPORT_REQUIRED",
+    "required_tables_or_files": [
+      "swaps",
+      "first_swap"
+    ],
+    "required_columns": [
+      "pool",
+      "time",
+      "amounts"
+    ],
+    "required_time_resolution": "1m/event",
+    "point_in_time_requirements": "PIT",
+    "minimum_history": ">=30d",
+    "estimated_rows": "medium",
+    "estimated_read_bytes": "200MB-2GB",
+    "whether_current_diagnostics_may_support_it": "partial",
+    "whether_production_database_would_be_required": true,
+    "missing_data": [
+      "non-overlapping evaluation protocol vs live"
+    ],
+    "scores": {
+      "economic_plausibility": 2,
+      "novelty": 2,
+      "data_readiness": 3,
+      "expected_gross_edge_required": 4,
+      "execution_feasibility": 4,
+      "capacity": 2,
+      "lookahead_risk": 2,
+      "overfitting_risk": 2,
+      "live_conflict_risk": 5,
+      "estimated_compute_cost": 2
+    },
+    "live_conflict_note": "REJECT_LIVE_CONFLICT risk if deployed; kept as contrast sleeve for orthogonality/falsification of KEYSTONE.",
+    "universe_overlap_with_live": "PARTIAL_SAME_BASE_V3_WETH_POOLS",
+    "time_horizon_overlap": "VARIES",
+    "capital_overlap": "WOULD_SHARE_WALLET_IF_DEPLOYED_HENCE_NOT_DEPLOYABLE_WITH_LIVE",
+    "nonce_overlap_risk": "HIGH_IF_SAME_WALLET",
+    "rpc_overlap_risk": "MEDIUM_IF_SHARED_ENDPOINT",
+    "position_conflict_risk": "HIGH_IF_SAME_POOL",
+    "execution_conflict_risk": "HIGH_IF_SAME_EXECUTOR"
+  },
+  {
+    "strategy_id": "F08_EVT_MINT_BURST",
+    "family": "F08",
+    "family_name": "Protocol & event driven",
+    "name": "Clustered mint burst event",
+    "economic_mechanism": ">=k mints from distinct owners within dt after pool birth \u2192 structural attention event.",
+    "counterparty": "multi_LP_bootstrappers",
+    "universe": "new pools",
+    "observation_time": "event",
+    "feature_available_at": "mints <=t",
+    "exact_feature_formulas": {
+      "mint_burst": "count distinct owner mints in dt after first_mint"
+    },
+    "parameter_search_space": {
+      "dt_sec": [
+        300,
+        900,
+        1800
+      ],
+      "k_min": [
+        3,
+        5
+      ],
+      "age_max_m": [
+        30,
+        60
+      ],
+      "hold": [
+        15,
+        45
+      ],
+      "stop_ret": [
+        0.2,
+        0.3
+      ]
+    },
+    "param_combo_count": 48,
+    "entry": "long if mint_burst>=k_min and age_m<=age_max",
+    "execution_delay": "1 bar",
+    "position_size": "{50,100}",
+    "exit": "hold",
+    "stop": "stop_ret",
+    "take_profit": "0.15",
+    "maximum_hold": "hold",
+    "repeat_entry": "once",
+    "cooldown": "age_max",
+    "cost_model": {
+      "gas": "UNKNOWN_UNTIL_CALIBRATED | placeholder_search_usd_per_roundtrip in {0.05,0.15,0.40}",
+      "protocol_fee": "pool_fee_tier_bps * notional (known from pool metadata when available)",
+      "lp_fee": "included in fee_tier unless separated",
+      "slippage": "UNKNOWN_UNTIL_CALIBRATED | stress multipliers {1.0,1.5,2.5} on quoted impact",
+      "price_impact": "f(notional, depth_proxy); UNKNOWN if depth missing",
+      "mev": "UNKNOWN_UNTIL_CALIBRATED | additive stress_usd in {0,0.05,0.20}",
+      "revert": "P_revert search {0.01,0.05,0.15}; cost = P_revert * gas_usd",
+      "failed_sell": "P_fail_sell search {0.02,0.10,0.25}; residual inventory marked at stress exit",
+      "quote_latency_ms": "execution_delay_bars * bar_seconds * 1000",
+      "broadcast_latency_ms": "UNKNOWN_UNTIL_CALIBRATED"
+    },
+    "failure_handling": {
+      "missing_feature": "skip_signal",
+      "unknown_cost_field": "do_not_treat_as_zero; mark INCONCLUSIVE_COST",
+      "no_sell_quote": "force flat mark with failed_sell stress; no phantom fill",
+      "partial_history": "exclude pool from fold"
+    },
+    "main_falsification": "owner ids permute",
+    "difference_from_prior_failed_strategies": "Multi-LP burst \u2260 single mint drift F02.",
+    "data_class": "B_SMALL_BOUNDED_EXPORT_REQUIRED",
+    "required_tables_or_files": [
+      "mints_decoded"
+    ],
+    "required_columns": [
+      "pool",
+      "owner",
+      "time",
+      "amounts"
+    ],
+    "required_time_resolution": "event",
+    "point_in_time_requirements": "PIT",
+    "minimum_history": ">=30d",
+    "estimated_rows": "mints medium",
+    "estimated_read_bytes": "50-500MB",
+    "whether_current_diagnostics_may_support_it": "uncertain",
+    "whether_production_database_would_be_required": true,
+    "missing_data": [
+      "owner field presence"
+    ],
+    "scores": {
+      "economic_plausibility": 3,
+      "novelty": 3,
+      "data_readiness": 2,
+      "expected_gross_edge_required": 3,
+      "execution_feasibility": 3,
+      "capacity": 3,
+      "lookahead_risk": 2,
+      "overfitting_risk": 3,
+      "live_conflict_risk": 4,
+      "estimated_compute_cost": 3
+    },
+    "live_conflict_note": "Young pool overlap medium-high.",
+    "universe_overlap_with_live": "PARTIAL_SAME_BASE_V3_WETH_POOLS",
+    "time_horizon_overlap": "VARIES",
+    "capital_overlap": "WOULD_SHARE_WALLET_IF_DEPLOYED_HENCE_NOT_DEPLOYABLE_WITH_LIVE",
+    "nonce_overlap_risk": "HIGH_IF_SAME_WALLET",
+    "rpc_overlap_risk": "MEDIUM_IF_SHARED_ENDPOINT",
+    "position_conflict_risk": "HIGH_IF_SAME_POOL",
+    "execution_conflict_risk": "HIGH_IF_SAME_EXECUTOR"
+  },
+  {
+    "strategy_id": "F08_EVT_FEE_TIER_SHIFT",
+    "family": "F08",
+    "family_name": "Protocol & event driven",
+    "name": "Fee-tier / pool migration proxy",
+    "economic_mechanism": "When same token pair appears with new fee tier pool and volume migrates, long migrating pool / avoid dying pool.",
+    "counterparty": "migrating_flow_takers",
+    "universe": "token pairs with >=2 fee tiers",
+    "observation_time": "1h",
+    "feature_available_at": "pair mapping known",
+    "exact_feature_formulas": {
+      "share_new": "vol_new_tier / (vol_all_tiers+eps)",
+      "share_delta": "share_new_t - share_new_{t-1}"
+    },
+    "parameter_search_space": {
+      "share_delta_min": [
+        0.1,
+        0.2
+      ],
+      "hold_h": [
+        2,
+        6,
+        12
+      ],
+      "min_vol_eth": [
+        5,
+        20
+      ],
+      "stop_ret": [
+        0.15,
+        0.25
+      ],
+      "tp_ret": [
+        0.1,
+        0.2
+      ]
+    },
+    "param_combo_count": 48,
+    "entry": "long new-tier pool if share_delta>=min and vol filters",
+    "execution_delay": "+1h",
+    "position_size": "{50,100}",
+    "exit": "hold_h",
+    "stop": "stop_ret",
+    "take_profit": "tp_ret",
+    "maximum_hold": "hold_h",
+    "repeat_entry": "one per migration episode",
+    "cooldown": "24h",
+    "cost_model": {
+      "gas": "UNKNOWN_UNTIL_CALIBRATED | placeholder_search_usd_per_roundtrip in {0.05,0.15,0.40}",
+      "protocol_fee": "pool_fee_tier_bps * notional (known from pool metadata when available)",
+      "lp_fee": "included in fee_tier unless separated",
+      "slippage": "UNKNOWN_UNTIL_CALIBRATED | stress multipliers {1.0,1.5,2.5} on quoted impact",
+      "price_impact": "f(notional, depth_proxy); UNKNOWN if depth missing",
+      "mev": "UNKNOWN_UNTIL_CALIBRATED | additive stress_usd in {0,0.05,0.20}",
+      "revert": "P_revert search {0.01,0.05,0.15}; cost = P_revert * gas_usd",
+      "failed_sell": "P_fail_sell search {0.02,0.10,0.25}; residual inventory marked at stress exit",
+      "quote_latency_ms": "execution_delay_bars * bar_seconds * 1000",
+      "broadcast_latency_ms": "UNKNOWN_UNTIL_CALIBRATED"
+    },
+    "failure_handling": {
+      "missing_feature": "skip_signal",
+      "unknown_cost_field": "do_not_treat_as_zero; mark INCONCLUSIVE_COST",
+      "no_sell_quote": "force flat mark with failed_sell stress; no phantom fill",
+      "partial_history": "exclude pool from fold"
+    },
+    "main_falsification": "tier labels shuffle",
+    "difference_from_prior_failed_strategies": "Protocol structure change; not micro runs.",
+    "data_class": "D_DATA_UNAVAILABLE",
+    "required_tables_or_files": [
+      "pair\u2194fee tier registry",
+      "per-tier volumes"
+    ],
+    "required_columns": [
+      "token0",
+      "token1",
+      "fee",
+      "hour",
+      "volume"
+    ],
+    "required_time_resolution": "1h",
+    "point_in_time_requirements": "PIT",
+    "minimum_history": ">=60d",
+    "estimated_rows": "UNKNOWN",
+    "estimated_read_bytes": "UNKNOWN",
+    "whether_current_diagnostics_may_support_it": "no clean registry file found by name in atlas inventory",
+    "whether_production_database_would_be_required": true,
+    "missing_data": [
+      "canonical pair registry"
+    ],
+    "scores": {
+      "economic_plausibility": 3,
+      "novelty": 4,
+      "data_readiness": 1,
+      "expected_gross_edge_required": 3,
+      "execution_feasibility": 2,
+      "capacity": 3,
+      "lookahead_risk": 2,
+      "overfitting_risk": 3,
+      "live_conflict_risk": 2,
+      "estimated_compute_cost": 3
+    },
+    "live_conflict_note": "Low live conflict; data missing.",
+    "universe_overlap_with_live": "PARTIAL_SAME_BASE_V3_WETH_POOLS",
+    "time_horizon_overlap": "VARIES",
+    "capital_overlap": "WOULD_SHARE_WALLET_IF_DEPLOYED_HENCE_NOT_DEPLOYABLE_WITH_LIVE",
+    "nonce_overlap_risk": "HIGH_IF_SAME_WALLET",
+    "rpc_overlap_risk": "MEDIUM_IF_SHARED_ENDPOINT",
+    "position_conflict_risk": "HIGH_IF_SAME_POOL",
+    "execution_conflict_risk": "HIGH_IF_SAME_EXECUTOR"
+  },
+  {
+    "strategy_id": "F09_EXE_IMPACT_ASYMM",
+    "family": "F09",
+    "family_name": "Quote, routing & execution anomalies",
+    "name": "Buy/sell impact asymmetry",
+    "economic_mechanism": "Estimate impact_buy and impact_sell on matched notionals; trade direction with lower adverse impact persistence.",
+    "counterparty": "asymmetric_LP_curves",
+    "universe": "pools with dense swaps",
+    "observation_time": "5m estimation windows",
+    "feature_available_at": "impacts from past windows only",
+    "exact_feature_formulas": {
+      "impact(side,n)": "median |ret| over dt after swaps of side with size~n",
+      "asym": "impact_buy - impact_sell"
+    },
+    "parameter_search_space": {
+      "n_eth": [
+        0.3,
+        1.0
+      ],
+      "dt_sec": [
+        30,
+        60
+      ],
+      "asym_min": [
+        0.002,
+        0.005
+      ],
+      "hold": [
+        5,
+        15
+      ],
+      "stop_ret": [
+        0.1,
+        0.15
+      ]
+    },
+    "param_combo_count": 32,
+    "entry": "long if asym<=-asym_min (buys cheaper impact than sells) else flat/bearish mark",
+    "execution_delay": "1 bar",
+    "position_size": "{50,100}",
+    "exit": "hold",
+    "stop": "stop_ret",
+    "take_profit": "0.1",
+    "maximum_hold": "hold",
+    "repeat_entry": "no overlap",
+    "cooldown": "15 bars",
+    "cost_model": {
+      "gas": "UNKNOWN_UNTIL_CALIBRATED | placeholder_search_usd_per_roundtrip in {0.05,0.15,0.40}",
+      "protocol_fee": "pool_fee_tier_bps * notional (known from pool metadata when available)",
+      "lp_fee": "included in fee_tier unless separated",
+      "slippage": "UNKNOWN_UNTIL_CALIBRATED | stress multipliers {1.0,1.5,2.5} on quoted impact",
+      "price_impact": "f(notional, depth_proxy); UNKNOWN if depth missing",
+      "mev": "UNKNOWN_UNTIL_CALIBRATED | additive stress_usd in {0,0.05,0.20}",
+      "revert": "P_revert search {0.01,0.05,0.15}; cost = P_revert * gas_usd",
+      "failed_sell": "P_fail_sell search {0.02,0.10,0.25}; residual inventory marked at stress exit",
+      "quote_latency_ms": "execution_delay_bars * bar_seconds * 1000",
+      "broadcast_latency_ms": "UNKNOWN_UNTIL_CALIBRATED"
+    },
+    "failure_handling": {
+      "missing_feature": "skip_signal",
+      "unknown_cost_field": "do_not_treat_as_zero; mark INCONCLUSIVE_COST",
+      "no_sell_quote": "force flat mark with failed_sell stress; no phantom fill",
+      "partial_history": "exclude pool from fold"
+    },
+    "main_falsification": "sign flip of sides",
+    "difference_from_prior_failed_strategies": "Microstructure impact geometry \u2260 signal ML.",
+    "data_class": "B_SMALL_BOUNDED_EXPORT_REQUIRED",
+    "required_tables_or_files": [
+      "swaps"
+    ],
+    "required_columns": [
+      "pool",
+      "time",
+      "amounts",
+      "tick"
+    ],
+    "required_time_resolution": "event\u21925m",
+    "point_in_time_requirements": "PIT",
+    "minimum_history": ">=30d",
+    "estimated_rows": "medium-large",
+    "estimated_read_bytes": "200MB-2GB",
+    "whether_current_diagnostics_may_support_it": "maybe",
+    "whether_production_database_would_be_required": true,
+    "missing_data": [
+      "clean mid price"
+    ],
+    "scores": {
+      "economic_plausibility": 4,
+      "novelty": 5,
+      "data_readiness": 2,
+      "expected_gross_edge_required": 3,
+      "execution_feasibility": 3,
+      "capacity": 2,
+      "lookahead_risk": 3,
+      "overfitting_risk": 3,
+      "live_conflict_risk": 3,
+      "estimated_compute_cost": 4
+    },
+    "live_conflict_note": "Distinct; medium compute.",
+    "universe_overlap_with_live": "PARTIAL_SAME_BASE_V3_WETH_POOLS",
+    "time_horizon_overlap": "VARIES",
+    "capital_overlap": "WOULD_SHARE_WALLET_IF_DEPLOYED_HENCE_NOT_DEPLOYABLE_WITH_LIVE",
+    "nonce_overlap_risk": "HIGH_IF_SAME_WALLET",
+    "rpc_overlap_risk": "MEDIUM_IF_SHARED_ENDPOINT",
+    "position_conflict_risk": "HIGH_IF_SAME_POOL",
+    "execution_conflict_risk": "HIGH_IF_SAME_EXECUTOR"
+  },
+  {
+    "strategy_id": "F09_EXE_NOTIONAL_CURVE",
+    "family": "F09",
+    "family_name": "Quote, routing & execution anomalies",
+    "name": "Nonlinear notional slippage curve",
+    "economic_mechanism": "Fit impact \u2248 a*n^b on historical swaps; enter only notionals where modeled net EV>0 under stress.",
+    "counterparty": "size_takers_ignoring_convexity",
+    "universe": "dense pools",
+    "observation_time": "offline fit windows",
+    "feature_available_at": "fit on past only",
+    "exact_feature_formulas": {
+      "model": "impact_hat(n)=a*n^b",
+      "edge_hat": "expected_move_hat - impact_hat(n) - costs"
+    },
+    "parameter_search_space": {
+      "fit_lookback_h": [
+        6,
+        24
+      ],
+      "n_usd": [
+        50,
+        100
+      ],
+      "hold": [
+        5,
+        15
+      ],
+      "min_edge_hat": [
+        0.0,
+        0.01
+      ],
+      "dom_S": [
+        5,
+        10
+      ]
+    },
+    "param_combo_count": 32,
+    "entry": "enter long only if edge_hat(n_usd)>=min_edge_hat and separate alpha direction from F01 sign run (uses dom_sign)",
+    "execution_delay": "1 bar",
+    "position_size": "n_usd",
+    "exit": "hold",
+    "stop": "0.1",
+    "take_profit": "0.1",
+    "maximum_hold": "hold",
+    "repeat_entry": "no overlap",
+    "cooldown": "10",
+    "cost_model": {
+      "gas": "UNKNOWN_UNTIL_CALIBRATED | placeholder_search_usd_per_roundtrip in {0.05,0.15,0.40}",
+      "protocol_fee": "pool_fee_tier_bps * notional (known from pool metadata when available)",
+      "lp_fee": "included in fee_tier unless separated",
+      "slippage": "UNKNOWN_UNTIL_CALIBRATED | stress multipliers {1.0,1.5,2.5} on quoted impact",
+      "price_impact": "f(notional, depth_proxy); UNKNOWN if depth missing",
+      "mev": "UNKNOWN_UNTIL_CALIBRATED | additive stress_usd in {0,0.05,0.20}",
+      "revert": "P_revert search {0.01,0.05,0.15}; cost = P_revert * gas_usd",
+      "failed_sell": "P_fail_sell search {0.02,0.10,0.25}; residual inventory marked at stress exit",
+      "quote_latency_ms": "execution_delay_bars * bar_seconds * 1000",
+      "broadcast_latency_ms": "UNKNOWN_UNTIL_CALIBRATED"
+    },
+    "failure_handling": {
+      "missing_feature": "skip_signal",
+      "unknown_cost_field": "do_not_treat_as_zero; mark INCONCLUSIVE_COST",
+      "no_sell_quote": "force flat mark with failed_sell stress; no phantom fill",
+      "partial_history": "exclude pool from fold"
+    },
+    "main_falsification": "scramble sizes vs returns in fit",
+    "difference_from_prior_failed_strategies": "Position sizing economics; depends on external direction signal defined as dom_sign from last S swaps.",
+    "data_class": "B_SMALL_BOUNDED_EXPORT_REQUIRED",
+    "required_tables_or_files": [
+      "swaps"
+    ],
+    "required_columns": [
+      "size",
+      "impact proxies"
+    ],
+    "required_time_resolution": "event",
+    "point_in_time_requirements": "PIT fit",
+    "minimum_history": ">=30d",
+    "estimated_rows": "medium",
+    "estimated_read_bytes": "200MB+",
+    "whether_current_diagnostics_may_support_it": "maybe",
+    "whether_production_database_would_be_required": true,
+    "missing_data": [
+      "stable impact measurement"
+    ],
+    "scores": {
+      "economic_plausibility": 3,
+      "novelty": 4,
+      "data_readiness": 2,
+      "expected_gross_edge_required": 3,
+      "execution_feasibility": 3,
+      "capacity": 3,
+      "lookahead_risk": 3,
+      "overfitting_risk": 4,
+      "live_conflict_risk": 3,
+      "estimated_compute_cost": 4
+    },
+    "live_conflict_note": "Sizing overlay risk if combined with live.",
+    "universe_overlap_with_live": "PARTIAL_SAME_BASE_V3_WETH_POOLS",
+    "time_horizon_overlap": "VARIES",
+    "capital_overlap": "WOULD_SHARE_WALLET_IF_DEPLOYED_HENCE_NOT_DEPLOYABLE_WITH_LIVE",
+    "nonce_overlap_risk": "HIGH_IF_SAME_WALLET",
+    "rpc_overlap_risk": "MEDIUM_IF_SHARED_ENDPOINT",
+    "position_conflict_risk": "HIGH_IF_SAME_POOL",
+    "execution_conflict_risk": "HIGH_IF_SAME_EXECUTOR"
+  },
+  {
+    "strategy_id": "F09_EXE_QUOTE_STALE",
+    "family": "F09",
+    "family_name": "Quote, routing & execution anomalies",
+    "name": "Stale quote recovery",
+    "economic_mechanism": "If mid moves >=x without swaps for g seconds (stale), trade mean-reversion toward last trade price when swaps resume.",
+    "counterparty": "stale_arbitrageurs_slow",
+    "universe": "pools with external mid OR tick-derived mid",
+    "observation_time": "event",
+    "feature_available_at": "stale detection causal",
+    "exact_feature_formulas": {
+      "stale": "no swaps for g sec AND abs(mid_now/last_trade_px-1)>=x",
+      "resume": "first swap after stale"
+    },
+    "parameter_search_space": {
+      "g_sec": [
+        15,
+        30,
+        60
+      ],
+      "x": [
+        0.01,
+        0.02,
+        0.05
+      ],
+      "hold_sec": [
+        30,
+        120
+      ],
+      "stop_ret": [
+        0.05,
+        0.1
+      ],
+      "tp_ret": [
+        0.005,
+        0.02
+      ]
+    },
+    "param_combo_count": 72,
+    "entry": "on resume, long if mid>last_trade (expect down? \u2192 fade: side = -sign(mid/last_trade-1))",
+    "execution_delay": "delay_sec {1,2}",
+    "position_size": "{50,100}",
+    "exit": "hold_sec",
+    "stop": "stop_ret",
+    "take_profit": "tp_ret",
+    "maximum_hold": "hold_sec",
+    "repeat_entry": "one per stale episode",
+    "cooldown": "g_sec",
+    "cost_model": {
+      "gas": "UNKNOWN_UNTIL_CALIBRATED | placeholder_search_usd_per_roundtrip in {0.05,0.15,0.40}",
+      "protocol_fee": "pool_fee_tier_bps * notional (known from pool metadata when available)",
+      "lp_fee": "included in fee_tier unless separated",
+      "slippage": "UNKNOWN_UNTIL_CALIBRATED | stress multipliers {1.0,1.5,2.5} on quoted impact",
+      "price_impact": "f(notional, depth_proxy); UNKNOWN if depth missing",
+      "mev": "UNKNOWN_UNTIL_CALIBRATED | additive stress_usd in {0,0.05,0.20}",
+      "revert": "P_revert search {0.01,0.05,0.15}; cost = P_revert * gas_usd",
+      "failed_sell": "P_fail_sell search {0.02,0.10,0.25}; residual inventory marked at stress exit",
+      "quote_latency_ms": "execution_delay_bars * bar_seconds * 1000",
+      "broadcast_latency_ms": "UNKNOWN_UNTIL_CALIBRATED"
+    },
+    "failure_handling": {
+      "missing_feature": "skip_signal",
+      "unknown_cost_field": "do_not_treat_as_zero; mark INCONCLUSIVE_COST",
+      "no_sell_quote": "force flat mark with failed_sell stress; no phantom fill",
+      "partial_history": "exclude pool from fold"
+    },
+    "main_falsification": "inject fake stale flags",
+    "difference_from_prior_failed_strategies": "Latency/staleness microstructure; not trend.",
+    "data_class": "D_DATA_UNAVAILABLE",
+    "required_tables_or_files": [
+      "high-res mid quotes or tick stream + swaps"
+    ],
+    "required_columns": [
+      "mid",
+      "last_trade",
+      "times"
+    ],
+    "required_time_resolution": "sub-second to 1s ideal",
+    "point_in_time_requirements": "PIT",
+    "minimum_history": "UNKNOWN",
+    "estimated_rows": "UNKNOWN",
+    "estimated_read_bytes": "UNKNOWN",
+    "whether_current_diagnostics_may_support_it": "no quote tape in offline inventory names",
+    "whether_production_database_would_be_required": true,
+    "missing_data": [
+      "quote tape"
+    ],
+    "scores": {
+      "economic_plausibility": 3,
+      "novelty": 4,
+      "data_readiness": 1,
+      "expected_gross_edge_required": 3,
+      "execution_feasibility": 1,
+      "capacity": 2,
+      "lookahead_risk": 3,
+      "overfitting_risk": 3,
+      "live_conflict_risk": 2,
+      "estimated_compute_cost": 4
+    },
+    "live_conflict_note": "No arb executor; research only; data missing.",
+    "universe_overlap_with_live": "PARTIAL_SAME_BASE_V3_WETH_POOLS",
+    "time_horizon_overlap": "VARIES",
+    "capital_overlap": "WOULD_SHARE_WALLET_IF_DEPLOYED_HENCE_NOT_DEPLOYABLE_WITH_LIVE",
+    "nonce_overlap_risk": "HIGH_IF_SAME_WALLET",
+    "rpc_overlap_risk": "MEDIUM_IF_SHARED_ENDPOINT",
+    "position_conflict_risk": "HIGH_IF_SAME_POOL",
+    "execution_conflict_risk": "HIGH_IF_SAME_EXECUTOR"
+  },
+  {
+    "strategy_id": "F10_PLP_FEE_VS_IL",
+    "family": "F10",
+    "family_name": "Passive LP & fee capture",
+    "name": "Short-horizon fee vs IL",
+    "economic_mechanism": "Provide liquidity for H minutes; net = fee_income - IL - gas - rebalance - withdraw; enter only when predicted net>0.",
+    "counterparty": "takers_paying_fees",
+    "universe": "V3 pools with fee + price path",
+    "observation_time": "LP open time",
+    "feature_available_at": "prediction features <= open",
+    "exact_feature_formulas": {
+      "fee_income": "fee_tier * expected_volume * liq_share",
+      "IL": "IL(price_ratio) standard V3 formula for range",
+      "net": "fee_income - IL - gas - rebalance_cost - withdrawal_cost"
+    },
+    "parameter_search_space": {
+      "H_min": [
+        15,
+        60,
+        240
+      ],
+      "range_width_ticks": [
+        10,
+        50,
+        200
+      ],
+      "liq_usd": [
+        50,
+        100
+      ],
+      "min_pred_net": [
+        0.0,
+        0.01
+      ],
+      "vol_forecast_w": [
+        30,
+        120
+      ]
+    },
+    "param_combo_count": 72,
+    "entry": "open LP if pred_net>=min_pred_net using vol_forecast from past w",
+    "execution_delay": "1 bar to mint",
+    "position_size": "liq_usd",
+    "exit": "close after H_min",
+    "stop": "emergency withdraw if IL mid-path exceeds stop_il {0.02,0.05}",
+    "take_profit": "n/a take-profit beyond H; optional early exit if fee_captured>=tp_fee",
+    "maximum_hold": "H_min",
+    "repeat_entry": "no overlapping LP on same pool",
+    "cooldown": "H_min",
+    "cost_model": {
+      "gas": "UNKNOWN_UNTIL_CALIBRATED | placeholder_search_usd_per_roundtrip in {0.05,0.15,0.40}",
+      "protocol_fee": "pool_fee_tier_bps * notional (known from pool metadata when available)",
+      "lp_fee": "included in fee_tier unless separated",
+      "slippage": "UNKNOWN_UNTIL_CALIBRATED | stress multipliers {1.0,1.5,2.5} on quoted impact",
+      "price_impact": "f(notional, depth_proxy); UNKNOWN if depth missing",
+      "mev": "UNKNOWN_UNTIL_CALIBRATED | additive stress_usd in {0,0.05,0.20}",
+      "revert": "P_revert search {0.01,0.05,0.15}; cost = P_revert * gas_usd",
+      "failed_sell": "P_fail_sell search {0.02,0.10,0.25}; residual inventory marked at stress exit",
+      "quote_latency_ms": "execution_delay_bars * bar_seconds * 1000",
+      "broadcast_latency_ms": "UNKNOWN_UNTIL_CALIBRATED"
+    },
+    "failure_handling": {
+      "missing_feature": "skip_signal",
+      "unknown_cost_field": "do_not_treat_as_zero; mark INCONCLUSIVE_COST",
+      "no_sell_quote": "force flat mark with failed_sell stress; no phantom fill",
+      "partial_history": "exclude pool from fold"
+    },
+    "main_falsification": "fee path scramble vs price path",
+    "difference_from_prior_failed_strategies": "Full net components mandatory; APR-only forbidden.",
+    "data_class": "C_PRODUCTION_DB_HEAVY",
+    "required_tables_or_files": [
+      "swaps",
+      "mints",
+      "burns",
+      "fee tier meta"
+    ],
+    "required_columns": [
+      "price",
+      "volume",
+      "liquidity",
+      "fees"
+    ],
+    "required_time_resolution": "1m",
+    "point_in_time_requirements": "PIT",
+    "minimum_history": ">=60d",
+    "estimated_rows": "large",
+    "estimated_read_bytes": ">2GB for accurate fees",
+    "whether_current_diagnostics_may_support_it": "no complete fee capture dataset by name",
+    "whether_production_database_would_be_required": true,
+    "missing_data": [
+      "actual fee growth series per position"
+    ],
+    "scores": {
+      "economic_plausibility": 3,
+      "novelty": 3,
+      "data_readiness": 1,
+      "expected_gross_edge_required": 2,
+      "execution_feasibility": 1,
+      "capacity": 3,
+      "lookahead_risk": 3,
+      "overfitting_risk": 3,
+      "live_conflict_risk": 2,
+      "estimated_compute_cost": 5
+    },
+    "live_conflict_note": "Different product (LP not swap); still not Wave1.",
+    "universe_overlap_with_live": "PARTIAL_SAME_BASE_V3_WETH_POOLS",
+    "time_horizon_overlap": "VARIES",
+    "capital_overlap": "WOULD_SHARE_WALLET_IF_DEPLOYED_HENCE_NOT_DEPLOYABLE_WITH_LIVE",
+    "nonce_overlap_risk": "HIGH_IF_SAME_WALLET",
+    "rpc_overlap_risk": "MEDIUM_IF_SHARED_ENDPOINT",
+    "position_conflict_risk": "HIGH_IF_SAME_POOL",
+    "execution_conflict_risk": "HIGH_IF_SAME_EXECUTOR"
+  },
+  {
+    "strategy_id": "F10_PLP_HIGHVOL_LOWTREND",
+    "family": "F10",
+    "family_name": "Passive LP & fee capture",
+    "name": "High volume low trend LP",
+    "economic_mechanism": "Select pools with high vol_volume_z and low |trend|; earn fees with limited IL.",
+    "counterparty": "noisy_takers",
+    "universe": "V3 pools",
+    "observation_time": "1h decision",
+    "feature_available_at": "features past only",
+    "exact_feature_formulas": {
+      "vol_z": "zscore(volume_eth_1h)",
+      "trend_abs": "abs(px_h/px_{h-L}-1)"
+    },
+    "parameter_search_space": {
+      "vol_z_min": [
+        1.0,
+        1.5
+      ],
+      "trend_max": [
+        0.02,
+        0.05
+      ],
+      "L": [
+        6,
+        12
+      ],
+      "H_h": [
+        2,
+        6
+      ],
+      "range_width_ticks": [
+        50,
+        200
+      ]
+    },
+    "param_combo_count": 32,
+    "entry": "open LP if vol_z>=min and trend_abs<=max",
+    "execution_delay": "+1h mint",
+    "position_size": "liq_usd {50,100}",
+    "exit": "H_h hours",
+    "stop": "stop_il {0.02,0.05}",
+    "take_profit": "early exit if fee_captured>=tp",
+    "maximum_hold": "H_h",
+    "repeat_entry": "no overlap",
+    "cooldown": "H_h",
+    "cost_model": {
+      "gas": "UNKNOWN_UNTIL_CALIBRATED | placeholder_search_usd_per_roundtrip in {0.05,0.15,0.40}",
+      "protocol_fee": "pool_fee_tier_bps * notional (known from pool metadata when available)",
+      "lp_fee": "included in fee_tier unless separated",
+      "slippage": "UNKNOWN_UNTIL_CALIBRATED | stress multipliers {1.0,1.5,2.5} on quoted impact",
+      "price_impact": "f(notional, depth_proxy); UNKNOWN if depth missing",
+      "mev": "UNKNOWN_UNTIL_CALIBRATED | additive stress_usd in {0,0.05,0.20}",
+      "revert": "P_revert search {0.01,0.05,0.15}; cost = P_revert * gas_usd",
+      "failed_sell": "P_fail_sell search {0.02,0.10,0.25}; residual inventory marked at stress exit",
+      "quote_latency_ms": "execution_delay_bars * bar_seconds * 1000",
+      "broadcast_latency_ms": "UNKNOWN_UNTIL_CALIBRATED"
+    },
+    "failure_handling": {
+      "missing_feature": "skip_signal",
+      "unknown_cost_field": "do_not_treat_as_zero; mark INCONCLUSIVE_COST",
+      "no_sell_quote": "force flat mark with failed_sell stress; no phantom fill",
+      "partial_history": "exclude pool from fold"
+    },
+    "main_falsification": "shuffle volume vs trend labels",
+    "difference_from_prior_failed_strategies": "Screen on volume/trend geometry for LP, not directional buy.",
+    "data_class": "B_SMALL_BOUNDED_EXPORT_REQUIRED",
+    "required_tables_or_files": [
+      "OHLCV+volume",
+      "fee tier"
+    ],
+    "required_columns": [
+      "pool",
+      "hour",
+      "close",
+      "volume",
+      "fee"
+    ],
+    "required_time_resolution": "1h",
+    "point_in_time_requirements": "PIT",
+    "minimum_history": ">=30d",
+    "estimated_rows": "medium",
+    "estimated_read_bytes": "50-500MB",
+    "whether_current_diagnostics_may_support_it": "partial ohlcv",
+    "whether_production_database_would_be_required": true,
+    "missing_data": [
+      "fee income realization"
+    ],
+    "scores": {
+      "economic_plausibility": 3,
+      "novelty": 3,
+      "data_readiness": 2,
+      "expected_gross_edge_required": 2,
+      "execution_feasibility": 2,
+      "capacity": 3,
+      "lookahead_risk": 2,
+      "overfitting_risk": 3,
+      "live_conflict_risk": 2,
+      "estimated_compute_cost": 3
+    },
+    "live_conflict_note": "LP sleeve; low swap-executor conflict.",
+    "universe_overlap_with_live": "PARTIAL_SAME_BASE_V3_WETH_POOLS",
+    "time_horizon_overlap": "VARIES",
+    "capital_overlap": "WOULD_SHARE_WALLET_IF_DEPLOYED_HENCE_NOT_DEPLOYABLE_WITH_LIVE",
+    "nonce_overlap_risk": "HIGH_IF_SAME_WALLET",
+    "rpc_overlap_risk": "MEDIUM_IF_SHARED_ENDPOINT",
+    "position_conflict_risk": "HIGH_IF_SAME_POOL",
+    "execution_conflict_risk": "HIGH_IF_SAME_EXECUTOR"
+  },
+  {
+    "strategy_id": "F10_PLP_EVENT_WINDOW",
+    "family": "F10",
+    "family_name": "Passive LP & fee capture",
+    "name": "Event-window LP",
+    "economic_mechanism": "Mint LP for short window around scheduled/detected volume events (e.g., post-mint burst) then withdraw.",
+    "counterparty": "event_takers",
+    "universe": "pools with detectable events from F02/F08 definitions",
+    "observation_time": "event time",
+    "feature_available_at": "event features <=t",
+    "exact_feature_formulas": {
+      "event_flag": "reuse F08 mint_burst or volume z event without future",
+      "net": "fee_income - IL - gas - withdraw"
+    },
+    "parameter_search_space": {
+      "pre_min": [
+        0,
+        5
+      ],
+      "post_min": [
+        10,
+        30,
+        60
+      ],
+      "range_width_ticks": [
+        20,
+        100
+      ],
+      "liq_usd": [
+        50,
+        100
+      ],
+      "min_event_z": [
+        1.0,
+        2.0
+      ]
+    },
+    "param_combo_count": 48,
+    "entry": "on event_flag, mint at t+pre_min, burn at t+post_min",
+    "execution_delay": "1 bar",
+    "position_size": "liq_usd",
+    "exit": "fixed schedule",
+    "stop": "stop_il",
+    "take_profit": "n/a",
+    "maximum_hold": "post_min",
+    "repeat_entry": "one per event",
+    "cooldown": "60m",
+    "cost_model": {
+      "gas": "UNKNOWN_UNTIL_CALIBRATED | placeholder_search_usd_per_roundtrip in {0.05,0.15,0.40}",
+      "protocol_fee": "pool_fee_tier_bps * notional (known from pool metadata when available)",
+      "lp_fee": "included in fee_tier unless separated",
+      "slippage": "UNKNOWN_UNTIL_CALIBRATED | stress multipliers {1.0,1.5,2.5} on quoted impact",
+      "price_impact": "f(notional, depth_proxy); UNKNOWN if depth missing",
+      "mev": "UNKNOWN_UNTIL_CALIBRATED | additive stress_usd in {0,0.05,0.20}",
+      "revert": "P_revert search {0.01,0.05,0.15}; cost = P_revert * gas_usd",
+      "failed_sell": "P_fail_sell search {0.02,0.10,0.25}; residual inventory marked at stress exit",
+      "quote_latency_ms": "execution_delay_bars * bar_seconds * 1000",
+      "broadcast_latency_ms": "UNKNOWN_UNTIL_CALIBRATED"
+    },
+    "failure_handling": {
+      "missing_feature": "skip_signal",
+      "unknown_cost_field": "do_not_treat_as_zero; mark INCONCLUSIVE_COST",
+      "no_sell_quote": "force flat mark with failed_sell stress; no phantom fill",
+      "partial_history": "exclude pool from fold"
+    },
+    "main_falsification": "placebo events",
+    "difference_from_prior_failed_strategies": "Scheduled LP around events; distinct from continuous highvol-lowtrend screen.",
+    "data_class": "C_PRODUCTION_DB_HEAVY",
+    "required_tables_or_files": [
+      "events+swaps+LP sim"
+    ],
+    "required_columns": [
+      "event markers",
+      "prices",
+      "volumes",
+      "fees"
+    ],
+    "required_time_resolution": "1m",
+    "point_in_time_requirements": "PIT",
+    "minimum_history": ">=30d",
+    "estimated_rows": "large",
+    "estimated_read_bytes": ">1GB",
+    "whether_current_diagnostics_may_support_it": "no",
+    "whether_production_database_would_be_required": true,
+    "missing_data": [
+      "LP simulator fidelity"
+    ],
+    "scores": {
+      "economic_plausibility": 3,
+      "novelty": 3,
+      "data_readiness": 1,
+      "expected_gross_edge_required": 2,
+      "execution_feasibility": 1,
+      "capacity": 3,
+      "lookahead_risk": 3,
+      "overfitting_risk": 3,
+      "live_conflict_risk": 2,
+      "estimated_compute_cost": 5
+    },
+    "live_conflict_note": "Heavy LP sim.",
+    "universe_overlap_with_live": "PARTIAL_SAME_BASE_V3_WETH_POOLS",
+    "time_horizon_overlap": "VARIES",
+    "capital_overlap": "WOULD_SHARE_WALLET_IF_DEPLOYED_HENCE_NOT_DEPLOYABLE_WITH_LIVE",
+    "nonce_overlap_risk": "HIGH_IF_SAME_WALLET",
+    "rpc_overlap_risk": "MEDIUM_IF_SHARED_ENDPOINT",
+    "position_conflict_risk": "HIGH_IF_SAME_POOL",
+    "execution_conflict_risk": "HIGH_IF_SAME_EXECUTOR"
+  }
+]

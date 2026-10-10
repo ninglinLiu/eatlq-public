@@ -1,0 +1,59 @@
+{
+  "generated_at_utc": "2026-08-07T08:23:39.657553+00:00",
+  "chain_id": 8453,
+  "block_window_inclusive": [
+    42334927,
+    46266127
+  ],
+  "comparison_basis": "RPC eth_getLogs versus ClickHouse *_decoded deduplicated views, per pool/day",
+  "summaries": [
+    {
+      "event_type": "mint",
+      "rpc_total": 2645058,
+      "clickhouse_dedup_total": 900185,
+      "rpc_removed_logs_excluded": 0,
+      "pool_days_compared": 273,
+      "mismatched_pool_days": 216,
+      "rpc_more_pool_days": 216,
+      "clickhouse_more_pool_days": 0,
+      "complete": false,
+      "rpc_only_event_keys_by_pool": {
+        "0xd0b53d9277642d899df5c87a3966a349a798f224": 52897,
+        "0x82321f3beb69f503380d6b233857d5c43562e2d0": 1689970,
+        "0xb4cb800910b228ed3d0834cf79d697127bbb00e5": 2006
+      },
+      "clickhouse_only_event_keys_by_pool": {
+        "0xd0b53d9277642d899df5c87a3966a349a798f224": 0,
+        "0x82321f3beb69f503380d6b233857d5c43562e2d0": 0,
+        "0xb4cb800910b228ed3d0834cf79d697127bbb00e5": 0
+      },
+      "event_keys_match": false,
+      "clickhouse_null_block_time_rows": 490
+    },
+    {
+      "event_type": "burn",
+      "rpc_total": 7719107,
+      "clickhouse_dedup_total": 2286290,
+      "rpc_removed_logs_excluded": 0,
+      "pool_days_compared": 273,
+      "mismatched_pool_days": 214,
+      "rpc_more_pool_days": 214,
+      "clickhouse_more_pool_days": 0,
+      "complete": false,
+      "rpc_only_event_keys_by_pool": {
+        "0xd0b53d9277642d899df5c87a3966a349a798f224": 83267,
+        "0x82321f3beb69f503380d6b233857d5c43562e2d0": 5347067,
+        "0xb4cb800910b228ed3d0834cf79d697127bbb00e5": 2483
+      },
+      "clickhouse_only_event_keys_by_pool": {
+        "0xd0b53d9277642d899df5c87a3966a349a798f224": 0,
+        "0x82321f3beb69f503380d6b233857d5c43562e2d0": 0,
+        "0xb4cb800910b228ed3d0834cf79d697127bbb00e5": 0
+      },
+      "event_keys_match": false,
+      "clickhouse_null_block_time_rows": 769
+    }
+  ],
+  "overall_complete": false,
+  "csv": "/root/base_lp_research_r0/out/r0b_ingestion_comparison.csv"
+}

@@ -1,0 +1,23 @@
+{
+  "alpha_id": "F04",
+  "family": "flow",
+  "hypothesis": "trade-count shock predicts volatility",
+  "mechanism": "attention and toxic flow arrive as activity shocks",
+  "venue": "Base V3",
+  "universe": "active observed pools",
+  "horizon": "4h",
+  "data_source": "signed swap amounts",
+  "experiment": "volatility quintile spread",
+  "feature": "count_z",
+  "direction": 1,
+  "prediction_object": "future absolute return",
+  "falsifier": "pool fixed effects eliminate it",
+  "status": "NOT_YET_TESTED",
+  "sample_size": 0,
+  "gross_result": "pending",
+  "cost_adjusted_result": "pending",
+  "capacity": "pending",
+  "concentration": "pending",
+  "tail_risk": "pending",
+  "next_action": "run rapid screen"
+}

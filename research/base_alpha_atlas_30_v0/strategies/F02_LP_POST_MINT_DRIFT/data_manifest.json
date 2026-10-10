@@ -1,0 +1,32 @@
+{
+  "strategy_id": "F02_LP_POST_MINT_DRIFT",
+  "data_class": "B_SMALL_BOUNDED_EXPORT_REQUIRED",
+  "required_tables_or_files": [
+    "uniswap_v3_mints_decoded",
+    "uniswap_v3_swaps_decoded"
+  ],
+  "required_columns": [
+    "pool_address",
+    "block_time",
+    "amount0",
+    "amount1",
+    "tick_lower",
+    "tick_upper"
+  ],
+  "required_time_resolution": "event + 1m",
+  "point_in_time_requirements": "mint before entry; no future mints",
+  "minimum_history": ">=30d",
+  "estimated_rows": "mints ~1e5-1e6; swaps larger",
+  "estimated_read_bytes": "100MB-1GB",
+  "whether_current_diagnostics_may_support_it": "uncertain; mint tables named in docs",
+  "whether_production_database_would_be_required": true,
+  "missing_data": [
+    "WETH-normalized mint size"
+  ],
+  "feasibility": "BLOCKED",
+  "evidence": [
+    "/opt/EATLQ/infra/clickhouse/init/013_decoded_views.sql"
+  ],
+  "notes": "mint table schema known; no offline mint extract",
+  "data_class_revised": "D_OR_EXPORT_REQUIRED"
+}

@@ -1,0 +1,16 @@
+{
+  "body_sha256": "7cc57c8712e3a6708a85816fb29d761db2ab8fa977122368679b8717d97401af",
+  "bytes": 46,
+  "finished": "2026-10-01T07:26:16.043937+00:00",
+  "http_status": 200,
+  "key": "58db05c4ee3f49e2164db73fa2046f9925e4f813ff0599e1fbe839ca7783a448",
+  "label": "base_head",
+  "payload": {
+    "id": 1,
+    "jsonrpc": "2.0",
+    "method": "eth_blockNumber",
+    "params": []
+  },
+  "started": "2026-10-01T07:26:15.878664+00:00",
+  "url": "https://mainnet.base.org"
+}

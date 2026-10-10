@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="240" viewBox="0 0 960 240" fill="none">
+  <defs>
+    <style>
+      .bg { fill: #0B0E14; }
+      .card { fill: #11151C; stroke: #1C2129; }
+      .n { fill: #F5A623; font: 700 22px Inter, sans-serif; }
+      .t { fill: #FFF; font: 600 14px Inter, sans-serif; }
+      .s { fill: #9E9E9E; font: 400 11px Inter, sans-serif; }
+      .title { fill: #9E9E9E; font: 600 11px Inter, sans-serif; letter-spacing: 0.12em; }
+    </style>
+  </defs>
+  <rect width="960" height="240" class="bg" rx="10"/>
+  <text x="32" y="32" class="title">RESEARCH DISCIPLINE</text>
+
+  <rect x="32" y="56" width="280" height="152" rx="8" class="card"/>
+  <text x="56" y="92" class="n">01</text>
+  <text x="56" y="118" class="t">Traceable Signals</text>
+  <text x="56" y="142" class="s">Every decision auditable</text>
+  <text x="56" y="160" class="s">Replay before scale</text>
+
+  <rect x="340" y="56" width="280" height="152" rx="8" class="card"/>
+  <text x="364" y="92" class="n">02</text>
+  <text x="364" y="118" class="t">Model Restraint</text>
+  <text x="364" y="142" class="s">Simulate when uncertain</text>
+  <text x="364" y="160" class="s">No confidence without data</text>
+
+  <rect x="648" y="56" width="280" height="152" rx="8" class="card"/>
+  <text x="672" y="92" class="n">03</text>
+  <text x="672" y="118" class="t">Risk First</text>
+  <text x="672" y="142" class="s">Pre-trade checks</text>
+  <text x="672" y="160" class="s">Automatic de-risking</text>
+</svg>

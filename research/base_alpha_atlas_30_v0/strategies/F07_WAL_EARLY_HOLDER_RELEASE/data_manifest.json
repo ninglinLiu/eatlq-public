@@ -1,0 +1,23 @@
+{
+  "strategy_id": "F07_WAL_EARLY_HOLDER_RELEASE",
+  "data_class": "C_PRODUCTION_DB_HEAVY",
+  "required_tables_or_files": [
+    "swaps+tx_from"
+  ],
+  "required_columns": [
+    "tx_from",
+    "pool",
+    "time",
+    "amounts"
+  ],
+  "required_time_resolution": "event",
+  "point_in_time_requirements": "PIT cohort",
+  "minimum_history": ">=30d",
+  "estimated_rows": "large",
+  "estimated_read_bytes": ">2GB",
+  "whether_current_diagnostics_may_support_it": "partial controller inventories by name",
+  "whether_production_database_would_be_required": true,
+  "missing_data": [
+    "accurate buy/sell attribution"
+  ]
+}

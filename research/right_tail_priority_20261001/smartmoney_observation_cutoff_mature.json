@@ -1,0 +1,19 @@
+{
+  "all_26_horizons_elapsed": true,
+  "chain_block": 52065362,
+  "chain_timestamp": 1790920071,
+  "generated_at": "2026-10-02T05:47:54.683915+00:00",
+  "header_evidence": {
+    "http_status": 200,
+    "key": "cc8cbfaa9e69847f6eb06517b3c356cf755f48349afa8dc6ae7da23cd0361315",
+    "rpc_error": null
+  },
+  "latest_scheduled_exit_timestamp": 1790892177.0,
+  "number_evidence": {
+    "http_status": 200,
+    "key": "58db05c4ee3f49e2164db73fa2046f9925e4f813ff0599e1fbe839ca7783a448",
+    "rpc_error": null
+  },
+  "prior_cutoff": "smartmoney_observation_cutoff.json",
+  "replaces_prior_cutoff": false
+}

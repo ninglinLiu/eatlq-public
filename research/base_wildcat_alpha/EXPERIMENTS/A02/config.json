@@ -1,0 +1,23 @@
+{
+  "alpha_id": "A02",
+  "family": "anomaly",
+  "hypothesis": "price movement without directional flow predicts reversal",
+  "mechanism": "state changes without signed volume may be liquidity-driven",
+  "venue": "Base V3",
+  "universe": "active observed pools",
+  "horizon": "4h",
+  "data_source": "event microstructure and data facts",
+  "experiment": "mismatch quintiles",
+  "feature": "price_flow_mismatch",
+  "direction": -1,
+  "prediction_object": "next return",
+  "falsifier": "amount parsing is invalid",
+  "status": "NOT_YET_TESTED",
+  "sample_size": 0,
+  "gross_result": "pending",
+  "cost_adjusted_result": "pending",
+  "capacity": "pending",
+  "concentration": "pending",
+  "tail_risk": "pending",
+  "next_action": "run rapid screen"
+}

@@ -1,0 +1,37 @@
+{
+  "strategy_id": "F01_OFS_SIGN_RUNLEN",
+  "family": "F01",
+  "name": "Signed-trade run-length persistence",
+  "parameter_search_space": {
+    "L_bars": [
+      60,
+      120,
+      240
+    ],
+    "z_enter": [
+      1.5,
+      2.0,
+      2.5
+    ],
+    "min_run_notional_eth": [
+      0.3,
+      1.0
+    ],
+    "hold_bars": [
+      3,
+      6,
+      12
+    ],
+    "stop_ret": [
+      0.08,
+      0.15
+    ]
+  },
+  "param_combo_count": 108,
+  "access_flags": {
+    "database_access_enabled": false,
+    "rpc_access_enabled": false,
+    "large_file_access_enabled": false,
+    "backtest_enabled": false
+  }
+}

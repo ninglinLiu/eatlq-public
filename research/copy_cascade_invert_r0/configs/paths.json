@@ -1,0 +1,20 @@
+{
+  "project_root": "/root/copy_cascade_invert_r0",
+  "eatlq_diagnostics": "/opt/EATLQ/mvp/diagnostics",
+  "eatlq_sprint083_safe": "/opt/EATLQ/mvp/audits/sprint083_fee500_paper_shadow/v3_smart_wallet_copyability_safe_prep_expanded_v2/copyability_safe_dataset_sample.csv",
+  "eatlq_sprint083_dataset": "/opt/EATLQ/mvp/audits/sprint083_fee500_paper_shadow/v3_smart_wallet_dataset_builder_expanded_v2/dataset_sample.csv",
+  "eatlq_sprint083_closed": "/opt/EATLQ/mvp/audits/sprint083_fee500_paper_shadow/v3_smart_wallet_dataset_builder_expanded_v2/closed_trades_sample.csv",
+  "eatlq_b5": "/opt/EATLQ/mvp/diagnostics/base_b5_real_swaps_20260714.tsv",
+  "eatlq_b8": "/opt/EATLQ/mvp/diagnostics/base_b8_future_swaps_20260714.tsv",
+  "eatlq_b3_entity": "/opt/EATLQ/mvp/diagnostics/base_b3_entity_attribution_sample_v2_20260714.json",
+  "eatlq_b3_inventory": "/opt/EATLQ/mvp/diagnostics/base_b3_inventory_golden_20260714.json",
+  "eatlq_b3_trace": "/opt/EATLQ/mvp/diagnostics/base_b3_trace_golden_20260714.json",
+  "eatlq_gl2b_fifo": "/opt/EATLQ/mvp/diagnostics/base_gl2_b_fifo_cashleg_golden_20260715.json",
+  "eatlq_gl2b_final": "/opt/EATLQ/mvp/diagnostics/base_gl2_b_final_20260715.json",
+  "eatlq_gl2b_report": "/opt/EATLQ/reports/GL2_B_smartmoney_copyability_result_20260715.md",
+  "eatlq_dune": "/opt/EATLQ/mvp/diagnostics/dune_smart_base_20260504_q1_wallet_summary_v2.csv",
+  "eatlq_run004": "/opt/EATLQ/mvp/diagnostics/run004_v3r6_candidate_pool.csv",
+  "actor_flow_exclusions": "/root/base_actor_flow_oos_v0/configs/base_attribution_exclusions.json",
+  "actor_flow_golden": "/root/base_actor_flow_oos_v0/out/phase1/golden_audit_rows.csv",
+  "atlas_b5_head": "/root/base_alpha_atlas_30_v0/normalized/wave1_probe/base_b5_real_swaps_head50k.tsv"
+}

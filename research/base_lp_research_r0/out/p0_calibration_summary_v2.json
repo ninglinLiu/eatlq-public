@@ -1,0 +1,128 @@
+{
+  "generated_at_utc": "2026-08-07T08:18:39.016219+00:00",
+  "chain_id": 8453,
+  "block_window_inclusive": [
+    42334927,
+    46266127
+  ],
+  "truth_definition": "per (pool,owner,tickLower,tickUpper,token): first Collect is a clearing anchor; thereafter Burn principal carries across partial Collects and only residual cumulative Collect-minus-Burn is fee; clean episodes aggregate by range/token",
+  "simulation_definition": "positive swap input * fee tier * reconstructed position liquidity / swap event active liquidity; final event tick used for crossing swaps",
+  "boundary_rule": "for v3, reconstruct opening liquidity from an end-block positions() snapshot minus in-window net Mint/Burn; for aero_cl, require an in-window Mint before scoring because gauge stake/unstake transfers liquidity without Mint/Burn; exclude invalid underflow paths, pre-anchor observations, and unmatched trailing principal",
+  "gate": {
+    "median_relative_error_lt": 0.15,
+    "sign_test_p_gt": 0.05
+  },
+  "event_counters": {
+    "0xd0b53d9277642d899df5c87a3966a349a798f224": {
+      "events": 1987252,
+      "swaps": 1526342,
+      "mints": 135999,
+      "burns": 117653,
+      "unknown_start_positions": 42,
+      "positions_invalidated_by_excess_burn": 0,
+      "open_lifecycles_excluded": 2077,
+      "nonpositive_truth_token_sides": 169121,
+      "scored_range_token_observations": 199523,
+      "snapshot_position_keys": 23130,
+      "nonzero_initial_liquidity_keys": 2538,
+      "collects": 207258,
+      "first_collect_anchors": 22638,
+      "position_keys": 23172,
+      "known_position_keys_at_end": 23130
+    },
+    "0x82321f3beb69f503380d6b233857d5c43562e2d0": {
+      "events": 12607017,
+      "swaps": 95759,
+      "mints": 2504687,
+      "burns": 2499609,
+      "unknown_start_positions": 852,
+      "positions_invalidated_by_excess_burn": 62,
+      "open_lifecycles_excluded": 188,
+      "nonpositive_truth_token_sides": 7965359,
+      "scored_range_token_observations": 6051,
+      "snapshot_position_keys": 0,
+      "nonzero_initial_liquidity_keys": 0,
+      "collects": 7506962,
+      "first_collect_anchors": 611,
+      "position_keys": 1473,
+      "known_position_keys_at_end": 559
+    },
+    "0xb4cb800910b228ed3d0834cf79d697127bbb00e5": {
+      "events": 2077314,
+      "swaps": 2064796,
+      "mints": 4372,
+      "burns": 3136,
+      "unknown_start_positions": 1,
+      "positions_invalidated_by_excess_burn": 0,
+      "open_lifecycles_excluded": 143,
+      "nonpositive_truth_token_sides": 982,
+      "scored_range_token_observations": 4022,
+      "snapshot_position_keys": 2576,
+      "nonzero_initial_liquidity_keys": 167,
+      "collects": 5010,
+      "first_collect_anchors": 2506,
+      "position_keys": 2577,
+      "known_position_keys_at_end": 2576
+    }
+  },
+  "summaries": {
+    "0xd0b53d9277642d899df5c87a3966a349a798f224": {
+      "n_positive_truth_token_intervals": 22634,
+      "median_relative_error": 0.38245871315586094,
+      "positive_errors": 7205,
+      "negative_errors": 15428,
+      "ties": 1,
+      "sign_test_p_value": 0.0,
+      "passed": false
+    },
+    "0x82321f3beb69f503380d6b233857d5c43562e2d0": {
+      "n_positive_truth_token_intervals": 746,
+      "median_relative_error": 0.9615802851009299,
+      "positive_errors": 296,
+      "negative_errors": 450,
+      "ties": 0,
+      "sign_test_p_value": 1.89819060451139e-08,
+      "passed": false
+    },
+    "0xb4cb800910b228ed3d0834cf79d697127bbb00e5": {
+      "n_positive_truth_token_intervals": 1052,
+      "median_relative_error": 0.5972282460864324,
+      "positive_errors": 275,
+      "negative_errors": 777,
+      "ties": 0,
+      "sign_test_p_value": 5.496519980309792e-56,
+      "passed": false
+    },
+    "v3": {
+      "n_positive_truth_token_intervals": 23686,
+      "median_relative_error": 0.39039025989376613,
+      "positive_errors": 7480,
+      "negative_errors": 16205,
+      "ties": 1,
+      "sign_test_p_value": 0.0,
+      "passed": false
+    },
+    "aero_cl": {
+      "n_positive_truth_token_intervals": 746,
+      "median_relative_error": 0.9615802851009299,
+      "positive_errors": 296,
+      "negative_errors": 450,
+      "ties": 0,
+      "sign_test_p_value": 1.89819060451139e-08,
+      "passed": false
+    },
+    "all": {
+      "n_positive_truth_token_intervals": 24432,
+      "median_relative_error": 0.4210711367468395,
+      "positive_errors": 7776,
+      "negative_errors": 16655,
+      "ties": 1,
+      "sign_test_p_value": 0.0,
+      "passed": false
+    }
+  },
+  "overall_passed": false,
+  "v3_passed": false,
+  "aero_cl_passed": false,
+  "range_observations_csv": "/root/base_lp_research_r0/out/p0_calibration_range_observations_v2.csv"
+}

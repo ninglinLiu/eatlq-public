@@ -1,0 +1,36 @@
+{
+  "strategy_id": "F10_PLP_FEE_VS_IL",
+  "family": "F10",
+  "name": "Short-horizon fee vs IL",
+  "parameter_search_space": {
+    "H_min": [
+      15,
+      60,
+      240
+    ],
+    "range_width_ticks": [
+      10,
+      50,
+      200
+    ],
+    "liq_usd": [
+      50,
+      100
+    ],
+    "min_pred_net": [
+      0.0,
+      0.01
+    ],
+    "vol_forecast_w": [
+      30,
+      120
+    ]
+  },
+  "param_combo_count": 72,
+  "access_flags": {
+    "database_access_enabled": false,
+    "rpc_access_enabled": false,
+    "large_file_access_enabled": false,
+    "backtest_enabled": false
+  }
+}

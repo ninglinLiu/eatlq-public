@@ -1,0 +1,56 @@
+{
+  "status": "PREFLIGHT_READY_NOT_EXECUTED",
+  "plan_hash": "9b6d19e1c43548d28953107dfe4b38c1366c47ae4f458c92fd60baf5a8f448db",
+  "candidate_table": "logical.base_logs_candidate",
+  "required_fields": [
+    "block_number",
+    "block_hash",
+    "block_timestamp",
+    "transaction_hash",
+    "transaction_index",
+    "log_index",
+    "address",
+    "topic0",
+    "topic1",
+    "topic2",
+    "topic3",
+    "data"
+  ],
+  "partition_key": "block_number",
+  "start_block": 20000000,
+  "end_block": 20000999,
+  "limit": 1000,
+  "estimated_read_bytes": 4096000,
+  "query_timeout_sec": 10,
+  "max_threads": 1,
+  "max_bytes_to_read": 8388608,
+  "stop_conditions": [
+    "statement_timeout",
+    "max_bytes_to_read",
+    "limit_reached",
+    "health_guard_trip",
+    "access_defaults_closed"
+  ],
+  "full_scan_prevention": [
+    "explicit_column_projection",
+    "partition_predicate_on_block_number",
+    "bounded_block_range_20000000_20000999",
+    "LIMIT_1000",
+    "max_threads=1",
+    "max_bytes_to_read=8388608",
+    "statement_timeout_sec=10",
+    "readonly=true",
+    "dry_run_and_explain_only_this_stage",
+    "no_select_star",
+    "no_unbounded_order_by_or_join_in_skeleton"
+  ],
+  "sql_skeleton": "SELECT block_number, block_hash, block_timestamp, transaction_hash, transaction_index, log_index, address, topic0, topic1, topic2, topic3, data FROM logical.base_logs_candidate WHERE block_number >= 20000000 AND block_number <= 20000999 LIMIT 1000",
+  "dry_run": true,
+  "explain_only": true,
+  "checkpoint_path": "/root/lpi_base_production_safe_node/checkpoints/clanker_1000_probe.ckpt.json",
+  "execution_authorized": false,
+  "notes": [
+    "Candidate table name is logical and unbound to production until owner approval.",
+    "This report does not authorize business-table queries."
+  ]
+}

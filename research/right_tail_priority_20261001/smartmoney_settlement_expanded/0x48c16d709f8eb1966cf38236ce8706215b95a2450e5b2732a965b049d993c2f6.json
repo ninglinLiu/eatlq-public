@@ -1,0 +1,58 @@
+{
+  "adapter": "MIXED_REGISTERED_FACTORY_V1",
+  "buy": {
+    "amount_raw": "10000000000000000",
+    "base_fee_header_evidence": null,
+    "base_fee_wei": 5000000,
+    "block": 51999971,
+    "direction": "buy",
+    "evidence": {
+      "http_status": 200,
+      "key": "8cdbaf8638595ab1bfef7e1ef2f3cd0f00e151b754d3073f519402b640fcae48",
+      "rpc_error": null
+    },
+    "gas_model_note": "measured internal execution + intrinsic calldata + explicit 5000 dispatcher/return buffer; not a mined receipt",
+    "gas_model_units": 464152,
+    "intrinsic_gas": 24980,
+    "measured_internal_gas": 434172,
+    "per_leg_unspent_input_raw": [
+      "0",
+      "0"
+    ],
+    "received_raw": "70291183602385408027",
+    "simulation_context": "hypothetical executor with empty hookData; no persistent state change",
+    "spent_raw": "10000000000000000",
+    "status": "HISTORICAL_TRANSFER_SETTLED_SIMULATION",
+    "timestamp": 1790789289
+  },
+  "buy_fees": {
+    "assumptions": "historical base fee; 0.01 gwei tip; measured gas+intrinsic+5000; unsigned type-2 nonce 0 L1 fee estimate; excludes deployment and adverse transaction ordering",
+    "evidence": {
+      "http_status": 200,
+      "key": "9cf1d15ba68863db19b57d2d27b27227db66531dc3e3b73ddbe719b6c4536647",
+      "rpc_error": null
+    },
+    "gas_model_units": 464152,
+    "l1_fee_model_raw": "6178647709",
+    "l2_fee_model_raw": "6962280000000",
+    "operator_fee_model_raw": "0",
+    "priority_fee_assumption_wei": 10000000,
+    "total_fee_model_raw": "6968458647709"
+  },
+  "delay_seconds": 10,
+  "execution_venue": "SELF_BUILT_DIRECT_EXECUTOR",
+  "exit_policy": "24h",
+  "input_eth_raw": "10000000000000000",
+  "modeled_net_eth_raw": null,
+  "net_profit_certified": false,
+  "observation_cutoff": 1790858863,
+  "operating_cost_status": "RPC_SERVER_DEPLOYMENT_NOT_AMORTIZED",
+  "platform_fee_model_raw": "0",
+  "platform_fee_status": "NO_THIRD_PARTY_ROUTER_COMMISSION_BY_DESIGN",
+  "scheduled_exit_timestamp": 1790875689.0,
+  "source_block": 51999966,
+  "source_tx": "0x48c16d709f8eb1966cf38236ce8706215b95a2450e5b2732a965b049d993c2f6",
+  "status": "EXIT_HORIZON_NOT_YET_OBSERVED",
+  "token": "0x3f409e1c3ff63ebbb48fdcfabdfbca3f5a301819",
+  "wallet": "0xe28601398a5448d1147e6e8b0e0c6d686f0d216d"
+}

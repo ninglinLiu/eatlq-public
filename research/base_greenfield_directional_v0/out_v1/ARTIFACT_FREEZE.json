@@ -1,0 +1,128 @@
+{
+  "created_utc": "2026-07-20T06:58:24Z",
+  "role": "Base Greenfield V1 Profit Validation \u2014 artifact freeze",
+  "immutability": "Discovery artifacts under out/ and configs/ must not be modified by V1",
+  "file_sha256": {
+    "final_greenfield": "c573b8e26c33733ff5043a15329f8d215df342fc78ea47d0f3afadd934df68ee",
+    "oof_scorecard": "61002e7ada8cc5d16df9c07faa1e78f752036c91a8f9560dcfaf05aaf694d929",
+    "design_freeze": "bd300cb459049ee34b634b086b97abc7eeccdc727ed15b78d96f1fbfe035d405",
+    "hard_bans": "c106c43ad74606891f706db7353bc24fb5148ec224af00f9b6d324d55ddfc9c0",
+    "oof_c3": "07e0b606f48e0d14731e8b74923f23b521d72c91325cb14f41d790d214e13efa",
+    "oof_g2": "f347d5f0ecba999f7e0af8f11335821379b6aa758fbedea1e5095cbf01e549dd",
+    "oof_c1": "2d1bdd190d3439ee44dc9a8b44ebfac476254db9a2ba9151898c12a7e727e40d",
+    "feature_matrix": "e6e78e20fc237ef686f6f152ababc7bf04f1a3cd820f1801b4e12b6e7f9de9cc",
+    "feature_meta": "2abb7b5919c73947c39ba091b797473072639332357984f85283f029c2aa6e71",
+    "labels_full": "9ac5b423029be3fd47a943e3c0538c1a97b209eaee0041e5ce53d51b1d683dc1",
+    "sealed_holdout_labels": "97bd4a436f2b26ed446a9a78d42412170198883027beeed9e624a39e143ff0ae",
+    "panel_15_60m": "32fc2d81d7d9b5d114b94d88d5a797c1b3e7c93ce6f6c24466e8dedeb4b89f44",
+    "panel_manifest": "981baae98350a30b5284d0782ab72ef2eef42357a199735632b42c3d75cf8550",
+    "src_models_routes": "72a203aaf83cfc2d62c58d6bd56818cf885763efc15a1d1cafa6c6e3893c6651",
+    "src_features": "6ea4d2f32d21da0446211257b48a22a1db85af2cbcca909a75b5c81d498966b3",
+    "src_build_labels": "9fbeab0b588b57c36d809a948bfa6ae23827b39ef89c03af8770c88ba8aa4bac",
+    "src_atomic_sim": "503b83c19d5fb9b076cb3b4276a864bd9204efe561cde1b762b4a93f59b15d85",
+    "src_common": "9cdb62aa7bef08aab14e0cfed029126a51bf3cc289aa575aa7ebd9f4c416aca9",
+    "charter": "89d067ed0b200183bf24261ea5679f0321df906d6990ec136da6238016473b76"
+  },
+  "c3_exact": {
+    "name": "C3_SIMPLE_MOMENTUM",
+    "feature": "early_ret",
+    "score_formula": "score = early_ret",
+    "selection_policy": "top-k=3 within decision_time if n>=2; else score >= train_fold_q60(early_ret); then non-overlapping per pool until label_end_time",
+    "threshold_rule": "train_fold quantile 0.60 of early_ret",
+    "source_file": "src/models_routes.py::run_c3_momentum",
+    "source_sha256": "72a203aaf83cfc2d62c58d6bd56818cf885763efc15a1d1cafa6c6e3893c6651"
+  },
+  "g2_exact": {
+    "name": "G2_HGB_COMPETING",
+    "features": [
+      "early_ret",
+      "xs_early_ret_rank",
+      "pre_vol",
+      "pre_pullback",
+      "pre_runup_from_lo",
+      "range_location",
+      "mom_h1",
+      "mom_h2",
+      "accel",
+      "age_s",
+      "net_flow",
+      "trade_count_imbalance",
+      "ns_pre",
+      "buys_10m",
+      "sells_10m",
+      "buyers_pre",
+      "senders_pre",
+      "buyer_sender_ratio",
+      "liq_log",
+      "liq_trend",
+      "liq_drawdown",
+      "entry_liq",
+      "base_breadth_1h",
+      "active_pools_day",
+      "return_dispersion_1h",
+      "opportunity_supply",
+      "market_adj_ret",
+      "flow_surprise",
+      "path_curvature",
+      "vol_depth",
+      "part_concentration",
+      "flow_persistence"
+    ],
+    "preprocessing": "fold_fit_residuals on prior train fold only (market_adj_ret, flow_surprise, path_curvature, vol_depth, part_concentration, flow_persistence)",
+    "model": "HistGradientBoostingClassifier one-vs-rest for TP_FIRST/SL_FIRST/FATAL_FIRST/TIMEOUT; EU = p_tp*0.5 + p_sl*(-0.35) + p_fatal*(-1.0)",
+    "hgb_params": {
+      "max_depth": 3,
+      "max_iter": 80,
+      "learning_rate": 0.05,
+      "random_state": 0
+    },
+    "selection_policy": "top-k=3 or score>=train_fold_q60(EU); non-overlapping; original stack also used p_fatal<0.35 for STACK only \u2014 P1 uses G2 selected as frozen in oof parquet",
+    "threshold_rule": "train_fold quantile 0.60 of EU score",
+    "horizon_s": 3600,
+    "barrier": "TB_A",
+    "barrier_params": {
+      "tp": 0.5,
+      "sl": 0.35
+    },
+    "source_file": "src/models_routes.py::run_g2",
+    "source_sha256": "72a203aaf83cfc2d62c58d6bd56818cf885763efc15a1d1cafa6c6e3893c6651",
+    "oof_predictions_sha256": "f347d5f0ecba999f7e0af8f11335821379b6aa758fbedea1e5095cbf01e549dd"
+  },
+  "label_policy": {
+    "H": 3600,
+    "barrier": "TB_A",
+    "barrier_params": {
+      "tp": 0.5,
+      "sl": 0.35
+    }
+  },
+  "universe": {
+    "chain": "base",
+    "dex": "uniswap_v3",
+    "quote_leg": "WETH",
+    "discovered_pools_filter": "pool_type='v3' AND has_weth_leg=1"
+  },
+  "splits": {
+    "label_design_frac": 0.2,
+    "dev_frac": 0.6,
+    "sealed_holdout_frac": 0.2,
+    "by": "decision_time",
+    "embargo_days": 1
+  },
+  "sealed_holdout_bounds": {
+    "n_rows": 480,
+    "decision_time_min": 1775187979,
+    "decision_time_max": 1782804387,
+    "n_pools": 164
+  },
+  "python_sklearn_versions": {
+    "python": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+    "platform": "Linux-6.8.0-117-generic-x86_64-with-glibc2.39",
+    "pandas": "3.0.3",
+    "numpy": "2.5.1",
+    "sklearn": "1.9.0",
+    "web3": "7.16.0"
+  },
+  "c3_formula_sha256": "868c3086b234e0c4942b706432b5dab9a4bdd9d34b1c72d34d4f1d74727c2d15",
+  "g2_spec_sha256": "8dde9ab0ffa58c647c811c8e09ce4933f183ff4925ba69448bff6592c0753b37"
+}

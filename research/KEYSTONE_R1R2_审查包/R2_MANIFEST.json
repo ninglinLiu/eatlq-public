@@ -1,0 +1,173 @@
+{
+  "r2_version": "r2.0.0",
+  "created_utc": "2026-07-19T15:01:31Z",
+  "purpose": "Validate frozen R1_F10_KS_CONTINUATION on atomic-sell outcomes",
+  "champion": {
+    "name": "KEYSTONE",
+    "model_path": "/opt/EATLQ/services/signal_bridge/_model.pkl",
+    "model_sha256": "bd02d79d016fb112b2ba8fff95f968b4036bb03a80818ee5b825efa4d714ae6b",
+    "params_path": "/opt/EATLQ/services/signal_bridge/_params.json",
+    "params_sha256": "749a61da5dc3ac0d500b071edfccaf205d1b6141853d4057e343e7736c564cd6",
+    "p_cut_expression": "min(0.46818927983255865, 0.27)",
+    "p_cut_effective": 0.27,
+    "p_cut_file": 0.46818927983255865,
+    "p_cut_live_cap": 0.27,
+    "entry": "t0+600..900s; MIN_PRE=5; friction>=-5%; p_fatal<=p_cut_effective",
+    "exit": "hard_stop=-50%; hold=14400s; trailing=OFF",
+    "universe": "Base UniV3 WETH; t0 2025-10-01..2026-06-01",
+    "sizing": {
+      "nominal_usd": 100.0,
+      "executor_max_position_usd": 50.0,
+      "executor_max_position_eth": 0.02,
+      "research_amt_in_wei": 33333333333333332,
+      "prod_capped_amt_in_wei": 16666666666666666,
+      "note": "Labels use research $100@3000 convention matching priced_live/realgas; production cap documented separately"
+    }
+  },
+  "frozen_lead": {
+    "id": "R1_F10_KS_CONTINUATION",
+    "features": [
+      "impact_residual",
+      "ineffective_buying",
+      "liq_fragility_score",
+      "part_exhaust_score",
+      "accel"
+    ],
+    "hgb_params": {
+      "max_depth": 3,
+      "max_iter": 80,
+      "learning_rate": 0.05,
+      "random_state": 0
+    },
+    "primary_gate": "train_q50",
+    "sensitivity_gates_only": [
+      "train_q40",
+      "train_q50",
+      "train_q60"
+    ],
+    "r1_model_persisted": false,
+    "r1_model_note": "R1 did not save HGB pickle; R2 regenerates with identical recipe+seed and freezes artifact",
+    "f10_model_path": "/root/keystone_r2_atomic/out/frozen_f10_hgb.pkl",
+    "f10_model_sha256": "e1c68ae160004cd80711a7ae5461ee1d3d8e1f4359aebf1f890c25b74c277c5c",
+    "feature_schema_sha256": "3169ef58a34ebd33990a172404a9f70b5193d13af6cbb8c8f981b758dfe624a1",
+    "thresholds": {
+      "train_q40": 0.8284417809694159,
+      "train_q50": 0.8624456161522396,
+      "train_q60": 0.8886893755257821
+    }
+  },
+  "hashes": {
+    "eatlq_git_head": "90077ef020315e2490833c328d46941d6a24d996",
+    "panel_r1_sha256": "b36ce6501c3e01f4df8dee8bcc92005a0448a94eae99b839db1c2e4906cebf14",
+    "realgas_replay_sha256": "b77bc2a6bff66fc853dab063ed501e9ab85b9487beb9a97f6e541b9a34016df6",
+    "priced_live_sha256": "cfac3bbd1d74bda3f850b80985dfa578041fce409a06f14943d4797c3011e709",
+    "pools_tsv_sha256": "3e0f7d691396c651b7fdc1abab65601a99747318d249902b4b39665a0056f780",
+    "gl4_ledger_sha256": "2dde9b71f8cb4ab18d3787bd1c991ef0777b1e3d35da384f47d1c93275148064",
+    "archive_rpc_url_sha256": "0b98445d8abca769ef04d3df92f47c07b9b84b6bbffcd882f32696f3349644d2",
+    "r2_pipeline_sha256": "d7ac693341099bfd87dbc8291607e4c6b1efd135f7602c25d265319a0e9b5dd0",
+    "frozen_f10_model_sha256": "e1c68ae160004cd80711a7ae5461ee1d3d8e1f4359aebf1f890c25b74c277c5c",
+    "frozen_f10_scores_sha256": "25eb32974213a222ae3344cc9644c2d42676e237a9501b61504b3276b6b45af3"
+  },
+  "addresses": {
+    "chain_id": 8453,
+    "executor": "0x4B7cd953871663474a0A25B81bddDf5C1f1195A7",
+    "legacy_canary": "0x3a0DE7b4e6Ea125FFA3155b0026E5F717A1e86EE",
+    "router": "0x2626664c2603336E57B271c5C0b26F421741e481",
+    "quoter_v2": "0x3d4e44Eb1374240CE5F1B871ab261CD16335B76a",
+    "weth": "0x4200000000000000000000000000000000000006",
+    "probe": "0x000000000000000000000000000000000000dEaD"
+  },
+  "historical_block_ranges": {
+    "keystone_research_t0": [
+      "2025-10-01",
+      "2026-06-01"
+    ],
+    "development_holdout": "final_20pct_by_t0_DEVELOPMENT_HOLDOUT_BURNED",
+    "confirmation_policy": "post_2026-06-01 untouched OR prospective shadow after manifest freeze",
+    "gl4_live_window": {
+      "start_utc": "2026-06-10",
+      "end_utc": "2026-07-13",
+      "end_block": 48598926
+    }
+  },
+  "split_boundaries": {
+    "holdout_frac": 0.2,
+    "embargo_days": 1,
+    "development_holdout_status": "DEVELOPMENT_HOLDOUT_BURNED"
+  },
+  "atomic_simulation_policy": {
+    "method": "eth_call + stateDiff balance/allowance override + SwapRouter02 exactInputSingle",
+    "gas_cap": 3000000,
+    "amountOutMinimum": 0,
+    "recipient": "probe_or_executor",
+    "quoter_v2_role": "comparison_only_not_label",
+    "status_enum": [
+      "SELL_SUCCESS",
+      "DETERMINISTIC_REVERT",
+      "ECONOMICALLY_UNSELLABLE",
+      "INFRASTRUCTURE_UNKNOWN"
+    ],
+    "infrastructure_unknown_not_token_fatal": true,
+    "permanent_unsellable_at_max_hold": -1.0
+  },
+  "retry_policy": {
+    "rpc_attempts": 3,
+    "backoff_s": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "exit_retry_blocks": [
+      0,
+      5,
+      30,
+      150,
+      7200
+    ],
+    "note": "retry on INFRASTRUCTURE_UNKNOWN only; DETERMINISTIC_REVERT not retried as success"
+  },
+  "gas_policy": {
+    "sell_sim_gas_cap": 3000000,
+    "label_gas_debit_weth": 0.0,
+    "note": "gas recorded separately when available; primary EV uses WETH out / amt_in - 1"
+  },
+  "slippage_policy": {
+    "amountOutMinimum": 0,
+    "economic_unsellable_if_tax_ge": 0.9
+  },
+  "known_gl4_failure_cases": [
+    {
+      "name": "JOTCHUA",
+      "class": "CONFIRMED_STRANDED_LIQUIDITY_COLLAPSE",
+      "wallet": "0x3a0DE7b4e6Ea125FFA3155b0026E5F717A1e86EE"
+    },
+    {
+      "name": "BOT",
+      "class": "CONFIRMED_STRANDED_LIQUIDITY_COLLAPSE",
+      "wallet": "0x3a0DE7b4e6Ea125FFA3155b0026E5F717A1e86EE"
+    },
+    {
+      "name": "PARADAENGI-1",
+      "class": "CONFIRMED_STRANDED_LIQUIDITY_COLLAPSE",
+      "wallet": "0x4B7cd953871663474a0A25B81bddDf5C1f1195A7"
+    },
+    {
+      "name": "PARADAENGI-2",
+      "class": "CONFIRMED_STRANDED_LIQUIDITY_COLLAPSE",
+      "wallet": "0x4B7cd953871663474a0A25B81bddDf5C1f1195A7"
+    },
+    {
+      "name": "PARADAENGI-3",
+      "class": "CONFIRMED_STRANDED_LIQUIDITY_COLLAPSE",
+      "wallet": "0x4B7cd953871663474a0A25B81bddDf5C1f1195A7",
+      "note": "F-off aggressive"
+    }
+  ],
+  "known_gl4_success_sells": [
+    "NEXIO",
+    "USDC",
+    "USDC"
+  ],
+  "immutability": "Any change after creation requires new r2_version",
+  "post_freeze_artifact_binding": "F10 model/scores bound after regeneration in same r2.0.0 run; not a new r2_version"
+}

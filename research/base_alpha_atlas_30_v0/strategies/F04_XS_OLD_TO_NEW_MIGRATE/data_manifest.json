@@ -1,0 +1,23 @@
+{
+  "strategy_id": "F04_XS_OLD_TO_NEW_MIGRATE",
+  "data_class": "C_PRODUCTION_DB_HEAVY",
+  "required_tables_or_files": [
+    "all-pool swaps hourly aggregates"
+  ],
+  "required_columns": [
+    "pool",
+    "hour",
+    "buy_weth",
+    "age"
+  ],
+  "required_time_resolution": "1h",
+  "point_in_time_requirements": "PIT",
+  "minimum_history": ">=30d",
+  "estimated_rows": "wide universe",
+  "estimated_read_bytes": ">2GB",
+  "whether_current_diagnostics_may_support_it": "no",
+  "whether_production_database_would_be_required": true,
+  "missing_data": [
+    "full-universe hourly flows"
+  ]
+}

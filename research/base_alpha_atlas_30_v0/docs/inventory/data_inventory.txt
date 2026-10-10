@@ -1,0 +1,53 @@
+=== CANDIDATE OFFLINE DATA PATHS ===
+-rw-r--r-- 1 root root 126M Jun 23 16:29 /opt/EATLQ/logs/dashcam.csv
+total 1.3M
+drwxr-xr-x  2 root root  12K Jul 16 17:26 .
+drwxr-xr-x 26 root root 4.0K Jul 14 08:21 ..
+-rw-r--r--  1 root root 4.2K Jul 14 13:46 B4_quoterv2_vs_atomic_sellsim_preregistration_20260714.md
+-rw-r--r--  1 root root 3.8K Jul 14 14:05 B4_v2_arm_a_20260714.md
+-rw-r--r--  1 root root 2.7K Jul 14 15:05 B4_v2_arm_b_20260714.md
+-rw-r--r--  1 root root 5.4K Jul 14 15:07 B5_keystone_cha_reverify_20260714.md
+-rw-r--r--  1 root root 5.2K Jul 14 18:05 B8_keystone_honest_execution_20260714.md
+-rw-r--r--  1 root root 8.6K Jul 16 15:25 GL10_independent_line_review_20260716.md
+-rw-r--r--  1 root root 1.2K Jul 16 15:20 GL10_plain_language_20260716.md
+-rw-r--r--  1 root root 6.7K Jul 16 15:02 GL10_preregistration_20260716.md
+-rw-r--r--  1 root root 1.9K Jul 16 15:03 GL10_preregistration_erratum_time_order_20260716.md
+-rw-r--r--  1 root root 5.7K Jul 16 15:20 GL10_reactive_exit_lever_20260716.md
+-rw-r--r--  1 root root 5.2K Jul 17 02:58 GL10_task_spec_reactive_exit_lever_20260716.md
+-rw-r--r--  1 root root 7.7K Jul 16 16:10 GL11_bankroll_variance_capacity_20260716.md
+-rw-r--r--  1 root root 8.1K Jul 16 16:12 GL11_independent_line_review_20260716.md
+-rw-r--r--  1 root root 1.6K Jul 16 15:53 GL11_plain_language_20260716.md
+-rw-r--r--  1 root root 6.9K Jul 16 15:28 GL11_preregistration_20260716.md
+-rw-r--r--  1 root root  819 Jul 16 15:29 GL11_preregistration_erratum_capacity_unresolved_20260716.md
+-rw-r--r--  1 root root 1.2K Jul 16 15:44 GL11_preregistration_erratum_entry_notional_scale_20260716.md
+/opt/EATLQ/scripts/sprint083_combat_watch_snapshot.py
+/opt/EATLQ/scripts/__pycache__/sprint083_combat_watch_snapshot.cpython-312.pyc
+/opt/EATLQ/logs/pipeline/combat_watch_snapshot.log
+/opt/EATLQ/logs/feature_snapshots.csv
+/opt/EATLQ/mvp/diagnostics/base_b6_universe_snapshot_corrected_20260714.json
+/opt/EATLQ/mvp/diagnostics/base_b6_universe_snapshot_20260714.json
+/opt/EATLQ/mvp/diagnostics/run004_g35_feature_score_audit_snapshot.json
+13M	/opt/EATLQ/cache
+2.3M	/opt/EATLQ/evidence
+1.4G	/opt/EATLQ/mvp/diagnostics
+48M	/root/lpi_base_production_safe_node
+CODEX_HANDOFF_CLANKER_ALPHA_V01.md
+CODEX_HANDOFF_CLANKER_ALPHA_V02.md
+CODEX_HANDOFF_CLANKER_ALPHA_V03.md
+CODEX_HANDOFF_CLANKER_V021_CLOSEOUT.md
+CODEX_HANDOFF_CORRECTION_ROUND.md
+CODEX_HANDOFF_FINAL_OFFLINE_CLOSEOUT.md
+CODEX_HANDOFF_FOLLOWUP_CORRECTION.md
+CODEX_HANDOFF_LINEAGE_CORRECTION.md
+CODEX_HANDOFF_METADATA_INVENTORY.md
+CODEX_HANDOFF_SEALED_RUNNER_CLOSEOUT.md
+/root/research_inventory:
+README.md
+candidate_conclusions.md
+failure_candidates.md
+important_files.md
+next_round_recommendations.md
+project_inventory.json
+project_inventory.md
+research_map.md
+runtime_inventory.md

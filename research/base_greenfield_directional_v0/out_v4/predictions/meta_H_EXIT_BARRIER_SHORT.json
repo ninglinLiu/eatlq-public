@@ -1,0 +1,14 @@
+{
+  "hypothesis_id": "H_EXIT_BARRIER_SHORT",
+  "n_oof": 597,
+  "n_selected": 259,
+  "feature_cols": [
+    "mom_h1",
+    "mom_h2",
+    "accel",
+    "pre_vol",
+    "range_location",
+    "flow_persist_score",
+    "vol_depth"
+  ]
+}

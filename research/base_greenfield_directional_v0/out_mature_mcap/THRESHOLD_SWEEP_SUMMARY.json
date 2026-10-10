@@ -1,0 +1,60 @@
+{
+  "threshold_sweep": [
+    {
+      "threshold_usd": 300000,
+      "threshold_label": "$0.3M",
+      "n_dex_mcap_ge": 10,
+      "n_dex_fdv_ge": 10,
+      "n_onchain_peak_fdv_and_vol_ge": 235,
+      "n_conservative_hit": 239,
+      "n_cum_volume_ge": 402
+    },
+    {
+      "threshold_usd": 500000,
+      "threshold_label": "$0.5M",
+      "n_dex_mcap_ge": 7,
+      "n_dex_fdv_ge": 7,
+      "n_onchain_peak_fdv_and_vol_ge": 118,
+      "n_conservative_hit": 123,
+      "n_cum_volume_ge": 279
+    },
+    {
+      "threshold_usd": 600000,
+      "threshold_label": "$0.6M",
+      "n_dex_mcap_ge": 6,
+      "n_dex_fdv_ge": 6,
+      "n_onchain_peak_fdv_and_vol_ge": 84,
+      "n_conservative_hit": 88,
+      "n_cum_volume_ge": 251
+    },
+    {
+      "threshold_usd": 700000,
+      "threshold_label": "$0.7M",
+      "n_dex_mcap_ge": 6,
+      "n_dex_fdv_ge": 6,
+      "n_onchain_peak_fdv_and_vol_ge": 71,
+      "n_conservative_hit": 75,
+      "n_cum_volume_ge": 219
+    },
+    {
+      "threshold_usd": 800000,
+      "threshold_label": "$0.8M",
+      "n_dex_mcap_ge": 6,
+      "n_dex_fdv_ge": 6,
+      "n_onchain_peak_fdv_and_vol_ge": 58,
+      "n_conservative_hit": 62,
+      "n_cum_volume_ge": 198
+    },
+    {
+      "threshold_usd": 1000000,
+      "threshold_label": "$1.0M",
+      "n_dex_mcap_ge": 6,
+      "n_dex_fdv_ge": 6,
+      "n_onchain_peak_fdv_and_vol_ge": 36,
+      "n_conservative_hit": 40,
+      "n_cum_volume_ge": 151
+    }
+  ],
+  "dexscreener_current_mcap_ge_1m_n": 7,
+  "dexscreener_current_mcap_ge_1m_nonstable_n": 6
+}

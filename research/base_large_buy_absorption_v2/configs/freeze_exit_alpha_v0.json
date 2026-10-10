@@ -1,0 +1,85 @@
+{
+  "status": "SEALED_EXIT_LINE_CLOSED",
+  "phase": "EXIT_ALPHA_V0",
+  "parent_freeze": "large_buy_absorption_freeze_v2.json",
+  "deploy_allowed": false,
+  "live": "NO_GO",
+  "mutates_prior_seals": false,
+  "historical_label": "DIAGNOSTIC_REPLAY",
+  "t0": null,
+  "hypothesis": "Exit policy can create incremental scheduled-wallet EV over FIXED_TP_4H on the same capacity-constrained random-spray entry stream, without stock-picking.",
+  "entry": {
+    "mode": "random_spray",
+    "eligibility": "scorable_primary & buy_status==SUCCESS",
+    "score": "random_fixed_seed",
+    "random_seed": 42,
+    "max_concurrent": 10,
+    "one_position_per_token": true,
+    "max_per_token": 1
+  },
+  "exits": [
+    "FIXED_TP_4H",
+    "TIME_30M",
+    "TIME_4H",
+    "TRAIL_20_FROM_PEAK",
+    "MOMENTUM_HOLD"
+  ],
+  "baseline_exit": "FIXED_TP_4H",
+  "exit_params": {
+    "FIXED_TP_4H": {
+      "horizon_s": 14400,
+      "tp_ladder": [
+        0.3,
+        0.6,
+        1.2
+      ]
+    },
+    "TIME_30M": {
+      "horizon_s": 1800
+    },
+    "TIME_4H": {
+      "horizon_s": 14400
+    },
+    "TRAIL_20_FROM_PEAK": {
+      "arm_peak": 0.2,
+      "trail_frac_of_peak": 0.5,
+      "hard_stop": -0.3,
+      "max_hold_s": 86400
+    },
+    "MOMENTUM_HOLD": {
+      "early_cut_s": 900,
+      "early_cut_ret": -0.1,
+      "arm_by_s": 7200,
+      "arm_peak": 0.2,
+      "trail_frac_of_peak": 0.4,
+      "max_hold_s": 86400
+    }
+  },
+  "cost_model": {
+    "source": "execution_depth.compute_pool_kappa",
+    "includes": [
+      "realized_price_impact_both_legs",
+      "LP_fee_both_legs"
+    ],
+    "outcome_col": "pnl_net"
+  },
+  "bakeoff": {
+    "n_boot": 400,
+    "seed": 31,
+    "require_sealed_replication": true
+  },
+  "multiple_testing": {
+    "method": "benjamini_hochberg",
+    "alpha": 0.05
+  },
+  "hard_bans": [
+    "live_trading",
+    "stock_picking_features",
+    "mfe_as_primary",
+    "pick_best_exit_after_sealed",
+    "mutate_prior_seals",
+    "retune_exit_grid_after_seeing_results"
+  ],
+  "success_bar": "net-of-real-cost scheduled incremental PnL of exit X over FIXED_TP_4H on same random entry priority, TEST day-p05>0, BH-corrected, replicated on sealed",
+  "stop_rule": "If TRAIL_20_FROM_PEAK and MOMENTUM_HOLD both fail vs FIXED_TP_4H under sealed+net-of-cost, seal exit-alpha line closed for this universe \u2014 do not keep adding exit variants."
+}

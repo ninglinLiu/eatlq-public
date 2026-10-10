@@ -1,0 +1,12 @@
+{
+  "label": "POST_HOC_DIAGNOSTIC",
+  "not_used_for_primary_verdict": true,
+  "why": "Pre-registered aligned = sign(ret_0)*flow_imbalance scores down-agree hours as HIGH (long). That is the wrong stand-in for continuation-in-the-price-direction. This file uses frozen F03 thresholds and only splits agree vs disagree.",
+  "f03_thresholds_frozen": {"low": -0.16002247191011237, "high": 0.16666666666666674},
+  "agree_only_spread_bps": 295.4084943335689,
+  "agree_only_n": 3595,
+  "disagree_only_spread_bps": 62.82418020288083,
+  "disagree_only_n": 1172,
+  "f03_full_spread_bps": 238.8873609818843,
+  "interpretation": "Inside F03 tails, hours where flow sign matches price sign separate 4h tick returns more than disagreement hours. This does not authorize a new strategy. It only says the abs() formula keeps dead-weight HIGH disagreement hours (mean ~0 bps)."
+}

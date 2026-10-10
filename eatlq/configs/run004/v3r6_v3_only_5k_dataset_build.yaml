@@ -1,0 +1,70 @@
+clickhouse:
+  url: http://clickhouse:8123
+  database: eatlq
+  docker_container: eatlq-clickhouse-1
+  query_timeout_sec: 240
+
+weth_address: "0x4200000000000000000000000000000000000006"
+
+candidate_expansion:
+  max_decoded_rows: 50000
+
+min_notional:
+  selected_weth_raw: 500000000000000
+  sensitivity_weth:
+    - 0.00025
+    - 0.0005
+    - 0.001
+    - 0.002
+
+rpc:
+  env_vars:
+    - LABEL_RPC_URL
+    - EVM_HTTP_URL
+    - LIVE_BASE_RPC_URL
+  env_files:
+    - infra/compose/.env
+  timeout_sec: 60
+  max_retries: 6
+
+labeling:
+  target_success_rows: 5000
+  max_attempts: 7000
+  batch_size: 250
+  workers: 8
+  fixed_horizon_sec: 1800
+  exit_block_offset: 900
+  notional_wei: 500000000000000
+  gas_units_round_trip: 500000
+  gas_price_gwei:
+    low: 0.01
+    medium: 0.03
+    high: 0.10
+
+risk:
+  repeated_pool_hour_threshold: 3
+
+outputs:
+  patch_json: mvp/diagnostics/run004_patch_v3r6_v3_only_5k_dataset_build.json
+  candidate_pool_csv: mvp/diagnostics/run004_v3r6_candidate_pool.csv
+  candidate_report_json: mvp/diagnostics/run004_v3r6_candidate_report.json
+  min_notional_sensitivity_json: mvp/diagnostics/run004_v3r6_min_notional_sensitivity.json
+  checkpoint_report_json: mvp/diagnostics/run004_v3r6_checkpoint_report.json
+  all_dataset_csv: mvp/diagnostics/run004_v3r6_all_v3_5k_dataset.csv
+  clean_alpha_dataset_csv: mvp/diagnostics/run004_v3r6_clean_alpha_v3_5k_dataset.csv
+  risk_dataset_csv: mvp/diagnostics/run004_v3r6_risk_v3_5k_dataset.csv
+  feature_coverage_report_json: mvp/diagnostics/run004_v3r6_feature_coverage_report.json
+  risk_report_json: mvp/diagnostics/run004_v3r6_risk_report.json
+  oracle_status_report_json: mvp/diagnostics/run004_v3r6_oracle_status_report.json
+  markdown: mvp/runs/run-004-patch-v3r6-v3-only-5k-dataset-build.md
+
+safety:
+  diagnostics_only: true
+  no_training: true
+  no_production_retrain: true
+  no_promote: true
+  no_live: true
+  no_v2_artifact_changes: true
+  no_mixed_v2_v3_dataset: true
+  no_production_model_write: true
+  no_active_model_overwrite: true

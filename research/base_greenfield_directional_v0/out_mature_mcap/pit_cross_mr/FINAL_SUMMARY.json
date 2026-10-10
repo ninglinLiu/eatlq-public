@@ -1,0 +1,254 @@
+{
+  "created_utc": "2026-07-20T12:48:33Z",
+  "fdv_definition": "hour_close_usd_from_univ3_weth_tick * current_totalSupply",
+  "pit_rule": "trade only after first hour with FDV>=threshold",
+  "capital_usd": 1000.0,
+  "stake_usd": 150.0,
+  "deploy_allowed": false,
+  "by_threshold": {
+    "300000": {
+      "threshold_usd": 300000,
+      "n_score_rows": 147,
+      "n_oos_tokens": 10,
+      "any_oos_strategy_total_positive": true,
+      "best_oos_strategy": {
+        "strategy": "DIP10_168H",
+        "n_tokens": 10,
+        "n_trades": 22,
+        "total_pnl_usd": 203.6370237361038,
+        "median_token_pnl": 20.766681342307436,
+        "mean_token_pnl": 20.36370237361038,
+        "n_tokens_profitable": 6
+      },
+      "oos_by_strategy": [
+        {
+          "strategy": "DIP10_168H",
+          "n_tokens": 10,
+          "n_trades": 22,
+          "total_pnl_usd": 203.6370237361038,
+          "median_token_pnl": 20.766681342307436,
+          "mean_token_pnl": 20.36370237361038,
+          "n_tokens_profitable": 6
+        },
+        {
+          "strategy": "DIP20_168H",
+          "n_tokens": 10,
+          "n_trades": 23,
+          "total_pnl_usd": 65.7376308891806,
+          "median_token_pnl": 1.0779700263393235,
+          "mean_token_pnl": 6.573763088918059,
+          "n_tokens_profitable": 5
+        },
+        {
+          "strategy": "MA72_BELOW",
+          "n_tokens": 10,
+          "n_trades": 29,
+          "total_pnl_usd": -81.37203218547916,
+          "median_token_pnl": 5.861575818850286,
+          "mean_token_pnl": -8.137203218547915,
+          "n_tokens_profitable": 5
+        },
+        {
+          "strategy": "Z24_BUY",
+          "n_tokens": 10,
+          "n_trades": 51,
+          "total_pnl_usd": -227.96480772532715,
+          "median_token_pnl": -14.813028364560065,
+          "mean_token_pnl": -22.796480772532714,
+          "n_tokens_profitable": 2
+        },
+        {
+          "strategy": "Z72_BUY",
+          "n_tokens": 10,
+          "n_trades": 21,
+          "total_pnl_usd": -240.0923933569284,
+          "median_token_pnl": -6.903772690081455,
+          "mean_token_pnl": -24.00923933569284,
+          "n_tokens_profitable": 3
+        },
+        {
+          "strategy": "RSI_OS",
+          "n_tokens": 10,
+          "n_trades": 44,
+          "total_pnl_usd": -330.110351625161,
+          "median_token_pnl": -19.099313096172992,
+          "mean_token_pnl": -33.0110351625161,
+          "n_tokens_profitable": 4
+        },
+        {
+          "strategy": "BH_ALWAYS",
+          "n_tokens": 10,
+          "n_trades": 10,
+          "total_pnl_usd": -430.0259423547352,
+          "median_token_pnl": -25.804261244569332,
+          "mean_token_pnl": -43.002594235473524,
+          "n_tokens_profitable": 2
+        }
+      ],
+      "top5_best_per_token": [
+        {
+          "symbol": "PERPY",
+          "strategy": "Z24_BUY",
+          "n_trades": 4,
+          "total_pnl_usd": 98.8342693313303,
+          "win_rate": 0.75
+        },
+        {
+          "symbol": "KellyClaude",
+          "strategy": "DIP10_168H",
+          "n_trades": 4,
+          "total_pnl_usd": 93.42184435958923,
+          "win_rate": 0.75
+        },
+        {
+          "symbol": "Whitewhale",
+          "strategy": "Z24_BUY",
+          "n_trades": 5,
+          "total_pnl_usd": 80.39283194450755,
+          "win_rate": 0.8
+        },
+        {
+          "symbol": "CLAWNCH",
+          "strategy": "MA72_BELOW",
+          "n_trades": 7,
+          "total_pnl_usd": 59.13223383622971,
+          "win_rate": 0.8571428571428571
+        },
+        {
+          "symbol": "MACHINES",
+          "strategy": "DIP10_168H",
+          "n_trades": 6,
+          "total_pnl_usd": 49.541114749548086,
+          "win_rate": 0.6666666666666666
+        }
+      ],
+      "token_status_counts": {
+        "NO_CROSS": 148,
+        "POST_TOO_SHORT": 80,
+        "OK": 11
+      }
+    },
+    "500000": {
+      "threshold_usd": 500000,
+      "n_score_rows": 105,
+      "n_oos_tokens": 7,
+      "any_oos_strategy_total_positive": true,
+      "best_oos_strategy": {
+        "strategy": "DIP10_168H",
+        "n_tokens": 7,
+        "n_trades": 17,
+        "total_pnl_usd": 46.78472788017118,
+        "median_token_pnl": 0.0,
+        "mean_token_pnl": 6.683532554310169,
+        "n_tokens_profitable": 3
+      },
+      "oos_by_strategy": [
+        {
+          "strategy": "DIP10_168H",
+          "n_tokens": 7,
+          "n_trades": 17,
+          "total_pnl_usd": 46.78472788017118,
+          "median_token_pnl": 0.0,
+          "mean_token_pnl": 6.683532554310169,
+          "n_tokens_profitable": 3
+        },
+        {
+          "strategy": "DIP20_168H",
+          "n_tokens": 7,
+          "n_trades": 15,
+          "total_pnl_usd": -14.77253026090677,
+          "median_token_pnl": 0.0,
+          "mean_token_pnl": -2.110361465843824,
+          "n_tokens_profitable": 3
+        },
+        {
+          "strategy": "MA72_BELOW",
+          "n_tokens": 7,
+          "n_trades": 22,
+          "total_pnl_usd": -128.20830745426187,
+          "median_token_pnl": 0.0,
+          "mean_token_pnl": -18.315472493465982,
+          "n_tokens_profitable": 3
+        },
+        {
+          "strategy": "Z72_BUY",
+          "n_tokens": 7,
+          "n_trades": 15,
+          "total_pnl_usd": -200.90338897723575,
+          "median_token_pnl": -28.387130665355244,
+          "mean_token_pnl": -28.700484139605106,
+          "n_tokens_profitable": 2
+        },
+        {
+          "strategy": "BH_ALWAYS",
+          "n_tokens": 7,
+          "n_trades": 7,
+          "total_pnl_usd": -243.7797133035684,
+          "median_token_pnl": -7.0245524563854795,
+          "mean_token_pnl": -34.8256733290812,
+          "n_tokens_profitable": 2
+        },
+        {
+          "strategy": "RSI_OS",
+          "n_tokens": 7,
+          "n_trades": 34,
+          "total_pnl_usd": -250.61714673591658,
+          "median_token_pnl": -8.111911668262671,
+          "mean_token_pnl": -35.802449533702365,
+          "n_tokens_profitable": 3
+        },
+        {
+          "strategy": "Z24_BUY",
+          "n_tokens": 7,
+          "n_trades": 39,
+          "total_pnl_usd": -309.79481101578114,
+          "median_token_pnl": -8.007091302094194,
+          "mean_token_pnl": -44.25640157368302,
+          "n_tokens_profitable": 1
+        }
+      ],
+      "top5_best_per_token": [
+        {
+          "symbol": "KellyClaude",
+          "strategy": "DIP10_168H",
+          "n_trades": 4,
+          "total_pnl_usd": 93.42184435958923,
+          "win_rate": 0.75
+        },
+        {
+          "symbol": "PERPY",
+          "strategy": "Z24_BUY",
+          "n_trades": 4,
+          "total_pnl_usd": 84.75573686505358,
+          "win_rate": 0.75
+        },
+        {
+          "symbol": "CLAWNCH",
+          "strategy": "MA72_BELOW",
+          "n_trades": 7,
+          "total_pnl_usd": 59.13223383622971,
+          "win_rate": 0.8571428571428571
+        },
+        {
+          "symbol": "MACHINES",
+          "strategy": "DIP10_168H",
+          "n_trades": 6,
+          "total_pnl_usd": 49.541114749548086,
+          "win_rate": 0.6666666666666666
+        },
+        {
+          "symbol": "CLAWGUIN",
+          "strategy": "DIP20_168H",
+          "n_trades": 5,
+          "total_pnl_usd": 5.003855702774583,
+          "win_rate": 0.6
+        }
+      ],
+      "token_status_counts": {
+        "NO_CROSS": 68,
+        "POST_TOO_SHORT": 47,
+        "OK": 8
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "status": "CLOCK_STARTED",
+  "armed_utc": "2026-08-21T02:05:00Z",
+  "observer": "r3.0.1/shadow_observer.py",
+  "shadow": true,
+  "decision_impact": false,
+  "emits_signals": false,
+  "start_block_exclusive": 48868407,
+  "confirmatory_n": 0,
+  "note": "No backfill of 2026-07-20 to ARM or of 2026-08-21 to 2026-09-13 instrument gap. query_raw NOT_AN_AGGREGATE fixed 2026-09-13. Outcomes joined later; no grouped peek."
+}

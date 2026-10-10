@@ -1,0 +1,30 @@
+{
+  "body_sha256": "e286592ffff2648d86474395d03120825dc8ef0281801769b11805134ae9cb3f",
+  "bytes": 103,
+  "finished": "2026-10-01T13:17:02.890707+00:00",
+  "http_status": 200,
+  "key": "3a62ef72930606255f9ff065c57ed98e54c88679066fc1b5fa334f76f5b5b069",
+  "label": "smartmoney_balance_slot_probe",
+  "payload": {
+    "id": 1,
+    "jsonrpc": "2.0",
+    "method": "eth_call",
+    "params": [
+      {
+        "data": "0x70a0823100000000000000000000000000000000000000000000000000000000c0de0606",
+        "to": "0x667f5be66c0ad32da1470966c884f645ccc23ba3"
+      },
+      "0x318e876",
+      {
+        "0x667f5be66c0ad32da1470966c884f645ccc23ba3": {
+          "stateDiff": {
+            "0xd00ced045bcf2bfe38b645f793d68b62752e786bd6033ecd330ac868ff4b88cb": "0x000000000000000000000000000000000000000000000000002bdc546291f4b1"
+          }
+        }
+      }
+    ]
+  },
+  "retry_after": null,
+  "started": "2026-10-01T13:17:00.679106+00:00",
+  "url": "https://mainnet.base.org"
+}

@@ -1,0 +1,23 @@
+{
+  "alpha_id": "C03",
+  "family": "lifecycle",
+  "hypothesis": "first post-dormancy hour predicts reactivation persistence",
+  "mechanism": "returning participants may sustain a new episode",
+  "venue": "Base V3",
+  "universe": "active observed pools",
+  "horizon": "4h",
+  "data_source": "creation block and activity age",
+  "experiment": "episode replay",
+  "feature": "reactivation",
+  "direction": 1,
+  "prediction_object": "future activity",
+  "falsifier": "missing zero-activity hours invalidate it",
+  "status": "NOT_YET_TESTED",
+  "sample_size": 0,
+  "gross_result": "pending",
+  "cost_adjusted_result": "pending",
+  "capacity": "pending",
+  "concentration": "pending",
+  "tail_risk": "pending",
+  "next_action": "run rapid screen"
+}

@@ -1,0 +1,2 @@
+event_id,contract_id,chain,address,symbol,name,pair_address,pair_created_at_unix,liquidity_usd_at_collect,volume_24h_usd_at_collect,source,match_term,on_primary_chain,rank_by_created,in_score_set,notes
+# SCHEMA: contracts.csv = earliest N=10 name-matched tokens (GOAL). contracts_all.csv = all name-matched. Winners are NOT selected here.

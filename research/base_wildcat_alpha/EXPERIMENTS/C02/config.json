@@ -1,0 +1,23 @@
+{
+  "alpha_id": "C02",
+  "family": "lifecycle",
+  "hypothesis": "mature active pools have lower tails",
+  "mechanism": "survival and deeper participation reduce fatal outcomes",
+  "venue": "Base V3",
+  "universe": "active observed pools",
+  "horizon": "24h",
+  "data_source": "creation block and activity age",
+  "experiment": "tail-risk spread",
+  "feature": "pool_age_hours",
+  "direction": 1,
+  "prediction_object": "future worst move",
+  "falsifier": "survivorship bias fully explains it",
+  "status": "NOT_YET_TESTED",
+  "sample_size": 0,
+  "gross_result": "pending",
+  "cost_adjusted_result": "pending",
+  "capacity": "pending",
+  "concentration": "pending",
+  "tail_risk": "pending",
+  "next_action": "run rapid screen"
+}

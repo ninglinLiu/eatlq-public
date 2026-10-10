@@ -1,0 +1,64 @@
+{
+  "created_utc": "2026-07-20T12:38:55Z",
+  "n_tokens_ok": 6,
+  "any_oos_strategy_total_positive": false,
+  "oos_by_strategy": [
+    {
+      "strategy": "Z72_BUY",
+      "n_tokens": 6,
+      "n_trades": 29,
+      "total_pnl_usd": -8.878925712616656,
+      "median_token_pnl": 2.2410677433722954,
+      "n_tokens_profitable": 3
+    },
+    {
+      "strategy": "MA72_BELOW",
+      "n_tokens": 6,
+      "n_trades": 30,
+      "total_pnl_usd": -27.28086790336272,
+      "median_token_pnl": -4.114762371113635,
+      "n_tokens_profitable": 2
+    },
+    {
+      "strategy": "Z24_BUY",
+      "n_tokens": 6,
+      "n_trades": 56,
+      "total_pnl_usd": -115.857129298145,
+      "median_token_pnl": -15.54687078679726,
+      "n_tokens_profitable": 2
+    },
+    {
+      "strategy": "BH_ALWAYS",
+      "n_tokens": 6,
+      "n_trades": 6,
+      "total_pnl_usd": -145.02603324284829,
+      "median_token_pnl": -32.80474067628371,
+      "n_tokens_profitable": 2
+    },
+    {
+      "strategy": "DIP20_168H",
+      "n_tokens": 6,
+      "n_trades": 16,
+      "total_pnl_usd": -155.2748102014505,
+      "median_token_pnl": -8.511659654670524,
+      "n_tokens_profitable": 1
+    },
+    {
+      "strategy": "DIP10_168H",
+      "n_tokens": 6,
+      "n_trades": 12,
+      "total_pnl_usd": -165.63641590464732,
+      "median_token_pnl": -22.908854805051256,
+      "n_tokens_profitable": 1
+    },
+    {
+      "strategy": "RSI_OS",
+      "n_tokens": 6,
+      "n_trades": 35,
+      "total_pnl_usd": -241.34351565555542,
+      "median_token_pnl": -26.984874644746874,
+      "n_tokens_profitable": 1
+    }
+  ],
+  "deploy_allowed": false
+}

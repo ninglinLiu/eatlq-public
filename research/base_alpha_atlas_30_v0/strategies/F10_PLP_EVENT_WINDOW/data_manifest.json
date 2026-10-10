@@ -1,0 +1,23 @@
+{
+  "strategy_id": "F10_PLP_EVENT_WINDOW",
+  "data_class": "C_PRODUCTION_DB_HEAVY",
+  "required_tables_or_files": [
+    "events+swaps+LP sim"
+  ],
+  "required_columns": [
+    "event markers",
+    "prices",
+    "volumes",
+    "fees"
+  ],
+  "required_time_resolution": "1m",
+  "point_in_time_requirements": "PIT",
+  "minimum_history": ">=30d",
+  "estimated_rows": "large",
+  "estimated_read_bytes": ">1GB",
+  "whether_current_diagnostics_may_support_it": "no",
+  "whether_production_database_would_be_required": true,
+  "missing_data": [
+    "LP simulator fidelity"
+  ]
+}

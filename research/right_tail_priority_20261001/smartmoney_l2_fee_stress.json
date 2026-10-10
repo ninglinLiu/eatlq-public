@@ -1,0 +1,59 @@
+{
+  "cases": [
+    {
+      "closed_and_partial_cash_delta_raw": "-216397764816830745",
+      "closed_and_partial_cash_rows": 394,
+      "modeled_roundtrips": 317,
+      "not_portfolio_profit": true,
+      "positive_roundtrips": 64,
+      "sum_conditional_net_raw": "426410064631902309",
+      "tip_wei": 10000000
+    },
+    {
+      "closed_and_partial_cash_delta_raw": "-255230694726830745",
+      "closed_and_partial_cash_rows": 394,
+      "modeled_roundtrips": 317,
+      "not_portfolio_profit": true,
+      "positive_roundtrips": 61,
+      "sum_conditional_net_raw": "392870395441902309",
+      "tip_wei": 100000000
+    },
+    {
+      "closed_and_partial_cash_delta_raw": "-643559993826830745",
+      "closed_and_partial_cash_rows": 394,
+      "modeled_roundtrips": 317,
+      "not_portfolio_profit": true,
+      "positive_roundtrips": 53,
+      "sum_conditional_net_raw": "57473703541902309",
+      "tip_wei": 1000000000
+    },
+    {
+      "closed_and_partial_cash_delta_raw": "-4526852984826830745",
+      "closed_and_partial_cash_rows": 394,
+      "modeled_roundtrips": 317,
+      "not_portfolio_profit": true,
+      "positive_roundtrips": 36,
+      "sum_conditional_net_raw": "-3296493215458097691",
+      "tip_wei": 10000000000
+    },
+    {
+      "closed_and_partial_cash_delta_raw": "-8841622974826830745",
+      "closed_and_partial_cash_rows": 394,
+      "modeled_roundtrips": 317,
+      "not_portfolio_profit": true,
+      "positive_roundtrips": 26,
+      "sum_conditional_net_raw": "-7023123125458097691",
+      "tip_wei": 20000000000
+    }
+  ],
+  "generated_at": "2026-10-01T13:23:05.353266+00:00",
+  "limits": [
+    "L2 gas sensitivity only; original L1/operator estimates held fixed",
+    "higher fee does not prove inclusion at the modeled 10-second timestamp",
+    "partial-exit cash is included separately; remaining inventory is not valued",
+    "unresolved or unmatured exits and unknown entry costs are outside these subset sums",
+    "own transaction gas units used, not source transaction fee substituted"
+  ],
+  "qualification": "AFTER_PRIMARY_RESULTS_DIAGNOSTIC_NOT_PARAMETER_SELECTION",
+  "settlement_input_artifact": "smartmoney_follower_execution_result.json"
+}

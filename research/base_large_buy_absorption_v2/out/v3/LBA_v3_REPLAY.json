@@ -1,0 +1,108 @@
+{
+  "generated_at": "2026-07-21T08:20:56Z",
+  "phase": "LARGE_BUY_ABSORPTION_V3",
+  "historical_label": "DIAGNOSTIC_REPLAY",
+  "live": "NO_GO",
+  "v2_shadow_mutated": false,
+  "propose_v3_shadow_upgrade": false,
+  "upgrade_requires": [
+    "SIGNAL_LEVEL_INCREMENTAL_RETURN==PROVEN",
+    "SELECTION_EDGE_ROBUST_ACROSS_CAPACITY==PROVEN",
+    "RANKER_BEATS_SIZE==PROVEN_ON_SEALED"
+  ],
+  "per_hypothesis": {
+    "SIGNAL_LEVEL_INCREMENTAL_RETURN": "REFUTED",
+    "WHALE_NOT_JUST_SIZE_DEPTH_PROXY": "REFUTED",
+    "SELECTION_EDGE_ROBUST_ACROSS_CAPACITY": "PROVEN",
+    "RANKER_BEATS_SIZE": "UNCONFIRMED",
+    "RANKER_BEATS_RANDOM": "UNCONFIRMED",
+    "V2_SHADOW_MUTATED": "REFUTED",
+    "BEST_CELL_SELECTED": "REFUTED"
+  },
+  "open_items": [
+    "SIGNAL_LEVEL_INCREMENTAL_RETURN",
+    "WHALE_NOT_JUST_SIZE_DEPTH_PROXY",
+    "RANKER_BEATS_SIZE",
+    "RANKER_BEATS_RANDOM"
+  ],
+  "capacity_brief": {
+    "fills_at_c3": 384,
+    "fills_max": 1875,
+    "fills_lift": 4.8828125,
+    "bh_pass_cells": 4,
+    "n_cells": 8,
+    "verdict": "PROVEN"
+  },
+  "matched_brief": {
+    "att_mean": -0.00012172877283833392,
+    "n_pairs": 50000,
+    "day_p05": -0.0006004696657249251,
+    "verdict": "REFUTED",
+    "proxy_verdict": "REFUTED"
+  },
+  "ranking_brief": {
+    "test_verdict": "UNCONFIRMED",
+    "sealed": {
+      "n_sealed": 52791,
+      "available": true,
+      "gbm_sched_weth": 0.024312978968796528,
+      "gbm_cum_usd": 72.93893690639025,
+      "size_sched_weth": 0.04381455310555579,
+      "size_cum_usd": 131.4436593166688,
+      "paired_vs_size": {
+        "n_days": 18,
+        "sum_delta": -0.019501574136759257,
+        "mean_daily_delta": -0.0010834207853755143,
+        "bootstrap_token": {
+          "mean": -0.019321286737126818,
+          "p05": -0.07686388413172952,
+          "frac_positive": 0.24,
+          "n_clusters": 52
+        },
+        "p05_day": -0.07792952784830579,
+        "p05_token": -0.07686388413172952,
+        "passes": false
+      },
+      "beats_size": false
+    },
+    "policies": {
+      "HISTGBM_TOPK": {
+        "n_selected": 38,
+        "n_fills": 9,
+        "skip_rate": 0.7631578947368421,
+        "scheduled_trading_pnl_weth": 0.02874803267398819,
+        "cum_withdrawn_usd": 86.24409802196503
+      },
+      "RIDGE_TOPK": {
+        "n_selected": 38,
+        "n_fills": 16,
+        "skip_rate": 0.5789473684210527,
+        "scheduled_trading_pnl_weth": -0.024975502171917824,
+        "cum_withdrawn_usd": 0.0
+      },
+      "RANK_RANDOM": {
+        "n_selected": 38,
+        "n_fills": 22,
+        "skip_rate": 0.42105263157894735,
+        "scheduled_trading_pnl_weth": 0.00029689749673433765,
+        "cum_withdrawn_usd": 30.38945887899408
+      },
+      "RANK_BY_SIZE": {
+        "n_selected": 38,
+        "n_fills": 27,
+        "skip_rate": 0.2894736842105263,
+        "scheduled_trading_pnl_weth": 0.0030222978453837597,
+        "cum_withdrawn_usd": 74.66409941843905
+      },
+      "RANK_BY_LBA_SCORE": {
+        "n_selected": 38,
+        "n_fills": 25,
+        "skip_rate": 0.34210526315789475,
+        "scheduled_trading_pnl_weth": -0.012930651417435176,
+        "cum_withdrawn_usd": 0.0
+      }
+    }
+  },
+  "code_hash": "ba6357593489b3fd70e0448d7cad83ed78d43520bf878eba4f53fce17bd588e7",
+  "config_hash": "1505a37e2e31ad9627b486f3934ad5fcc378068939c26d220c4b97c0d02a8481"
+}

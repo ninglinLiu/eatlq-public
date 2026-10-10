@@ -1,0 +1,3 @@
+# Source Conflicts — W-2025-12-08-2025-12-14
+
+_None auto-detected._

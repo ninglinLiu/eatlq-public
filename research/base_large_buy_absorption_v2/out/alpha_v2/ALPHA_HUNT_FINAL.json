@@ -1,0 +1,37 @@
+{
+  "task": "ALPHA_HUNT_V2_FINAL",
+  "generated_at": "2026-07-21T10:36:41Z",
+  "leakage_gate": "PASS",
+  "families": {
+    "actor_xpool": {
+      "matched_att": "REFUTED",
+      "ranker": "REFUTED",
+      "overall": "REFUTED",
+      "bh_reject": false,
+      "att_mean": -0.0015084053879777842,
+      "att_day_p05": -0.010358348555765055
+    },
+    "clone_family": {
+      "matched_att": "REFUTED",
+      "ranker": "REFUTED",
+      "overall": "REFUTED",
+      "bh_reject": false,
+      "att_mean": -0.0016193321617710193,
+      "att_day_p05": -0.00573572088590398
+    },
+    "combined": {
+      "matched_att": "REFUTED",
+      "ranker": "REFUTED",
+      "overall": "REFUTED",
+      "bh_reject": false,
+      "att_mean": -0.0021375521010712933,
+      "att_day_p05": -0.007362854121749314
+    }
+  },
+  "propose_observer_shadow": false,
+  "live": "NO_GO",
+  "t0": null,
+  "code_hash_bakeoff": "b69dc516aacc78fd6bb636e1624f54cf07987c93b2f4b707103a6aec4b5b6917",
+  "stop_rule": "If Leg A2 and Leg N are both REFUTED under matched+sealed+net-of-cost, seal and declare on-chain actor/launch-identity selection-alpha line closed \u2014 do not keep tuning.",
+  "both_primary_legs_refuted": true
+}

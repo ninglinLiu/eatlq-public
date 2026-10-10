@@ -1,0 +1,188 @@
+{
+  "chain": "base",
+  "frozen_at": "2026-10-02T05:47:52.165201+00:00",
+  "n_unique_in_four_files": 382,
+  "overlap_with_september_frozen_12": [],
+  "rows": [
+    {
+      "address": "0xf3ca731e6765890d9feb503fdfb53e3704494a67",
+      "captured_at": "2026-10-01T11:19:33.510000+00:00",
+      "chain": "base",
+      "frozen_rank": 1,
+      "source_file": "gmgn_base_7d_2026-10-01T11-19-33-510Z.json",
+      "source_sha256": "13214c02ec6c34a599fba038ba774f498420c41d9a76255dfcba83e5ec9183d1",
+      "tags": [
+        "gmgn_go",
+        "fresh_wallet",
+        "gmgn"
+      ],
+      "vendor_realized_usd": 33991.03743184639,
+      "window": "7d"
+    },
+    {
+      "address": "0x9a1ee67e454bb963183884e7e2872fc0016613d3",
+      "captured_at": "2026-10-01T11:19:45.600000+00:00",
+      "chain": "base",
+      "frozen_rank": 2,
+      "source_file": "gmgn_base_7d_2026-10-01T11-19-45-600Z.json",
+      "source_sha256": "9b6d55d09e90e3c7c4f9dc38c8d116f4b429c85fe2a13b1b30dfd4c5b1472a34",
+      "tags": [
+        "snipe_bot",
+        "kol",
+        "bluechip_owner",
+        "fomo"
+      ],
+      "vendor_realized_usd": 22951.921146136647,
+      "window": "7d"
+    },
+    {
+      "address": "0x9cc49476626accffddfdf59af1acfc9ceb2164f4",
+      "captured_at": "2026-10-01T11:19:33.510000+00:00",
+      "chain": "base",
+      "frozen_rank": 3,
+      "source_file": "gmgn_base_7d_2026-10-01T11-19-33-510Z.json",
+      "source_sha256": "13214c02ec6c34a599fba038ba774f498420c41d9a76255dfcba83e5ec9183d1",
+      "tags": [
+        "gmgn_go",
+        "fresh_wallet",
+        "gmgn"
+      ],
+      "vendor_realized_usd": 10606.447515223532,
+      "window": "7d"
+    },
+    {
+      "address": "0xbf004bff64725914ee36d03b87d6965b0ced4903",
+      "captured_at": "2026-10-01T11:15:45.722000+00:00",
+      "chain": "base",
+      "frozen_rank": 4,
+      "source_file": "gmgn_base_7d_2026-10-01T11-15-45-722Z.json",
+      "source_sha256": "9d6c0983a9d53343e3c6a023ef3656f6c4fa7e0ab1cce1854d882f4506566b46",
+      "tags": [
+        "kol",
+        "fomo",
+        "gmgn"
+      ],
+      "vendor_realized_usd": 9832.723396103669,
+      "window": "7d"
+    },
+    {
+      "address": "0x11d67fa925877813b744abc0917900c2b1d6eb81",
+      "captured_at": "2026-10-01T11:15:45.722000+00:00",
+      "chain": "base",
+      "frozen_rank": 5,
+      "source_file": "gmgn_base_7d_2026-10-01T11-15-45-722Z.json",
+      "source_sha256": "9d6c0983a9d53343e3c6a023ef3656f6c4fa7e0ab1cce1854d882f4506566b46",
+      "tags": [
+        "kol",
+        "fomo"
+      ],
+      "vendor_realized_usd": 9427.539891927301,
+      "window": "7d"
+    },
+    {
+      "address": "0xd01fe03aba9eb73ff92e2b64e22daf99458e4f54",
+      "captured_at": "2026-10-01T11:15:45.722000+00:00",
+      "chain": "base",
+      "frozen_rank": 6,
+      "source_file": "gmgn_base_7d_2026-10-01T11-15-45-722Z.json",
+      "source_sha256": "9d6c0983a9d53343e3c6a023ef3656f6c4fa7e0ab1cce1854d882f4506566b46",
+      "tags": [
+        "snipe_bot",
+        "bluechip_owner",
+        "fomo"
+      ],
+      "vendor_realized_usd": 9418.130569060651,
+      "window": "7d"
+    },
+    {
+      "address": "0x4d9644d05fe2123b4eafa8d7fd31b0ea430726f3",
+      "captured_at": "2026-10-01T11:15:45.722000+00:00",
+      "chain": "base",
+      "frozen_rank": 7,
+      "source_file": "gmgn_base_7d_2026-10-01T11-15-45-722Z.json",
+      "source_sha256": "9d6c0983a9d53343e3c6a023ef3656f6c4fa7e0ab1cce1854d882f4506566b46",
+      "tags": [
+        "kol",
+        "bluechip_owner",
+        "fomo",
+        "gmgn_go",
+        "gmgn"
+      ],
+      "vendor_realized_usd": 5979.793255187635,
+      "window": "7d"
+    },
+    {
+      "address": "0x0000208d547a446ba9059cbb2cfcfbaead7d3fa3",
+      "captured_at": "2026-10-01T11:19:45.600000+00:00",
+      "chain": "base",
+      "frozen_rank": 8,
+      "source_file": "gmgn_base_7d_2026-10-01T11-19-45-600Z.json",
+      "source_sha256": "9b6d55d09e90e3c7c4f9dc38c8d116f4b429c85fe2a13b1b30dfd4c5b1472a34",
+      "tags": [
+        "sandwich_bot",
+        "snipe_bot"
+      ],
+      "vendor_realized_usd": 4270.183227627022,
+      "window": "7d"
+    },
+    {
+      "address": "0xeee2ed5d5699a78cef90e7245bb92468ccd8702c",
+      "captured_at": "2026-10-01T11:19:45.600000+00:00",
+      "chain": "base",
+      "frozen_rank": 9,
+      "source_file": "gmgn_base_7d_2026-10-01T11-19-45-600Z.json",
+      "source_sha256": "9b6d55d09e90e3c7c4f9dc38c8d116f4b429c85fe2a13b1b30dfd4c5b1472a34",
+      "tags": [
+        "snipe_bot",
+        "bluechip_owner",
+        "gmgn"
+      ],
+      "vendor_realized_usd": 3817.368492689102,
+      "window": "7d"
+    },
+    {
+      "address": "0xcd83f4c3a4b96d56367e482a3774802877b82e13",
+      "captured_at": "2026-10-01T11:15:45.722000+00:00",
+      "chain": "base",
+      "frozen_rank": 10,
+      "source_file": "gmgn_base_7d_2026-10-01T11-15-45-722Z.json",
+      "source_sha256": "9d6c0983a9d53343e3c6a023ef3656f6c4fa7e0ab1cce1854d882f4506566b46",
+      "tags": [
+        "snipe_bot"
+      ],
+      "vendor_realized_usd": 3812.113623992003,
+      "window": "7d"
+    },
+    {
+      "address": "0x0cbb693e0199cb7ad4f3c846f43045cb95247fc5",
+      "captured_at": "2026-10-01T11:19:45.600000+00:00",
+      "chain": "base",
+      "frozen_rank": 11,
+      "source_file": "gmgn_base_7d_2026-10-01T11-19-45-600Z.json",
+      "source_sha256": "9b6d55d09e90e3c7c4f9dc38c8d116f4b429c85fe2a13b1b30dfd4c5b1472a34",
+      "tags": [
+        "snipe_bot"
+      ],
+      "vendor_realized_usd": 3252.754693989635,
+      "window": "7d"
+    },
+    {
+      "address": "0x3472ccf6209925204b9cf352171ee150904fda7e",
+      "captured_at": "2026-10-01T11:15:45.722000+00:00",
+      "chain": "base",
+      "frozen_rank": 12,
+      "source_file": "gmgn_base_7d_2026-10-01T11-15-45-722Z.json",
+      "source_sha256": "9d6c0983a9d53343e3c6a023ef3656f6c4fa7e0ab1cce1854d882f4506566b46",
+      "tags": [
+        "kol",
+        "gmgn_go",
+        "gmgn"
+      ],
+      "vendor_realized_usd": 3027.5206323996717,
+      "window": "7d"
+    }
+  ],
+  "rule": "earliest October 1 capture per address, then realized_profit_7d descending, address ascending, first 12",
+  "september_winners_not_inserted": true,
+  "window": "7d"
+}

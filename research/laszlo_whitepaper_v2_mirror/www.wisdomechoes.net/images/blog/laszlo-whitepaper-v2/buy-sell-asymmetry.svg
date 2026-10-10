@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="320" viewBox="0 0 800 320" fill="none">
+  <defs>
+    <style>
+      .bg { fill: #0B0E14; }
+      .card { fill: #11151C; stroke: #1C2129; }
+      .h { fill: #9E9E9E; font: 600 11px Inter; letter-spacing: 0.1em; }
+      .t { fill: #FFF; font: 600 16px Inter; }
+      .ok { fill: #4CAF50; font: 500 13px Inter; }
+      .no { fill: #E57373; font: 500 13px Inter; }
+      .dim { fill: #6B7280; font: 400 12px Roboto Mono; }
+    </style>
+  </defs>
+  <rect width="800" height="320" class="bg" rx="8"/>
+  <text x="32" y="40" class="h">EXECUTION ASYMMETRY · BUY CONSERVATIVE / SELL FAIL-OPEN</text>
+
+  <rect x="32" y="64" width="360" height="220" rx="6" class="card"/>
+  <text x="48" y="96" class="t">BUY path</text>
+  <text x="48" y="128" class="no"> stale RPC head</text>
+  <text x="48" y="154" class="no"> daily drawdown breach</text>
+  <text x="48" y="180" class="no"> fire_thr &lt; max(model, 0.68)</text>
+  <text x="48" y="206" class="no"> balance RPC failure</text>
+  <text x="48" y="248" class="dim">single on-chain exit: rust_executor only</text>
+
+  <rect x="408" y="64" width="360" height="220" rx="6" class="card"/>
+  <text x="424" y="96" class="t">SELL path</text>
+  <text x="424" y="128" class="ok"> intent_id dedup (SET NX)</text>
+  <text x="424" y="154" class="ok"> entry_token_amount cap</text>
+  <text x="424" y="180" class="ok"> not blocked by stale head</text>
+  <text x="424" y="206" class="ok"> pending_sell TTL self-heal</text>
+  <text x="424" y="248" class="dim">PM emits signal → executor swaps</text>
+</svg>

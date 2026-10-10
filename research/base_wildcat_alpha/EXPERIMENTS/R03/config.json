@@ -1,0 +1,23 @@
+{
+  "alpha_id": "R03",
+  "family": "regime",
+  "hypothesis": "system-wide activity shock predicts higher opportunity density",
+  "mechanism": "attention creates more large moves",
+  "venue": "Base V3",
+  "universe": "active observed pools",
+  "horizon": "4h",
+  "data_source": "cross-pool hourly state",
+  "experiment": "volatility spread",
+  "feature": "market_activity_z",
+  "direction": 1,
+  "prediction_object": "future absolute return",
+  "falsifier": "effect is calendar-only",
+  "status": "NOT_YET_TESTED",
+  "sample_size": 0,
+  "gross_result": "pending",
+  "cost_adjusted_result": "pending",
+  "capacity": "pending",
+  "concentration": "pending",
+  "tail_risk": "pending",
+  "next_action": "run rapid screen"
+}

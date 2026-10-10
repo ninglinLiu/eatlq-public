@@ -1,0 +1,44 @@
+{
+  "after_snapshot": true,
+  "block_number": 51784089,
+  "cash_reconciliation": "INTERNAL_INDEX_INCOMPLETE",
+  "index_complete": false,
+  "native_net_raw": "-1000000000000000",
+  "quote": "ETH",
+  "quote_net_raw": "-1000000000000000",
+  "receipt_evidence": {
+    "http_status": 200,
+    "key": "66068e3b22cd8858fabacc1c515710178556d1ca7b8ac9e4090c3965cba44875",
+    "rpc_error": null
+  },
+  "receipt_from_matches_wallet": true,
+  "receipt_status": "CONFIRMED_SUCCESS",
+  "receipt_token_net_matches_index": true,
+  "receipt_token_net_raw": "461409564066381032312554",
+  "side": "buy",
+  "source_fee_raw": "22848029792893",
+  "source_fee_receipt_raw": "22848029792893",
+  "status": "SINGLE_TARGET_OPPOSITE_ACCOUNT_CASH",
+  "swap_logs": [
+    {
+      "data": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffd351524ed88000000000000000000000000000000000000000000000061b51005c9bae40fceea0000000000000000000000000000000000005e9dec1cdc1a9b8bb3e6be9e4f840000000000000000000000000000000000000000000008324e7dd7f5082b99c100000000000000000000000000000000000000000000000000000000000314b60000000000000000000000000000000000000000000000000000000000000000",
+      "kind": "V4",
+      "log_index": 888,
+      "pool": "0x498581ff718922c3f8e6a244956af099b2652b2b",
+      "topics": [
+        "0x40e9cecb9f5f1f1c5b9c97dec2917b7ee92e57ba5563708daca94dd84ad7112f",
+        "0x236be7b857225deeab631632fc34197424b7ff3dfce621b4a0cd95dbab5cff10",
+        "0x000000000000000000000000d18ec6e3eb0dcabbe8d63b6c9f1640599677eaec"
+      ]
+    }
+  ],
+  "timestamp": 1790357525.0,
+  "token": "0xb200000000000000000000874ff75c5ebc653c01",
+  "token_net_raw": "461409564066381032312554",
+  "token_nets": {
+    "0xb200000000000000000000874ff75c5ebc653c01": "461409564066381032312554"
+  },
+  "tx_hash": "0xfcfe5fdfc0829f940a2390b4e7952854372feae587cfec37280d6eade98f75d0",
+  "validation_layer": "ACCOUNT_RECEIPT_AND_LOGS; PROTOCOL/ROUTE MUST BE VERIFIED SEPARATELY",
+  "wallet": "0x347ffc6db9acc54ac2019795173b9599e8b82bd9"
+}

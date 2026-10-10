@@ -1,0 +1,278 @@
+{
+  "base_buys": 22,
+  "base_original_12": [
+    {
+      "address": "0xcbc04b6607e7ebe0373c3ee361ba396b8ecb721c",
+      "error": null,
+      "first_post_buy": null,
+      "frozen_rank": 1,
+      "http_status": 200,
+      "pages": 1,
+      "post_window_buys": 0,
+      "post_window_sells": 0,
+      "truncated": false
+    },
+    {
+      "address": "0xa05ec35f7d1eba823cff2ed26aeaed419683742f",
+      "error": null,
+      "first_post_buy": 1790852909,
+      "frozen_rank": 2,
+      "http_status": 200,
+      "pages": 1,
+      "post_window_buys": 8,
+      "post_window_sells": 2,
+      "truncated": false
+    },
+    {
+      "address": "0x9631335762e3603d2a7507d84838aa3236d52745",
+      "error": null,
+      "first_post_buy": 1790915037,
+      "frozen_rank": 3,
+      "http_status": 200,
+      "pages": 1,
+      "post_window_buys": 2,
+      "post_window_sells": 1,
+      "truncated": false
+    },
+    {
+      "address": "0xe28601398a5448d1147e6e8b0e0c6d686f0d216d",
+      "error": null,
+      "first_post_buy": 1790872263,
+      "frozen_rank": 4,
+      "http_status": 200,
+      "pages": 1,
+      "post_window_buys": 4,
+      "post_window_sells": 4,
+      "truncated": false
+    },
+    {
+      "address": "0x2ce9d43d1cba6ae31d7f07bfe0098dfa2d833373",
+      "error": null,
+      "first_post_buy": 1790853471,
+      "frozen_rank": 5,
+      "http_status": 200,
+      "pages": 1,
+      "post_window_buys": 4,
+      "post_window_sells": 0,
+      "truncated": false
+    },
+    {
+      "address": "0x371903abb32f5f69b536b77495e92adedfea25da",
+      "error": null,
+      "first_post_buy": 1790870619,
+      "frozen_rank": 6,
+      "http_status": 200,
+      "pages": 1,
+      "post_window_buys": 4,
+      "post_window_sells": 5,
+      "truncated": false
+    },
+    {
+      "address": "0xfd7e55a555555c2f25053a38ec744de1afea4fa4",
+      "error": null,
+      "first_post_buy": null,
+      "frozen_rank": 7,
+      "http_status": 200,
+      "pages": 1,
+      "post_window_buys": 0,
+      "post_window_sells": 0,
+      "truncated": false
+    },
+    {
+      "address": "0x217946e128c1b9c7f8c3f16b33878a908713923a",
+      "error": null,
+      "first_post_buy": null,
+      "frozen_rank": 8,
+      "http_status": 200,
+      "pages": 1,
+      "post_window_buys": 0,
+      "post_window_sells": 1,
+      "truncated": false
+    },
+    {
+      "address": "0xdd6f338b91f40e5a02c468b7cb49cccc569a3134",
+      "error": null,
+      "first_post_buy": null,
+      "frozen_rank": 9,
+      "http_status": 200,
+      "pages": 1,
+      "post_window_buys": 0,
+      "post_window_sells": 0,
+      "truncated": false
+    },
+    {
+      "address": "0xd569e570b94265e5ebc7df1990f99ee68d3f60a1",
+      "error": null,
+      "first_post_buy": null,
+      "frozen_rank": 10,
+      "http_status": 200,
+      "pages": 1,
+      "post_window_buys": 0,
+      "post_window_sells": 0,
+      "truncated": false
+    },
+    {
+      "address": "0x0b3edd0d0bf7c6281a7f8ae5a5630defb94ae78e",
+      "error": null,
+      "first_post_buy": null,
+      "frozen_rank": 11,
+      "http_status": 200,
+      "pages": 1,
+      "post_window_buys": 0,
+      "post_window_sells": 0,
+      "truncated": false
+    },
+    {
+      "address": "0x347ffc6db9acc54ac2019795173b9599e8b82bd9",
+      "error": null,
+      "first_post_buy": null,
+      "frozen_rank": 12,
+      "http_status": 200,
+      "pages": 1,
+      "post_window_buys": 0,
+      "post_window_sells": 0,
+      "truncated": false
+    }
+  ],
+  "base_sells": 13,
+  "bsc_buys": 101,
+  "bsc_http_errors": 1,
+  "bsc_original_12": [
+    {
+      "address": "0xbac453b9b7f53b35ac906b641925b2f5f2567a89",
+      "error": null,
+      "frozen_rank": 1,
+      "http_status": 200,
+      "pages": 1,
+      "post_window_buys": 0,
+      "post_window_sells": 17,
+      "truncated": false
+    },
+    {
+      "address": "0x01db37579e55ce13f4504019025e36047bdad845",
+      "error": null,
+      "frozen_rank": 2,
+      "http_status": 200,
+      "pages": 1,
+      "post_window_buys": 0,
+      "post_window_sells": 0,
+      "truncated": false,
+      "retry": "after_429"
+    },
+    {
+      "address": "0x2ce9d43d1cba6ae31d7f07bfe0098dfa2d833373",
+      "error": "HTTP 429",
+      "frozen_rank": 3,
+      "http_status": 429,
+      "pages": 0,
+      "post_window_buys": 0,
+      "post_window_sells": 0,
+      "truncated": false,
+      "retry": "second_429_retry"
+    },
+    {
+      "address": "0x3391a39a1b508e54a361924a26056c01c1c2c07d",
+      "error": null,
+      "frozen_rank": 4,
+      "http_status": 200,
+      "pages": 1,
+      "post_window_buys": 39,
+      "post_window_sells": 11,
+      "truncated": false,
+      "retry": "second_429_retry"
+    },
+    {
+      "address": "0xa83b73f5644cde337b61da79589f10ea15548811",
+      "error": null,
+      "frozen_rank": 5,
+      "http_status": 200,
+      "pages": 1,
+      "post_window_buys": 17,
+      "post_window_sells": 32,
+      "truncated": false,
+      "retry": "second_429_retry"
+    },
+    {
+      "address": "0x92c371744e71dbe58c603661ba8784fd76472e1b",
+      "error": null,
+      "frozen_rank": 6,
+      "http_status": 200,
+      "pages": 1,
+      "post_window_buys": 0,
+      "post_window_sells": 0,
+      "truncated": false
+    },
+    {
+      "address": "0xf78b066050e00fdb9b980e265aa9f317ef4b947c",
+      "error": null,
+      "frozen_rank": 7,
+      "http_status": 200,
+      "pages": 1,
+      "post_window_buys": 11,
+      "post_window_sells": 25,
+      "truncated": false
+    },
+    {
+      "address": "0xcbc04b6607e7ebe0373c3ee361ba396b8ecb721c",
+      "error": null,
+      "frozen_rank": 8,
+      "http_status": 200,
+      "pages": 1,
+      "post_window_buys": 0,
+      "post_window_sells": 1,
+      "truncated": false,
+      "retry": "after_429"
+    },
+    {
+      "address": "0xb2d1af0746c410e146272e804b1741f07f83b851",
+      "error": null,
+      "frozen_rank": 9,
+      "http_status": 200,
+      "pages": 1,
+      "post_window_buys": 34,
+      "post_window_sells": 16,
+      "truncated": false,
+      "retry": "second_429_retry"
+    },
+    {
+      "address": "0x5388668c4fa8da7f756ef8498ff24d7999999999",
+      "error": null,
+      "frozen_rank": 10,
+      "http_status": 200,
+      "pages": 1,
+      "post_window_buys": 0,
+      "post_window_sells": 0,
+      "truncated": false,
+      "retry": "second_429_retry"
+    },
+    {
+      "address": "0x00bbebb4522ad6bdf2b363872b9b5cc0661acda1",
+      "error": null,
+      "frozen_rank": 11,
+      "http_status": 200,
+      "pages": 1,
+      "post_window_buys": 0,
+      "post_window_sells": 0,
+      "truncated": false
+    },
+    {
+      "address": "0x050998d589f732d55a690e4718d71a334c417165",
+      "error": null,
+      "frozen_rank": 12,
+      "http_status": 200,
+      "pages": 1,
+      "post_window_buys": 0,
+      "post_window_sells": 0,
+      "truncated": false,
+      "retry": "second_429_retry"
+    }
+  ],
+  "bsc_sells": 102,
+  "copy_pnl": "NOT_OBSERVED",
+  "cutoff_timestamp": 1790805767,
+  "cutoff_utc": "2026-09-30T22:02:47+00:00",
+  "generated_at": "2026-10-02T05:55:09.126334+00:00",
+  "meaning": "GMGN buy/sell rows after the September candidate window for the original frozen 12 per chain. Vendor activity, not our copy PnL. The other saved addresses, 366 Base and 520 BSC, were not paged.",
+  "october_winners_not_inserted": true,
+  "profitability_certified": false
+}

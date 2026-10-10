@@ -1,0 +1,105 @@
+{
+  "task": "incremental_estimand_repair",
+  "legacy": {
+    "name": "LEGACY_ARITHMETIC_DIFF",
+    "valid": false,
+    "whale_n": 19684,
+    "pool_n": 29194,
+    "whale_total_pnl": 38.250217890793536,
+    "pool_total_pnl": 25.395326166081354,
+    "arithmetic_diff": 12.854891724712182,
+    "note": "Invalid estimand: subtracts totals of two different selection sets."
+  },
+  "within_opportunity_overlay": {
+    "name": "WITHIN_OPPORTUNITY_OVERLAY",
+    "n_pool_selected": 29194,
+    "n_whale_within_pool": 18096,
+    "n_nonwhale_within_pool": 11098,
+    "whale_share_of_pool": 0.6198533945331233,
+    "mean_pnl_whale": 0.0018617485478719831,
+    "mean_pnl_nonwhale": -0.0007474207565516361,
+    "mean_pnl_ratio": -2.4908975721540094,
+    "n_pairs": 11098,
+    "sum_paired_delta": 38.82760720174116,
+    "mean_paired_delta": 0.0034986130115102865,
+    "bootstrap_token_cluster_delta": {
+      "mean": 38.71737024040799,
+      "p05": 30.686485768009092,
+      "p50": 38.81432339753361,
+      "p95": 45.60106265531406,
+      "frac_positive": 1.0,
+      "n_clusters": 168,
+      "n_pairs": 11098,
+      "mean_delta_per_pair": 0.0034986130115102865,
+      "sum_delta": 38.82760720174116
+    },
+    "bootstrap_day_cluster_delta": {
+      "mean": 39.82912702761005,
+      "p05": 30.241183580266895,
+      "p50": 39.440695183179685,
+      "p95": 50.259608752812085,
+      "frac_positive": 1.0,
+      "n_clusters": 29,
+      "n_pairs": 11098,
+      "mean_delta_per_pair": 0.0034986130115102865,
+      "sum_delta": 38.82760720174116
+    },
+    "paired_delta_p05_token": 30.686485768009092,
+    "paired_delta_p05_day": 30.241183580266895,
+    "passes_paired_p05": true
+  },
+  "covariate_matched": {
+    "name": "COVARIATE_MATCHED",
+    "n_whale_selected": 19684,
+    "n_control_pool": 54925,
+    "n_pairs": 16816,
+    "n_unmatched": 2868,
+    "match_rate": 0.8542979069294859,
+    "sum_paired_delta": 40.36334085537665,
+    "mean_paired_delta": 0.0024002938187069845,
+    "bootstrap_token_cluster_delta": {
+      "mean": 40.445596026697714,
+      "p05": 35.22129256557226,
+      "p50": 40.269180615532534,
+      "p95": 46.44679957721535,
+      "frac_positive": 1.0,
+      "n_clusters": 499,
+      "n_pairs": 16816,
+      "mean_delta_per_pair": 0.0024002938187069845,
+      "sum_delta": 40.36334085537665
+    },
+    "bootstrap_day_cluster_delta": {
+      "mean": 40.809167462207036,
+      "p05": 26.673504122402644,
+      "p50": 40.258598348906304,
+      "p95": 55.063296467988394,
+      "frac_positive": 1.0,
+      "n_clusters": 43,
+      "n_pairs": 16816,
+      "mean_delta_per_pair": 0.0024002938187069845,
+      "sum_delta": 40.36334085537665
+    },
+    "paired_delta_p05_token": 35.22129256557226,
+    "paired_delta_p05_day": 26.673504122402644,
+    "passes_paired_p05": true,
+    "covariate_balance": {
+      "treat_mean_size": 0.34029283125893806,
+      "ctrl_mean_size": 0.16507458474480557,
+      "treat_mean_depth": 0.0,
+      "ctrl_mean_depth": 0.0,
+      "treat_mean_mom": 1.0171639069399623,
+      "ctrl_mean_mom": 1.7680964285073695,
+      "size_abs_rel_diff": 0.5149043130467952
+    }
+  },
+  "decision": {
+    "incremental_verdict": "INCREMENTAL_EDGE_CONFIRMED_PAIRED",
+    "legacy_arithmetic_diff_weth": 12.854891724712182,
+    "legacy_valid": false,
+    "overlay_paired_delta_p05_token": 30.686485768009092,
+    "matched_paired_delta_p05_token": 35.22129256557226,
+    "overlay_passes": true,
+    "matched_passes": true,
+    "note": "Legacy scorecard incremental_vs_pool_only_weth is an invalid estimand. Decision uses token/day-clustered paired \u0394PnL p05."
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "task": "EXECUTION_ALPHA_PROBE",
+  "generated_at": "2026-07-21T08:40:34Z",
+  "method": "model_free_realized_impact_per_weth (fixes broken depth columns)",
+  "stake_weth": 0.016666666666666666,
+  "stake_usd": 50.0,
+  "distribution": {
+    "coverage_pools_with_kappa": 0.9998374430566898,
+    "cost_includes": "realized_price_impact_both_legs + LP_fee_both_legs",
+    "roundtrip_bps_p10": 33.879274012131816,
+    "roundtrip_bps_p50": 90.48552604493675,
+    "roundtrip_bps_p90": 276.69113609903536,
+    "fee_only_roundtrip_bps_p50": 60.0,
+    "slippage_only_roundtrip_bps_p50": 39.01126897739212,
+    "frac_under_178bps": 0.7651502541332952,
+    "frac_under_100bps": 0.6345706444108095
+  },
+  "full_universe_net_of_slippage": {
+    "n_trades": 516658,
+    "n_pools": 862,
+    "gross_pnl_weth": 307.99941834707727,
+    "net_pnl_weth": 137.24910230075187,
+    "net_pnl_usd": 411747.30690225563,
+    "net_edge_per_trade_usd": 0.7969436395105769,
+    "win_rate_net": 0.6085979506753016,
+    "n_months_positive": 4,
+    "n_months": 9,
+    "positive_without_best_month": true
+  },
+  "subsets_by_roundtrip_bps": {
+    "under_50bps": {
+      "n_trades": 73936,
+      "n_pools": 64,
+      "gross_pnl_weth": -97.61131620345377,
+      "net_pnl_weth": -100.6813782605044,
+      "net_pnl_usd": -302044.1347815132,
+      "net_edge_per_trade_usd": -4.085210652206141,
+      "win_rate_net": 0.4139526076606795,
+      "n_months_positive": 2,
+      "n_months": 8,
+      "positive_without_best_month": false
+    },
+    "under_100bps": {
+      "n_trades": 327856,
+      "n_pools": 273,
+      "gross_pnl_weth": 181.11746511184015,
+      "net_pnl_weth": 142.90877949953472,
+      "net_pnl_usd": 428726.33849860413,
+      "net_edge_per_trade_usd": 1.3076665929511864,
+      "win_rate_net": 0.583808135278903,
+      "n_months_positive": 4,
+      "n_months": 9,
+      "positive_without_best_month": true
+    },
+    "under_178bps": {
+      "n_trades": 395321,
+      "n_pools": 397,
+      "gross_pnl_weth": 234.7406914344461,
+      "net_pnl_weth": 183.51223588798146,
+      "net_pnl_usd": 550536.7076639443,
+      "net_edge_per_trade_usd": 1.3926320829501706,
+      "win_rate_net": 0.5953490960510572,
+      "n_months_positive": 4,
+      "n_months": 9,
+      "positive_without_best_month": true
+    },
+    "under_300bps": {
+      "n_trades": 481611,
+      "n_pools": 533,
+      "gross_pnl_weth": 298.1402712903874,
+      "net_pnl_weth": 209.97003020452937,
+      "net_pnl_usd": 629910.0906135881,
+      "net_edge_per_trade_usd": 1.3079229723025183,
+      "win_rate_net": 0.6137131419340505,
+      "n_months_positive": 5,
+      "n_months": 9,
+      "positive_without_best_month": true
+    },
+    "under_600bps": {
+      "n_trades": 502631,
+      "n_pools": 631,
+      "gross_pnl_weth": 313.3439085635109,
+      "net_pnl_weth": 212.51358028765105,
+      "net_pnl_usd": 637540.7408629531,
+      "net_edge_per_trade_usd": 1.2684071234423526,
+      "win_rate_net": 0.6153957873668755,
+      "n_months_positive": 5,
+      "n_months": 9,
+      "positive_without_best_month": true
+    }
+  },
+  "verdict": "TRADABLE_SUBSET_FOUND",
+  "tradable_subset_key": "under_100bps",
+  "interpretation": "If NO_TRADABLE_SUBSET: even after cherry-picking only the deepest pools, once you charge each trade its own realized round-trip slippage the net edge is gone \u2014 the beta is real but not capturable at $50 clips. TRADABLE_SUBSET_FOUND would mean a depth-filtered slice survives and is worth a forward shadow."
+}

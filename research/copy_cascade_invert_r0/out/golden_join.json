@@ -1,0 +1,18 @@
+{
+  "generated_at": "2026-09-17T07:44:31+00:00",
+  "gl2b_fifo_gate": {
+    "eoa_mismatch_pct": 0.0,
+    "fifo_golden_gate": true,
+    "note": "GL2-B FIFO is a 20/20 integer gate on a frozen sample, not vendor-PnL truth.",
+    "target_balance_all_integer_equal": true
+  },
+  "n_actor_flow_golden_actors": 77,
+  "n_b3_golden_accounts": 647,
+  "n_board_addresses": 846,
+  "n_gl2b_fifo_txs": 20,
+  "n_overlap_actor_flow": 0,
+  "n_overlap_b3": 0,
+  "overlap_board_actor_flow": [],
+  "overlap_board_b3": [],
+  "rule": "If a board address hits a golden account, our FIFO for that address must not contradict the golden integer checks. Vendor PnL is never golden."
+}

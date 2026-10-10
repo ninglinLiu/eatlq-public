@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="200" viewBox="0 0 960 200" fill="none">
+  <defs>
+    <style>
+      .bg { fill: #0B0E14; }
+      .line { stroke: #2A2F36; stroke-width: 2; }
+      .gold { stroke: #F5A623; stroke-width: 2; }
+      .dot { fill: #F5A623; }
+      .t { fill: #FFF; font: 600 11px Roboto Mono, monospace; }
+      .s { fill: #9E9E9E; font: 400 10px Inter, sans-serif; }
+      .title { fill: #9E9E9E; font: 600 11px Inter; letter-spacing: 0.12em; }
+    </style>
+  </defs>
+  <rect width="960" height="200" class="bg" rx="10"/>
+  <text x="32" y="28" class="title">TICK LIFECYCLE · BASE L2 MEASURED PATH</text>
+  <line x1="48" y1="110" x2="912" y2="110" class="line"/>
+  <line x1="48" y1="110" x2="680" y2="110" class="gold"/>
+
+  <circle cx="64" cy="110" r="6" class="dot"/><text x="48" y="88" class="t">T+0</text><text x="40" y="140" class="s">Swap on-chain</text>
+  <circle cx="160" cy="110" r="5" fill="#6B7280"/><text x="142" y="88" class="t">+6ms</text><text x="128" y="140" class="s">Redis XADD</text>
+  <circle cx="280" cy="110" r="5" fill="#6B7280"/><text x="258" y="88" class="t">+15ms</text><text x="248" y="140" class="s">Signal out</text>
+  <circle cx="400" cy="110" r="5" fill="#6B7280"/><text x="378" y="88" class="t">+20ms</text><text x="368" y="140" class="s">Tx submit</text>
+  <circle cx="560" cy="110" r="6" class="dot"/><text x="532" y="88" class="t">+2s</text><text x="520" y="140" class="s">Sequencer confirm</text>
+  <circle cx="720" cy="110" r="5" fill="#4CAF50"/><text x="692" y="88" class="t">+2s</text><text x="680" y="140" class="s">open_position</text>
+  <circle cx="880" cy="110" r="5" fill="#4CAF50"/><text x="848" y="88" class="t"></text><text x="832" y="140" class="s">slot0() monitor</text>
+</svg>

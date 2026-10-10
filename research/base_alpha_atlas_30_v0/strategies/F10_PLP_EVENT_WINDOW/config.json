@@ -1,0 +1,35 @@
+{
+  "strategy_id": "F10_PLP_EVENT_WINDOW",
+  "family": "F10",
+  "name": "Event-window LP",
+  "parameter_search_space": {
+    "pre_min": [
+      0,
+      5
+    ],
+    "post_min": [
+      10,
+      30,
+      60
+    ],
+    "range_width_ticks": [
+      20,
+      100
+    ],
+    "liq_usd": [
+      50,
+      100
+    ],
+    "min_event_z": [
+      1.0,
+      2.0
+    ]
+  },
+  "param_combo_count": 48,
+  "access_flags": {
+    "database_access_enabled": false,
+    "rpc_access_enabled": false,
+    "large_file_access_enabled": false,
+    "backtest_enabled": false
+  }
+}

@@ -1,0 +1,58 @@
+input_paths:
+  h167_patch_json: mvp/diagnostics/run004_patch_h167_v2_only_10k_fixed_horizon_gas_adjusted.json
+  h167_all_dataset_csv: mvp/diagnostics/run004_h167_v2_only_all_fixed_horizon_gas_adjusted_dataset.csv
+  h167_clean_alpha_dataset_csv: mvp/diagnostics/run004_h167_v2_only_clean_alpha_dataset.csv
+  h167_risk_bad_pool_dataset_csv: mvp/diagnostics/run004_h167_v2_only_risk_bad_pool_dataset.csv
+  h167_checkpoint_report_json: mvp/diagnostics/run004_h167_v2_only_checkpoint_report.json
+  h167_dataset_quality_report_json: mvp/diagnostics/run004_h167_v2_only_dataset_quality_report.json
+  h167_return_accounting_report_json: mvp/diagnostics/run004_h167_v2_only_return_accounting_report.json
+  h167_risk_severity_report_json: mvp/diagnostics/run004_h167_v2_only_risk_severity_report.json
+  h166_v2_candidate_csv: mvp/diagnostics/run004_h166_v2_candidate_selection.csv
+  h166_v2_candidate_report_json: mvp/diagnostics/run004_h166_v2_candidate_report.json
+
+clickhouse:
+  url: http://clickhouse:8123
+  database: eatlq
+  docker_container: eatlq-clickhouse-1
+  query_timeout_sec: 120
+  decoded_sources:
+    v2_table: uniswap_v2_swaps_decoded
+    metadata_table: discovered_pools
+
+windows_sec:
+  - 60
+  - 180
+  - 300
+  - 900
+  - 1800
+
+risk_severity:
+  missing_decoded_events_severity: feature_limited
+  confirmed_bad_pools:
+    - "0x3e118916cd67cc9bfeb0fc44ae3dde8bc33c2d4a"
+  alpha_island_pools:
+    - "0x54219bce730d2727d91d8dcdf1465c7d299dee45"
+    - "0xc2476883d28d40b6c057f242fce2e8bda674faa0"
+
+outputs:
+  patch_json: mvp/diagnostics/run004_patch_h168_v2_decoded_feature_enrichment_repair.json
+  coverage_root_cause_audit_json: mvp/diagnostics/run004_h168_coverage_root_cause_audit.json
+  feature_ready_all_dataset_csv: mvp/diagnostics/run004_h168_all_v2_10k_feature_ready_dataset.csv
+  feature_ready_clean_alpha_dataset_csv: mvp/diagnostics/run004_h168_clean_alpha_v2_10k_feature_ready_dataset.csv
+  feature_ready_risk_bad_pool_dataset_csv: mvp/diagnostics/run004_h168_risk_bad_pool_v2_10k_feature_ready_dataset.csv
+  feature_coverage_report_json: mvp/diagnostics/run004_h168_feature_coverage_report.json
+  risk_severity_reaudit_report_json: mvp/diagnostics/run004_h168_risk_severity_reaudit_report.json
+  checkpoint_accounting_report_json: mvp/diagnostics/run004_h168_checkpoint_accounting_report.json
+  markdown: mvp/runs/run-004-patch-h168-v2-decoded-feature-enrichment-repair.md
+
+safety:
+  diagnostics_only: true
+  no_training: true
+  no_production_retrain: true
+  no_promote: true
+  no_live: true
+  no_v3_artifact_changes: true
+  no_mixed_v2_v3_artifact_changes: true
+  no_production_model_write: true
+  no_active_model_overwrite: true
+  not_full_strategy_backtest: true

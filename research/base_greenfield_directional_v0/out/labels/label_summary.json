@@ -1,0 +1,23 @@
+{
+  "created_utc": "2026-07-20T05:31:11Z",
+  "n_rows": 2399,
+  "primary_horizon_seconds": 3600,
+  "primary_barrier": "TB_A",
+  "barrier_dist_dev": {
+    "SL_FIRST": 699,
+    "TIMEOUT": 415,
+    "TP_FIRST": 315,
+    "FATAL_FIRST": 11
+  },
+  "mean_ret_dev": -0.05971357066260985,
+  "atomic_calibration": {
+    "status": "OK",
+    "n": 30,
+    "status_counts": {
+      "SELL_SUCCESS": 30
+    },
+    "path": "/root/base_greenfield_directional_v0/out/labels/atomic_calibration_sample.csv",
+    "rpc_calls": 150
+  },
+  "label_note": "Primary path returns from PIT forward ticks; FATAL via liquidity-collapse proxy; atomic RPC sample is calibration-only"
+}

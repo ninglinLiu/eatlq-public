@@ -1,0 +1,43 @@
+{
+  "hypothesis_id": "H_DEPLOYER_PIT",
+  "n_folds": 4,
+  "feature_cols": [
+    "deployer_prior_pools",
+    "deployer_prior_fatal_rate",
+    "deployer_prior_right_tail_rate",
+    "deployer_age_hours",
+    "age_s"
+  ],
+  "fold_stats": [
+    {
+      "fold": 1,
+      "n_test": 254,
+      "n_selected": 80,
+      "mean_utility": -0.2311695585696263,
+      "selected_pnl": -0.28934986832824006
+    },
+    {
+      "fold": 2,
+      "n_test": 255,
+      "n_selected": 90,
+      "mean_utility": -0.1545067896224151,
+      "selected_pnl": -0.5600971762591231
+    },
+    {
+      "fold": 3,
+      "n_test": 254,
+      "n_selected": 117,
+      "mean_utility": -0.1423960008021757,
+      "selected_pnl": -0.672434808552979
+    },
+    {
+      "fold": 4,
+      "n_test": 254,
+      "n_selected": 79,
+      "mean_utility": -0.08830162413950304,
+      "selected_pnl": -0.3564867509743837
+    }
+  ],
+  "n_oof": 1017,
+  "n_selected": 366
+}

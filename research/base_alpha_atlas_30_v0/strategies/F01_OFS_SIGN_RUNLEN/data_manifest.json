@@ -1,0 +1,34 @@
+{
+  "strategy_id": "F01_OFS_SIGN_RUNLEN",
+  "data_class": "B_SMALL_BOUNDED_EXPORT_REQUIRED",
+  "required_tables_or_files": [
+    "uniswap_v3_swaps_decoded or offline swap TSV",
+    "pool metadata"
+  ],
+  "required_columns": [
+    "pool_address",
+    "block_time",
+    "amount0",
+    "amount1",
+    "tick",
+    "tx_from"
+  ],
+  "required_time_resolution": "swap-event or 1m bars built from swaps",
+  "point_in_time_requirements": "features use only swaps with block_time<=decision_time",
+  "minimum_history": ">=14d active pools",
+  "estimated_rows": "~1e6-1e7 swap rows bounded export",
+  "estimated_read_bytes": "200MB-2GB bounded",
+  "whether_current_diagnostics_may_support_it": "maybe: base_b5_real_swaps_*.tsv / gl* swap extracts by name",
+  "whether_production_database_would_be_required": true,
+  "missing_data": [
+    "signed WETH orientation table",
+    "calibrated cost distribution"
+  ],
+  "feasibility": "READY",
+  "evidence": [
+    "normalized/wave1_probe/run004_v3r6_candidate_pool_head20k.csv",
+    "normalized/wave1_probe/base_b5_real_swaps_head50k.tsv"
+  ],
+  "notes": "signed WETH flags present in v3r6",
+  "data_class_revised": "A_OFFLINE_EXTRACT_READY"
+}

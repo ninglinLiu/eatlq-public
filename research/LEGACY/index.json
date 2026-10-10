@@ -1,0 +1,318 @@
+{
+  "schema_version": "1.0",
+  "generated": "2026-09-13",
+  "purpose": "Machine-readable index of the Base crypto-quant research estate. Human entry point is 00_INDEX.md.",
+  "scope_warning": "Every verdict in this estate is scope-conditional. Never cite a number without its scope block. See 03_SCOPED_VERDICTS.md section 0.",
+
+  "documents": [
+    { "file": "00_INDEX.md", "role": "entry_point", "shelf_life": "living" },
+    { "file": "01_MARKET_FACTS.md", "role": "measured_market_constants", "shelf_life": "section A: permanent; sections B/C/E/F: valid_until 2026-08-17" },
+    { "file": "02_METHOD_LESSONS.md", "role": "methodology", "shelf_life": "permanent", "note": "Market-agnostic. Highest-value single file. 15 lessons, 6 enforced as exit codes." },
+    { "file": "03_SCOPED_VERDICTS.md", "role": "verdicts_with_scope", "shelf_life": "universe-dependent" },
+    { "file": "04_ASSETS.md", "role": "data_and_code_inventory", "shelf_life": "living" },
+    { "file": "05_FRONTIER.md", "role": "unexplored_directions", "shelf_life": "re-judge on new evidence" }
+  ],
+
+  "verdict_taxonomy": {
+    "FALSIFIED_IN_SCOPE": "Tested with adequate power inside a stated scope; refuted there. Do not reopen inside that scope.",
+    "UNDERPOWERED_IN_SCOPE": "Tested, not refuted. Confidence interval spans zero. NOT a falsification.",
+    "INSTRUMENT_BLOCKED": "Could not be adjudicated because the instrument was missing or broken. NOT a falsification.",
+    "NEVER_RUN": "Spec written, never executed. Either run it or formally retire it.",
+    "MECHANISM_CONFIRMED_UNMONETIZED": "The mechanism is real and measured, but absolute return does not clear zero. Basis for frontier work, not a failure."
+  },
+
+  "shared_scope": {
+    "chain": "Base (8453)",
+    "venues": ["univ3", "aero_cl", "univ2", "aero_vamm", "univ4", "sushi", "alienbase"],
+    "direction": "spot long only; shorts blocked by borrow inventory on microcaps",
+    "trade_size_usd": [25, 50],
+    "sleeve_usd": 1000,
+    "hold_horizon": "15 minutes to 30 days",
+    "panel_days": 366,
+    "panel_range": ["2025-08-17", "2026-08-17"],
+    "panel_swaps": 424433536,
+    "known_scope_errors": [
+      "Early rounds used $5,000 notional, which is 100x too large for the stated account size.",
+      "Eight 'depth is insufficient' findings were all measured on NEW pools with 0-2 day observation windows. They do not generalize to the persistent-pool universe."
+    ]
+  },
+
+  "clickhouse": {
+    "container": "eatlq-clickhouse-1",
+    "volume": "/var/lib/docker/volumes/eatlq_clickhouse_data/_data",
+    "object_count": { "total": 172, "storage_tables": 57, "views": 85, "materialized_views": 10, "dictionary": 1, "memory": 1 },
+    "size_by_db": { "census": "46.6 GiB", "eatlq": "10.2 GiB", "edge": "814 MiB" },
+
+    "crown_jewel": {
+      "table": "census.cl_swaps",
+      "tier": "A",
+      "rows": 424433536,
+      "pools": 166317,
+      "block_range": [34300000, 50085519],
+      "date_range": ["2025-08-17", "2026-08-17"],
+      "days_present": 366,
+      "days_expected": 366,
+      "gaps": 0,
+      "duplicates": 0,
+      "needs_FINAL": false,
+      "block_time_is_synthetic": true,
+      "block_time_formula": "toDateTime(1778789347 + 2*(block_number - 46000000))",
+      "block_time_verified_drift_seconds": { "min": 0, "max": 0, "mean": 0, "against": "eatlq.block_ts_map", "n": 1142539, "verified_block_range": [42520453, 47077237] },
+      "limitations": [
+        "No venue/dex column; must join census.pools.",
+        "127550 of 166317 pools (76.7%) have no metadata in census.pools, covering 6.89% of swaps. The hole is time-skewed: 0.0% missing after 2026-06, 12.3% in 2026-02."
+      ]
+    },
+
+    "tier_A_keep_forever": [
+      "census.cl_swaps", "census.pools (EXCEPT fee column)", "census.tokens",
+      "census.aero_emissions", "census.aero_gauge_created", "census.aero_gauge_map",
+      "census.aero_gauge_stake_samples", "census.aero_minter_weekly", "census.aero_rewards_by_epoch",
+      "census.v2_weth_pairs", "census.pool_fee_daily",
+      "eatlq.block_ts_map", "eatlq.uniswap_v3_swaps", "eatlq.uniswap_v3_collects",
+      "eatlq.r0b_rpc_position_events", "eatlq.uniswap_v3_mints", "eatlq.uniswap_v3_burns",
+      "eatlq.discovered_pools", "eatlq.erc20_transfers", "eatlq.tx_from_by_hash",
+      "eatlq.uniswap_v2_swaps (only after splitting by factory)"
+    ],
+
+    "tier_D_do_not_use": {
+      "census.pools.fee": {
+        "defect": "one-time snapshot resolved 2026-08-17/19; wrong on 11.44% of aero_cl pool-days",
+        "error_bps": { "mean": 1.05, "p99": 26, "max": 105 },
+        "pools_that_change_fee": { "aero_cl": "45/175", "unknown": "5/26", "univ3": "0/210" },
+        "replacement": "census.pool_fee_daily"
+      },
+      "census.pit_cost": {
+        "defect": "corrupt at the MEDIAN: p50=6317 bps, 43.7% of rows >10000 bps, 874 rows >1e18",
+        "mitigation": "always add feasible=1 AND an upper-bound filter; still leaves 14 rows >1e18",
+        "replacement": "census.pit_cost_25 / census.pit_cost_50"
+      },
+      "eatlq.uniswap_v2_swaps": {
+        "defect": "name is a lie: aerodrome_vamm_swaps_mv writes Aerodrome vAMM swaps INTO this table; no venue column",
+        "split_key": "join pair_address to census.v2_weth_pairs.factory"
+      },
+      "census.pool_fee_verified": { "defect": "stops 2026-03", "replacement": "census.pool_fee_monthly / pool_fee_daily" },
+      "census.pool_fee_implied": { "defect": "no time dimension", "replacement": "census.pool_fee_daily" },
+      "edge.rot_15m": { "defect": "sp_last stored as String; missing columns", "replacement": "edge.rot_15m2" },
+      "eatlq.uniswap_v2_burns": { "defect": "1 row; ingestion never worked", "replacement": null },
+      "eatlq.uniswap_v2_mints": { "defect": "6 pools, stops 2026-05-20", "replacement": null },
+      "eatlq.sender_pnl_summary_mat": { "defect": "0 rows", "replacement": "its _v1 view" },
+      "eatlq.sender_token_pnl_mat": { "defect": "0 rows", "replacement": "its _v1 view" },
+      "default.tmp_dash": { "defect": "0 rows, Memory engine, dies on restart", "replacement": null }
+    },
+
+    "fee_table_lineage_newest_first": [
+      { "table": "census.pool_fee_daily", "pools": 411, "resolution": "366 days", "authoritative": true },
+      { "table": "census.pool_fee_monthly", "pools": 513, "resolution": "13 months" },
+      { "table": "census.pool_fee_verified", "pools": 787, "resolution": "6 monthly windows to 2026-03" },
+      { "table": "census.pool_fee_implied", "pools": 286, "resolution": "none" },
+      { "table": "census.pools.fee", "pools": 38767, "resolution": "none (snapshot)", "known_wrong": true }
+    ],
+    "fee_lineage_note": "This is a tradeoff, not monotone improvement: each generation gained time resolution and LOST pool coverage. pool_fee_daily's 411 pools are exactly the 'edge.bars_1h_year_50' research universe.",
+
+    "quality_issues_confirmed": {
+      "tick_overflow": {
+        "sentinels": { "MAX_TICK_price": 3.4025678683638813e38, "MIN_TICK_price": 2.9389568101428185e-39 },
+        "edge.bars_1h_year_50": { "rows": 2070771, "abs_logret_gt_10": 797, "pct": 0.0385, "affected_pools": 38, "total_pools": 411 },
+        "edge.bars_1h_year": { "rows": 656852, "abs_logret_gt_10": 28, "affected_pools": 5 },
+        "edge.bars_1h": { "rows": 149696, "abs_logret_gt_10": 0, "note": "cleanest bars in the estate; use as filter control group" },
+        "cheap_fix": "A named 38-pool exclusion list plus a CLMM-range validity check. Does NOT require a magnitude threshold, which is what contaminated the A2/F3 adjudication."
+      },
+      "discovery_stream_is_not_a_panel": {
+        "table": "eatlq.discovered_pools",
+        "nature": "pool-creation registry, ~1 row per pool, not a time series",
+        "observation_span_days": { "0": 8083, "1": 554, "2": 478, "3-10": 24, "42/115/149": 8 },
+        "pct_span_0_to_2_days": 99.65,
+        "pct_single_day_only": 88.4
+      },
+      "ragged_panel": {
+        "tables": ["census.v2_hourly", "census.v2_daily"],
+        "days_present": 155,
+        "days_in_window": 179,
+        "worst_month": "2026-06 missing 17 of 30 days",
+        "usable_as_timeseries": false
+      }
+    },
+
+    "verified_trustworthy": {
+      "census.pit_universe": "stored sum(n_swaps)=227101754 equals recomputation from cl_swaps exactly; 0 of 3030 pools mismatched",
+      "census.aero_emissions": "source column documents full method; 53 consecutive weekly epochs; 0 failed chunks",
+      "census.aero_gauge_stake": "USD is a documented STRICT UPPER BOUND, so derived APR is a LOWER BOUND; per-row confidence column must be respected downstream",
+      "edge.flow_1h_year_50": "ofi strictly within [-1,1], zero non-finite, row count matches bars exactly",
+      "edge.eth_usd_1h": "gapless hourly, zero non-positive values"
+    },
+
+    "mv_gotchas": {
+      "rule": "SHOW CREATE TABLE any *_mv before use. 9 of 10 target a same-named table; 1 does not.",
+      "eatlq.aerodrome_vamm_swaps_mv": "TO eatlq.uniswap_v2_swaps -- makes that table a V2+vAMM mixture",
+      "eatlq.raw_evm_logs_hourly": "AggregatingMergeTree: columns are AggregateFunction states, require countMerge/sumMerge, NOT count()/sum()"
+    }
+  },
+
+  "open_actions": [
+    {
+      "id": "orphaned_logs_ttl",
+      "urgency": "RETRACTED_FALSE_ALARM",
+      "status": "closed 2026-09-13",
+      "title": "RETRACTED: the claim that 459,496 log rows existed only in a TTL-expiring table was WRONG",
+      "what_was_true": "414,186 rows in eatlq.raw_evm_logs do have an unprefixed topic0 (and unprefixed tx_hash, address, topic1, topic2, data), written 2026-03-14 to 2026-05-21 by five ingestion sources. The 9 MVs filter WHERE topic0 = '0x...' so those specific raw rows were never decoded through the MV path.",
+      "what_was_false": "That the corresponding DATA was missing. It was not. The same logs also exist in raw_evm_logs WITH correct prefixes (decoded normally by the MVs), and bf180_* backfills independently captured a third copy. The unprefixed rows are redundant raw duplicates. The 180-day TTL destroys nothing unique and should be KEPT.",
+      "how_the_error_was_made": "The validating query compared unprefixed 64-char tx_hash against the target table's 66-char prefixed values: WHERE (tx_hash, log_index) IN (SELECT tx_hash, log_index FROM orphans). That query returns 0 unconditionally. A guaranteed-zero result was read as confirmation of absence.",
+      "ground_truth_after_normalization": { "orphan_keys_checked": 279461, "already_present_in_target": 279461, "genuinely_missing": 0 },
+      "damage_and_undo": {
+        "redundant_rows_inserted": 412781,
+        "fully_reverted": true,
+        "steps": [
+          "DETACH 3 level-0 parts from eatlq.uniswap_v3_swaps: -355312 (exact)",
+          "DETACH 3 level-0 parts from eatlq.uniswap_v2_swaps: -56741 (exact)",
+          "OPTIMIZE PARTITION 202603 FINAL DEDUPLICATE for the 728-row residue already merged into 202603_2_559608_254_75603: 154529 -> 153801 (exact)"
+        ],
+        "post_undo_exact_duplicate_rows_in_window": { "uniswap_v3_swaps": 1, "uniswap_v2_swaps": 0, "note": "the single v3 row is a pre-existing anomaly, 1 in 15.6M" },
+        "why_undo_was_clean": "Luck. The INSERT's level-0 parts had not yet been merged by background merges, and their row counts exactly matched the expected 355312, so they could be dropped by part name. Targets are plain MergeTree, not ReplacingMergeTree; a few hours later the only option would have been a full table rebuild.",
+        "detached_parts_retained": "6 parts (~412k rows) remain in system.detached_parts as an auditable rollback record; drop with allow_drop_detached=1 when no longer needed",
+        "reconciliation_note": "These are live tables. Observed v3 delta 361626 = rescue 355312 + 6314 from 3.3 hours of ongoing MV ingestion. Failing to decompose this would misdiagnose normal ingestion as duplicate insertion."
+      },
+      "the_irony_worth_keeping": "A hard cross-validation WAS performed and PASSED: decoded ticks matched census.cl_swaps row-for-row, 1006 of 1006 exact, zero mismatches. But that validated whether the DECODE was correct, not whether the data NEEDED to be backfilled. A perfectly correct decode applied to data that was never missing still produces pure redundancy. Validating the mechanism is not validating the premise, and the rigor of step two lends false credibility to the error in step one.",
+      "state_doc": "/root/LEGACY/RESCUE_STATE.md",
+      "lesson_ref": "02_METHOD_LESSONS.md section 7"
+    },
+    {
+      "id": "undecoded_topic0",
+      "urgency": "low",
+      "title": "One topic0 has no decoder at all",
+      "topic0": "0x0d3648bd0f6ba80134a33ba9275ac585d9d315f0ad8355cddefde31afa28d0e9",
+      "rows": 45310,
+      "address": "0x8909dc15e40173ff4699343b6eb8132c65e18ec6",
+      "in_census_pools": false,
+      "still_ingesting": true,
+      "first_seen": "2026-05-20",
+      "nature": "This is an unclaimed UNKNOWN event, not a missed KNOWN event. It genuinely exists only in the TTL'd raw table.",
+      "next_step": "Identify what that contract is BEFORE deciding whether to write an MV, export it, or let it expire. Do not rescue first and ask later -- that is exactly the mistake made with orphaned_logs_ttl."
+    },
+    {
+      "id": "v2_swaps_mixture",
+      "urgency": "medium",
+      "title": "eatlq.uniswap_v2_swaps is a V2 + Aerodrome vAMM mixture with no venue column",
+      "fix": "Split via census.v2_weth_pairs.factory before any use. Has already caused one documented error (25523 UniV2 pairs misreported as Aerodrome)."
+    },
+    {
+      "id": "unenforced_gates",
+      "urgency": "medium",
+      "title": "9 of 15 methodology lessons are text only, not exit codes",
+      "detail_ref": "02_METHOD_LESSONS.md section 8",
+      "cheapest_win": "g_negative_control: any verdict resting on 'no match / missing / zero coverage' must also submit a nonzero count from a positive control run through the same query shape. This is the only gate that checks the checking tool.",
+      "most_recurrent": "g_price_sanity (tick overflow) has recurred 3 times (rounds 40, 46, 47)"
+    },
+    {
+      "id": "keystone_r3_shadow",
+      "urgency": "medium",
+      "title": "Shadow observer wrote 0 rows in 23 days (16764 ClickHouse memory-limit errors)",
+      "recommendation": "formally retire rather than repair",
+      "rationale": "r3 exists to forward-confirm F10 vs C0. On the official OOF slice that comparison is already a TIE: F10 acceptor EV 1.466615 vs C0 1.467472 (F10 lower by 0.00086). Repairing the observer would still need 8+ more weeks to reach n=200, buying archive RPC months for a comparison already known to be a wash.",
+      "detail_ref": "03_SCOPED_VERDICTS.md section 6"
+    },
+    {
+      "id": "archive_rpc_decision",
+      "urgency": "low",
+      "title": "Paid archive RPC retention undecided",
+      "consequence_if_stopped": "Does NOT block the first 4 steps of 05_FRONTIER.md (all zero/low RPC). DOES turn all three atomic-simulator families into code that cannot run. One-way door.",
+      "detail_ref": "04_ASSETS.md section 2.4"
+    },
+    {
+      "id": "executor_wallet",
+      "urgency": "low",
+      "title": "Executor wallet holds 0.159 ETH",
+      "constraint": "Must be swept BEFORE stopping RPC, because sending a transaction requires RPC."
+    }
+  ],
+
+  "atomic_simulator_families": {
+    "warning": "These are THREE non-equivalent families, not one instrument. The ledger conflated them.",
+    "family_1_state_override": {
+      "method": "SwapRouter02 eth_call with ERC-20 slot stateDiff to grant balance and allowance",
+      "canonical_entry": "/root/base_f03_atomic_r0/src/atomic_engine.py",
+      "slot_detection": "/root/base_truth_panel_r0/src/slot_detect.py",
+      "label_spec": "/root/keystone_r2_atomic/out/atomic_label_spec.md",
+      "labels": ["SELL_SUCCESS", "DETERMINISTIC_REVERT", "ECONOMICALLY_UNSELLABLE", "INFRASTRUCTURE_UNKNOWN"],
+      "known_blind_spot": "Blind to transfer hooks and sell-authorization branches. Writing the balance slot BYPASSES the token's real approval logic. This is the exact mechanism of the PARADAENGI -0.114 ETH live loss.",
+      "rootcause_doc": "/opt/EATLQ/mvp/audits/honeypot_rootcause_20260623/honeypot_rootcause_cn.md",
+      "other_pitfalls": [
+        "Blind slot scan 0-39 fails on ERC-7201 / Solady / proxies. Use eth_createAccessList instead: 98.3% success at 4.2 calls per token.",
+        "USDC/FiatToken cannot be granted MAX_UINT256 balance -- the high bit is a blacklist flag. Use max(2*amount, amount+1).",
+        "Gas-bomb honeypots pass unlimited-gas eth_call but revert at real gas. Cap at 3000000.",
+        "Same-pool round trip via one eth_call is identically 2x fee by CLMM identity and measures NOTHING about depth. Use one-way fill vs slot0 mid instead.",
+        "Aerodrome CL does not route through SwapRouter02; select router by factory via out/router_map.json."
+      ]
+    },
+    "family_2_foundry": {
+      "method": "constructor-injected AtomicRoundTrip: WETH.deposit then real approve() then buy then approve then sell, in ONE historical eth_call",
+      "entry": "/opt/EATLQ/scripts/research/base_b4/AtomicRoundTrip.sol",
+      "driver": "/opt/EATLQ/scripts/research/gl_readonly_rpc.py",
+      "advantage": "The token's approve() actually executes, so it is closer to the real path than family 1"
+    },
+    "family_3_fork_replay": {
+      "method": "Anvil fork at entry block, real EOA buy, hold, sell",
+      "entry": "/opt/EATLQ/scripts/research/base_lefttail/fork_replay_backtest.py",
+      "advantage": "The ONLY honest honeypot check. Families 1 and 2 both miss 'buy succeeds, sell authorization fails'.",
+      "cost": "slow and expensive; use as final gate on a shortlist, never on a universe"
+    }
+  },
+
+  "code_tier_A_offline_clickhouse_only": {
+    "note": "Runs with zero RPC. These survive an archive-RPC shutdown.",
+    "entries": [
+      { "path": "/root/base_truth_panel_r0/src/pit_cost.py", "role": "closed-form CLMM slippage + inventory feasibility", "validation": "median ratio 1.00-1.10 against 537 atomic measurements" },
+      { "path": "/root/base_dex_search_r0/src/run_all.py", "role": "tiered hypothesis search, 76500 recipes", "caveat": "T3 does NOT call the atomic engine; it applies a 35.1% unsellable haircut" },
+      { "path": "/root/preflight/preflight.py", "role": "instrument gates; nonzero exit code forbids reporting a verdict" },
+      { "path": "/root/base_deep_edge_r0/src/run_mr2.py", "role": "mean reversion", "caveat": "use run_mr2.py; run_mr.py has index and compare-to-zero bugs" },
+      { "path": "/root/base_lp_research_r0/src/lp_simulator.py", "role": "LP simulator + LVR", "caveat": "has unit tests; P0 instrument gate failed (median rel error 39.04%, aero_cl 96.16%) so all LP conclusions from it are void" },
+      { "path": "/root/quant_research_os/pipeline/", "role": "research discipline compiler, hypothesis ledger, authority model" },
+      { "path": "/root/closed_source_shadow_tracker/tracker.py", "role": "SQLite intercept shadow tracker; the only line still producing new data" }
+    ]
+  },
+
+  "rpc_dependency_matrix": {
+    "clickhouse_only": ["rerun search", "preflight", "mean reversion / prediction / LP / rotate / condmm", "QROS", "wildcat", "dollar gates", "fee audit"],
+    "plus_cheap_log_node": ["continue extending census.cl_swaps via backfill_cl_swaps.py (needs only eth_getLogs)"],
+    "plus_normal_rpc": ["ingestion", "pool discovery", "executor latest-block sell simulation"],
+    "requires_archive_rpc": ["all three atomic families", "fork replay", "historical slot detection", "GL5v3 backfill"]
+  },
+
+  "rebuild_order": [
+    "Restore the ClickHouse volume.",
+    "Run tier-A screens (zero RPC).",
+    "Only if a family clears paper + capacity + preflight, buy archive RPC hours.",
+    "Then run family 1 (with slot_detect.py, never a blind scan) and family 3 on SURVIVORS ONLY.",
+    "Never atomically label an entire universe. Atomic measurement is the most expensive instrument and belongs at the BOTTOM of the funnel."
+  ],
+
+  "live_trading_truth": {
+    "status": "halted",
+    "last_activity": "2026-06-29",
+    "halt_reason": "pre-trade gate rejections (insufficient capital, high friction, shallow pools, honeypot flags)",
+    "successful_swap_legs": 11,
+    "buys": 8,
+    "sells": 3,
+    "weth_bought": 0.169919978298,
+    "usd_bought": 288.16,
+    "strictly_closed_pnl_weth": -0.0000114519,
+    "unsellable_positions": 5,
+    "economic_net_weth": -0.160235862229,
+    "economic_net_usd": -271.51,
+    "decision_entries_profitable": "0/8",
+    "bot_sell_attempts_all_failed": 48,
+    "attribution": { "rug_pct_of_economic_loss": 99.89, "identified_execution_slippage_buckets": 0 },
+    "post_halt_status": "UNKNOWN after 2026-06-29"
+  },
+
+  "corrections_log": [
+    { "date": "2026-09-13", "target": "01_MARKET_FACTS.md B2", "was": "Aerodrome = 64.22% of CL swaps (treated as a constant)", "now": "That is a 94.6-day figure. Full 366-day recompute: aero_cl 45.72%, univ3 41.01%. The 64/32 split holds only from 2026-05 onward. In 2025-08 the ordering was INVERTED (28.7 / 57.7).", "substantive_claim_unaffected": "Aerodrome is currently the largest CL venue, has ~5x better depth, and was invisible to every prior round. That remains true." },
+    { "date": "2026-09-13", "target": "01_MARKET_FACTS.md B2", "was": "crossover around Nov-Dec 2025", "now": "crossover is 2026-02; UniV3 still led in both 2025-11 and 2025-12" },
+    { "date": "2026-09-13", "target": "01_MARKET_FACTS.md C3", "was": "median execution cost at $5,000 = 5,924 bps", "now": "That is the median over ALL (pool, day) cells including infeasible ones. Among cells passing the inventory-feasibility gate the median is ~175 bps at $5,000 and ~114 bps at $50. Both numbers must be quoted together." },
+    { "date": "2026-09-13", "target": "01_MARKET_FACTS.md C3", "was": "census.pit_cost usable", "now": "corrupt at the median without feasible=1; requires feasible=1 plus an upper-bound filter" },
+    { "date": "2026-09-13", "target": "05_FRONTIER.md F3", "was": "needs a recalibrated magnitude threshold for bad ticks", "now": "contamination is concentrated in 38 of 411 pools, so the fix is a named exclusion list plus a CLMM-range check -- no magnitude threshold needed, which avoids killing genuine microcap moves" },
+    { "date": "2026-09-13", "target": "02_METHOD_LESSONS.md", "was": "14 lessons", "now": "15 lessons; section 7 was committed, caught, and reverted during this very audit" },
+    { "date": "2026-09-13", "target": "02_METHOD_LESSONS.md section 7", "was": "lesson framed as 'silent ingestion filter misses lose data'", "now": "That framing was based on a false premise and is retracted. The real and more valuable lesson is: a validation query built on the same wrong assumption as the bug it tests will always confirm that bug. Negative findings require a positive control." },
+    { "date": "2026-09-13", "target": "04_ASSETS.md landmine 1", "was": "459,496 rows exist only in a TTL-expiring table; rescue urgently", "now": "RETRACTED. Zero rows were missing (279,461 of 279,461 orphan keys already present). The TTL is sound design and should be kept. 412,781 redundant rows were inserted on the strength of the false finding and have been fully reverted." }
+  ]
+}

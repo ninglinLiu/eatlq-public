@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ARC 持仓看板</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="top">
+      <div class="brand">
+        <span class="mark">ARC</span>
+        <div>
+          <h1>持仓看板</h1>
+          <p class="sub">Circle Arc · Uniswap V3 · 官方报价 + DEX Screener</p>
+        </div>
+      </div>
+      <div class="top-meta">
+        <a id="wallet" class="wallet" href="#" target="_blank" rel="noreferrer">—</a>
+        <div class="live">
+          <i id="pulse" class="pulse"></i>
+          <span id="age">等待链上快照</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="kpis" id="kpis"></section>
+
+    <section class="desk">
+      <div class="pane holdings">
+        <div class="pane-head">
+          <h2>已持有代币</h2>
+          <span id="hold-count" class="hint">—</span>
+        </div>
+        <div id="holdings" class="hold-list"></div>
+      </div>
+
+      <div class="pane chart">
+        <div class="pane-head">
+          <div>
+            <h2 id="chart-title">DEX Screener</h2>
+            <p id="chart-sub" class="hint">点左侧代币查看 K 线与买点</p>
+          </div>
+          <div class="chart-actions">
+            <a id="open-dex" class="btn" target="_blank" rel="noreferrer">打开 DEX Screener</a>
+            <a id="open-tx" class="btn ghost" target="_blank" rel="noreferrer">浏览器成交</a>
+          </div>
+        </div>
+        <div class="buy-strip" id="buy-strip"></div>
+        <div class="trade" id="trade">
+          <div class="trade-row">
+            <div class="trade-sides">
+              <button type="button" id="side-buy" class="btn buy on">买</button>
+              <button type="button" id="side-sell" class="btn sell">卖</button>
+            </div>
+            <div id="buy-presets" class="presets">
+              <button type="button" data-usdc="5">5U</button>
+              <button type="button" data-usdc="10" class="on">10U</button>
+              <button type="button" data-usdc="20">20U</button>
+            </div>
+            <div id="sell-presets" class="presets hidden">
+              <button type="button" data-pct="25">25%</button>
+              <button type="button" data-pct="50" class="on">50%</button>
+              <button type="button" data-pct="100">清仓</button>
+            </div>
+            <label class="field">数量
+              <input id="trade-amount" type="number" min="1" step="1" value="10">
+              <span id="amount-unit">U</span>
+            </label>
+            <label class="field">口令
+              <input id="trade-token" type="password" autocomplete="off" placeholder="操作口令">
+            </label>
+            <button type="button" id="btn-quote" class="btn">询价</button>
+          </div>
+          <div id="quote-box" class="quote-box hidden"></div>
+        </div>
+        <div class="frame-wrap">
+          <iframe id="dex-frame" title="DEX Screener" allow="clipboard-write"></iframe>
+          <div id="frame-fallback" class="fallback hidden">
+            <p>图表在 iframe 里被挡住时，点上面打开 DEX Screener。买点用 <code>maker</code> 钱包过滤。</p>
+          </div>
+        </div>
+        <div id="fills" class="fills"></div>
+      </div>
+    </section>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "cutoff": "2026-06-01 14:00:00+00:00",
+  "thresholds": {
+    "low": -0.16002247191011237,
+    "high": 0.16666666666666674
+  },
+  "replay_long_tick": 289,
+  "replay_short_via": 60,
+  "shadow": 4,
+  "shadow_executable": 1,
+  "missing_entry_block": 0,
+  "missing_exit_hour_swaps": 0,
+  "not_executable_shadows": [
+    {
+      "pool_address": "0x82321f3beb69f503380d6b233857d5c43562e2d0",
+      "token0_symbol": "WETH",
+      "token1_symbol": "AERO",
+      "f03_side": "HIGH"
+    },
+    {
+      "pool_address": "0xbe00ff35af70e8415d0eb605a286d8a45466a4c1",
+      "token0_symbol": "USDC",
+      "token1_symbol": "AERO",
+      "f03_side": "HIGH"
+    },
+    {
+      "pool_address": "0xdfe5f275020def30993f042174fc2d335678b626",
+      "token0_symbol": "AERO",
+      "token1_symbol": "cbBTC",
+      "f03_side": "HIGH"
+    }
+  ]
+}

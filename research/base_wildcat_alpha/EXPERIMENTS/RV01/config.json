@@ -1,0 +1,23 @@
+{
+  "alpha_id": "RV01",
+  "family": "relative_value",
+  "hypothesis": "same-pair pool divergence mean reverts",
+  "mechanism": "arbitrage reconnects fragmented liquidity",
+  "venue": "Base V3",
+  "universe": "active observed pools",
+  "horizon": "1h",
+  "data_source": "same-token pools and pool returns",
+  "experiment": "matched-token pool panel",
+  "feature": "cross_pool_divergence",
+  "direction": -1,
+  "prediction_object": "relative spread",
+  "falsifier": "token orientation or decimal mismatch",
+  "status": "NOT_YET_TESTED",
+  "sample_size": 0,
+  "gross_result": "pending",
+  "cost_adjusted_result": "pending",
+  "capacity": "pending",
+  "concentration": "pending",
+  "tail_risk": "pending",
+  "next_action": "run rapid screen"
+}

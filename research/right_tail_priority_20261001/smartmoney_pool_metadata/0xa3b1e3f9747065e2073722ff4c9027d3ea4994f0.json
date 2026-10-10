@@ -1,0 +1,32 @@
+{
+  "block_number": 51648321,
+  "factory": "0xf8f2eb4940cfe7d13603dddd87f123820fc061ef",
+  "factory_evidence": {
+    "http_status": 200,
+    "key": "1c4e08220e1e5ae49349c850fda274984948cd746aa06d11cc89f5b214431bab",
+    "rpc_error": null,
+    "subcall_success": true
+  },
+  "fee": 500,
+  "fee_evidence": {
+    "http_status": 200,
+    "key": "1c4e08220e1e5ae49349c850fda274984948cd746aa06d11cc89f5b214431bab",
+    "rpc_error": null,
+    "subcall_success": true
+  },
+  "pool": "0xa3b1e3f9747065e2073722ff4c9027d3ea4994f0",
+  "token0": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+  "token0_evidence": {
+    "http_status": 200,
+    "key": "1c4e08220e1e5ae49349c850fda274984948cd746aa06d11cc89f5b214431bab",
+    "rpc_error": null,
+    "subcall_success": true
+  },
+  "token1": "0xb200000000000000000000c2e324d24d7eecd1fb",
+  "token1_evidence": {
+    "http_status": 200,
+    "key": "1c4e08220e1e5ae49349c850fda274984948cd746aa06d11cc89f5b214431bab",
+    "rpc_error": null,
+    "subcall_success": true
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "status": "SEALED_BOTH_REFUTED",
+  "phase": "ALPHA_HUNT_V2",
+  "parent_freeze": "large_buy_absorption_freeze_v2.json",
+  "parent_alpha_v1": "freeze_alpha_v1.json",
+  "deploy_allowed": false,
+  "live": "NO_GO",
+  "mutates_v1_seal": false,
+  "mutates_v2_shadow": false,
+  "mutates_v3_outputs": false,
+  "historical_label": "DIAGNOSTIC_REPLAY",
+  "t0": null,
+  "hypothesis": {
+    "A2_actor_xpool": "Cross-pool PIT wallet track record (base_v3_wallet_swaps_resolved) predicts which fresh-pool buys have positive net-of-cost incremental return over random spray",
+    "N_clone_family": "Token bytecode clone-family prior outcomes predict which fresh-pool buys have positive net-of-cost incremental return over random spray"
+  },
+  "hard_bans": [
+    "live_trading",
+    "use_lifetime_aggregate_tables",
+    "sender_pnl_summary_v1",
+    "recipient_pnl_summary_v1",
+    "sender_feature_store_v1",
+    "features_after_decision_time",
+    "catch_beta_as_alpha",
+    "retune_after_seeing_sealed",
+    "mutate_v1_seal_or_v2_v3_outputs",
+    "tune_same_features_after_refute"
+  ],
+  "cost_model": {
+    "source": "execution_depth.compute_pool_kappa",
+    "includes": [
+      "realized_price_impact_both_legs",
+      "LP_fee_both_legs"
+    ],
+    "outcome_col": "pnl_net"
+  },
+  "matched_incremental": {
+    "treatment_rule": "top_decile_among_informative_score_gt_0",
+    "control": "remaining_eligible_matched_on_structure_and_cost",
+    "covariates": [
+      "depth_score",
+      "pool_age_s",
+      "rel_size",
+      "mom_from_open",
+      "roundtrip_bps"
+    ],
+    "n_boot": 400,
+    "seed": 23,
+    "max_pairs": 50000,
+    "n_perm": 200
+  },
+  "ranker": {
+    "model": "HistGradientBoostingRegressor",
+    "top_k_intraday": 5,
+    "primary_capacity": {
+      "max_concurrent": 10,
+      "one_position_per_token": true,
+      "max_per_token": 1
+    },
+    "require_sealed_replication": true,
+    "forbid_future_labels_in_features": true,
+    "families": [
+      "actor_xpool",
+      "clone_family",
+      "combined"
+    ]
+  },
+  "features_actor_xpool_pit": [
+    "actor_xpool_n_prior_trips",
+    "actor_xpool_prior_win_rate",
+    "actor_xpool_prior_avg_ret",
+    "actor_xpool_prior_median_hold_s",
+    "actor_xpool_early_entry_skill",
+    "actor_xpool_cold_start",
+    "pool_buyers_xpool_mean_win_rate",
+    "pool_buyers_xpool_mean_n_trips",
+    "pool_buyers_xpool_n_with_history"
+  ],
+  "features_clone_family_pit": [
+    "family_n_prior_tokens",
+    "family_prior_survival_rate",
+    "family_prior_max_ret_mean",
+    "family_prior_rug_rate",
+    "family_cold_start",
+    "family_size"
+  ],
+  "leakage_gate": {
+    "require_asof_invariance": true,
+    "require_no_forward_refs": true,
+    "require_placebo_fail": true,
+    "placebo_max_abs_corr": 0.05
+  },
+  "multiple_testing": {
+    "method": "benjamini_hochberg",
+    "alpha": 0.05
+  },
+  "upgrade_requires": [
+    "FAMILY_MATCHED_ATT==PROVEN",
+    "FAMILY_RANKER_BEATS_RANDOM==PROVEN_ON_SEALED",
+    "NET_OF_COST==true"
+  ],
+  "success_bar": "net-of-real-cost incremental return over RANDOM-spray, robust across walk-forward folds, BH-corrected, replicated on sealed holdout",
+  "stop_rule": "If Leg A2 and Leg N are both REFUTED under matched+sealed+net-of-cost, seal and declare on-chain actor/launch-identity selection-alpha line closed \u2014 do not keep tuning.",
+  "started_at": "2026-07-21T10:03:42Z"
+}

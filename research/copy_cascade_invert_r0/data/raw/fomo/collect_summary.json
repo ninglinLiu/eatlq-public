@@ -1,0 +1,138 @@
+{
+  "api_base": "https://prod-api.fomo.family",
+  "api_note": "All /v2/* return HTTP 431 {'error':'unauthorized'}; /health returns 401 'No authorization token provided'. Auth is per-user Privy, so no anonymous board exists. Not substituted with any other source.",
+  "n_ok_with_rows": 0,
+  "n_requests": 7,
+  "snapshots": [
+    {
+      "auth": "none",
+      "captured_at": "2026-09-17T07:44:17+00:00",
+      "chain": "base",
+      "http_status": 200,
+      "kind": "spa_html",
+      "nbytes": 9254,
+      "ok": true,
+      "raw_path": "/root/copy_cascade_invert_r0/data/raw/fomo/public_base_2026-09-17T074417+0000.bin",
+      "row_hint": 0,
+      "sha256": "c486e698cf41006ba7e02101eab13227f807ecb383634ab4ab66e29003e5c29b",
+      "source": "fomo",
+      "transport_meta": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "private, no-store",
+        "cf-cache-status": "HIT",
+        "cf-ray": "a3c67c1bd9860f1d-ORD",
+        "connection": "close",
+        "content-security-policy": "default-src 'self'; script-src 'nonce-Qxqrwys9aTqxLQhK9PoM/Q==' 'self' https://fomo.family https://*.fomo.family https://*.fomo-labs.workers.dev https://challenges.cloudflare.com https://www.googletagmanager.com https://connect.facebook.net; style-src 'self' 'unsafe-inline' https://fomo.family https://*.fomo.family https://*.fomo-labs.workers.dev; img-src 'self' data: blob: https://fomo.family https://*.fomo.family https://*.fomo.cloud https://prod-fomo-profile-pics.s3.amazonaws.com https://staging-fomo-profile-pics.s3.amazonaws.com https://pbs.twimg.com https://token-media.defined.fi https://*.mobula.io https://*.coingecko.com https://media.thegrid.id https://crypto-exchange-logos-production.s3.us-west-2.amazonaws.com https://www.facebook.com; font-src 'self' data:; connect-src 'self' data: https://*.fomo.family wss://*.fomo.family https://mainnet.block-engine.jito.wtf https://mainnet.hudson.jito.wtf https://api.relay.link wss://ws.relay.link https://api.hyperliquid.xyz wss://api.hyperliquid.xyz https://featureassets.org https://prodregistryv2.org https://statsigapi.net https://auth.privy.io https://*.rpc.privy.systems https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.facebook.com https://www.google.com https://token-media.defined.fi https://prod-fomo-profile-pics.s3.amazonaws.com https://staging-fomo-profile-pics.s3.amazonaws.com; frame-src blob: https://*.fomo.family https://auth.privy.io https://challenges.cloudflare.com https://platform.twitter.com https://form.typeform.com; worker-src 'self' blob:; object-src 'none'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; report-uri https://app-actions.fomo.family/report/?token=phc_rzkHrRhgRWmmIfUX34qLhjQw2Gga14elSY6ishYeSE5; report-to posthog",
+        "content-type": "text/html",
+        "cross-origin-opener-policy": "same-origin",
+        "date": "Thu, 17 Sep 2026 07:44:17 GMT",
+        "etag": "\"2490493d0dd753efb4d9e8c23b18971b\"",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "reporting-endpoints": "posthog=\"https://app-actions.fomo.family/report/?token=phc_rzkHrRhgRWmmIfUX34qLhjQw2Gga14elSY6ishYeSE5\"",
+        "server": "cloudflare",
+        "set-cookie": "__cf_bm=Le0Ik44r__6QMBw6yUgnp7HRPwmN5gzg024r6iQN12c-1789631057.2528932-1.0.1.1-.N7k8EPfclwkXsjaupn0mbchXTGJV_nJNF2CvSli2iuY4qGpUjuZVLQKvoW4_gGIweLv5UF4QiNCxiA4TUOgQUnuYqvZcTsaphz09411H0URqI8lldYQRpPkwZqvymrd; HttpOnly; SameSite=None; Secure; Path=/; Domain=fomo.family; Expires=Thu, 17 Sep 2026 08:14:17 GMT",
+        "transfer-encoding": "chunked",
+        "worker-handled": "cf",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      },
+      "url": "https://fomo.family/leaderboard"
+    },
+    {
+      "auth": "none",
+      "captured_at": "2026-09-17T07:44:18+00:00",
+      "chain": "multi",
+      "http_status": 431,
+      "kind": "prod_api",
+      "nbytes": 24,
+      "ok": false,
+      "raw_path": "/root/copy_cascade_invert_r0/data/raw/fomo/prodapi_v2_leaderboard_2026-09-17T074418+0000.bin",
+      "row_hint": 0,
+      "sha256": "782eeaa7f1915f6783146f8180751785584f0f24bd4e503165c7fc4a597da600",
+      "source": "fomo",
+      "transport_meta": {
+        "reason": "Request Header Fields Too Large"
+      },
+      "url": "https://prod-api.fomo.family/v2/leaderboard"
+    },
+    {
+      "auth": "none",
+      "captured_at": "2026-09-17T07:44:19+00:00",
+      "chain": "multi",
+      "http_status": 431,
+      "kind": "prod_api",
+      "nbytes": 24,
+      "ok": false,
+      "raw_path": "/root/copy_cascade_invert_r0/data/raw/fomo/prodapi_v2_leaderboard_daily_2026-09-17T074419+0000.bin",
+      "row_hint": 0,
+      "sha256": "782eeaa7f1915f6783146f8180751785584f0f24bd4e503165c7fc4a597da600",
+      "source": "fomo",
+      "transport_meta": {
+        "reason": "Request Header Fields Too Large"
+      },
+      "url": "https://prod-api.fomo.family/v2/leaderboard/daily"
+    },
+    {
+      "auth": "none",
+      "captured_at": "2026-09-17T07:44:20+00:00",
+      "chain": "multi",
+      "http_status": 431,
+      "kind": "prod_api",
+      "nbytes": 24,
+      "ok": false,
+      "raw_path": "/root/copy_cascade_invert_r0/data/raw/fomo/prodapi_v2_leaderboard_weekly_2026-09-17T074420+0000.bin",
+      "row_hint": 0,
+      "sha256": "782eeaa7f1915f6783146f8180751785584f0f24bd4e503165c7fc4a597da600",
+      "source": "fomo",
+      "transport_meta": {
+        "reason": "Request Header Fields Too Large"
+      },
+      "url": "https://prod-api.fomo.family/v2/leaderboard/weekly"
+    },
+    {
+      "auth": "none",
+      "captured_at": "2026-09-17T07:44:21+00:00",
+      "chain": "multi",
+      "http_status": 431,
+      "kind": "prod_api",
+      "nbytes": 24,
+      "ok": false,
+      "raw_path": "/root/copy_cascade_invert_r0/data/raw/fomo/prodapi_v2_clans_leaderboard_2026-09-17T074421+0000.bin",
+      "row_hint": 0,
+      "sha256": "782eeaa7f1915f6783146f8180751785584f0f24bd4e503165c7fc4a597da600",
+      "source": "fomo",
+      "transport_meta": {
+        "reason": "Request Header Fields Too Large"
+      },
+      "url": "https://prod-api.fomo.family/v2/clans/leaderboard"
+    },
+    {
+      "auth": "none",
+      "captured_at": "2026-09-17T07:44:22+00:00",
+      "chain": "multi",
+      "http_status": 401,
+      "kind": "prod_api",
+      "nbytes": 98,
+      "ok": false,
+      "raw_path": "/root/copy_cascade_invert_r0/data/raw/fomo/prodapi_health_2026-09-17T074422+0000.bin",
+      "row_hint": 0,
+      "sha256": "f2534239a0487741a6622bc579003f5c4dca220a063ff1c5490403872d80398d",
+      "source": "fomo",
+      "transport_meta": {
+        "reason": "Unauthorized"
+      },
+      "url": "https://prod-api.fomo.family/health"
+    },
+    {
+      "note": "No FOMO_API_KEY in environment. Privy session not forged.",
+      "ok": false,
+      "row_hint": 0,
+      "source": "fomo",
+      "status_flag": "BLOCKED_AUTH",
+      "url": "https://prod-api.fomo.family/v2/leaderboard/{window}"
+    }
+  ],
+  "source": "fomo",
+  "status": "SOURCE_BLOCKED_AUTH"
+}

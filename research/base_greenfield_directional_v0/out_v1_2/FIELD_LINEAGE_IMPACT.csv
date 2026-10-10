@@ -1,0 +1,12 @@
+field,evidence,finding,dirty_fee_impact,impact_scope,lineage_verdict
+pool_discovery,src/build_panel.py:48-82,fee_bps is selected/carried; pool inclusion and swap join use pool address/type/WETH leg,False,NONE,EXECUTION_ONLY_CONTAMINATION
+eligibility,src/build_panel.py:145-199,"swap count, PIT minute bars, two-sided swap signs; fee is not referenced",False,NONE,EXECUTION_ONLY_CONTAMINATION
+swap_features,src/build_panel.py:180-228,tick/amount/sender/recipient values keyed by pool; fee is not referenced,False,NONE,EXECUTION_ONLY_CONTAMINATION
+liquidity_features,src/build_panel.py:201-228,liquidity_raw and its PIT transforms; fee is not referenced,False,NONE,EXECUTION_ONLY_CONTAMINATION
+executable_depth_features,src/build_panel.py:201-228; src/features.py:17-29,no Quoter depth feature exists; vol_depth is pre_vol/liq_log,False,NONE,EXECUTION_ONLY_CONTAMINATION
+friction,configs/design_freeze.json:51-55; src/build_panel.py,threshold is frozen but no fee-dependent friction field is computed/applied in panel construction,False,NONE,EXECUTION_ONLY_CONTAMINATION
+G2_features,src/features.py:17-75; src/models_routes.py:293-320,fee is metadata only and excluded from FEATURE_COLS,False,NONE,EXECUTION_ONLY_CONTAMINATION
+C3_feature,src/models_routes.py:219-230,C3 score is early_ret only,False,NONE,EXECUTION_ONLY_CONTAMINATION
+tick_path_labels,src/build_labels.py:23-205,forward tick/liquidity path keyed by pool; fee is not referenced,False,NONE,EXECUTION_ONLY_CONTAMINATION
+atomic_labels,src/build_labels.py:191-229,Discovery atomic_net_return is tick-path derived; fee enters calibration smoke only and does not alter labels,False,NONE,EXECUTION_ONLY_CONTAMINATION
+v1_atomic_execution,src/v1/atomic_engine.py:64-199,registry fee enters Quoter and Router calldata for buy/sell,True,EXECUTION_ONLY,EXECUTION_ONLY_CONTAMINATION

@@ -1,0 +1,22 @@
+{
+  "claim_count": 23,
+  "grades": {"IRON": 6, "OPEN": 7, "PINNED": 10},
+  "source_preregistration_sha256": "c942e7f286f9dda5cc384f0c91f4e98172d2e6307fd80e66869817580ca2534b",
+  "frequency": {
+    "selected_n": 116,
+    "active_days": 27,
+    "monthly": [38, 61, 17],
+    "weekly": [13, 25, 0, 0, 0, 50, 0, 3, 5, 6, 6, 5, 2, 1]
+  },
+  "seconds": {
+    "1:1": {"n": 113, "unresolved": 3, "mean": 0.5663701436516096, "top1_removed_mean": 0.48288116031956935},
+    "1:5": {"n": 112, "unresolved": 4, "mean": 0.5658600160864686, "top1_removed_mean": 0.48133795277529695},
+    "1:15": {"n": 111, "unresolved": 5, "mean": 0.5768599229957799, "top1_removed_mean": 0.49397325802362163},
+    "5:1": {"n": 113, "unresolved": 3, "mean": 0.5585349415912297, "top1_removed_mean": 0.4749047834472908},
+    "15:1": {"n": 113, "unresolved": 3, "mean": 0.5304880808115559, "top1_removed_mean": 0.4463525738247399}
+  },
+  "w2": {"two_minute": [304, 408], "ten_minute": [311, 408]},
+  "rug": {"confirmed": 235, "temporary": 1, "unresolved": 26},
+  "capacity_sizes_weth": [0.001, 0.003, 0.01],
+  "open_ids": ["GL1-02", "GL1-06", "GL1-08", "GL1-12", "GL1-18", "GL1-19", "GL1-23"]
+}

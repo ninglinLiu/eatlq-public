@@ -1,0 +1,449 @@
+{
+ "T1": {
+  "overall": {
+   "mean": -42.41806123757123,
+   "lo": -45.50724654264466,
+   "hi": -39.17951326939148,
+   "blocks": 334,
+   "rows": 12579
+  },
+  "quiet_frac": 0.9289291676603864,
+  "fee_bps": 29.99152736103229,
+  "il_bps": 12.16766700608505,
+  "cost_bps": 60.24192159251847,
+  "fee_over_il": 2.4648543838382104,
+  "n_symbols": 14,
+  "top_symbol": "cbBTC",
+  "top_symbol_share_of_net": -0.09728502845265183,
+  "loo_worst_lo": -57.645280934355064,
+  "loo_worst_symbol": "cbBTC",
+  "venue_rows": {
+   "univ3": 6137,
+   "aero_cl": 5401,
+   "unknown": 1041
+  },
+  "venue_net": {
+   "aero_cl": -20.346884197564783,
+   "univ3": -60.02116315483868,
+   "unknown": -53.15407538435746
+  },
+  "major": {
+   "mean": -40.85335075236619,
+   "lo": -43.830817472475815,
+   "hi": -37.851940601958475,
+   "blocks": 334,
+   "rows": 11866
+  },
+  "non_major": {
+   "mean": -68.45853054674808,
+   "lo": -90.24012361369707,
+   "hi": -46.45794752641423,
+   "blocks": 155,
+   "rows": 713
+  },
+  "major_rows": 11866,
+  "non_major_rows": 713,
+  "share_p50": 4.3705364308905846e-05,
+  "share_p90": 0.014816698682882627,
+  "share_p99": 0.06163145343381813,
+  "cost_p50_of_selected": 1.0316432437823666,
+  "worst_symbols": {
+   "cbETH": {
+    "sum": -195152.0,
+    "count": 3797,
+    "mean": -51.4,
+    "share_of_net": 0.37
+   },
+   "wstETH": {
+    "sum": -130714.58,
+    "count": 2501,
+    "mean": -52.26,
+    "share_of_net": 0.24
+   },
+   "USDC": {
+    "sum": -95374.28,
+    "count": 1320,
+    "mean": -72.25,
+    "share_of_net": 0.18
+   },
+   "weETH": {
+    "sum": -91859.31,
+    "count": 1800,
+    "mean": -51.03,
+    "share_of_net": 0.17
+   },
+   "ezETH": {
+    "sum": -27210.3,
+    "count": 501,
+    "mean": -54.31,
+    "share_of_net": 0.05
+   },
+   "bsdETH": {
+    "sum": -23574.73,
+    "count": 432,
+    "mean": -54.57,
+    "share_of_net": 0.04
+   },
+   "SYND": {
+    "sum": -10806.55,
+    "count": 58,
+    "mean": -186.32,
+    "share_of_net": 0.02
+   },
+   "cbXRP": {
+    "sum": -5371.76,
+    "count": 72,
+    "mean": -74.61,
+    "share_of_net": 0.01
+   }
+  },
+  "best_symbols": {
+   "SYND": {
+    "sum": -10806.55,
+    "count": 58,
+    "mean": -186.32,
+    "share_of_net": 0.02
+   },
+   "cbXRP": {
+    "sum": -5371.76,
+    "count": 72,
+    "mean": -74.61,
+    "share_of_net": 0.01
+   },
+   "DRV": {
+    "sum": -3420.4,
+    "count": 12,
+    "mean": -285.03,
+    "share_of_net": 0.01
+   },
+   "LsETH": {
+    "sum": -1996.52,
+    "count": 41,
+    "mean": -48.7,
+    "share_of_net": 0.0
+   },
+   "RSR": {
+    "sum": -1155.32,
+    "count": 7,
+    "mean": -165.05,
+    "share_of_net": 0.0
+   },
+   "WELL": {
+    "sum": -132.05,
+    "count": 1,
+    "mean": -132.05,
+    "share_of_net": 0.0
+   },
+   "LITKEY": {
+    "sum": 1281.97,
+    "count": 21,
+    "mean": 61.05,
+    "share_of_net": -0.0
+   },
+   "cbBTC": {
+    "sum": 51909.03,
+    "count": 2016,
+    "mean": 25.75,
+    "share_of_net": -0.1
+   }
+  }
+ },
+ "T7": {
+  "overall": {
+   "mean": -1.5108555949976128,
+   "lo": -21.147330559786873,
+   "hi": 18.615159439368945,
+   "blocks": 47,
+   "rows": 1934
+  },
+  "quiet_frac": 0.811271975180972,
+  "fee_bps": 98.3499783537887,
+  "il_bps": 39.507053850779435,
+  "cost_bps": 60.35378009800689,
+  "fee_over_il": 2.489428311340618,
+  "n_symbols": 14,
+  "top_symbol": "cbBTC",
+  "top_symbol_share_of_net": -24.90382590214752,
+  "loo_worst_lo": -59.51643732680055,
+  "loo_worst_symbol": "cbBTC",
+  "venue_rows": {
+   "univ3": 930,
+   "aero_cl": 836,
+   "unknown": 168
+  },
+  "venue_net": {
+   "aero_cl": 70.04455501944194,
+   "univ3": -56.82587867318953,
+   "unknown": -51.37604494590825
+  },
+  "major": {
+   "mean": -2.592961307549026,
+   "lo": -22.637732493773996,
+   "hi": 16.5287090063928,
+   "blocks": 47,
+   "rows": 1776
+  },
+  "non_major": {
+   "mean": 10.65256051570686,
+   "lo": -71.72500824689966,
+   "hi": 119.09567344678676,
+   "blocks": 30,
+   "rows": 158
+  },
+  "major_rows": 1776,
+  "non_major_rows": 158,
+  "share_p50": 2.6593852958851086e-05,
+  "share_p90": 0.010009526164950001,
+  "share_p99": 0.05372583257943375,
+  "cost_p50_of_selected": 1.0316432437823666,
+  "worst_symbols": {
+   "cbETH": {
+    "sum": -23294.97,
+    "count": 570,
+    "mean": -40.87,
+    "share_of_net": 7.97
+   },
+   "USDC": {
+    "sum": -22073.97,
+    "count": 213,
+    "mean": -103.63,
+    "share_of_net": 7.55
+   },
+   "wstETH": {
+    "sum": -16695.0,
+    "count": 371,
+    "mean": -45.0,
+    "share_of_net": 5.71
+   },
+   "weETH": {
+    "sum": -11607.79,
+    "count": 266,
+    "mean": -43.64,
+    "share_of_net": 3.97
+   },
+   "bsdETH": {
+    "sum": -3702.22,
+    "count": 68,
+    "mean": -54.44,
+    "share_of_net": 1.27
+   },
+   "ezETH": {
+    "sum": -3678.88,
+    "count": 99,
+    "mean": -37.16,
+    "share_of_net": 1.26
+   },
+   "cbXRP": {
+    "sum": -1077.77,
+    "count": 12,
+    "mean": -89.81,
+    "share_of_net": 0.37
+   },
+   "DRV": {
+    "sum": -923.96,
+    "count": 9,
+    "mean": -102.66,
+    "share_of_net": 0.32
+   }
+  },
+  "best_symbols": {
+   "cbXRP": {
+    "sum": -1077.77,
+    "count": 12,
+    "mean": -89.81,
+    "share_of_net": 0.37
+   },
+   "DRV": {
+    "sum": -923.96,
+    "count": 9,
+    "mean": -102.66,
+    "share_of_net": 0.32
+   },
+   "RSR": {
+    "sum": -676.22,
+    "count": 6,
+    "mean": -112.7,
+    "share_of_net": 0.23
+   },
+   "LsETH": {
+    "sum": -630.76,
+    "count": 15,
+    "mean": -42.05,
+    "share_of_net": 0.22
+   },
+   "AERO": {
+    "sum": 533.31,
+    "count": 3,
+    "mean": 177.77,
+    "share_of_net": -0.18
+   },
+   "LITKEY": {
+    "sum": 2832.46,
+    "count": 3,
+    "mean": 944.15,
+    "share_of_net": -0.97
+   },
+   "SYND": {
+    "sum": 5304.92,
+    "count": 11,
+    "mean": 482.27,
+    "share_of_net": -1.82
+   },
+   "cbBTC": {
+    "sum": 72768.85,
+    "count": 288,
+    "mean": 252.67,
+    "share_of_net": -24.9
+   }
+  }
+ },
+ "T30": {
+  "overall": {
+   "mean": 18.56643844834101,
+   "lo": -97.51178308189479,
+   "hi": 99.30464907922929,
+   "blocks": 11,
+   "rows": 469
+  },
+  "quiet_frac": 0.746268656716418,
+  "fee_bps": 214.6968558952308,
+  "il_bps": 135.8675381283258,
+  "cost_bps": 60.26287931856401,
+  "fee_over_il": 1.5801924348732317,
+  "n_symbols": 12,
+  "top_symbol": "cbBTC",
+  "top_symbol_share_of_net": 4.504556858647302,
+  "loo_worst_lo": -195.5776804784097,
+  "loo_worst_symbol": "cbBTC",
+  "venue_rows": {
+   "univ3": 225,
+   "aero_cl": 211,
+   "unknown": 33
+  },
+  "venue_net": {
+   "aero_cl": 147.33869243295885,
+   "univ3": -92.60737965837065,
+   "unknown": -46.79224387724183
+  },
+  "major": {
+   "mean": 16.305959563324492,
+   "lo": -114.63611229302212,
+   "hi": 107.94063792328748,
+   "blocks": 11,
+   "rows": 425
+  },
+  "non_major": {
+   "mean": 40.400609496796136,
+   "lo": -98.06467247182026,
+   "hi": 206.2351715784175,
+   "blocks": 7,
+   "rows": 44
+  },
+  "major_rows": 425,
+  "non_major_rows": 44,
+  "share_p50": 8.849238990276417e-06,
+  "share_p90": 0.0033575531899427105,
+  "share_p99": 0.03750230126779621,
+  "cost_p50_of_selected": 1.0316432437823666,
+  "worst_symbols": {
+   "USDC": {
+    "sum": -29734.2,
+    "count": 57,
+    "mean": -521.65,
+    "share_of_net": -3.41
+   },
+   "wstETH": {
+    "sum": -2971.72,
+    "count": 81,
+    "mean": -36.69,
+    "share_of_net": -0.34
+   },
+   "RSR": {
+    "sum": -1169.81,
+    "count": 2,
+    "mean": -584.9,
+    "share_of_net": -0.13
+   },
+   "bsdETH": {
+    "sum": -1022.08,
+    "count": 17,
+    "mean": -60.12,
+    "share_of_net": -0.12
+   },
+   "cbXRP": {
+    "sum": -858.36,
+    "count": 3,
+    "mean": -286.12,
+    "share_of_net": -0.1
+   },
+   "ezETH": {
+    "sum": -259.01,
+    "count": 27,
+    "mean": -9.59,
+    "share_of_net": -0.03
+   },
+   "LsETH": {
+    "sum": 61.22,
+    "count": 6,
+    "mean": 10.2,
+    "share_of_net": 0.01
+   },
+   "weETH": {
+    "sum": 630.2,
+    "count": 66,
+    "mean": 9.55,
+    "share_of_net": 0.07
+   }
+  },
+  "best_symbols": {
+   "cbXRP": {
+    "sum": -858.36,
+    "count": 3,
+    "mean": -286.12,
+    "share_of_net": -0.1
+   },
+   "ezETH": {
+    "sum": -259.01,
+    "count": 27,
+    "mean": -9.59,
+    "share_of_net": -0.03
+   },
+   "LsETH": {
+    "sum": 61.22,
+    "count": 6,
+    "mean": 10.2,
+    "share_of_net": 0.01
+   },
+   "weETH": {
+    "sum": 630.2,
+    "count": 66,
+    "mean": 9.55,
+    "share_of_net": 0.07
+   },
+   "cbETH": {
+    "sum": 803.68,
+    "count": 129,
+    "mean": 6.23,
+    "share_of_net": 0.09
+   },
+   "WELL": {
+    "sum": 1900.8,
+    "count": 3,
+    "mean": 633.6,
+    "share_of_net": 0.22
+   },
+   "LITKEY": {
+    "sum": 2102.78,
+    "count": 3,
+    "mean": 700.93,
+    "share_of_net": 0.24
+   },
+   "cbBTC": {
+    "sum": 39224.15,
+    "count": 75,
+    "mean": 522.99,
+    "share_of_net": 4.5
+   }
+  }
+ }
+}

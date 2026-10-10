@@ -1,0 +1,43 @@
+{
+  "after_snapshot": true,
+  "block_number": 51954569,
+  "index_complete": true,
+  "native_net_raw": "-125000000000000000",
+  "quote": "ETH",
+  "quote_net_raw": "-125000000000000000",
+  "receipt_evidence": {
+    "http_status": 200,
+    "key": "e04e8c0d9791227dae667d2ee6c8b592333257e68b6998bcb668997f181128df",
+    "rpc_error": null
+  },
+  "receipt_from_matches_wallet": true,
+  "receipt_status": "CONFIRMED_SUCCESS",
+  "receipt_token_net_matches_index": true,
+  "receipt_token_net_raw": "18687212624096940507340596",
+  "side": "buy",
+  "source_fee_raw": "13610365629312717",
+  "source_fee_receipt_raw": "13610365629312717",
+  "status": "SINGLE_TARGET_OPPOSITE_ACCOUNT_CASH",
+  "swap_logs": [
+    {
+      "data": "0xfffffffffffffffffffffffffffffffffffffffffffffffffe4cbf87c4f478000000000000000000000000000000000000000000000f752bd3844858bc891f340000000000000000000000000000000000002f4f650c607dca8ad2624527e93d0000000000000000000000000000000000000000000008324e7dd7f5082b99c1000000000000000000000000000000000000000000000000000000000002de8f0000000000000000000000000000000000000000000000000000000000000000",
+      "kind": "V4",
+      "log_index": 195,
+      "pool": "0x498581ff718922c3f8e6a244956af099b2652b2b",
+      "topics": [
+        "0x40e9cecb9f5f1f1c5b9c97dec2917b7ee92e57ba5563708daca94dd84ad7112f",
+        "0x5f1e74eef91eb5db662e7c0841cde3e0c654513b2ff9846c93b8c69e248c1c16",
+        "0x000000000000000000000000d8ba9d1a99fc21f0eca24e9b85737c28a194a4e2"
+      ]
+    }
+  ],
+  "timestamp": 1790698485.0,
+  "token": "0xb20000000000000000000002105014ef13e57401",
+  "token_net_raw": "18687212624096940507340596",
+  "token_nets": {
+    "0xb20000000000000000000002105014ef13e57401": "18687212624096940507340596"
+  },
+  "tx_hash": "0x349f80a1de5b40faec995145928b23f386eedba3daf18f9407c05759c4656545",
+  "validation_layer": "ACCOUNT_RECEIPT_AND_LOGS; PROTOCOL/ROUTE MUST BE VERIFIED SEPARATELY",
+  "wallet": "0x371903abb32f5f69b536b77495e92adedfea25da"
+}
